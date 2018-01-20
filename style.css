@@ -15,8 +15,11 @@ h1 {
     margin-right: 0;
     font-weight: bold;
     color: #0F0F0F;
-/*    background-color:#092B39;*/
+    /*    background-color:#092B39;*/
+    /*text-align: center; */
+    /*text-shadow: 3px 2px gray;*/
 }
+
 h2 {
     display: block;
     font-size: 1em;
@@ -37,7 +40,9 @@ div.info {
 div.menu {
 border-style: double none double none;
 border-width: 3px;
+text-align: justify;
 }
+
 
 div.section {
 border-style: double none double none;
