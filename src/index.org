@@ -32,3 +32,10 @@
 + Talk. "El Laplaciano como ejeplo de Operador Elíptico". Seminario de Becarios. IMATE-UNAM. Mexico City. May 2012. 
 + Attended. "4to Miniencuentro en Geometría Diferencial". CIMAT. Guanajuato, Mex. Nov 2011.
 
+* Articles
+
+Here it goes the list of articles
+ + Article 1
+ + Article 2
+
+
