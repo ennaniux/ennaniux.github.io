@@ -4,14 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title></title>
-<!-- 2019-05-14 Tue 14:18 -->
+<!-- 2019-05-14 Tue 20:49 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="daniel b" />
 <link rel="stylesheet"  href="../css/style.css" type="text/css"/> 
          <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet" type="text/css"> 
          <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet"> 
-         <img id="logo" style="float:right; padding-right:250px;padding-top:60px;" src="../images/pic.jpg" width="150px" height="130px">
+         <img id="logo" style="float:right; padding-right:250px;padding-top:60px;" src="../images/pic.jpg" width="150px" height="150px">
 	 <script type="text/javascript" async
 	 src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
 	 </script>
@@ -39,7 +39,7 @@
 	 </div>
 	 <div class="navbar">
 	 <a class="active" href="index.html"> <i class="fa fa-fw fa-home"></i> <b>Home</b> </a>  
-         <a href="#articles"> <b>Articles</b> </a>  
+         <a href="articles.html"> <b>Articles</b> </a>  
 	 <a href="#Notes"> <b>Notes</b> </a>  
 	 <a href="#Teaching"> <b>Teaching</b> </a>  
 	 <a href="#Talks"> <b>Talks</b> </a>
@@ -110,7 +110,7 @@ for the JavaScript code in this tag.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: daniel b</p>
-<p class="date">Created: 2019-05-14 Tue 14:18</p>
+<p class="date">Created: 2019-05-14 Tue 20:49</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
