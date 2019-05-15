@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Articles</title>
-<!-- 2019-05-14 Tue 17:39 -->
+<!-- 2019-05-14 Tue 21:10 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="daniel b" />
@@ -138,8 +138,8 @@ homotopy class of closed curves in \(M\) contains a geodesic.</i>
 </p>
 
 <p>
-The cruve \(\gamma : (a,b) \subset \mathbb{R} \to M\) is geodesic if and
-only if in locoal coordinates it satisfies
+The curve \(\gamma : (a,b) \subset \mathbb{R} \to M\) is geodesic if and
+only if in local coordinates it satisfies
 </p>
 \begin{equation}
 \ddot{\gamma}^k(t) + \dot{\gamma}^i(t)\dot{\gamma}^j)(t)\Gamma_{ij}^{k}(\gamma(t)) = 0.
@@ -166,33 +166,45 @@ u(s,0)& = \gamma(s) & s\in S^1.
 <div id="outline-container-sec-1-1" class="outline-3">
 <h3 id="sec-1-1">The Heat Flow Method</h3>
 <div class="outline-text-3" id="text-1-1">
+<p>
+Now we outline the method to obtain the geodesic.
+</p>
+
 <ol class="org-ol">
-<li>There exist \(T_0>0\) such that the initial value problem above has a
-solution \(u^k_{t} = u^k_{ss} + u^i_{s}u^j_{s}\Gamma_{ij}^k\) in
-\(S^1\times [0,T_0)\) and \(u(s,0)=\gamma(s)\), i.e., we have a short
-time existence of a solution. Then the maximal interval of
-existence of a solution is nonempty and open.
+<li><b>Short time existence</b>. There exist \(T_0>0\) such that the initial
+value problem above has a solution \(u^k_{t} = u^k_{ss} +
+   u^i_{s}u^j_{s}\Gamma_{ij}^k\) in \(S^1\times [0,T_0)\) and
+\(u(s,0)=\gamma(s)\). Then the maximal (time) interval of existence
+of a solution is nonempty and open.
 </li>
-<li>Let \(u(s,t)\) be a solution. Get an apriori estimate of the spacial
-derivative \(|u_s| \leq C\), where \(C\) independently of \(t\). Then we
-can think of the equaiton \(u_t - u_{ss} =f\), where \(f\) is a bounded
-function. Then regularity theory for linear parabolic equations is
-used to contorll higher order derivatives which are time
-independent.
+<li><b>A priori estimates of spacial derivatives</b>. Let \(u(s,t)\) be a
+solution. Get an a priori estimate of the spacial derivative \(|u_s|
+   \leq C\), where \(C\) independently of \(t\). Then we can think of the
+equation \(u_t - u_{ss} =f\), where \(f\) is a bounded function. Then
+regularity theory for linear parabolic equations is used to
+control higher order derivatives which are time independent.
 </li>
-<li>This apriori estimate implies the following: If a solution exists
-in \([0,T_{0})\), and for \(t\to T_{0}\) the solution \(u(s,t)\) will
-converge to a smooth curve \(u(s,T_{0})\). Then this curve can be
-taken as the new initial value and continue the solution for times
-bigger than \(T_{0}\). Then the maximal interval of existence of a
-solution is also a closed set. This at the end implies that a
-solution exists for all times \(t>0\).
+<li><b>Convergence as \(t\) goes to \(\infty\)</b>. This a priori estimate
+implies the following: If a solution exists in \([0,T_{0})\), and for
+\(t\to T_{0}\) the solution \(u(s,t)\) will converge to a smooth curve
+\(u(s,T_{0})\). Then this curve can be taken as the new initial value
+and continue the solution for times bigger than \(T_{0}\). Then the
+maximal interval of existence of a solution is also a closed
+set. This at the end implies that a solution exists for all times
+\(t>0\).
 </li>
-<li>Note that the energy \(E(u(s,t))\) is decreasing in \(t\) and since \(0
-   \leq E(u(s,t))\) for all \(t\), it is possible to find a sequence
-\(\{t_n\}\) such that \(u(s,t) \to \tilde{\gamma}(s)\), \(t\to \infty\),
-and \(\tilde{\gamma}\) is such that \(\tilde{\gamma}^k_{ss} +
-   \tilde{\gamma}^i_{s}\tilde{\gamma}^j_{s}\Gamma_{ij}^k = 0\) 
+<li><b>The Energy functional is decreasing</b>. Note that the energy
+\(E(u(s,t))\) is decreasing in \(t\) and since \(0 \leq E(u(s,t))\) for
+all \(t\), it is possible to find a sequence \(\{t_n\}\) such that
+\(u(s,t) \to \tilde{\gamma}(s)\), \(t\to \infty\), and \(\tilde{\gamma}\)
+is such that \(\tilde{\gamma}^k_{ss} +
+   \tilde{\gamma}^i_{s}\tilde{\gamma}^j_{s}\Gamma_{ij}^k = 0\).
+</li>
+<li><b>Convexity</b>. If convexity is not fulfilled, then things that may
+look like wiggles may happen to have more energy than the
+geodesic. When convexity is checked then the convergence to the
+geodesic can be taken from \(t\to\infty\), and is not restricted to
+the sequence \(t_n\).
 </li>
 </ol>
 </div>
