@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Articles</title>
-<!-- 2019-05-14 Tue 21:10 -->
+<!-- 2019-05-15 Wed 16:28 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="daniel b" />
@@ -131,11 +131,19 @@ for the JavaScript code in this tag.
 <div class="post-date"><time>[2019-05-14 Tue]</time> </div>
 </div>
 
-
 <p>
-<b>Theorem</b> <i>Let \(M\) be a compact Riemannian manifold. Then every
-homotopy class of closed curves in \(M\) contains a geodesic.</i>
+If we want to obtain a closed geodesic in a compact Riemannian manifold
+all we have to do is get one loop and wait. Yes just wait long enough and, surprisingly,
+our loop will transform into a geodesic one. Moreover,
+take a smooth close loop in a compact Riemannian manifold,
+of course this belongs to a homotopy class. Suppose now
+that we are able to measure the energy of our loop with some sort of
+thermometer, and that changes of this energy may produce some elongation or contraction 
+of the loop, measured by its length. Then we wait for a reasonable long
+period of time for our
+loop to cool down and.. we end up with a geodesic of the same homotopy class!
 </p>
+
 
 <p>
 The curve \(\gamma : (a,b) \subset \mathbb{R} \to M\) is geodesic if and
@@ -144,6 +152,21 @@ only if in local coordinates it satisfies
 \begin{equation}
 \ddot{\gamma}^k(t) + \dot{\gamma}^i(t)\dot{\gamma}^j)(t)\Gamma_{ij}^{k}(\gamma(t)) = 0.
 \end{equation}
+
+
+<p>
+Before we continue just a word of <i>warning</i>: note that for any compact
+Riemannian manifold, and two point in it, there are always more than
+one geodesic joining them, a quick example of this is the sphere with
+the North and South pole. The uniqueness of the shortest geodesic is
+guaranteed when the two points are sufficiently close.
+</p>
+
+<p>
+<b>Theorem</b> <i>Let \(M\) be a compact Riemannian manifold. Then every
+homotopy class of closed curves in \(M\) contains a geodesic.</i>
+</p>
+
 
 <p>
 To apply the heat flow approach, we consider the following 
@@ -201,7 +224,7 @@ is such that \(\tilde{\gamma}^k_{ss} +
    \tilde{\gamma}^i_{s}\tilde{\gamma}^j_{s}\Gamma_{ij}^k = 0\).
 </li>
 <li><b>Convexity</b>. If convexity is not fulfilled, then things that may
-look like wiggles may happen to have more energy than the
+look like wiggles may happen to have less energy than the
 geodesic. When convexity is checked then the convergence to the
 geodesic can be taken from \(t\to\infty\), and is not restricted to
 the sequence \(t_n\).
