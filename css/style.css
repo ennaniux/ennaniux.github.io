@@ -110,6 +110,7 @@ div.outline-text-2 p {
   overflow: auto;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
+  right: 0; /* Position the navbar at the top of the page */
 }
 
 /* Navbar links */
