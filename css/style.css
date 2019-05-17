@@ -121,6 +121,8 @@ div.outline-text-2 p {
   font-size: 17px;
 }
 
+/* max-width: 640px; */
+
 /* Navbar links on mouse-over */
 #preamble a:hover {
     /* background-color: #000; */
@@ -129,8 +131,7 @@ div.outline-text-2 p {
 
 /* Current/active navbar link */
 #preamble a.active {
-    max-width: 640px;
-    background-color: #051e3e;
+        background-color: #051e3e;
     border-radius: 10px 10px;
     color: white;
 }
