@@ -130,6 +130,8 @@ div.outline-text-2 p {
 /* Current/active navbar link */
 #preamble a.active {
   background-color: #051e3e;
+    border-radius: 10px 10px;
+    color: white;
 }
 
 /* /\* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels *\/ */
