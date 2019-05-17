@@ -37,7 +37,8 @@ h2 {
 }
 
 div.info {
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
     background-color:#BFC1AC;
 		border-radius: 10px 10px;
@@ -68,7 +69,7 @@ text-align: justify;
  /* This is taken from default? css? */
 
 
- #content {
+#content {
 	max-width: 50em;
 	margin-left: auto;
 	margin-right: auto;
