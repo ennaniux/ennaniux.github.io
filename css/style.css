@@ -83,7 +83,7 @@ text-align: justify;
 div.outline-2 {
     background-color:#f5f3ee;
     /* border:3px solid #f2f6f9; */
-    color: #2e291b
+    color: #2e291b;
  }
 
 div.outline-2 h2 {
@@ -124,7 +124,7 @@ div.outline-text-2 p {
   color: #D9D9D9;
   text-decoration: none;
   font-size: 17px;
-max-width: 640px;
+/* max-width: 640px; */
 }
 
 
