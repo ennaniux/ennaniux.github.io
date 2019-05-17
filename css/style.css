@@ -103,13 +103,13 @@ div.outline-text-2 p {
  /* Style the navigation bar */
 .navbar {
     max-width: 50em;
+  margin-left: auto;
+  margin-right: auto;
     border-radius: 10px 10px;
   background-color: #173f5f;
   overflow: auto;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Navbar links */
