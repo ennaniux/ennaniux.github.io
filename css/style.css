@@ -119,9 +119,9 @@ div.outline-text-2 p {
   color: #D9D9D9;
   text-decoration: none;
   font-size: 17px;
+max-width: 640px;
 }
 
-/* max-width: 640px; */
 
 /* Navbar links on mouse-over */
 #preamble a:hover {
