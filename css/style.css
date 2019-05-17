@@ -128,7 +128,7 @@ div.outline-text-2 p {
 }
 
 /* Current/active navbar link */
-active {
+a.active {
   background-color: #051e3e;
 }
 
