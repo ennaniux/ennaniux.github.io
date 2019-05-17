@@ -6,6 +6,7 @@ body {
     background-repeat: no-repeat;
     background-color: #F5F3EE;
 		max-width: 640px;
+		margin: 20px auto; /* "auto" for centering */
 }
 
 h1 {
