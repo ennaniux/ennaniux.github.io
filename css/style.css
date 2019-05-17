@@ -5,7 +5,7 @@ body {
     /* background-position: left top; */
     /* background-repeat: no-repeat; */
     background: #F5F3EE;
-		/* margin: 20px auto; /\* "auto" for centering *\/ */
+		margin: 20px auto; /* "auto" for centering */
 		max-width: 640px;
 }
 
@@ -109,7 +109,8 @@ div.outline-text-2 p {
   /* overflow: auto; */
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
-		max-width: 640px;
+  max-width: 640px;
+  margin: 30px auto;
 		text-align: center;
 }
 
