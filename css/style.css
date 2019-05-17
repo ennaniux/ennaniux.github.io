@@ -5,6 +5,7 @@ body {
     background-position: left top;
     background-repeat: no-repeat;
     background-color: #F5F3EE;
+		max-width: 640px;
 }
 
 h1 {
