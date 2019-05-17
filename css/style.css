@@ -101,7 +101,7 @@ div.outline-text-2 p {
 
  /* this is from https://www.w3schools.com/howto/howto_css_navbar_icon.asp */
  /* Style the navigation bar */
-.navbar {
+#preamble navbar {
     max-width: 50em;
 	margin-left: auto;
 	margin-right: auto;
@@ -146,6 +146,22 @@ div.outline-text-2 p {
 .main {
     margin-top: 5px; /* Add a top margin to avoid content overlay */
 } 
+
+/* #preamble { */
+/* 		/\* background-color:#222222; *\/ */
+/* 		/\* border-radius: 5px 20px 5px 20px; *\/ */
+/* 		/\* border-radius: 20px 20px; *\/ */
+/* 		/\* border: 3px solid gray; *\/ */
+/* 		font-weight: bold; */
+/* 		padding: 0 10px; */
+/* 		/\* position: fixed; *\/ */
+/* 		right: 0; */
+/* 		top: 0; */
+/* 		max-width: 640px; */
+/* 		text-align: center; */
+/* 		/\* text-align: right; *\/ */
+/* } */
+
 
 /*defaults*/
 
