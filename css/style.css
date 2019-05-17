@@ -103,7 +103,7 @@ div.outline-text-2 p {
  /* Style the navigation bar */
 .navbar {
   max-width: 50em;
-  float: center;
+	margin-left: auto;
     border-radius: 10px 10px;
   background-color: #173f5f;
   overflow: auto;
