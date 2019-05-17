@@ -106,11 +106,9 @@ div.outline-text-2 p {
 #preamble  {
     border-radius: 10px 10px;
   background-color: #173f5f;
-  overflow: auto;
+  /* overflow: auto; */
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
-  left: auto; /* "auto" for centering */
-  right: auto; /* "auto" for centering */
 }
 
 /* Navbar links */
