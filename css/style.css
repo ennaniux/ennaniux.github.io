@@ -113,7 +113,7 @@ div.outline-text-2 p {
 }
 
 /* Navbar links */
-.navbar a {
+#preamble  a {
   float: left;
   text-align: center;
   padding: 12px;
@@ -123,19 +123,19 @@ div.outline-text-2 p {
 }
 
 /* Navbar links on mouse-over */
-.navbar a:hover {
+#preamble:hover a {
     /* background-color: #000; */
     color: white;
 }
 
 /* Current/active navbar link */
-.active {
+#preamble:active a {
   background-color: #051e3e;
 }
 
 /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
 @media screen and (max-width: 500px) {
-  .navbar a {
+#preamble  a {
     float: none;
     display: block;
   }
