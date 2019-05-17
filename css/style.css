@@ -47,9 +47,10 @@ div.info {
     /* border-width: 3px; */
     /* box-shadow: 5px 10px #888888 */
     max-width: 50em;
+    
 }
 
-
+div.info.logo {position:relative;}
 
 @import url('https://fonts.googleapis.com/css?family=Fredoka+One');
 
