@@ -106,18 +106,18 @@ div.outline-text-2 p {
 #preamble {
     border-radius: 10px 10px;
     background-color: #173f5f;
-  /* overflow: auto; */
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-  max-width: 640px;
-  /* width: 100% */
-  text-align: center;
-/* left: 50%; */
-margin-left: -50px;
-    /* margin-left: auto; */
+    margin-left: auto;
     margin-right: auto;
     display: block;
-}
+/* overflow: auto; */
+    /* position: fixed; /\* Set the navbar to fixed position *\/ */
+    top: 0; /* Position the navbar at the top of the page */
+  /* max-width: 640px; */
+  /* width: 100% */
+  text-align: center;
+  /* left: 50%; */
+  /* margin-left: -50px; */
+  }
 
 /* Navbar links */
 #preamble a {
