@@ -183,7 +183,7 @@ div.outline-text-2 p {
   .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
   .center { margin-left: auto; margin-right: auto; text-align: center; }
   .underline { text-decoration: underline; }
-  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  #postamble p/* , #preamble p  */{ font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
     border: 1px solid #ccc;
