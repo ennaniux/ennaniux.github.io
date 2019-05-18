@@ -113,7 +113,8 @@ div.outline-text-2 p {
   width: 100%
   left: auto;
   right: auto;
-		text-align: center;
+  padding-left: 80px;
+  text-align: center;
 }
 
 /* Navbar links */
