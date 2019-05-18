@@ -106,7 +106,7 @@ div.outline-text-2 p {
 #preamble {
 		font-weight: bold;
 		padding: 0 10px;
-		right: 0;
+		right: auto;
 		top: 0;
 		max-width: 640px;
 		text-align: center;
