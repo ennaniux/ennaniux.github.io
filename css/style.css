@@ -117,6 +117,8 @@ div.outline-text-2 p {
   text-align: center;
   /* left: 50%; */
   /* margin-left: -50px; */
+    margin-left: 0;
+    margin-right: 0;
   }
 
 /* Navbar links */
