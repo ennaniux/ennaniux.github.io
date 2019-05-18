@@ -120,6 +120,9 @@ div.outline-text-2 p {
 		text-decoration: none;
 		white-space: nowrap;
 		margin: 0 10px 0 0;
+    font-size: 1em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
 }
 
 #preamble a:hover {
