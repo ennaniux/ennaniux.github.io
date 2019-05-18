@@ -114,7 +114,7 @@ div.outline-text-2 p {
   text-align: center;
 /* left: 50%; */
 margin-left: -50px;
-    margin-left: auto;
+    /* margin-left: auto; */
     margin-right: auto;
     display: block;
 }
