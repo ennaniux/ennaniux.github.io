@@ -111,7 +111,7 @@ div.outline-text-2 p {
     display: block;
     position: fixed; /* Set the navbar to fixed position */
     top: 0; /* Position the navbar at the top of the page */
-    max-width: 100%;
+    max-width: 150%;
     text-align: center;
     margin-left: 0;
     margin-right: 0;
