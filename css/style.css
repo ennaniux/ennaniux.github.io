@@ -101,53 +101,78 @@ div.outline-text-2 p {
 }
 
 
+
+
+/******************************************************************************/
+#preamble {
+		font-weight: bold;
+		padding: 0 10px;
+		right: 0;
+		top: 0;
+		max-width: 640px;
+		text-align: center;
+    background-color: #173f5f;
+}
+
+#preamble a {
+    color: #D9D9D9;
+		text-decoration: none;
+		white-space: nowrap;
+		margin: 0 10px 0 0;
+}
+
+#preamble a:hover {
+		color: #dddddd;
+}
+
+
  /* this is from https://www.w3schools.com/howto/howto_css_navbar_icon.asp */
  /* Style the navigation bar */
 
-#preamble {
-    border-radius: 10px 10px;
-    background-color: #173f5f;
-    background-size: cover;
-    display: block;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    max-width: 150%;
-    text-align: center;
-    margin-left: 0;
-    margin-right: 0;
-  }
+/* #preamble{ */
+/*     border-radius: 10px 10px; */
+/*     background-color: #173f5f; */
+/*     background-size: cover; */
+/*     display: block; */
+/*     position: fixed; /\* Set the navbar to fixed position *\/ */
+/*     top: 0; /\* Position the navbar at the top of the page *\/ */
+/*     max-width: 150%; */
+/*     text-align: center; */
+/*     margin-left: 0; */
+/*     margin-right: 0; */
+/*   } */
 
-#preamble ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
+/* #preamble ul { */
+/*   list-style-type: none; */
+/*   margin: 0; */
+/*   padding: 0; */
+/* } */
 
-li {
-  float: left;
-}
-/* Navbar links */
-#preamble a {
-  float: left;
-  text-align: center;
-  padding: 12px;
-  color: #D9D9D9;
-  text-decoration: none;
-  font-size: 17px;
-}
+/* li { */
+/*   float: left; */
+/* } */
+/* /\* Navbar links *\/ */
+/* #preamble a { */
+/*   float: left; */
+/*   text-align: center; */
+/*   padding: 12px; */
+/*   color: #D9D9D9; */
+/*   text-decoration: none; */
+/*   font-size: 17px; */
+/* } */
 
-/* Navbar links on mouse-over */
-#preamble a:hover {
-    /* background-color: #000; */
-    color: white;
-}
+/* /\* Navbar links on mouse-over *\/ */
+/* #preamble a:hover { */
+/*     /\* background-color: #000; *\/ */
+/*     color: white; */
+/* } */
 
-/* Current/active navbar link */
-#preamble a.active {
-        background-color: #051e3e;
-    border-radius: 10px 10px;
-    color: white;
-}
+/* /\* Current/active navbar link *\/ */
+/* #preamble a.active { */
+/*         background-color: #051e3e; */
+/*     border-radius: 10px 10px; */
+/*     color: white; */
+/* } */
 
 /* /\* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels *\/ */
 /* @media screen and (max-width: 500px) { */
