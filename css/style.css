@@ -110,8 +110,6 @@ display: block;
 #preamble {
     border-radius: 10px 10px;
     background-color: #173f5f;
-    margin-left: auto;
-    margin-right: auto;
     display: block;
 /* overflow: auto; */
     position: fixed; /* Set the navbar to fixed position */
