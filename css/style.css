@@ -112,6 +112,7 @@ div.outline-text-2 p {
 		text-align: center;
     background-color: #173f5f;
     border-radius: 10px 10px;
+    position: fixed;
 }
 
 #preamble a {
@@ -167,12 +168,12 @@ div.outline-text-2 p {
 /*     color: white; */
 /* } */
 
-/* /\* Current/active navbar link *\/ */
-/* #preamble a.active { */
-/*         background-color: #051e3e; */
-/*     border-radius: 10px 10px; */
-/*     color: white; */
-/* } */
+/* Current/active navbar link */
+#preamble a.active {
+        background-color: #051e3e;
+    border-radius: 10px 10px;
+    color: white;
+}
 
 /* /\* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels *\/ */
 /* @media screen and (max-width: 500px) { */
