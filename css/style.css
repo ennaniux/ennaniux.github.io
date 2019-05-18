@@ -112,8 +112,11 @@ div.outline-text-2 p {
   max-width: 640px;
   /* width: 100% */
   text-align: center;
-left: 50%;
-margin-left: -50px;
+/* left: 50%; */
+/* margin-left: -50px; */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 /* Navbar links */
