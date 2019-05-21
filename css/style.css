@@ -113,7 +113,7 @@ div.outline-text-2 p {
     border-radius: 10px 10px;
     font-size: 20px;
     margin-top: 5px;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px; */
 		padding: 10px 20px;
 }
 
