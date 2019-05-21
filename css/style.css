@@ -114,6 +114,7 @@ div.outline-text-2 p {
     font-size: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
+		padding: 10px 20px;
 }
 
 #preamble a {
