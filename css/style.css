@@ -115,6 +115,7 @@ div.outline-text-2 p {
     margin-top: 5px;
     /* margin-bottom: 5px; */
 		padding: 10px 20px;
+  overflow: auto;
 }
 
 #preamble a {
