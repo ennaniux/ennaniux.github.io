@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title></title>
-<!-- 2019-05-21 Tue 00:48 -->
+<!-- 2019-05-27 Mon 17:25 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="daniel b" />
@@ -61,6 +61,48 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -75,10 +117,26 @@ for the JavaScript code in this tag.
 <h1 class="title"></h1>
 
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Links</h2>
+<h2 id="sec-1">Talks</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
-<li><a href="https://ennaniux.github.io/Blog/index.html">Geometry and PDE Blog</a>
+<li>Poster. Dirichlet Problem for Prescribed Curvature in Hyperbolic Space (revisited) . International Conference of Mathematical Sciences (ICMS). Maltepe Univeristy, Istanbul. Aug 2018
+</li>
+<li>"Sobre el problema no lineal de k-curvatura prescrita en hipersuperficies del espacio hiperbólico y de Sitter". Mexican Mathematicians in the World. Casa Matemática Oaxaca. Oaxaca, Mex. Jun 2018.
+</li>
+<li>"Prescribed k-curvature of convex closed hypersurfaces in \(H^n\) and \(S^n\) : a fully nonlinear elliptic problem".Yorkshire and Durham Geometry Days. Durham University. Durham, UK. Mar 2018.
+</li>
+<li>"Fully nonlinear PDE on the sphere from prescribed curvature problem in hyperbolic space". British Mathematical Colloquium. Durham, UK. Apr 2017.
+</li>
+<li>Poster. "Dirichlet Problem for Prescribed Curvature in Hyperbolic Space". LMS-CMI Research School. Reading University. REading, UK. Jul 2016.
+</li>
+<li>"On the Minkowski Problem in Hyperbolic Space". 9th European Conference on Elliptic and Parabolic Problems. Insitut für Mathematik Universität Zürich. Gaeta, Italy. May 2016.
+</li>
+<li>Poster. "Prescribing Homogeneous Curvatures in Hyperbolic Space". Winter School 2016 on Geometric Evolution Equations. Regensburg University. Regensburg, Germany. Feb 2016.
+</li>
+<li>"On the Existence of Convex Surfaces with Prescribed k-symmetric Curvatures". Geometry and Topology seminar. Durham University. Nov 2015.
+</li>
+<li>"El Laplaciano como ejeplo de Operador Elíptico". Seminario de Becarios. IMATE-UNAM. Mexico City. May 2012. 
 </li>
 </ul>
 </div>
@@ -86,7 +144,7 @@ for the JavaScript code in this tag.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: daniel b</p>
-<p class="date">Created: 2019-05-21 Tue 00:48</p>
+<p class="date">Created: 2019-05-27 Mon 17:25</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.5.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
