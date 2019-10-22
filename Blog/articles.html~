@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Articles</title>
-<!-- 2019-10-22 Tue 23:19 -->
+<!-- 2019-10-22 Tue 23:28 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="daniel b" />
@@ -209,7 +209,7 @@ Then the shape operator in basis elements can be written as
 Since there is only one normal direction 
 the second fundamental \(h(X,Y)=g(h(X,Y),\xi)\xi\) can be identify with a real 
 number \(g(h(X,Y),\xi)\), and from the definition of the shape operator
-\eqref{eq:Shape_Operator} on the basis elements we
+(\ref{eq:Shape_Operator}) in a coordinate basis we
 have
 </p>
 \begin{equation}
@@ -360,8 +360,8 @@ where \(S^1\) is the unite circle, and the parabolic equation
 </p>
 \begin{equation}
 \begin{split}
-u_{t} &= u^k_{ss} + u^i_{s}u^j_{s}\Gamma_{ij}^k & s\in S^1, t\geq 0,\\
-u(s,0)& = \gamma(s) & s\in S^1.
+u_{t} &= u^k_{ss} + u^i_{s}u^j_{s}\Gamma_{ij}^k & \,\,s\in S^1, t\geq 0,\\
+u(s,0)& = \gamma(s) & \,\, s\in S^1.
 \end{split}
 \end{equation}
 </div>
@@ -370,7 +370,7 @@ u(s,0)& = \gamma(s) & s\in S^1.
 <h3 id="sec-2-1">The Heat Flow Method</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
-Now we write  the method to obtain the geodesic as outline by 
+Now we write  the method to obtain the geodesic as outlined by 
 J. Jost in his  <i>Riemannian Geometry and Geometric Analysis</i>.
 </p>
 
