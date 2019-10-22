@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Articles</title>
-<!-- 2019-10-22 Tue 21:17 -->
+<!-- 2019-10-22 Tue 21:22 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="daniel b" />
@@ -427,7 +427,7 @@ The Energy functional of a curve \(\alpha\) is given by
 equivallently in coordinates:
 </p>
 \begin{equation}
- E(u(\cdot,t)) = \frac{1}{2}\frac{\partial}{\partial t}\int_{S^1} g_{ij}\dot{\alpha}^i_s\dot{\alpha}^j_s ds
+ E(u(\cdot,t)) = \frac{1}{2}\frac{\partial}{\partial t}\int_{S^1} g_{ij}\alpha^i_s\alpha^j_s ds
 \end{equation}
 </div>
 </div>
