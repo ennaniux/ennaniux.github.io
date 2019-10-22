@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Articles</title>
-<!-- 2019-05-17 Fri 09:37 -->
+<!-- 2019-10-22 Tue 21:17 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="daniel b" />
@@ -347,7 +347,6 @@ shortest one.
 homotopy class of closed curves in \(M\) contains a geodesic.</i>
 </p>
 
-
 <p>
 To apply the heat flow approach, we consider the following 
 family of curves:
@@ -370,7 +369,8 @@ u(s,0)& = \gamma(s) & s\in S^1.
 <h3 id="sec-2-1">The Heat Flow Method</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
-Now we outline the method to obtain the geodesic.
+Now we write  the method to obtain the geodesic as outline by 
+J. Jost in his  <i>Riemannian Geometry and Geometric Analysis</i>.
 </p>
 
 <ol class="org-ol">
@@ -405,11 +405,30 @@ is such that \(\tilde{\gamma}^k_{ss} +
 </li>
 <li><b>Convexity</b>. If convexity is not fulfilled, then things that may
 look like wiggles may happen to have less energy than the
-geodesic. When convexity is checked then the convergence to the
-geodesic can be taken from \(t\to\infty\), and is not restricted to
-the sequence \(t_n\).
+geodesic. We also have to be careful with the curvature of our
+manifold. When (non-negative) curvature condition is fulfilled and
+convexity is checked, then the convergence to the geodesic can be
+taken from \(t\to\infty\), and is not restricted to the sequence
+\(t_n\).
 </li>
 </ol>
+
+
+<p>
+One of the things I learnt from this exercise is to be careful when
+using normal coordinates and integrating by parts. We will
+go through the computations of \(E\), \(E_t\) and \(E_{tt}\).
+</p>
+
+
+<p>
+The Energy functional of a curve \(\alpha\) is given by
+\(E(u):= \frac{1}{2}\int_{S^1} \|\dot{\alpha}\|^2dt\),
+equivallently in coordinates:
+</p>
+\begin{equation}
+ E(u(\cdot,t)) = \frac{1}{2}\frac{\partial}{\partial t}\int_{S^1} g_{ij}\dot{\alpha}^i_s\dot{\alpha}^j_s ds
+\end{equation}
 </div>
 </div>
 </div>
