@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Articles</title>
-<!-- 2019-10-22 Tue 23:31 -->
+<!-- 2019-10-25 Fri 02:29 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="daniel b" />
@@ -117,16 +117,237 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">Geometry of hypersurfaces.</a></li>
-<li><a href="#sec-2">Existence of Geodesics With a Heat Flow.</a></li>
-<li><a href="#sec-3">Alexandrov's Moving Planes</a></li>
+<li><a href="#sec-1">Brownian Motion and Harmonic Functions</a></li>
+<li><a href="#sec-2">Alexandrov's Moving Planes</a></li>
+<li><a href="#sec-3">Existence of Geodesics With a Heat Flow.</a></li>
+<li><a href="#sec-4">Geometry of hypersurfaces.</a></li>
 </ul>
 </div>
 </div>
 
+
+
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Geometry of hypersurfaces.</h2>
+<h2 id="sec-1">Brownian Motion and Harmonic Functions</h2>
 <div class="outline-text-2" id="text-1">
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2019-10-23 Wed]</time> </div>
+</div>
+
+<p>
+This is one of the relations that I always forget, so I will keep it
+here for the future. When I hear someone speaking about Brownian
+motion immediately comes to my head a voice saying <i>&#x2026; you know, the
+probabilistic representation of harmonic functions&#x2026;</i> but never manage
+to remember how this link is done. 
+</p>
+
+<p>
+Here are the ingredients I need to build the bridge:
+</p>
+<ul class="org-ul">
+<li>A domain in \(\Omega \subset \mathbb{R}^n\).
+</li>
+<li>A Brownian motion starting at \(x\in \Omega\), i.e. \(X^*_t = x + X_t\).
+</li>
+<li>A pay off function \(\varphi:\partial\Omega \to \mathbb{R}\), so the
+first time the Brownian motion hits the boundary at
+\(z\in\partial\Omega\) we get a payoff \(\varphi(z)\).
+</li>
+</ul>
+
+<p>
+If \(T\) is the first hitting time of \(X^*_T\), define
+</p>
+\begin{equation}
+u(x) = \mathbb{E}[\varphi(X^*_T)].
+\end{equation}
+
+<p>
+Now consider the ball \(B_r(x)\) contained in \(\Omega\). The key
+observation is that from the properties of Brownian motion \(X^*_t\) its
+possible to conclude that the process will hit any point in the
+boundary with the same probability.
+</p>
+
+<p>
+This observation implies that \(u\) satisfies the mean value property, 
+and consequently is a solution of the following Dirichlet problem:
+</p>
+
+\begin{equation}
+\left\{ \begin{array}{cccc}
+\Delta u &=& 0& \mbox{in}\quad \Omega\\
+ u &=& \varphi & \mbox{on}\quad \partial\Omega\\
+\end{array}\right.
+\end{equation}
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Alexandrov's Moving Planes</h2>
+<div class="outline-text-2" id="text-2">
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2019-10-22 Tue]</time> </div>
+</div>
+
+<p>
+This method was developed by the Russian mathematician A. D. Alexandrov (Aleksandrov),
+to prove that any connected, closed surface in \(\mathbb{R}^3\) with Constant Mean Curvature (CMC) 
+is a sphere.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Existence of Geodesics With a Heat Flow.</h2>
+<div class="outline-text-2" id="text-3">
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2019-05-14 Tue]</time> </div>
+</div>
+
+<p>
+If we want to obtain a closed geodesic in a compact Riemannian manifold
+all we have to do is get one loop and wait. Yes just wait long enough and, surprisingly,
+our loop will transform into a geodesic one. Moreover,
+take a smooth close loop in a compact Riemannian manifold,
+of course this belongs to a homotopy class. Suppose now
+that we are able to measure the energy of our loop with some sort of
+thermometer, and that changes of this energy may produce some elongation or contraction 
+of the loop, measured by its length. Then we wait for a reasonable long
+period of time for our
+loop to cool down and.. we end up with a geodesic of the same homotopy class!
+</p>
+
+<p>
+Well, unfortunately not quite. The problem of passing
+from \(t_n\) to \(t\) (see below) in the convergence is something that
+needs to be treated carefully.
+</p>
+
+<p>
+The curve \(\gamma : (a,b) \subset \mathbb{R} \to M\) is geodesic if and
+only if in local coordinates it satisfies
+</p>
+\begin{equation}
+\ddot{\gamma}^k(t) + \dot{\gamma}^i(t)\dot{\gamma}^j)(t)\Gamma_{ij}^{k}(\gamma(t)) = 0.
+\end{equation}
+
+<p>
+Before we continue just a word of <i>warning</i>: note that for any compact
+Riemannian manifold, and two points in it, there are always more than
+one geodesic joining them, a quick example of this is the sphere with
+the North and South pole. The uniqueness of the shortest geodesic is
+guaranteed when the two points are sufficiently close. The method we
+will describe, produces a geodesic but It may not necessarily be the
+shortest one.
+</p>
+
+<p>
+<b>Theorem</b> <i>Let \(M\) be a compact Riemannian manifold. Then every
+homotopy class of closed curves in \(M\) contains a geodesic.</i>
+</p>
+
+<p>
+To apply the heat flow approach, we consider the following 
+family of curves:
+</p>
+\begin{equation}
+u : S^1 \times [0,\infty) \to M,
+\end{equation}
+<p>
+where \(S^1\) is the unite circle, and the parabolic equation
+</p>
+\begin{equation}
+\begin{split}
+u_{t} &= u^k_{ss} + u^i_{s}u^j_{s}\Gamma_{ij}^k & \,\,s\in S^1, t\geq 0,\\
+u(s,0)& = \gamma(s) & \,\, s\in S^1.
+\end{split}
+\end{equation}
+</div>
+
+<div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1">The Heat Flow Method</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Now we write  the method to obtain the geodesic as outlined by 
+J. Jost in his  <i>Riemannian Geometry and Geometric Analysis</i>.
+</p>
+
+<ol class="org-ol">
+<li><b>Short time existence</b>. There exist \(T_0>0\) such that the initial
+value problem above has a solution \(u^k_{t} = u^k_{ss} +
+   u^i_{s}u^j_{s}\Gamma_{ij}^k\) in \(S^1\times [0,T_0)\) and
+\(u(s,0)=\gamma(s)\). Then the maximal (time) interval of existence
+of a solution is nonempty and open.
+</li>
+<li><b>A priori estimates of spacial derivatives</b>. Let \(u(s,t)\) be a
+solution. Get an a priori estimate of the spacial derivative \(|u_s|
+   \leq C\), where \(C\) independently of \(t\). Then we can think of the
+equation \(u_t - u_{ss} =f\), where \(f\) is a bounded function. Then
+regularity theory for linear parabolic equations is used to
+control higher order derivatives which are time independent.
+</li>
+<li><b>Convergence as \(t\) goes to \(\infty\)</b>. This a priori estimate
+implies the following: If a solution exists in \([0,T_{0})\), and for
+\(t\to T_{0}\) the solution \(u(s,t)\) will converge to a smooth curve
+\(u(s,T_{0})\). Then this curve can be taken as the new initial value
+and continue the solution for times bigger than \(T_{0}\). Then the
+maximal interval of existence of a solution is also a closed
+set. This at the end implies that a solution exists for all times
+\(t>0\).
+</li>
+<li><b>The Energy functional is decreasing</b>. Note that the energy
+\(E(u(s,t))\) is decreasing in \(t\) and since \(0 \leq E(u(s,t))\) for
+all \(t\), it is possible to find a sequence \(\{t_n\}\) such that
+\(u(s,t) \to \tilde{\gamma}(s)\), \(t\to \infty\), and \(\tilde{\gamma}\)
+is such that \(\tilde{\gamma}^k_{ss} +
+   \tilde{\gamma}^i_{s}\tilde{\gamma}^j_{s}\Gamma_{ij}^k = 0\).
+</li>
+<li><b>Convexity</b>. If convexity is not fulfilled, then things that may
+look like wiggles may happen to have less energy than the
+geodesic. We also have to be careful with the curvature of our
+manifold. When (non-negative) curvature condition is fulfilled and
+convexity is checked, then the convergence to the geodesic can be
+taken from \(t\to\infty\), and is not restricted to the sequence
+\(t_n\).
+</li>
+</ol>
+
+
+<p>
+One of the things I learnt from this exercise is to be careful when
+using normal coordinates and integrating by parts. We will
+go through the computations of \(E\), \(E_t\) and \(E_{tt}\).
+</p>
+
+<p>
+The Energy functional of a curve \(\alpha\) is given by
+\(E(u):= \frac{1}{2}\int_{S^1} \|\dot{\alpha}(t)\|^2dt\),
+equivalently in coordinates with \(\alpha(s,t)\) and \(\alpha_s\)
+to denote \(\partial_s \alpha(s,t) = \dot{\alpha}(s,t)\) we write
+</p>
+\begin{equation}
+ E(u(\cdot,t)) = \frac{1}{2}\int_{S^1} g_{ij}\alpha^i_s\alpha^j_s ds,
+\end{equation}
+<p>
+then
+</p>
+\begin{equation}
+\partial_t E = \frac{1}{2}\int_{S^1} \partial_t(g_{ij}) + 2g_{ij}\alpha^i_{st}\alpha^j_s ds,
+\end{equation}
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Geometry of hypersurfaces.</h2>
+<div class="outline-text-2" id="text-4">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2019-05-16 Thu]</time> </div>
@@ -229,9 +450,9 @@ eigenvalues of the matrix \((A^i_j)\).
 </p>
 </div>
 
-<div id="outline-container-sec-1-1" class="outline-3">
-<h3 id="sec-1-1">Example: Hypersurfaces as graphs in Euclidean space.</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1">Example: Hypersurfaces as graphs in Euclidean space.</h3>
+<div class="outline-text-3" id="text-4-1">
 <p>
 Consider that \(\Sigma\subset\mathbb{R}^{n+1}\) is parametrised as the
 graph of a smooth function \(f:\mathbb{R}^n\to\mathbb{R}\). Then at any point \(p\in\Sigma\)
@@ -294,164 +515,6 @@ then the shape operator is given by
 = \frac{\partial}{\partial x^j}\left(\frac{ f_i}{\sqrt{1+|D f|^2}}\right).
 \end{equation}
 </div>
-</div>
-</div>
-
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">Existence of Geodesics With a Heat Flow.</h2>
-<div class="outline-text-2" id="text-2">
-<div class="post-details">
-<div class="post-author">Posted by:  Daniel B.</div>
-<div class="post-date"><time>[2019-05-14 Tue]</time> </div>
-</div>
-
-<p>
-If we want to obtain a closed geodesic in a compact Riemannian manifold
-all we have to do is get one loop and wait. Yes just wait long enough and, surprisingly,
-our loop will transform into a geodesic one. Moreover,
-take a smooth close loop in a compact Riemannian manifold,
-of course this belongs to a homotopy class. Suppose now
-that we are able to measure the energy of our loop with some sort of
-thermometer, and that changes of this energy may produce some elongation or contraction 
-of the loop, measured by its length. Then we wait for a reasonable long
-period of time for our
-loop to cool down and.. we end up with a geodesic of the same homotopy class!
-</p>
-
-<p>
-Well, unfortunately not quite. The problem of passing
-from \(t_n\) to \(t\) (see below) in the convergence is something that
-needs to be treated carefully.
-</p>
-
-<p>
-The curve \(\gamma : (a,b) \subset \mathbb{R} \to M\) is geodesic if and
-only if in local coordinates it satisfies
-</p>
-\begin{equation}
-\ddot{\gamma}^k(t) + \dot{\gamma}^i(t)\dot{\gamma}^j)(t)\Gamma_{ij}^{k}(\gamma(t)) = 0.
-\end{equation}
-
-<p>
-Before we continue just a word of <i>warning</i>: note that for any compact
-Riemannian manifold, and two points in it, there are always more than
-one geodesic joining them, a quick example of this is the sphere with
-the North and South pole. The uniqueness of the shortest geodesic is
-guaranteed when the two points are sufficiently close. The method we
-will describe, produces a geodesic but It may not necessarily be the
-shortest one.
-</p>
-
-<p>
-<b>Theorem</b> <i>Let \(M\) be a compact Riemannian manifold. Then every
-homotopy class of closed curves in \(M\) contains a geodesic.</i>
-</p>
-
-<p>
-To apply the heat flow approach, we consider the following 
-family of curves:
-</p>
-\begin{equation}
-u : S^1 \times [0,\infty) \to M,
-\end{equation}
-<p>
-where \(S^1\) is the unite circle, and the parabolic equation
-</p>
-\begin{equation}
-\begin{split}
-u_{t} &= u^k_{ss} + u^i_{s}u^j_{s}\Gamma_{ij}^k & \,\,s\in S^1, t\geq 0,\\
-u(s,0)& = \gamma(s) & \,\, s\in S^1.
-\end{split}
-\end{equation}
-</div>
-
-<div id="outline-container-sec-2-1" class="outline-3">
-<h3 id="sec-2-1">The Heat Flow Method</h3>
-<div class="outline-text-3" id="text-2-1">
-<p>
-Now we write  the method to obtain the geodesic as outlined by 
-J. Jost in his  <i>Riemannian Geometry and Geometric Analysis</i>.
-</p>
-
-<ol class="org-ol">
-<li><b>Short time existence</b>. There exist \(T_0>0\) such that the initial
-value problem above has a solution \(u^k_{t} = u^k_{ss} +
-   u^i_{s}u^j_{s}\Gamma_{ij}^k\) in \(S^1\times [0,T_0)\) and
-\(u(s,0)=\gamma(s)\). Then the maximal (time) interval of existence
-of a solution is nonempty and open.
-</li>
-<li><b>A priori estimates of spacial derivatives</b>. Let \(u(s,t)\) be a
-solution. Get an a priori estimate of the spacial derivative \(|u_s|
-   \leq C\), where \(C\) independently of \(t\). Then we can think of the
-equation \(u_t - u_{ss} =f\), where \(f\) is a bounded function. Then
-regularity theory for linear parabolic equations is used to
-control higher order derivatives which are time independent.
-</li>
-<li><b>Convergence as \(t\) goes to \(\infty\)</b>. This a priori estimate
-implies the following: If a solution exists in \([0,T_{0})\), and for
-\(t\to T_{0}\) the solution \(u(s,t)\) will converge to a smooth curve
-\(u(s,T_{0})\). Then this curve can be taken as the new initial value
-and continue the solution for times bigger than \(T_{0}\). Then the
-maximal interval of existence of a solution is also a closed
-set. This at the end implies that a solution exists for all times
-\(t>0\).
-</li>
-<li><b>The Energy functional is decreasing</b>. Note that the energy
-\(E(u(s,t))\) is decreasing in \(t\) and since \(0 \leq E(u(s,t))\) for
-all \(t\), it is possible to find a sequence \(\{t_n\}\) such that
-\(u(s,t) \to \tilde{\gamma}(s)\), \(t\to \infty\), and \(\tilde{\gamma}\)
-is such that \(\tilde{\gamma}^k_{ss} +
-   \tilde{\gamma}^i_{s}\tilde{\gamma}^j_{s}\Gamma_{ij}^k = 0\).
-</li>
-<li><b>Convexity</b>. If convexity is not fulfilled, then things that may
-look like wiggles may happen to have less energy than the
-geodesic. We also have to be careful with the curvature of our
-manifold. When (non-negative) curvature condition is fulfilled and
-convexity is checked, then the convergence to the geodesic can be
-taken from \(t\to\infty\), and is not restricted to the sequence
-\(t_n\).
-</li>
-</ol>
-
-
-<p>
-One of the things I learnt from this exercise is to be careful when
-using normal coordinates and integrating by parts. We will
-go through the computations of \(E\), \(E_t\) and \(E_{tt}\).
-</p>
-
-<p>
-The Energy functional of a curve \(\alpha\) is given by
-\(E(u):= \frac{1}{2}\int_{S^1} \|\dot{\alpha}(t)\|^2dt\),
-equivalently in coordinates with \(\alpha(s,t)\) and \(\alpha_s\)
-to denote \(\partial_s \alpha(s,t) = \dot{\alpha}(s,t)\) we write
-</p>
-\begin{equation}
- E(u(\cdot,t)) = \frac{1}{2}\int_{S^1} g_{ij}\alpha^i_s\alpha^j_s ds,
-\end{equation}
-<p>
-then
-</p>
-\begin{equation}
-\partial_t E = \frac{1}{2}\int_{S^1} \partial_t(g_{ij}) + 2g_{ij}\alpha^i_{st}\alpha^j_s ds,
-\end{equation}
-</div>
-</div>
-</div>
-
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">Alexandrov's Moving Planes</h2>
-<div class="outline-text-2" id="text-3">
-<div class="post-details">
-<div class="post-author">Posted by:  Daniel B.</div>
-<div class="post-date"><time>[2019-10-22 Tue]</time> </div>
-</div>
-
-<p>
-This method was developed by the Russian mathematician A. D. Alexandrov (Aleksandrov),
-to prove that any connected, closed surface in \(\mathbb{R}^3\) with Constant Mean Curvature (CMC) 
-is a sphere.
-</p>
 </div>
 </div>
 </div>
