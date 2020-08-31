@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-08-31 Mon 09:18 -->
+<!-- 2020-08-31 Mon 10:03 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Articles</title>
@@ -98,6 +98,7 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
+<li><a href="#org28afad1">The Geometry of the support function</a></li>
 <li><a href="#orgd4ef168">Brownian Motion and Harmonic Functions</a></li>
 <li><a href="#org44201e4">Alexandrov's Moving Planes</a></li>
 <li><a href="#org35fa6f2">Existence of Geodesics With a Heat Flow.</a></li>
@@ -108,18 +109,67 @@ for the JavaScript code in this tag.
 
 
 
+<div id="outline-container-org28afad1" class="outline-2">
+<h2 id="org28afad1">The Geometry of the support function</h2>
+<div class="outline-text-2" id="text-org28afad1">
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2020-08-31 Mon]</time> </div>
+</div>
+
+
+<p>
+One of the most useful tools I have learnt when dealing with convex geometry is that of the support function.
+It has been used to prove the uniformly ellipticity of a given geometric fully nonlinear elliptic equation, or
+to get estimates on the principal curvatures of a strictly convex hypersurface.
+</p>
+
+<p>
+Consider the Euclidean space \(R^n\) with its inner product \(\cdot\). 
+Then, any hyperplane can be defined by a point in this plane \(x_0\) and a unit normal vector \(\nu \in R^n\) 
+as all vectors \(x\in R^n\) satisfying the equation
+</p>
+\begin{equation}
+\langle \nu \cdot (x_0 - x) = 0$.
+\end{equation}
+
+<p>
+One can also think of \(\nu = \nu(x)\) as the constant unit vector field along the hyperplane,
+and then the last equation says that the function \(\varphi(x) = \nu(x)\cdot x\) has a constant
+value, namely, <b>the distance from the origin to the hyperplane</b>.
+</p>
+
+<p>
+If \(\Sigma \subset R^{n+1}\) is a strictly convex hypersurface in the Euclidean space,
+then the Gauss map $n:&Sigma;&rarr; S<sup>n</sup>$is a diffeomorphism with the unit sphere \(S^n\).
+At every \(x\Sigma\), corresponds one unit vector \(n(x)\) which is perpendicular to the
+tangent hyperplane to \(\Sigma\) at \(x\). Then one can define the support function of 
+\(u:S^n \to R\) as
+</p>
+\begin{equation}
+u(\xi) = \xi \cdot n^{-1}(\xi), \quad \xi \in S^n \subset R^{n+1}$.
+\end{equation}
+
+<p>
+Noting that the tangent hyperplane to \(\Sigma\) at  \(n^{-1}(\xi)\) has a unit normal vector \(\xi\) then
+the support function is clearly the distance from the origin of \(R^{n+1}\) to this hyperplane.
+</p>
+
+<p>
+[[./img/support<sub>function.jpg</sub>]
+</p>
+</div>
+</div>
+
+
 <div id="outline-container-orgd4ef168" class="outline-2">
 <h2 id="orgd4ef168">Brownian Motion and Harmonic Functions</h2>
 <div class="outline-text-2" id="text-orgd4ef168">
-<div class="HTML">
-<p>
-&lt;div class="post-details"&gt;
-&lt;div class="post-author"&gt;Posted by:  Daniel B.&lt;/div&gt;
-&lt;div class="post-date"&gt;&lt;time&gt;<span class="timestamp-wrapper"><span class="timestamp">[2019-10-23 Wed]</span></span>&lt;/time&gt; &lt;/div&gt;
-&lt;/div&gt;
-</p>
-
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2019-10-23 Wed]</time> </div>
 </div>
+
 
 <p>
 This is one of the relations that I always forget, so I will keep it
@@ -173,15 +223,11 @@ and consequently is a solution of the following Dirichlet problem:
 <div id="outline-container-org44201e4" class="outline-2">
 <h2 id="org44201e4">Alexandrov's Moving Planes</h2>
 <div class="outline-text-2" id="text-org44201e4">
-<div class="HTML">
-<p>
-&lt;div class="post-details"&gt;
-&lt;div class="post-author"&gt;Posted by:  Daniel B.&lt;/div&gt;
-&lt;div class="post-date"&gt;&lt;time&gt;<span class="timestamp-wrapper"><span class="timestamp">[2019-10-22 Tue]</span></span>&lt;/time&gt; &lt;/div&gt;
-&lt;/div&gt;
-</p>
-
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2019-10-22 Tue]</time> </div>
 </div>
+
 
 <p>
 This method was developed by the Russian mathematician A. D. Alexandrov (Aleksandrov),
@@ -198,15 +244,11 @@ It is also known that J. Serring used this method
 <div id="outline-container-org35fa6f2" class="outline-2">
 <h2 id="org35fa6f2">Existence of Geodesics With a Heat Flow.</h2>
 <div class="outline-text-2" id="text-org35fa6f2">
-<div class="HTML">
-<p>
-&lt;div class="post-details"&gt;
-&lt;div class="post-author"&gt;Posted by:  Daniel B.&lt;/div&gt;
-&lt;div class="post-date"&gt;&lt;time&gt;<span class="timestamp-wrapper"><span class="timestamp">[2019-05-14 Tue]</span></span>&lt;/time&gt; &lt;/div&gt;
-&lt;/div&gt;
-</p>
-
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2019-05-14 Tue]</time> </div>
 </div>
+
 
 <p>
 If we want to obtain a closed geodesic in a compact Riemannian manifold
@@ -340,15 +382,11 @@ then
 <div id="outline-container-org28b798d" class="outline-2">
 <h2 id="org28b798d">Geometry of hypersurfaces.</h2>
 <div class="outline-text-2" id="text-org28b798d">
-<div class="HTML">
-<p>
-&lt;div class="post-details"&gt;
-&lt;div class="post-author"&gt;Posted by:  Daniel B.&lt;/div&gt;
-&lt;div class="post-date"&gt;&lt;time&gt;<span class="timestamp-wrapper"><span class="timestamp">[2019-05-16 Thu]</span></span>&lt;/time&gt; &lt;/div&gt;
-&lt;/div&gt;
-</p>
-
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2019-05-16 Thu]</time> </div>
 </div>
+
 
 <p>
 When we are trying to understand the geometry of a space, we usually
