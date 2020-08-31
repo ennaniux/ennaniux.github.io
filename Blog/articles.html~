@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-08-31 Mon 10:05 -->
+<!-- 2020-08-31 Mon 10:08 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Articles</title>
@@ -130,7 +130,7 @@ Then, any hyperplane can be defined by a point in this plane \(x_0\) and a unit 
 as all vectors \(x\in R^n\) satisfying the equation
 </p>
 \begin{equation}
- \nu \cdot (x_0 - x) = 0$.
+ \nu \cdot (x_0 - x) = 0.
 \end{equation}
 
 <p>
@@ -159,7 +159,7 @@ the support function is clearly the distance from the origin of \(R^{n+1}\) to t
 <div id="orgf649d42" class="figure">
 <p><img src="./img/support_function.jpg" alt="support_function.jpg" />
 </p>
-<p><span class="figure-number">Figure 1: </span>Support function and maximum inscribed sphere</p>
+<p><span class="figure-number">Figure 1: </span>Support function and maximal inscribed sphere</p>
 </div>
 </div>
 </div>
