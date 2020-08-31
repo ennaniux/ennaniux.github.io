@@ -141,7 +141,7 @@ value, namely, <b>the distance from the origin to the hyperplane</b>.
 
 <p>
 If \(\Sigma \subset R^{n+1}\) is a strictly convex hypersurface in the Euclidean space,
-then the Gauss map $n:&Sigma;&rarr; S<sup>n</sup>$is a diffieomorphism with the unit sphere \(S^n\).
+then the Gauss map $n:&Sigma;&rarr; S<sup>n</sup>$is a diffeomorphism with the unit sphere \(S^n\).
 At every \(x\Sigma\), corresponds one unit vector \(n(x)\) which is perpendicular to the
 tangent hyperplane to \(\Sigma\) at \(x\). Then one can define the support function of 
 \(u:S^n \to R\) as
