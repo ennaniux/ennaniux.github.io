@@ -3,22 +3,19 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
+<!-- 2020-08-31 Mon 09:16 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Articles</title>
-<!-- 2019-10-25 Fri 02:29 -->
-<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta  name="generator" content="Org-mode" />
-<meta  name="author" content="daniel b" />
-<link rel="stylesheet"
-                  href="https://ennaniux.github.io/Blog/css/dark.css" type="text/css"/>
-	 <script type="text/javascript" async
-	 src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async>
-	 </script>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="daniel b" />
+<link rel="stylesheet" type="text/css" href="./css/style01.css"/>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -59,48 +56,28 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
-<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
-<script type="text/javascript">
-<!--/*--><![CDATA[/*><!--*/
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({
-        // Only one of the two following lines, depending on user settings
-        // First allows browser-native MathML display, second forces HTML/CSS
-        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
-            jax: ["input/TeX", "output/HTML-CSS"],
-        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
-                     "TeX/noUndefined.js"],
-        tex2jax: {
-            inlineMath: [ ["\\(","\\)"] ],
-            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
-            skipTags: ["script","noscript","style","textarea","pre","code"],
-            ignoreClass: "tex2jax_ignore",
-            processEscapes: false,
-            processEnvironments: true,
-            preview: "TeX"
-        },
-        showProcessingMessages: true,
         displayAlign: "center",
-        displayIndent: "2em",
+        displayIndent: "0em",
 
-        "HTML-CSS": {
-             scale: 100,
-             availableFonts: ["STIX","TeX"],
-             preferredFont: "TeX",
-             webFont: "TeX",
-             imageFont: "TeX",
-             showMathMenu: true,
-        },
-        MMLorHTML: {
-             prefer: {
-                 MSIE:    "MML",
-                 Firefox: "MML",
-                 Opera:   "HTML",
-                 other:   "HTML"
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
              }
-        }
-    });
-/*]]>*///-->
+});
 </script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -117,22 +94,26 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">Brownian Motion and Harmonic Functions</a></li>
-<li><a href="#sec-2">Alexandrov's Moving Planes</a></li>
-<li><a href="#sec-3">Existence of Geodesics With a Heat Flow.</a></li>
-<li><a href="#sec-4">Geometry of hypersurfaces.</a></li>
+<li><a href="#orgd4ef168">Brownian Motion and Harmonic Functions</a></li>
+<li><a href="#org44201e4">Alexandrov's Moving Planes</a></li>
+<li><a href="#org35fa6f2">Existence of Geodesics With a Heat Flow.</a></li>
+<li><a href="#org28b798d">Geometry of hypersurfaces.</a></li>
 </ul>
 </div>
 </div>
 
 
+<div id="outline-container-orgd4ef168" class="outline-2">
+<h2 id="orgd4ef168">Brownian Motion and Harmonic Functions</h2>
+<div class="outline-text-2" id="text-orgd4ef168">
+<div class="HTML">
+<p>
+&lt;div class="post-details"&gt;
+&lt;div class="post-author"&gt;Posted by:  Daniel B.&lt;/div&gt;
+&lt;div class="post-date"&gt;&lt;time&gt;<span class="timestamp-wrapper"><span class="timestamp">[2019-10-23 Wed]</span></span>&lt;/time&gt; &lt;/div&gt;
+&lt;/div&gt;
+</p>
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1">Brownian Motion and Harmonic Functions</h2>
-<div class="outline-text-2" id="text-1">
-<div class="post-details">
-<div class="post-author">Posted by:  Daniel B.</div>
-<div class="post-date"><time>[2019-10-23 Wed]</time> </div>
 </div>
 
 <p>
@@ -147,14 +128,11 @@ to remember how this link is done.
 Here are the ingredients I need to build the bridge:
 </p>
 <ul class="org-ul">
-<li>A domain in \(\Omega \subset \mathbb{R}^n\).
-</li>
-<li>A Brownian motion starting at \(x\in \Omega\), i.e. \(X^*_t = x + X_t\).
-</li>
+<li>A domain in \(\Omega \subset \mathbb{R}^n\).</li>
+<li>A Brownian motion starting at \(x\in \Omega\), i.e. \(X^*_t = x + X_t\).</li>
 <li>A pay off function \(\varphi:\partial\Omega \to \mathbb{R}\), so the
 first time the Brownian motion hits the boundary at
-\(z\in\partial\Omega\) we get a payoff \(\varphi(z)\).
-</li>
+\(z\in\partial\Omega\) we get a payoff \(\varphi(z)\).</li>
 </ul>
 
 <p>
@@ -187,28 +165,42 @@ and consequently is a solution of the following Dirichlet problem:
 
 
 
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2">Alexandrov's Moving Planes</h2>
-<div class="outline-text-2" id="text-2">
-<div class="post-details">
-<div class="post-author">Posted by:  Daniel B.</div>
-<div class="post-date"><time>[2019-10-22 Tue]</time> </div>
+<div id="outline-container-org44201e4" class="outline-2">
+<h2 id="org44201e4">Alexandrov's Moving Planes</h2>
+<div class="outline-text-2" id="text-org44201e4">
+<div class="HTML">
+<p>
+&lt;div class="post-details"&gt;
+&lt;div class="post-author"&gt;Posted by:  Daniel B.&lt;/div&gt;
+&lt;div class="post-date"&gt;&lt;time&gt;<span class="timestamp-wrapper"><span class="timestamp">[2019-10-22 Tue]</span></span>&lt;/time&gt; &lt;/div&gt;
+&lt;/div&gt;
+</p>
+
 </div>
 
 <p>
 This method was developed by the Russian mathematician A. D. Alexandrov (Aleksandrov),
 to prove that any connected, closed surface in \(\mathbb{R}^3\) with Constant Mean Curvature (CMC) 
-is a sphere.
+is actually the round sphere.
+</p>
+
+<p>
+It is also known that J. Serring used this method
 </p>
 </div>
 </div>
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3">Existence of Geodesics With a Heat Flow.</h2>
-<div class="outline-text-2" id="text-3">
-<div class="post-details">
-<div class="post-author">Posted by:  Daniel B.</div>
-<div class="post-date"><time>[2019-05-14 Tue]</time> </div>
+<div id="outline-container-org35fa6f2" class="outline-2">
+<h2 id="org35fa6f2">Existence of Geodesics With a Heat Flow.</h2>
+<div class="outline-text-2" id="text-org35fa6f2">
+<div class="HTML">
+<p>
+&lt;div class="post-details"&gt;
+&lt;div class="post-author"&gt;Posted by:  Daniel B.&lt;/div&gt;
+&lt;div class="post-date"&gt;&lt;time&gt;<span class="timestamp-wrapper"><span class="timestamp">[2019-05-14 Tue]</span></span>&lt;/time&gt; &lt;/div&gt;
+&lt;/div&gt;
+</p>
+
 </div>
 
 <p>
@@ -271,9 +263,9 @@ u(s,0)& = \gamma(s) & \,\, s\in S^1.
 \end{equation}
 </div>
 
-<div id="outline-container-sec-3-1" class="outline-3">
-<h3 id="sec-3-1">The Heat Flow Method</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-org7d523ce" class="outline-3">
+<h3 id="org7d523ce">The Heat Flow Method</h3>
+<div class="outline-text-3" id="text-org7d523ce">
 <p>
 Now we write  the method to obtain the geodesic as outlined by 
 J. Jost in his  <i>Riemannian Geometry and Geometric Analysis</i>.
@@ -284,15 +276,13 @@ J. Jost in his  <i>Riemannian Geometry and Geometric Analysis</i>.
 value problem above has a solution \(u^k_{t} = u^k_{ss} +
    u^i_{s}u^j_{s}\Gamma_{ij}^k\) in \(S^1\times [0,T_0)\) and
 \(u(s,0)=\gamma(s)\). Then the maximal (time) interval of existence
-of a solution is nonempty and open.
-</li>
+of a solution is nonempty and open.</li>
 <li><b>A priori estimates of spacial derivatives</b>. Let \(u(s,t)\) be a
 solution. Get an a priori estimate of the spacial derivative \(|u_s|
    \leq C\), where \(C\) independently of \(t\). Then we can think of the
 equation \(u_t - u_{ss} =f\), where \(f\) is a bounded function. Then
 regularity theory for linear parabolic equations is used to
-control higher order derivatives which are time independent.
-</li>
+control higher order derivatives which are time independent.</li>
 <li><b>Convergence as \(t\) goes to \(\infty\)</b>. This a priori estimate
 implies the following: If a solution exists in \([0,T_{0})\), and for
 \(t\to T_{0}\) the solution \(u(s,t)\) will converge to a smooth curve
@@ -300,23 +290,20 @@ implies the following: If a solution exists in \([0,T_{0})\), and for
 and continue the solution for times bigger than \(T_{0}\). Then the
 maximal interval of existence of a solution is also a closed
 set. This at the end implies that a solution exists for all times
-\(t>0\).
-</li>
+\(t>0\).</li>
 <li><b>The Energy functional is decreasing</b>. Note that the energy
 \(E(u(s,t))\) is decreasing in \(t\) and since \(0 \leq E(u(s,t))\) for
 all \(t\), it is possible to find a sequence \(\{t_n\}\) such that
 \(u(s,t) \to \tilde{\gamma}(s)\), \(t\to \infty\), and \(\tilde{\gamma}\)
 is such that \(\tilde{\gamma}^k_{ss} +
-   \tilde{\gamma}^i_{s}\tilde{\gamma}^j_{s}\Gamma_{ij}^k = 0\).
-</li>
+   \tilde{\gamma}^i_{s}\tilde{\gamma}^j_{s}\Gamma_{ij}^k = 0\).</li>
 <li><b>Convexity</b>. If convexity is not fulfilled, then things that may
 look like wiggles may happen to have less energy than the
 geodesic. We also have to be careful with the curvature of our
 manifold. When (non-negative) curvature condition is fulfilled and
 convexity is checked, then the convergence to the geodesic can be
 taken from \(t\to\infty\), and is not restricted to the sequence
-\(t_n\).
-</li>
+\(t_n\).</li>
 </ol>
 
 
@@ -345,12 +332,17 @@ then
 </div>
 </div>
 
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4">Geometry of hypersurfaces.</h2>
-<div class="outline-text-2" id="text-4">
-<div class="post-details">
-<div class="post-author">Posted by:  Daniel B.</div>
-<div class="post-date"><time>[2019-05-16 Thu]</time> </div>
+<div id="outline-container-org28b798d" class="outline-2">
+<h2 id="org28b798d">Geometry of hypersurfaces.</h2>
+<div class="outline-text-2" id="text-org28b798d">
+<div class="HTML">
+<p>
+&lt;div class="post-details"&gt;
+&lt;div class="post-author"&gt;Posted by:  Daniel B.&lt;/div&gt;
+&lt;div class="post-date"&gt;&lt;time&gt;<span class="timestamp-wrapper"><span class="timestamp">[2019-05-16 Thu]</span></span>&lt;/time&gt; &lt;/div&gt;
+&lt;/div&gt;
+</p>
+
 </div>
 
 <p>
@@ -450,9 +442,9 @@ eigenvalues of the matrix \((A^i_j)\).
 </p>
 </div>
 
-<div id="outline-container-sec-4-1" class="outline-3">
-<h3 id="sec-4-1">Example: Hypersurfaces as graphs in Euclidean space.</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-org55377bb" class="outline-3">
+<h3 id="org55377bb">Example: Hypersurfaces as graphs in Euclidean space.</h3>
+<div class="outline-text-3" id="text-org55377bb">
 <p>
 Consider that \(\Sigma\subset\mathbb{R}^{n+1}\) is parametrised as the
 graph of a smooth function \(f:\mathbb{R}^n\to\mathbb{R}\). Then at any point \(p\in\Sigma\)
@@ -521,7 +513,7 @@ then the shape operator is given by
 <div id="postamble" class="status">
 <p class="author">Author: daniel b </p>
 
-<p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-04-30 Tue&gt;</span></span>  </p>
+<p class="date">Date: 2019-04-30 Tue 00:00  </p>
 
 <p class="creator">Emacs 24.5.1 (Org mode 8.2.10)</p>
 
