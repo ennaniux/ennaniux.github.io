@@ -138,7 +138,7 @@ div.outline-text-2 p {
 
 
 /* Desktop style after */
-@media (min-width: 600px) {
+@media (min-width: 300px) {
     #preamble {
         display: block;
     }
