@@ -148,7 +148,7 @@ div.outline-text-2 p {
 
 /* Desktop style after */
     @media screen and (max-width: 600px) {
-    #preamble.status.a {
+    #preamble a {
     color: #101010;
     /* float: none; */
     display: block;
