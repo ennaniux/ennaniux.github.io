@@ -137,9 +137,17 @@ div.outline-text-2 p {
 }
 
 
+/* Current/active navbar link */
+#preamble a.active {
+    background-color: #051e3e;
+    border-radius: 10px 10px;
+    color: white;
+    padding: 5px 5px;
+}
+
 /* Desktop style after */
 @media (min-width: 300px) {
-    .status a {
+    #preamble a {
 	display: block; /* Make the links appear below each other */
     }
     body {
@@ -193,13 +201,6 @@ div.outline-text-2 p {
 /*     color: white; */
 /* } */
 
-/* Current/active navbar link */
-#preamble a.active {
-    background-color: #051e3e;
-    border-radius: 10px 10px;
-    color: white;
-    padding: 5px 5px;
-}
 
 /* /\* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels *\/ */
 /* @media screen and (max-width: 500px) { */
