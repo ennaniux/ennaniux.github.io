@@ -139,27 +139,18 @@ div.outline-text-2 p {
 
 /* Desktop style after */
 @media (min-width: 300px) {
-    #preamble {
- overflow-y: auto;
+    #preamble a{
+  display: block; /* Make the links appear below each other */
+	overflow-y: auto;
     }
 }
 
 @media (min-width: 300px) {
-    #preamble {
 body {
-    /*    background-image: url('./Images/bgpic.jpg'); */
-    background-size: cover;
-    background-attachment: fixed;
-    /* background-position: left top; */
-    /* background-repeat: no-repeat; */
-    background: #F5F3EE;
-    margin: 20px auto; /* "auto" for centering */
     max-width: 90%;
-    /* max-width: 800px; */
-    /* font-family: monospace; */
 }
     }
-}
+
 
 
 
