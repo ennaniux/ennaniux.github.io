@@ -150,7 +150,7 @@ div.outline-text-2 p {
     @media screen and (max-width: 600px) {
     #preamble a {
     color: #101010;
-    float: none;
+    /* float: none; */
     display: block;
   }
 
