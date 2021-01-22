@@ -139,14 +139,13 @@ div.outline-text-2 p {
 
 /* Desktop style after */
 @media (min-width: 300px) {
-    #preamble a{
+    #preamble.a{
   display: block; /* Make the links appear below each other */
-	overflow-y: auto;
     }
 }
 
 @media (min-width: 300px) {
-body {
+#body {
     max-width: 90%;
 }
     }
