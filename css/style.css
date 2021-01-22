@@ -148,10 +148,9 @@ div.outline-text-2 p {
 
 /* Desktop style after */
 @media screen and (max-width: 800px) {
-    .preamble a {
+    #preamble a {
 	display: block; /* Make the links appear below each other */
     }
-
 }
 
 
