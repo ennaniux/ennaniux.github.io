@@ -152,7 +152,7 @@ div.outline-text-2 p {
 	display: block; /* Make the links appear below each other */
     }
 
-    .body {
+    #body {
 	max-width: 90%;
     }
 
