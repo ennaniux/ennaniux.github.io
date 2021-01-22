@@ -1,13 +1,14 @@
 body {
-/*    background-image: url('./Images/bgpic.jpg'); */
+    /*    background-image: url('./Images/bgpic.jpg'); */
     background-size: cover;
     background-attachment: fixed;
     /* background-position: left top; */
     /* background-repeat: no-repeat; */
     background: #F5F3EE;
-		margin: 20px auto; /* "auto" for centering */
-		max-width: 800px;
-		/* font-family: monospace; */
+    margin: 20px auto; /* "auto" for centering */
+    max-width: 70%;
+    /* max-width: 800px; */
+    /* font-family: monospace; */
 }
 
 h1 {
@@ -34,10 +35,10 @@ h2 {
     margin-right: 0;
     font-weight: bold;
     color: #0F0F0F;
-		background-color:#BFC1AC;
-		border-radius: 10px 10px;
-		padding: 10px 20px;
-/*    background-color:#092B39;*/
+    background-color:#BFC1AC;
+    border-radius: 10px 10px;
+    padding: 10px 20px;
+    /*    background-color:#092B39;*/
 }
 
 div.info {
@@ -70,7 +71,7 @@ text-align: justify;
 /* border-width: 3px; */
 /* } */
 
- /* This is taken from default? css? */
+/* This is taken from default? css? */
 
 
 /* #content { */
@@ -84,20 +85,20 @@ div.outline-2 {
     background-color:#f5f3ee;
     /* border:3px solid #f2f6f9; */
     color: #2e291b;
- }
+}
 
 div.outline-2 h2 {
     color: #173f5f;
     font-size: 20px; /* arial, sans-serif; */
     /* font-family: 'Fredoka One', cursive; */
- }
+}
 
 
 div.outline-text-2 {
-   }
- 
+}
+
 div.outline-text-2 p {
-    	text-align: justify;
+    text-align: justify;
 }
 
 
@@ -105,37 +106,38 @@ div.outline-text-2 p {
 
 /******************************************************************************/
 #preamble {
-		font-weight: bold;
-		padding: 0 10px;
-		top: 0;
-		max-width: 800px;
-		text-align: center;
+    font-weight: bold;
+    padding: 0 10px;
+    top: 0;
+    max-width: 70%;
+    /* max-width: 800px; */
+    text-align: center;
     background-color: #173f5f;
     border-radius: 10px 10px;
     font-size: 20px;
     margin-top: 5px;
     /* margin-bottom: 5px; */
-		padding: 10px 20px;
-  /* overflow: auto; */
-  justify-content: space-between;
-  display: flex;
+    padding: 10px 20px;
+    /* overflow: auto; */
+    justify-content: space-between;
+    display: flex;
 }
 
 #preamble a {
     color: #D9D9D9;
-		text-decoration: none;
-		white-space: nowrap;
-		padding: 5px 5px;
-		/* margin: 0 10px 0 0; */
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 5px 5px;
+    /* margin: 0 10px 0 0; */
 }
 
 #preamble a:hover {
-		color: white;
+    color: white;
 }
 
 
- /* this is from https://www.w3schools.com/howto/howto_css_navbar_icon.asp */
- /* Style the navigation bar */
+/* this is from https://www.w3schools.com/howto/howto_css_navbar_icon.asp */
+/* Style the navigation bar */
 
 /* #preamble{ */
 /*     border-radius: 10px 10px; */
@@ -177,7 +179,7 @@ div.outline-text-2 p {
 
 /* Current/active navbar link */
 #preamble a.active {
-        background-color: #051e3e;
+    background-color: #051e3e;
     border-radius: 10px 10px;
     color: white;
     padding: 5px 5px;
@@ -216,33 +218,33 @@ div.outline-text-2 p {
 /*defaults*/
 
 
-  .title  { text-align: left; } /* I change this from centre to left */
-  .todo   { font-family: monospace; color: red; }
-  .done   { color: green; }
-  .tag    { background-color: #eee; font-family: monospace;
-            padding: 2px; font-size: 80%; font-weight: normal; }
-  .timestamp { color: #bebebe; }
-  .timestamp-kwd { color: #5f9ea0; }
-  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .center { margin-left: auto; margin-right: auto; text-align: center; }
-  .underline { text-decoration: underline; }
-  #postamble p/* , #preamble p  */{ font-size: 90%; margin: .2em; }
-  p.verse { margin-left: 3%; }
-  pre {
+.title  { text-align: left; } /* I change this from centre to left */
+.todo   { font-family: monospace; color: red; }
+.done   { color: green; }
+.tag    { background-color: #eee; font-family: monospace;
+          padding: 2px; font-size: 80%; font-weight: normal; }
+.timestamp { color: #bebebe; }
+.timestamp-kwd { color: #5f9ea0; }
+.right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+.left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+.center { margin-left: auto; margin-right: auto; text-align: center; }
+.underline { text-decoration: underline; }
+#postamble p/* , #preamble p  */{ font-size: 90%; margin: .2em; }
+p.verse { margin-left: 3%; }
+pre {
     border: 1px solid #ccc;
     box-shadow: 3px 3px 3px #eee;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
     margin: 1.2em;
-  }
-  pre.src {
+}
+pre.src {
     position: relative;
     overflow: visible;
     padding-top: 1.2em;
-  }
-  pre.src:before {
+}
+pre.src:before {
     display: none;
     position: absolute;
     background-color: white;
@@ -250,45 +252,45 @@ div.outline-text-2 p {
     right: 10px;
     padding: 3px;
     border: 1px solid black;
-  }
-  pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: 'sh'; }
-  pre.src-bash:before  { content: 'sh'; }
-  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-R:before     { content: 'R'; }
-  pre.src-perl:before  { content: 'Perl'; }
-  pre.src-java:before  { content: 'Java'; }
-  pre.src-sql:before   { content: 'SQL'; }
+}
+pre.src:hover:before { display: inline;}
+pre.src-sh:before    { content: 'sh'; }
+pre.src-bash:before  { content: 'sh'; }
+pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+pre.src-R:before     { content: 'R'; }
+pre.src-perl:before  { content: 'Perl'; }
+pre.src-java:before  { content: 'Java'; }
+pre.src-sql:before   { content: 'SQL'; }
 
-  table { border-collapse:collapse; }
-  caption.t-above { caption-side: top; }
-  caption.t-bottom { caption-side: bottom; }
-  td, th { vertical-align:top;  }
-  th.right  { text-align: center;  }
-  th.left   { text-align: center;   }
-  th.center { text-align: center; }
-  td.right  { text-align: right;  }
-  td.left   { text-align: left;   }
-  td.center { text-align: center; }
-  dt { font-weight: bold; }
-  .footpara:nth-child(2) { display: inline; }
-  .footpara { display: block; }
-  .footdef  { margin-bottom: 1em; }
-  .figure { padding: 1em; }
-  .figure p { text-align: center; }
-  .inlinetask {
+table { border-collapse:collapse; }
+caption.t-above { caption-side: top; }
+caption.t-bottom { caption-side: bottom; }
+td, th { vertical-align:top;  }
+th.right  { text-align: center;  }
+th.left   { text-align: center;   }
+th.center { text-align: center; }
+td.right  { text-align: right;  }
+td.left   { text-align: left;   }
+td.center { text-align: center; }
+dt { font-weight: bold; }
+.footpara:nth-child(2) { display: inline; }
+.footpara { display: block; }
+.footdef  { margin-bottom: 1em; }
+.figure { padding: 1em; }
+.figure p { text-align: center; }
+.inlinetask {
     padding: 10px;
     border: 2px solid gray;
     margin: 10px;
     background: #ffffcc;
-  }
-  #org-div-home-and-up
-   { text-align: right; font-size: 70%; white-space: nowrap; }
-  textarea { overflow-x: auto; }
-  .linenr { font-size: smaller }
-  .code-highlighted { background-color: #ffff00; }
-  .org-info-js_info-navigation { border-style: none; }
-  #org-info-js_console-label
-    { font-size: 10px; font-weight: bold; white-space: nowrap; }
-  .org-info-js_search-highlight
-    { background-color: #ffff00; color: #000000; font-weight: bold; }
+}
+#org-div-home-and-up
+{ text-align: right; font-size: 70%; white-space: nowrap; }
+textarea { overflow-x: auto; }
+.linenr { font-size: smaller }
+.code-highlighted { background-color: #ffff00; }
+.org-info-js_info-navigation { border-style: none; }
+#org-info-js_console-label
+{ font-size: 10px; font-weight: bold; white-space: nowrap; }
+.org-info-js_search-highlight
+{ background-color: #ffff00; color: #000000; font-weight: bold; }
