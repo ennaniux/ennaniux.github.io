@@ -145,7 +145,7 @@ div.outline-text-2 p {
 }
 
 @media (min-width: 300px) {
-body {
+.body {
     max-width: 90%;
 }
     }
