@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-02-06 Sat 11:28 -->
+<!-- 2021-02-06 Sat 11:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Selected Topics on Vector Analysis</title>
@@ -193,7 +193,7 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/ennaniux/Utilities/master/style02.css"/>
+<link rel="stylesheet" type="text/css" href="../css/style02.css"/>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -270,53 +270,53 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgaa91b1e">Geometry by Vector methods</a>
+<li><a href="#org259374f">Geometry by Vector methods</a>
 <ul>
-<li><a href="#org19d391a">Vectors in R<sup>n</sup></a></li>
-<li><a href="#org2dcb1eb">Dot and cross product</a></li>
-<li><a href="#org2fdadbe">Lines and planes.</a></li>
+<li><a href="#org77a4524">Vectors in R<sup>n</sup></a></li>
+<li><a href="#orgf06aa86">Dot and cross product</a></li>
+<li><a href="#orgde81be5">Lines and planes.</a></li>
 </ul>
 </li>
-<li><a href="#orgf51115b">Maps from  R<sup>n</sup> to R<sup>m</sup>,</a>
+<li><a href="#org83da80a">Maps from  R<sup>n</sup> to R<sup>m</sup>,</a>
 <ul>
-<li><a href="#org5b8db76">Limits</a></li>
-<li><a href="#orge6e4c8e">Continuity</a></li>
-<li><a href="#org4003eab">Derivative as a linear transformation</a></li>
-<li><a href="#org9148c8c">Partial derivatives and directional derivatives</a></li>
+<li><a href="#orgeb36a98">Limits</a></li>
+<li><a href="#orge7e739d">Continuity</a></li>
+<li><a href="#org1a818d3">Derivative as a linear transformation</a></li>
+<li><a href="#org8cc3fb3">Partial derivatives and directional derivatives</a></li>
 </ul>
 </li>
-<li><a href="#org6d87dbf">Parameterised curves</a>
+<li><a href="#org78944ef">Parameterised curves</a>
 <ul>
-<li><a href="#org55b165a">Local properties of curves</a></li>
-<li><a href="#org81b43a4">Global properties of curves.</a></li>
-<li><a href="#org2a17b58">Applications in Mechanics.</a></li>
+<li><a href="#org52f2cd3">Local properties of curves</a></li>
+<li><a href="#org3b2e488">Global properties of curves.</a></li>
+<li><a href="#org706a6ab">Applications in Mechanics.</a></li>
 </ul>
 </li>
-<li><a href="#org01d1929">Implicit function theorem and applications.</a></li>
-<li><a href="#orgb650816">Parameterised surfaces.</a>
+<li><a href="#orgabe1f63">Implicit function theorem and applications.</a></li>
+<li><a href="#org0cb6ff3">Parameterised surfaces.</a>
 <ul>
-<li><a href="#orgc8f88f6">Tangent vectors</a></li>
-<li><a href="#org593a818">Vector fields</a></li>
-<li><a href="#org43739b2">Tangent planes.</a></li>
+<li><a href="#org464d369">Tangent vectors</a></li>
+<li><a href="#org0dfc7e6">Vector fields</a></li>
+<li><a href="#org8493f94">Tangent planes.</a></li>
 </ul>
 </li>
-<li><a href="#orgf324ee9">Multiple Integration: surface areas, volumes.</a></li>
-<li><a href="#org16764af">Gradient, Divergence and Curl. Stokes’ Theorem, the Flux of a Vector Field</a></li>
-<li><a href="#org6e71d6e">Tensors and their properties. Differential forms.</a></li>
+<li><a href="#orgec4b3b4">Multiple Integration: surface areas, volumes.</a></li>
+<li><a href="#orgc0a9e94">Gradient, Divergence and Curl. Stokes’ Theorem, the Flux of a Vector Field</a></li>
+<li><a href="#org3721fb0">Tensors and their properties. Differential forms.</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgaa91b1e" class="outline-2">
-<h2 id="orgaa91b1e">Geometry by Vector methods</h2>
-<div class="outline-text-2" id="text-orgaa91b1e">
+<div id="outline-container-org259374f" class="outline-2">
+<h2 id="org259374f">Geometry by Vector methods</h2>
+<div class="outline-text-2" id="text-org259374f">
 <p>
 In this section we will learn
 </p>
 </div>
-<div id="outline-container-org19d391a" class="outline-3">
-<h3 id="org19d391a">Vectors in R<sup>n</sup></h3>
-<div class="outline-text-3" id="text-org19d391a">
+<div id="outline-container-org77a4524" class="outline-3">
+<h3 id="org77a4524">Vectors in R<sup>n</sup></h3>
+<div class="outline-text-3" id="text-org77a4524">
 <ul class="org-ul">
 <li>The definition of R<sup>n</sup> as a vector space.</li>
 <li>A geometric interpretation of addition and multiplication by scalar.</li>
@@ -327,9 +327,9 @@ In this section we will learn
 </ul>
 </div>
 </div>
-<div id="outline-container-org2dcb1eb" class="outline-3">
-<h3 id="org2dcb1eb">Dot and cross product</h3>
-<div class="outline-text-3" id="text-org2dcb1eb">
+<div id="outline-container-orgf06aa86" class="outline-3">
+<h3 id="orgf06aa86">Dot and cross product</h3>
+<div class="outline-text-3" id="text-orgf06aa86">
 <ul class="org-ul">
 <li>The Euclidean inner (dot) product.</li>
 <li>The geometrical interpretation of the inner product.</li>
@@ -339,9 +339,9 @@ In this section we will learn
 </ul>
 </div>
 </div>
-<div id="outline-container-org2fdadbe" class="outline-3">
-<h3 id="org2fdadbe">Lines and planes.</h3>
-<div class="outline-text-3" id="text-org2fdadbe">
+<div id="outline-container-orgde81be5" class="outline-3">
+<h3 id="orgde81be5">Lines and planes.</h3>
+<div class="outline-text-3" id="text-orgde81be5">
 <ul class="org-ul">
 <li>The line segment between to vectors in R<sup>n</sup></li>
 <li>The equation of a straight line in R<sup>n</sup></li>
@@ -350,9 +350,9 @@ In this section we will learn
 </div>
 </div>
 </div>
-<div id="outline-container-orgf51115b" class="outline-2">
-<h2 id="orgf51115b">Maps from  R<sup>n</sup> to R<sup>m</sup>,</h2>
-<div class="outline-text-2" id="text-orgf51115b">
+<div id="outline-container-org83da80a" class="outline-2">
+<h2 id="org83da80a">Maps from  R<sup>n</sup> to R<sup>m</sup>,</h2>
+<div class="outline-text-2" id="text-org83da80a">
 <p>
 In this section we go from the standard topology of R<sup>n</sup> to partial derivatives.
 The aim is to have a collection of tools and theorems that will help us with computations
@@ -371,25 +371,25 @@ that will be used in the following sections. As a revision we will introduce:
 <li>Composition</li>
 </ul>
 </div>
-<div id="outline-container-org5b8db76" class="outline-3">
-<h3 id="org5b8db76">Limits</h3>
-<div class="outline-text-3" id="text-org5b8db76">
+<div id="outline-container-orgeb36a98" class="outline-3">
+<h3 id="orgeb36a98">Limits</h3>
+<div class="outline-text-3" id="text-orgeb36a98">
 <ul class="org-ul">
 <li>Sequences and convergence.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge6e4c8e" class="outline-3">
-<h3 id="orge6e4c8e">Continuity</h3>
-<div class="outline-text-3" id="text-orge6e4c8e">
+<div id="outline-container-orge7e739d" class="outline-3">
+<h3 id="orge7e739d">Continuity</h3>
+<div class="outline-text-3" id="text-orge7e739d">
 <ul class="org-ul">
 <li>Definition of Continuity.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org4003eab" class="outline-3">
-<h3 id="org4003eab">Derivative as a linear transformation</h3>
-<div class="outline-text-3" id="text-org4003eab">
+<div id="outline-container-org1a818d3" class="outline-3">
+<h3 id="org1a818d3">Derivative as a linear transformation</h3>
+<div class="outline-text-3" id="text-org1a818d3">
 <ul class="org-ul">
 <li>Definition of derivative</li>
 <li>The Jacobian matrix</li>
@@ -398,9 +398,9 @@ that will be used in the following sections. As a revision we will introduce:
 </ul>
 </div>
 </div>
-<div id="outline-container-org9148c8c" class="outline-3">
-<h3 id="org9148c8c">Partial derivatives and directional derivatives</h3>
-<div class="outline-text-3" id="text-org9148c8c">
+<div id="outline-container-org8cc3fb3" class="outline-3">
+<h3 id="org8cc3fb3">Partial derivatives and directional derivatives</h3>
+<div class="outline-text-3" id="text-org8cc3fb3">
 <ul class="org-ul">
 <li>Partial derivatives</li>
 <li>Critical points</li>
@@ -410,9 +410,9 @@ that will be used in the following sections. As a revision we will introduce:
 </div>
 </div>
 </div>
-<div id="outline-container-org6d87dbf" class="outline-2">
-<h2 id="org6d87dbf">Parameterised curves</h2>
-<div class="outline-text-2" id="text-org6d87dbf">
+<div id="outline-container-org78944ef" class="outline-2">
+<h2 id="org78944ef">Parameterised curves</h2>
+<div class="outline-text-2" id="text-org78944ef">
 <p>
 In this section we will restrict to the study of maps \(\alpha : I \to \mathbb{R}^3\) called curves.
 </p>
@@ -422,9 +422,9 @@ In this section we will restrict to the study of maps \(\alpha : I \to \mathbb{R
 <li>Arch-length</li>
 </ul>
 </div>
-<div id="outline-container-org55b165a" class="outline-3">
-<h3 id="org55b165a">Local properties of curves</h3>
-<div class="outline-text-3" id="text-org55b165a">
+<div id="outline-container-org52f2cd3" class="outline-3">
+<h3 id="org52f2cd3">Local properties of curves</h3>
+<div class="outline-text-3" id="text-org52f2cd3">
 <ul class="org-ul">
 <li>Definition of a curve parameterised by arch-length</li>
 <li>Curvature</li>
@@ -435,17 +435,17 @@ In this section we will restrict to the study of maps \(\alpha : I \to \mathbb{R
 </ul>
 </div>
 </div>
-<div id="outline-container-org81b43a4" class="outline-3">
-<h3 id="org81b43a4">Global properties of curves.</h3>
-<div class="outline-text-3" id="text-org81b43a4">
+<div id="outline-container-org3b2e488" class="outline-3">
+<h3 id="org3b2e488">Global properties of curves.</h3>
+<div class="outline-text-3" id="text-org3b2e488">
 <ul class="org-ul">
 <li>Isoperimetric Inequality</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2a17b58" class="outline-3">
-<h3 id="org2a17b58">Applications in Mechanics.</h3>
-<div class="outline-text-3" id="text-org2a17b58">
+<div id="outline-container-org706a6ab" class="outline-3">
+<h3 id="org706a6ab">Applications in Mechanics.</h3>
+<div class="outline-text-3" id="text-org706a6ab">
 <ul class="org-ul">
 <li>Newton’s second law of motion</li>
 <li>Momentum</li>
@@ -456,62 +456,62 @@ In this section we will restrict to the study of maps \(\alpha : I \to \mathbb{R
 </div>
 </div>
 </div>
-<div id="outline-container-org01d1929" class="outline-2">
-<h2 id="org01d1929">Implicit function theorem and applications.</h2>
-<div class="outline-text-2" id="text-org01d1929">
+<div id="outline-container-orgabe1f63" class="outline-2">
+<h2 id="orgabe1f63">Implicit function theorem and applications.</h2>
+<div class="outline-text-2" id="text-orgabe1f63">
 <ul class="org-ul">
 <li>Inverse function theorem</li>
 <li>Implicit fucntion theorem</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb650816" class="outline-2">
-<h2 id="orgb650816">Parameterised surfaces.</h2>
-<div class="outline-text-2" id="text-orgb650816">
+<div id="outline-container-org0cb6ff3" class="outline-2">
+<h2 id="org0cb6ff3">Parameterised surfaces.</h2>
+<div class="outline-text-2" id="text-org0cb6ff3">
 <p>
 There are some special subsets of R<sup>n</sup> called hypersurfaces. We review some geometric tools to understand these subsets.
 </p>
 </div>
-<div id="outline-container-orgc8f88f6" class="outline-3">
-<h3 id="orgc8f88f6">Tangent vectors</h3>
-<div class="outline-text-3" id="text-orgc8f88f6">
+<div id="outline-container-org464d369" class="outline-3">
+<h3 id="org464d369">Tangent vectors</h3>
+<div class="outline-text-3" id="text-org464d369">
 <ul class="org-ul">
 <li>Definition of tangent vectors</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org593a818" class="outline-3">
-<h3 id="org593a818">Vector fields</h3>
-<div class="outline-text-3" id="text-org593a818">
+<div id="outline-container-org0dfc7e6" class="outline-3">
+<h3 id="org0dfc7e6">Vector fields</h3>
+<div class="outline-text-3" id="text-org0dfc7e6">
 <ul class="org-ul">
 <li>Geometric representation of vector fields</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org43739b2" class="outline-3">
-<h3 id="org43739b2">Tangent planes.</h3>
-<div class="outline-text-3" id="text-org43739b2">
+<div id="outline-container-org8493f94" class="outline-3">
+<h3 id="org8493f94">Tangent planes.</h3>
+<div class="outline-text-3" id="text-org8493f94">
 <ul class="org-ul">
 <li>Properties of the tangent plane as Vector space</li>
 </ul>
 </div>
 </div>
 </div>
-<div id="outline-container-orgf324ee9" class="outline-2">
-<h2 id="orgf324ee9">Multiple Integration: surface areas, volumes.</h2>
+<div id="outline-container-orgec4b3b4" class="outline-2">
+<h2 id="orgec4b3b4">Multiple Integration: surface areas, volumes.</h2>
 </div>
 
-<div id="outline-container-org16764af" class="outline-2">
-<h2 id="org16764af">Gradient, Divergence and Curl. Stokes’ Theorem, the Flux of a Vector Field</h2>
+<div id="outline-container-orgc0a9e94" class="outline-2">
+<h2 id="orgc0a9e94">Gradient, Divergence and Curl. Stokes’ Theorem, the Flux of a Vector Field</h2>
 </div>
-<div id="outline-container-org6e71d6e" class="outline-2">
-<h2 id="org6e71d6e">Tensors and their properties. Differential forms.</h2>
+<div id="outline-container-org3721fb0" class="outline-2">
+<h2 id="org3721fb0">Tensors and their properties. Differential forms.</h2>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2020-12-28 Mon 00:00</p>
 <p class="author">Author: daniel b</p>
-<p class="date">Created: 2021-02-06 Sat 11:28</p>
+<p class="date">Created: 2021-02-06 Sat 11:39</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
