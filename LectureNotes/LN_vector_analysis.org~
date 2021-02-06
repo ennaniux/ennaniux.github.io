@@ -1,0 +1,97 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:nil
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: Selected Topics on Vector Analysis
+#+date: <2020-12-28 Mon>
+#+author: daniel b
+#+email: daniel@linuxdeb.home
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 26.1 (Org mode 9.3.6)
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="/home/daniel/Documents/GitRepos/Utilities/style02.css"/> 
+
+* Geometry by Vector methods
+In this section we will learn
+** Vectors in R^n
++ The definition of R^n as a vector space.
++ A geometric interpretation of addition and multiplication by scalar.
++ The canonical basis
++ The change of basis
++ The Euclidean norm
++ The Euclidean distance
+** Dot and cross product
++ The Euclidean inner (dot) product.
++ The geometrical interpretation of the inner product.
++ The definition of the vector (cross) product in R^3.
++ The geometrical interpretation of v \times w and |v \times w| in R^3
++ Properties of dot and cross product.
+** Lines and planes.
++ The line segment between to vectors in R^n
++ The equation of a straight line in R^n
++ The equation of k-planes in R^n.
+* Maps from  R^n to R^m,  
+In this section we go from the standard topology of R^n to partial derivatives.
+The aim is to have a collection of tools and theorems that will help us with computations
+that will be used in the following sections. As a revision we will introduce:
++ Definition of a topological space (X,\tau)
++ Open sets in R^n
++ Close sets in R^n
++ Compact sets in R^n
++ Bounded sets in R^n
++ Heine- Borel theorem
++ Functions (maps) between Euclidean spaces
++ Injectivity
++ Surjectivity
++ Composition
+** Limits
++ Sequences and convergence.
+** Continuity
++ Definition of Continuity.
+** Derivative as a linear transformation
++ Definition of derivative
++ The Jacobian matrix
++ The chain rule
++ The Hessian matrix
+** Partial derivatives and directional derivatives
++ Partial derivatives
++ Critical points
++ Inverse function Theorem
++ Extreme values of a function.
+* Parameterised curves
+In this section we will restrict to the study of maps $\alpha : I \to \mathbb{R}^3$ called curves.
++ Definition of a parameterised smooth curve.
++ Definition of a regular curve.
++ Arch-length
+** Local properties of curves
++ Definition of a curve parameterised by arch-length
++ Curvature
++ Torsion
++ Binormal
++ Frenet–Serret frame and formulas
++ Fundamental theorem of the Local Theory of Curves
+** Global properties of curves. 
++ Isoperimetric Inequality
+** Applications in Mechanics.
++ Newton’s second law of motion
++ Momentum
++ Angular Momentum
++ Torque
++ Examples
+* Implicit function theorem and applications.
++ Inverse function theorem
++ Implicit fucntion theorem
+* Parameterised surfaces.
+There are some special subsets of R^n called hypersurfaces. We review some geometric tools to understand these subsets.
+** Tangent vectors
++ Definition of tangent vectors
+** Vector fields
++ Geometric representation of vector fields
+** Tangent planes.
++ Properties of the tangent plane as Vector space
+* Multiple Integration: surface areas, volumes. 
+
+* Gradient, Divergence and Curl. Stokes’ Theorem, the Flux of a Vector Field
+* Tensors and their properties. Differential forms.
