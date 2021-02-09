@@ -23,9 +23,9 @@ body {
     color: #546AA6;
     /* color: #f8e9d9; */
     /* color:    #f5dfc8; */
-	font-family: monospace;
+	/* font-family: monospace; */
 		/* color: #dddddd; */
-		/* font-family: "Deja Vu Sans", Sans-Serif; */
+		font-family: "Deja Vu Sans", Sans-Serif;
 		line-height: 1.5em;
 		margin: 20px auto; /* "auto" for centering */
 		padding: 0;
