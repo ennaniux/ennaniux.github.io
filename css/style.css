@@ -148,9 +148,9 @@ div.outline-text-2 p {
 
 /* Current/active navbar link */
 #preamble a.active {
-    background-color: #051e3e;
+    background-color: var(--col4);
     border-radius: 10px 10px;
-    color: var(--col4);
+    color: white;
     padding: 5px 5px;
 }
 
