@@ -90,13 +90,13 @@ text-align: justify;
 
 
 div.outline-2 {
-    background-color:#f5f3ee;
+    background-color: var(--col2);
     /* border:3px solid #f2f6f9; */
-    color: #2e291b;
+    color: var(--col0);
 }
 
 div.outline-2 h2 {
-    color: #173f5f;
+    color: var(--col0);
     font-size: 20px; /* arial, sans-serif; */
     /* font-family: 'Fredoka One', cursive; */
 }
