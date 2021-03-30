@@ -1,9 +1,13 @@
+/* # DBCh css for personal website. */
+
 :root {
-  --col0: #2b2d42;
-  --col1: #8d99ae;
-  --col2: #edf2f4;
-  --col3: #ef233c;
-  --col4: #d90429;
+  --col0: #2b2d42;		/*Top bar*/
+  --col1: #8d99ae;		/* Section header bg*/
+  --col2: #edf2f4;		/*body bg*/
+  --col3: #ef233c;		/*Active top bar*/
+  --col4: #d90429;		/*Home botton bg*/
+  --col5: #173f5f; 		/*H2 header*/
+
 }
 
 body {
@@ -96,7 +100,7 @@ div.outline-2 {
 }
 
 div.outline-2 h2 {
-    color: var(--col0);
+    color: var(--col5);
     font-size: 20px; /* arial, sans-serif; */
     /* font-family: 'Fredoka One', cursive; */
 }
