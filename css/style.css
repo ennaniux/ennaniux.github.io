@@ -150,7 +150,7 @@ div.outline-text-2 p {
 #preamble a.active {
     background-color: #051e3e;
     border-radius: 10px 10px;
-    color: white;
+    color: var(--col4);
     padding: 5px 5px;
 }
 
