@@ -1,10 +1,18 @@
+:root {
+  --col0: #2b2d42;
+  --col1: #8d99ae;
+  --col2: #edf2f4;
+  --col3: #ef233c;
+  --col4: #d90429;
+}
+
 body {
     /*    background-image: url('./Images/bgpic.jpg'); */
     background-size: cover;
     background-attachment: fixed;
     /* background-position: left top; */
     /* background-repeat: no-repeat; */
-    background: #F5F3EE;
+    background: var(--col2);
     margin: 20px auto; /* "auto" for centering */
     max-width: 768px;
     /* max-width: 800px; */
@@ -19,7 +27,7 @@ h1 {
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
-    color: #0F0F0F;
+    color: var(--col0);
     padding: 5px 20px;
     /*    background-color:#092B39;*/
     /*text-align: center; */
@@ -34,8 +42,8 @@ h2 {
     margin-left: 0;
     margin-right: 0;
     font-weight: bold;
-    color: #0F0F0F;
-    background-color:#BFC1AC;
+    color: var(--col0);
+    background-color: var(--col1);
     border-radius: 10px 10px;
     padding: 10px 20px;
     /*    background-color:#092B39;*/
@@ -45,7 +53,7 @@ div.info {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    background-color:#BFC1AC;
+    background-color: var(--col1);
     border-radius: 10px 10px;
     border-style: none none none none;
     /* border-width: 3px; */
@@ -112,7 +120,7 @@ div.outline-text-2 p {
     max-width: 100%;
     /* max-width: 800px; */
     text-align: center;
-    background-color: #023e8a;  /* 173f5f; 6e1423;*/
+    background-color: var(--col0);  /* 173f5f; 6e1423;*/
     border-radius: 10px 10px;
     font-size: 20px;
     margin-top: 5px;
@@ -123,7 +131,7 @@ div.outline-text-2 p {
 }
 
 #preamble a {
-    color: #D9D9D9;
+    color: var(--col2);
     text-decoration: none;
     white-space: nowrap;
     padding: 5px 5px;
@@ -134,7 +142,7 @@ div.outline-text-2 p {
 }
 
 #preamble a:hover {
-    color: white;
+    color:  white;
 }
 
 
