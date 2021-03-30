@@ -1,0 +1,1125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-03-30 Tue 11:54 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lecture notes for Sel. Topics Calc. Several Variables.</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Daniel Ballesteros Chávez" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="./style_plain.css"/>
+<style type="text/css"> .abstract {max-width: 30em; margin-left: auto; margin-right: auto;} </style>
+<script type="text/javascript" src="https://orgmode.org/org-info.js">
+/**
+ *
+ * @source: https://orgmode.org/org-info.js
+ *
+ * @licstart  The following is the entire license notice for the
+ *  JavaScript code in https://orgmode.org/org-info.js.
+ *
+ * Copyright (C) 2012-2020 Free Software Foundation, Inc.
+ *
+ *
+ * The JavaScript code in this tag is free software: you can
+ * redistribute it and/or modify it under the terms of the GNU
+ * General Public License (GNU GPL) as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option)
+ * any later version.  The code is distributed WITHOUT ANY WARRANTY;
+ * without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+ *
+ * As additional permission under GNU GPL version 3 section 7, you
+ * may distribute non-source (e.g., minimized or compacted) forms of
+ * that code without the copy of the GNU GPL normally required by
+ * section 4, provided you include this license notice and a URL
+ * through which recipients can access the Corresponding Source.
+ *
+ * @licend  The above is the entire license notice
+ * for the JavaScript code in https://orgmode.org/org-info.js.
+ *
+ */
+</script>
+
+<script type="text/javascript">
+
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+
+<!--/*--><![CDATA[/*><!--*/
+org_html_manager.set("TOC_DEPTH", "3");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "1");
+org_html_manager.set("MOUSE_HINT", "#cccccc");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "1");
+org_html_manager.set("VIEW", "info");
+org_html_manager.setup();  // activate after the parameters are set
+/*]]>*///-->
+</script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Lecture notes for Sel. Topics Calc. Several Variables.</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org190a3d9">1. Some subsets of the Euclidean Space</a></li>
+<li><a href="#org9c66c03">2. Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</a></li>
+<li><a href="#org67ba2ba">3. Limits and Continuity</a></li>
+<li><a href="#org1ee5235">4. Derivatives</a></li>
+<li><a href="#orga625375">5. Differential Geometry of Curves</a>
+<ul>
+<li><a href="#org5e7316a">5.1. Curves in \(\mathbb{R}^3\)</a></li>
+<li><a href="#org20ffc00">5.2. Examples.</a></li>
+<li><a href="#org7499c1c">5.3. The Local theory of Curves</a></li>
+<li><a href="#org1b9c076">5.4. Global Theory of Curves</a></li>
+<li><a href="#org0e35e15">5.5. The Isoperimetric Inequality</a></li>
+</ul>
+</li>
+<li><a href="#orgee74cef">6. The Isoperimetric Inequality in \(\mathbb{R}^n\).</a></li>
+</ul>
+</div>
+</div>
+
+
+
+<div id="outline-container-org190a3d9" class="outline-2">
+<h2 id="org190a3d9"><span class="section-number-2">1</span> Some subsets of the Euclidean Space</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+We have defined for \(r>0\) the open ball centred at \(x_0\in \mathbb{R}^n\) as
+\[ B_r(x_0) = \{ x \in \mathbb{R}^n \, | \, |x - x_0| < r,\}\]
+and if \(x_0\) is the origin we simply write \(B_r\).
+</p>
+
+
+
+<p>
+Given a set \(A\subset \mathbb{R}^n\), then we can distinguish three possibilities for any \(x\in \mathbb{R}^n\):
+</p>
+<ol class="org-ol">
+<li>\(x\) is an interior point of \(A\): There exists \(r>0\) such that \(B_r(x) \subset A\).</li>
+<li>\(x\) is an exterior point of \(A\): There exists \(r>0\) such that \(B_r(x) \subset \mathbb{R}^n \setminus A\).</li>
+<li>\(x\) is a boundary point of \(A\): For every \(r>0\) it holds \(B_r(x) \cap A \neq \emptyset\) and \(B_r(x)\cap (\mathbb{R}^n \setminus A)\neq \emptyset\)</li>
+</ol>
+
+
+
+<p>
+Now we can also define certain basic sets in \(\mathbb{R}^n\):
+</p>
+<ul class="org-ul">
+<li>A set \(U\subset \mathbb{R}^n\) is called open if every \(x\in U\) is an interior point.</li>
+<li>A set \(F\subset \mathbb{R}^n\) is called closed if its complement \(\mathbb{R}^n\setminus F\) is open.</li>
+<li>A set \(A\subset \mathbb{R}^n\) is said to be bounded if there is a \(r_0>0\) such that \(A\subset B_{r_0}\).</li>
+<li>A set \(K\subset \mathbb{R}^n\) is called compact if it is closed and bounded.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org9c66c03" class="outline-2">
+<h2 id="org9c66c03"><span class="section-number-2">2</span> Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+In this section we will list definitions and establish some notation and terminology regarding the maps between to Euclidean spaces.
+</p>
+
+<ol class="org-ol">
+<li>A map \(f : \mathbb{R}^n \to \mathbb{R}^m\) is a rule which associates to each point  \(x\in \mathbb{R}^n\) some point in \(\mathbb{R}^m\)  denoted by \(f(x)\).</li>
+
+<li>If \(A\subset \mathbb{R}^n\) then \(f : A \to \mathbb{R}^m\) means that \(f\) is just defined for \(x\in A\) and we say that \(A\) is the domain of \(f\).</li>
+
+<li>If \(B \subset A\), we define the image of \(B\) under the map \(f\) as the set of all \(f(x)\in\mathbb{R}^m\) for \(x\in B\).</li>
+
+<li>If \(C \subset \mathbb{R}^m\) we define the inverse image of \(C\) under \(f\) as the subset of \(\mathbb{R}^n\) given by \(f^{-1}(C) = \{ x\in \mathbb{R}^n \,|\, f(x) \in C\}\).</li>
+
+<li>The notation \(f:A\to B\) always means that \(f(A)\subseteq B\).</li>
+
+<li>Whenever  \(B\subseteq \mathbb{R}\) we called \(f\) a function.</li>
+
+<li>If \(f,g:\mathbb{R}^n \to \mathbb{R}\) are two functions then the functions \(f + g\), \(f\cdot g\) and \(f/g\) are defined pointwise as in the one-variable case.</li>
+
+<li>Let \(A\subseteq \mathbb{R}^n\) and \(B\subseteq\mathbb{R}^m\). If \(f:A\to \mathbb{R}^m\) and \(g: B\to \mathbb{R}^l\) the compostion \((g \circ f)\) is the function defined by \((g\circ f)(x) = g(f(x))\). Note that the domain of definition of the composition map is \(A\cap f^{-1}(B)\).</li>
+
+<li>A map \(f:A\to \mathbb{R}^m\) is said to be injective or one to one (1-1) if it holds that \(f(x) = f(y)\) if and only if \(x = y\).</li>
+
+<li>whenever \(f\) is injective we define its inverse \(f^{-1}: f(A) \to \mathbb{R}^n\) by associating \(f^{-1}(z)\) to the unique \(x\in A\) such that \(f(x)=z\).</li>
+
+<li>Any map \(f:A \to \mathbb{R}^m\) determines and it is determined by the so called component functions \(f_i:A\to \mathbb{R}\), \(i=1,2,\ldots,m\) by the equality \(f(x) = (f_1(x),f_2(x),\ldots, f_m(x))\).</li>
+
+<li>The identity map \(\mbox{id}:\mathbb{R}^n\to \mathbb{R}^n\), \(\mbox{id}(x) = x\).</li>
+
+<li>For \(1\leq i \leq n\), the projection on the \(i\) -th coordinate is the function \(\pi_i: \mathbb{R}^n \to \mathbb{R}\) such that \(\pi_i(x) = x_i\).</li>
+</ol>
+</div>
+</div>
+
+
+
+<div id="outline-container-org67ba2ba" class="outline-2">
+<h2 id="org67ba2ba"><span class="section-number-2">3</span> Limits and Continuity</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+As in the case of real analysis (or any metric space) we define the limit \[ \lim_{x \to a} f(x) = b,\] by requiring that for every \(\epsilon >0\) there is a number \(\delta >0\) such that \(|f(x) - b| < \epsilon\) for every \(x\) in the domain of \(f\) such that \(|x-a| < \delta\).
+</p>
+
+<p>
+If \(f:A\to \mathbb{R}^m\) is such that \[\lim_{x\to a} f(x) = f(a),\] then we say that \(f\) is continuous at \(a\). If \(f\) is continuous at every \(a\in A\) then \(f\) is simply called continuous.
+</p>
+
+
+<p>
+Continuity of a map can be determined in terms of open subsets. Here there is a list of basic properties
+</p>
+
+<ol class="org-ol">
+<li>A map \(f:\mathbb{R}^n\to\mathbb{R}^m\) is continuous if and only if for every open subset of \(U\subset\mathbb{R}^m\) then inverse image \(f^{-1}(U)\) is an open subset of \(\mathbb{R}^n\).</li>
+<li>If \(A\subset \mathbb{R}^n\), then a map \(f:A\to\mathbb{R}^m\) is continuous if and only if for every open subset of \(U\subset\mathbb{R}^m\)  there is an open set \(V\in\mathbb{R}^n\) such that \(f^{-1}(U)= V \cap A\).</li>
+<li>If \(K\subset \mathbb{R}^n\) is compact and  \(f: K \to \mathbb{R}^m\) is continuous then the direct image \(f(K)\) is a compact subset of \(\mathbb{R}^m\).</li>
+<li>For \(f:\mathbb{R}^n\to \mathbb{R}^m\), then \(\lim_{x\to a}f(x) = b\) if and only if \(\lim_{x\to a}f_i(x) = b_i\) for \(i= 1,2,\ldots m\).</li>
+<li>The map \(f:\mathbb{R}^n \to \mathbb{R}^m\) is continuous if and only if \(f_i:\mathbb{R}^n\to\mathbb{R}\) are continuous, for all \(i=1,2,\ldots m\).</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-org1ee5235" class="outline-2">
+<h2 id="org1ee5235"><span class="section-number-2">4</span> Derivatives</h2>
+<div class="outline-text-2" id="text-4">
+<div class="mydef">
+<p>
+A map \(F:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at \(a\in \mathbb{R}^n\) if there is a linear transformation \(Df_a: \mathbb{R}^n \to \mathbb{R}^m\) such that
+\[ \lim_{h\to 0} \frac{|f(a + h) - f(a) - Df_a(h)|}{|h|} = 0. \]
+</p>
+
+</div>
+
+<p>
+In order to understand this linear transformation we introduce partial derivatives for a function \(f: \mathbb{R}^n \to \mathbb{R}\) at \(a \in \mathbb{R}^n\) as the limit
+\[ \frac{\partial f(a)}{\partial x_i} = \lim_{h\to 0} \frac{f(a_1,a_2,\ldots, a_i + h, \ldots, a_n) - f(a_1,\ldots, a_n)}{h}.\]
+</p>
+
+<p>
+Then it is possible to prove that for any map \(f:\mathbb{R}^n \to \mathbb{R}^m\), the matrix representing the linear transformation \(Df_a\) is 
+\[ (Df_a) = \left( \begin{array}{ccc}
+\frac{\partial f_1(a)}{\partial x_1} & \cdots & \frac{\partial f_1(a)}{\partial x_n}\\
+\vdots & \vdots & \vdots  \\
+\frac{\partial f_m(a)}{\partial x_1} & \cdots & \frac{\partial f_m(a)}{\partial x_n}\\
+\end{array} \right). \]
+</p>
+
+<p>
+<b>Remark</b> Note that \((Df_a)\)  is a matrix with \(m\) rows and \(n\) columns.
+</p>
+
+
+
+<p>
+The Chain rule: Let \(f:\mathbb{R}^n \to \mathbb{R}^m\) and \(g: \mathbb{R}^m \to \mathbb{R}^l\) such that the composition 
+\((g\circ f) : \mathbb{R}^n \to \mathbb{R}^l\) is well defined. If \(f\) and \(g\) are differentiable then for any \(a\in \mathbb{R}^n\) we have
+\[D(g\circ f)_a = Dg_{f(a)} \circ Df_a. \] 
+</p>
+
+<p>
+Second order partial derivatives will be denoted by
+\[\frac{ \partial^2 f}{\partial x_i^2} = \frac{\partial}{\partial x_i}\left( \frac{\partial f}{\partial x_i}\right) \]
+\[\frac{ \partial^2 f}{\partial x_j \partial x_i} = \frac{\partial}{\partial x_j}\left( \frac{\partial f}{\partial x_i}\right) \]
+</p>
+
+<p>
+If all mixed second order partial derivatives are continuous at a point or on a set, \(f\) is called a \(C^2\) function at that point (or on that set); in this case, the order of the partial derivatives can be interchanged
+\[ \frac{\partial^2 f}{\partial x_j \partial x_i} = \frac{\partial^2 f}{\partial x_i \partial x_j}\]
+</p>
+
+<p>
+Example:
+</p>
+
+<p>
+\[{\displaystyle f(x,\,y)={\begin{cases}{\frac {xy\left(x^{2}-y^{2}\right)}{x^{2}+y^{2}}}&{\mbox{ for }}(x,\,y)\neq (0,\,0),\\0&{\mbox{ for }}(x,\,y)=(0,\,0).\end{cases}}}\]
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-orga625375" class="outline-2">
+<h2 id="orga625375"><span class="section-number-2">5</span> Differential Geometry of Curves</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+
+<div id="outline-container-org5e7316a" class="outline-3">
+<h3 id="org5e7316a"><span class="section-number-3">5.1</span> Curves in \(\mathbb{R}^3\)</h3>
+<div class="outline-text-3" id="text-5-1">
+<div class="mydef">
+<p>
+A <b>parameterised differentiable curve</b> is a map \(\alpha: I \to \mathbb{R}^3\), where
+\(I= (a,b)\) is an open interval of the real line.
+</p>
+
+</div>
+
+<p>
+<b>Remarks</b>. The curve \(\alpha\) is defined by three real functions:
+\[ \alpha(t) = \left(x(t), y(t), z(t) \right). \]
+The variable \(t\) is called the parameter of the curve.
+The interval \(I\) could also be the real line \(\mathbb{R}\).
+The trace of the curve is the image \(\alpha(I) \subset \mathbb{R}^3\).
+</p>
+
+<p>
+For the derivative of the map \(\alpha\) with respect to the parameter \(t\) at any \(t_0\in I\),
+we may use one of the several available notations
+</p>
+<ul class="org-ul">
+<li>\(\left.\dfrac{d\alpha}{dt}\right|_{t=t_0}\).</li>
+<li>\(\alpha'(t_0)\)</li>
+<li>\(\dot\alpha(t_0)\).</li>
+</ul>
+<p>
+and we have
+\[ \alpha'(t) = (x'(t), y'(t), z'(t)) . \]
+</p>
+
+<p>
+This is called the <b>velocity vector</b> or the <b>tangent vector</b> of the curve \(\alpha\) at \(t\).
+</p>
+
+
+
+<div class="prop">
+<p>
+If \(\alpha,\beta:I\to \mathbb{R}^3\) are two differentiable curves, then \(\alpha(t) \bullet \beta(t)\) is a differentiable function and 
+\[\frac{d}{dt} \left( \alpha(t)\bullet \beta(t) \right) = \alpha'(t)\bullet \beta(t) + \alpha(t)\bullet \beta'(t). \]
+</p>
+
+</div>
+
+<div class="prop">
+<p>
+If \(\alpha,\beta:I\to \mathbb{R}^3\) are two differentiable curves, then \(\alpha(t) \times \beta(t)\) is a differentiable map and 
+\[\frac{d}{dt} \left( \alpha(t)\times \beta(t) \right) = \alpha'(t)\times \beta(t) + \alpha(t)\times \beta'(t). \]
+</p>
+
+</div>
+
+
+
+<div class="mydef">
+<p>
+Let \(\alpha:I \to \mathbb{R}^3\) be a parameterised differentiable curve. 
+</p>
+<ol class="org-ol">
+<li>A <b>singular point</b> of \(\alpha\) is any \(t\in I\) such that \(\alpha'(t) = 0\).</li>
+<li>If \(\alpha'(t) \neq 0\) for every \(t\in I\), then we say that \(\alpha\) is a <b>regular curve</b>.</li>
+</ol>
+
+</div>
+
+<div class="prop">
+<p>
+Let \(\alpha : I\to \mathbb{R}^3\) be a parameterised regular curve. Show that \(|\alpha(t)|\) is a non-zero constant if and only if \(\alpha(t)\) is orthogonal to \(\alpha'(t)\) for all \(t\in I\).
+</p>
+
+</div>
+<div class="proof">
+<p>
+It follows easily from last proposition and
+\[ 0 < c^2 = |\alpha|^2 \Leftrightarrow 0 = \frac{d}{dt} |\alpha(t)|^2 = 2 \alpha(t)\bullet \alpha'(t) \Leftrightarrow \alpha(t) \perp \alpha'(t).\]
+</p>
+
+</div>
+
+
+<div class="mydef">
+<p>
+Given \(t \in I\), the <b>arc-length</b> of a regular parameterised curve \(\alpha: I \to \mathbb{R}^3\) from the point \(t_0\) is \[ s(t) = \int_{t_0}^{t} |\alpha'(r)| dr. \]
+</p>
+
+</div>
+
+<div class="mydef">
+<p>
+If the parameter \(t\) of a curve \(\alpha\) is already the arc-length measured from some point,
+we say that \(\alpha\) is parameterised by arc length and in this case we usually write \(\alpha(s)\).
+</p>
+
+</div>
+
+<div class="prop">
+<p>
+The arc-length \(s(t)\) is a differentiable function. If in addition the curve \(\alpha\) is regular, i.e., \(\alpha'(t) \neq 0\) for all \(t \in I\), it also holds that \(s'(t) >0\), hence \(s(t)\) has a continuous inverse \(s^{-1}(r)\).
+</p>
+
+</div>
+<div class="proof">
+<p>
+Recall
+</p>
+
+<p>
+<b>First Fundamental theorem of Calculus</b>. Let \(f\) be a continuous real-valued function defined on a closed interval \([a, b]\). Let \(F\) be the function defined, for all \(x \in [a, b]\), by
+\[    F(x)=\int _{a}^{x}\!f(t)\,dt.\]
+Then \(F\) is uniformly continuous on \([a, b]\) and differentiable on the open interval \((a, b)\), and
+\[ F'(x)=f(x)\,, \mbox{for all } x \in (a, b). \]
+</p>
+
+<p>
+For \([t_0,t]\subset I\), the map \(\alpha: [t_0,t] \to \mathbb{R}^3\) is smooth (differentiable) which implies that  \(\alpha': [t_0,t] \to \mathbb{R}^3\) is continuous.  Since \(|\cdot|:\mathbb{R}^3 \to \mathbb{R}\) is also continuous,  the composition \(t \to |\alpha'(t)|\) is also continuous. Then by the Fundamental Theorem of Calculus, \(s(t)\) is differentiable.
+For the second part, note that since \(\alpha'(t) \neq 0\) we have
+\[ \frac{ds(t)}{dt} = |\alpha'(t)| >0 .\]
+Finally recall that any a continuous (differentiable) strictly monotone function defined on an interval has an inverse which is also a continuous (differentiable) function.
+</p>
+
+</div>
+
+<div class="prop">
+<p>
+The curve \(\alpha\) is parameterised by arc-length if and only if its velocity vector has constant length equal to 1.
+</p>
+
+</div>
+<div class="proof">
+<p>
+(\(\Rightarrow\)) If the parameter \(t = s(t)\), then we have (form the proof the previous proposition)
+\[ 1 = \frac{ds}{dt} = |\alpha'(t)|. \]
+(\(\Leftarrow\)) Assuming that \(|\alpha'(t)| =1\) for all \(t \in I\), it follows that
+\[ s(t) = \int_{t_0}^{t}|\alpha'(r)|dr = \int_{t_0}^{t}dr = t - t_0,\]
+then \(t\) is the arc-length of \(\alpha\) measured from some point.
+</p>
+
+</div>
+
+<div class="mydef">
+<p>
+Let \(\alpha : I \to  \mathbb{R}^3\) be a parameterised curve. We call the curve \(\beta : J \to \mathbb{R}^3\) a reparameterisation of \(\alpha\), is there is
+a differentiable bijective function \(u: J\to I\) with inverse \(u^{-1}:I\to J\) also differentiable and 
+\[ \beta (r) = (\alpha \circ u) (r), \mbox{ for all }\, r\in J. \]
+</p>
+
+</div>
+
+
+<div class="prop">
+<p>
+Given a regular parameterised curve \(\alpha : I \to \mathbb{R}^3\), it is possible to obtain 
+a curve \(\beta : J \to \mathbb{R}^3\) parameterised by arc-length which has the same trace as \(\alpha\).
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+Let \(s(t) = \int_{t_0}^{t} |\alpha'(r)|dr\), with \(t_0,t\in I\). Since \(\alpha\) is regular we already noticed that
+\(\frac{ds}{dt} = |\alpha'(t)| >0\) and then the function \(s(t)\) has a differentiable inverse \(g(s)\), where \(s\in s(I) = J\). Moreover from the chain rule we have
+\[ t = g(s(t)) \Rightarrow 1 = \frac{d g(s)}{ds} \frac{ds(t)}{dt} = \frac{d g(s)}{ds} |\alpha'(t)|.\]
+</p>
+
+<p>
+Now, set \(\beta(s) = (\alpha \circ g) (s)\). Since clearly \(\beta(J) = \alpha(I)\), they have the same trace.
+Note now that by the chain rule 
+\[ \left|\beta'(s)\right| = \left|\frac{d\beta (s)}{ds} \right| = \left| \frac{d\alpha (g(s))}{dt} \frac{d g(s)}{ds} \right| = \left| \frac{d\alpha (t)}{dt}\right|\, \left| \frac{dg(s)}{ds} \right| = \left|\alpha'(t)\right| \frac{1}{|\alpha'(t)|} = 1. \]
+Then, from the previous proposition, \(\beta\) is parameterised by arc-length.
+</p>
+
+</div>
+
+<p>
+<b>Remark</b> The curve \(\beta\) constructed in the last proposition is called an <b>arc-length re-parameterisation</b> of \(\alpha\) by arc-length, or equivalently, a <b>unit speed reparametersia tion</b>.
+</p>
+
+<div class="mydef">
+<p>
+Given a curve \(\alpha\) parameterised by arc-length \(s\in (a,b)\), the curve \(\beta\) defined in the interval \((-b, -a)\), \(\beta(-s) = \alpha(s)\) is said to be a change of orientation of \(\alpha\).
+</p>
+
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org20ffc00" class="outline-3">
+<h3 id="org20ffc00"><span class="section-number-3">5.2</span> Examples.</h3>
+<div class="outline-text-3" id="text-5-2">
+<ol class="org-ol">
+<li>Find the trace and the tangent vectors of the following curves
+<ol class="org-ol">
+<li>\(\alpha(t)  = (a \cos t, a \sin t, b\,t)\).</li>
+<li>\(\alpha(t)  = ( t^3, t^2)\).</li>
+<li>\(\alpha(t)  = (t^3 -4t, t^2 -4)\).</li>
+<li>\(\alpha(t)  = (t, |t|)\).</li>
+<li>\(\alpha(t)  = (\cos t, \sin t)\).</li>
+<li>\(\alpha(t)  = (\cos 2t, \sin 2t)\).</li>
+</ol></li>
+
+<li>Find the arc-length parameterisation of the following curves if possible:
+
+<ol class="org-ol">
+<li>\(\alpha(t)  = (\cos 2t, \sin 2t)\), for \(0 < t < 2\pi\)</li>
+
+<li>\(\alpha(t) = (t, t^2, t^3)\), for \(-\infty < t < \infty\).</li>
+</ol></li>
+</ol>
+
+
+
+<div class="org-src-container">
+<pre class="src src-R">TT <span style="color: #e5786d;">&lt;-</span> seq(-10,10,length.out=100)
+AA <span style="color: #e5786d;">&lt;-</span> 1
+BB <span style="color: #e5786d;">&lt;-</span> 1
+plot(TT^3,TT^2,type=l)
+</pre>
+</div>
+
+
+<div class="figure">
+<p><img src="img.png" alt="img.png" />
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div id="outline-container-org7499c1c" class="outline-3">
+<h3 id="org7499c1c"><span class="section-number-3">5.3</span> The Local theory of Curves</h3>
+<div class="outline-text-3" id="text-5-3">
+<div class="mydef">
+<p>
+Let \(\alpha : I \to \mathbb{R}^3\) be a curve parameterised by arc-length. The curvature of \(\alpha\) at \(s\) is defined by
+\[ \kappa(s) = |\alpha''(s)| . \]
+</p>
+
+</div>
+
+
+
+<p>
+Note that if \(\alpha(s) = As + B\), with \(A,B\in \mathbb{R}^3\) fixed vectors, and \(|A|=1\). Then \(\kappa(s) = 0\). 
+</p>
+
+<p>
+If we start by assuming that \(\kappa(s) = 0\), then \(\alpha''(s) = 0\) for all \(s\in I\). Then by integrating each of the coordinate functions, and after reparamaterising by arch length if necessary, one can write \(\alpha(s) = As + B\).
+</p>
+
+<p>
+<i>This makes sense with our intuition that a straight line has no curvature.</i>
+</p>
+
+<p>
+Notice that when \(\alpha\) is parameterised by arc-length, the length of the tangent vector \(|\alpha'(s)|=1\) remains constant. The curvature then measures the rate of change of the angle between tangent vectors at each point on the curve \(\alpha(s)\).
+</p>
+
+
+<div class="prop">
+<p>
+For \(\alpha(s)\), the vector \(\alpha''(s)\) and the curvature \(\kappa(s)\) remain invariant (unchanged) under a change of orientation.
+</p>
+
+</div>
+<div class="proof">
+<p>
+Let \(\beta(-s) = \alpha(s)\) a change of orientation. Put \(r = -s\), then \(ds/dr = -1\), and hence by the chain rule
+\[ \frac{d\beta(r)}{dr} = \frac{d\alpha(s)}{dr} = \frac{d\alpha}{ds}\frac{ds}{dr} = -\frac{d\alpha}{ds}. \]
+Differentiating a second time we get
+</p>
+
+<p>
+\[ \beta''(r) = \frac{d^2\beta(r)}{dr^2}   = -\frac{d}{dr}\frac{d\alpha}{ds} = -\frac{d^2\alpha}{ds^2} \frac{ds}{dr} = \frac{d^2\alpha}{ds^2} = \alpha''(s), \]
+as we wished to show.
+</p>
+
+</div>
+
+<p>
+<b>Important</b> In what follows it will be essential to assume that the curves we will be working with are parameterised by arc-length, regular and such that \(\alpha'(s)\) have no singular points (\(\alpha''(s)\neq 0\)).
+</p>
+
+<div class="mydef">
+<p>
+At points where \(\kappa(s) \neq 0\), we define the following unit vectors
+</p>
+<ul class="org-ul">
+<li>The tangent vector at s: \(T(s) = \alpha'(s)\).</li>
+<li>The (principal) normal vector at s: \(N(s) = \frac{1}{\kappa(s)} \alpha''(s)\)</li>
+<li>The binormal vector at s: \(B(s) = T(s) \times N(s)\).</li>
+</ul>
+
+</div>
+
+
+<div class="prop">
+<p>
+For a curve \(\alpha(s)\) there is a function \(\tau(s)\) called the <b>torsion</b> of \(\alpha\) at \(s\), such that
+</p>
+<ul class="org-ul">
+<li>\(T'(s) = \kappa(s) N(s)\).</li>
+<li>\(N'(s) = -\kappa(s) T(s) - \tau(s) B(s)\).</li>
+<li>\(B'(s) = \tau(s) N(s)\) .</li>
+</ul>
+
+<p>
+This are called the <b>Frenet's equations</b>.
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+
+</p>
+
+<p>
+The evaluation at \(s\) will be written when necessary.
+</p>
+
+<p>
+We have \(T' = \kappa\,N\) holds by definition.
+</p>
+
+<p>
+Note that \(B = T \times N\) is also a unit vector. Then \(B' \perp B\). By properties of the cross product
+\[ B' = T' \times N  + T \times N'  = T \times N',\]
+where the first term vanishes because \(T'\) and \(N\) are linearly dependent.
+</p>
+
+<p>
+From the last identity we can say that \(B'\) is perpendicular to \(T\), moreover, \(B'\) must be a multiple of \(N\). Then at each point we can write
+\[ B'(s) = \tau(s) N(s). \]
+</p>
+
+<p>
+Since at each value of the parameter \(s\) we have the basis \(\{ T, N, B\}\), we can write \(N = B \times T\) and it follows 
+\[ N' = B' \times T + B \times T' = \tau\, N \times T + B \times \kappa \, N = - \tau \, B - \kappa\, T \]
+</p>
+
+</div>
+
+
+
+<div class="thm">
+<p>
+Given differentiable functions \(\kappa(s)>0\) and \(\tau(s)\) defined in an open interval \(s\in I\), there exists 
+a regular parameterised curve \(\alpha : I\to \mathbb{R}^3\) such that
+</p>
+<ul class="org-ul">
+<li>\(s\) is the arch length of \(\alpha\).</li>
+<li>\(\kappa(s)\) is the curvature.</li>
+<li>\(\tau(s)\) is the torsion.</li>
+</ul>
+
+<p>
+Additionally, if \(\bar{\alpha}\) is another curve satisfying the same conditions, then it differs from \(\alpha\) by a rigid motion, i.e. there is an orthogonal linear map \(A:\mathbb{R}^3 \to \mathbb{R}^3\) with positive determinant, and a vector \(C\in \mathbb{R}^3\) such that
+\[\bar{\alpha} = A\alpha + C \]
+</p>
+
+</div>
+<div class="proof">
+<p>
+Proof of Existence.
+</p>
+
+<p>
+Note first that the Frenet's equations define a system of differential equations in \(I\times \mathbb{R}^9\). By letting \(T = (x_1,x_2,x_3),N = (x_4,x_5,x_6),B = (x_7,x_8,x_9)\) and linear functions \(f_i = f_i(s,x_1,\ldots, x_9)\) in \(x_i's\) with coefficients depending on \(s\).
+\[
+\left\{ \begin{array}{ccc}
+\frac{dx_1}{dt} & = & f_1(s,x_1,\ldots,x_9)\\
+\vdots & \vdots & \vdots  \\
+\frac{dx_9}{dt} & = & f_9(s,x_1,\ldots,x_9)
+\end{array} \right. \]
+</p>
+
+<p>
+A theorem of existence and uniqueness holds in the following form. Given initial conditions \(s_0\in I\), \(x_{1_0}, \ldots x_{9_0}\), there exists an open interval \(J\subset I\) containing \(s_0\), and a unique differentiable map \(\varphi : J \to \mathbb{R}^9\) with
+\[ \varphi(s_0) = (x_{1_0}, \ldots x_{9_0}), \quad \mbox{and} \quad \varphi'(s) = (f_1,\ldots f_9), \]
+where the \(f_i's\) are defined in \((s,\varphi(s)) \in J \times \mathbb{R}^9\). And moreover, for linear systems \(J = I\).
+</p>
+
+<p>
+In other words, applying the theorem of existence and uniqueness for linear systems of linear equations we can prove that given a positively oriented set of orthonornal vectors \(\{T_0,N_0,B_0\}\) in \(\mathbb{R}^3\)
+and a value \(s_0\in I\), there is a family of vectors \(\{ T(s) , N(s), B(s) \}\), \(s\in I\) with \(T(s_0) = T_0, N(s_0) = N_0, B(s_0) = B_0\).
+</p>
+
+<p>
+The family thus obtained \(\{T(s), N(s), B(s) \}\) remains orthonormal for every \(s\in I\). To show this we use again the Frenet's equations in combination with the inner product. For more clarity we write \(A\bullet B = \langle A, B \rangle\).
+</p>
+
+\begin{array}{rcl}
+\frac{d}{ds}\langle T,N\rangle & = & \kappa \langle N, N \rangle - \kappa \langle T, T, \rangle - \tau \langle T, B\rangle\\
+\frac{d}{ds}\langle T,B\rangle & = & \kappa \langle N, B \rangle + \tau \langle T, N\rangle\\
+\frac{d}{ds}\langle N,B\rangle & = & -\kappa \langle T, B \rangle - \tau \langle B, B, \rangle + \tau \langle N, N\rangle\\
+\frac{d}{ds}\langle T,T\rangle & = & 2\kappa \langle T, N \rangle \\
+\frac{d}{ds}\langle N,N\rangle & = & -2\kappa \langle N, T \rangle  - 2 \tau \langle N, B\rangle\\
+\frac{d}{ds}\langle B,B\rangle & = & 2 \tau \langle B, N\rangle
+\end{array}
+
+<p>
+One can check that a solution of the above system of equation is
+</p>
+
+\begin{equation}
+\begin{split}
+y_1 = \langle T, N \rangle \equiv 0, \quad y_1 (s_0)= 0\\
+y_2 = \langle B, B \rangle \equiv 0, \quad y_2 (s_0)= 0 \\
+y_3 = \langle N, B \rangle \equiv 0, \quad y_3 (s_0)= 0 \\
+y_4 = \langle T, T \rangle \equiv 1, \quad y_4 (s_0)= 1 \\
+y_5 = \langle N, N \rangle \equiv 1, \quad y_5 (s_0)= 1 \\
+y_6 = \langle B, B \rangle \equiv 1, \quad y_6 (s_0)= 1 
+\end{split}
+\end{equation}
+<p>
+Then by the uniqueness part we conclude that the set \(\{ T(s), N(s), B(s) \}\) remains orthonormal for every \(s\in I\).
+</p>
+
+<p>
+Now, integrating each component of the vector \(T(s)\) we define the curve 
+\[
+\alpha(s) = \int T(r) dr. \]
+</p>
+
+<p>
+Now, \(\alpha'(s) = T(s)\), and since \(T\) is a unit vector, \(\alpha\) is a unit speed curve and \(s\) is its arc-length. By Frenet's equations, \(T' = \kappa N\), and since \(N\) is a unit vector, \(\kappa\) is the curvature of \(\alpha\), and 
+\(N\) is its principal normal. Since \(B\) is a unit normal perpendicular to \(T\) and \(N\), there is a smooth function  \(c(s)\) such that \(B = c T\times N\), and hence \(c(s)\) must be \(1\) or \(-1\) for all \(s\). Using the initial values condition we conclude that \(c(s) = 1\) for all \(s\). Then \(B\) is the binormal of \(\alpha\) and \(\tau\) its torsion.
+</p>
+
+<p>
+Proof of uniqueness.
+</p>
+
+<p>
+First recall that a linear transfomration \(A: \mathbb{R}^3 \to \mathbb{R}^3\) is called orthogonal if it preserves the inner product:
+\[ \langle Ax, Ay \rangle = \langle x, y \rangle,\quad x,y\in\mathbb{R}^3. \]
+And the corresponding matrix is such that \(\det(A) = \pm 1\).
+</p>
+
+<p>
+Now we show that the arc-length, the curvature and the torsion are invariant under rigid motions.
+Let \(\alpha:I\to\mathbb{R}^3\) be a differentiable curve and \(M(x) = Ax + C\) a rigid motion. Then \(M \circ \alpha : I \to \mathbb{R}^3\) defines another curve, \(\bar{\alpha} (t) = A\alpha(t) + C\). Then
+\[ \bar{\alpha}'(t) = A\alpha'(t), \]
+and since it preserves inner product we have
+\[ |\bar{\alpha}'(t)|^2  = \langle \bar{\alpha}'(t), \bar{\alpha}'(t) \rangle = \langle A\alpha'(t), A\alpha'(t)\rangle = \langle \alpha'(t) , \alpha'(t) \rangle = |\alpha'(t)|^2. \]
+From the last observation we can verify that the arc-length is invariant under rigid transformations:
+\[ s(t) = \int_{t_0}^{t} |\alpha'(r)| dr = \int_{t_0}^{t} |\bar{\alpha}'(r)| dr. \]
+Then if \(\alpha\) is parameterised by arc-length, so is \(\bar{\alpha}\). Now, \(\alpha'' = \kappa N\), and under the rigid motion we have \(\bar{\alpha}'' = A\alpha''\). 
+\[ \kappa^2 = \langle \alpha'',\alpha''\rangle = \langle A\alpha'',A\alpha''\rangle, \]
+which implies that the curvature \(\kappa\) is
+invariant under rigid motions. Similar argument shows that the torsion \(\tau\) is also invariant under rigid motions.
+</p>
+
+<p>
+Suppose now that there are two curves \(\alpha\) and \(\bar{\alpha}\) such that for \(s\in I\):
+</p>
+\begin{equation*}
+\begin{split}
+\kappa(s)& =& \bar{\kappa}(s)\\
+\tau(s)& =& \bar{\tau}(s)\\
+\end{split}
+\end{equation*}
+
+<p>
+Lets choose an initial condition. For \(s_0\in I\) let \(T_0,N_0,B_0\) the Frenet trihedron of the curve at \(\alpha(s_0)\) and \(\bar{T}_0,\bar{N}_0,\bar{B}_0\) the corresponding trihedron at \(\bar{\alpha}(s_0)\). By a proper translation and rotation, we can assume
+\(\alpha(s_0) = \bar{\alpha}(s_0), T_0 = \bar{T}_0, N_0 = \bar{N}_0\) and \(B_0 = \bar{B}_0\). Each curve satisfies the Frenet's equations, then we have the following differential equaitons
+</p>
+\begin{equation*}
+\begin{array}{ll}
+T'(s) = \kappa(s) N(s). & \bar{T}'(s) = \bar{\kappa}(s) \bar{N}(s).\\
+N'(s) = -\kappa(s) T(s) - \tau(s) B(s). &  \bar{N}'(s) = -\bar{\kappa}(s) \bar{T}(s) - \bar{\tau}(s) \bar{B}(s).\\
+B'(s) = \tau(s) N(s) . & \bar{B}'(s) = \bar{\tau}(s) \bar{N}(s) .
+\end{array}
+\end{equation*}
+
+<p>
+Remeber that we have set the initial conditions \(\alpha(s_0) = \bar{\alpha}(s_0), T_0 = \bar{T}_0, N_0 = \bar{N}_0\) and \(B_0 = \bar{B}_0\).
+Now, we want to show that \(|T(s) - \bar{T}(s)|\) vanishes for all \(s\in I\), and similar for \(|N(s) - \bar{N}(s)|\) and \(|B(s) - \bar{B}(s)|\). Note that
+</p>
+\begin{align*}
+ \frac{1}{2}\frac{d}{ds} |T(s) - \bar{T}(s)|^2 & = \frac{1}{s}\frac{d}{ds} \langle T(s) - \bar{T}(s), T(s) - \bar{T}(s) \rangle \\ 
+& = \langle T(s) - \bar{T}(s), T'(s) - \bar{T}'(s) \rangle \\
+& = \kappa(s) \langle T(s) - \bar{T}(s), N(s) - \bar{N}(s) \rangle.
+\end{align*}
+<p>
+In a similar way one shows that
+</p>
+\begin{align*}
+\frac{1}{2}\frac{d}{ds} |B(s) - \bar{B}(s)|^2 &= \tau(s) \langle B(s) - \bar{B}(s), N(s) - \bar{N}(s) \rangle, \\
+\frac{1}{2}\frac{d}{ds} |N(s) - \bar{N}(s)|^2 &= -\kappa(s) \langle N(s) - \bar{N}(s), T(s) - \bar{T}(s) \rangle  -\tau(s) \langle N(s) - \bar{N}(s), B(s) - \bar{B}(s) \rangle.
+\end{align*}
+
+<p>
+Then the remarkable observation is that for any \(s\in I\)
+\[ \frac{1}{2}\frac{d}{ds}\left[ |T(s) - \bar{T}(s)|^2 + |B(s) - \bar{B}(s)|^2 + |N(s) - \bar{N}(s)|^2 \right] = 0, \]
+then the quantity is the constant \(0\). This shows that \(T(s) = \bar{T}(s), N(s) = \bar{N}(s)\) and \(B(s) = \bar{B}(s)\).
+Finally  form
+\[ \frac{d}{ds} \alpha(s) = T(s) = \bar{T}(s) = \frac{d}{ds} \bar{\alpha}(s), \]
+it also follows that \((\alpha - \bar{\alpha})' \equiv 0\). Then \(\alpha(s) = \bar{\alpha}(s) + c\), for a constant vector \(c\in \mathbb{R}^3\). Bus since form our initial conditions
+we are asuming \(\alpha(s_0) = \bar{\alpha}(s_0)\) then \(c=0\) and we conclude \(\alpha(s) = \bar{\alpha}(s)\) for all \(s\in I\).
+</p>
+
+</div>
+
+
+<div class="prop">
+<p>
+Let \(\alpha: I \to \mathbb{R}^3\) be a regular parameterised curve not necessarily by arc-length. Let \(s(t)\) the arc-length and denote by  \(t = t(s)\) be the inverse of the function \(s\). Then
+</p>
+<ol class="org-ol">
+<li>Show that \[\frac{dt}{ds} = \frac{1}{|\alpha'|},\] and \[\frac{d^2t}{ds^2} = - \frac{\alpha'\bullet \alpha''}{|\alpha'|^4} \]</li>
+<li>The curvature of \(\alpha\) at \(t\in I\) is \[ \kappa(t) = \frac{|\alpha' \times \alpha''|}{|\alpha'|^3}. \]</li>
+<li>The torsion of \(\alpha\) at \(t \in I\) is \[ \tau(t) = -\frac{(\alpha' \times \alpha'')\bullet \alpha'''}{|\alpha' \times \alpha ''|^2} \]</li>
+</ol>
+
+</div>
+<div class="proof">
+<p>
+The solution is left as an exercise. As a hint, here some of the identities that you may find on the way.
+</p>
+\begin{equation} \begin{split} T &=
+\alpha' \frac{dt}{ds} =
+\frac{\alpha'}{|\alpha'|}\\ \frac{dT}{ds}&=\frac{\alpha''}{|\alpha'|^2} -
+\alpha' \frac{\alpha'\cdot\alpha''}{|\alpha'|^4}\\ \frac{d^2T}{ds^2}&=
+\frac{\alpha'''}{|\alpha|^3} -
+3\alpha''\frac{\alpha'\cdot\alpha''}{|\alpha|^5} +
+\alpha'\frac{d^3t}{ds^3}. \end{split}
+\end{equation} \begin{equation} T = \frac{\alpha'}{|\alpha'|},
+\quad N = \frac{1}{k}T' , \quad B = T\times N
+\end{equation} 
+
+</div>
+
+<p>
+<b>Remark</b> We were mainly studying curves in \(\mathbb{R}^3\) where the curvature was defined as a positive number \(\kappa >0\). In the case of curves on the plane \(\mathbb{R}^2\), it is possible to give a slightly different definition of curvature, where there is a sign associated to it. This is done by observing that, if a curve \(\alpha : I \to \mathbb{R}^2\) is 
+parameterised by arc-length, and \(T = \alpha'(s)\), is the tangent vector, then there are only two possible unit vectors perpendicular to \(T\). One can then define the sign of the normal to be positive if \(N\) is obtained by rotating the tangen vector \(T\) anti-clockwise by \(\pi/2\).
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org1b9c076" class="outline-3">
+<h3 id="org1b9c076"><span class="section-number-3">5.4</span> Global Theory of Curves</h3>
+<div class="outline-text-3" id="text-5-4">
+<p>
+Now we will study some global properties of Curves. Two classic results are: <b>the isoperimetric inequality</b> and the <b>Four Vertex Problem</b>.
+</p>
+
+<p>
+In this course we will only focus on the former one. We will state the problem with curves and in the next section we  will generalise the questions to higher dimensions.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org0e35e15" class="outline-3">
+<h3 id="org0e35e15"><span class="section-number-3">5.5</span> The Isoperimetric Inequality</h3>
+<div class="outline-text-3" id="text-5-5">
+<div class="thm">
+<p>
+Let \(C\) be a simple closed curve in \(\mathbb{R}^2\) with length \(L\), and let \(A\) be the area of the region bounded by \(C\). Then we have
+\[ L^2 - 4\pi A \geq 0,\]
+and the equaltiy holds if and only if \(C\) is a circle.
+</p>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-orgee74cef" class="outline-2">
+<h2 id="orgee74cef"><span class="section-number-2">6</span> The Isoperimetric Inequality in \(\mathbb{R}^n\).</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+The proof that we will give is due to X. Cabré which involves the solution of a particular Partial Differential Equation to obtain the result.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2021-03-12 Fri 00:00</p>
+<p class="author">Author: Daniel Ballesteros Chávez</p>
+<p class="date">Created: 2021-03-30 Tue 11:54</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
