@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-03-30 Tue 12:09 -->
+<!-- 2021-03-31 Wed 10:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lecture notes for Sel. Topics Calc. Several Variables.</title>
@@ -342,28 +342,35 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org0e263b8">1. Some subsets of the Euclidean Space</a></li>
-<li><a href="#org095a475">2. Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</a></li>
-<li><a href="#org5ae2024">3. Limits and Continuity</a></li>
-<li><a href="#org385e62e">4. Derivatives</a></li>
-<li><a href="#orgb046ea1">5. Differential Geometry of Curves</a>
+<li><a href="#orgb9c1343">1. Some subsets of the Euclidean Space</a></li>
+<li><a href="#org9aa03ab">2. Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</a></li>
+<li><a href="#org2c2a9af">3. Limits and Continuity</a></li>
+<li><a href="#orgb1e0fde">4. Derivatives</a></li>
+<li><a href="#org8c9e73b">5. Differential Geometry of Curves</a>
 <ul>
-<li><a href="#org4b22ae0">5.1. Curves in \(\mathbb{R}^3\)</a></li>
-<li><a href="#org7d8d8d4">5.2. Examples.</a></li>
-<li><a href="#orga801a43">5.3. The Local theory of Curves</a></li>
-<li><a href="#orga51a927">5.4. Global Theory of Curves</a></li>
-<li><a href="#orgc55d5ce">5.5. The Isoperimetric Inequality</a></li>
+<li><a href="#org7093f9d">5.1. Curves in \(\mathbb{R}^3\)</a></li>
+<li><a href="#orgb856bf4">5.2. Examples.</a></li>
+<li><a href="#org74026f9">5.3. The Local theory of Curves</a></li>
+<li><a href="#orgff2fdf8">5.4. Global Theory of Curves</a></li>
+<li><a href="#org9f32116">5.5. The Isoperimetric Inequality</a></li>
 </ul>
 </li>
-<li><a href="#org1b5c605">6. The Isoperimetric Inequality in \(\mathbb{R}^n\).</a></li>
+<li><a href="#orgc31fa40">6. The Isoperimetric Inequality in \(\mathbb{R}^n\).</a>
+<ul>
+<li><a href="#org279be79">6.1. Moving planes</a></li>
+<li><a href="#org6402eb0">6.2. Partial Differential Equations: a Neumann Problem</a></li>
+<li><a href="#orga79811e">6.3. Proof of the Isoperimetric Inequality</a></li>
+<li><a href="#orgbafab9d">6.4. Proof of the equality case</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
 
 
 
-<div id="outline-container-org0e263b8" class="outline-2">
-<h2 id="org0e263b8"><span class="section-number-2">1</span> Some subsets of the Euclidean Space</h2>
+<div id="outline-container-orgb9c1343" class="outline-2">
+<h2 id="orgb9c1343"><span class="section-number-2">1</span> Some subsets of the Euclidean Space</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 We have defined for \(r>0\) the open ball centred at \(x_0\in \mathbb{R}^n\) as
@@ -397,8 +404,8 @@ Now we can also define certain basic sets in \(\mathbb{R}^n\):
 </div>
 
 
-<div id="outline-container-org095a475" class="outline-2">
-<h2 id="org095a475"><span class="section-number-2">2</span> Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</h2>
+<div id="outline-container-org9aa03ab" class="outline-2">
+<h2 id="org9aa03ab"><span class="section-number-2">2</span> Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 In this section we will list definitions and establish some notation and terminology regarding the maps between to Euclidean spaces.
@@ -436,8 +443,8 @@ In this section we will list definitions and establish some notation and termino
 
 
 
-<div id="outline-container-org5ae2024" class="outline-2">
-<h2 id="org5ae2024"><span class="section-number-2">3</span> Limits and Continuity</h2>
+<div id="outline-container-org2c2a9af" class="outline-2">
+<h2 id="org2c2a9af"><span class="section-number-2">3</span> Limits and Continuity</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 As in the case of real analysis (or any metric space) we define the limit \[ \lim_{x \to a} f(x) = b,\] by requiring that for every \(\epsilon >0\) there is a number \(\delta >0\) such that \(|f(x) - b| < \epsilon\) for every \(x\) in the domain of \(f\) such that \(|x-a| < \delta\).
@@ -463,8 +470,8 @@ Continuity of a map can be determined in terms of open subsets. Here there is a 
 </div>
 
 
-<div id="outline-container-org385e62e" class="outline-2">
-<h2 id="org385e62e"><span class="section-number-2">4</span> Derivatives</h2>
+<div id="outline-container-orgb1e0fde" class="outline-2">
+<h2 id="orgb1e0fde"><span class="section-number-2">4</span> Derivatives</h2>
 <div class="outline-text-2" id="text-4">
 <div class="mydef">
 <p>
@@ -523,13 +530,13 @@ Example:
 
 
 
-<div id="outline-container-orgb046ea1" class="outline-2">
-<h2 id="orgb046ea1"><span class="section-number-2">5</span> Differential Geometry of Curves</h2>
+<div id="outline-container-org8c9e73b" class="outline-2">
+<h2 id="org8c9e73b"><span class="section-number-2">5</span> Differential Geometry of Curves</h2>
 <div class="outline-text-2" id="text-5">
 </div>
 
-<div id="outline-container-org4b22ae0" class="outline-3">
-<h3 id="org4b22ae0"><span class="section-number-3">5.1</span> Curves in \(\mathbb{R}^3\)</h3>
+<div id="outline-container-org7093f9d" class="outline-3">
+<h3 id="org7093f9d"><span class="section-number-3">5.1</span> Curves in \(\mathbb{R}^3\)</h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="mydef">
 <p>
@@ -718,8 +725,8 @@ Given a curve \(\alpha\) parameterised by arc-length \(s\in (a,b)\), the curve \
 </div>
 
 
-<div id="outline-container-org7d8d8d4" class="outline-3">
-<h3 id="org7d8d8d4"><span class="section-number-3">5.2</span> Examples.</h3>
+<div id="outline-container-orgb856bf4" class="outline-3">
+<h3 id="orgb856bf4"><span class="section-number-3">5.2</span> Examples.</h3>
 <div class="outline-text-3" id="text-5-2">
 <ol class="org-ol">
 <li>Find the trace and the tangent vectors of the following curves
@@ -763,8 +770,8 @@ plot(TT^3,TT^2,type=l)
 
 
 
-<div id="outline-container-orga801a43" class="outline-3">
-<h3 id="orga801a43"><span class="section-number-3">5.3</span> The Local theory of Curves</h3>
+<div id="outline-container-org74026f9" class="outline-3">
+<h3 id="org74026f9"><span class="section-number-3">5.3</span> The Local theory of Curves</h3>
 <div class="outline-text-3" id="text-5-3">
 <div class="mydef">
 <p>
@@ -1076,8 +1083,8 @@ parameterised by arc-length, and \(T = \alpha'(s)\), is the tangent vector, then
 </div>
 
 
-<div id="outline-container-orga51a927" class="outline-3">
-<h3 id="orga51a927"><span class="section-number-3">5.4</span> Global Theory of Curves</h3>
+<div id="outline-container-orgff2fdf8" class="outline-3">
+<h3 id="orgff2fdf8"><span class="section-number-3">5.4</span> Global Theory of Curves</h3>
 <div class="outline-text-3" id="text-5-4">
 <p>
 Now we will study some global properties of Curves. Two classic results are: <b>the isoperimetric inequality</b> and the <b>Four Vertex Problem</b>.
@@ -1090,9 +1097,13 @@ In this course we will only focus on the former one. We will state the problem w
 </div>
 
 
-<div id="outline-container-orgc55d5ce" class="outline-3">
-<h3 id="orgc55d5ce"><span class="section-number-3">5.5</span> The Isoperimetric Inequality</h3>
+<div id="outline-container-org9f32116" class="outline-3">
+<h3 id="org9f32116"><span class="section-number-3">5.5</span> The Isoperimetric Inequality</h3>
 <div class="outline-text-3" id="text-5-5">
+<p>
+The isoperimetric inequality is still a thriving topic in modern mathematics. 
+</p>
+
 <div class="thm">
 <p>
 Let \(C\) be a simple closed curve in \(\mathbb{R}^2\) with length \(L\), and let \(A\) be the area of the region bounded by \(C\). Then we have
@@ -1101,24 +1112,126 @@ and the equaltiy holds if and only if \(C\) is a circle.
 </p>
 
 </div>
+
+<p>
+Last statement is related to the following questions:
+</p>
+<ul class="org-ul">
+<li>Among all closed curves of length \(L\) in the plane, how large can the enclosed area be?</li>
+<li>Which curves enclose the largest possible area?</li>
+<li>Among all regions in the plane with prescribed area \(A\), at least how long should the perimeter be?</li>
+<li>Which figures realise the least perimeter?</li>
+</ul>
+
+
+<p>
+The problem was known to the Greeks and they already knew that the equality was realised by the circle, but a rigorous proof took long time to appear. Only until 1870, K. Weierstrass gave examples of similar type of questions where a solution doesn't exists. In order to show the solvability of the isoperimetric problem he used arguments of minimising and maximising certain integral functional, developing then what we know as Calculus of Variations.
+</p>
+
+<p>
+From Polya's Mathematics and plausible reasoning:
+</p>
+
+<blockquote>
+<p>
+Dido, the fugitive daughter of a Tyrian king, arrived after many
+adventures at the coast of Africa where she became later the founder of
+Carthage and its first legendary queen. Dido started by purchasing, from
+the natives a piece of land on the seashore "not larger than what an oxhide
+can surround." She cut the oxhide into fine narrow strips of which she
+made a very long string. And then Dido faced a geometric problem:
+what shape of land should she surround with her string of given length in
+order to obtain the maximum area?
+</p>
+</blockquote>
+
+
+<div id="org8108908" class="figure">
+<p><img src="./dido_pic01.png" alt="dido_pic01.png" width="70%" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Dido's problem along the shore</p>
+</div>
+
+
+<p>
+The following observation is a direct application of the isoperimetric inequality based on one of the many Jakob Steiner's ideas
+</p>
+<div class="prop">
+<p>
+The area of a polygon inscribed in a circle is greater than the area of any other polygon
+with the same sides.
+</p>
+
+</div>
+
+
+<div id="orgb43e169" class="figure">
+<p><img src="./dido_pic02.png" alt="dido_pic02.png" width="70%" />
+</p>
+<p><span class="figure-number">Figure 3: </span>Steiner's Method</p>
+</div>
+
+
+
+<p>
+A nice collection of different proofs can be found in this article: <a href="http://www.math.utah.edu/~treiberg/isoperim/isop.pdf">http://www.math.utah.edu/~treiberg/isoperim/isop.pdf</a>
+do Carmo's book on Curves and Surfaces presents Schmidt's of the isoperimetric inequality.
+Another nice resource was posted in moodle, where a solution using Fourier series is discussed.
+</p>
 </div>
 </div>
 </div>
 
-
-<div id="outline-container-org1b5c605" class="outline-2">
-<h2 id="org1b5c605"><span class="section-number-2">6</span> The Isoperimetric Inequality in \(\mathbb{R}^n\).</h2>
+<div id="outline-container-orgc31fa40" class="outline-2">
+<h2 id="orgc31fa40"><span class="section-number-2">6</span> The Isoperimetric Inequality in \(\mathbb{R}^n\).</h2>
 <div class="outline-text-2" id="text-6">
 <p>
-The proof that we will give is due to X. Cabré which involves the solution of a particular Partial Differential Equation to obtain the result.
+The proof that we will give is due to X. Cabré which involves the solution of a particular Partial Differential Equation, and the Moving Plane technique developed by Alexandrov, to obtain the result.
 </p>
+
+
+<div class="thm">
+<p>
+Let \(\omega_n\) denote the volume of the unit ball in \(\mathbb{R}^n\). If \(\Omega \subset\mathbb{R}^n\) is a bounded domain (open and connected), and \(\partial \Omega\) denotes its boundary, then
+\[ |\partial\Omega|^n \geq n \, \omega_n^{\frac{1}{n}} |\Omega|^{1-\frac{1}{n}}, \]
+and the equality is attained only when \(\partial \Omega\) is the sphere.
+</p>
+
+</div>
+
+<p>
+<b>Remark</b> The notation \(|\partial \Omega|\) is used for the measure (area/volume) of the \((n-1)\) - dimensional surface, and similarly \(|\Omega|\) the volume of the \(n\) - dimensional domain.
+</p>
+
+<p>
+<b>Exercise 1</b>. Show that 
+\[ \omega_n = \frac{\pi^{\frac{n}{2}}}{\Gamma(\frac{n}{2} + 1)}, \]
+where the Gamma function is given by
+\[ \Gamma(s) = \int_{0}^{\infty} e^{-t}t^{s-1}dt. \]
+</p>
+</div>
+
+<div id="outline-container-org279be79" class="outline-3">
+<h3 id="org279be79"><span class="section-number-3">6.1</span> Moving planes</h3>
+</div>
+
+<div id="outline-container-org6402eb0" class="outline-3">
+<h3 id="org6402eb0"><span class="section-number-3">6.2</span> Partial Differential Equations: a Neumann Problem</h3>
+</div>
+
+<div id="outline-container-orga79811e" class="outline-3">
+<h3 id="orga79811e"><span class="section-number-3">6.3</span> Proof of the Isoperimetric Inequality</h3>
+</div>
+
+<div id="outline-container-orgbafab9d" class="outline-3">
+<h3 id="orgbafab9d"><span class="section-number-3">6.4</span> Proof of the equality case</h3>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2021-03-12 Fri 00:00</p>
 <p class="author">Author: Daniel Ballesteros Chávez</p>
-<p class="date">Created: 2021-03-30 Tue 12:09</p>
+<p class="date">Created: 2021-03-31 Wed 10:48</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
