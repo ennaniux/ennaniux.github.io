@@ -1,4 +1,4 @@
-% Created 2021-03-30 Tue 12:09
+% Created 2021-03-31 Wed 12:00
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -65,7 +65,7 @@
 
 
 \section{Some subsets of the Euclidean Space}
-\label{sec:orgf791555}
+\label{sec:orge6d9c87}
 
 We have defined for \(r>0\) the open ball centred at \(x_0\in \mathbb{R}^n\) as
 \[ B_r(x_0) = \{ x \in \mathbb{R}^n \, | \, |x - x_0| < r,\}\]
@@ -92,7 +92,7 @@ Now we can also define certain basic sets in \(\mathbb{R}^n\):
 
 
 \section{Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).}
-\label{sec:orgc9608f6}
+\label{sec:org6576fa2}
 
 In this section we will list definitions and establish some notation and terminology regarding the maps between to Euclidean spaces.
 
@@ -127,7 +127,7 @@ In this section we will list definitions and establish some notation and termino
 
 
 \section{Limits and Continuity}
-\label{sec:org7383202}
+\label{sec:org9b292ca}
 As in the case of real analysis (or any metric space) we define the limit \[ \lim_{x \to a} f(x) = b,\] by requiring that for every \(\epsilon >0\) there is a number \(\delta >0\) such that \(|f(x) - b| < \epsilon\) for every \(x\) in the domain of \(f\) such that \(|x-a| < \delta\).
 
 If \(f:A\to \mathbb{R}^m\) is such that \[\lim_{x\to a} f(x) = f(a),\] then we say that \(f\) is continuous at \(a\). If \(f\) is continuous at every \(a\in A\) then \(f\) is simply called continuous.
@@ -145,7 +145,7 @@ Continuity of a map can be determined in terms of open subsets. Here there is a 
 
 
 \section{Derivatives}
-\label{sec:orgfec3e03}
+\label{sec:org65ea4f9}
 
 \begin{mydef}
 A map \(F:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at \(a\in \mathbb{R}^n\) if there is a linear transformation \(Df_a: \mathbb{R}^n \to \mathbb{R}^m\) such that
@@ -184,10 +184,10 @@ Example:
 
 
 \section{Differential Geometry of Curves}
-\label{sec:org37dae29}
+\label{sec:org8cc48e3}
 
 \subsection{Curves in \(\mathbb{R}^3\)}
-\label{sec:orgb2ee9a9}
+\label{sec:org85fbe26}
 
 \begin{mydef}
 A \textbf{parameterised differentiable curve} is a map \(\alpha: I \to \mathbb{R}^3\), where
@@ -311,7 +311,7 @@ Given a curve \(\alpha\) parameterised by arc-length \(s\in (a,b)\), the curve \
 
 
 \subsection{Examples.}
-\label{sec:orgfe68de7}
+\label{sec:orgc1131e4}
 
 \begin{enumerate}
 \item Find the trace and the tangent vectors of the following curves
@@ -351,7 +351,7 @@ plot(TT^3,TT^2,type=l)
 
 
 \subsection{The Local theory of Curves}
-\label{sec:org1ccd857}
+\label{sec:orgc2c6baa}
 
 \begin{mydef}
 Let \(\alpha : I \to \mathbb{R}^3\) be a curve parameterised by arc-length. The curvature of \(\alpha\) at \(s\) is defined by
@@ -455,7 +455,7 @@ In other words, applying the theorem of existence and uniqueness for linear syst
 and a value \(s_0\in I\), there is a family of vectors \(\{ T(s) , N(s), B(s) \}\), \(s\in I\) with \(T(s_0) = T_0, N(s_0) = N_0, B(s_0) = B_0\).
 
 The family thus obtained \(\{T(s), N(s), B(s) \}\) remains orthonormal for every \(s\in I\). To show this we use again the Frenet's equations in combination with the inner product. For more clarity we write \(A\bullet B = \langle A, B \rangle\).
-
+\begin{equation}
 \begin{array}{rcl}
 \frac{d}{ds}\langle T,N\rangle & = & \kappa \langle N, N \rangle - \kappa \langle T, T, \rangle - \tau \langle T, B\rangle\\
 \frac{d}{ds}\langle T,B\rangle & = & \kappa \langle N, B \rangle + \tau \langle T, N\rangle\\
@@ -464,7 +464,7 @@ The family thus obtained \(\{T(s), N(s), B(s) \}\) remains orthonormal for every
 \frac{d}{ds}\langle N,N\rangle & = & -2\kappa \langle N, T \rangle  - 2 \tau \langle N, B\rangle\\
 \frac{d}{ds}\langle B,B\rangle & = & 2 \tau \langle B, N\rangle
 \end{array}
-
+\end{equation}
 One can check that a solution of the above system of equation is
 
 \begin{equation}
@@ -572,7 +572,7 @@ parameterised by arc-length, and \(T = \alpha'(s)\), is the tangent vector, then
 
 
 \subsection{Global Theory of Curves}
-\label{sec:orgb2f637c}
+\label{sec:orgb9cf7af}
 
 Now we will study some global properties of Curves. Two classic results are: \textbf{the isoperimetric inequality} and the \textbf{Four Vertex Problem}.
 
@@ -580,7 +580,9 @@ In this course we will only focus on the former one. We will state the problem w
 
 
 \subsection{The Isoperimetric Inequality}
-\label{sec:org9476bd6}
+\label{sec:org15473e5}
+
+The isoperimetric inequality is still a thriving topic in modern mathematics. 
 
 \begin{thm}
 Let \(C\) be a simple closed curve in \(\mathbb{R}^2\) with length \(L\), and let \(A\) be the area of the region bounded by \(C\). Then we have
@@ -588,9 +590,83 @@ Let \(C\) be a simple closed curve in \(\mathbb{R}^2\) with length \(L\), and le
 and the equaltiy holds if and only if \(C\) is a circle.
 \end{thm}
 
+Last statement is related to the following questions:
+\begin{itemize}
+\item Among all closed curves of length \(L\) in the plane, how large can the enclosed area be?
+\item Which curves enclose the largest possible area?
+\item Among all regions in the plane with prescribed area \(A\), at least how long should the perimeter be?
+\item Which figures realise the least perimeter?
+\end{itemize}
+
+
+The problem was known to the Greeks and they already knew that the equality was realised by the circle, but a rigorous proof took long time to appear. Only until 1870, K. Weierstrass gave examples of similar type of questions where a solution doesn't exists. In order to show the solvability of the isoperimetric problem he used arguments of minimising and maximising certain integral functional, developing then what we know as Calculus of Variations.
+
+From Polya's Mathematics and plausible reasoning:
+
+\begin{quote}
+Dido, the fugitive daughter of a Tyrian king, arrived after many
+adventures at the coast of Africa where she became later the founder of
+Carthage and its first legendary queen. Dido started by purchasing, from
+the natives a piece of land on the seashore "not larger than what an oxhide
+can surround." She cut the oxhide into fine narrow strips of which she
+made a very long string. And then Dido faced a geometric problem:
+what shape of land should she surround with her string of given length in
+order to obtain the maximum area?
+\end{quote}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=70%]{./dido_pic01.png}
+\caption{\label{fig:orgf8ced5b}Dido's problem along the shore}
+\end{figure}
+
+
+The following observation is a direct application of the isoperimetric inequality based on one of the many Jakob Steiner's ideas
+\begin{prop}
+The area of a polygon inscribed in a circle is greater than the area of any other polygon
+with the same sides.
+\end{prop}
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=70%]{./dido_pic02.png}
+\caption{\label{fig:org23e01bb}Steiner's Method}
+\end{figure}
+
+
+
+A nice collection of different proofs can be found in this article: \url{http://www.math.utah.edu/\~treiberg/isoperim/isop.pdf}
+do Carmo's book on Curves and Surfaces presents Schmidt's of the isoperimetric inequality.
+Another nice resource was posted in moodle, where a solution using Fourier series is discussed.
 
 \section{The Isoperimetric Inequality in \(\mathbb{R}^n\).}
-\label{sec:org320f72d}
+\label{sec:org10cc5e0}
 
-The proof that we will give is due to X. Cabré which involves the solution of a particular Partial Differential Equation to obtain the result.
+The proof that we will give is due to X. Cabré which involves the solution of a particular Partial Differential Equation, and the Moving Plane technique developed by Alexandrov, to obtain the result.
+
+
+\begin{thm}
+Let \(\omega_n\) denote the volume of the unit ball in \(\mathbb{R}^n\). If \(\Omega \subset\mathbb{R}^n\) is a bounded domain (open and connected), and \(\partial \Omega\) denotes its boundary, then
+\[ |\partial\Omega|^n \geq n \, \omega_n^{\frac{1}{n}} |\Omega|^{1-\frac{1}{n}}, \]
+and the equality is attained only when \(\partial \Omega\) is the sphere.
+\end{thm}
+
+\textbf{Remark} The notation \(|\partial \Omega|\) is used for the measure (area/volume) of the \((n-1)\) - dimensional surface, and similarly \(|\Omega|\) the volume of the \(n\) - dimensional domain.
+
+\textbf{Exercise 1}. Show that 
+\[ \omega_n = \frac{\pi^{\frac{n}{2}}}{\Gamma(\frac{n}{2} + 1)}, \]
+where the Gamma function is given by
+\[ \Gamma(s) = \int_{0}^{\infty} e^{-t}t^{s-1}dt. \]
+
+\subsection{Moving planes}
+\label{sec:orgc621a8f}
+
+\subsection{Partial Differential Equations: a Neumann Problem}
+\label{sec:org0abf407}
+
+\subsection{Proof of the Isoperimetric Inequality}
+\label{sec:org9cb19d9}
+
+\subsection{Proof of the equality case}
+\label{sec:org623b78c}
 \end{document}
