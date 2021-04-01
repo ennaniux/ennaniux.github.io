@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-01 Thu 10:43 -->
+<!-- 2021-04-01 Thu 12:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Notes for Introduction to Complex Analysis</title>
@@ -342,9 +342,9 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1128e50">1. Sequences and limits</a></li>
-<li><a href="#org67e6bd8">2. Continuity</a></li>
-<li><a href="#org44455d1">3. Basic topology of \(\mathbb{C}\)</a></li>
+<li><a href="#org4cd4c05">1. Sequences and limits</a></li>
+<li><a href="#org28a36f1">2. Continuity</a></li>
+<li><a href="#org9c3e92e">3. Basic topology of \(\mathbb{C}\)</a></li>
 </ul>
 </div>
 </div>
@@ -352,8 +352,8 @@ for the JavaScript code in this tag.
 
 
 
-<div id="outline-container-org1128e50" class="outline-2">
-<h2 id="org1128e50"><span class="section-number-2">1</span> Sequences and limits</h2>
+<div id="outline-container-org4cd4c05" class="outline-2">
+<h2 id="org4cd4c05"><span class="section-number-2">1</span> Sequences and limits</h2>
 <div class="outline-text-2" id="text-1">
 <div class="mydef">
 <p>
@@ -572,8 +572,8 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 </div>
 
 
-<div id="outline-container-org67e6bd8" class="outline-2">
-<h2 id="org67e6bd8"><span class="section-number-2">2</span> Continuity</h2>
+<div id="outline-container-org28a36f1" class="outline-2">
+<h2 id="org28a36f1"><span class="section-number-2">2</span> Continuity</h2>
 <div class="outline-text-2" id="text-2">
 <div class="mydef">
 <p>
@@ -687,8 +687,8 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 </div>
 </div>
 
-<div id="outline-container-org44455d1" class="outline-2">
-<h2 id="org44455d1"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
+<div id="outline-container-org9c3e92e" class="outline-2">
+<h2 id="org9c3e92e"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
@@ -951,7 +951,7 @@ If \(K\) is compact then \(K\) is closed. Supose there is \(z_0\in \mbox{cl}(K)\
 </p>
 
 <p>
-If \(K\) is compact then \(K\) is bounded. For each $z &isin; \(K\) considet the set \(U_{z} = B_{1}(z)\). Clearly \(\{U_z \}_{z\in K}\) is an open cover of \(K\), and then there is a finite open subcover \(U_{z_1}, \ldots, U_{z_n}\). Take \(M = \max\{|z_1| + 1, \ldots, |z_k| +1 \}\). Then \(K \subset \cup_{k=1}^{n} U_{z_k} \subseteq B_M\), i.e. \(K\) is bounded.
+If \(K\) is compact then \(K\) is bounded. For each $z &isin; \(K\) consider the set \(U_{z} = B_{1}(z)\). Clearly \(\{U_z \}_{z\in K}\) is an open cover of \(K\), and then there is a finite open subcover \(U_{z_1}, \ldots, U_{z_n}\). Take \(M = \max\{|z_1| + 1, \ldots, |z_k| +1 \}\). Then \(K \subset \cup_{k=1}^{n} U_{z_k} \subseteq B_M\), i.e. \(K\) is bounded.
 </p>
 
 <p>
@@ -987,14 +987,27 @@ Now take any \(z_0\in \mbox{Cl}(K)\). By a previous proposition, we can construc
 <p>
 Let \(f:A\to\mathbb{C}\) be a function. Then the following sentences are equivalent
 </p>
-<ul class="org-ul">
+<ol class="org-ol">
 <li>\(f\) is continuous in \(A\).</li>
 <li>For every open set \(V \subset \mathbb{C}\), the set \(f^{-1}(V)\) is open in \(A\).</li>
 <li>For every closed set \(G \subset \mathbb{C}\), the set \(f^{-1}(G)\) is closed in \(A\).</li>
-</ul>
+</ol>
 
 </div>
+<div class="proof">
+<p>
+(1 \(\Rightarrow\) 2) Assume \(f\) is continuous in \(A\). Let \(V\subset \mathbb{C}\) any open such that \(f(A)\cap V \neq \emptyset\). We want to show that \(f^{-1}(V)\) is an open subset of \(A\). Let \(z_0\in f^{-1}(V)\), then \(f(z_0)\in V\), and since \(V\) is open there exists an open ball \(B_r(f(z_0)) \subset V\). Since \(f\) is assume to be continuous, if we let \(\epsilon = r\), then there exists \(\delta >0\) such that for any \(z\in A\) such that \(|z - z_0| <\delta\) we have \(|f(z) - f(z_0)| < \epsilon\). This is the same as saying that there is a \(\delta >0\) such that \(B_{\delta}(z_0)\cap A \subseteq f^{-1}\left(B_{r}(f(z_0))\right) \subset f^{-1}(V)\). Then $U<sub>&delta;</sub> =  which implies \(z_0\) is an interior point. Since \(z_0\) is arbitary, \(f^{-1}(V)\) is an open subset of \(A\).
+</p>
 
+<p>
+(2 \(\Rightarrow\) 1) Assume now that for any \(V\subset \mathbb{C}\) we have that \(f^{-1}(V)\) is an open set in \(A\). Let \(z_0 \in A\), then for \(f(z_0) \in \mathbb{C}\), and for any \(\epsilon >0\) consider the open set \(V = B_{\epsilon}\left(f(z_0)\right)\). Then by our hypothesis, \(f^{-1}(V)\) is an open set in \(A\), which means that there is an open set \(U\subset\mathbb{C}\) such that \(U\cap A\) is completely contained in \(f^{-1}(V)\cap A\). More over, since \(z_0 \in U\) there exists \(\delta>0\) such that \(B_{\delta}(z_0)\) is contained in \(U\) and also \(f(B_{\delta}(z_0)\cap A) \subset B_{\epsilon}(f(z_0))\). The by one of our previous propositions, \(f\) is continuous at every point of \(A\).
+</p>
+
+<p>
+(2 \(\Leftrightarrow\) 3) \(f^{-1}(V)\) is open in \(A\) for any \(V\in\mathbb{C}\) open \(\Leftrightarrow\)  \(A \setminus f^{-1}(V) = f^{-1}(\mathbb{C}\setminus V)\) is closed in \(A\) for any closed set  \(\left(\mathbb{C}\setminus V\right)\in\mathbb{C}\) \(\Leftrightarrow\) f<sup>-1</sup>(G) is closed for any \(G\subset \mathbb{C}\) closed.
+</p>
+
+</div>
 
 <div class="prop">
 <p>
@@ -1023,7 +1036,7 @@ Let \(K\subset \mathbb{C}\) be a compact set, \(f:K\to\mathbb{C}\) continuous. T
 <div id="postamble" class="status">
 <p class="date">Date: 2021-03-12 Fri 00:00</p>
 <p class="author">Author: Daniel Ballesteros Chávez</p>
-<p class="date">Created: 2021-04-01 Thu 10:43</p>
+<p class="date">Created: 2021-04-01 Thu 12:49</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
