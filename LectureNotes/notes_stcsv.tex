@@ -1,4 +1,4 @@
-% Created 2021-03-31 Wed 12:00
+% Created 2021-04-01 Thu 10:23
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -65,7 +65,7 @@
 
 
 \section{Some subsets of the Euclidean Space}
-\label{sec:orge6d9c87}
+\label{sec:org7124acc}
 
 We have defined for \(r>0\) the open ball centred at \(x_0\in \mathbb{R}^n\) as
 \[ B_r(x_0) = \{ x \in \mathbb{R}^n \, | \, |x - x_0| < r,\}\]
@@ -92,7 +92,7 @@ Now we can also define certain basic sets in \(\mathbb{R}^n\):
 
 
 \section{Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).}
-\label{sec:org6576fa2}
+\label{sec:orgd0353ca}
 
 In this section we will list definitions and establish some notation and terminology regarding the maps between to Euclidean spaces.
 
@@ -127,7 +127,7 @@ In this section we will list definitions and establish some notation and termino
 
 
 \section{Limits and Continuity}
-\label{sec:org9b292ca}
+\label{sec:org146a7aa}
 As in the case of real analysis (or any metric space) we define the limit \[ \lim_{x \to a} f(x) = b,\] by requiring that for every \(\epsilon >0\) there is a number \(\delta >0\) such that \(|f(x) - b| < \epsilon\) for every \(x\) in the domain of \(f\) such that \(|x-a| < \delta\).
 
 If \(f:A\to \mathbb{R}^m\) is such that \[\lim_{x\to a} f(x) = f(a),\] then we say that \(f\) is continuous at \(a\). If \(f\) is continuous at every \(a\in A\) then \(f\) is simply called continuous.
@@ -145,7 +145,7 @@ Continuity of a map can be determined in terms of open subsets. Here there is a 
 
 
 \section{Derivatives}
-\label{sec:org65ea4f9}
+\label{sec:org53cd5fb}
 
 \begin{mydef}
 A map \(F:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at \(a\in \mathbb{R}^n\) if there is a linear transformation \(Df_a: \mathbb{R}^n \to \mathbb{R}^m\) such that
@@ -184,10 +184,10 @@ Example:
 
 
 \section{Differential Geometry of Curves}
-\label{sec:org8cc48e3}
+\label{sec:org742f85c}
 
 \subsection{Curves in \(\mathbb{R}^3\)}
-\label{sec:org85fbe26}
+\label{sec:org5137fae}
 
 \begin{mydef}
 A \textbf{parameterised differentiable curve} is a map \(\alpha: I \to \mathbb{R}^3\), where
@@ -311,7 +311,7 @@ Given a curve \(\alpha\) parameterised by arc-length \(s\in (a,b)\), the curve \
 
 
 \subsection{Examples.}
-\label{sec:orgc1131e4}
+\label{sec:org950d7ae}
 
 \begin{enumerate}
 \item Find the trace and the tangent vectors of the following curves
@@ -351,7 +351,7 @@ plot(TT^3,TT^2,type=l)
 
 
 \subsection{The Local theory of Curves}
-\label{sec:orgc2c6baa}
+\label{sec:org428b87a}
 
 \begin{mydef}
 Let \(\alpha : I \to \mathbb{R}^3\) be a curve parameterised by arc-length. The curvature of \(\alpha\) at \(s\) is defined by
@@ -488,7 +488,7 @@ Now, \(\alpha'(s) = T(s)\), and since \(T\) is a unit vector, \(\alpha\) is a un
 
 Proof of uniqueness.
 
-First recall that a linear transfomration \(A: \mathbb{R}^3 \to \mathbb{R}^3\) is called orthogonal if it preserves the inner product:
+First recall that a linear transformation \(A: \mathbb{R}^3 \to \mathbb{R}^3\) is called orthogonal if it preserves the inner product:
 \[ \langle Ax, Ay \rangle = \langle x, y \rangle,\quad x,y\in\mathbb{R}^3. \]
 And the corresponding matrix is such that \(\det(A) = \pm 1\).
 
@@ -496,7 +496,7 @@ Now we show that the arc-length, the curvature and the torsion are invariant und
 Let \(\alpha:I\to\mathbb{R}^3\) be a differentiable curve and \(M(x) = Ax + C\) a rigid motion. Then \(M \circ \alpha : I \to \mathbb{R}^3\) defines another curve, \(\bar{\alpha} (t) = A\alpha(t) + C\). Then
 \[ \bar{\alpha}'(t) = A\alpha'(t), \]
 and since it preserves inner product we have
-\[ |\bar{\alpha}'(t)|^2  = \langle \bar{\alpha}'(t), \bar{\alpha}'(t) \rangle = \langle A\alpha'(t), A\alpha'(t)\rangle = \langle \alpha'(t) , \alpha'(t) \rangle = |\alpha'(t)|^2. \]
+\[ |\alpha'(t)|^2  = \langle \alpha'(t), \alpha'(t) \rangle = \langle A\alpha'(t), A\alpha'(t)\rangle = \langle \bar{\alpha}'(t) , \bar{\alpha}'(t) \rangle = |\bar{\alpha}'(t)|^2. \]
 From the last observation we can verify that the arc-length is invariant under rigid transformations:
 \[ s(t) = \int_{t_0}^{t} |\alpha'(r)| dr = \int_{t_0}^{t} |\bar{\alpha}'(r)| dr. \]
 Then if \(\alpha\) is parameterised by arc-length, so is \(\bar{\alpha}\). Now, \(\alpha'' = \kappa N\), and under the rigid motion we have \(\bar{\alpha}'' = A\alpha''\). 
@@ -507,8 +507,8 @@ invariant under rigid motions. Similar argument shows that the torsion \(\tau\) 
 Suppose now that there are two curves \(\alpha\) and \(\bar{\alpha}\) such that for \(s\in I\):
 \begin{equation*}
 \begin{split}
-\kappa(s)& =& \bar{\kappa}(s)\\
-\tau(s)& =& \bar{\tau}(s)\\
+\kappa(s) = \bar{\kappa}(s)\\
+\tau(s) = \bar{\tau}(s)
 \end{split}
 \end{equation*}
 
@@ -572,7 +572,7 @@ parameterised by arc-length, and \(T = \alpha'(s)\), is the tangent vector, then
 
 
 \subsection{Global Theory of Curves}
-\label{sec:orgb9cf7af}
+\label{sec:org64654e6}
 
 Now we will study some global properties of Curves. Two classic results are: \textbf{the isoperimetric inequality} and the \textbf{Four Vertex Problem}.
 
@@ -580,7 +580,7 @@ In this course we will only focus on the former one. We will state the problem w
 
 
 \subsection{The Isoperimetric Inequality}
-\label{sec:org15473e5}
+\label{sec:org2682014}
 
 The isoperimetric inequality is still a thriving topic in modern mathematics. 
 
@@ -616,8 +616,8 @@ order to obtain the maximum area?
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=70%]{./dido_pic01.png}
-\caption{\label{fig:orgf8ced5b}Dido's problem along the shore}
+\includegraphics[width=100pt]{./dido_pic01.png}
+\caption{\label{fig:org0d443dd}Dido's problem along the shore}
 \end{figure}
 
 
@@ -629,25 +629,25 @@ with the same sides.
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[width=70%]{./dido_pic02.png}
-\caption{\label{fig:org23e01bb}Steiner's Method}
+\includegraphics[width=100pt]{./dido_pic02.png}
+\caption{\label{fig:org60e9dcc}Steiner's Method}
 \end{figure}
 
 
 
 A nice collection of different proofs can be found in this article: \url{http://www.math.utah.edu/\~treiberg/isoperim/isop.pdf}
-do Carmo's book on Curves and Surfaces presents Schmidt's of the isoperimetric inequality.
+do Carmo's book on Curves and Surfaces presents Schmidt's proof of the isoperimetric inequality.
 Another nice resource was posted in moodle, where a solution using Fourier series is discussed.
 
 \section{The Isoperimetric Inequality in \(\mathbb{R}^n\).}
-\label{sec:org10cc5e0}
+\label{sec:orgbf12cbf}
 
 The proof that we will give is due to X. Cabré which involves the solution of a particular Partial Differential Equation, and the Moving Plane technique developed by Alexandrov, to obtain the result.
 
 
 \begin{thm}
 Let \(\omega_n\) denote the volume of the unit ball in \(\mathbb{R}^n\). If \(\Omega \subset\mathbb{R}^n\) is a bounded domain (open and connected), and \(\partial \Omega\) denotes its boundary, then
-\[ |\partial\Omega|^n \geq n \, \omega_n^{\frac{1}{n}} |\Omega|^{1-\frac{1}{n}}, \]
+\[ |\partial\Omega| \geq n \, \omega_n^{\frac{1}{n}} |\Omega|^{1-\frac{1}{n}}, \]
 and the equality is attained only when \(\partial \Omega\) is the sphere.
 \end{thm}
 
@@ -659,14 +659,14 @@ where the Gamma function is given by
 \[ \Gamma(s) = \int_{0}^{\infty} e^{-t}t^{s-1}dt. \]
 
 \subsection{Moving planes}
-\label{sec:orgc621a8f}
+\label{sec:orga76070a}
 
 \subsection{Partial Differential Equations: a Neumann Problem}
-\label{sec:org0abf407}
+\label{sec:orga46bd90}
 
 \subsection{Proof of the Isoperimetric Inequality}
-\label{sec:org9cb19d9}
+\label{sec:org3c7aa95}
 
 \subsection{Proof of the equality case}
-\label{sec:org623b78c}
+\label{sec:orga6f95d6}
 \end{document}
