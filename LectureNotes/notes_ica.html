@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-01 Thu 12:49 -->
+<!-- 2021-04-02 Fri 12:25 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Notes for Introduction to Complex Analysis</title>
@@ -342,9 +342,9 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org4cd4c05">1. Sequences and limits</a></li>
-<li><a href="#org28a36f1">2. Continuity</a></li>
-<li><a href="#org9c3e92e">3. Basic topology of \(\mathbb{C}\)</a></li>
+<li><a href="#org6057361">1. Sequences and limits</a></li>
+<li><a href="#org4e3ece2">2. Continuity</a></li>
+<li><a href="#org925ff39">3. Basic topology of \(\mathbb{C}\)</a></li>
 </ul>
 </div>
 </div>
@@ -352,8 +352,8 @@ for the JavaScript code in this tag.
 
 
 
-<div id="outline-container-org4cd4c05" class="outline-2">
-<h2 id="org4cd4c05"><span class="section-number-2">1</span> Sequences and limits</h2>
+<div id="outline-container-org6057361" class="outline-2">
+<h2 id="org6057361"><span class="section-number-2">1</span> Sequences and limits</h2>
 <div class="outline-text-2" id="text-1">
 <div class="mydef">
 <p>
@@ -572,8 +572,8 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 </div>
 
 
-<div id="outline-container-org28a36f1" class="outline-2">
-<h2 id="org28a36f1"><span class="section-number-2">2</span> Continuity</h2>
+<div id="outline-container-org4e3ece2" class="outline-2">
+<h2 id="org4e3ece2"><span class="section-number-2">2</span> Continuity</h2>
 <div class="outline-text-2" id="text-2">
 <div class="mydef">
 <p>
@@ -687,8 +687,8 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 </div>
 </div>
 
-<div id="outline-container-org9c3e92e" class="outline-2">
-<h2 id="org9c3e92e"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
+<div id="outline-container-org925ff39" class="outline-2">
+<h2 id="org925ff39"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
@@ -974,7 +974,7 @@ If \(K\) is compact then \(K\) is bounded. For each $z &isin; \(K\) consider the
 
 
 <p>
-(\(\Leftarrow\)) Suppose that any  \(\{z_n\}_{n=1}^{\infty}\subset K\)  has a convergent subsequece. IF \(K\) is not bounded, then we can construct a sequence \(\{z_n\}_{n=1}^{\infty}\) such that \(|z_n| > n\) for all \(n\in \mathbb{N}\). But this sequence has no convergent subsequence, which is a contratiction. Then \(K\) should be bounded.
+(\(\Leftarrow\)) Suppose that any  \(\{z_n\}_{n=1}^{\infty}\subset K\)  has a convergent subsequece. IF \(K\) is not bounded, then we can construct a sequence \(\{z_n\}_{n=1}^{\infty}\) such that \(|z_n| > n\) for all \(n\in \mathbb{N}\). But this sequence has no convergent subsequence, which is a contradiction. Then \(K\) should be bounded.
 </p>
 
 <p>
@@ -1015,11 +1015,38 @@ Let \(K\subset\mathbb{C}\) be compact and \(f: K \to \mathbb{C}\) continuous. Th
 </p>
 
 </div>
+<div class="proof">
+<p>
+Let \(\{V_{\alpha}\}_{\alpha \in I}\) be an open cover of \(f(K)\), i.e., \(f(K) \subseteq \cup_{\alpha \in I}V_{\alpha}\). By the properties of the inverse image we have \(K \subseteq f^{-1}\left(f(K) \right) \subseteq f^{-1}\left(\cup_{\alpha \in I}V_{\alpha}\right) = \cup_{\alpha \in I}f^{-1}(V_{\alpha})\). Since \(f\) is continuous then \(f^{-1}(V_{\alpha})\) is open for every \(\alpha \in I\). This means that \(\{f^{-1}(V_{\alpha})\}_{\alpha\in I}\) is an open cover of the compact set \(K\). Then there exists a finite upen subcover \(\{f^{-1}(V_{\alpha_i})\}_{i=1}^{k}\) such that \(K\subset \cup_{i=1}^{k} f^{-1}(V_{\alpha_i})\). Now by properties of the direct image \(f(K) \subset f^{-1}\left(\cup_{i=1}^{k} f^{-1}(V_{\alpha_i}) \right) = \cup_{i=1}^{k} f\left(f^{-1}(V_{\alpha_i})\right) \subseteq \cup_{i=1}^{k} V_{\alpha_i}\). This implies that \(\{V_{\alpha_i}\}_{i=1}^{k}\) is an open subcover for \(f(K)\) and we can conclude that \(f(K)\) is compact.
+</p>
 
+</div>
 
 <div class="prop">
 <p>
 Let \(A\subset\mathbb{C}\) be connected and \(f: A \to \mathbb{C}\) continuous. Then \(f(A)\) is also connected.
+</p>
+
+</div>
+<div class="proof">
+<p>
+The proof goes by contradiction. Let \(A\) be connected and assume that \(f(A)\) is not connected. Then, there are two open sets \(U,V \subset \mathbb{C}\) such that:
+</p>
+<ol class="org-ol">
+<li>\((f(A)\cap U) \neq \emptyset\) and \((f(A)\cap V) \neq \emptyset\).</li>
+<li>\(U\) and \(V\) are disjoint in \(\mathbb{C}\): \((f(A)\cap U) \cap( f(A)\cap  V) = \emptyset\)</li>
+<li>\(f(A)\subseteq U\cup V\).</li>
+</ol>
+<p>
+By the continuity of \(f\) we have that \(f^{-1}(U)\) and \(f^{-1}(V)\) are open sets in \(A\).<br />
+</p>
+<ol class="org-ol">
+<li>By properties of the inverse image and using the point (1) we have \(A \cap f^{-1}(U) \neq \emptyset\) and \(A \cap f^{-1}(V) \neq \emptyset\).<br /></li>
+<li>Again by properties of the inverse image and point (2) we have \(\left(A\cap f^{-1}(U)\right) \cap \left( A \cap f^{-1}(V)\right) = \emptyset\).<br /></li>
+<li>By properties of the inverse image and point (3) we also have \(A\subseteq f^{-1}(U)\cup f^{-1}(V)\).</li>
+</ol>
+<p>
+the last three points are in contradiction with \(A\) being connected. Hence \(f(A)\) should also be connected.
 </p>
 
 </div>
@@ -1030,13 +1057,51 @@ Let \(K\subset \mathbb{C}\) be a compact set, \(f:K\to\mathbb{C}\) continuous. T
 </p>
 
 </div>
+<div class="proof">
+<p>
+For this proof, we use the characterisation of compact sets by sequences, and by contradiction.
+</p>
+
+<p>
+Suppose then that \(f\) is continuous on the compact set \(K\) but \(f\) not uniformly continuous. Then there exists \(\epsilon >0\) such that for every \(\delta >0\) 
+there exist \(z_0,w_0\in K\) such that on one side \(|z_0 - w_0 | < \delta\) and on the other \(|f(z_0) - f(w_0)| > \epsilon\).
+Since this holds for any \(\delta >0\), take \(\delta_n = \frac{1}{n}\). The for each \(n\in \mathbb{N}\) there are \(z_n, w_n\in K\) such that
+\(|z_n - w_n | < \frac{1}{n}\) and \(|f(z_n) - f(w_n)| >0 \epsilon\).
+</p>
+
+<p>
+Now consider the sequence \(\{z_n\}_{n=1}^{\infty}\subseteq K\) just constructed. By compactness we know that there exists a convergent subsequence, namely
+\(\{z_{n_j}\}_{j=1}^{\infty}\), such that \(\lim_{j\to \infty} z_{n_j} = a_0\).
+</p>
+
+<p>
+The inequality \(| z_{n_j} - w_{n_j} | < \frac{1}{n_j}\) implies that the subsequence \(\{w_{n_j}\}_{j=1}^{\infty}\) converges also to the same limit, \(\lim_{j\to \infty} w_{n_j} = a_0\).
+</p>
+
+<p>
+By the continuity of \(f\) it holds
+\[ \lim_{j\to \infty} f(z_{n_j}) = f(w_{n_j}) = f(a_0). \]
+</p>
+
+<p>
+Then, there exits \(j_0>0\) such that for any \(j > j_0\) it holds simultaneously 
+\[ | f(z_{n_j}) - f(a_0) | < \frac{ \epsilon}{2}, \quad \mbox{and}\quad | f(w_{n_j}) - f(a_0) | < \frac{ \epsilon}{2}. \]
+</p>
+
+<p>
+The then we have the following sequence of inequalities
+\[ \epsilon < |f(z_0) - f(w_0)| < | f(z_{n_j}) - f(a_0) | +  | f(w_{n_j}) - f(a_0) | < \frac{ \epsilon}{2} + \frac{\epsilon}{2} = \epsilon, \]
+which its a contradiction itself. Consequently \(f\) is uniformly continuous in \(K\).
+</p>
+
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2021-03-12 Fri 00:00</p>
 <p class="author">Author: Daniel Ballesteros Chávez</p>
-<p class="date">Created: 2021-04-01 Thu 12:49</p>
+<p class="date">Created: 2021-04-02 Fri 12:25</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
