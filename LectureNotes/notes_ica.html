@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-02 Fri 12:25 -->
+<!-- 2021-04-03 Sat 15:15 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Notes for Introduction to Complex Analysis</title>
@@ -342,9 +342,11 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org6057361">1. Sequences and limits</a></li>
-<li><a href="#org4e3ece2">2. Continuity</a></li>
-<li><a href="#org925ff39">3. Basic topology of \(\mathbb{C}\)</a></li>
+<li><a href="#orgd82b270">1. Sequences and limits</a></li>
+<li><a href="#orgf83b006">2. Continuity</a></li>
+<li><a href="#org9af94a5">3. Basic topology of \(\mathbb{C}\)</a></li>
+<li><a href="#org07f4803">4. Derivatives</a></li>
+<li><a href="#org6db0ee4">5. Cauchy-Riemann Equations</a></li>
 </ul>
 </div>
 </div>
@@ -352,8 +354,8 @@ for the JavaScript code in this tag.
 
 
 
-<div id="outline-container-org6057361" class="outline-2">
-<h2 id="org6057361"><span class="section-number-2">1</span> Sequences and limits</h2>
+<div id="outline-container-orgd82b270" class="outline-2">
+<h2 id="orgd82b270"><span class="section-number-2">1</span> Sequences and limits</h2>
 <div class="outline-text-2" id="text-1">
 <div class="mydef">
 <p>
@@ -386,7 +388,7 @@ Supose that the sequence \(\{z_n\}_{n=1}^{\infty}\subset \mathbb{C}\) has two li
 we have simultaneously \[ |z_n  - z_0| < \frac{\epsilon}{2}, \mbox{ and } |z_n - w_0 | < \frac{\epsilon}{2}. \] 
 Then
 \[ | z_0 - w_0 | = |z_0 - z_n + z_n - w_0 | \leq | z_n - z_0 | + | z_n - w_0| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon. \]
-Since \(\epsilon >0\) is arbtrary, this happens only if |z<sub>0</sub> - w<sub>0</sub>|  = 0. Then \(z_0 = w_0\).
+Since \(\epsilon >0\) is arbitrary, this happens only if |z<sub>0</sub> - w<sub>0</sub>|  = 0. Then \(z_0 = w_0\).
 </p>
 
 </div>
@@ -572,8 +574,8 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 </div>
 
 
-<div id="outline-container-org4e3ece2" class="outline-2">
-<h2 id="org4e3ece2"><span class="section-number-2">2</span> Continuity</h2>
+<div id="outline-container-orgf83b006" class="outline-2">
+<h2 id="orgf83b006"><span class="section-number-2">2</span> Continuity</h2>
 <div class="outline-text-2" id="text-2">
 <div class="mydef">
 <p>
@@ -671,7 +673,7 @@ Let \(U\subseteq \mathbb{C}\) and consider a function \(f:U\to\mathbb{C}\). \(f\
 </ul>
 
 <p>
-In this case \(f\) is unifrmly continuous in \(A\). Let \(\epsilon>0\) and take \(\delta = \epsilon/2\). Then, for any \(z,w\in A\) such that \(|z-w| < \delta\) we have
+In this case \(f\) is uniformly continuous in \(A\). Let \(\epsilon>0\) and take \(\delta = \epsilon/2\). Then, for any \(z,w\in A\) such that \(|z-w| < \delta\) we have
 \[ |f(z) - f(w) | = |z^2 - w^2| = |z-w||z+w| \leq |z-w| (|z|+|w|) \leq 2 |z-w| < \epsilon. \]
 </p>
 
@@ -687,8 +689,8 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 </div>
 </div>
 
-<div id="outline-container-org925ff39" class="outline-2">
-<h2 id="org925ff39"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
+<div id="outline-container-org9af94a5" class="outline-2">
+<h2 id="org9af94a5"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
@@ -1097,11 +1099,170 @@ which its a contradiction itself. Consequently \(f\) is uniformly continuous in 
 </div>
 </div>
 </div>
+
+<div id="outline-container-org07f4803" class="outline-2">
+<h2 id="org07f4803"><span class="section-number-2">4</span> Derivatives</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
+relates with that of the derivative of maps from \(\mathbb{R}^2\) to \(\mathbb{R}^2\). The properties of complex differentiation have been extensively used and applied in other areas of mathematics, leading to astonishing consequences and results.
+</p>
+
+<p>
+We will give the concept of derivative for functions defined on open subsets of the complex plane, although it can be generalised to subsets which are not necessarily open by writing the definitions using the induced topology. In order to keep the exposition and notation simple, we will be dealing only with functions defined on  open subsets of the complex plane.
+Recall that a <b>domain</b> \(\Omega \subseteq \mathbb{C}\) is an open connected set.
+</p>
+
+<div class="mydef">
+<p>
+Let \(\Omega\subset \mathbb{C}\) be an open set, and  \(f:\Omega \to \mathbb{C}\). We say that \(f\) is (complex) differentiable at \(z_0\in \Omega\) if the following limit exists
+\[ \lim_{z\to z_0}\frac{f(z)- f(z_0)}{z - z_0}. \]
+The limit is called the derivative of \(f\) at \(z_0\) and will be denoted by \(f'(z_0)\), or \(\frac{df}{dz}(z_0)\).<br />
+If \(f\) is differentiable at every point of a domain \(\Omega\), then we call \(f\) <b>holomorphic</b> in \(\Omega\).<br />
+We use the term <b>analytic</b> with the same meaning as holomorphic.
+If \(f\) is holomorphic on the whole complex plane \(\mathbb{C}\), then we call \(f\) <b>entire</b>.
+</p>
+
+</div>
+
+
+<p>
+Examples of holomorphic functions are:
+</p>
+<ul class="org-ul">
+<li>\(f(z) = c\), (the constant function). With \(f'(z) = 0\), for all \(z\in \mathbb{C}\).</li>
+<li>\(f(z) = z\), (the identity function). With \(f'(z) = 1\), for all \(z\in \mathbb{C}\).</li>
+<li>\(f(z) = z^n\). With \(f'(z) = nz^{n-1}\), for all \(z\in \mathbb{C}\).</li>
+</ul>
+
+<p>
+The function \(f(z) = \bar{z}\) is not complex differentiable anywhere in \(\mathbb{C}\). Take \(z_0\in \mathbb{C}\) and consider the following two sequences converging to the same complex number \(z_0 = x_0 + iy_0\), \(w_n = x_n + iy_0\) and \(\xi_n = x_0 + i y_n\). Notice now that
+\[ \lim_{w_n\to z_0} \frac{f(w_n) - f(z_0)}{w_n - z_0} = \frac{\bar{w_n} - \bar{z_0}}{(x_n + iy_0) - (x_0 + iy_0)} = \frac{x_n - iy_0 - (x_0 - iy_0)}{x_n - x_0} = \frac{x_n - w_0}{x_n - x_0} = 1, \]
+and a similar computation gives
+\[ \lim_{\xi_n\to z_0} \frac{f(\xi_n) - f(z_0)}{\xi_n - z_0} = \frac{x_n - iy_0 - (x_0 - iy_0)}{y_n - y_0} = \frac{- i(y_n - y_0)}{i(y_n - y_0)} = -1, \]
+</p>
+
+<div class="prop">
+<p>
+If \(f:\Omega \to \mathbb{C}\) is complex differentiable at \(z_0\) then it is continuous at \(z_0\)
+</p>
+
+</div>
+<div class="proof">
+<p>
+Note that since \(f'(z_0) = \lim_{z\to z_0}\frac{f(z)- f(z_0)}{z - z_0}\) exists and \(\lim_{z\to z_0} z - z_0 = 0\), then the limit of o the product exists and it is the product of the limits
+\[ \lim_{z\to z_0}f(z)- f(z_0) = \lim_{z\to z_0}\frac{f(z)- f(z_0)}{z - z_0} \cdot (z - z_0) = f'(z_0) \lim_{z\to z_0} (z - z_0) = f'(z_0) \cdot 0 = 0, \]
+equivalently
+\[ \lim_{z\to z_0}f(z) = f(z_0),\]
+then, \(f\) is continuous at \(z_0\).
+</p>
+
+</div>
+
+<p>
+The rules for differentiating complex functions and their proof are similar that the ones one encounter when dealing with real analysis:
+</p>
+<div class="prop">
+<p>
+Let \(f,g:\Omega \to \mathbb{C}\) two complex differentiable functions at a point \(z_0\in \mathbb{C}\). Then
+</p>
+<ol class="org-ol">
+<li>\((c\,f)\) is differentiable at \(z_0\in \mathbb{C}\) and \((c\,f)'(z_0) = c\,f'(z_0)\).</li>
+<li>\((f\pm g)\) is differentiable at \(z_0\in \mathbb{C}\) and \((f\pm g)'(z_0) = f'(z_0) + g'(z_0)\).</li>
+<li>\((f\,g )\) is differentiable at \(z_0\in \mathbb{C}\) and \((f\, g)'(z_0) = f'(z_0)\,g(z_0) + f(z_0)\,g'(z_0)\).</li>
+<li>\(\left(\dfrac{f}{g}\right)\), \(g(z_0) \neq 0\), is differentiable at \(z_0\in \mathbb{C}\) and \(\left(\dfrac{f}{g}\right)'(z_0) = \frac{f'(z_0)\,g(z_0) - f(z_0)\,g'(z_0)}{g(z_0)^2}\).</li>
+</ol>
+
+</div>
+
+<div class="prop">
+<p>
+Let \(U,V \subseteq \mathbb{C}\) be two open sets and consider the functions  \(f:U\to \mathbb{C}\), \(g:V \to \mathbb{C}\) where \(f(U)\subseteq V\). If \(f\) is complex differentiable at \(z_0\in U\), and
+\(g\) complex differentiable at \(f(z_0)\in V\), then the composition \(g\circ f : U \to \mathbb{C}\), given by \((g\circ f)(z) = g(f(z))\), is complex differentiable at \(z_0\in U\), and
+\[ (g\circ f)'(z_0) = g'(f(z_0))\, f'(z_0). \]
+</p>
+
+</div>
+<div class="proof">
+<p>
+Case 1. Suppose \(f'(z_0) \neq 0\). Then \(f(z) - f(z_0) \neq 0\) holds for a small neighbourhood around \(z_0\). We can write
+\[ \frac{g(f(z)) - g(f(z_0))}{z - z_0} = \frac{g(f(z)) - g(f(z_0))}{f(z) - f(z_0)} \frac{f(z)) - f(z_0)}{z - z_0}.\]
+Since \(f\) is complex differentiable at \(z_0\),  then it is continuous and it holds
+\[ \lim_{z\to z_0} f(z) = f(z_0). \]
+Then, by taking the limit we obtain
+\[ \lim_{z\to z_0} \frac{g(f(z)) - g(f(z_0))}{f(z) - f(z_0)}  \lim_{z\to z_0}\frac{f(z)) - f(z_0)}{z - z_0} = g'(f(z_0)) \, f(z_0). \]
+</p>
+
+<p>
+Case 2. Suppose now that \(f'(z_0) = 0\). Then one can show that \(g'(f(z_0)) = 0\) and then would finish the proof. Note that since \(g'(f(z_0))\) exists, then there is a neighbourhood around
+\(f(z_0)\) such that the quotient
+\[ \frac{g(f(z)) - g(f(z_0))}{f(z) - f(z_0)} ,\]
+is bounded, i.e. , there is a positive number \(M>0\), and \(\delta >0\) such that for every \(0 < | f(z) - f(z_0) |< \delta\) we have
+\[ \left| \frac{g(f(z)) - g(f(z_0))}{f(z) - f(z_0)}\right| < M .\]
+Equivalently
+\[  |g(f(z)) - g(f(z_0))| < M | {f(z) - f(z_0)} | .\]
+Then
+\[ \left| \frac{g(f(z)) - g(f(z_0))}{z - z_0}\right| < M \left| \frac{f(z) - f(z_0)}{z - z_0} \right|.\]
+</p>
+
+<p>
+This shows that \((g\cric f)'(z_0) = 0 = g'(f(z_0)) f'(z_0) = g'(f(z_0)) \cdot 0\).
+</p>
+
+</div>
+
+
+<p>
+Now, since \(f:\mathbb{C}\to \mathbb{C}\) can also be viewed as a map \(f \mathbb{R}^2 \to \mathbb{R}^2\), lets explore the relationship between the two definitions of derivatives.
+First recall
+</p>
+<div class="mydef">
+<p>
+A map \(f:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at \(a\in \mathbb{R}^n\) if there is a linear transformation \(Df_a: \mathbb{R}^n \to \mathbb{R}^m\) such that
+\[ \lim_{h\to 0} \frac{|f(a + h) - f(a) - Df_a(h)|}{|h|} = 0. \]
+</p>
+
+</div>
+
+<p>
+In order to understand this linear transformation we introduce partial derivatives for a function \(f: \mathbb{R}^n \to \mathbb{R}\) at \(a \in \mathbb{R}^n\) as the limit
+\[ \frac{\partial f(a)}{\partial x_i} = \lim_{h\to 0} \frac{f(a_1,a_2,\ldots, a_i + h, \ldots, a_n) - f(a_1,\ldots, a_n)}{h}.\]
+</p>
+
+<p>
+Then it is possible to prove that for any map \(f:\mathbb{R}^n \to \mathbb{R}^m\), the matrix representing the linear transformation \(Df_a\) is 
+\[ (Df_a) = \left( \begin{array}{ccc}
+\frac{\partial f_1(a)}{\partial x_1} & \cdots & \frac{\partial f_1(a)}{\partial x_n}\\
+\vdots & \vdots & \vdots  \\
+\frac{\partial f_m(a)}{\partial x_1} & \cdots & \frac{\partial f_m(a)}{\partial x_n}\\
+\end{array} \right). \]
+</p>
+
+<p>
+<b>Remark</b> Note that \((Df_a)\)  is a matrix with \(m\) rows and \(n\) columns.
+</p>
+
+<p>
+Example: Be aware that it may happen that a map has all partial derivative, and still not being differentiable at a given point. The following is an example of a map whose all
+partial derivatives at \((0,0)\) exit, but it is not differentiable at \((0,0)\).
+</p>
+
+<p>
+\[{\displaystyle f(x,\,y)={\begin{cases}{\frac {xy\left(x^{2}-y^{2}\right)}{x^{2}+y^{2}}}&{\mbox{ for }}(x,\,y)\neq (0,\,0),\\0&{\mbox{ for }}(x,\,y)=(0,\,0).\end{cases}}}\]
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-org6db0ee4" class="outline-2">
+<h2 id="org6db0ee4"><span class="section-number-2">5</span> Cauchy-Riemann Equations</h2>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2021-03-12 Fri 00:00</p>
 <p class="author">Author: Daniel Ballesteros Chávez</p>
-<p class="date">Created: 2021-04-02 Fri 12:25</p>
+<p class="date">Created: 2021-04-03 Sat 15:15</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

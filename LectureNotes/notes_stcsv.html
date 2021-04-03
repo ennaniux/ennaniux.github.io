@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-01 Thu 10:23 -->
+<!-- 2021-04-03 Sat 15:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lecture notes for Sel. Topics Calc. Several Variables.</title>
@@ -342,25 +342,25 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgbfd660a">1. Some subsets of the Euclidean Space</a></li>
-<li><a href="#org5ccbc73">2. Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</a></li>
-<li><a href="#orgfd6df4b">3. Limits and Continuity</a></li>
-<li><a href="#orgb1a3db8">4. Derivatives</a></li>
-<li><a href="#org5bfc509">5. Differential Geometry of Curves</a>
+<li><a href="#org41bc0e8">1. Some subsets of the Euclidean Space</a></li>
+<li><a href="#org5c0fb9d">2. Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</a></li>
+<li><a href="#org57d0d11">3. Limits and Continuity</a></li>
+<li><a href="#org0016f5d">4. Derivatives</a></li>
+<li><a href="#org3457b25">5. Differential Geometry of Curves</a>
 <ul>
-<li><a href="#org28d5fe3">5.1. Curves in \(\mathbb{R}^3\)</a></li>
-<li><a href="#orgfa73924">5.2. Examples.</a></li>
-<li><a href="#org4d11d7d">5.3. The Local theory of Curves</a></li>
-<li><a href="#org540710d">5.4. Global Theory of Curves</a></li>
-<li><a href="#org1f7a2a4">5.5. The Isoperimetric Inequality</a></li>
+<li><a href="#org08ca316">5.1. Curves in \(\mathbb{R}^3\)</a></li>
+<li><a href="#org444c0df">5.2. Examples.</a></li>
+<li><a href="#org61688aa">5.3. The Local theory of Curves</a></li>
+<li><a href="#orgd10d393">5.4. Global Theory of Curves</a></li>
+<li><a href="#org249cf7f">5.5. The Isoperimetric Inequality</a></li>
 </ul>
 </li>
-<li><a href="#org908e026">6. The Isoperimetric Inequality in \(\mathbb{R}^n\).</a>
+<li><a href="#org7a36891">6. The Isoperimetric Inequality in \(\mathbb{R}^n\).</a>
 <ul>
-<li><a href="#org3f10f94">6.1. Moving planes</a></li>
-<li><a href="#orge93759d">6.2. Partial Differential Equations: a Neumann Problem</a></li>
-<li><a href="#org5acf23f">6.3. Proof of the Isoperimetric Inequality</a></li>
-<li><a href="#org1f20c75">6.4. Proof of the equality case</a></li>
+<li><a href="#org93a9ded">6.1. Moving planes</a></li>
+<li><a href="#org91ed0ac">6.2. Partial Differential Equations: a Neumann Problem</a></li>
+<li><a href="#orgee57193">6.3. Proof of the Isoperimetric Inequality</a></li>
+<li><a href="#org953b526">6.4. Proof of the equality case</a></li>
 </ul>
 </li>
 </ul>
@@ -369,8 +369,8 @@ for the JavaScript code in this tag.
 
 
 
-<div id="outline-container-orgbfd660a" class="outline-2">
-<h2 id="orgbfd660a"><span class="section-number-2">1</span> Some subsets of the Euclidean Space</h2>
+<div id="outline-container-org41bc0e8" class="outline-2">
+<h2 id="org41bc0e8"><span class="section-number-2">1</span> Some subsets of the Euclidean Space</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 We have defined for \(r>0\) the open ball centred at \(x_0\in \mathbb{R}^n\) as
@@ -404,8 +404,8 @@ Now we can also define certain basic sets in \(\mathbb{R}^n\):
 </div>
 
 
-<div id="outline-container-org5ccbc73" class="outline-2">
-<h2 id="org5ccbc73"><span class="section-number-2">2</span> Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</h2>
+<div id="outline-container-org5c0fb9d" class="outline-2">
+<h2 id="org5c0fb9d"><span class="section-number-2">2</span> Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 In this section we will list definitions and establish some notation and terminology regarding the maps between to Euclidean spaces.
@@ -443,8 +443,8 @@ In this section we will list definitions and establish some notation and termino
 
 
 
-<div id="outline-container-orgfd6df4b" class="outline-2">
-<h2 id="orgfd6df4b"><span class="section-number-2">3</span> Limits and Continuity</h2>
+<div id="outline-container-org57d0d11" class="outline-2">
+<h2 id="org57d0d11"><span class="section-number-2">3</span> Limits and Continuity</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 As in the case of real analysis (or any metric space) we define the limit \[ \lim_{x \to a} f(x) = b,\] by requiring that for every \(\epsilon >0\) there is a number \(\delta >0\) such that \(|f(x) - b| < \epsilon\) for every \(x\) in the domain of \(f\) such that \(|x-a| < \delta\).
@@ -470,12 +470,12 @@ Continuity of a map can be determined in terms of open subsets. Here there is a 
 </div>
 
 
-<div id="outline-container-orgb1a3db8" class="outline-2">
-<h2 id="orgb1a3db8"><span class="section-number-2">4</span> Derivatives</h2>
+<div id="outline-container-org0016f5d" class="outline-2">
+<h2 id="org0016f5d"><span class="section-number-2">4</span> Derivatives</h2>
 <div class="outline-text-2" id="text-4">
 <div class="mydef">
 <p>
-A map \(F:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at \(a\in \mathbb{R}^n\) if there is a linear transformation \(Df_a: \mathbb{R}^n \to \mathbb{R}^m\) such that
+A map \(f:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at \(a\in \mathbb{R}^n\) if there is a linear transformation \(Df_a: \mathbb{R}^n \to \mathbb{R}^m\) such that
 \[ \lim_{h\to 0} \frac{|f(a + h) - f(a) - Df_a(h)|}{|h|} = 0. \]
 </p>
 
@@ -530,13 +530,13 @@ Example:
 
 
 
-<div id="outline-container-org5bfc509" class="outline-2">
-<h2 id="org5bfc509"><span class="section-number-2">5</span> Differential Geometry of Curves</h2>
+<div id="outline-container-org3457b25" class="outline-2">
+<h2 id="org3457b25"><span class="section-number-2">5</span> Differential Geometry of Curves</h2>
 <div class="outline-text-2" id="text-5">
 </div>
 
-<div id="outline-container-org28d5fe3" class="outline-3">
-<h3 id="org28d5fe3"><span class="section-number-3">5.1</span> Curves in \(\mathbb{R}^3\)</h3>
+<div id="outline-container-org08ca316" class="outline-3">
+<h3 id="org08ca316"><span class="section-number-3">5.1</span> Curves in \(\mathbb{R}^3\)</h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="mydef">
 <p>
@@ -725,8 +725,8 @@ Given a curve \(\alpha\) parameterised by arc-length \(s\in (a,b)\), the curve \
 </div>
 
 
-<div id="outline-container-orgfa73924" class="outline-3">
-<h3 id="orgfa73924"><span class="section-number-3">5.2</span> Examples.</h3>
+<div id="outline-container-org444c0df" class="outline-3">
+<h3 id="org444c0df"><span class="section-number-3">5.2</span> Examples.</h3>
 <div class="outline-text-3" id="text-5-2">
 <ol class="org-ol">
 <li>Find the trace and the tangent vectors of the following curves
@@ -770,8 +770,8 @@ plot(TT^3,TT^2,type=l)
 
 
 
-<div id="outline-container-org4d11d7d" class="outline-3">
-<h3 id="org4d11d7d"><span class="section-number-3">5.3</span> The Local theory of Curves</h3>
+<div id="outline-container-org61688aa" class="outline-3">
+<h3 id="org61688aa"><span class="section-number-3">5.3</span> The Local theory of Curves</h3>
 <div class="outline-text-3" id="text-5-3">
 <div class="mydef">
 <p>
@@ -1083,8 +1083,8 @@ parameterised by arc-length, and \(T = \alpha'(s)\), is the tangent vector, then
 </div>
 
 
-<div id="outline-container-org540710d" class="outline-3">
-<h3 id="org540710d"><span class="section-number-3">5.4</span> Global Theory of Curves</h3>
+<div id="outline-container-orgd10d393" class="outline-3">
+<h3 id="orgd10d393"><span class="section-number-3">5.4</span> Global Theory of Curves</h3>
 <div class="outline-text-3" id="text-5-4">
 <p>
 Now we will study some global properties of Curves. Two classic results are: <b>the isoperimetric inequality</b> and the <b>Four Vertex Problem</b>.
@@ -1097,8 +1097,8 @@ In this course we will only focus on the former one. We will state the problem w
 </div>
 
 
-<div id="outline-container-org1f7a2a4" class="outline-3">
-<h3 id="org1f7a2a4"><span class="section-number-3">5.5</span> The Isoperimetric Inequality</h3>
+<div id="outline-container-org249cf7f" class="outline-3">
+<h3 id="org249cf7f"><span class="section-number-3">5.5</span> The Isoperimetric Inequality</h3>
 <div class="outline-text-3" id="text-5-5">
 <p>
 The isoperimetric inequality is still a thriving topic in modern mathematics. 
@@ -1146,7 +1146,7 @@ order to obtain the maximum area?
 </blockquote>
 
 
-<div id="orgeaa503d" class="figure">
+<div id="org96a7d3a" class="figure">
 <p><img src="./dido_pic01.png" alt="dido_pic01.png" width="70%" />
 </p>
 <p><span class="figure-number">Figure 2: </span>Dido's problem along the shore</p>
@@ -1165,7 +1165,7 @@ with the same sides.
 </div>
 
 
-<div id="orgb7a3562" class="figure">
+<div id="orgf4113e1" class="figure">
 <p><img src="./dido_pic02.png" alt="dido_pic02.png" width="70%" />
 </p>
 <p><span class="figure-number">Figure 3: </span>Steiner's Method</p>
@@ -1182,8 +1182,8 @@ Another nice resource was posted in moodle, where a solution using Fourier serie
 </div>
 </div>
 
-<div id="outline-container-org908e026" class="outline-2">
-<h2 id="org908e026"><span class="section-number-2">6</span> The Isoperimetric Inequality in \(\mathbb{R}^n\).</h2>
+<div id="outline-container-org7a36891" class="outline-2">
+<h2 id="org7a36891"><span class="section-number-2">6</span> The Isoperimetric Inequality in \(\mathbb{R}^n\).</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 The proof that we will give is due to X. Cabré which involves the solution of a particular Partial Differential Equation, and the Moving Plane technique developed by Alexandrov, to obtain the result.
@@ -1211,27 +1211,27 @@ where the Gamma function is given by
 </p>
 </div>
 
-<div id="outline-container-org3f10f94" class="outline-3">
-<h3 id="org3f10f94"><span class="section-number-3">6.1</span> Moving planes</h3>
+<div id="outline-container-org93a9ded" class="outline-3">
+<h3 id="org93a9ded"><span class="section-number-3">6.1</span> Moving planes</h3>
 </div>
 
-<div id="outline-container-orge93759d" class="outline-3">
-<h3 id="orge93759d"><span class="section-number-3">6.2</span> Partial Differential Equations: a Neumann Problem</h3>
+<div id="outline-container-org91ed0ac" class="outline-3">
+<h3 id="org91ed0ac"><span class="section-number-3">6.2</span> Partial Differential Equations: a Neumann Problem</h3>
 </div>
 
-<div id="outline-container-org5acf23f" class="outline-3">
-<h3 id="org5acf23f"><span class="section-number-3">6.3</span> Proof of the Isoperimetric Inequality</h3>
+<div id="outline-container-orgee57193" class="outline-3">
+<h3 id="orgee57193"><span class="section-number-3">6.3</span> Proof of the Isoperimetric Inequality</h3>
 </div>
 
-<div id="outline-container-org1f20c75" class="outline-3">
-<h3 id="org1f20c75"><span class="section-number-3">6.4</span> Proof of the equality case</h3>
+<div id="outline-container-org953b526" class="outline-3">
+<h3 id="org953b526"><span class="section-number-3">6.4</span> Proof of the equality case</h3>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2021-03-12 Fri 00:00</p>
 <p class="author">Author: Daniel Ballesteros Chávez</p>
-<p class="date">Created: 2021-04-01 Thu 10:23</p>
+<p class="date">Created: 2021-04-03 Sat 15:07</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
