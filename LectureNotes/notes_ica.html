@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-03 Sat 15:18 -->
+<!-- 2021-04-04 Sun 12:59 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Notes for Introduction to Complex Analysis</title>
@@ -342,11 +342,11 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org8581034">1. Sequences and limits</a></li>
-<li><a href="#orgaabfc35">2. Continuity</a></li>
-<li><a href="#orgdbc89dd">3. Basic topology of \(\mathbb{C}\)</a></li>
-<li><a href="#org18fd2b8">4. Derivatives</a></li>
-<li><a href="#orgacfa565">5. Cauchy-Riemann Equations</a></li>
+<li><a href="#org80feab4">1. Sequences and limits</a></li>
+<li><a href="#orgadfa16e">2. Continuity</a></li>
+<li><a href="#orga70798b">3. Basic topology of \(\mathbb{C}\)</a></li>
+<li><a href="#org06a35da">4. Derivatives</a></li>
+<li><a href="#org602d634">5. Cauchy-Riemann Equations</a></li>
 </ul>
 </div>
 </div>
@@ -354,8 +354,8 @@ for the JavaScript code in this tag.
 
 
 
-<div id="outline-container-org8581034" class="outline-2">
-<h2 id="org8581034"><span class="section-number-2">1</span> Sequences and limits</h2>
+<div id="outline-container-org80feab4" class="outline-2">
+<h2 id="org80feab4"><span class="section-number-2">1</span> Sequences and limits</h2>
 <div class="outline-text-2" id="text-1">
 <div class="mydef">
 <p>
@@ -574,8 +574,8 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 </div>
 
 
-<div id="outline-container-orgaabfc35" class="outline-2">
-<h2 id="orgaabfc35"><span class="section-number-2">2</span> Continuity</h2>
+<div id="outline-container-orgadfa16e" class="outline-2">
+<h2 id="orgadfa16e"><span class="section-number-2">2</span> Continuity</h2>
 <div class="outline-text-2" id="text-2">
 <div class="mydef">
 <p>
@@ -689,8 +689,8 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 </div>
 </div>
 
-<div id="outline-container-orgdbc89dd" class="outline-2">
-<h2 id="orgdbc89dd"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
+<div id="outline-container-orga70798b" class="outline-2">
+<h2 id="orga70798b"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
@@ -980,7 +980,7 @@ If \(K\) is compact then \(K\) is bounded. For each $z &isin; \(K\) consider the
 </p>
 
 <p>
-Now take any \(z_0\in \mbox{Cl}(K)\). By a previous proposition, we can construct a sequence  \(\{z_{n}\}_{n=1}^{\infty}\) such that \(\lim_{n\to\infty} z_n = z_0\). By our hypotesis, the sequence \(\{z_{n_k}\}_{k=1}^{\infty}\) such that \(\lim_{k\to\infty} z_{n_k} = w_0\), for some \(w_0\in K\). By the uniqueness of the limit, \(z_0 \in K\). We he have shown \(\mbox{Cl}(K) \subseteq K\), which implies \(\mbox{Cl}(K) = K\), i.e., \(K\) is closed.
+Now take any \(z_0\in \mbox{Cl}(K)\). By a previous proposition, we can construct a sequence  \(\{z_{n}\}_{n=1}^{\infty}\) such that \(\lim_{n\to\infty} z_n = z_0\). By our hypothesis, the sequence \(\{z_{n_k}\}_{k=1}^{\infty}\) such that \(\lim_{k\to\infty} z_{n_k} = w_0\), for some \(w_0\in K\). By the uniqueness of the limit, \(z_0 \in K\). We he have shown \(\mbox{Cl}(K) \subseteq K\), which implies \(\mbox{Cl}(K) = K\), i.e., \(K\) is closed.
 </p>
 
 </div>
@@ -1100,8 +1100,8 @@ which its a contradiction itself. Consequently \(f\) is uniformly continuous in 
 </div>
 </div>
 
-<div id="outline-container-org18fd2b8" class="outline-2">
-<h2 id="org18fd2b8"><span class="section-number-2">4</span> Derivatives</h2>
+<div id="outline-container-org06a35da" class="outline-2">
+<h2 id="org06a35da"><span class="section-number-2">4</span> Derivatives</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
@@ -1225,12 +1225,14 @@ A map \(f:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at \(a\in \mathbb{R}
 </div>
 
 <p>
-In order to understand this linear transformation we introduce partial derivatives for a function \(f: \mathbb{R}^n \to \mathbb{R}\) at \(a \in \mathbb{R}^n\) as the limit
+In order to represent this linear transformation as a matrix, we introduce partial derivatives for a function \(f: \mathbb{R}^n \to \mathbb{R}\) at \(a \in \mathbb{R}^n\) as the limit
 \[ \frac{\partial f(a)}{\partial x_i} = \lim_{h\to 0} \frac{f(a_1,a_2,\ldots, a_i + h, \ldots, a_n) - f(a_1,\ldots, a_n)}{h}.\]
 </p>
 
+
+<div class="thm">
 <p>
-Then it is possible to prove that for any map \(f:\mathbb{R}^n \to \mathbb{R}^m\), the matrix representing the linear transformation \(Df_a\) is 
+If \(f:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at a point \(a\in \mathbb{R}^n\), then all the first order partial differential exist, and the matrix representing the linear transformation \(Df_a\) is 
 \[ (Df_a) = \left( \begin{array}{ccc}
 \frac{\partial f_1(a)}{\partial x_1} & \cdots & \frac{\partial f_1(a)}{\partial x_n}\\
 \vdots & \vdots & \vdots  \\
@@ -1238,8 +1240,25 @@ Then it is possible to prove that for any map \(f:\mathbb{R}^n \to \mathbb{R}^m\
 \end{array} \right). \]
 </p>
 
+</div>
+
 <p>
 <b>Remark</b> Note that \((Df_a)\)  is a matrix with \(m\) rows and \(n\) columns.
+</p>
+
+<p>
+The converse is not true unless we add a stronger hypothesis 
+</p>
+
+<div class="thm">
+<p>
+Let \(f:\mathbb{R}^n \to \mathbb{R}^m\), with \(f= (f_1,f_2,\ldots,f_m)\). The derivative  \(Df_a\) exists if all first order partial derivatives \(\frac{\partial f_i}{\partial x_j}\), \(1\leq j \leq n\), and \(1\leq i \leq m\), exist in an open set containing \(a\), and each of these partial derivatives are continuous at \(a\).
+</p>
+
+</div>
+
+<p>
+Then last statement says that \(Df\) exists if the functions \(f_i \in C^{1}\) for \(1\leq i \leq m\).
 </p>
 
 <p>
@@ -1254,14 +1273,66 @@ partial derivatives at \((0,0)\) exist, but it is not differentiable at \((0,0)\
 </div>
 
 
-<div id="outline-container-orgacfa565" class="outline-2">
-<h2 id="orgacfa565"><span class="section-number-2">5</span> Cauchy-Riemann Equations</h2>
+<div id="outline-container-org602d634" class="outline-2">
+<h2 id="org602d634"><span class="section-number-2">5</span> Cauchy-Riemann Equations</h2>
+<div class="outline-text-2" id="text-5">
+<div class="thm">
+<p>
+Let \(\Omega\subseteq \mathbb{C}\) an open set \(f:\mathbb{C} \to \mathbb{C}\), and \(z_0= x_0 + iy_0 \in \Omega\). Write \(f(z) = u(x,y) + i v(x,y)\), where \(u,v:\Omega \to \mathbb{R}\).
+The function \(f\) is complex differentiable at \(z_0\) \(\Leftrightarrow\) \(u,v\) are real differentiable at \((x_0,y_0)\) and the following identities hold
+</p>
+\begin{equation}
+\begin{split}
+\frac{\partial u}{\partial x} (x_0,y_0) & = \frac{\partial v}{\partial y} (x_0,y_0), \\
+\frac{\partial u}{\partial y} (x_0,y_0) & =- \frac{\partial v}{\partial x} (x_0,y_0).
+\end{split}
+\end{equation}
+
+</div>
+
+<p>
+<b>Remark</b>. A usual notation is for the Cauchy-Riemann equations is \(u_x = v_y\) and \(u_y = -v_x\).<br />
+Note that if a function is complex differentiable, then their corresponding functions are \(C^1\).
+</p>
+
+<p>
+<b>Example</b>. The following example will clarify the hypothesis of the previous theorem, that the Cauchy-Riemann equations are not sufficient to establish the complex differentiability of a function.
+Let \(f:\mathbb{C}\to \mathbb{C}\) be defined as
+\[ f(z) = \left\{ \begin{array}{ccc}
+\frac{z^5}{|z|^4}, & \mbox{for} & z\neq 0, \\
+0, & \mbox{for} & z= 0. \\
+\end{array} \right. \]
+The function \(f\) is not complex differentiable at \(z=0\). Let \(z = x\), with \(x \to 0\). Then
+\[ \lim_{z\to 0} \frac{f(z)  - f(0)}{z - z_0} = \lim_{x\to 0}\frac{\frac{x^5}{|x|^4}}{x} = \lim_{x \to 0}\frac{x^4}{|x|^4}{x} = 1 .\]
+Now take \(z = i\,y\), with \(y\to 0\) and observe
+\[ \lim_{z\to 0} \frac{f(z)  - f(0)}{z - z_0} = \lim_{y\to 0} \frac{\frac{(iy)^5}{|y|^4}}{y} = \lim_{y\to 0}\frac{-y^5}{|y|^4} = -1 .\]
+Then we conclude that 
+\[ \lim_{z \to 0} \frac{f(z) - f(0)}{z-0} ,\]
+does not exists.
+</p>
+
+<p>
+On the other hand 
+\[ u(x,0) = x, \quad u(0,y) = v(x,0) = 0, \quad v(0,y) = y, \]
+Then we have at \((0,0)\):
+\[ u_x = v_y = 1,\quad u_y = -v_x = 0.\]
+</p>
+
+<p>
+What is happening here?
+</p>
+
+
+<p>
+\[\frac{ x^5  - 10 x^3 y^2 + 5 x y^4}{(x^2 + y^2) ^2} + i \frac{5 x^4 y -  10 x^2 y^3  +  y^5}{(x^2 + y^2)^2} \]
+</p>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2021-03-12 Fri 00:00</p>
 <p class="author">Author: Daniel Ballesteros Chávez</p>
-<p class="date">Created: 2021-04-03 Sat 15:18</p>
+<p class="date">Created: 2021-04-04 Sun 12:59</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

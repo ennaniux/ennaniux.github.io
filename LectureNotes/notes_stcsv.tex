@@ -1,4 +1,4 @@
-% Created 2021-04-01 Thu 10:23
+% Created 2021-04-07 Wed 11:16
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -65,7 +65,7 @@
 
 
 \section{Some subsets of the Euclidean Space}
-\label{sec:org7124acc}
+\label{sec:org1976ed2}
 
 We have defined for \(r>0\) the open ball centred at \(x_0\in \mathbb{R}^n\) as
 \[ B_r(x_0) = \{ x \in \mathbb{R}^n \, | \, |x - x_0| < r,\}\]
@@ -92,7 +92,7 @@ Now we can also define certain basic sets in \(\mathbb{R}^n\):
 
 
 \section{Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).}
-\label{sec:orgd0353ca}
+\label{sec:orgde21874}
 
 In this section we will list definitions and establish some notation and terminology regarding the maps between to Euclidean spaces.
 
@@ -127,7 +127,7 @@ In this section we will list definitions and establish some notation and termino
 
 
 \section{Limits and Continuity}
-\label{sec:org146a7aa}
+\label{sec:org335d8d7}
 As in the case of real analysis (or any metric space) we define the limit \[ \lim_{x \to a} f(x) = b,\] by requiring that for every \(\epsilon >0\) there is a number \(\delta >0\) such that \(|f(x) - b| < \epsilon\) for every \(x\) in the domain of \(f\) such that \(|x-a| < \delta\).
 
 If \(f:A\to \mathbb{R}^m\) is such that \[\lim_{x\to a} f(x) = f(a),\] then we say that \(f\) is continuous at \(a\). If \(f\) is continuous at every \(a\in A\) then \(f\) is simply called continuous.
@@ -145,10 +145,10 @@ Continuity of a map can be determined in terms of open subsets. Here there is a 
 
 
 \section{Derivatives}
-\label{sec:org53cd5fb}
+\label{sec:org238f05b}
 
 \begin{mydef}
-A map \(F:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at \(a\in \mathbb{R}^n\) if there is a linear transformation \(Df_a: \mathbb{R}^n \to \mathbb{R}^m\) such that
+A map \(f:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at \(a\in \mathbb{R}^n\) if there is a linear transformation \(Df_a: \mathbb{R}^n \to \mathbb{R}^m\) such that
 \[ \lim_{h\to 0} \frac{|f(a + h) - f(a) - Df_a(h)|}{|h|} = 0. \]
 \end{mydef}
 
@@ -184,10 +184,10 @@ Example:
 
 
 \section{Differential Geometry of Curves}
-\label{sec:org742f85c}
+\label{sec:orgc7cf89e}
 
 \subsection{Curves in \(\mathbb{R}^3\)}
-\label{sec:org5137fae}
+\label{sec:org1628dbb}
 
 \begin{mydef}
 A \textbf{parameterised differentiable curve} is a map \(\alpha: I \to \mathbb{R}^3\), where
@@ -311,7 +311,7 @@ Given a curve \(\alpha\) parameterised by arc-length \(s\in (a,b)\), the curve \
 
 
 \subsection{Examples.}
-\label{sec:org950d7ae}
+\label{sec:org5f0cc1e}
 
 \begin{enumerate}
 \item Find the trace and the tangent vectors of the following curves
@@ -350,8 +350,10 @@ plot(TT^3,TT^2,type=l)
 
 
 
+
+
 \subsection{The Local theory of Curves}
-\label{sec:org428b87a}
+\label{sec:org7187079}
 
 \begin{mydef}
 Let \(\alpha : I \to \mathbb{R}^3\) be a curve parameterised by arc-length. The curvature of \(\alpha\) at \(s\) is defined by
@@ -572,7 +574,7 @@ parameterised by arc-length, and \(T = \alpha'(s)\), is the tangent vector, then
 
 
 \subsection{Global Theory of Curves}
-\label{sec:org64654e6}
+\label{sec:org62ba213}
 
 Now we will study some global properties of Curves. Two classic results are: \textbf{the isoperimetric inequality} and the \textbf{Four Vertex Problem}.
 
@@ -580,7 +582,7 @@ In this course we will only focus on the former one. We will state the problem w
 
 
 \subsection{The Isoperimetric Inequality}
-\label{sec:org2682014}
+\label{sec:orgf705104}
 
 The isoperimetric inequality is still a thriving topic in modern mathematics. 
 
@@ -617,7 +619,7 @@ order to obtain the maximum area?
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=100pt]{./dido_pic01.png}
-\caption{\label{fig:org0d443dd}Dido's problem along the shore}
+\caption{\label{fig:org7d8533f}Dido's problem along the shore}
 \end{figure}
 
 
@@ -630,7 +632,7 @@ with the same sides.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=100pt]{./dido_pic02.png}
-\caption{\label{fig:org60e9dcc}Steiner's Method}
+\caption{\label{fig:org86f873f}Steiner's Method}
 \end{figure}
 
 
@@ -640,7 +642,7 @@ do Carmo's book on Curves and Surfaces presents Schmidt's proof of the isoperime
 Another nice resource was posted in moodle, where a solution using Fourier series is discussed.
 
 \section{The Isoperimetric Inequality in \(\mathbb{R}^n\).}
-\label{sec:orgbf12cbf}
+\label{sec:org6bec0dd}
 
 The proof that we will give is due to X. Cabré which involves the solution of a particular Partial Differential Equation, and the Moving Plane technique developed by Alexandrov, to obtain the result.
 
@@ -659,14 +661,110 @@ where the Gamma function is given by
 \[ \Gamma(s) = \int_{0}^{\infty} e^{-t}t^{s-1}dt. \]
 
 \subsection{Moving planes}
-\label{sec:orga76070a}
+\label{sec:orgd4d5f26}
+\begin{mydef}
+If \(\Omega \subset \mathbb{R}^n\) is a bounded domain (open and connected), and if \(u:\bar{\Omega} \to \mathbb{R}\) is a \(C^1\) function, we define the lower contact set as
+\[ S = \{ x_0 \in \Omega \, | \, u(x) \geq u(x_0) + \nabla u(x_0) \cdot (x - x_0), \mbox{ for all } x\in \bar{\Omega} \}. \] 
+\end{mydef}
+
+Tasks:
+\begin{itemize}
+\item Recall the definition of the graph of a function.
+\item Recall the definition of the Gradient of a function \(\nabla u\).
+\item Given a surface defined by the graph of a function and a point \(p\) of the graph. What are the tangent vectors? What is the tangent hyperplane?
+\item Given a surface defined by the graph of a function and a point \(p\) of the graph. What is one normal vector to the surface at the point?
+\item What is the equation of the hyperplane of the graph at a point?
+\end{itemize}
+
+Consider a hyperplane moving parallel to itself, it is easy to see that if the first point of contact is an interior point of \(\Omega\), then the plane becomes the tangent at that point:
+
+\begin{prop}
+If by translating a plane moving parallel to itself, the first contact point of the plane with the graph of the function \(u\) has a first coordinate \(x_0\in \Omega\), this hyperplane is such that
+satisfies the inequality
+\[ u(x) \geq u(x_0) + m \cdot (x - x_0), \]
+for some \(m\in \mathbb{R}^n\). Then \(m = \nabla u(x_0)\). 
+\end{prop}
+
+Task:
+\begin{itemize}
+\item What is a critical point of a function?
+\item What is the Hessian of a function \(u:\mathbb{R}^n\to \mathbb{R}\)?
+\item How determine if a critical point is a minimum or a maximum?
+\item What is a convex/concave function?
+\item What is the Taylor expansion of a function?
+\end{itemize}
+
+
+\begin{prop}
+If the function is twice differentiable and \(x_0\in S\), then \(D^2u(x_0)\) is a symmetric and positive definite matrix.
+\end{prop}
+
 
 \subsection{Partial Differential Equations: a Neumann Problem}
-\label{sec:orga46bd90}
+\label{sec:org9317176}
+
+In order to understand ponts in \(S\) that are in the boundary of our domain \(\Omega\), we introduce the following Partial Differential Equation:
+\begin{equation}
+\left\{ \begin{array}{cccr}
+\Delta u & = & \frac{|\partial \Omega|}{|\Omega|} & \mbox{in } \Omega \\
+\dfrac{\partial u}{\partial \nu} & = & 1 & \mbox{on } \partial{\Omega} \\
+\end{array} \right.
+\end{equation}
+
+Last expression is an example of a Neumann problem, where \(\nu\) denotes the outer unit vector at boundary points.
+
+
+Task:
+\begin{itemize}
+\item Recall what is the Laplace operator \(\Delta\).
+\item Recall what is the normal derivative \(\frac{\partial u }{\nu}\).
+\end{itemize}
+
+\begin{prop}
+If by translating a plane moving parallel to itself, the first contact point of the plane with the graph of the function \(u\) has a first coordinate \(x_0\in \partial\Omega\), then
+\[ m \cdot \nu(x_0) \geq \nabla u(x_0) \cdot \nu(x_0). \]
+Where the plane is assume to satisfy for \(x_0\in \partial\Omega\) and any \(x\in \bar{\Omega}\)
+\[ u(x) \geq u(x_0) + m \cdot (x - x_0). \]
+\end{prop}
+
+\begin{thm}
+Let \(B_1(0)\) be the unit ball in \(\mathbb{R}^n\) with centre at the origin and \(u:\Omega\subset \mathbb{R}^n \to \mathbb{R}\) is a solution to our Neumann problem. Consider the  lower contact set of \(u\), \(S\),  and let \(\nabla u (S) = \{ \nabla (x) \in \mathbb{R}^n \, | \, x \in S\}\). Then the following holds
+\[ B_1(0) \subset \nabla u(S). \]
+\end{thm}
 
 \subsection{Proof of the Isoperimetric Inequality}
-\label{sec:org3c7aa95}
+\label{sec:org57eb0a3}
+
+Using the last theorem, the proof of the isoperimetric inequality follows from
+\begin{equation}
+\begin{split}
+\omega_n = |B| = \int_B dx & \leq \int_{\nabla u (S)} dx \leq \int_{S} \text{det}(D^2 u) dx  \\  
+& \leq \int_{\Omega} \text{det}(D^2 u) dx 
+\leq \int_{\Omega} \left( \frac{\text{tr}(D^2 u)}{n}\right)^n dx =
+\int_{\Omega} \left( \frac{\Delta u}{n}\right)^n dx \\
+ & = \int_\Omega \left( \frac{|\partial\Omega|}{n|\Omega|}\right)^n dx =
+ \frac{|\partial\Omega|^n}{n^n|\Omega|^{n-1}} .
+\end{split}
+\end{equation}
+
+Task.
+\begin{itemize}
+\item Justify every \(\leq\) and \(=\) in last expression.
+\item Recall the AM-GM (or Newtons') inequalities \[ \frac{x_{1}+x_{2}+\cdots +x_{n}}{n}\geq \sqrt[n]{x_{1}\cdot x_{2}\cdots x_{n}} \]
+\end{itemize}
 
 \subsection{Proof of the equality case}
-\label{sec:orga6f95d6}
+\label{sec:orgc9148ac}
+
+If the equality holds:
+\begin{itemize}
+\item Note that \(|S| = |\Omega|\).
+\item The eigenvalues of \(D^2u(x)\) are all equal to the constant \(\left(\omega_n / |\Omega|\right)^{1/n}\).
+\item \(B_1(0) \subset \nabla u(S)\) in the equality case implies \(B_1(0)\) is dense in \(\nabla u (\Omega)\).
+\item Since \(|\nabla u| \leq 1\) in \(\bar{\Omega}\) and \(|\nabla u| \geq |\nabla u \cdot \nu | = 1\) then \(u\) is constant on the boundary \(\partial \Omega\).
+\item The function \(u\) solves the Neumann problem and we can also assume after translation that \(u(x) = 0\) on \(\partial \Omega\).
+\item Pick \(x_0 \in \Omega\) be the minimum of \(u\) and consider the largest possible ball \(B(x_0)\) in \(\Omega\) with centre at \(x_0\).
+\item Apply the mean value theorem: if \(x\in B(x_0)\), there is some \(\xi\) in the line segment \((1-t)x_0 + tx\), \(0 \leq t \leq 1\) such that \[ u(x) = u (x_0) + \nabla u(x_0) \cdot (x - x_0) + \frac{1}{2} (x- x_0)^T D^2 u(\xi) (x - x_0) = u(x_0) + \frac{\lambda}{2} |x - x_0|^2 .\]
+\item Pick a point \(x \in \partial B \cap \partial \Omega\) and conclude that \(\partial \Omega = \partial B(x_0)\).
+\end{itemize}
 \end{document}

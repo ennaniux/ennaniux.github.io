@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-03 Sat 15:07 -->
+<!-- 2021-04-07 Wed 11:16 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lecture notes for Sel. Topics Calc. Several Variables.</title>
@@ -342,25 +342,25 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org41bc0e8">1. Some subsets of the Euclidean Space</a></li>
-<li><a href="#org5c0fb9d">2. Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</a></li>
-<li><a href="#org57d0d11">3. Limits and Continuity</a></li>
-<li><a href="#org0016f5d">4. Derivatives</a></li>
-<li><a href="#org3457b25">5. Differential Geometry of Curves</a>
+<li><a href="#org463b61f">1. Some subsets of the Euclidean Space</a></li>
+<li><a href="#org6f07791">2. Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</a></li>
+<li><a href="#org888cd50">3. Limits and Continuity</a></li>
+<li><a href="#org5d5bb4b">4. Derivatives</a></li>
+<li><a href="#orgdffeba0">5. Differential Geometry of Curves</a>
 <ul>
-<li><a href="#org08ca316">5.1. Curves in \(\mathbb{R}^3\)</a></li>
-<li><a href="#org444c0df">5.2. Examples.</a></li>
-<li><a href="#org61688aa">5.3. The Local theory of Curves</a></li>
-<li><a href="#orgd10d393">5.4. Global Theory of Curves</a></li>
-<li><a href="#org249cf7f">5.5. The Isoperimetric Inequality</a></li>
+<li><a href="#org2aeecb3">5.1. Curves in \(\mathbb{R}^3\)</a></li>
+<li><a href="#orgd67d49b">5.2. Examples.</a></li>
+<li><a href="#org8162327">5.3. The Local theory of Curves</a></li>
+<li><a href="#org266c0a3">5.4. Global Theory of Curves</a></li>
+<li><a href="#org3ff2f2f">5.5. The Isoperimetric Inequality</a></li>
 </ul>
 </li>
-<li><a href="#org7a36891">6. The Isoperimetric Inequality in \(\mathbb{R}^n\).</a>
+<li><a href="#org3587fab">6. The Isoperimetric Inequality in \(\mathbb{R}^n\).</a>
 <ul>
-<li><a href="#org93a9ded">6.1. Moving planes</a></li>
-<li><a href="#org91ed0ac">6.2. Partial Differential Equations: a Neumann Problem</a></li>
-<li><a href="#orgee57193">6.3. Proof of the Isoperimetric Inequality</a></li>
-<li><a href="#org953b526">6.4. Proof of the equality case</a></li>
+<li><a href="#orgaba94a1">6.1. Moving planes</a></li>
+<li><a href="#orgfe02d2e">6.2. Partial Differential Equations: a Neumann Problem</a></li>
+<li><a href="#org275d5e3">6.3. Proof of the Isoperimetric Inequality</a></li>
+<li><a href="#orgd5e7553">6.4. Proof of the equality case</a></li>
 </ul>
 </li>
 </ul>
@@ -369,8 +369,8 @@ for the JavaScript code in this tag.
 
 
 
-<div id="outline-container-org41bc0e8" class="outline-2">
-<h2 id="org41bc0e8"><span class="section-number-2">1</span> Some subsets of the Euclidean Space</h2>
+<div id="outline-container-org463b61f" class="outline-2">
+<h2 id="org463b61f"><span class="section-number-2">1</span> Some subsets of the Euclidean Space</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 We have defined for \(r>0\) the open ball centred at \(x_0\in \mathbb{R}^n\) as
@@ -404,8 +404,8 @@ Now we can also define certain basic sets in \(\mathbb{R}^n\):
 </div>
 
 
-<div id="outline-container-org5c0fb9d" class="outline-2">
-<h2 id="org5c0fb9d"><span class="section-number-2">2</span> Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</h2>
+<div id="outline-container-org6f07791" class="outline-2">
+<h2 id="org6f07791"><span class="section-number-2">2</span> Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 In this section we will list definitions and establish some notation and terminology regarding the maps between to Euclidean spaces.
@@ -443,8 +443,8 @@ In this section we will list definitions and establish some notation and termino
 
 
 
-<div id="outline-container-org57d0d11" class="outline-2">
-<h2 id="org57d0d11"><span class="section-number-2">3</span> Limits and Continuity</h2>
+<div id="outline-container-org888cd50" class="outline-2">
+<h2 id="org888cd50"><span class="section-number-2">3</span> Limits and Continuity</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 As in the case of real analysis (or any metric space) we define the limit \[ \lim_{x \to a} f(x) = b,\] by requiring that for every \(\epsilon >0\) there is a number \(\delta >0\) such that \(|f(x) - b| < \epsilon\) for every \(x\) in the domain of \(f\) such that \(|x-a| < \delta\).
@@ -470,8 +470,8 @@ Continuity of a map can be determined in terms of open subsets. Here there is a 
 </div>
 
 
-<div id="outline-container-org0016f5d" class="outline-2">
-<h2 id="org0016f5d"><span class="section-number-2">4</span> Derivatives</h2>
+<div id="outline-container-org5d5bb4b" class="outline-2">
+<h2 id="org5d5bb4b"><span class="section-number-2">4</span> Derivatives</h2>
 <div class="outline-text-2" id="text-4">
 <div class="mydef">
 <p>
@@ -530,13 +530,13 @@ Example:
 
 
 
-<div id="outline-container-org3457b25" class="outline-2">
-<h2 id="org3457b25"><span class="section-number-2">5</span> Differential Geometry of Curves</h2>
+<div id="outline-container-orgdffeba0" class="outline-2">
+<h2 id="orgdffeba0"><span class="section-number-2">5</span> Differential Geometry of Curves</h2>
 <div class="outline-text-2" id="text-5">
 </div>
 
-<div id="outline-container-org08ca316" class="outline-3">
-<h3 id="org08ca316"><span class="section-number-3">5.1</span> Curves in \(\mathbb{R}^3\)</h3>
+<div id="outline-container-org2aeecb3" class="outline-3">
+<h3 id="org2aeecb3"><span class="section-number-3">5.1</span> Curves in \(\mathbb{R}^3\)</h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="mydef">
 <p>
@@ -725,8 +725,8 @@ Given a curve \(\alpha\) parameterised by arc-length \(s\in (a,b)\), the curve \
 </div>
 
 
-<div id="outline-container-org444c0df" class="outline-3">
-<h3 id="org444c0df"><span class="section-number-3">5.2</span> Examples.</h3>
+<div id="outline-container-orgd67d49b" class="outline-3">
+<h3 id="orgd67d49b"><span class="section-number-3">5.2</span> Examples.</h3>
 <div class="outline-text-3" id="text-5-2">
 <ol class="org-ol">
 <li>Find the trace and the tangent vectors of the following curves
@@ -770,8 +770,10 @@ plot(TT^3,TT^2,type=l)
 
 
 
-<div id="outline-container-org61688aa" class="outline-3">
-<h3 id="org61688aa"><span class="section-number-3">5.3</span> The Local theory of Curves</h3>
+
+
+<div id="outline-container-org8162327" class="outline-3">
+<h3 id="org8162327"><span class="section-number-3">5.3</span> The Local theory of Curves</h3>
 <div class="outline-text-3" id="text-5-3">
 <div class="mydef">
 <p>
@@ -1083,8 +1085,8 @@ parameterised by arc-length, and \(T = \alpha'(s)\), is the tangent vector, then
 </div>
 
 
-<div id="outline-container-orgd10d393" class="outline-3">
-<h3 id="orgd10d393"><span class="section-number-3">5.4</span> Global Theory of Curves</h3>
+<div id="outline-container-org266c0a3" class="outline-3">
+<h3 id="org266c0a3"><span class="section-number-3">5.4</span> Global Theory of Curves</h3>
 <div class="outline-text-3" id="text-5-4">
 <p>
 Now we will study some global properties of Curves. Two classic results are: <b>the isoperimetric inequality</b> and the <b>Four Vertex Problem</b>.
@@ -1097,8 +1099,8 @@ In this course we will only focus on the former one. We will state the problem w
 </div>
 
 
-<div id="outline-container-org249cf7f" class="outline-3">
-<h3 id="org249cf7f"><span class="section-number-3">5.5</span> The Isoperimetric Inequality</h3>
+<div id="outline-container-org3ff2f2f" class="outline-3">
+<h3 id="org3ff2f2f"><span class="section-number-3">5.5</span> The Isoperimetric Inequality</h3>
 <div class="outline-text-3" id="text-5-5">
 <p>
 The isoperimetric inequality is still a thriving topic in modern mathematics. 
@@ -1146,7 +1148,7 @@ order to obtain the maximum area?
 </blockquote>
 
 
-<div id="org96a7d3a" class="figure">
+<div id="org3203b59" class="figure">
 <p><img src="./dido_pic01.png" alt="dido_pic01.png" width="70%" />
 </p>
 <p><span class="figure-number">Figure 2: </span>Dido's problem along the shore</p>
@@ -1165,7 +1167,7 @@ with the same sides.
 </div>
 
 
-<div id="orgf4113e1" class="figure">
+<div id="org3a5d2d8" class="figure">
 <p><img src="./dido_pic02.png" alt="dido_pic02.png" width="70%" />
 </p>
 <p><span class="figure-number">Figure 3: </span>Steiner's Method</p>
@@ -1182,8 +1184,8 @@ Another nice resource was posted in moodle, where a solution using Fourier serie
 </div>
 </div>
 
-<div id="outline-container-org7a36891" class="outline-2">
-<h2 id="org7a36891"><span class="section-number-2">6</span> The Isoperimetric Inequality in \(\mathbb{R}^n\).</h2>
+<div id="outline-container-org3587fab" class="outline-2">
+<h2 id="org3587fab"><span class="section-number-2">6</span> The Isoperimetric Inequality in \(\mathbb{R}^n\).</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 The proof that we will give is due to X. Cabré which involves the solution of a particular Partial Differential Equation, and the Moving Plane technique developed by Alexandrov, to obtain the result.
@@ -1211,27 +1213,161 @@ where the Gamma function is given by
 </p>
 </div>
 
-<div id="outline-container-org93a9ded" class="outline-3">
-<h3 id="org93a9ded"><span class="section-number-3">6.1</span> Moving planes</h3>
+<div id="outline-container-orgaba94a1" class="outline-3">
+<h3 id="orgaba94a1"><span class="section-number-3">6.1</span> Moving planes</h3>
+<div class="outline-text-3" id="text-6-1">
+<div class="mydef">
+<p>
+If \(\Omega \subset \mathbb{R}^n\) is a bounded domain (open and connected), and if \(u:\bar{\Omega} \to \mathbb{R}\) is a \(C^1\) function, we define the lower contact set as
+\[ S = \{ x_0 \in \Omega \, | \, u(x) \geq u(x_0) + \nabla u(x_0) \cdot (x - x_0), \mbox{ for all } x\in \bar{\Omega} \}. \] 
+</p>
+
 </div>
 
-<div id="outline-container-org91ed0ac" class="outline-3">
-<h3 id="org91ed0ac"><span class="section-number-3">6.2</span> Partial Differential Equations: a Neumann Problem</h3>
+<p>
+Tasks:
+</p>
+<ul class="org-ul">
+<li>Recall the definition of the graph of a function.</li>
+<li>Recall the definition of the Gradient of a function \(\nabla u\).</li>
+<li>Given a surface defined by the graph of a function and a point \(p\) of the graph. What are the tangent vectors? What is the tangent hyperplane?</li>
+<li>Given a surface defined by the graph of a function and a point \(p\) of the graph. What is one normal vector to the surface at the point?</li>
+<li>What is the equation of the hyperplane of the graph at a point?</li>
+</ul>
+
+<p>
+Consider a hyperplane moving parallel to itself, it is easy to see that if the first point of contact is an interior point of \(\Omega\), then the plane becomes the tangent at that point:
+</p>
+
+<div class="prop">
+<p>
+If by translating a plane moving parallel to itself, the first contact point of the plane with the graph of the function \(u\) has a first coordinate \(x_0\in \Omega\), this hyperplane is such that
+satisfies the inequality
+\[ u(x) \geq u(x_0) + m \cdot (x - x_0), \]
+for some \(m\in \mathbb{R}^n\). Then \(m = \nabla u(x_0)\). 
+</p>
+
 </div>
 
-<div id="outline-container-orgee57193" class="outline-3">
-<h3 id="orgee57193"><span class="section-number-3">6.3</span> Proof of the Isoperimetric Inequality</h3>
+<p>
+Task:
+</p>
+<ul class="org-ul">
+<li>What is a critical point of a function?</li>
+<li>What is the Hessian of a function \(u:\mathbb{R}^n\to \mathbb{R}\)?</li>
+<li>How determine if a critical point is a minimum or a maximum?</li>
+<li>What is a convex/concave function?</li>
+<li>What is the Taylor expansion of a function?</li>
+</ul>
+
+
+<div class="prop">
+<p>
+If the function is twice differentiable and \(x_0\in S\), then \(D^2u(x_0)\) is a symmetric and positive definite matrix.
+</p>
+
+</div>
+</div>
 </div>
 
-<div id="outline-container-org953b526" class="outline-3">
-<h3 id="org953b526"><span class="section-number-3">6.4</span> Proof of the equality case</h3>
+
+<div id="outline-container-orgfe02d2e" class="outline-3">
+<h3 id="orgfe02d2e"><span class="section-number-3">6.2</span> Partial Differential Equations: a Neumann Problem</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+In order to understand ponts in \(S\) that are in the boundary of our domain \(\Omega\), we introduce the following Partial Differential Equation:
+</p>
+\begin{equation}
+\left\{ \begin{array}{cccr}
+\Delta u & = & \frac{|\partial \Omega|}{|\Omega|} & \mbox{in } \Omega \\
+\dfrac{\partial u}{\partial \nu} & = & 1 & \mbox{on } \partial{\Omega} \\
+\end{array} \right.
+\end{equation}
+
+<p>
+Last expression is an example of a Neumann problem, where \(\nu\) denotes the outer unit vector at boundary points.
+</p>
+
+
+<p>
+Task:
+</p>
+<ul class="org-ul">
+<li>Recall what is the Laplace operator \(\Delta\).</li>
+<li>Recall what is the normal derivative \(\frac{\partial u }{\nu}\).</li>
+</ul>
+
+<div class="prop">
+<p>
+If by translating a plane moving parallel to itself, the first contact point of the plane with the graph of the function \(u\) has a first coordinate \(x_0\in \partial\Omega\), then
+\[ m \cdot \nu(x_0) \geq \nabla u(x_0) \cdot \nu(x_0). \]
+Where the plane is assume to satisfy for \(x_0\in \partial\Omega\) and any \(x\in \bar{\Omega}\)
+\[ u(x) \geq u(x_0) + m \cdot (x - x_0). \]
+</p>
+
+</div>
+
+<div class="thm">
+<p>
+Let \(B_1(0)\) be the unit ball in \(\mathbb{R}^n\) with centre at the origin and \(u:\Omega\subset \mathbb{R}^n \to \mathbb{R}\) is a solution to our Neumann problem. Consider the  lower contact set of \(u\), \(S\),  and let \(\nabla u (S) = \{ \nabla (x) \in \mathbb{R}^n \, | \, x \in S\}\). Then the following holds
+\[ B_1(0) \subset \nabla u(S). \]
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org275d5e3" class="outline-3">
+<h3 id="org275d5e3"><span class="section-number-3">6.3</span> Proof of the Isoperimetric Inequality</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+Using the last theorem, the proof of the isoperimetric inequality follows from
+</p>
+\begin{equation}
+\begin{split}
+\omega_n = |B| = \int_B dx & \leq \int_{\nabla u (S)} dx \leq \int_{S} \text{det}(D^2 u) dx  \\  
+& \leq \int_{\Omega} \text{det}(D^2 u) dx 
+\leq \int_{\Omega} \left( \frac{\text{tr}(D^2 u)}{n}\right)^n dx =
+\int_{\Omega} \left( \frac{\Delta u}{n}\right)^n dx \\
+ & = \int_\Omega \left( \frac{|\partial\Omega|}{n|\Omega|}\right)^n dx =
+ \frac{|\partial\Omega|^n}{n^n|\Omega|^{n-1}} .
+\end{split}
+\end{equation}
+
+<p>
+Task.
+</p>
+<ul class="org-ul">
+<li>Justify every \(\leq\) and \(=\) in last expression.</li>
+<li>Recall the AM-GM (or Newtons') inequalities \[ \frac{x_{1}+x_{2}+\cdots +x_{n}}{n}\geq \sqrt[n]{x_{1}\cdot x_{2}\cdots x_{n}} \]</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd5e7553" class="outline-3">
+<h3 id="orgd5e7553"><span class="section-number-3">6.4</span> Proof of the equality case</h3>
+<div class="outline-text-3" id="text-6-4">
+<p>
+If the equality holds:
+</p>
+<ul class="org-ul">
+<li>Note that \(|S| = |\Omega|\).</li>
+<li>The eigenvalues of \(D^2u(x)\) are all equal to the constant \(\left(\omega_n / |\Omega|\right)^{1/n}\).</li>
+<li>\(B_1(0) \subset \nabla u(S)\) in the equality case implies \(B_1(0)\) is dense in \(\nabla u (\Omega)\).</li>
+<li>Since \(|\nabla u| \leq 1\) in \(\bar{\Omega}\) and \(|\nabla u| \geq |\nabla u \cdot \nu | = 1\) then \(u\) is constant on the boundary \(\partial \Omega\).</li>
+<li>The function \(u\) solves the Neumann problem and we can also assume after translation that \(u(x) = 0\) on \(\partial \Omega\).</li>
+<li>Pick \(x_0 \in \Omega\) be the minimum of \(u\) and consider the largest possible ball \(B(x_0)\) in \(\Omega\) with centre at \(x_0\).</li>
+<li>Apply the mean value theorem: if \(x\in B(x_0)\), there is some \(\xi\) in the line segment \((1-t)x_0 + tx\), \(0 \leq t \leq 1\) such that \[ u(x) = u (x_0) + \nabla u(x_0) \cdot (x - x_0) + \frac{1}{2} (x- x_0)^T D^2 u(\xi) (x - x_0) = u(x_0) + \frac{\lambda}{2} |x - x_0|^2 .\]</li>
+<li>Pick a point \(x \in \partial B \cap \partial \Omega\) and conclude that \(\partial \Omega = \partial B(x_0)\).</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2021-03-12 Fri 00:00</p>
 <p class="author">Author: Daniel Ballesteros Chávez</p>
-<p class="date">Created: 2021-04-03 Sat 15:07</p>
+<p class="date">Created: 2021-04-07 Wed 11:16</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
