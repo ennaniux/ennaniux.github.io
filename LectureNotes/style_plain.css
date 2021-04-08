@@ -116,6 +116,29 @@ p {
     content: 'Theorem';
   }
 
+  .cor  {
+    	color:  #404040;
+    border: 1px solid blue;
+    box-shadow: 3px 3px 3px blue;
+    padding: 8pt;
+    overflow: auto;
+    margin: 1.2em;
+    position: relative;
+    overflow: auto;
+    padding-top: 1.2em;
+	   }
+
+  .cor:before {
+    display: inline;
+    position: absolute;
+    background-color: white;
+    top: -5px;
+    left: 10px;
+    padding: 3px;
+    border: 1px solid black;
+    content: 'Corollary';
+  }
+
 
 
  

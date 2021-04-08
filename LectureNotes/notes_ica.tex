@@ -1,4 +1,4 @@
-% Created 2021-04-02 Fri 12:25
+% Created 2021-04-07 Wed 18:32
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -66,7 +66,7 @@
 
 
 \section{Sequences and limits}
-\label{sec:org0255044}
+\label{sec:org908fed6}
 
 \begin{mydef}
 A sequence in \(\mathbb{C}\) is a function \(\varphi: \mathbb{N}\to \mathbb{C}\). We use the notation
@@ -89,7 +89,7 @@ Supose that the sequence \(\{z_n\}_{n=1}^{\infty}\subset \mathbb{C}\) has two li
 we have simultaneously \[ |z_n  - z_0| < \frac{\epsilon}{2}, \mbox{ and } |z_n - w_0 | < \frac{\epsilon}{2}. \] 
 Then
 \[ | z_0 - w_0 | = |z_0 - z_n + z_n - w_0 | \leq | z_n - z_0 | + | z_n - w_0| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon. \]
-Since \(\epsilon >0\) is arbtrary, this happens only if |z\textsubscript{0} - w\textsubscript{0}|  = 0. Then \(z_0 = w_0\).
+Since \(\epsilon >0\) is arbitrary, this happens only if |z\textsubscript{0} - w\textsubscript{0}|  = 0. Then \(z_0 = w_0\).
 \end{proof}
 
 
@@ -215,7 +215,7 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 
 
 \section{Continuity}
-\label{sec:org7cda867}
+\label{sec:orgac8bfbc}
 \begin{mydef}
 The function \(f(z)\) is said to have the limit \(w_0\in \mathbb{C}\) as \(z\) tends to \(a\in\mathbb{C}\),  if for every \(\epsilon >0\) there exists a number \(\delta = \delta(\epsilon) >0\) with the property that if \(|z - a| < \delta\) then it holds \(|f(z) - w_0| <\epsilon\), and in that case we write \[ \lim_{z\to a} f(z) = w_0 . \]
 \end{mydef}
@@ -275,7 +275,7 @@ Let \(U\subseteq \mathbb{C}\) and consider a function \(f:U\to\mathbb{C}\). \(f\
 \item \(A = \{z\in \mathbb{C} \, |\, |z| \leq 1\}\).
 \end{itemize}
 
-In this case \(f\) is unifrmly continuous in \(A\). Let \(\epsilon>0\) and take \(\delta = \epsilon/2\). Then, for any \(z,w\in A\) such that \(|z-w| < \delta\) we have
+In this case \(f\) is uniformly continuous in \(A\). Let \(\epsilon>0\) and take \(\delta = \epsilon/2\). Then, for any \(z,w\in A\) such that \(|z-w| < \delta\) we have
 \[ |f(z) - f(w) | = |z^2 - w^2| = |z-w||z+w| \leq |z-w| (|z|+|w|) \leq 2 |z-w| < \epsilon. \]
 
 \begin{itemize}
@@ -287,7 +287,7 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 \[ |f(z) - f(w) | = |n^2 - \left(n + \frac{\delta}{2}\right)^2| =  n\delta + \frac{\delta^2}{4} > n\delta > 1 = \epsilon. \]
 
 \section{Basic topology of \(\mathbb{C}\)}
-\label{sec:org5ead33c}
+\label{sec:org3ddb637}
 
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
 
@@ -479,7 +479,7 @@ If \(K\) is compact then \(K\) is bounded. For each \$z \(\in\) \(K\) consider t
 
 (\(\Leftarrow\)) Suppose that any  \(\{z_n\}_{n=1}^{\infty}\subset K\)  has a convergent subsequece. IF \(K\) is not bounded, then we can construct a sequence \(\{z_n\}_{n=1}^{\infty}\) such that \(|z_n| > n\) for all \(n\in \mathbb{N}\). But this sequence has no convergent subsequence, which is a contradiction. Then \(K\) should be bounded.
 
-Now take any \(z_0\in \mbox{Cl}(K)\). By a previous proposition, we can construct a sequence  \(\{z_{n}\}_{n=1}^{\infty}\) such that \(\lim_{n\to\infty} z_n = z_0\). By our hypotesis, the sequence \(\{z_{n_k}\}_{k=1}^{\infty}\) such that \(\lim_{k\to\infty} z_{n_k} = w_0\), for some \(w_0\in K\). By the uniqueness of the limit, \(z_0 \in K\). We he have shown \(\mbox{Cl}(K) \subseteq K\), which implies \(\mbox{Cl}(K) = K\), i.e., \(K\) is closed.
+Now take any \(z_0\in \mbox{Cl}(K)\). By a previous proposition, we can construct a sequence  \(\{z_{n}\}_{n=1}^{\infty}\) such that \(\lim_{n\to\infty} z_n = z_0\). By our hypothesis, the sequence \(\{z_{n_k}\}_{k=1}^{\infty}\) such that \(\lim_{k\to\infty} z_{n_k} = w_0\), for some \(w_0\in K\). By the uniqueness of the limit, \(z_0 \in K\). We he have shown \(\mbox{Cl}(K) \subseteq K\), which implies \(\mbox{Cl}(K) = K\), i.e., \(K\) is closed.
 \end{proof}
 
 \begin{prop}
@@ -550,4 +550,193 @@ The then we have the following sequence of inequalities
 \[ \epsilon < |f(z_0) - f(w_0)| < | f(z_{n_j}) - f(a_0) | +  | f(w_{n_j}) - f(a_0) | < \frac{ \epsilon}{2} + \frac{\epsilon}{2} = \epsilon, \]
 which its a contradiction itself. Consequently \(f\) is uniformly continuous in \(K\).
 \end{proof}
+
+\section{Derivatives}
+\label{sec:org2945d41}
+
+The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
+relates with that of the derivative of maps from \(\mathbb{R}^2\) to \(\mathbb{R}^2\). The properties of complex differentiation have been extensively used and applied in other areas of mathematics, leading to astonishing consequences and results.
+
+We will give the concept of derivative for functions defined on open subsets of the complex plane, although it can be generalised to subsets which are not necessarily open by writing the definitions using the induced topology. In order to keep the exposition and notation simple, we will be dealing only with functions defined on  open subsets of the complex plane.
+Recall that a \textbf{domain} \(\Omega \subseteq \mathbb{C}\) is an open connected set.
+
+\begin{mydef}
+Let \(\Omega\subset \mathbb{C}\) be an open set, and  \(f:\Omega \to \mathbb{C}\). We say that \(f\) is (complex) differentiable at \(z_0\in \Omega\) if the following limit exists
+\[ \lim_{z\to z_0}\frac{f(z)- f(z_0)}{z - z_0}. \]
+The limit is called the derivative of \(f\) at \(z_0\) and will be denoted by \(f'(z_0)\), or \(\frac{df}{dz}(z_0)\).\\
+If \(f\) is differentiable at every point of a domain \(\Omega\), then we call \(f\) \textbf{holomorphic} in \(\Omega\).\\
+We use the term \textbf{analytic} with the same meaning as holomorphic.
+If \(f\) is holomorphic on the whole complex plane \(\mathbb{C}\), then we call \(f\) \textbf{entire}.
+\end{mydef}
+
+
+Examples of holomorphic functions are:
+\begin{itemize}
+\item \(f(z) = c\), (the constant function). With \(f'(z) = 0\), for all \(z\in \mathbb{C}\).
+\item \(f(z) = z\), (the identity function). With \(f'(z) = 1\), for all \(z\in \mathbb{C}\).
+\item \(f(z) = z^n\). With \(f'(z) = nz^{n-1}\), for all \(z\in \mathbb{C}\).
+\end{itemize}
+
+The function \(f(z) = \bar{z}\) is not complex differentiable anywhere in \(\mathbb{C}\). Take \(z_0\in \mathbb{C}\) and consider the following two sequences converging to the same complex number \(z_0 = x_0 + iy_0\), \(w_n = x_n + iy_0\) and \(\xi_n = x_0 + i y_n\). Notice now that
+\[ \lim_{w_n\to z_0} \frac{f(w_n) - f(z_0)}{w_n - z_0} = \frac{\bar{w_n} - \bar{z_0}}{(x_n + iy_0) - (x_0 + iy_0)} = \frac{x_n - iy_0 - (x_0 - iy_0)}{x_n - x_0} = \frac{x_n - w_0}{x_n - x_0} = 1, \]
+and a similar computation gives
+\[ \lim_{\xi_n\to z_0} \frac{f(\xi_n) - f(z_0)}{\xi_n - z_0} = \frac{x_n - iy_0 - (x_0 - iy_0)}{y_n - y_0} = \frac{- i(y_n - y_0)}{i(y_n - y_0)} = -1, \]
+
+\begin{prop}
+If \(f:\Omega \to \mathbb{C}\) is complex differentiable at \(z_0\) then it is continuous at \(z_0\)
+\end{prop}
+\begin{proof}
+Note that since \(f'(z_0) = \lim_{z\to z_0}\frac{f(z)- f(z_0)}{z - z_0}\) exists and \(\lim_{z\to z_0} z - z_0 = 0\), then the limit of o the product exists and it is the product of the limits
+\[ \lim_{z\to z_0}f(z)- f(z_0) = \lim_{z\to z_0}\frac{f(z)- f(z_0)}{z - z_0} \cdot (z - z_0) = f'(z_0) \lim_{z\to z_0} (z - z_0) = f'(z_0) \cdot 0 = 0, \]
+equivalently
+\[ \lim_{z\to z_0}f(z) = f(z_0),\]
+then, \(f\) is continuous at \(z_0\).
+\end{proof}
+
+The rules for differentiating complex functions and their proof are similar that the ones one encounter when dealing with real analysis:
+\begin{prop}
+Let \(f,g:\Omega \to \mathbb{C}\) two complex differentiable functions at a point \(z_0\in \mathbb{C}\). Then
+\begin{enumerate}
+\item \((c\,f)\) is differentiable at \(z_0\in \mathbb{C}\) and \((c\,f)'(z_0) = c\,f'(z_0)\).
+\item \((f\pm g)\) is differentiable at \(z_0\in \mathbb{C}\) and \((f\pm g)'(z_0) = f'(z_0) + g'(z_0)\).
+\item \((f\,g )\) is differentiable at \(z_0\in \mathbb{C}\) and \((f\, g)'(z_0) = f'(z_0)\,g(z_0) + f(z_0)\,g'(z_0)\).
+\item \(\left(\dfrac{f}{g}\right)\), \(g(z_0) \neq 0\), is differentiable at \(z_0\in \mathbb{C}\) and \(\left(\dfrac{f}{g}\right)'(z_0) = \frac{f'(z_0)\,g(z_0) - f(z_0)\,g'(z_0)}{g(z_0)^2}\).
+\end{enumerate}
+\end{prop}
+
+\begin{prop}
+Let \(U,V \subseteq \mathbb{C}\) be two open sets and consider the functions  \(f:U\to \mathbb{C}\), \(g:V \to \mathbb{C}\) where \(f(U)\subseteq V\). If \(f\) is complex differentiable at \(z_0\in U\), and
+\(g\) complex differentiable at \(f(z_0)\in V\), then the composition \(g\circ f : U \to \mathbb{C}\), given by \((g\circ f)(z) = g(f(z))\), is complex differentiable at \(z_0\in U\), and
+\[ (g\circ f)'(z_0) = g'(f(z_0))\, f'(z_0). \]
+\end{prop}
+\begin{proof}
+Case 1. Suppose \(f'(z_0) \neq 0\). Then \(f(z) - f(z_0) \neq 0\) holds for a small neighbourhood around \(z_0\). We can write
+\[ \frac{g(f(z)) - g(f(z_0))}{z - z_0} = \frac{g(f(z)) - g(f(z_0))}{f(z) - f(z_0)} \frac{f(z)) - f(z_0)}{z - z_0}.\]
+Since \(f\) is complex differentiable at \(z_0\),  then it is continuous and it holds
+\[ \lim_{z\to z_0} f(z) = f(z_0). \]
+Then, by taking the limit we obtain
+\[ \lim_{z\to z_0} \frac{g(f(z)) - g(f(z_0))}{f(z) - f(z_0)}  \lim_{z\to z_0}\frac{f(z)) - f(z_0)}{z - z_0} = g'(f(z_0)) \, f(z_0). \]
+
+Case 2. Suppose now that \(f'(z_0) = 0\). Then one can show that \(g'(f(z_0)) = 0\) and then would finish the proof. Note that since \(g'(f(z_0))\) exists, then there is a neighbourhood around
+\(f(z_0)\) such that the quotient
+\[ \frac{g(f(z)) - g(f(z_0))}{f(z) - f(z_0)} ,\]
+is bounded, i.e. , there is a positive number \(M>0\), and \(\delta >0\) such that for every \(0 < | f(z) - f(z_0) |< \delta\) we have
+\[ \left| \frac{g(f(z)) - g(f(z_0))}{f(z) - f(z_0)}\right| < M .\]
+Equivalently
+\[  |g(f(z)) - g(f(z_0))| < M | {f(z) - f(z_0)} | .\]
+Then
+\[ \left| \frac{g(f(z)) - g(f(z_0))}{z - z_0}\right| < M \left| \frac{f(z) - f(z_0)}{z - z_0} \right|.\]
+
+This shows that \((g\circ f)'(z_0) = 0 = g'(f(z_0)) f'(z_0) = g'(f(z_0)) \cdot 0\).
+\end{proof}
+
+
+Now, since \(f:\mathbb{C}\to \mathbb{C}\) can also be viewed as a map \(f: \mathbb{R}^2 \to \mathbb{R}^2\), lets explore the relationship between the two definitions of derivatives.
+First recall
+\begin{mydef}
+A map \(f:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at \(a\in \mathbb{R}^n\) if there is a linear transformation \(Df_a: \mathbb{R}^n \to \mathbb{R}^m\) such that
+\[ \lim_{h\to 0} \frac{|f(a + h) - f(a) - Df_a(h)|}{|h|} = 0. \]
+\end{mydef}
+
+In order to represent this linear transformation as a matrix, we introduce partial derivatives for a function \(f: \mathbb{R}^n \to \mathbb{R}\) at \(a \in \mathbb{R}^n\) as the limit
+\[ \frac{\partial f(a)}{\partial x_i} = \lim_{h\to 0} \frac{f(a_1,a_2,\ldots, a_i + h, \ldots, a_n) - f(a_1,\ldots, a_n)}{h}.\]
+
+
+\begin{thm}
+If \(f:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at a point \(a\in \mathbb{R}^n\), then all the first order partial differential exist, and the matrix representing the linear transformation \(Df_a\) is 
+\[ (Df_a) = \left( \begin{array}{ccc}
+\frac{\partial f_1(a)}{\partial x_1} & \cdots & \frac{\partial f_1(a)}{\partial x_n}\\
+\vdots & \vdots & \vdots  \\
+\frac{\partial f_m(a)}{\partial x_1} & \cdots & \frac{\partial f_m(a)}{\partial x_n}\\
+\end{array} \right). \]
+\end{thm}
+
+\textbf{Remark} Note that \((Df_a)\)  is a matrix with \(m\) rows and \(n\) columns.
+
+The converse is not true unless we add a stronger hypothesis 
+
+\begin{thm}
+Let \(f:\mathbb{R}^n \to \mathbb{R}^m\), with \(f= (f_1,f_2,\ldots,f_m)\). The derivative  \(Df_a\) exists if all first order partial derivatives \(\frac{\partial f_i}{\partial x_j}\), \(1\leq j \leq n\), and \(1\leq i \leq m\), exist in an open set containing \(a\), and each of these partial derivatives are continuous at \(a\).
+\end{thm}
+
+Then last statement says that \(Df\) exists if the functions \(f_i \in C^{1}\) for \(1\leq i \leq m\).
+
+Example: Be aware that it may happen that a map has all partial derivative, and still not being differentiable at a given point. The following is an example of a map whose all
+partial derivatives at \((0,0)\) exist, but it is not differentiable at \((0,0)\).
+
+\[{\displaystyle f(x,\,y)={\begin{cases}{\frac {xy\left(x^{2}-y^{2}\right)}{x^{2}+y^{2}}}&{\mbox{ for }}(x,\,y)\neq (0,\,0),\\0&{\mbox{ for }}(x,\,y)=(0,\,0).\end{cases}}}\]
+
+
+\textbf{Remark}. If \(f:\mathbb{C}\to \mathbb{C}\) is complex differentiable at \(z_0\), then its derivative is a complex number, \(f'(z_0) = a_1 + i a_2\) for some \(a_1,a_2\in \mathbb{R}\).
+The corresponding linear transformation \(T:\mathbb{R}^2 \to \mathbb{R}^2\) can be represented as a matrix. By applying to the basic elements \(1 = (1,0), i= (0,1)\) then 
+\(T(1) = a_1 + i a_2\), and \(T(i) = -a_2, i a_1\), then the matrix representation of \(T\) is
+\[ T = \left( \begin{array}{cc}
+a_{1} & -a_{2}\\
+a_{2} &  a_{1}\\
+\end{array} \right)
+\]
+
+
+\section{Cauchy-Riemann Equations}
+\label{sec:org3689351}
+
+\begin{thm}
+Let \(\Omega\subseteq \mathbb{C}\) an open set \(f:\mathbb{C} \to \mathbb{C}\), and \(z_0= x_0 + iy_0 \in \Omega\). Write \(f(z) = u(x,y) + i v(x,y)\), where \(u,v:\Omega \to \mathbb{R}\).
+The function \(f\) is complex differentiable at \(z_0\) \(\Leftrightarrow\) \(u,v\) are real differentiable at \((x_0,y_0)\) and the following identities hold
+\begin{equation}
+\begin{split}
+\frac{\partial u}{\partial x} (x_0,y_0) & = \frac{\partial v}{\partial y} (x_0,y_0), \\
+\frac{\partial u}{\partial y} (x_0,y_0) & =- \frac{\partial v}{\partial x} (x_0,y_0).
+\end{split}
+\end{equation}
+\end{thm}
+
+\begin{proof}
+(\(\Rightarrow\)) Suppose \(f\) is complex differentiable at \(z_0\). Then by definition
+\[ \lim_{z\to z_0} \left[\frac{f(z) - f(z_0)}{ z- z_0} - f'(z_0)\right] = 0 ,\]
+Then taking module we also have 
+\[ \lim_{z\to z_0} \left|\frac{f(z) - f(z_0)}{ z- z_0} - f'(z_0)\right| = \lim_{z\to z_0} \frac{ \left|f(z) - f(z_0)  - f'(z)(z-z_0)\right|}{ \left|z-z_0\right|} =  0.\]
+
+Now writing the last expression as mapping between \(\mathbb{R}^2\), i.e, \(z= x + i y = (x, y)\), \(z_0= x_0 + i y_0 = (x_0, y_0)\), and using the matrix representatinon of \(f'(z_0) = a_1 + i a_2\), we can rewrite the last equaiton as follows
+\[ \lim_{z\to z_0} \frac{\left| f(x,y) - f(x_0,y_0)  - \left(
+ \begin{array}{cc}
+a_{1} & -a_{2}\\
+a_{2} &  a_{1}\\
+\end{array} \right) 
+\left(
+\begin{array}{c}
+x - x_0\\
+y - y_0\\
+\end{array} \right)
+\right|}{\left| (x-x_0, y-y_0) \right|} = 
+\lim_{z\to z_0} \frac{\left| f(x,y) - f(x_0,y_0)  - T(x - x_0, y - y_0)\right|}{\left| (x - x_0, y - y_0)\right| \]
+\end{proof}
+
+
+\textbf{Remark}. A usual notation is for the Cauchy-Riemann equations is \(u_x = v_y\) and \(u_y = -v_x\).\\
+Note that if a function is complex differentiable, then their corresponding functions are \(C^1\).
+
+\textbf{Example}. The following example will clarify the hypothesis of the previous theorem, that the Cauchy-Riemann equations are not sufficient to establish the complex differentiability of a function.
+Let \(f:\mathbb{C}\to \mathbb{C}\) be defined as
+\[ f(z) = \left\{ \begin{array}{ccc}
+\frac{z^5}{|z|^4}, & \mbox{for} & z\neq 0, \\
+0, & \mbox{for} & z= 0. \\
+\end{array} \right. \]
+The function \(f\) is not complex differentiable at \(z=0\). Let \(z = x\), with \(x \to 0\). Then
+\[ \lim_{z\to 0} \frac{f(z)  - f(0)}{z - z_0} = \lim_{x\to 0}\frac{\frac{x^5}{|x|^4}}{x} = \lim_{x \to 0}\frac{x^4}{|x|^4}{x} = 1 .\]
+Now take \(z = i\,y\), with \(y\to 0\) and observe
+\[ \lim_{z\to 0} \frac{f(z)  - f(0)}{z - z_0} = \lim_{y\to 0} \frac{\frac{(iy)^5}{|y|^4}}{y} = \lim_{y\to 0}\frac{-y^5}{|y|^4} = -1 .\]
+Then we conclude that 
+\[ \lim_{z \to 0} \frac{f(z) - f(0)}{z-0} ,\]
+does not exists.
+
+On the other hand 
+\[ u(x,0) = x, \quad u(0,y) = v(x,0) = 0, \quad v(0,y) = y, \]
+Then we have at \((0,0)\):
+\[ u_x = v_y = 1,\quad u_y = -v_x = 0.\]
+
+What is happening here?
+
+
+\[\frac{ x^5  - 10 x^3 y^2 + 5 x y^4}{(x^2 + y^2) ^2} + i \frac{5 x^4 y -  10 x^2 y^3  +  y^5}{(x^2 + y^2)^2} \]
 \end{document}
