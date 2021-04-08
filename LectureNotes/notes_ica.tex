@@ -1,4 +1,4 @@
-% Created 2021-04-07 Wed 18:32
+% Created 2021-04-08 Thu 11:17
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -66,7 +66,7 @@
 
 
 \section{Sequences and limits}
-\label{sec:org908fed6}
+\label{sec:org18930e4}
 
 \begin{mydef}
 A sequence in \(\mathbb{C}\) is a function \(\varphi: \mathbb{N}\to \mathbb{C}\). We use the notation
@@ -215,7 +215,7 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 
 
 \section{Continuity}
-\label{sec:orgac8bfbc}
+\label{sec:orgb4de017}
 \begin{mydef}
 The function \(f(z)\) is said to have the limit \(w_0\in \mathbb{C}\) as \(z\) tends to \(a\in\mathbb{C}\),  if for every \(\epsilon >0\) there exists a number \(\delta = \delta(\epsilon) >0\) with the property that if \(|z - a| < \delta\) then it holds \(|f(z) - w_0| <\epsilon\), and in that case we write \[ \lim_{z\to a} f(z) = w_0 . \]
 \end{mydef}
@@ -287,7 +287,7 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 \[ |f(z) - f(w) | = |n^2 - \left(n + \frac{\delta}{2}\right)^2| =  n\delta + \frac{\delta^2}{4} > n\delta > 1 = \epsilon. \]
 
 \section{Basic topology of \(\mathbb{C}\)}
-\label{sec:org3ddb637}
+\label{sec:org1e88f4b}
 
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
 
@@ -552,7 +552,7 @@ which its a contradiction itself. Consequently \(f\) is uniformly continuous in 
 \end{proof}
 
 \section{Derivatives}
-\label{sec:org2945d41}
+\label{sec:org1625313}
 
 The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
 relates with that of the derivative of maps from \(\mathbb{R}^2\) to \(\mathbb{R}^2\). The properties of complex differentiation have been extensively used and applied in other areas of mathematics, leading to astonishing consequences and results.
@@ -661,6 +661,10 @@ Let \(f:\mathbb{R}^n \to \mathbb{R}^m\), with \(f= (f_1,f_2,\ldots,f_m)\). The d
 
 Then last statement says that \(Df\) exists if the functions \(f_i \in C^{1}\) for \(1\leq i \leq m\).
 
+\begin{quote}
+It is possible for a differentiable function to have discontinuous partial derivatives. That is, continuous partial derivatives imply differentiability but not vice-versa.
+\end{quote}
+
 Example: Be aware that it may happen that a map has all partial derivative, and still not being differentiable at a given point. The following is an example of a map whose all
 partial derivatives at \((0,0)\) exist, but it is not differentiable at \((0,0)\).
 
@@ -668,8 +672,8 @@ partial derivatives at \((0,0)\) exist, but it is not differentiable at \((0,0)\
 
 
 \textbf{Remark}. If \(f:\mathbb{C}\to \mathbb{C}\) is complex differentiable at \(z_0\), then its derivative is a complex number, \(f'(z_0) = a_1 + i a_2\) for some \(a_1,a_2\in \mathbb{R}\).
-The corresponding linear transformation \(T:\mathbb{R}^2 \to \mathbb{R}^2\) can be represented as a matrix. By applying to the basic elements \(1 = (1,0), i= (0,1)\) then 
-\(T(1) = a_1 + i a_2\), and \(T(i) = -a_2, i a_1\), then the matrix representation of \(T\) is
+The corresponding linear transformation representing \(f'(z_0)\) by complex multiplication is \(T:\mathbb{R}^2 \to \mathbb{R}^2\)  acting on to the basic elements \((1,0),(0,1)\) as
+\(T(1,0) = (a_1 , a_2)\), and \(T(0,1) = (-a_2 , a_1)\). Then the matrix representation of \(T\) is
 \[ T = \left( \begin{array}{cc}
 a_{1} & -a_{2}\\
 a_{2} &  a_{1}\\
@@ -677,11 +681,12 @@ a_{2} &  a_{1}\\
 \]
 
 
+
 \section{Cauchy-Riemann Equations}
-\label{sec:org3689351}
+\label{sec:orgb8c4d9b}
 
 \begin{thm}
-Let \(\Omega\subseteq \mathbb{C}\) an open set \(f:\mathbb{C} \to \mathbb{C}\), and \(z_0= x_0 + iy_0 \in \Omega\). Write \(f(z) = u(x,y) + i v(x,y)\), where \(u,v:\Omega \to \mathbb{R}\).
+Let \(\Omega\subseteq \mathbb{C}\) an open set \(f:\mathbb{C} \to \mathbb{C}\), and \(z_0= x_0 + iy_0 \in \Omega\). Write \(f(z) = u(x,y) + i v(x,y)\), where \(u,v:\Omega\subset \mathbb{R}^2 \to \mathbb{R}\).
 The function \(f\) is complex differentiable at \(z_0\) \(\Leftrightarrow\) \(u,v\) are real differentiable at \((x_0,y_0)\) and the following identities hold
 \begin{equation}
 \begin{split}
@@ -692,12 +697,14 @@ The function \(f\) is complex differentiable at \(z_0\) \(\Leftrightarrow\) \(u,
 \end{thm}
 
 \begin{proof}
-(\(\Rightarrow\)) Suppose \(f\) is complex differentiable at \(z_0\). Then by definition
+(\(\Rightarrow\)) 
+
+Suppose \(f\) is complex differentiable at \(z_0\). Then by definition
 \[ \lim_{z\to z_0} \left[\frac{f(z) - f(z_0)}{ z- z_0} - f'(z_0)\right] = 0 ,\]
 Then taking module we also have 
 \[ \lim_{z\to z_0} \left|\frac{f(z) - f(z_0)}{ z- z_0} - f'(z_0)\right| = \lim_{z\to z_0} \frac{ \left|f(z) - f(z_0)  - f'(z)(z-z_0)\right|}{ \left|z-z_0\right|} =  0.\]
 
-Now writing the last expression as mapping between \(\mathbb{R}^2\), i.e, \(z= x + i y = (x, y)\), \(z_0= x_0 + i y_0 = (x_0, y_0)\), and using the matrix representatinon of \(f'(z_0) = a_1 + i a_2\), we can rewrite the last equaiton as follows
+Now writing the last expression as mapping between \(\mathbb{R}^2\), i.e, \(z= x + i y = (x, y)\), \(z_0= x_0 + i y_0 = (x_0, y_0)\), and using the matrix representation of \(f'(z_0) = a_1 + i a_2\), we can rewrite the last equaiton as follows
 \[ \lim_{z\to z_0} \frac{\left| f(x,y) - f(x_0,y_0)  - \left(
  \begin{array}{cc}
 a_{1} & -a_{2}\\
@@ -709,12 +716,54 @@ x - x_0\\
 y - y_0\\
 \end{array} \right)
 \right|}{\left| (x-x_0, y-y_0) \right|} = 
-\lim_{z\to z_0} \frac{\left| f(x,y) - f(x_0,y_0)  - T(x - x_0, y - y_0)\right|}{\left| (x - x_0, y - y_0)\right| \]
+\lim_{(x,y)\to (x_0,y_0)} \frac{\left| f(x,y) - f(x_0,y_0)  - T(x - x_0, y - y_0)\right|}{\left| (x - x_0, y - y_0)\right|} = 0, \]
+which is clearly equivalent to 
+\[ \lim_{h\to 0} \frac{\left| f(x_0 + h_1, y_0 + h_2) - f(x_0,y_0)  - T(h)\right|}{\left| h \right|} = 0, \]
+hence \(f:\mathbb{R}^2 \to \mathbb{R}^2\) is real differentiable.
+
+Then we know that if \(f(x,y) = u(x,y) + i v(x,y)\) is real differentiable at \(z_0 = (x_0,y_0)\). Then the partial derivatives of \(u\) and \(v\) exist and moreover 
+we showed that \(Df_{z_0} = T\). Looking at the matrix representation we have
+\[ 
+Df_{z_0} = \left( \begin{array}{cc}
+\frac{\partial u}{\partial x}  &  \frac{\partial u}{\partial y} \\
+\frac{\partial v}{\partial x}  &  \frac{\partial v}{\partial y} \\
+\end{array} \right)
+=
+\left( \begin{array}{cc}
+a_1 &  -a_2 \\
+a_2 &  a_1 \\
+\end{array} \right) = T \]
+which implies the Cauchy-Riemann equations:
+\[  \frac{\partial u}{\partial x}(x_0,y_0) = a_1 = \frac{\partial v}{\partial y}(x_0,y_0), \quad \mbox{and} \quad \frac{\partial u}{\partial y}(x_0,y_0) = - a_2 = - \frac{\partial v}{\partial x}(x_0,y_0) .\]
+
+
+(\(\Leftarrow\))
+
+Let \(u,v:\mathbb{R}^2 \to \mathbb{R}\), real differentiable functions at \(z_0 = (x_0, y_0)\), satisfying the Cauchy-Riemann equations. Define \(a_1, a_2\) by
+\[  \frac{\partial u}{\partial x}(x_0,y_0) = a_1 = \frac{\partial v}{\partial y}(x_0,y_0), \quad \mbox{and} \quad \frac{\partial u}{\partial y}(x_0,y_0) = - a_2 = - \frac{\partial v}{\partial x}(x_0,y_0),\]
+and define the following linear transformation (in matrix representation)
+\[ 
+T = \left( \begin{array}{cc}
+a_1 &  -a_2 \\
+a_2 &  a_1 \\
+\end{array} \right). \]
+Now, define the complex number \(A = a_1 + i a_2\). It holds
+
+\[ \lim_{z\to z_0} \frac{| f(z) - f(z_0) - A (z-z_0) |}{|z- z_0|} = \lim_{(x,y)\to (x_0, y_0)} \frac{| f(x,y) - f(x_0,y_0) - T ( x-x_0, y-y_0) |}{|(x,y) - (x_0, y_0)|} = 0. \]
+
+We can conclude that
+\[ \lim_{z\to z_0} \frac{f(z) - f(z_0)}{z- z_0} = A, \]
+\(f\) is complex diffetentiable at \(z_0\).
 \end{proof}
 
 
+\begin{cor}
+If \(u,v:\Omega\subset \mathbb{R}^2 \to \mathbb{R}\) have \textbf{continuous first-order partial derivatives} at \((x_0,y_0)\) that satisfy the \textbf{Cauchy-Riemann equations}, then \(f(z) = u(x,y) + i v(x, y)\) is \textbf{complex differentiable} at \(z_0 = x_0 + i y_0\).
+\end{cor}
+
+
 \textbf{Remark}. A usual notation is for the Cauchy-Riemann equations is \(u_x = v_y\) and \(u_y = -v_x\).\\
-Note that if a function is complex differentiable, then their corresponding functions are \(C^1\).
+Holomorphy is the property of a complex function of being differentiable at every point of a domain. Consequently, we can say that a complex function \(f\), whose real and imaginary parts \(u\) and \(v\) are real-differentiable functions, is holomorphic if and only if, the Cauchy-Riemann equaitons are satisfied at every point of the domain.
 
 \textbf{Example}. The following example will clarify the hypothesis of the previous theorem, that the Cauchy-Riemann equations are not sufficient to establish the complex differentiability of a function.
 Let \(f:\mathbb{C}\to \mathbb{C}\) be defined as
@@ -738,5 +787,5 @@ Then we have at \((0,0)\):
 What is happening here?
 
 
-\[\frac{ x^5  - 10 x^3 y^2 + 5 x y^4}{(x^2 + y^2) ^2} + i \frac{5 x^4 y -  10 x^2 y^3  +  y^5}{(x^2 + y^2)^2} \]
+\[f(z) = \frac{ x^5  - 10 x^3 y^2 + 5 x y^4}{(x^2 + y^2) ^2} + i \frac{5 x^4 y -  10 x^2 y^3  +  y^5}{(x^2 + y^2)^2} \]
 \end{document}
