@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-07 Wed 11:16 -->
+<!-- 2021-04-13 Tue 11:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lecture notes for Sel. Topics Calc. Several Variables.</title>
@@ -342,25 +342,31 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org463b61f">1. Some subsets of the Euclidean Space</a></li>
-<li><a href="#org6f07791">2. Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</a></li>
-<li><a href="#org888cd50">3. Limits and Continuity</a></li>
-<li><a href="#org5d5bb4b">4. Derivatives</a></li>
-<li><a href="#orgdffeba0">5. Differential Geometry of Curves</a>
+<li><a href="#orgc7ab8d4">1. Some subsets of the Euclidean Space</a></li>
+<li><a href="#org5effd58">2. Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</a></li>
+<li><a href="#org2bfa291">3. Limits and Continuity</a></li>
+<li><a href="#org1ae97f1">4. Derivatives</a></li>
+<li><a href="#org6e426f6">5. Differential Geometry of Curves</a>
 <ul>
-<li><a href="#org2aeecb3">5.1. Curves in \(\mathbb{R}^3\)</a></li>
-<li><a href="#orgd67d49b">5.2. Examples.</a></li>
-<li><a href="#org8162327">5.3. The Local theory of Curves</a></li>
-<li><a href="#org266c0a3">5.4. Global Theory of Curves</a></li>
-<li><a href="#org3ff2f2f">5.5. The Isoperimetric Inequality</a></li>
+<li><a href="#org5661f8f">5.1. Curves in \(\mathbb{R}^3\)</a></li>
+<li><a href="#org5833685">5.2. Examples.</a></li>
+<li><a href="#org9386696">5.3. The Local theory of Curves</a></li>
+<li><a href="#org08da36e">5.4. Global Theory of Curves</a></li>
+<li><a href="#orge37d85b">5.5. The Isoperimetric Inequality</a></li>
 </ul>
 </li>
-<li><a href="#org3587fab">6. The Isoperimetric Inequality in \(\mathbb{R}^n\).</a>
+<li><a href="#org506d124">6. The Isoperimetric Inequality in \(\mathbb{R}^n\).</a>
 <ul>
-<li><a href="#orgaba94a1">6.1. Moving planes</a></li>
-<li><a href="#orgfe02d2e">6.2. Partial Differential Equations: a Neumann Problem</a></li>
-<li><a href="#org275d5e3">6.3. Proof of the Isoperimetric Inequality</a></li>
-<li><a href="#orgd5e7553">6.4. Proof of the equality case</a></li>
+<li><a href="#orgeeafeea">6.1. Moving planes</a></li>
+<li><a href="#orgba1a764">6.2. Partial Differential Equations: a Neumann Problem</a></li>
+<li><a href="#org8f2ae4e">6.3. Proof of the Isoperimetric Inequality</a></li>
+<li><a href="#orgb32d63e">6.4. Proof of the equality case</a></li>
+<li><a href="#org964efa3">6.5. Conclusion.</a></li>
+</ul>
+</li>
+<li><a href="#org5b6cfc6">7. Mechanics</a>
+<ul>
+<li><a href="#orgb2b17af">7.1. Kepler's laws of planetary motion.</a></li>
 </ul>
 </li>
 </ul>
@@ -369,8 +375,8 @@ for the JavaScript code in this tag.
 
 
 
-<div id="outline-container-org463b61f" class="outline-2">
-<h2 id="org463b61f"><span class="section-number-2">1</span> Some subsets of the Euclidean Space</h2>
+<div id="outline-container-orgc7ab8d4" class="outline-2">
+<h2 id="orgc7ab8d4"><span class="section-number-2">1</span> Some subsets of the Euclidean Space</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 We have defined for \(r>0\) the open ball centred at \(x_0\in \mathbb{R}^n\) as
@@ -404,8 +410,8 @@ Now we can also define certain basic sets in \(\mathbb{R}^n\):
 </div>
 
 
-<div id="outline-container-org6f07791" class="outline-2">
-<h2 id="org6f07791"><span class="section-number-2">2</span> Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</h2>
+<div id="outline-container-org5effd58" class="outline-2">
+<h2 id="org5effd58"><span class="section-number-2">2</span> Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 In this section we will list definitions and establish some notation and terminology regarding the maps between to Euclidean spaces.
@@ -443,8 +449,8 @@ In this section we will list definitions and establish some notation and termino
 
 
 
-<div id="outline-container-org888cd50" class="outline-2">
-<h2 id="org888cd50"><span class="section-number-2">3</span> Limits and Continuity</h2>
+<div id="outline-container-org2bfa291" class="outline-2">
+<h2 id="org2bfa291"><span class="section-number-2">3</span> Limits and Continuity</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 As in the case of real analysis (or any metric space) we define the limit \[ \lim_{x \to a} f(x) = b,\] by requiring that for every \(\epsilon >0\) there is a number \(\delta >0\) such that \(|f(x) - b| < \epsilon\) for every \(x\) in the domain of \(f\) such that \(|x-a| < \delta\).
@@ -470,8 +476,8 @@ Continuity of a map can be determined in terms of open subsets. Here there is a 
 </div>
 
 
-<div id="outline-container-org5d5bb4b" class="outline-2">
-<h2 id="org5d5bb4b"><span class="section-number-2">4</span> Derivatives</h2>
+<div id="outline-container-org1ae97f1" class="outline-2">
+<h2 id="org1ae97f1"><span class="section-number-2">4</span> Derivatives</h2>
 <div class="outline-text-2" id="text-4">
 <div class="mydef">
 <p>
@@ -530,13 +536,13 @@ Example:
 
 
 
-<div id="outline-container-orgdffeba0" class="outline-2">
-<h2 id="orgdffeba0"><span class="section-number-2">5</span> Differential Geometry of Curves</h2>
+<div id="outline-container-org6e426f6" class="outline-2">
+<h2 id="org6e426f6"><span class="section-number-2">5</span> Differential Geometry of Curves</h2>
 <div class="outline-text-2" id="text-5">
 </div>
 
-<div id="outline-container-org2aeecb3" class="outline-3">
-<h3 id="org2aeecb3"><span class="section-number-3">5.1</span> Curves in \(\mathbb{R}^3\)</h3>
+<div id="outline-container-org5661f8f" class="outline-3">
+<h3 id="org5661f8f"><span class="section-number-3">5.1</span> Curves in \(\mathbb{R}^3\)</h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="mydef">
 <p>
@@ -725,8 +731,8 @@ Given a curve \(\alpha\) parameterised by arc-length \(s\in (a,b)\), the curve \
 </div>
 
 
-<div id="outline-container-orgd67d49b" class="outline-3">
-<h3 id="orgd67d49b"><span class="section-number-3">5.2</span> Examples.</h3>
+<div id="outline-container-org5833685" class="outline-3">
+<h3 id="org5833685"><span class="section-number-3">5.2</span> Examples.</h3>
 <div class="outline-text-3" id="text-5-2">
 <ol class="org-ol">
 <li>Find the trace and the tangent vectors of the following curves
@@ -754,14 +760,16 @@ Given a curve \(\alpha\) parameterised by arc-length \(s\in (a,b)\), the curve \
 <pre class="src src-R">TT <span style="color: #e5786d;">&lt;-</span> seq(-10,10,length.out=100)
 AA <span style="color: #e5786d;">&lt;-</span> 1
 BB <span style="color: #e5786d;">&lt;-</span> 1
-plot(TT^3,TT^2,type=l)
+jpeg(<span style="color: #95e454;">"ex2.jpg"</span>)
+plot(TT^3,TT^2,type=<span style="color: #95e454;">"l"</span>)
+dev.off()
 </pre>
 </div>
 
-
 <div class="figure">
-<p><img src="img.png" alt="img.png" />
+<p><img src="img.jpg" alt="img.jpg" />
 </p>
+<p><span class="figure-number">Figure 1: </span>\(\alpha(t)  = ( t^3, t^2)\)</p>
 </div>
 </div>
 </div>
@@ -772,8 +780,8 @@ plot(TT^3,TT^2,type=l)
 
 
 
-<div id="outline-container-org8162327" class="outline-3">
-<h3 id="org8162327"><span class="section-number-3">5.3</span> The Local theory of Curves</h3>
+<div id="outline-container-org9386696" class="outline-3">
+<h3 id="org9386696"><span class="section-number-3">5.3</span> The Local theory of Curves</h3>
 <div class="outline-text-3" id="text-5-3">
 <div class="mydef">
 <p>
@@ -1085,8 +1093,8 @@ parameterised by arc-length, and \(T = \alpha'(s)\), is the tangent vector, then
 </div>
 
 
-<div id="outline-container-org266c0a3" class="outline-3">
-<h3 id="org266c0a3"><span class="section-number-3">5.4</span> Global Theory of Curves</h3>
+<div id="outline-container-org08da36e" class="outline-3">
+<h3 id="org08da36e"><span class="section-number-3">5.4</span> Global Theory of Curves</h3>
 <div class="outline-text-3" id="text-5-4">
 <p>
 Now we will study some global properties of Curves. Two classic results are: <b>the isoperimetric inequality</b> and the <b>Four Vertex Problem</b>.
@@ -1099,8 +1107,8 @@ In this course we will only focus on the former one. We will state the problem w
 </div>
 
 
-<div id="outline-container-org3ff2f2f" class="outline-3">
-<h3 id="org3ff2f2f"><span class="section-number-3">5.5</span> The Isoperimetric Inequality</h3>
+<div id="outline-container-orge37d85b" class="outline-3">
+<h3 id="orge37d85b"><span class="section-number-3">5.5</span> The Isoperimetric Inequality</h3>
 <div class="outline-text-3" id="text-5-5">
 <p>
 The isoperimetric inequality is still a thriving topic in modern mathematics. 
@@ -1148,7 +1156,7 @@ order to obtain the maximum area?
 </blockquote>
 
 
-<div id="org3203b59" class="figure">
+<div id="org904d8c6" class="figure">
 <p><img src="./dido_pic01.png" alt="dido_pic01.png" width="70%" />
 </p>
 <p><span class="figure-number">Figure 2: </span>Dido's problem along the shore</p>
@@ -1167,7 +1175,7 @@ with the same sides.
 </div>
 
 
-<div id="org3a5d2d8" class="figure">
+<div id="org59b3a7c" class="figure">
 <p><img src="./dido_pic02.png" alt="dido_pic02.png" width="70%" />
 </p>
 <p><span class="figure-number">Figure 3: </span>Steiner's Method</p>
@@ -1184,8 +1192,8 @@ Another nice resource was posted in moodle, where a solution using Fourier serie
 </div>
 </div>
 
-<div id="outline-container-org3587fab" class="outline-2">
-<h2 id="org3587fab"><span class="section-number-2">6</span> The Isoperimetric Inequality in \(\mathbb{R}^n\).</h2>
+<div id="outline-container-org506d124" class="outline-2">
+<h2 id="org506d124"><span class="section-number-2">6</span> The Isoperimetric Inequality in \(\mathbb{R}^n\).</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 The proof that we will give is due to X. Cabré which involves the solution of a particular Partial Differential Equation, and the Moving Plane technique developed by Alexandrov, to obtain the result.
@@ -1213,8 +1221,8 @@ where the Gamma function is given by
 </p>
 </div>
 
-<div id="outline-container-orgaba94a1" class="outline-3">
-<h3 id="orgaba94a1"><span class="section-number-3">6.1</span> Moving planes</h3>
+<div id="outline-container-orgeeafeea" class="outline-3">
+<h3 id="orgeeafeea"><span class="section-number-3">6.1</span> Moving planes</h3>
 <div class="outline-text-3" id="text-6-1">
 <div class="mydef">
 <p>
@@ -1271,8 +1279,8 @@ If the function is twice differentiable and \(x_0\in S\), then \(D^2u(x_0)\) is 
 </div>
 
 
-<div id="outline-container-orgfe02d2e" class="outline-3">
-<h3 id="orgfe02d2e"><span class="section-number-3">6.2</span> Partial Differential Equations: a Neumann Problem</h3>
+<div id="outline-container-orgba1a764" class="outline-3">
+<h3 id="orgba1a764"><span class="section-number-3">6.2</span> Partial Differential Equations: a Neumann Problem</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 In order to understand ponts in \(S\) that are in the boundary of our domain \(\Omega\), we introduce the following Partial Differential Equation:
@@ -1317,8 +1325,8 @@ Let \(B_1(0)\) be the unit ball in \(\mathbb{R}^n\) with centre at the origin an
 </div>
 </div>
 
-<div id="outline-container-org275d5e3" class="outline-3">
-<h3 id="org275d5e3"><span class="section-number-3">6.3</span> Proof of the Isoperimetric Inequality</h3>
+<div id="outline-container-org8f2ae4e" class="outline-3">
+<h3 id="org8f2ae4e"><span class="section-number-3">6.3</span> Proof of the Isoperimetric Inequality</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 Using the last theorem, the proof of the isoperimetric inequality follows from
@@ -1340,12 +1348,15 @@ Task.
 <ul class="org-ul">
 <li>Justify every \(\leq\) and \(=\) in last expression.</li>
 <li>Recall the AM-GM (or Newtons') inequalities \[ \frac{x_{1}+x_{2}+\cdots +x_{n}}{n}\geq \sqrt[n]{x_{1}\cdot x_{2}\cdots x_{n}} \]</li>
+<li>For a matrix \(A\) of size \(n\times n\), the determinant of \(A\) equals the product of its eigenvalues.</li>
+<li>If a function \(f\) is such that all partial derivatives vanish at all poinst of an open set, then \(f\) is constant.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgd5e7553" class="outline-3">
-<h3 id="orgd5e7553"><span class="section-number-3">6.4</span> Proof of the equality case</h3>
+
+<div id="outline-container-orgb32d63e" class="outline-3">
+<h3 id="orgb32d63e"><span class="section-number-3">6.4</span> Proof of the equality case</h3>
 <div class="outline-text-3" id="text-6-4">
 <p>
 If the equality holds:
@@ -1355,10 +1366,126 @@ If the equality holds:
 <li>The eigenvalues of \(D^2u(x)\) are all equal to the constant \(\left(\omega_n / |\Omega|\right)^{1/n}\).</li>
 <li>\(B_1(0) \subset \nabla u(S)\) in the equality case implies \(B_1(0)\) is dense in \(\nabla u (\Omega)\).</li>
 <li>Since \(|\nabla u| \leq 1\) in \(\bar{\Omega}\) and \(|\nabla u| \geq |\nabla u \cdot \nu | = 1\) then \(u\) is constant on the boundary \(\partial \Omega\).</li>
-<li>The function \(u\) solves the Neumann problem and we can also assume after translation that \(u(x) = 0\) on \(\partial \Omega\).</li>
+<li>The function \(u\) solves the Neumann problem, and its unique up to a constant, then  we can  assume after translation that \(u(x) = 0\) on \(\partial \Omega\).</li>
 <li>Pick \(x_0 \in \Omega\) be the minimum of \(u\) and consider the largest possible ball \(B(x_0)\) in \(\Omega\) with centre at \(x_0\).</li>
 <li>Apply the mean value theorem: if \(x\in B(x_0)\), there is some \(\xi\) in the line segment \((1-t)x_0 + tx\), \(0 \leq t \leq 1\) such that \[ u(x) = u (x_0) + \nabla u(x_0) \cdot (x - x_0) + \frac{1}{2} (x- x_0)^T D^2 u(\xi) (x - x_0) = u(x_0) + \frac{\lambda}{2} |x - x_0|^2 .\]</li>
 <li>Pick a point \(x \in \partial B \cap \partial \Omega\) and conclude that \(\partial \Omega = \partial B(x_0)\).</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org964efa3" class="outline-3">
+<h3 id="org964efa3"><span class="section-number-3">6.5</span> Conclusion.</h3>
+<div class="outline-text-3" id="text-6-5">
+<p>
+The Isoperimetric Inequality and related problems are advanced topics. 
+It is usually part of the introduction of a branch of mathematics called the Calculus of Variations, where the problem of optimization (finding maximum and minimum) takes place in infinite dimensional spaces.
+The proof we studied here, uses only concepts from Calculus in several variables. This is a very active topic of research since one can keep asking question like:<br />
+Does the Isoperimetric inequality holds in spaces other than \(\mathbb{R}^n\)?<br />
+What if our definition of <i>volume</i> and <i>area</i> are different?
+</p>
+
+<p>
+On the geometric side, Alexandrov’s idea of moving planes has helped to solve many questions regarding surfaces of constant mean curvature.
+</p>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div id="outline-container-org5b6cfc6" class="outline-2">
+<h2 id="org5b6cfc6"><span class="section-number-2">7</span> Mechanics</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+We are coming back to the theory of curves in the space, and we will use calculus along curves toggether with Newton's law to determine the Laws that Kepler establised to determine the planetary motinon around the Sun.
+</p>
+
+<p>
+We will start with some useful definitinons from physics. In this section we will emphasize whether a quantity is a scalar or a vector (usually in \(\mathbb{R}^3\)) by wirting vectors in bold face letter: \(\mathbf{a},\mathbf{b},\mathbf{A},\mathbf{r},\ldots\). 
+</p>
+
+<p>
+Here we will be studying the movement of the particles in the space. Its position in space also depends on the time parameter \(t\), and this poisition vector  will be denoted by \(\mathbf{r}(t)\).
+</p>
+
+<div class="mydef">
+<p>
+<b>The position vector</b>. It is a maping \(\mathbf{r}:I \to \mathbb{R}^3\), where \(I\subseteq \mathbb{R}\) is called the time interval, and for this we will use the parameter \(t\). We will assume \(\mathbf{r}\) as smooth as needed in the computations (at least \(C^2\)). It can also be written incoordinates as \(\mathbf{r}(t) = \left(r_1(t), r_2(t), r_3(t) \right)\).
+</p>
+
+<p>
+<b>The velocity vector</b>. The first derivative with respect to the parameter \(t\) is called the velocity vector: \(\mathbf{r}'(t) = \frac{d\mathbf{r}}{dt}(t) = \left(\frac{dr_1}{dt}(t),\frac{dr_2}{dt}(t),\frac{dr_3}{dt}(t)\right)\)
+</p>
+
+<p>
+<b>The acceleration vector</b>. The second derivatives with respect to the parameter \(t\) is called the acceleration vector: \(\mathbf{r}''(t)\).
+</p>
+
+</div>
+
+<div class="mydef">
+<p>
+<b>Newton's Second Law of motion</b>.  Let \(m\) be the mass of a particle with position vector \(\bf{r}(t)\). Then the <b>force</b> acting on the particle is proportional to the acceleration: \[ \mathbf{F}(t) = m\, \mathbf{a}(t) = m\, \mathbf{r}''(t). \]
+</p>
+
+<p>
+<b>(Linear) Momentum</b>. Let \(m\) be the mass of a particle with position vector \(\bf{r}(t)\). Then the <b>momentum</b> is defined as the mass times the velocity: \[ \mathbf{p}(t)=  m\, \mathbf{{v}}(t) = m\, \mathbf{r}'(t). \]
+</p>
+
+</div>
+
+
+<p>
+Note that <i>the time derivative of the momentum of an object is the net force on the object</i>: \(\mathbf{p}'(t) = F(t)\). If the net force on an object is continually zero,
+then we say that in this case, the momentum of the object is conserved.
+</p>
+
+<div class="mydef">
+<p>
+<b>Angular momentum</b>. Let \(\mathbf{r}(t)\) be the position vector of a moving particle of mass \(m\). Then the angluar momentum about the origin is defined as \[ \mathbf{L}(t) = \mathbf{r}(t) \times m\,\mathbf{v}(t). \]
+</p>
+
+
+<p>
+<b>Torque</b>. The torque measures how the angular momentun changes with respecto to time. \[ \mathbf{\tau}(t) = \mathbf{L}'(t) = \mathbf{r}(t) \times \mathbf{F}(t). \]
+</p>
+
+<p>
+<b>Radial force</b> If a force \(\mathbf{F}(t)\) is acting on a particle is parallel to its position vector \(\mathbf{r}(t)\), then \(\mathbf{F}\) is called <i>radial force</i> or <i>central force</i>. Note that for a radial force we always have \(\mathbf{\tau}(t) = 0\).
+</p>
+
+</div>
+
+<p>
+Whe say that the angular momentum is conserved if the torque equals zero. And we also have the following conservation law: 
+<i>If the net torque on an object is continually zero, then the angular momentum of the object is conserved.</i> A nice explanation of the conservation of angular momentum can be found in this <a href="https://www.youtube.com/watch?v=8I4ii1xEeG0">link</a>.
+</p>
+
+
+<div class="thm">
+<p>
+If an object moves under a central force and has constant angular momentum
+\(\mathbf{L}\) different from zero, then:
+</p>
+<ol class="org-ol">
+<li>The object is confined to the plane that passes through the origin and is perpendicular to \(\mathbf{L}\)..</li>
+<li>The radius vector of the object sweeps out equal areas in equal times.</li>
+</ol>
+
+</div>
+</div>
+
+<div id="outline-container-orgb2b17af" class="outline-3">
+<h3 id="orgb2b17af"><span class="section-number-3">7.1</span> Kepler's laws of planetary motion.</h3>
+<div class="outline-text-3" id="text-7-1">
+<ul class="org-ul">
+<li>Each planet moves in a plane, not in a circle, but in an elliptical orbit with the sun at one focus.</li>
+<li>The radius vector from the sun to the planet sweeps out equal areas in equal times.</li>
+<li>The square of the period of the motion varies directly as the cube of the major semiaxis, and the constant of proportionality is the same for all the planets.</li>
 </ul>
 </div>
 </div>
@@ -1367,7 +1494,7 @@ If the equality holds:
 <div id="postamble" class="status">
 <p class="date">Date: 2021-03-12 Fri 00:00</p>
 <p class="author">Author: Daniel Ballesteros Chávez</p>
-<p class="date">Created: 2021-04-07 Wed 11:16</p>
+<p class="date">Created: 2021-04-13 Tue 11:54</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

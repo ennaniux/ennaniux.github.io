@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-08 Thu 11:16 -->
+<!-- 2021-04-10 Sat 19:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Notes for Introduction to Complex Analysis</title>
@@ -342,11 +342,12 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orge3141d8">1. Sequences and limits</a></li>
-<li><a href="#orgb492dad">2. Continuity</a></li>
-<li><a href="#orga59f0ee">3. Basic topology of \(\mathbb{C}\)</a></li>
-<li><a href="#org023b2a0">4. Derivatives</a></li>
-<li><a href="#org3297598">5. Cauchy-Riemann Equations</a></li>
+<li><a href="#orgc75b654">1. Sequences and limits</a></li>
+<li><a href="#orge81e0fd">2. Continuity</a></li>
+<li><a href="#org08413c9">3. Basic topology of \(\mathbb{C}\)</a></li>
+<li><a href="#org5e20b31">4. Derivatives</a></li>
+<li><a href="#orgc734be3">5. Cauchy-Riemann Equations</a></li>
+<li><a href="#org84996bd">6. Some consequences of the Cauchy-Riemann Equations</a></li>
 </ul>
 </div>
 </div>
@@ -354,8 +355,8 @@ for the JavaScript code in this tag.
 
 
 
-<div id="outline-container-orge3141d8" class="outline-2">
-<h2 id="orge3141d8"><span class="section-number-2">1</span> Sequences and limits</h2>
+<div id="outline-container-orgc75b654" class="outline-2">
+<h2 id="orgc75b654"><span class="section-number-2">1</span> Sequences and limits</h2>
 <div class="outline-text-2" id="text-1">
 <div class="mydef">
 <p>
@@ -574,8 +575,8 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 </div>
 
 
-<div id="outline-container-orgb492dad" class="outline-2">
-<h2 id="orgb492dad"><span class="section-number-2">2</span> Continuity</h2>
+<div id="outline-container-orge81e0fd" class="outline-2">
+<h2 id="orge81e0fd"><span class="section-number-2">2</span> Continuity</h2>
 <div class="outline-text-2" id="text-2">
 <div class="mydef">
 <p>
@@ -689,8 +690,8 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 </div>
 </div>
 
-<div id="outline-container-orga59f0ee" class="outline-2">
-<h2 id="orga59f0ee"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
+<div id="outline-container-org08413c9" class="outline-2">
+<h2 id="org08413c9"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
@@ -1092,7 +1093,7 @@ Then, there exits \(j_0>0\) such that for any \(j > j_0\) it holds simultaneousl
 
 <p>
 The then we have the following sequence of inequalities
-\[ \epsilon < |f(z_0) - f(w_0)| < | f(z_{n_j}) - f(a_0) | +  | f(w_{n_j}) - f(a_0) | < \frac{ \epsilon}{2} + \frac{\epsilon}{2} = \epsilon, \]
+\[ \epsilon < |f(z_{n_j}) - f(w_{n_j})| \leq | f(z_{n_j}) - f(a_0) | +  | f(w_{n_j}) - f(a_0) | < \frac{ \epsilon}{2} + \frac{\epsilon}{2} = \epsilon, \]
 which its a contradiction itself. Consequently \(f\) is uniformly continuous in \(K\).
 </p>
 
@@ -1100,8 +1101,8 @@ which its a contradiction itself. Consequently \(f\) is uniformly continuous in 
 </div>
 </div>
 
-<div id="outline-container-org023b2a0" class="outline-2">
-<h2 id="org023b2a0"><span class="section-number-2">4</span> Derivatives</h2>
+<div id="outline-container-org5e20b31" class="outline-2">
+<h2 id="org5e20b31"><span class="section-number-2">4</span> Derivatives</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
@@ -1139,7 +1140,7 @@ Examples of holomorphic functions are:
 The function \(f(z) = \bar{z}\) is not complex differentiable anywhere in \(\mathbb{C}\). Take \(z_0\in \mathbb{C}\) and consider the following two sequences converging to the same complex number \(z_0 = x_0 + iy_0\), \(w_n = x_n + iy_0\) and \(\xi_n = x_0 + i y_n\). Notice now that
 \[ \lim_{w_n\to z_0} \frac{f(w_n) - f(z_0)}{w_n - z_0} = \frac{\bar{w_n} - \bar{z_0}}{(x_n + iy_0) - (x_0 + iy_0)} = \frac{x_n - iy_0 - (x_0 - iy_0)}{x_n - x_0} = \frac{x_n - w_0}{x_n - x_0} = 1, \]
 and a similar computation gives
-\[ \lim_{\xi_n\to z_0} \frac{f(\xi_n) - f(z_0)}{\xi_n - z_0} = \frac{x_n - iy_0 - (x_0 - iy_0)}{y_n - y_0} = \frac{- i(y_n - y_0)}{i(y_n - y_0)} = -1, \]
+\[ \lim_{\xi_n\to z_0} \frac{f(\xi_n) - f(z_0)}{\xi_n - z_0} = \frac{x_n - iy_0 - (x_0 - iy_0)}{i(y_n - y_0)} = \frac{- i(y_n - y_0)}{i(y_n - y_0)} = -1, \]
 </p>
 
 <div class="prop">
@@ -1292,8 +1293,8 @@ a_{2} &  a_{1}\\
 
 
 
-<div id="outline-container-org3297598" class="outline-2">
-<h2 id="org3297598"><span class="section-number-2">5</span> Cauchy-Riemann Equations</h2>
+<div id="outline-container-orgc734be3" class="outline-2">
+<h2 id="orgc734be3"><span class="section-number-2">5</span> Cauchy-Riemann Equations</h2>
 <div class="outline-text-2" id="text-5">
 <div class="thm">
 <p>
@@ -1433,11 +1434,148 @@ What is happening here?
 </p>
 </div>
 </div>
+
+<div id="outline-container-org84996bd" class="outline-2">
+<h2 id="org84996bd"><span class="section-number-2">6</span> Some consequences of the Cauchy-Riemann Equations</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Note that if \(f(z)  = u(x,y) + i v(x, y)\) is a complex differentiable function at \(z_0\), when taking the limit of the quitient of differences, it does not matter how \(z \to z_0\) approaches,
+then 
+\[ f'(z_0) = \lim_{z\to z_0} \frac{f(z) - f(z_0)}{z-z_0} = \lim_{x\to x_0} \frac{f(x + iy_0) - f(z_0)}{x - x_0} = \frac{\partial f}{\partial x}, \]
+and similarily:
+\[ f'(z_0) = \lim_{z\to z_0} \frac{f(z) - f(z_0)}{z-z_0} = \lim_{y\to y_0} \frac{f(x_0 + iy) - f(z_0)}{i(y - y_0)} = -i \frac{\partial f}{\partial y}. \]
+</p>
+
+<p>
+The first of these equalities together with the Cauchy-Riemann equations prove the following:
+</p>
+<div class="prop">
+<p>
+Let \(f:\Omega \to \mathbb{C}\) be complex differentiable at \(z_0\in \Omega\). Then
+</p>
+\begin{equation}
+\begin{split}
+f'(z_0) = \frac{df}{dz} & = \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x} \\
+& = \frac{\partial u}{\partial x} - i \frac{\partial u}{\partial y} \\
+& = \frac{\partial v}{\partial y} - i \frac{\partial u}{\partial y} \\
+& = \frac{\partial v}{\partial y} + i \frac{\partial v}{\partial x}
+\end{split}
+\end{equation}
+
+</div>
+
+
+<div class="mydef">
+<p>
+Let \(\Omega\subseteq \mathbb{C}\) an open set, \(f:\Omega\to\mathbb{C}\), \(f(z)  = u(x,y) + i v(x, y)\) be a complex differentiable function at \(z_0\), Then we will write:
+\[\frac{df}{dz} = \frac{1}{2}\left( \frac{\partial f}{\partial x} - i \frac{\partial f}{\partial y} \right)\]
+\[\frac{df}{d\bar{z}} = \frac{1}{2}\left( \frac{\partial f}{\partial x} + i \frac{\partial f}{\partial y} \right)\]
+</p>
+
+</div>
+
+
+<div class="prop">
+<p>
+Let \(\Omega\subseteq \mathbb{C}\) an open set, \(f:\Omega\to\mathbb{C}\), \(f(z)  = u(x,y) + i v(x, y)\), with \(u,v\) real differentiable functions at \(z_0= x_0 + iy_0\in \Omega\). The function
+\(f\) is complex differentiable at \(\Omega\) if and only if \(\dfrac{df}{\bar{z}}(z_0) = 0\).
+</p>
+
+</div>
+<div class="proof">
+<p>
+It follows from the Cauchy-Riemann equations and the following identity
+\[\frac{df}{d\bar{z}} = \frac{1}{2}\left( \frac{\partial f}{\partial x} + i \frac{\partial f}{\partial y} \right)
+= \frac{1}{2}\left(\frac{\partial u }{\partial x} - \frac{\partial v}{\partial y}\right) + \frac{i}{2}\left(\frac{\partial u }{\partial y} + \frac{\partial v}{\partial x}\right)\]
+</p>
+
+</div>
+
+<div class="prop">
+<p>
+Let \(\Omega\subseteq \mathbb{C}\) be a domain. \(f:\Omega \to \mathbb{C}\) holomorphic and such that \(f'(z) = 0\) for all \(z\in\Omega\). Then \(f\) is constant.
+</p>
+
+</div>
+<div class="proof">
+<p>
+It follows from the real case and the mean value theorem (since \(\Omega\) is connected)
+</p>
+
+</div>
+
+
+<p>
+We already saw in one of the previous exercises that if a function is holomorphic, then the real and imaginari parts satisfy the Laplace equation. Here the statement:
+</p>
+
+<div class="thm">
+<p>
+If \(f = u + iv\) is holomorphic, and the functions \(u\) and \(v\) have continuous second-order partial derivatives, then \(u\) and \(v\) are harmonic.
+</p>
+
+</div>
+<div class="proof">
+<p>
+Since the second-order partial derivatives are continuous, one can interchange the order of differentiation for \(u\) and \(v\). It follows then from the Cauchy-Riemann equations that
+\[ u_{xx} = v_{yx} = v_{xy} = -u_{yy} \Longrightarrow u_{xx} + u_{yy} = 0.\]
+Then, \(u\) is harmonic. The proof for \(v\) is similar.
+</p>
+
+</div>
+
+<p>
+If \(u\) is harmonic on a domain D, and \(v\) is a harmonic function such that
+\(u + iv\) is analytic, we say that v is a harmonic conjugate of \(u\). The
+harmonic conjugate \(v\) is unique, up to adding a constant.
+</p>
+
+
+<div class="thm">
+<p>
+Let \(\Omega\) be an open disk, or an open rectangle with sides parallel
+to the axes, and let \(u(x,y)\) be a harmonic function on &Omega;. Then there is
+a harmonic function \(v(x,y)\) on \(\Omega\) such that \(u + iv\) is analytic on \(\Omega\). The
+harmonic conjugate \(v\) is unique, up to adding a constant.
+</p>
+
+</div>
+
+
+<p>
+<b>Example</b>. Show that \(u(x,y) = xy\) is harmonic and find an harmonic conjugate.
+</p>
+
+<p>
+It is easy to show that \(u\) is harmonic. To find the harmonic conjugate function \(v\) we use the Cauchy-Riemann equations
+\[ u_x = y = v_y,\]
+and from this we can conclude by integrating with respect to \(y\) that
+\[ v = \frac{y^2}{2} + \phi(x). \]
+Using again the Cauchy-Riemann equations, \(v_x = - u_y = -x\) we get
+\[ v_x = \phi'(x) = -x,\]
+and by integrating with respect to \(x\) we obtain
+\[ \phi(x)  = -\frac{x^2 }{2} + C. \]
+</p>
+
+<p>
+Then we can write
+\[ v(x,y) = -\frac{x^2 }{2} + \frac{y^2 }{2} + C. \]
+</p>
+
+<p>
+Then the analytic (Holomorphic function) is given by 
+</p>
+
+<p>
+\[ f(z) = u(x,y) + i v(x,y) = xy  -i \frac{x^2 }{2} + i\frac{y^2 }{2} + iC = -\frac{i}{2} \left((x^2  - y^2) + 2ixy\right) + i C = -\frac{iz^2}{2} + iC. \]
+</p>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2021-03-12 Fri 00:00</p>
 <p class="author">Author: Daniel Ballesteros Chávez</p>
-<p class="date">Created: 2021-04-08 Thu 11:16</p>
+<p class="date">Created: 2021-04-10 Sat 19:49</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
