@@ -1,4 +1,4 @@
-% Created 2021-04-08 Thu 11:17
+% Created 2021-04-15 Thu 10:55
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -17,7 +17,7 @@
 
 % Here some definitions of operators
 % Trace operator.
-\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\tr}{tr}
 % Divergence Operator.
 \DeclareMathOperator{\diver}{div}
 % Index of an  Operator.
@@ -66,7 +66,7 @@
 
 
 \section{Sequences and limits}
-\label{sec:org18930e4}
+\label{sec:orgcca00f3}
 
 \begin{mydef}
 A sequence in \(\mathbb{C}\) is a function \(\varphi: \mathbb{N}\to \mathbb{C}\). We use the notation
@@ -215,7 +215,7 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 
 
 \section{Continuity}
-\label{sec:orgb4de017}
+\label{sec:org9cdd7b7}
 \begin{mydef}
 The function \(f(z)\) is said to have the limit \(w_0\in \mathbb{C}\) as \(z\) tends to \(a\in\mathbb{C}\),  if for every \(\epsilon >0\) there exists a number \(\delta = \delta(\epsilon) >0\) with the property that if \(|z - a| < \delta\) then it holds \(|f(z) - w_0| <\epsilon\), and in that case we write \[ \lim_{z\to a} f(z) = w_0 . \]
 \end{mydef}
@@ -287,7 +287,7 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 \[ |f(z) - f(w) | = |n^2 - \left(n + \frac{\delta}{2}\right)^2| =  n\delta + \frac{\delta^2}{4} > n\delta > 1 = \epsilon. \]
 
 \section{Basic topology of \(\mathbb{C}\)}
-\label{sec:org1e88f4b}
+\label{sec:org8d47ef7}
 
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
 
@@ -547,12 +547,12 @@ Then, there exits \(j_0>0\) such that for any \(j > j_0\) it holds simultaneousl
 \[ | f(z_{n_j}) - f(a_0) | < \frac{ \epsilon}{2}, \quad \mbox{and}\quad | f(w_{n_j}) - f(a_0) | < \frac{ \epsilon}{2}. \]
 
 The then we have the following sequence of inequalities
-\[ \epsilon < |f(z_0) - f(w_0)| < | f(z_{n_j}) - f(a_0) | +  | f(w_{n_j}) - f(a_0) | < \frac{ \epsilon}{2} + \frac{\epsilon}{2} = \epsilon, \]
+\[ \epsilon < |f(z_{n_j}) - f(w_{n_j})| \leq | f(z_{n_j}) - f(a_0) | +  | f(w_{n_j}) - f(a_0) | < \frac{ \epsilon}{2} + \frac{\epsilon}{2} = \epsilon, \]
 which its a contradiction itself. Consequently \(f\) is uniformly continuous in \(K\).
 \end{proof}
 
 \section{Derivatives}
-\label{sec:org1625313}
+\label{sec:orgb4fca20}
 
 The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
 relates with that of the derivative of maps from \(\mathbb{R}^2\) to \(\mathbb{R}^2\). The properties of complex differentiation have been extensively used and applied in other areas of mathematics, leading to astonishing consequences and results.
@@ -580,7 +580,7 @@ Examples of holomorphic functions are:
 The function \(f(z) = \bar{z}\) is not complex differentiable anywhere in \(\mathbb{C}\). Take \(z_0\in \mathbb{C}\) and consider the following two sequences converging to the same complex number \(z_0 = x_0 + iy_0\), \(w_n = x_n + iy_0\) and \(\xi_n = x_0 + i y_n\). Notice now that
 \[ \lim_{w_n\to z_0} \frac{f(w_n) - f(z_0)}{w_n - z_0} = \frac{\bar{w_n} - \bar{z_0}}{(x_n + iy_0) - (x_0 + iy_0)} = \frac{x_n - iy_0 - (x_0 - iy_0)}{x_n - x_0} = \frac{x_n - w_0}{x_n - x_0} = 1, \]
 and a similar computation gives
-\[ \lim_{\xi_n\to z_0} \frac{f(\xi_n) - f(z_0)}{\xi_n - z_0} = \frac{x_n - iy_0 - (x_0 - iy_0)}{y_n - y_0} = \frac{- i(y_n - y_0)}{i(y_n - y_0)} = -1, \]
+\[ \lim_{\xi_n\to z_0} \frac{f(\xi_n) - f(z_0)}{\xi_n - z_0} = \frac{x_n - iy_0 - (x_0 - iy_0)}{i(y_n - y_0)} = \frac{- i(y_n - y_0)}{i(y_n - y_0)} = -1, \]
 
 \begin{prop}
 If \(f:\Omega \to \mathbb{C}\) is complex differentiable at \(z_0\) then it is continuous at \(z_0\)
@@ -683,7 +683,7 @@ a_{2} &  a_{1}\\
 
 
 \section{Cauchy-Riemann Equations}
-\label{sec:orgb8c4d9b}
+\label{sec:org3444635}
 
 \begin{thm}
 Let \(\Omega\subseteq \mathbb{C}\) an open set \(f:\mathbb{C} \to \mathbb{C}\), and \(z_0= x_0 + iy_0 \in \Omega\). Write \(f(z) = u(x,y) + i v(x,y)\), where \(u,v:\Omega\subset \mathbb{R}^2 \to \mathbb{R}\).
@@ -788,4 +788,218 @@ What is happening here?
 
 
 \[f(z) = \frac{ x^5  - 10 x^3 y^2 + 5 x y^4}{(x^2 + y^2) ^2} + i \frac{5 x^4 y -  10 x^2 y^3  +  y^5}{(x^2 + y^2)^2} \]
+
+\section{Some consequences of the Cauchy-Riemann Equations}
+\label{sec:orgb7354ed}
+
+Note that if \(f(z)  = u(x,y) + i v(x, y)\) is a complex differentiable function at \(z_0\), when taking the limit of the quitient of differences, it does not matter how \(z \to z_0\) approaches,
+then 
+\[ f'(z_0) = \lim_{z\to z_0} \frac{f(z) - f(z_0)}{z-z_0} = \lim_{x\to x_0} \frac{f(x + iy_0) - f(z_0)}{x - x_0} = \frac{\partial f}{\partial x}, \]
+and similarily:
+\[ f'(z_0) = \lim_{z\to z_0} \frac{f(z) - f(z_0)}{z-z_0} = \lim_{y\to y_0} \frac{f(x_0 + iy) - f(z_0)}{i(y - y_0)} = -i \frac{\partial f}{\partial y}. \]
+
+The first of these equalities together with the Cauchy-Riemann equations prove the following:
+\begin{prop}
+Let \(f:\Omega \to \mathbb{C}\) be complex differentiable at \(z_0\in \Omega\). Then
+\begin{equation}
+\begin{split}
+f'(z_0) = \frac{df}{dz} & = \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x} \\
+& = \frac{\partial u}{\partial x} - i \frac{\partial u}{\partial y} \\
+& = \frac{\partial v}{\partial y} - i \frac{\partial u}{\partial y} \\
+& = \frac{\partial v}{\partial y} + i \frac{\partial v}{\partial x}
+\end{split}
+\end{equation}
+\end{prop}
+
+
+\begin{mydef}
+Let \(\Omega\subseteq \mathbb{C}\) an open set, \(f:\Omega\to\mathbb{C}\), \(f(z)  = u(x,y) + i v(x, y)\) be a complex differentiable function at \(z_0\), Then we will write:
+\[\frac{df}{dz} = \frac{1}{2}\left( \frac{\partial f}{\partial x} - i \frac{\partial f}{\partial y} \right)\]
+\[\frac{df}{d\bar{z}} = \frac{1}{2}\left( \frac{\partial f}{\partial x} + i \frac{\partial f}{\partial y} \right)\]
+\end{mydef}
+
+
+\begin{prop}
+Let \(\Omega\subseteq \mathbb{C}\) an open set, \(f:\Omega\to\mathbb{C}\), \(f(z)  = u(x,y) + i v(x, y)\), with \(u,v\) real differentiable functions at \(z_0= x_0 + iy_0\in \Omega\). The function
+\(f\) is complex differentiable at \(\Omega\) if and only if \(\dfrac{df}{\bar{z}}(z_0) = 0\).
+\end{prop}
+\begin{proof}
+It follows from the Cauchy-Riemann equations and the following identity
+\[\frac{df}{d\bar{z}} = \frac{1}{2}\left( \frac{\partial f}{\partial x} + i \frac{\partial f}{\partial y} \right)
+= \frac{1}{2}\left(\frac{\partial u }{\partial x} - \frac{\partial v}{\partial y}\right) + \frac{i}{2}\left(\frac{\partial u }{\partial y} + \frac{\partial v}{\partial x}\right)\]
+\end{proof}
+
+\begin{prop}
+Let \(\Omega\subseteq \mathbb{C}\) be a domain. \(f:\Omega \to \mathbb{C}\) holomorphic and such that \(f'(z) = 0\) for all \(z\in\Omega\). Then \(f\) is constant.
+\end{prop}
+\begin{proof}
+It follows from the real case and the mean value theorem (since \(\Omega\) is connected)
+\end{proof}
+
+\section{Harmonic Functions}
+\label{sec:org9a5637b}
+
+We already saw in one of the previous exercises that if a function is holomorphic, then the real and imaginari parts satisfy the Laplace equation. Here the statement:
+
+\begin{thm}
+If \(f = u + iv\) is holomorphic, and the functions \(u\) and \(v\) have continuous second-order partial derivatives, then \(u\) and \(v\) are harmonic.
+\end{thm}
+\begin{proof}
+Since the second-order partial derivatives are continuous, one can interchange the order of differentiation for \(u\) and \(v\). It follows then from the Cauchy-Riemann equations that
+\[ u_{xx} = v_{yx} = v_{xy} = -u_{yy} \Longrightarrow u_{xx} + u_{yy} = 0.\]
+Then, \(u\) is harmonic. The proof for \(v\) is similar.
+\end{proof}
+
+If \(u\) is harmonic on a domain D, and \(v\) is a harmonic function such that
+\(u + iv\) is analytic, we say that v is a harmonic conjugate of \(u\). The
+harmonic conjugate \(v\) is unique, up to adding a constant.
+
+
+\begin{thm}
+Let \(\Omega\) be an open disk, or an open rectangle with sides parallel
+to the axes, and let \(u(x,y)\) be a harmonic function on \(\Omega\). Then there is
+a harmonic function \(v(x,y)\) on \(\Omega\) such that \(u + iv\) is analytic on \(\Omega\). The
+harmonic conjugate \(v\) is unique, up to adding a constant.
+\end{thm}
+
+
+\textbf{Example}. Show that \(u(x,y) = xy\) is harmonic and find an harmonic conjugate.
+
+It is easy to show that \(u\) is harmonic. To find the harmonic conjugate function \(v\) we use the Cauchy-Riemann equations
+\[ u_x = y = v_y,\]
+and from this we can conclude by integrating with respect to \(y\) that
+\[ v = \frac{y^2}{2} + \phi(x). \]
+Using again the Cauchy-Riemann equations, \(v_x = - u_y = -x\) we get
+\[ v_x = \phi'(x) = -x,\]
+and by integrating with respect to \(x\) we obtain
+\[ \phi(x)  = -\frac{x^2 }{2} + C. \]
+
+Then we can write
+\[ v(x,y) = -\frac{x^2 }{2} + \frac{y^2 }{2} + C. \]
+
+Then the analytic (Holomorphic function) is given by 
+
+\[ f(z) = u(x,y) + i v(x,y) = xy  -i \frac{x^2 }{2} + i\frac{y^2 }{2} + iC = -\frac{i}{2} \left((x^2  - y^2) + 2ixy\right) + i C = -\frac{iz^2}{2} + iC. \]
+
+
+\section{Conformal Mappings}
+\label{sec:orgc32abb6}
+
+In this section we will study curves in the complex plane, and when two curves intersect we will define the notion of angle between the to curves at the intersection point. Mappings from the complex plane into itself that preserve angles will then be considered. Among the basic examples of these kind of mappings are the so called Möbius transformations. Some geometric applicaitons will also be analysed.
+
+\begin{mydef}
+A parameterised curve in the complex plane is a differentiable mapping \(\gamma:I\to\mathbb{C}\), where \(I= [0,1]\) is the real closed unit interval. Note that \(\gamma(t) = x(t) + i\, y(t)\). The tangent vector to the curve at \(z_0 = \gamma(t_0)\), for \(t_0 \in I\), is defined as
+\[ \gamma'(t_0) = \lim{t\to t_0} \frac{\gamma(t) - \gamma(t_0)}{t - t_0} = x'(t_0)  + i\, y'(t_0). \]
+If two curves \(\gamma_1\) and \(\gamma_2\) are such that \(z_0 = \gamma_1(0) = \gamma_2(0)\), then the angle between the two curves at \(z_0\) is defined as the angle between the two tangent vectors \(\gamma'(0)\) and \(\gamma_2(0)\).
+\end{mydef}
+
+
+\begin{prop}
+Let \(\gamma:I \to \mathbb{C}\) a parameterised curve, \(z_0 = \gamma(0)\), and \(f:\mathbb{C}\to \mathbb{C}\) an analytic (holomorphic) function. Then
+\[ \left( f\circ \gamma)'(0)\right) = f'(z_0) \gamma'(0). \]
+\end{prop}
+\begin{proof}
+The proof is an application of the chain rule.
+\end{proof}
+
+\begin{mydef}
+A function \(f:\Omega \to \mathbb{C}\) is called conformal at the point  \(z_0\in \Omega\)
+if \(f\) is real differentiable at \(z_0\) and \(f\) preserves the angle between
+any two curves \(\gamma_1\) and \(\gamma_2\) at the intersecting point \(z_0=\gamma_1(0)=\gamma_2(0)\), i.e., 
+if \(\theta\) is the angle between \(\gamma_1'(0)\) and \(\gamma_2'(0)\), then 
+the angle between \((f\circ \gamma_1)'(0)\) and\((f\circ \gamma_2)'(0)\) is also equal to \(\theta\).
+\end{mydef}
+
+Before proving the following theorem we will need the following result. The function \(f:\Omega \to \mathbb{C}\) is complex differentiable \(z_0\in \Omega\)  if and only if there there exists a continuous function at \(z_0\in \Omega\),  \(\varphi:\Omega \to \mathbb{C}\) such that for all \(z\in \Omega\) we have \[ f(z) = f(z_0) + (z-z_0)\varphi(z).\]
+The proof on one direction this uses the continuity of \(\varphi\) at \(z_0\), and for the existence part, define 
+\[ \varphi(z) = \left\{ \begin{array}{cc}
+\frac{f(z) - f(z_0)}{z-z_0}  & z\neq z_0\\
+f'(z_0)  & z = z_0\\
+\end{array} \right. \]
+\begin{thm}
+If \(f:\Omega \to \mathbb{C}\) is holomorphic in the domain \(\Omega\) and for \(z_0\in \Omega\) we have \(f'(z_0) \neq 0\) then \(f\) is conformal.
+\end{thm}
+\begin{proof}
+Let \(\gamma_1\) and \(\gamma_2\) two curves intersecting at \(z_0\). Then the angle between the curves is the angle between the tangent vectors \(\gamma_1'(0)\) and \(\gamma_2(0)\), to compute this angle we use
+\[ \theta = \mbox{arg}(\gamma_1'(z)) - \mbox{arg}(\gamma_2'(z)) = \mbox{arg}\left(\frac{\gamma_1'(0)}{\gamma_2'(0)}\right). \] 
+
+The corresponding angle at \(f(z_0)\) is obtained by comparing the angles between \(f(\gamma_1 (0))' = (f\circ \gamma_1)'(0)\) and  \((f\circ \gamma_2)'(0)\)
+We have
+\[ \left( f\circ \gamma_1\right)'(0) = f'(z_0) \gamma_1'(0), \]
+and
+\[ \left( f\circ \gamma_2\right)'(0) = f'(z_0) \gamma_1'(0), \]
+then
+\[ \mbox{arg}\left( \frac{\left(f\circ \gamma_1 \right)'(0)}{\left(f\circ \gamma_2\right)'(0)}\right) = \mbox{arg}\left(\frac{f'(z_0) \gamma_1'(0)}{f'(z_0) \gamma_2'(0)}\right) = \mbox{arg}\left(\frac{\gamma_1'(0)}{\gamma_2'(0)}\right) = \theta. \]
+\end{proof}
+
+The converse statement is also true.
+
+\begin{thm}
+Suppose that \(f\) is conformal in a domain \(\Omega\), and suppose also that \(f\) is real differentiable in \(\Omega\) and such that \(Df_z \neq 0\). Then \(f\) is holomorphic in \(\Omega\) and \(f'(z) \neq 0\).
+\end{thm}
+
+\begin{proof}
+For any \(z_0\in\Omega\), if \(z_0 \neq 0\) then we will consider \(g(z) = f(z - z_0)\) so \(g(z) = f(0)\). Then its enough to prove the assertion when \(z_0 = 0\).
+Consider the following lines \(L_1 = \{z \in \Omega \, | \, \mbox{Im}(z) = 0, \mbox{Re}(z) \geq 0 \}\) and for some fixed \(m\in \mathbb{R}\), \(L_2 = \{ z\in \Omega \, | \, z = x + i mx, x\geq 0 \}\), where \(m=\tan \alpha\) is the angle measured from the real line and counterclockwise.
+Because we are assuming \(f\) is conformal at \(z=0\) the angle at \(f(0)\) between the corresponding curves \(f(L_1)\) and \(f(L_2)\) should remain unchanged. 
+
+Write \(f(z) = u(x,y) + v(x,y)\). If the angle \(\beta\) of the tangent vector at \(f(0)\) of the curve \(L_2\) is given by \(\beta\), and then angle the angle \(\beta\) of the tangent vector at \(f(0)\) of the curve \(L_1\) is given by \(\theta\), then another way to measure the angle \(\alpha\) is by noticing \(\beta - \theta = \alpha\), or equivalently \(\theta = \beta - \alpha\). Let \(c = \tan (\beta - \alpha) = \tan (\theta)\). Also notice
+\[ \tan(\beta)=\lim_{x\to 0} \frac{v(x,mx) - v(0,0)}{u(x,mx)- u(0,0)} = \lim_{x\to 0} \frac{\frac{v(x,mx) - v(0,0)}{x}}{\frac{u(x,mx) - u(0,0)}{x}}= \frac{v_x(0,0) + m v_y(0,0)}{u_x(0,0)+ m u_y(0,0)}, \]
+where we have use the assumption that \(f\) is real differentiable and the chain rule (or directional derivative). Also since we assume that \(Df_0\) is not the zero matrix, last limit is not zero and then we also know \(\cot(\beta)\).
+
+Then
+
+\[ c = \tan(\theta) = \tan(\beta - \alpha) = \frac{\tan(\beta) - \tan(\alpha)}{1 + \tan(\alpha)\tan(\beta)} = \frac{ \frac{v_x + m v_y}{u_x + m u_y} - m}{ 1 + m\, \frac{v_x + m v_y}{u_x + m u_y}} \]
+
+Not then that this can be written as
+
+\[ v_x + mv_y - m(u_x + m u_y)  = c( u_x + m u_y + m v_x + m^2 v_y) \]
+expanding the brackets:
+\[ - m^2 u_y + m(v_y - u_x) + v_x = cm^2 v_y + cm( u_y + v_x)  + cu_x, \]
+
+These are polynomials in \(m\) , then the coefficients they must be identical
+\begin{eqnarray}
+-u_y = cv_y \\
+v_y - u_x = c(u_y + v_x) \\
+v_x = cu_x \\
+\end{eqnarray}
+
+Then by substitution we get
+\begin{equation}
+v_y - u_x = c(u_y + v_x) = c( - cv_y + cu_x) = -c^2 (v_y - u_x)
+\end{equation}
+
+It follows
+\[ (1 + c^2) (v_y - u_x) = 0,\]
+
+this implies \(u_x = v_y\). Then \(-u_y = c u_x = v_x\). 
+
+Since \(f\) is real differentiable at \(z=0\) and satisfies the Cauchy-Riemann equations then \(f\) is complex differentiable at \(z=0\).
+\end{proof}
+
+
+Now suppose that that \(f\Omega\to\mathbb{C}\) is conformal, and consider \(z_0\in \Omega\). Then the angles between two rays intersecting at \(z_0\) remain unchanged, but not necessarily their lengths. Since
+\[ |f'(z_0) | = \lim_{z\to z_0} = \frac{|f(z) - f(z_0)|}{|z-z_0|}, \] 
+one can say that the linear change of scale at \(z_0\), caused by the transformation \(f\), is independent of the direction. "Small circles around \(z_0\) are mapped into small circles around \(f(z_0)\), at a scale \(|f'(z_0)|\).
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=.9\linewidth]{./conf_scale.png}
+\caption{Image taken form Derricks's Introduction to Complex Analyisis.}
+\end{figure}
+
+
+\begin{mydef}
+A conformal mapping of one domain \(\Omega\) onto another \(V\) is a continuously
+differentiate function that is conformal at each point of \(\Omega\) and that maps \(\Omega\)
+one-to-one onto \(V\).
+\end{mydef}
+
+Some examples of conformal mappings:
+\begin{itemize}
+\item The translation \(f(z) = z + c\).
+\item Multiplication by a constant = \(f(z) = c\,z\).
+\item Let \(\Omega = \{ z \in \mathbb{C} \, | \, \mbox{Re}(z) > 0\}\) and \(V = \mathbb{C}\setminus [-\infty, 0]\). Then the function \(f: D \to V\) is a conformal mapping.
+\item The exponential function \(f(z) = e^{z}\) is conformal at each point \(z\in\mathbb{C}\) and its image is the set \(\mathbb{C}\setminus\{0\}\).
+\end{itemize}
 \end{document}

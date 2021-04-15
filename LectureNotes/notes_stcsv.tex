@@ -1,4 +1,4 @@
-% Created 2021-04-13 Tue 11:23
+% Created 2021-04-13 Tue 12:25
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -65,7 +65,7 @@
 
 
 \section{Some subsets of the Euclidean Space}
-\label{sec:org126aaf4}
+\label{sec:org8ab3a99}
 
 We have defined for \(r>0\) the open ball centred at \(x_0\in \mathbb{R}^n\) as
 \[ B_r(x_0) = \{ x \in \mathbb{R}^n \, | \, |x - x_0| < r,\}\]
@@ -92,7 +92,7 @@ Now we can also define certain basic sets in \(\mathbb{R}^n\):
 
 
 \section{Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).}
-\label{sec:org7b27edc}
+\label{sec:org8db8a7a}
 
 In this section we will list definitions and establish some notation and terminology regarding the maps between to Euclidean spaces.
 
@@ -127,7 +127,7 @@ In this section we will list definitions and establish some notation and termino
 
 
 \section{Limits and Continuity}
-\label{sec:orgaa487b6}
+\label{sec:org2addd72}
 As in the case of real analysis (or any metric space) we define the limit \[ \lim_{x \to a} f(x) = b,\] by requiring that for every \(\epsilon >0\) there is a number \(\delta >0\) such that \(|f(x) - b| < \epsilon\) for every \(x\) in the domain of \(f\) such that \(|x-a| < \delta\).
 
 If \(f:A\to \mathbb{R}^m\) is such that \[\lim_{x\to a} f(x) = f(a),\] then we say that \(f\) is continuous at \(a\). If \(f\) is continuous at every \(a\in A\) then \(f\) is simply called continuous.
@@ -145,7 +145,7 @@ Continuity of a map can be determined in terms of open subsets. Here there is a 
 
 
 \section{Derivatives}
-\label{sec:orgf1d0901}
+\label{sec:org47ca9fd}
 
 \begin{mydef}
 A map \(f:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at \(a\in \mathbb{R}^n\) if there is a linear transformation \(Df_a: \mathbb{R}^n \to \mathbb{R}^m\) such that
@@ -184,10 +184,10 @@ Example:
 
 
 \section{Differential Geometry of Curves}
-\label{sec:org5a6aadb}
+\label{sec:orge1901f5}
 
 \subsection{Curves in \(\mathbb{R}^3\)}
-\label{sec:org7c256dc}
+\label{sec:org473c861}
 
 \begin{mydef}
 A \textbf{parameterised differentiable curve} is a map \(\alpha: I \to \mathbb{R}^3\), where
@@ -311,7 +311,7 @@ Given a curve \(\alpha\) parameterised by arc-length \(s\in (a,b)\), the curve \
 
 
 \subsection{Examples.}
-\label{sec:org670f6d8}
+\label{sec:org5023a56}
 
 \begin{enumerate}
 \item Find the trace and the tangent vectors of the following curves
@@ -356,7 +356,7 @@ dev.off()
 
 
 \subsection{The Local theory of Curves}
-\label{sec:org4f1c258}
+\label{sec:org92af85e}
 
 \begin{mydef}
 Let \(\alpha : I \to \mathbb{R}^3\) be a curve parameterised by arc-length. The curvature of \(\alpha\) at \(s\) is defined by
@@ -577,7 +577,7 @@ parameterised by arc-length, and \(T = \alpha'(s)\), is the tangent vector, then
 
 
 \subsection{Global Theory of Curves}
-\label{sec:org2aec2c6}
+\label{sec:org9a98577}
 
 Now we will study some global properties of Curves. Two classic results are: \textbf{the isoperimetric inequality} and the \textbf{Four Vertex Problem}.
 
@@ -585,7 +585,7 @@ In this course we will only focus on the former one. We will state the problem w
 
 
 \subsection{The Isoperimetric Inequality}
-\label{sec:orga27b4a4}
+\label{sec:orga0c6448}
 
 The isoperimetric inequality is still a thriving topic in modern mathematics. 
 
@@ -622,7 +622,7 @@ order to obtain the maximum area?
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=100pt]{./dido_pic01.png}
-\caption{\label{fig:org9b296d4}Dido's problem along the shore}
+\caption{\label{fig:orgb7943f6}Dido's problem along the shore}
 \end{figure}
 
 
@@ -635,7 +635,7 @@ with the same sides.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=100pt]{./dido_pic02.png}
-\caption{\label{fig:org99636b9}Steiner's Method}
+\caption{\label{fig:org0eba042}Steiner's Method}
 \end{figure}
 
 
@@ -645,7 +645,7 @@ do Carmo's book on Curves and Surfaces presents Schmidt's proof of the isoperime
 Another nice resource was posted in moodle, where a solution using Fourier series is discussed.
 
 \section{The Isoperimetric Inequality in \(\mathbb{R}^n\).}
-\label{sec:orgc1bb485}
+\label{sec:org0ddfecf}
 
 The proof that we will give is due to X. Cabré which involves the solution of a particular Partial Differential Equation, and the Moving Plane technique developed by Alexandrov, to obtain the result.
 
@@ -664,7 +664,7 @@ where the Gamma function is given by
 \[ \Gamma(s) = \int_{0}^{\infty} e^{-t}t^{s-1}dt. \]
 
 \subsection{Moving planes}
-\label{sec:org52bc081}
+\label{sec:org5813056}
 \begin{mydef}
 If \(\Omega \subset \mathbb{R}^n\) is a bounded domain (open and connected), and if \(u:\bar{\Omega} \to \mathbb{R}\) is a \(C^1\) function, we define the lower contact set as
 \[ S = \{ x_0 \in \Omega \, | \, u(x) \geq u(x_0) + \nabla u(x_0) \cdot (x - x_0), \mbox{ for all } x\in \bar{\Omega} \}. \] 
@@ -704,7 +704,7 @@ If the function is twice differentiable and \(x_0\in S\), then \(D^2u(x_0)\) is 
 
 
 \subsection{Partial Differential Equations: a Neumann Problem}
-\label{sec:orgeeeb279}
+\label{sec:orgb9ab9d4}
 
 In order to understand ponts in \(S\) that are in the boundary of our domain \(\Omega\), we introduce the following Partial Differential Equation:
 \begin{equation}
@@ -736,7 +736,7 @@ Let \(B_1(0)\) be the unit ball in \(\mathbb{R}^n\) with centre at the origin an
 \end{thm}
 
 \subsection{Proof of the Isoperimetric Inequality}
-\label{sec:orge0600b7}
+\label{sec:orgbb30986}
 
 Using the last theorem, the proof of the isoperimetric inequality follows from
 \begin{equation}
@@ -760,7 +760,7 @@ Task.
 
 
 \subsection{Proof of the equality case}
-\label{sec:orgcf4dbb9}
+\label{sec:org40a04fb}
 
 If the equality holds:
 \begin{itemize}
@@ -776,7 +776,7 @@ If the equality holds:
 
 
 \subsection{Conclusion.}
-\label{sec:orgecb2607}
+\label{sec:orga95cb80}
 
 The Isoperimetric Inequality and related problems are advanced topics. 
 It is usually part of the introduction of a branch of mathematics called the Calculus of Variations, where the problem of optimization (finding maximum and minimum) takes place in infinite dimensional spaces.
@@ -791,7 +791,7 @@ On the geometric side, Alexandrov’s idea of moving planes has helped to solve 
 
 
 \section{Mechanics}
-\label{sec:orgdea921c}
+\label{sec:org004a4bd}
 
 We are coming back to the theory of curves in the space, and we will use calculus along curves toggether with Newton's law to determine the Laws that Kepler establised to determine the planetary motinon around the Sun.
 
@@ -828,4 +828,29 @@ then we say that in this case, the momentum of the object is conserved.
 
 Whe say that the angular momentum is conserved if the torque equals zero. And we also have the following conservation law: 
 \emph{If the net torque on an object is continually zero, then the angular momentum of the object is conserved.} A nice explanation of the conservation of angular momentum can be found in this \href{https://www.youtube.com/watch?v=8I4ii1xEeG0}{link}.
+
+
+\begin{thm}
+If an object moves under a central force and has constant angular momentum
+\(\mathbf{L}\) different from zero, then:
+\begin{enumerate}
+\item The object is confined to the plane that passes through the origin and is perpendicular to \(\mathbf{L}\)..
+\item The radius vector of the object sweeps out equal areas in equal times.
+\end{enumerate}
+\end{thm}
+
+\subsection{Kepler's laws of planetary motion.}
+\label{sec:orgcc973fe}
+
+\begin{itemize}
+\item Each planet moves in a plane, not in a circle, but in an elliptical orbit with the sun at one focus.
+\item The radius vector from the sun to the planet sweeps out equal areas in equal times.
+\item The square of the period of the motion varies directly as the cube of the major semiaxis, and the constant of proportionality is the same for all the planets.
+\end{itemize}
+
+\begin{thm}
+\textbf{Newton's law of universal gravitation}. Every particle attracts every other particle in the universe with a force that is directly proportional to the product of their masses and inversely proportional to the square of the distance between their centers. In vector notation this can be written as \[ F(t) = -G \frac{m \, M}{r^3} \mathbf{r}(t). \]
+\end{thm}
+
+In this section, we will use Newton's gravity law to obtain Kepler's law about planetary motion.
 \end{document}

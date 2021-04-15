@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-10 Sat 19:49 -->
+<!-- 2021-04-15 Thu 10:58 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Notes for Introduction to Complex Analysis</title>
@@ -342,12 +342,14 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgc75b654">1. Sequences and limits</a></li>
-<li><a href="#orge81e0fd">2. Continuity</a></li>
-<li><a href="#org08413c9">3. Basic topology of \(\mathbb{C}\)</a></li>
-<li><a href="#org5e20b31">4. Derivatives</a></li>
-<li><a href="#orgc734be3">5. Cauchy-Riemann Equations</a></li>
-<li><a href="#org84996bd">6. Some consequences of the Cauchy-Riemann Equations</a></li>
+<li><a href="#orgdef6c3d">1. Sequences and limits</a></li>
+<li><a href="#orge2ab55f">2. Continuity</a></li>
+<li><a href="#orgbfce8aa">3. Basic topology of \(\mathbb{C}\)</a></li>
+<li><a href="#orgf8e8846">4. Derivatives</a></li>
+<li><a href="#org68b6ca4">5. Cauchy-Riemann Equations</a></li>
+<li><a href="#org2255f98">6. Some consequences of the Cauchy-Riemann Equations</a></li>
+<li><a href="#orgd62e7f1">7. Harmonic Functions</a></li>
+<li><a href="#org21c1187">8. Conformal Mappings</a></li>
 </ul>
 </div>
 </div>
@@ -355,8 +357,8 @@ for the JavaScript code in this tag.
 
 
 
-<div id="outline-container-orgc75b654" class="outline-2">
-<h2 id="orgc75b654"><span class="section-number-2">1</span> Sequences and limits</h2>
+<div id="outline-container-orgdef6c3d" class="outline-2">
+<h2 id="orgdef6c3d"><span class="section-number-2">1</span> Sequences and limits</h2>
 <div class="outline-text-2" id="text-1">
 <div class="mydef">
 <p>
@@ -575,8 +577,8 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 </div>
 
 
-<div id="outline-container-orge81e0fd" class="outline-2">
-<h2 id="orge81e0fd"><span class="section-number-2">2</span> Continuity</h2>
+<div id="outline-container-orge2ab55f" class="outline-2">
+<h2 id="orge2ab55f"><span class="section-number-2">2</span> Continuity</h2>
 <div class="outline-text-2" id="text-2">
 <div class="mydef">
 <p>
@@ -690,8 +692,8 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 </div>
 </div>
 
-<div id="outline-container-org08413c9" class="outline-2">
-<h2 id="org08413c9"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
+<div id="outline-container-orgbfce8aa" class="outline-2">
+<h2 id="orgbfce8aa"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
@@ -1101,8 +1103,8 @@ which its a contradiction itself. Consequently \(f\) is uniformly continuous in 
 </div>
 </div>
 
-<div id="outline-container-org5e20b31" class="outline-2">
-<h2 id="org5e20b31"><span class="section-number-2">4</span> Derivatives</h2>
+<div id="outline-container-orgf8e8846" class="outline-2">
+<h2 id="orgf8e8846"><span class="section-number-2">4</span> Derivatives</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
@@ -1293,8 +1295,8 @@ a_{2} &  a_{1}\\
 
 
 
-<div id="outline-container-orgc734be3" class="outline-2">
-<h2 id="orgc734be3"><span class="section-number-2">5</span> Cauchy-Riemann Equations</h2>
+<div id="outline-container-org68b6ca4" class="outline-2">
+<h2 id="org68b6ca4"><span class="section-number-2">5</span> Cauchy-Riemann Equations</h2>
 <div class="outline-text-2" id="text-5">
 <div class="thm">
 <p>
@@ -1435,8 +1437,8 @@ What is happening here?
 </div>
 </div>
 
-<div id="outline-container-org84996bd" class="outline-2">
-<h2 id="org84996bd"><span class="section-number-2">6</span> Some consequences of the Cauchy-Riemann Equations</h2>
+<div id="outline-container-org2255f98" class="outline-2">
+<h2 id="org2255f98"><span class="section-number-2">6</span> Some consequences of the Cauchy-Riemann Equations</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Note that if \(f(z)  = u(x,y) + i v(x, y)\) is a complex differentiable function at \(z_0\), when taking the limit of the quitient of differences, it does not matter how \(z \to z_0\) approaches,
@@ -1503,8 +1505,12 @@ It follows from the real case and the mean value theorem (since \(\Omega\) is co
 </p>
 
 </div>
+</div>
+</div>
 
-
+<div id="outline-container-orgd62e7f1" class="outline-2">
+<h2 id="orgd62e7f1"><span class="section-number-2">7</span> Harmonic Functions</h2>
+<div class="outline-text-2" id="text-7">
 <p>
 We already saw in one of the previous exercises that if a function is holomorphic, then the real and imaginari parts satisfy the Laplace equation. Here the statement:
 </p>
@@ -1571,11 +1577,195 @@ Then the analytic (Holomorphic function) is given by
 </p>
 </div>
 </div>
+
+
+<div id="outline-container-org21c1187" class="outline-2">
+<h2 id="org21c1187"><span class="section-number-2">8</span> Conformal Mappings</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+In this section we will study curves in the complex plane, and when two curves intersect we will define the notion of angle between the to curves at the intersection point. Mappings from the complex plane into itself that preserve angles will then be considered. Among the basic examples of these kind of mappings are the so called Möbius transformations. Some geometric applicaitons will also be analysed.
+</p>
+
+<div class="mydef">
+<p>
+A parameterised curve in the complex plane is a differentiable mapping \(\gamma:I\to\mathbb{C}\), where \(I= [0,1]\) is the real closed unit interval. Note that \(\gamma(t) = x(t) + i\, y(t)\). The tangent vector to the curve at \(z_0 = \gamma(t_0)\), for \(t_0 \in I\), is defined as
+\[ \gamma'(t_0) = \lim{t\to t_0} \frac{\gamma(t) - \gamma(t_0)}{t - t_0} = x'(t_0)  + i\, y'(t_0). \]
+If two curves \(\gamma_1\) and \(\gamma_2\) are such that \(z_0 = \gamma_1(0) = \gamma_2(0)\), then the angle between the two curves at \(z_0\) is defined as the angle between the two tangent vectors \(\gamma'(0)\) and \(\gamma_2(0)\).
+</p>
+
+</div>
+
+
+<div class="prop">
+<p>
+Let \(\gamma:I \to \mathbb{C}\) a parameterised curve, \(z_0 = \gamma(0)\), and \(f:\mathbb{C}\to \mathbb{C}\) an analytic (holomorphic) function. Then
+\[ \left( f\circ \gamma)'(0)\right) = f'(z_0) \gamma'(0). \]
+</p>
+
+</div>
+<div class="proof">
+<p>
+The proof is an application of the chain rule.
+</p>
+
+</div>
+
+<div class="mydef">
+<p>
+A function \(f:\Omega \to \mathbb{C}\) is called conformal at the point  \(z_0\in \Omega\)
+if \(f\) is real differentiable at \(z_0\) and \(f\) preserves the angle between
+any two curves \(\gamma_1\) and \(\gamma_2\) at the intersecting point \(z_0=\gamma_1(0)=\gamma_2(0)\), i.e., 
+if \(\theta\) is the angle between \(\gamma_1'(0)\) and \(\gamma_2'(0)\), then 
+the angle between \((f\circ \gamma_1)'(0)\) and\((f\circ \gamma_2)'(0)\) is also equal to \(\theta\).
+</p>
+
+</div>
+
+<p>
+Before proving the following theorem we will need the following result. The function \(f:\Omega \to \mathbb{C}\) is complex differentiable \(z_0\in \Omega\)  if and only if there there exists a continuous function at \(z_0\in \Omega\),  \(\varphi:\Omega \to \mathbb{C}\) such that for all \(z\in \Omega\) we have \[ f(z) = f(z_0) + (z-z_0)\varphi(z).\]
+The proof on one direction this uses the continuity of \(\varphi\) at \(z_0\), and for the existence part, define 
+\[ \varphi(z) = \left\{ \begin{array}{cc}
+\frac{f(z) - f(z_0)}{z-z_0}  & z\neq z_0\\
+f'(z_0)  & z = z_0\\
+\end{array} \right. \]
+</p>
+<div class="thm">
+<p>
+If \(f:\Omega \to \mathbb{C}\) is holomorphic in the domain \(\Omega\) and for \(z_0\in \Omega\) we have \(f'(z_0) \neq 0\) then \(f\) is conformal.
+</p>
+
+</div>
+<div class="proof">
+<p>
+Let \(\gamma_1\) and \(\gamma_2\) two curves intersecting at \(z_0\). Then the angle between the curves is the angle between the tangent vectors \(\gamma_1'(0)\) and \(\gamma_2(0)\), to compute this angle we use
+\[ \theta = \mbox{arg}(\gamma_1'(z)) - \mbox{arg}(\gamma_2'(z)) = \mbox{arg}\left(\frac{\gamma_1'(0)}{\gamma_2'(0)}\right). \] 
+</p>
+
+<p>
+The corresponding angle at \(f(z_0)\) is obtained by comparing the angles between \(f(\gamma_1 (0))' = (f\circ \gamma_1)'(0)\) and  \((f\circ \gamma_2)'(0)\)
+We have
+\[ \left( f\circ \gamma_1\right)'(0) = f'(z_0) \gamma_1'(0), \]
+and
+\[ \left( f\circ \gamma_2\right)'(0) = f'(z_0) \gamma_1'(0), \]
+then
+\[ \mbox{arg}\left( \frac{\left(f\circ \gamma_1 \right)'(0)}{\left(f\circ \gamma_2\right)'(0)}\right) = \mbox{arg}\left(\frac{f'(z_0) \gamma_1'(0)}{f'(z_0) \gamma_2'(0)}\right) = \mbox{arg}\left(\frac{\gamma_1'(0)}{\gamma_2'(0)}\right) = \theta. \]
+</p>
+
+</div>
+
+<p>
+The converse statement is also true.
+</p>
+
+<div class="thm">
+<p>
+Suppose that \(f\) is conformal in a domain \(\Omega\), and suppose also that \(f\) is real differentiable in \(\Omega\) and such that \(Df_z \neq 0\). Then \(f\) is holomorphic in \(\Omega\) and \(f'(z) \neq 0\).
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+For any \(z_0\in\Omega\), if \(z_0 \neq 0\) then we will consider \(g(z) = f(z - z_0)\) so \(g(z) = f(0)\). Then its enough to prove the assertion when \(z_0 = 0\).
+Consider the following lines \(L_1 = \{z \in \Omega \, | \, \mbox{Im}(z) = 0, \mbox{Re}(z) \geq 0 \}\) and for some fixed \(m\in \mathbb{R}\), \(L_2 = \{ z\in \Omega \, | \, z = x + i mx, x\geq 0 \}\), where \(m=\tan \alpha\) is the angle measured from the real line and counterclockwise.
+Because we are assuming \(f\) is conformal at \(z=0\) the angle at \(f(0)\) between the corresponding curves \(f(L_1)\) and \(f(L_2)\) should remain unchanged. 
+</p>
+
+<p>
+Write \(f(z) = u(x,y) + v(x,y)\). If the angle \(\beta\) of the tangent vector at \(f(0)\) of the curve \(L_2\) is given by \(\beta\), and then angle the angle \(\beta\) of the tangent vector at \(f(0)\) of the curve \(L_1\) is given by \(\theta\), then another way to measure the angle \(\alpha\) is by noticing \(\beta - \theta = \alpha\), or equivalently \(\theta = \beta - \alpha\). Let \(c = \tan (\beta - \alpha) = \tan (\theta)\). Also notice
+\[ \tan(\beta)=\lim_{x\to 0} \frac{v(x,mx) - v(0,0)}{u(x,mx)- u(0,0)} = \lim_{x\to 0} \frac{\frac{v(x,mx) - v(0,0)}{x}}{\frac{u(x,mx) - u(0,0)}{x}}= \frac{v_x(0,0) + m v_y(0,0)}{u_x(0,0)+ m u_y(0,0)}, \]
+where we have use the assumption that \(f\) is real differentiable and the chain rule (or directional derivative). Also since we assume that \(Df_0\) is not the zero matrix, last limit is not zero and then we also know \(\cot(\beta)\).
+</p>
+
+<p>
+Then
+</p>
+
+<p>
+\[ c = \tan(\theta) = \tan(\beta - \alpha) = \frac{\tan(\beta) - \tan(\alpha)}{1 + \tan(\alpha)\tan(\beta)} = \frac{ \frac{v_x + m v_y}{u_x + m u_y} - m}{ 1 + m\, \frac{v_x + m v_y}{u_x + m u_y}} \]
+</p>
+
+<p>
+Not then that this can be written as
+</p>
+
+<p>
+\[ v_x + mv_y - m(u_x + m u_y)  = c( u_x + m u_y + m v_x + m^2 v_y) \]
+expanding the brackets:
+\[ - m^2 u_y + m(v_y - u_x) + v_x = cm^2 v_y + cm( u_y + v_x)  + cu_x, \]
+</p>
+
+<p>
+These are polynomials in \(m\) , then the coefficients they must be identical
+</p>
+\begin{eqnarray}
+-u_y = cv_y \\
+v_y - u_x = c(u_y + v_x) \\
+v_x = cu_x \\
+\end{eqnarray}
+
+<p>
+Then by substitution we get
+</p>
+\begin{equation}
+v_y - u_x = c(u_y + v_x) = c( - cv_y + cu_x) = -c^2 (v_y - u_x)
+\end{equation}
+
+<p>
+It follows
+\[ (1 + c^2) (v_y - u_x) = 0,\]
+</p>
+
+<p>
+this implies \(u_x = v_y\). Then \(-u_y = c u_x = v_x\). 
+</p>
+
+<p>
+Since \(f\) is real differentiable at \(z=0\) and satisfies the Cauchy-Riemann equations then \(f\) is complex differentiable at \(z=0\).
+</p>
+
+</div>
+
+
+<p>
+Now suppose that that \(f\Omega\to\mathbb{C}\) is conformal, and consider \(z_0\in \Omega\). Then the angles between two rays intersecting at \(z_0\) remain unchanged, but not necessarily their lengths. Since
+\[ |f'(z_0) | = \lim_{z\to z_0} = \frac{|f(z) - f(z_0)|}{|z-z_0|}, \] 
+one can say that the linear change of scale at \(z_0\), caused by the transformation \(f\), is independent of the direction. "Small circles around \(z_0\) are mapped into small circles around \(f(z_0)\), at a scale \(|f'(z_0)|\).
+</p>
+
+
+<div class="figure">
+<p><img src="./conf_scale.png" alt="conf_scale.png" />
+</p>
+<p><span class="figure-number">Figure 1: </span>Image taken form Derricks's Introduction to Complex Analyisis.</p>
+</div>
+
+
+<div class="mydef">
+<p>
+A conformal mapping of one domain \(\Omega\) onto another \(V\) is a continuously
+differentiate function that is conformal at each point of \(\Omega\) and that maps \(\Omega\)
+one-to-one onto \(V\).
+</p>
+
+</div>
+
+<p>
+Some examples of conformal mappings:
+</p>
+<ul class="org-ul">
+<li>The translation \(f(z) = z + c\).</li>
+<li>Multiplication by a constant = \(f(z) = c\,z\).</li>
+<li>Let \(\Omega = \{ z \in \mathbb{C} \, | \, \mbox{Re}(z) > 0\}\) and \(V = \mathbb{C}\setminus [-\infty, 0]\). Then the function \(f: D \to V\) is a conformal mapping.</li>
+<li>The exponential function \(f(z) = e^{z}\) is conformal at each point \(z\in\mathbb{C}\) and its image is the set \(\mathbb{C}\setminus\{0\}\).</li>
+</ul>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2021-03-12 Fri 00:00</p>
 <p class="author">Author: Daniel Ballesteros Chávez</p>
-<p class="date">Created: 2021-04-10 Sat 19:49</p>
+<p class="date">Created: 2021-04-15 Thu 10:58</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
