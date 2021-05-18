@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-04-15 Thu 10:58 -->
+<!-- 2021-05-18 Tue 00:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Notes for Introduction to Complex Analysis</title>
@@ -342,14 +342,16 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgdef6c3d">1. Sequences and limits</a></li>
-<li><a href="#orge2ab55f">2. Continuity</a></li>
-<li><a href="#orgbfce8aa">3. Basic topology of \(\mathbb{C}\)</a></li>
-<li><a href="#orgf8e8846">4. Derivatives</a></li>
-<li><a href="#org68b6ca4">5. Cauchy-Riemann Equations</a></li>
-<li><a href="#org2255f98">6. Some consequences of the Cauchy-Riemann Equations</a></li>
-<li><a href="#orgd62e7f1">7. Harmonic Functions</a></li>
-<li><a href="#org21c1187">8. Conformal Mappings</a></li>
+<li><a href="#orgde2671f">1. Sequences and limits</a></li>
+<li><a href="#org5083db0">2. Continuity</a></li>
+<li><a href="#orgd182509">3. Basic topology of \(\mathbb{C}\)</a></li>
+<li><a href="#org8b84827">4. Derivatives</a></li>
+<li><a href="#org3fb1f70">5. Cauchy-Riemann Equations</a></li>
+<li><a href="#org8bc8967">6. Some consequences of the Cauchy-Riemann Equations</a></li>
+<li><a href="#org54293a2">7. Harmonic Functions</a></li>
+<li><a href="#org9b5f6b4">8. Conformal Mappings</a></li>
+<li><a href="#org28561ec">9. Cauchy's Theorem and Cauchy's Integral Formula</a></li>
+<li><a href="#orgb13c135">10. Laurent Series and Residue Theorem</a></li>
 </ul>
 </div>
 </div>
@@ -357,8 +359,8 @@ for the JavaScript code in this tag.
 
 
 
-<div id="outline-container-orgdef6c3d" class="outline-2">
-<h2 id="orgdef6c3d"><span class="section-number-2">1</span> Sequences and limits</h2>
+<div id="outline-container-orgde2671f" class="outline-2">
+<h2 id="orgde2671f"><span class="section-number-2">1</span> Sequences and limits</h2>
 <div class="outline-text-2" id="text-1">
 <div class="mydef">
 <p>
@@ -577,8 +579,8 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 </div>
 
 
-<div id="outline-container-orge2ab55f" class="outline-2">
-<h2 id="orge2ab55f"><span class="section-number-2">2</span> Continuity</h2>
+<div id="outline-container-org5083db0" class="outline-2">
+<h2 id="org5083db0"><span class="section-number-2">2</span> Continuity</h2>
 <div class="outline-text-2" id="text-2">
 <div class="mydef">
 <p>
@@ -692,8 +694,8 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 </div>
 </div>
 
-<div id="outline-container-orgbfce8aa" class="outline-2">
-<h2 id="orgbfce8aa"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
+<div id="outline-container-orgd182509" class="outline-2">
+<h2 id="orgd182509"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
@@ -1103,8 +1105,8 @@ which its a contradiction itself. Consequently \(f\) is uniformly continuous in 
 </div>
 </div>
 
-<div id="outline-container-orgf8e8846" class="outline-2">
-<h2 id="orgf8e8846"><span class="section-number-2">4</span> Derivatives</h2>
+<div id="outline-container-org8b84827" class="outline-2">
+<h2 id="org8b84827"><span class="section-number-2">4</span> Derivatives</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
@@ -1295,8 +1297,8 @@ a_{2} &  a_{1}\\
 
 
 
-<div id="outline-container-org68b6ca4" class="outline-2">
-<h2 id="org68b6ca4"><span class="section-number-2">5</span> Cauchy-Riemann Equations</h2>
+<div id="outline-container-org3fb1f70" class="outline-2">
+<h2 id="org3fb1f70"><span class="section-number-2">5</span> Cauchy-Riemann Equations</h2>
 <div class="outline-text-2" id="text-5">
 <div class="thm">
 <p>
@@ -1437,8 +1439,8 @@ What is happening here?
 </div>
 </div>
 
-<div id="outline-container-org2255f98" class="outline-2">
-<h2 id="org2255f98"><span class="section-number-2">6</span> Some consequences of the Cauchy-Riemann Equations</h2>
+<div id="outline-container-org8bc8967" class="outline-2">
+<h2 id="org8bc8967"><span class="section-number-2">6</span> Some consequences of the Cauchy-Riemann Equations</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Note that if \(f(z)  = u(x,y) + i v(x, y)\) is a complex differentiable function at \(z_0\), when taking the limit of the quitient of differences, it does not matter how \(z \to z_0\) approaches,
@@ -1508,8 +1510,8 @@ It follows from the real case and the mean value theorem (since \(\Omega\) is co
 </div>
 </div>
 
-<div id="outline-container-orgd62e7f1" class="outline-2">
-<h2 id="orgd62e7f1"><span class="section-number-2">7</span> Harmonic Functions</h2>
+<div id="outline-container-org54293a2" class="outline-2">
+<h2 id="org54293a2"><span class="section-number-2">7</span> Harmonic Functions</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 We already saw in one of the previous exercises that if a function is holomorphic, then the real and imaginari parts satisfy the Laplace equation. Here the statement:
@@ -1579,8 +1581,8 @@ Then the analytic (Holomorphic function) is given by
 </div>
 
 
-<div id="outline-container-org21c1187" class="outline-2">
-<h2 id="org21c1187"><span class="section-number-2">8</span> Conformal Mappings</h2>
+<div id="outline-container-org9b5f6b4" class="outline-2">
+<h2 id="org9b5f6b4"><span class="section-number-2">8</span> Conformal Mappings</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 In this section we will study curves in the complex plane, and when two curves intersect we will define the notion of angle between the to curves at the intersection point. Mappings from the complex plane into itself that preserve angles will then be considered. Among the basic examples of these kind of mappings are the so called Möbius transformations. Some geometric applicaitons will also be analysed.
@@ -1761,11 +1763,325 @@ Some examples of conformal mappings:
 </ul>
 </div>
 </div>
+<div id="outline-container-org28561ec" class="outline-2">
+<h2 id="org28561ec"><span class="section-number-2">9</span> Cauchy's Theorem and Cauchy's Integral Formula</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+<b>The Main assumptions for this section</b>. We will prove the Cauchy-Riemmann theorem assuming that if \(f\) is holomorphic in \(\Omega\), then one of the two situations occur
+</p>
+<ul class="org-ul">
+<li>\(f\) has a continuous primitive \(F\) in \(\Omega\), i.e., \(F'(z) = f(z)\) for all \(z\in \Omega\).</li>
+<li>\(f\) is \(C^{1}(\Omega)\). This means that \(f\) has all partial derivatives and they are all continuous.</li>
+</ul>
+
+<p>
+These are true for any \(f\) holomorphic, and the prove of the first point uses the so called <b>Cauchy-Goursat</b> theorem (at least for rectangles). 
+</p>
+
+
+<div class="mydef">
+<p>
+A continuously differentiable (or \(C^1\)) curve in a domain \(\Omega \subset \mathbb{C}\) is a map \(\alpha : [a,b] \to \Omega\), where \([a,b]\) is an interval in the real, and 
+such that 
+\[ \alpha'(t) =  \lim_{h\to 0} \frac{ \alpha(t + h) - \alpha(t)}{h},\]
+ exists at each point \(t\in [a, b]\) (in the one-sided
+sense at the endpoints) and  such that \(\alpha'\) is continuous on \([a, b]\). 
+We will also use the symbol \(\alpha\) to denote also its trace, that is the set
+of points \(\{\alpha(t) \, | \,  t \in [a, b]\}\).
+</p>
+
+<p>
+A curve is called <b>piecewise continuously differentiable</b> if it can be written as a finite union of continuously differentiable curves. 
+</p>
+
+<p>
+The curve \(\alpha\) is called <b>closed</b> if \(\alpha (a) = \alpha (b)\).
+</p>
+
+<p>
+It is called <b>simple closed</b> if it is closed and it does not intersecting itself, i.e., \(\alpha(s) = \alpha (t)\) and \(s\neq t\) is only possible when either that \(s = a\) and \(t = b\) or \(s = b\) and \(t = a\).
+</p>
+
+<p>
+A simple closed curve \(\alpha\) is said to be <b>positively oriented</b> if the region interior to the curve is to the left of the curve while it is being traversed from \(t = a\) to \(t = b\). In other case the curve is called <b>negatively oriented</b>.
+</p>
+
+</div>
+
+<p>
+<b>Example</b> The curve \(\alpha_1: [0,2\pi] \to \mathbb{C}\) given by \(\alpha(t) = e^{it}\) is \(C^1\) and positively oriented, while \(\alpha_2: [0,2\pi] \to \mathbb{C}\) given by \(\alpha_2(t) = e^{-it}\) is negatively oriented.
+</p>
+
+<div class="mydef">
+<p>
+Let \(f:\Omega \to \mathbb{C}\) a continuous function, and \(\alpha : [a,b] \to \Omega\) a \(C^1\) curve. Then the <b>complex line integral</b> over the curve \(\alpha\) is defined as
+\[\int_{\alpha}f(z) dz = \int_{a}^{b} f(\alpha(t)) \, \alpha'(t) dt.\]
+</p>
+
+<p>
+In case \(\alpha\) is <b>piecewise continuously differentiable</b>, then integral is defined as the sum of the integrals along all the \(C^1\) pieces.
+</p>
+
+</div>
+
+<div class="prop">
+<p>
+Recall the following properteis of line integrals:
+</p>
+<ol class="org-ol">
+<li>\(\int_{\alpha} [ af(z) + bg(z)]dz =  a \int_{\alpha} f(z) dz + b \int_{\alpha} g(z) dz\)</li>
+<li>\(\int_{\alpha_1 + \alpha_2} f(z) dz = \int_{\alpha_1} f(z)dz + \int_{\alpha_2} f(z)dz\), where \(\alpha_1 + \alpha_2\) is the joint curve \(\alpha_1\) followed by \(\alpha_2\).</li>
+<li>\(\int{-\alpha} f(z) dz = - \int_{\alpha} f(z)dz\), where \(-\alpha\) is the curve traversed in the oposite direction.</li>
+<li>\(|\int_{\alpha} f(z)dz | \leq \int_{\alpha} |f(z)| |dz|\), where \(|dz|\) is the arch length differential: \(|dz| = \sqrt{dx^2 + dy^2}\).</li>
+</ol>
+
+</div>
+
+
+<div class="thm">
+<p>
+<b>Cauchy theorem</b>. Let \(f:\Omega \to \mathbb{C}\) holomorphic in \(\Omega\). Assume that \(\alpha: [a,b] \to \Omega\) is a piecewise continuously differentiable closed curve which is topologically trivial (this means that the image of the curve can be continuously deformed to a points within \(\Omega\)). Then
+\[ \int_{\alpha} f(z) dz = 0. \]
+</p>
+
+</div>
+
+
+<div class="proof">
+<p>
+Relying on our main assumptions:
+</p>
+
+<ol class="org-ol">
+<li>If \(f\) has a continuous primitive \(F\), then by the fundamental theorem of calculus we have</li>
+</ol>
+<p>
+\[ \int_{\alpha}f(z) dz = \int_{\alpha} F'(z) dz = \int_{a}^{b} F'(\alpha(t)) \alpha'(t) dt = \int_{a}^{b} \frac{d}{dt} F(\alpha(t)) = F(\alpha(b)) - F(\alpha(a)) = 0.\]
+</p>
+
+<ol class="org-ol">
+<li>If \(f\) is \(C^1(\Omega)\), or equivalently that \(f'\) is continuous,  then we apply Green's theorem and the Cauchy-Riemann's equations. We call \(R\) the open region of the complex plane bounded by the curve \(\alpha\).</li>
+</ol>
+
+<p>
+Recall the Green's Theorem:
+\[ \int_{\alpha} (Pdx + Qdy) = \int\int_{R} (Q_x - P_y) dx\, dy.\]
+</p>
+
+<p>
+Then in our case:
+</p>
+
+\begin{align*}
+ \int_{\alpha} f(z)dz & = \int_{\alpha} (u + i v) (dx + idy) \\ 
+ &=\int_{\alpha} (u \, dx - v\, dy) + i \int_{\alpha} (v \, dx +  u\, dy) \\
+ &= - \int\int_{R} (u_y +  v_x ) dx \, dy + i \int\int_{R} (u_x -  v_y) dx \, dy) \\
+ &= 0.
+\end{align*}
+
+</div>
+
+<div class="thm">
+<p>
+<b>Cauchy's integral formula</b>. Let \(f:\Omega \to \mathbb{C}\) holomorphic in \(\Omega\). Fix a point \(z_0\in \Omega\) and assume that \(\alpha: [a,b] \to \Omega\) is a piecewise continuously differentiable simple closed curve which is topologically trivial and positively oriented, with \(z_0\) in its interior. Then
+\[ f(z_0) = \frac{1}{2\pi i} \int_{\alpha}\frac{f(z)}{z-z_0}dz. \]
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+Let \(z_0 \in \Omega\) and define the function
+\[ G(z) = \left\{ \begin{array}{ccc}
+\frac{f(z) - f(z_0)}{z - z_0} & \mbox{for} & z \neq z_0\\
+f'(z_0) & \mbox{for} & z = z_0\\
+\end{array} \right. \]
+</p>
+
+<p>
+Applying the Cauchy theorem for \(G\) the curve \(\alpha(t) = z_0 + e^{it}\), \(0\leq t \leq 2\pi\)  it follows:
+</p>
+
+\begin{align*}
+0 & =  \int_{\alpha} G(z) dz \\ 
+& = \int_{\alpha} \frac{f(z) - f(z_0)}{z-z_0} \\ 
+&= \int_{\alpha}\frac{f(z)dz}{z-z_0} - \int_{\alpha}\frac{f(z_0) dz}{z - z_0} \\
+&= \int_{\alpha}\frac{f(z)dz}{z-z_0} - f(z_0) \int_{\alpha}\frac{dz}{z - z_0}\\
+&= \int_{\alpha}\frac{f(z)dz}{z-z_0} - f(z_0) \int_{0}^{2\pi}\frac{\alpha'(t)dt}{\alpha(t) - z_0}\\
+&= \int_{\alpha}\frac{f(z)dz}{z-z_0} - f(z_0) \int_{0}^{2\pi}\frac{i e^{it}dt}{e^{it}}\\
+&= \int_{\alpha}\frac{f(z)dz}{z-z_0} - i\, f(z_0) \int_{0}^{2\pi}dt\\
+&= \int_{\alpha}\frac{f(z)dz}{z-z_0} - 2\pi\,i\, f(z_0).
+\end{align*}
+
+</div>
+
+
+<div class="thm">
+<p>
+Let \(f\) be holomorphic in a domain \(\Omega\), and let \(z_0\in \Omega\) fixed. Assume that the following closed disc is contained in \(\Omega\):
+\[ \bar{B}_r(z_0) = \{ z \, | \, |z-z_0| \leq r \} \subseteq \Omega. \]
+Then \(f\) can be written in \(\bar{B}_r(z_0)\) as a convergent power series 
+\[ f(z) = \sum_{k=0}^\infty a_k (z - z_0)^n.\]
+The convergence is absolutely and uniformly in \(B_r(z_0)\) (the interior).
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+Take any point in \(w\in B_r(z_0)\) and consider the curve \(\alpha(t) = z_0 + r e^{it}\), \(t\in [0,2\pi]\). Note then that \(|w-z_0| < r = |\alpha(t) - z_0|\). Then for any \(\xi\) such that \(|\xi - z_0| = r\) we have
+\[ \frac{1}{\xi - w} = \frac{1}{\xi - z_0 + z_0 - w} = \frac{1}{(\xi - z_0)\left( 1 + \frac{z_0 - w }{ \xi - z_0}\right) }= \frac{1}{\xi - z_0}\frac{1}{\left( 1 - \frac{w - z_0 }{ \xi - z_0}\right) }, \]
+note now that \(|w-z_0|/(\xi-z_0) < 1\), and then we can express the last term as  a power series:
+</p>
+
+<p>
+\[ \frac{1}{\xi - w}  = \frac{1}{\xi-z_0}\sum_{k=0}^{\infty}\left( \frac{w - z_0 }{ \xi - z_0}\right)^k, \]
+using the fact that  the series is absolutely and uniformly convergent, and the Cauchy integral formula we have:
+\[ f(w) = \frac{1}{2\pi i} \int_{\alpha} \frac{f(\xi)}{\xi - w}d\xi = \sum_{k = 0}^{\infty}\frac{1}{2\pi i} \int_{\alpha} \frac{f(\xi)d\xi}{(\xi - z_0)^{k+1}} (w - z_0)^k \]
+</p>
+
+</div>
+
+<div class="cor">
+<p>
+Let \(f\) be holomorphic in a domain \(\Omega\), and let \(z_0\in \Omega\) fixed. Then \(f\) is infinitely differentiable and the \(k\) -th order derivative of \(f\) satisfies
+\[ f^{(k)}(z_0) = \frac{k!}{2\pi i} \int_{\alpha}\frac{f(z)}{(z-z_0)^{k+1}}dz. \]
+</p>
+
+</div>
+
+
+<div class="thm">
+<p>
+<b>Theorema de Morera</b>. Let \(f:\Omega \to \mathbb{C}\) be continuous, \(\Omega\) a simply connected domain, and such that
+\[ \int_{\alpha} f(z) dz = 0, \]
+for all piecewise continuously differentiable closed curves in \(\Omega\). Then \(f\) is holomorphic.
+</p>
+
+</div>
+<div class="proof">
+<p>
+Let \(z_0\in \Omega\). By the Cauchy theorem, the function 
+\[ F(z) = \int_{z_0}^{z} f(\xi) d\xi,\]
+is well defined and independent of the path connecting \(z\) with \(z_0\).
+</p>
+
+<p>
+By continuity of \(f\) for any \(z \in \Omega\) and \(\epsilon >0\), there exists \(\delta >0\) such that if \(|\xi - z| < \delta\) then $|f(&xi;) - f(z) | &lt; &epsilon;. Let $ |h| &lt; &delta;$, then we have
+\[ \frac{F(z + h) - F(z)}{h} = \frac{1}{h} \left\{ \int_{z_0}^{z + h} f(\xi)dxi  - \int_{z_0}^{z} f(\xi)dxi \right\} = \frac{1}{h}\int_{z}^{z + h} f(\xi)dxi. \]
+On the other side note that 
+\[ f(z) = \frac{f(z)}{h} h = \frac{f(z)}{h} \int_{z}^{z+h} d\xi = \frac{1}{h} \int_{z}^{z+h} f(z) d\xi, \]
+then we can estimate
+\[ \left| \frac{F(z + h) - F(z)}{h} - f(z) \right| = \left| \frac{1}{h} \int_{z}^{z+h} (f(\xi) - f(z)) d\xi \right| \leq \frac{1}{h} \int_{z}^{z+h} \left|f(\xi) - f(z)\right| \left| d\xi \right| \leq \epsilon,\]
+where the last inequality follows when taking the straight line segment joining \(z\) with \(z + h\) (with length |h|).
+Then \(F'(z) = f(z)\). This implies \(f\) is analytic and hence holomorphic in \(\Omega\).
+</p>
+
+</div>
+
+<div class="prop">
+<p>
+Let \(f\) be an holomorphic function on a domain \(\Omega\) that contains the closed disc \(B = \bar{B}_r(z_0)\). Let \(M = \sup_{B} \{ |f(z)| \, | \, z \in B\}\). Then the derivatives satisfy the estimates
+\[ \left| f^{(k)}(z_0)\right| \leq \frac{k! M}{R^k} .\]
+</p>
+
+</div>
+
+
+<div class="thm">
+<p>
+<b>Liouville's Theorem</b>. Let \(f\) be a holomorphic function in the complex plane (that is, an entire function). If \(f\) is bounded, then \(f\) must be a constant.
+</p>
+
+</div>
+
+
+<div class="thm">
+<p>
+<b>Maximum Modulus Principle</b>. Let \(f\) be a holomorphic function in a domain \(\Omega\). If \(z_0\in \Omega\) is such that \(|f(z_0)| \geq f(z)\) for all \(z\in \Omega\), then \(z_0 \in \partial \Omega\), or \(f\) is constant.
+</p>
+
+</div>
+<div class="proof">
+<p>
+Let \(\alpha(t) = z_0 + re^{it}\) the circle around \(z_0\) and completely contained in \(\Omega\). Then by the Cauchy integral formula we have
+</p>
+\begin{align*}
+f(z_0) &= \frac{1}{2\pi i} \int_{\alpha} \frac{ f(z)}{z - z_0} dz \\
+& = \frac{1}{2\pi i} \int_{0}^{2\pi} \frac{ f(z_0 + re^{it})}{e^{it}} ire^{it}dt \\
+\end{align*}
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb13c135" class="outline-2">
+<h2 id="orgb13c135"><span class="section-number-2">10</span> Laurent Series and Residue Theorem</h2>
+<div class="outline-text-2" id="text-10">
+<div class="thm">
+<p>
+<b>The strong principle of analytic continuation</b>. Let \(\Omega\) be a domain and \(f\) be holomorphic on \(\Omega\). If there is a complex number \(z_0\in\Omega\) such that
+\[ f^{(k)}(z_0) = 0, \mbox{for }\quad k = 0,1,2,\ldots \]
+then, \(f(z) = 0\) for all \(z\in \Omega\).
+</p>
+
+</div>
+
+<div class="thm">
+<p>
+Let \(f\) be a holomorphic function in the domain \(\Omega\). Then, the sets of zeros of \(f\) is isolated: for every \(w\in \Omega\) with \(f(w) = 0\), there exists a small disc \(B_{r}(w)\) such that \(f(z) \neq 0\) for all \(z\in B_r(w)\setminus \{w\}\).
+</p>
+
+</div>
+
+<div class="prop">
+<p>
+If \(f\) is holomorphic on a domain  \(\Omega\), then the set of zeros \(\{z ∈ \Omega : f(z) = 0\}\) has no accumulation point in \(\Omega\) .
+</p>
+
+</div>
+
+<div class="thm">
+<p>
+<b>Riemann's removable singularity theorem</b>. Let \(f\) be holomorphic on a punctured disc \(B_r(w) \setminus \{w\}\). If \(f\) is bounded in \(B_r(w)\), then \(f\) can be extended to a holomorphic function \(F\) on \(B_r(w)\).
+</p>
+
+</div>
+
+<div class="thm">
+<p>
+<b>Laurent's theorem</b>. If \(f\) is holomorphic on the ring \(0 < r < |z - z_0| < R\), then the function can be written as the Laurent's series
+\[ f(z) = \sum_{n = -\infty}^{\infty} a_n (z - z_0) ^n ,\]
+with
+\[ a_n = \frac{1}{2\pi i} \int_{|w - z_0| = \rho}\frac{f(w)}{(w - z_0)^{n+1}} dw, \qquad, n = 0, \pm 1, \pm 2, \ldots, \quad r < \rho < R. \]
+</p>
+
+</div>
+
+
+<div class="mydef">
+<p>
+If \(f\) is holomorphic on \(0<|z - z_0| < R\) has a Laurent's expansion around \(z_0\), then the coefficient \(a_{-1}\) is called <b>the resudue</b> of \(f\).
+</p>
+
+</div>
+
+
+<div class="thm">
+<p>
+<b>Residue theorem</b>. Sea \(f\) holomorphic on \(\Omega\). Let \(\alpha\) be a piecewise continuously differentiable closed curve with a finite number of singularities of \(f\), \(z_1, z_2 \ldots, z_k\)
+on the interior of \(\alpha\), and no other singularity on \(\alpha\). Then
+\[ \int_{\alpha}f(z) dz = 2\pi i \sum_{n=1}^k \mbox{Res}_{z_n}f(z). \]
+</p>
+
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2021-03-12 Fri 00:00</p>
 <p class="author">Author: Daniel Ballesteros Chávez</p>
-<p class="date">Created: 2021-04-15 Thu 10:58</p>
+<p class="date">Created: 2021-05-18 Tue 00:07</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

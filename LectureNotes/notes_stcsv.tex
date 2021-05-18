@@ -1,4 +1,4 @@
-% Created 2021-04-13 Tue 12:25
+% Created 2021-05-05 Wed 14:19
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -65,7 +65,7 @@
 
 
 \section{Some subsets of the Euclidean Space}
-\label{sec:org8ab3a99}
+\label{sec:org78e97c3}
 
 We have defined for \(r>0\) the open ball centred at \(x_0\in \mathbb{R}^n\) as
 \[ B_r(x_0) = \{ x \in \mathbb{R}^n \, | \, |x - x_0| < r,\}\]
@@ -92,7 +92,7 @@ Now we can also define certain basic sets in \(\mathbb{R}^n\):
 
 
 \section{Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).}
-\label{sec:org8db8a7a}
+\label{sec:org540abca}
 
 In this section we will list definitions and establish some notation and terminology regarding the maps between to Euclidean spaces.
 
@@ -127,7 +127,8 @@ In this section we will list definitions and establish some notation and termino
 
 
 \section{Limits and Continuity}
-\label{sec:org2addd72}
+\label{sec:org59e9dfb}
+
 As in the case of real analysis (or any metric space) we define the limit \[ \lim_{x \to a} f(x) = b,\] by requiring that for every \(\epsilon >0\) there is a number \(\delta >0\) such that \(|f(x) - b| < \epsilon\) for every \(x\) in the domain of \(f\) such that \(|x-a| < \delta\).
 
 If \(f:A\to \mathbb{R}^m\) is such that \[\lim_{x\to a} f(x) = f(a),\] then we say that \(f\) is continuous at \(a\). If \(f\) is continuous at every \(a\in A\) then \(f\) is simply called continuous.
@@ -145,7 +146,7 @@ Continuity of a map can be determined in terms of open subsets. Here there is a 
 
 
 \section{Derivatives}
-\label{sec:org47ca9fd}
+\label{sec:orgdbf7623}
 
 \begin{mydef}
 A map \(f:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at \(a\in \mathbb{R}^n\) if there is a linear transformation \(Df_a: \mathbb{R}^n \to \mathbb{R}^m\) such that
@@ -184,10 +185,10 @@ Example:
 
 
 \section{Differential Geometry of Curves}
-\label{sec:orge1901f5}
+\label{sec:org8abffe9}
 
 \subsection{Curves in \(\mathbb{R}^3\)}
-\label{sec:org473c861}
+\label{sec:orgfa0e0d0}
 
 \begin{mydef}
 A \textbf{parameterised differentiable curve} is a map \(\alpha: I \to \mathbb{R}^3\), where
@@ -311,7 +312,7 @@ Given a curve \(\alpha\) parameterised by arc-length \(s\in (a,b)\), the curve \
 
 
 \subsection{Examples.}
-\label{sec:org5023a56}
+\label{sec:org76db948}
 
 \begin{enumerate}
 \item Find the trace and the tangent vectors of the following curves
@@ -356,7 +357,7 @@ dev.off()
 
 
 \subsection{The Local theory of Curves}
-\label{sec:org92af85e}
+\label{sec:orga731f1a}
 
 \begin{mydef}
 Let \(\alpha : I \to \mathbb{R}^3\) be a curve parameterised by arc-length. The curvature of \(\alpha\) at \(s\) is defined by
@@ -577,7 +578,7 @@ parameterised by arc-length, and \(T = \alpha'(s)\), is the tangent vector, then
 
 
 \subsection{Global Theory of Curves}
-\label{sec:org9a98577}
+\label{sec:orgd92f98f}
 
 Now we will study some global properties of Curves. Two classic results are: \textbf{the isoperimetric inequality} and the \textbf{Four Vertex Problem}.
 
@@ -585,7 +586,7 @@ In this course we will only focus on the former one. We will state the problem w
 
 
 \subsection{The Isoperimetric Inequality}
-\label{sec:orga0c6448}
+\label{sec:orgf42fe8d}
 
 The isoperimetric inequality is still a thriving topic in modern mathematics. 
 
@@ -622,7 +623,7 @@ order to obtain the maximum area?
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=100pt]{./dido_pic01.png}
-\caption{\label{fig:orgb7943f6}Dido's problem along the shore}
+\caption{\label{fig:orge2b8c3a}Dido's problem along the shore}
 \end{figure}
 
 
@@ -635,7 +636,7 @@ with the same sides.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=100pt]{./dido_pic02.png}
-\caption{\label{fig:org0eba042}Steiner's Method}
+\caption{\label{fig:orgc1516d9}Steiner's Method}
 \end{figure}
 
 
@@ -645,7 +646,7 @@ do Carmo's book on Curves and Surfaces presents Schmidt's proof of the isoperime
 Another nice resource was posted in moodle, where a solution using Fourier series is discussed.
 
 \section{The Isoperimetric Inequality in \(\mathbb{R}^n\).}
-\label{sec:org0ddfecf}
+\label{sec:org6b12a1a}
 
 The proof that we will give is due to X. Cabré which involves the solution of a particular Partial Differential Equation, and the Moving Plane technique developed by Alexandrov, to obtain the result.
 
@@ -664,7 +665,7 @@ where the Gamma function is given by
 \[ \Gamma(s) = \int_{0}^{\infty} e^{-t}t^{s-1}dt. \]
 
 \subsection{Moving planes}
-\label{sec:org5813056}
+\label{sec:orgeb70554}
 \begin{mydef}
 If \(\Omega \subset \mathbb{R}^n\) is a bounded domain (open and connected), and if \(u:\bar{\Omega} \to \mathbb{R}\) is a \(C^1\) function, we define the lower contact set as
 \[ S = \{ x_0 \in \Omega \, | \, u(x) \geq u(x_0) + \nabla u(x_0) \cdot (x - x_0), \mbox{ for all } x\in \bar{\Omega} \}. \] 
@@ -704,7 +705,7 @@ If the function is twice differentiable and \(x_0\in S\), then \(D^2u(x_0)\) is 
 
 
 \subsection{Partial Differential Equations: a Neumann Problem}
-\label{sec:orgb9ab9d4}
+\label{sec:orgc042550}
 
 In order to understand ponts in \(S\) that are in the boundary of our domain \(\Omega\), we introduce the following Partial Differential Equation:
 \begin{equation}
@@ -736,7 +737,7 @@ Let \(B_1(0)\) be the unit ball in \(\mathbb{R}^n\) with centre at the origin an
 \end{thm}
 
 \subsection{Proof of the Isoperimetric Inequality}
-\label{sec:orgbb30986}
+\label{sec:org93588b4}
 
 Using the last theorem, the proof of the isoperimetric inequality follows from
 \begin{equation}
@@ -760,7 +761,7 @@ Task.
 
 
 \subsection{Proof of the equality case}
-\label{sec:org40a04fb}
+\label{sec:org0361487}
 
 If the equality holds:
 \begin{itemize}
@@ -776,7 +777,7 @@ If the equality holds:
 
 
 \subsection{Conclusion.}
-\label{sec:orga95cb80}
+\label{sec:org5585d48}
 
 The Isoperimetric Inequality and related problems are advanced topics. 
 It is usually part of the introduction of a branch of mathematics called the Calculus of Variations, where the problem of optimization (finding maximum and minimum) takes place in infinite dimensional spaces.
@@ -791,7 +792,7 @@ On the geometric side, Alexandrov’s idea of moving planes has helped to solve 
 
 
 \section{Mechanics}
-\label{sec:org004a4bd}
+\label{sec:org8c5006e}
 
 We are coming back to the theory of curves in the space, and we will use calculus along curves toggether with Newton's law to determine the Laws that Kepler establised to determine the planetary motinon around the Sun.
 
@@ -840,7 +841,7 @@ If an object moves under a central force and has constant angular momentum
 \end{thm}
 
 \subsection{Kepler's laws of planetary motion.}
-\label{sec:orgcc973fe}
+\label{sec:org72584ad}
 
 \begin{itemize}
 \item Each planet moves in a plane, not in a circle, but in an elliptical orbit with the sun at one focus.
@@ -853,4 +854,28 @@ If an object moves under a central force and has constant angular momentum
 \end{thm}
 
 In this section, we will use Newton's gravity law to obtain Kepler's law about planetary motion.
+
+
+\subsubsection{The Force is radial and the Angular momentum is constant.}
+\label{sec:orga608e87}
+
+Place the origing of the poisition vector of the planet at the Sun. Since we will described the movement of the planet with respect to the sun, we will be only considering 
+the force interacting between these two objects. Form the Newton'w Law, we see that the force is parallel to the position vector. Then according to our definition, the force
+\textbf{F} is a \emph{radial force}. This implies that the torque \(\tau = 0\). If the torque is zero, then then \emph{angular momentum} \(\mathbf{L}(t)\) is constant (independent of \(t\)).
+Note that from the definition of angular momentum we have
+\[ |\mathbf{L}(t)| = |\mathbf{r}(t) \times m \mathbf{v}(t)| = m |\mathbf{r}(t)||\mathbf{v}(t)| \cos\theta \]
+
+All the physical evidence shows that
+\begin{itemize}
+\item The mass of the planet is not zero: \(m\neq 0\).
+\item The planets are moving then \(|\mathbf{v}(t)| \neq 0\)
+\item The distance of the planet from the Sun is poisitive, then \(|\mathbf{r}(t)| \neq 0\).
+\end{itemize}
+
+All this implies that the \emph{Angular Mumentum} \(\mathbf{L}(t) = \mathbf{L} \neq \mathbf{0}\).
+
+\subsubsection{All the movement happens on a plane}
+\label{sec:orgcb95f75}
+
+Since all the position vectors \(\mathbf{r}(t)\) are perpendicular to a constant vector \(\mathbf{L}\), then  \(\mathbf{L}\cdot \left(\mathbf{r}(t) - \mathbf{r}(t_0)\right) = 0\). Then all the movement is restricted to a plane.
 \end{document}
