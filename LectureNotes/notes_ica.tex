@@ -1,4 +1,4 @@
-% Created 2021-05-18 Tue 09:50
+% Created 2021-05-19 Wed 11:17
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -66,7 +66,7 @@
 
 
 \section{Sequences and limits}
-\label{sec:org8675c08}
+\label{sec:org99924fc}
 
 \begin{mydef}
 A sequence in \(\mathbb{C}\) is a function \(\varphi: \mathbb{N}\to \mathbb{C}\). We use the notation
@@ -215,7 +215,7 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 
 
 \section{Continuity}
-\label{sec:org8c98170}
+\label{sec:org1ad9e7a}
 \begin{mydef}
 The function \(f(z)\) is said to have the limit \(w_0\in \mathbb{C}\) as \(z\) tends to \(a\in\mathbb{C}\),  if for every \(\epsilon >0\) there exists a number \(\delta = \delta(\epsilon) >0\) with the property that if \(|z - a| < \delta\) then it holds \(|f(z) - w_0| <\epsilon\), and in that case we write \[ \lim_{z\to a} f(z) = w_0 . \]
 \end{mydef}
@@ -287,7 +287,7 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 \[ |f(z) - f(w) | = |n^2 - \left(n + \frac{\delta}{2}\right)^2| =  n\delta + \frac{\delta^2}{4} > n\delta > 1 = \epsilon. \]
 
 \section{Basic topology of \(\mathbb{C}\)}
-\label{sec:orgf113166}
+\label{sec:orge1bcc19}
 
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
 
@@ -552,7 +552,7 @@ which its a contradiction itself. Consequently \(f\) is uniformly continuous in 
 \end{proof}
 
 \section{Derivatives}
-\label{sec:orgde69011}
+\label{sec:orgf630043}
 
 The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
 relates with that of the derivative of maps from \(\mathbb{R}^2\) to \(\mathbb{R}^2\). The properties of complex differentiation have been extensively used and applied in other areas of mathematics, leading to astonishing consequences and results.
@@ -683,7 +683,7 @@ a_{2} &  a_{1}\\
 
 
 \section{Cauchy-Riemann Equations}
-\label{sec:org2a8e88f}
+\label{sec:org5e11eb1}
 
 \begin{thm}
 Let \(\Omega\subseteq \mathbb{C}\) an open set \(f:\mathbb{C} \to \mathbb{C}\), and \(z_0= x_0 + iy_0 \in \Omega\). Write \(f(z) = u(x,y) + i v(x,y)\), where \(u,v:\Omega\subset \mathbb{R}^2 \to \mathbb{R}\).
@@ -790,7 +790,7 @@ What is happening here?
 \[f(z) = \frac{ x^5  - 10 x^3 y^2 + 5 x y^4}{(x^2 + y^2) ^2} + i \frac{5 x^4 y -  10 x^2 y^3  +  y^5}{(x^2 + y^2)^2} \]
 
 \section{Some consequences of the Cauchy-Riemann Equations}
-\label{sec:org97f6ae2}
+\label{sec:org4cbf14d}
 
 Note that if \(f(z)  = u(x,y) + i v(x, y)\) is a complex differentiable function at \(z_0\), when taking the limit of the quitient of differences, it does not matter how \(z \to z_0\) approaches,
 then 
@@ -837,7 +837,7 @@ It follows from the real case and the mean value theorem (since \(\Omega\) is co
 \end{proof}
 
 \section{Harmonic Functions}
-\label{sec:orgce2ada0}
+\label{sec:orgaf01b4e}
 
 We already saw in one of the previous exercises that if a function is holomorphic, then the real and imaginari parts satisfy the Laplace equation. Here the statement:
 
@@ -883,7 +883,7 @@ Then the analytic (Holomorphic function) is given by
 
 
 \section{Conformal Mappings}
-\label{sec:org030fd41}
+\label{sec:org4fae0e8}
 
 In this section we will study curves in the complex plane, and when two curves intersect we will define the notion of angle between the to curves at the intersection point. Mappings from the complex plane into itself that preserve angles will then be considered. Among the basic examples of these kind of mappings are the so called Möbius transformations. Some geometric applicaitons will also be analysed.
 
@@ -1003,9 +1003,9 @@ Some examples of conformal mappings:
 \item The exponential function \(f(z) = e^{z}\) is conformal at each point \(z\in\mathbb{C}\) and its image is the set \(\mathbb{C}\setminus\{0\}\).
 \end{itemize}
 \section{Cauchy's Theorem and Cauchy's Integral Formula}
-\label{sec:org425b581}
+\label{sec:org96aa4d2}
 
-\textbf{The Main assumptions for this section}. We will prove the Cauchy-Riemmann theorem assuming that if \(f\) is holomorphic in \(\Omega\), then one of the two situations occur
+\textbf{The Main assumptions for this section}. We will prove the Cauchy theorem assuming that if \(f\) is holomorphic in \(\Omega\), then one of the two situations occur
 \begin{itemize}
 \item \(f\) has a continuous primitive \(F\) in \(\Omega\), i.e., \(F'(z) = f(z)\) for all \(z\in \Omega\).
 \item \(f\) is \(C^{1}(\Omega)\). This means that \(f\) has all partial derivatives and they are all continuous.
@@ -1169,7 +1169,7 @@ Let \(f\) be an holomorphic function on a domain \(\Omega\) that contains the cl
 \textbf{Maximum Modulus Principle}. Let \(f\) be a holomorphic function in a domain \(\Omega\). If \(z_0\in \Omega\) is such that \(|f(z_0)| \geq f(z)\) for all \(z\in \Omega\), then \(z_0 \in \partial \Omega\), or \(f\) is constant.
 \end{thm}
 \begin{proof}
-We will proceed by a contradiction, lets suppose \(z_0 \in \Omega\) such that \(|f(z) | \leq |f(z_0)|\) for all \(z\in \Omega\).
+
 
 Let \(\alpha(t) = z_0 + re^{it}\) the circle around \(z_0\) and completely contained in \(\Omega\). Then by the Cauchy integral formula we have the following mean value property
 \begin{align*}
@@ -1177,11 +1177,24 @@ f(z_0) &= \frac{1}{2\pi i} \int_{\alpha} \frac{ f(z)}{z - z_0} dz \\
 & = \frac{1}{2\pi i} \int_{0}^{2\pi} \frac{ f(z_0 + re^{it})}{re^{it}} ire^{it}dt \\
 & = \frac{1}{2\pi } \int_{0}^{2\pi} f(z_0 + re^{it})dt.
 \end{align*}
-Let \$
+
+We will prove that if \(z_0\in \Omega\) has maximum modulus, then \(f\) is constant, i.e.,  suppose \(z_0 \in \Omega\) such that \(|f(z) | \leq |f(z_0)|\) for all \(z\in \Omega\). Now consider \(A = \{ z\in \Omega \, | \, f(z) = f(z_0) \}\), note that this set is nonempty since \(z_0 \in A\).
+
+Part I) \textbf{Prove that the set \(A\)  is open}. Let \(w \in A\) and suppose \(B_R(w) \subset \Omega\). Then for any \(0 < r < R\) by the mean value property we have
+\[ |f(z_0)| = |f(w)| = \left|\frac{1}{2\pi\,i}\int_{0}^{2\pi} f(w + re^{it})dt \right| \leq  \frac{1}{2\pi } \int_{0}^{2\pi} \left|f(w + re^{it})\right| dt \leq |f(z_0)| \]
+Then all the inequalities can be replaced by equalities and in particular we have
+\[ |f(w + re^{it}| = |f(z_0)|,\]
+for all \$ 0 < r < R\$. this means that \(B_r(w) \subset A\), and hence, \(A\) is open.
+
+Part II) \textbf{Prove that \(A\) is closed}. Recall that by topological arguments, that if \(f:\Omega \to \mathbb{C}\) is continuous, then the inverse image of a closed set in \(\mathbb{C}\) is a closed set in \(\Omega\), and similar for real valued functions. Just note that if \(r_0 = |f(z_0)|\) then
+\[ A = g^{-1}(\{r_0\}), \]
+where \(g(z) = |f(z)|\), is the composition of \(f\) with the complex norm. Since both are continuous, their composition is continuous and since \(\{r_0\}\subset\mathbb{R}\) is closed then \(A\) is closed.
+
+Part III) \textbf{Use connectedness}. \(A = \Omega\). Again by topological arguments, since \(\Omega\) is assumed to be connected, the only subsets that are both open and closed are the empty set and the whole set \(\Omega\). Since \(A \neq \emptyset\) then \(A=\Omega\).
 \end{proof}
 
 \section{Laurent Series and Residue Theorem}
-\label{sec:org3bede8d}
+\label{sec:org1957ed6}
 
 \begin{thm}
 \textbf{The strong principle of analytic continuation}. Let \(\Omega\) be a domain and \(f\) be holomorphic on \(\Omega\). If there is a complex number \(z_0\in\Omega\) such that
@@ -1194,7 +1207,7 @@ Let \(f\) be a holomorphic function in the domain \(\Omega\). Then, the sets of 
 \end{thm}
 
 \begin{prop}
-If \(f\) is holomorphic on a domain  \(\Omega\), then the set of zeros \(\{z ∈ \Omega : f(z) = 0\}\) has no accumulation point in \(\Omega\) .
+If \(f\) is holomorphic on a domain  \(\Omega\), then the set of zeros \(\{z \in \Omega : f(z) = 0\}\) has no accumulation point in \(\Omega\) .
 \end{prop}
 
 \begin{thm}
