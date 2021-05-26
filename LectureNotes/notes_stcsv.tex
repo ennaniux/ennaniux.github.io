@@ -1,4 +1,4 @@
-% Created 2021-05-26 Wed 11:48
+% Created 2021-05-26 Wed 11:59
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -65,7 +65,7 @@
 
 
 \section{Some subsets of the Euclidean Space}
-\label{sec:org845caf8}
+\label{sec:org1bfd0bf}
 
 We have defined for \(r>0\) the open ball centred at \(x_0\in \mathbb{R}^n\) as
 \[ B_r(x_0) = \{ x \in \mathbb{R}^n \, | \, |x - x_0| < r,\}\]
@@ -92,7 +92,7 @@ Now we can also define certain basic sets in \(\mathbb{R}^n\):
 
 
 \section{Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).}
-\label{sec:org9c96669}
+\label{sec:org836fcee}
 
 In this section we will list definitions and establish some notation and terminology regarding the maps between to Euclidean spaces.
 
@@ -127,7 +127,7 @@ In this section we will list definitions and establish some notation and termino
 
 
 \section{Limits and Continuity}
-\label{sec:orgf2d065e}
+\label{sec:org1083ae7}
 
 As in the case of real analysis (or any metric space) we define the limit \[ \lim_{x \to a} f(x) = b,\] by requiring that for every \(\epsilon >0\) there is a number \(\delta >0\) such that \(|f(x) - b| < \epsilon\) for every \(x\) in the domain of \(f\) such that \(|x-a| < \delta\).
 
@@ -146,7 +146,7 @@ Continuity of a map can be determined in terms of open subsets. Here there is a 
 
 
 \section{Derivatives}
-\label{sec:org6c07a94}
+\label{sec:orgdf52a30}
 
 \begin{mydef}
 A map \(f:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at \(a\in \mathbb{R}^n\) if there is a linear transformation \(Df_a: \mathbb{R}^n \to \mathbb{R}^m\) such that
@@ -185,10 +185,10 @@ Example:
 
 
 \section{Differential Geometry of Curves}
-\label{sec:org8c8e3f0}
+\label{sec:org899d111}
 
 \subsection{Curves in \(\mathbb{R}^3\)}
-\label{sec:org9c85bb8}
+\label{sec:orgea00c22}
 
 \begin{mydef}
 A \textbf{parameterised differentiable curve} is a map \(\alpha: I \to \mathbb{R}^3\), where
@@ -312,7 +312,7 @@ Given a curve \(\alpha\) parameterised by arc-length \(s\in (a,b)\), the curve \
 
 
 \subsection{Examples.}
-\label{sec:org211fa2a}
+\label{sec:orge38cd07}
 
 \begin{enumerate}
 \item Find the trace and the tangent vectors of the following curves
@@ -357,7 +357,7 @@ dev.off()
 
 
 \subsection{The Local theory of Curves}
-\label{sec:org347f034}
+\label{sec:orgb95a1d5}
 
 \begin{mydef}
 Let \(\alpha : I \to \mathbb{R}^3\) be a curve parameterised by arc-length. The curvature of \(\alpha\) at \(s\) is defined by
@@ -578,7 +578,7 @@ parameterised by arc-length, and \(T = \alpha'(s)\), is the tangent vector, then
 
 
 \subsection{Global Theory of Curves}
-\label{sec:org27deaae}
+\label{sec:org1ad5749}
 
 Now we will study some global properties of Curves. Two classic results are: \textbf{the isoperimetric inequality} and the \textbf{Four Vertex Problem}.
 
@@ -586,7 +586,7 @@ In this course we will only focus on the former one. We will state the problem w
 
 
 \subsection{The Isoperimetric Inequality}
-\label{sec:org186102a}
+\label{sec:org37a0f8e}
 
 The isoperimetric inequality is still a thriving topic in modern mathematics. 
 
@@ -623,7 +623,7 @@ order to obtain the maximum area?
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=100pt]{./dido_pic01.png}
-\caption{\label{fig:org4a45116}Dido's problem along the shore}
+\caption{\label{fig:org5195658}Dido's problem along the shore}
 \end{figure}
 
 
@@ -636,7 +636,7 @@ with the same sides.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=100pt]{./dido_pic02.png}
-\caption{\label{fig:orgcc042f6}Steiner's Method}
+\caption{\label{fig:org91eca1e}Steiner's Method}
 \end{figure}
 
 
@@ -646,7 +646,7 @@ do Carmo's book on Curves and Surfaces presents Schmidt's proof of the isoperime
 Another nice resource was posted in moodle, where a solution using Fourier series is discussed.
 
 \section{The Isoperimetric Inequality in \(\mathbb{R}^n\).}
-\label{sec:org0aa4173}
+\label{sec:orgbccaa8a}
 
 The proof that we will give is due to X. Cabré which involves the solution of a particular Partial Differential Equation, and the Moving Plane technique developed by Alexandrov, to obtain the result.
 
@@ -665,7 +665,7 @@ where the Gamma function is given by
 \[ \Gamma(s) = \int_{0}^{\infty} e^{-t}t^{s-1}dt. \]
 
 \subsection{Moving planes}
-\label{sec:orgb23d9b4}
+\label{sec:orgaedc8ec}
 \begin{mydef}
 If \(\Omega \subset \mathbb{R}^n\) is a bounded domain (open and connected), and if \(u:\bar{\Omega} \to \mathbb{R}\) is a \(C^1\) function, we define the lower contact set as
 \[ S = \{ x_0 \in \Omega \, | \, u(x) \geq u(x_0) + \nabla u(x_0) \cdot (x - x_0), \mbox{ for all } x\in \bar{\Omega} \}. \] 
@@ -705,7 +705,7 @@ If the function is twice differentiable and \(x_0\in S\), then \(D^2u(x_0)\) is 
 
 
 \subsection{Partial Differential Equations: a Neumann Problem}
-\label{sec:org76f6fd8}
+\label{sec:orgdb70829}
 
 In order to understand ponts in \(S\) that are in the boundary of our domain \(\Omega\), we introduce the following Partial Differential Equation:
 \begin{equation}
@@ -737,7 +737,7 @@ Let \(B_1(0)\) be the unit ball in \(\mathbb{R}^n\) with centre at the origin an
 \end{thm}
 
 \subsection{Proof of the Isoperimetric Inequality}
-\label{sec:org163e7be}
+\label{sec:org1c5c7f3}
 
 Using the last theorem, the proof of the isoperimetric inequality follows from
 \begin{equation}
@@ -761,7 +761,7 @@ Task.
 
 
 \subsection{Proof of the equality case}
-\label{sec:org46244b6}
+\label{sec:org3c1babf}
 
 If the equality holds:
 \begin{itemize}
@@ -777,7 +777,7 @@ If the equality holds:
 
 
 \subsection{Conclusion.}
-\label{sec:orgee60030}
+\label{sec:orgdf71926}
 
 The Isoperimetric Inequality and related problems are advanced topics. 
 It is usually part of the introduction of a branch of mathematics called the Calculus of Variations, where the problem of optimization (finding maximum and minimum) takes place in infinite dimensional spaces.
@@ -792,7 +792,7 @@ On the geometric side, Alexandrov’s idea of moving planes has helped to solve 
 
 
 \section{Mechanics}
-\label{sec:orga5bcd20}
+\label{sec:org48fe45c}
 
 We are coming back to the theory of curves in the space, and we will use calculus along curves toggether with Newton's law to determine the Laws that Kepler establised to determine the planetary motinon around the Sun.
 
@@ -841,7 +841,7 @@ If an object moves under a central force and has constant angular momentum
 \end{thm}
 
 \subsection{Kepler's laws of planetary motion.}
-\label{sec:org1798242}
+\label{sec:org8175a37}
 
 \begin{itemize}
 \item Each planet moves in a plane, not in a circle, but in an elliptical orbit with the sun at one focus.
@@ -857,7 +857,7 @@ In this section, we will use Newton's gravity law to obtain Kepler's law about p
 
 
 \subsubsection{The Force is radial and the Angular momentum is constant.}
-\label{sec:org2040e2b}
+\label{sec:orge5fce7e}
 
 Place the origing of the poisition vector of the planet at the Sun. Since we will described the movement of the planet with respect to the sun, we will be only considering 
 the force interacting between these two objects. Form the Newton'w Law, we see that the force is parallel to the position vector. Then according to our definition, the force
@@ -875,40 +875,40 @@ All the physical evidence shows that
 All this implies that the \emph{Angular Mumentum} \(\mathbf{L}(t) = \mathbf{L} \neq \mathbf{0}\).
 
 \subsubsection{All the movement happens on a plane}
-\label{sec:org16383f8}
+\label{sec:org63b1c15}
 
 Since all the position vectors \(\mathbf{r}(t)\) are perpendicular to a constant vector \(\mathbf{L}\), then  \(\mathbf{L}\cdot \left(\mathbf{r}(t) - \mathbf{r}(t_0)\right) = 0\). Then all the movement is restricted to a plane.
 
 
 \subsubsection{The radial vector sweeps out equal areas in equal times}
-\label{sec:org58f272d}
+\label{sec:org7d2e27e}
 
 We can assume all the movement is restricted to the \(xy\) - plane. We can write the position vector \(\mathbf{r}(t)\) in polar coordinates \((r(t), \theta(t)) = (r(t)\cos\theta(t), r(t)\sin\theta(t), 0)\). We define the Area function \(A(t)\) as the circular sector area
 \[ A(t) = \frac{1}{2} r(t)^2 \theta(t) .\]
 
 \section{Surfaces in \(\mathbb{R}^3\)}
-\label{sec:org85252fd}
+\label{sec:orgcfb3ba8}
 
 \section{The Inverse Function Theorem.}
-\label{sec:org3183e4b}
+\label{sec:orgc86d67c}
 \begin{thm}
 Suppose that \(f:\mathbb{R}^n \to \mathbb{R}^n\) is a continuously differentiable in an open set \(U\subset \mathbb{R}^n\) containing a point \(a\in U\), and suppose \(\det(Df_a) \neq 0\). Then there are open sets \(V,W\subset\mathbb{R}^n\), 
 \end{thm}
 
 \section{The Implicit function theorem}
-\label{sec:orga4d515f}
+\label{sec:orga8fb1fc}
 
 
 \section{Multiple Integration: surface areas, volumes.}
-\label{sec:org8009f53}
+\label{sec:org8efc061}
 
 \section{Gradient, Divergence and Curl. Stokes’ Theorem, the Flux of a Vector Field}
-\label{sec:org30ba557}
+\label{sec:orga3915cd}
 \section{Tensors and their properties. Differential forms.}
-\label{sec:org2ba3a5c}
+\label{sec:org71f9e18}
 
 \subsection{Multilinear maps}
-\label{sec:org2c0fece}
+\label{sec:orge839fa4}
 \begin{itemize}
 \item A function \(T:V^k = V\times\cdots\times V \to \mathbb{R}\) that is \textbf{multilinear} at each entry is called \textbf{k-tensor} on \(V\), denoted by \(\mathcal{T}^k(V)\).
 \item The set \(\mathcal{T}^k(V)\) is a vector space over \(\mathbb{R}\).
@@ -941,7 +941,7 @@ Suppose that \(f:\mathbb{R}^n \to \mathbb{R}^n\) is a continuously differentiabl
 \item Identity
 \item Invertibility
 \item In general, composition of two permutations is not commutative.
-\item Every permutation of a finite set can be expressed as the product of transpositions.[38] Although many such expressions for a given permutation may exist, either they all contain an even or an odd number of transpositions. Thus all permutations can be classified as even or odd depending on this number.
+\item Every permutation of a finite set can be expressed as the product of transpositions. Although many such expressions for a given permutation may exist, either they all contain an even or an odd number of transpositions. Thus all permutations can be classified as even or odd depending on this number.
 \end{itemize}
 \item Definition of \(\mbox{Alt}:\mathcal{T}^k(V) \to \Lambda^k(V)\).  The number \(k!\) is the number of ways we can rearrange \(k\) things into a new order. \[ \mbox{Alt}(T)(v_1,\ldots,v_k)  = \frac{1}{k!}\sum_{\sigma\in S_k} \mbox{sgn} \sigma \, T(v_{\sigma(1)},\ldots, v_{\sigma(1)}) \]
 \item Note \(\left.\mbox{Alt}\right|_{\Lambda^k(V)} = \mbox{Id}\), and \(\mbox{Alt}^2 = Id\).
@@ -968,7 +968,7 @@ Suppose that \(f:\mathbb{R}^n \to \mathbb{R}^n\) is a continuously differentiabl
 \end{itemize}
 
 \subsection{Differentiable Forms}
-\label{sec:org73e2241}
+\label{sec:org2361002}
 \begin{itemize}
 \item Recall the notion (definition) of a vector field.
 \item The map \(\omega : \mathbb{R}^n \to \Lambda^k(\mathbb{R}^n)\).
