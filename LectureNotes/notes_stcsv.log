@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.7.31)  5 MAY 2021 14:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2020.7.31)  26 MAY 2021 10:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -74,144 +74,26 @@ LaTeX Font Info:    Try loading font information for U+msa on input line 398.
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-\copyins=\insert199
-\abstractbox=\box29
-\listisep=\skip45
-\c@part=\count92
-\c@section=\count93
-\c@subsection=\count94
-\c@subsubsection=\count95
-\c@paragraph=\count96
-\c@subparagraph=\count97
-\c@figure=\count98
-\c@table=\count99
-\abovecaptionskip=\skip46
-\belowcaptionskip=\skip47
-\captionindent=\dimen113
-\thm@style=\toks19
-\thm@bodyfont=\toks20
-\thm@headfont=\toks21
-\thm@notefont=\toks22
-\thm@headpunct=\toks23
-\thm@preskip=\skip48
-\thm@postskip=\skip49
-\thm@headsep=\skip50
-\dth@everypar=\toks24
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
-Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
-\@enLab=\toks25
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amscd.sty
-Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
-\athelp@=\toks26
-\minaw@=\dimen114
-\bigaw@=\dimen115
-\minCDarrowwidth=\dimen116
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
-Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks27
-\verbatim@line=\toks28
-\verbatim@in@stream=\read1
-)
-(/usr/share/texlive/texmf-dist/tex/generic/epsf/epsf.sty
-This is `epsf.tex' v2.7.4 <14 February 2011>
-\epsffilein=\read2
-\epsfframemargin=\dimen117
-\epsfframethickness=\dimen118
-\epsfrsize=\dimen119
-\epsftmp=\dimen120
-\epsftsize=\dimen121
-\epsfxsize=\dimen122
-\epsfysize=\dimen123
-\pspoints=\dimen124
-) (/home/daniel/texmf/tex/latex/jknapltx/mathrsfs.sty
-Package: mathrsfs 1996/01/01 Math RSFS package v1.0 (jk)
-\symrsfs=\mathgroup6
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks29
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 99.
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
-))
-\Gin@req@height=\dimen125
-\Gin@req@width=\dimen126
-)
-(/home/daniel/texmf/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-(/home/daniel/texmf/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
-)
-(/home/daniel/texmf/tex/latex/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/home/daniel/texmf/tex/generic/infwarerr/infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-(/home/daniel/texmf/tex/generic/iftex/ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-)))
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdfescape.sty
 ! Interruption.
-l.57 
-         \ifx\x\empty % LaTeX, first loading,
+\@pr@videpackage ... \xdef \csname ver@\@currname 
+                                                  .\@currext \endcsname {#1}...
+l.30 ...}[2013/01/14 v3.01 Basic AMSFonts support]
+                                                  
 ? 
 ! Emergency stop.
-l.57 
-         \ifx\x\empty % LaTeX, first loading,
+\@pr@videpackage ... \xdef \csname ver@\@currname 
+                                                  .\@currext \endcsname {#1}...
+l.30 ...}[2013/01/14 v3.01 Basic AMSFonts support]
+                                                  
 End of file on the terminal!
 
  
 Here is how much of TeX's memory you used:
- 2453 strings out of 494561
- 30176 string characters out of 6177454
- 88687 words of memory out of 5000000
- 5951 multiletter control sequences out of 15000+600000
+ 750 strings out of 494561
+ 8691 string characters out of 6177454
+ 64623 words of memory out of 5000000
+ 4482 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
- 175 hyphenation exceptions out of 8191
- 35i,0n,29p,270b,43s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 14 hyphenation exceptions out of 8191
+ 34i,0n,25p,270b,43s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

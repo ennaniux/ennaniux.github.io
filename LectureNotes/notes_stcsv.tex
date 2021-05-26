@@ -1,4 +1,4 @@
-% Created 2021-05-05 Wed 14:19
+% Created 2021-05-26 Wed 10:59
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -65,7 +65,7 @@
 
 
 \section{Some subsets of the Euclidean Space}
-\label{sec:org78e97c3}
+\label{sec:org87b74bd}
 
 We have defined for \(r>0\) the open ball centred at \(x_0\in \mathbb{R}^n\) as
 \[ B_r(x_0) = \{ x \in \mathbb{R}^n \, | \, |x - x_0| < r,\}\]
@@ -92,7 +92,7 @@ Now we can also define certain basic sets in \(\mathbb{R}^n\):
 
 
 \section{Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).}
-\label{sec:org540abca}
+\label{sec:orgc9e4d97}
 
 In this section we will list definitions and establish some notation and terminology regarding the maps between to Euclidean spaces.
 
@@ -127,7 +127,7 @@ In this section we will list definitions and establish some notation and termino
 
 
 \section{Limits and Continuity}
-\label{sec:org59e9dfb}
+\label{sec:orge97ea5f}
 
 As in the case of real analysis (or any metric space) we define the limit \[ \lim_{x \to a} f(x) = b,\] by requiring that for every \(\epsilon >0\) there is a number \(\delta >0\) such that \(|f(x) - b| < \epsilon\) for every \(x\) in the domain of \(f\) such that \(|x-a| < \delta\).
 
@@ -146,7 +146,7 @@ Continuity of a map can be determined in terms of open subsets. Here there is a 
 
 
 \section{Derivatives}
-\label{sec:orgdbf7623}
+\label{sec:org49920d3}
 
 \begin{mydef}
 A map \(f:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at \(a\in \mathbb{R}^n\) if there is a linear transformation \(Df_a: \mathbb{R}^n \to \mathbb{R}^m\) such that
@@ -185,10 +185,10 @@ Example:
 
 
 \section{Differential Geometry of Curves}
-\label{sec:org8abffe9}
+\label{sec:org5aa63ee}
 
 \subsection{Curves in \(\mathbb{R}^3\)}
-\label{sec:orgfa0e0d0}
+\label{sec:org06775d1}
 
 \begin{mydef}
 A \textbf{parameterised differentiable curve} is a map \(\alpha: I \to \mathbb{R}^3\), where
@@ -312,7 +312,7 @@ Given a curve \(\alpha\) parameterised by arc-length \(s\in (a,b)\), the curve \
 
 
 \subsection{Examples.}
-\label{sec:org76db948}
+\label{sec:org76fd3f8}
 
 \begin{enumerate}
 \item Find the trace and the tangent vectors of the following curves
@@ -357,7 +357,7 @@ dev.off()
 
 
 \subsection{The Local theory of Curves}
-\label{sec:orga731f1a}
+\label{sec:orgd2e2c33}
 
 \begin{mydef}
 Let \(\alpha : I \to \mathbb{R}^3\) be a curve parameterised by arc-length. The curvature of \(\alpha\) at \(s\) is defined by
@@ -578,7 +578,7 @@ parameterised by arc-length, and \(T = \alpha'(s)\), is the tangent vector, then
 
 
 \subsection{Global Theory of Curves}
-\label{sec:orgd92f98f}
+\label{sec:orga031936}
 
 Now we will study some global properties of Curves. Two classic results are: \textbf{the isoperimetric inequality} and the \textbf{Four Vertex Problem}.
 
@@ -586,7 +586,7 @@ In this course we will only focus on the former one. We will state the problem w
 
 
 \subsection{The Isoperimetric Inequality}
-\label{sec:orgf42fe8d}
+\label{sec:org4f1ac1f}
 
 The isoperimetric inequality is still a thriving topic in modern mathematics. 
 
@@ -623,7 +623,7 @@ order to obtain the maximum area?
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=100pt]{./dido_pic01.png}
-\caption{\label{fig:orge2b8c3a}Dido's problem along the shore}
+\caption{\label{fig:org8e10af0}Dido's problem along the shore}
 \end{figure}
 
 
@@ -636,7 +636,7 @@ with the same sides.
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=100pt]{./dido_pic02.png}
-\caption{\label{fig:orgc1516d9}Steiner's Method}
+\caption{\label{fig:orgc760e61}Steiner's Method}
 \end{figure}
 
 
@@ -646,7 +646,7 @@ do Carmo's book on Curves and Surfaces presents Schmidt's proof of the isoperime
 Another nice resource was posted in moodle, where a solution using Fourier series is discussed.
 
 \section{The Isoperimetric Inequality in \(\mathbb{R}^n\).}
-\label{sec:org6b12a1a}
+\label{sec:org275f56d}
 
 The proof that we will give is due to X. Cabré which involves the solution of a particular Partial Differential Equation, and the Moving Plane technique developed by Alexandrov, to obtain the result.
 
@@ -665,7 +665,7 @@ where the Gamma function is given by
 \[ \Gamma(s) = \int_{0}^{\infty} e^{-t}t^{s-1}dt. \]
 
 \subsection{Moving planes}
-\label{sec:orgeb70554}
+\label{sec:org26a2c86}
 \begin{mydef}
 If \(\Omega \subset \mathbb{R}^n\) is a bounded domain (open and connected), and if \(u:\bar{\Omega} \to \mathbb{R}\) is a \(C^1\) function, we define the lower contact set as
 \[ S = \{ x_0 \in \Omega \, | \, u(x) \geq u(x_0) + \nabla u(x_0) \cdot (x - x_0), \mbox{ for all } x\in \bar{\Omega} \}. \] 
@@ -705,7 +705,7 @@ If the function is twice differentiable and \(x_0\in S\), then \(D^2u(x_0)\) is 
 
 
 \subsection{Partial Differential Equations: a Neumann Problem}
-\label{sec:orgc042550}
+\label{sec:org574a3b5}
 
 In order to understand ponts in \(S\) that are in the boundary of our domain \(\Omega\), we introduce the following Partial Differential Equation:
 \begin{equation}
@@ -737,7 +737,7 @@ Let \(B_1(0)\) be the unit ball in \(\mathbb{R}^n\) with centre at the origin an
 \end{thm}
 
 \subsection{Proof of the Isoperimetric Inequality}
-\label{sec:org93588b4}
+\label{sec:orgdd1f3bc}
 
 Using the last theorem, the proof of the isoperimetric inequality follows from
 \begin{equation}
@@ -761,7 +761,7 @@ Task.
 
 
 \subsection{Proof of the equality case}
-\label{sec:org0361487}
+\label{sec:org7956814}
 
 If the equality holds:
 \begin{itemize}
@@ -777,7 +777,7 @@ If the equality holds:
 
 
 \subsection{Conclusion.}
-\label{sec:org5585d48}
+\label{sec:orgde97792}
 
 The Isoperimetric Inequality and related problems are advanced topics. 
 It is usually part of the introduction of a branch of mathematics called the Calculus of Variations, where the problem of optimization (finding maximum and minimum) takes place in infinite dimensional spaces.
@@ -792,7 +792,7 @@ On the geometric side, Alexandrov’s idea of moving planes has helped to solve 
 
 
 \section{Mechanics}
-\label{sec:org8c5006e}
+\label{sec:org0fe4432}
 
 We are coming back to the theory of curves in the space, and we will use calculus along curves toggether with Newton's law to determine the Laws that Kepler establised to determine the planetary motinon around the Sun.
 
@@ -841,7 +841,7 @@ If an object moves under a central force and has constant angular momentum
 \end{thm}
 
 \subsection{Kepler's laws of planetary motion.}
-\label{sec:org72584ad}
+\label{sec:orgbf9b715}
 
 \begin{itemize}
 \item Each planet moves in a plane, not in a circle, but in an elliptical orbit with the sun at one focus.
@@ -857,7 +857,7 @@ In this section, we will use Newton's gravity law to obtain Kepler's law about p
 
 
 \subsubsection{The Force is radial and the Angular momentum is constant.}
-\label{sec:orga608e87}
+\label{sec:org1eb6ab2}
 
 Place the origing of the poisition vector of the planet at the Sun. Since we will described the movement of the planet with respect to the sun, we will be only considering 
 the force interacting between these two objects. Form the Newton'w Law, we see that the force is parallel to the position vector. Then according to our definition, the force
@@ -875,7 +875,142 @@ All the physical evidence shows that
 All this implies that the \emph{Angular Mumentum} \(\mathbf{L}(t) = \mathbf{L} \neq \mathbf{0}\).
 
 \subsubsection{All the movement happens on a plane}
-\label{sec:orgcb95f75}
+\label{sec:org092fb7b}
 
 Since all the position vectors \(\mathbf{r}(t)\) are perpendicular to a constant vector \(\mathbf{L}\), then  \(\mathbf{L}\cdot \left(\mathbf{r}(t) - \mathbf{r}(t_0)\right) = 0\). Then all the movement is restricted to a plane.
+
+
+\subsubsection{The radial vector sweeps out equal areas in equal times}
+\label{sec:org8572833}
+
+We can assume all the movement is restricted to the \(xy\) - plane. We can write the position vector \(\mathbf{r}(t)\) in polar coordinates \((r(t), \theta(t)) = (r(t)\cos\theta(t), r(t)\sin\theta(t), 0)\). We define the Area function \(A(t)\) as the circular sector area
+\[ A(t) = \frac{1}{2} r(t)^2 \theta(t) .\]
+
+\section{Surfaces in \(\mathbb{R}^3\)}
+\label{sec:orgc6138ad}
+
+\section{The Inverse Function Theorem.}
+\label{sec:org04d7c0d}
+\begin{thm}
+Suppose that \$f:\mathbb{R}\textsuperscript{n} \(\to\) \mathbb{R}\textsuperscript{n} is a continuously differentiable in an open set \(U\subset \mathbb{R}^n\) containing a point \(a\in U\), and suppose \(\det(Df_a) \neq 0\). Then there are open sets \(V,W\subset\mathbb{R}^n\), 
+\end{thm}
+
+\section{The Implicit function theorem}
+\label{sec:orge6791e8}
+
+
+\section{Multiple Integration: surface areas, volumes.}
+\label{sec:org62023e9}
+
+\section{Gradient, Divergence and Curl. Stokes’ Theorem, the Flux of a Vector Field}
+\label{sec:org01a4e37}
+\section{Tensors and their properties. Differential forms.}
+\label{sec:orgf28bc58}
+
+\subsection{Multilinear maps}
+\label{sec:org5f160e5}
+\begin{itemize}
+\item A function \(T:V^k = V\times\cdots\times V \to \mathbb{R}\) that is \textbf{multilinear} at each entry is called \textbf{k-tensor} on \(V\), denoted by \(\mathcal{T}^k(V)\).
+\item The set \(\mathcal{T}^k(V)\) is a vector space over \(\mathbb{R}\).
+\item The tensor product \(\otimes\) takes any pair \(S\in \mathcal{T}^k(V)\) and \(T\in \mathcal{T}^l(V)\) to the tensor \(\left(S \otimes T\right)\in \mathcal{T}^{k+l}(V)\). In general \(S\otimes T \neq T\otimes S\). Some properties of \(\otimes\): exercise.
+\begin{itemize}
+\item \((S + T) \otimes U  = S \otimes U + T \otimes U\)
+\item \((S \otimes ( T + U)  = S \otimes T + S \otimes U\)
+\item \((\alpha S) \otimes T = S\otimes (\alpha T) = \alpha (S \otimes T)\).
+\end{itemize}
+\item Note that \(V^* = \mathcal{T}^1(V)\).
+\item Let \(\{ x_1, \ldots, x_n \}\) be a basis for \(V\). Then the corresponding dual basis \(\{ \varphi_1, \ldots, \varphi_n\}\) is a basis for \(\mathcal{T}^1(V)\).
+\item The set of all k-tensor products \(\{ \varphi_{i_1} \otimes \cdots \otimes \varphi_{i_k} \}\) with \(1\leq i_1, i_2,\ldots,i_k \leq n\) is a basis for \(\mathcal{T}^k(V)\) (consisting on \(n^k\) elements.
+\item If \(f:V\to W\) is linear, then \(f^*: \mathcal{T}^k(W) \to \mathcal{T}^k(V)\) defined by \(f*T(v_1, \ldots, v_k) = T(f(v_1),\ldots,f(v_k))\). It holds \(f^*S \otimes f^*T\).
+\item About the inner product as a symmetric tensor. If \(A = a^i\partial_i\) and \(B= b^j\partial_j\) two tangent vectors to a surface \(S\) at a point \(p\), i.e., \(A,B\in T_pS\). Then the metric tensor \(g = g_{ij}dx^i\otimes dx^j\) is such that \[ g(A,B) = a^ib^jg_{ij} .\]
+\item Let \(\alpha: [a,b] \to S\) a regular curve on a surface \(S\). Then the tangent vectors \(\dot{\alpha}(t) \in T_{\alpha(t)}S\), and the metric \(g\) is used to define the length of a curve, note that we can write \(\dot{\alpha}(t) = \dot{\alpha}^i\partial_i\) as \[ L(\alpha) = \int_{a}^{b} \sqrt{g_{\alpha(t)}(\dot{\alpha}(t),\dot{\alpha}(t))} dt = \int_{a}^{b} \sqrt{g_ij\dot{\alpha}^i\dot{\alpha}^j} dt. \]
+\item We denote the inverse of the metric \(g_{ij}\) by \(g^{ij}\), and we then have \(g^{ik}g_{kj} = \delta_{ij}\).
+\item If \(f:S\to \mathbb{R}\) is a differentiable function in a surface \(S\), the gradient is given by \(\nabla f = g^{ij}\partial_if \, \partial_j\).
+\item On the other hand, if \(f:S\to \mathbb{R}\) is a differentiable function in a surface \(S\) then \(df = \partial_i f dx^{i}\).
+\begin{itemize}
+\item Show that if \(A = a^i\partial_i\) then \(df(A) = g( \nabla f, A)\).
+\item \(df\) is a one tensor, but it is also a one form. Forms will be define below.
+\end{itemize}
+\item Any finite dimensional vector space with inner product have an isometry \(f:V\to \mathbb{R}^n\) with the Euclidean space with usual inner product. (Inner product (finite dimensional) spaces are isometric)
+\item About the determinant as an anti-symmetric tensor. Do you remember any definition of the determinant? Do you remember some of its properties?
+\item Subspace of alternating k-tensor \(\Lambda^k(V) \subset \mathcal{T}^k(V)\).
+\item Definition of the sign of a permutation. Permutations are bijections from a set \(S\) onto itself. All permutations of a set with \(n\) elements form a symmetric group, denoted \(S_n\), where the group operation is function composition. Thus for any permutations in the group \(S_{n}\), the four group axioms hold:
+\begin{itemize}
+\item Closure
+\item Associativity
+\item Identity
+\item Invertibility
+\item In general, composition of two permutations is not commutative.
+\item Every permutation of a finite set can be expressed as the product of transpositions.[38] Although many such expressions for a given permutation may exist, either they all contain an even or an odd number of transpositions. Thus all permutations can be classified as even or odd depending on this number.
+\end{itemize}
+\item Definition of \(\mbox{Alt}:\mathcal{T}^k(V) \to \Lambda^k(V)\).  The number \(k!\) is the number of ways we can rearrange \(k\) things into a new order. \[ \mbox{Alt}(T)(v_1,\ldots,v_k)  = \frac{1}{k!}\sum_{\sigma\in S_k} \mbox{sgn} \sigma \, T(v_{\sigma(1)},\ldots, v_{\sigma(1)}) \]
+\item Note \(\left.\mbox{Alt}\right|_{\Lambda^k(V)} = \mbox{Id}\), and \(\mbox{Alt}^2 = Id\).
+\item Definition of the wedge product. Some properties of \(\wedge\): exercise. Associativity is a bit harder to prove.
+\begin{itemize}
+\item If \(\omega\in \Lambda^k(V)\) and \(\eta\in \Lambda^l(V)\) then \(\omega \wedge \eta \in \Lambda^{k+l}(V)\) given by \[ \omega \wedge \eta = \frac{(k+l)!}{k! l!} \mbox{Alt} (\omega \otimes \eta). \]
+\item \((\omega_1 + \omega_2) \wedge \eta = (\omega_1 \wedge \eta) + (\omega_2 \wedge \eta)\).
+\item \(\omega \wedge (\eta_1 + \eta_2)  = (\omega \wedge \eta_1) + (\omega \wedge \eta_2)\).
+\item \(\alpha\omega \wedge \eta = \omega \wedge \alpha\eta = \alpha(\omega \wedge \eta)\).
+\item \(\omega \wedge \eta = (-1)^{kl}\eta \wedge \omega\).
+\item \(f^*(\omega\wedge \eta) = f^*(\omega) \wedge f^*(\eta)\).
+\end{itemize}
+\item Theorem:
+\begin{itemize}
+\item If \(S\in \mathcal{T}^k(V)\), \(T\in \mathcal{T}^l(V)\) with \(\mbox{Alt}(S) = 0\) then \(\mbox{Alt}(S\otimes T) = \mbox{Alt}(T\otimes S) = 0\).
+\item \(\mbox{Alt}(\mbox{Alt}(\omega\otimes \eta) \otimes \gamma) = \mbox{Alt}(\omega \otimes \eta \otimes \gamma) = \mbox{Alt}(\omega\otimes \mbox{Alt}(\eta \otimes \gamma))\).
+\item \((\omega \wedge \eta) \wedge \gamma = \omega \wedge (\eta \wedge \gamma)\).
+\end{itemize}
+\item Dimension of \(\Lambda^k(V)\) equals \({n\choose k}\).
+\item Theorem. Let \(v_1,\ldots, v_n\in V\) a basis for \(V\) and let \(\omega \in \Lambda^n(V)\). If \(w_i = \sum_{j}a_{ij}v_j\) are \(n\) vectors in \(V\), then \[ \omega(w_1, \ldots, w_n) = \det(a_{ij}) \, \omega(v_1,\ldots,v_n).\]
+\item Orientation.
+\item The Volume element. Suppose that an inner product \(g\) in \(V\) is given. If \(\{v_i\}\) and \(\{w_i\}\) are two bases which are orthonormal with respect to T, and the matrix \(A = (a_{ij})\) is the change of basis matrix then \[ \delta_{ij} = g(w_i,w_j) = a_{ik}a_{jl}g(v_k,v_l) = a_{ik}a_{jl}\delta_{kl} = a_{ik}a_{jk}, \] which shows that \(A\,A^T = I\). hence \(\det(A) = \pm 1\), which implies that if \(\omega(v_1,\ldots,v_n) = \pm 1\), then \(\omega(w_1,\ldots,w_n) = \pm 1\). The unique form \(w\) such that \(\omega(v_1,\ldots,v_n) = 1\), is called the \textbf{volume element} or \textbf{volume form} of \(V\), determined by the inner product \(g\) and an onrientation.
+\item The Pullback. If we consider now a differentiable function \(f: \mathbb{R}^n\to\mathbb{R}^m\) we have a linear transformation \(Df_p: \mathbb{R}^n \to \mathbb{R}^m\). This induces a linear transformation \(f^*:\Lambda^k(\mathbb{R}^m) \to \Lambda^k(\mathbb{R}^{n})\) by taking the form \(\omega\) at the point \(f(p)\in \mathbb{R}^m\) to  the form \((f^*\omega)\) at \(p\in\mathbb{R}^n\). If \(v_1, \ldots, v_k \in \mathbb{R}^n\) note that \(Df_p(v_1), \ldots, Df_p(v_k) \in \mathbb{R}^m\) and hence $\backslash$[ (f\textsuperscript{*}\(\omega\))(v\textsubscript{1,\ldtos,v}\textsubscript{k}) = \(\omega\)(Df\textsubscript{p}(v\textsubscript{1}),ldots,Df\textsubscript{p}(v\textsubscript{k}))\$.
+\end{itemize}
+
+\subsection{Differentiable Forms}
+\label{sec:org1301abf}
+\begin{itemize}
+\item Recall the notion (definition) of a vector field.
+\item The map \(\omega : \mathbb{R}^n \to \Lambda^k(\mathbb{R}^n)\).
+\item \(0-\) forms.
+\item \(1-\) forms.
+\item Exterior derivative \(d\). If \(\omega \in \Lambda^{k}(V)\)
+\item Closed forms
+\item Exact forms
+\item Characterisation of closed 1-forms in \(\mathbb{R}^2\).
+\item Poincaré Lemma.
+\end{itemize}
+
+\textbf{Poincaré Lemma}. Let \(A\subset\mathbb{R}^n\) be open starshaped with respect to the origin. Then every closed form on \(A\) is exact.
+\begin{proof}
+Let \(\omega\) a closed \(l\) form:
+\begin{equation}
+\omega = \sum_{i_i < \cdots < i_l} \omega_{i_i,\ldots,i_l} dx^{i_1} \wedge \cdots \wedge dx^{i_l}.
+\end{equation}
+
+Its exterior derivative is the \(l\) form given by
+\begin{equation}
+d\,\omega = \sum_{i_i < \cdots < i_l} \sum_{j=i}^n D_j (\omega_{i_i,\ldots,i_l}) dx^{j}\wedge dx^{i_1} \wedge \cdots \wedge dx^{i_l}.
+\end{equation}
+
+
+Define \(I\omega\) as the \((l-1)\) -form 
+\begin{equation}
+I\omega = \sum_{i_i < \cdots < i_l} \sum_{r=1}^l (-1)^{r-1}\int_{0}^1 t^{l-1}\omega_{i_i,\ldots,i_l}(tx)dt\,\, x^{i_{r}}\, dx^{i_1}  \wedge \cdots\wedge \hat{dx^{i_r}} \wedge \cdots\wedge dx^{i_l}.
+\end{equation}
+
+Note that in last expression \(x^{i_r}\) stands for the projection function.
+
+Apply the exterior derivative \(d\) to \(I(\omega)\), we have
+\begin{equation}
+d( I\,\omega) = l \, \sum_{i_1 < \cdots i_l} \int_{0}^{1}t^{l-1} \omega_{i_1,\ldots,i_l}(tx) dt \, dx^{i_1} \wedge \cdots \wedge dx^{i_l} +  \sum_{i_1 < \cdots < i_l}\sum_{r=1}^l \sum_{j=1}^n (-1)^{r-1} \int_{0}^{1}t^{l} D_j\omega_{i_1,\ldots,i_l}(tx) dt \,x^{i_r}\, dx^{j}\wedge dx^{i_1} \wedge \cdots \hat{dx^{i_r}}\wedge \cdots dx^{i_l} 
+\end{equation}
+
+
+Apply \(I\) to \(d\,\omega\) to get an \(l\) -form
+\begin{equation}
+I( d\,\omega) = \sum_{i_i < \cdots < i_l} \sum_{j=1}^n  \int_{0}^{1} t^l\,D_j(\omega_{i_i,\ldots,i_l})(tx) dt\, x^{j}\, dx^{i_1} \wedge \cdots \wedge dx^{i_l}
+- \sum_{i_i < \cdots < i_l}\sum_{j=1}^n\sum_{r=1}^l (-1)^{r-1}\int_{0}^1 t^{l}D_{j}\omega_{i_i,\ldots,i_l}(tx)dt\,\, x^{i_{r}} dx^j\wedge dx^{i_1}  \wedge \cdots\wedge \hat{dx^{i_r}} \wedge \cdots\wedge dx^{i_l}.
+\end{equation}
+\end{proof}
 \end{document}

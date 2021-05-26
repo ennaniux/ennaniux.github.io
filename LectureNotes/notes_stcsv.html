@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-05-05 Wed 14:32 -->
+<!-- 2021-05-26 Wed 11:41 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lecture notes for Sel. Topics Calc. Several Variables.</title>
@@ -342,37 +342,48 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org73600a8">1. Some subsets of the Euclidean Space</a></li>
-<li><a href="#org68b91ee">2. Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</a></li>
-<li><a href="#orgea5d6c6">3. Limits and Continuity</a></li>
-<li><a href="#org7be2980">4. Derivatives</a></li>
-<li><a href="#org4d3d877">5. Differential Geometry of Curves</a>
+<li><a href="#orgc753672">1. Some subsets of the Euclidean Space</a></li>
+<li><a href="#org1ad5450">2. Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</a></li>
+<li><a href="#org7788010">3. Limits and Continuity</a></li>
+<li><a href="#orgb9044a7">4. Derivatives</a></li>
+<li><a href="#org4fedc98">5. Differential Geometry of Curves</a>
 <ul>
-<li><a href="#orgdd00d86">5.1. Curves in \(\mathbb{R}^3\)</a></li>
-<li><a href="#org986e269">5.2. Examples.</a></li>
-<li><a href="#org0f6d86f">5.3. The Local theory of Curves</a></li>
-<li><a href="#org621027c">5.4. Global Theory of Curves</a></li>
-<li><a href="#org51830eb">5.5. The Isoperimetric Inequality</a></li>
+<li><a href="#orge0095b3">5.1. Curves in \(\mathbb{R}^3\)</a></li>
+<li><a href="#orgb63fc36">5.2. Examples.</a></li>
+<li><a href="#org9540da7">5.3. The Local theory of Curves</a></li>
+<li><a href="#org2c6ccd1">5.4. Global Theory of Curves</a></li>
+<li><a href="#org83a10f5">5.5. The Isoperimetric Inequality</a></li>
 </ul>
 </li>
-<li><a href="#orgb5e426b">6. The Isoperimetric Inequality in \(\mathbb{R}^n\).</a>
+<li><a href="#org794188c">6. The Isoperimetric Inequality in \(\mathbb{R}^n\).</a>
 <ul>
-<li><a href="#orgd6edb43">6.1. Moving planes</a></li>
-<li><a href="#org997b9b3">6.2. Partial Differential Equations: a Neumann Problem</a></li>
-<li><a href="#org957c513">6.3. Proof of the Isoperimetric Inequality</a></li>
-<li><a href="#org4ab6b21">6.4. Proof of the equality case</a></li>
-<li><a href="#orgcf9c7fd">6.5. Conclusion.</a></li>
+<li><a href="#orgae3350e">6.1. Moving planes</a></li>
+<li><a href="#org02ce067">6.2. Partial Differential Equations: a Neumann Problem</a></li>
+<li><a href="#org56fc8f8">6.3. Proof of the Isoperimetric Inequality</a></li>
+<li><a href="#org17ab92c">6.4. Proof of the equality case</a></li>
+<li><a href="#orgc530c11">6.5. Conclusion.</a></li>
 </ul>
 </li>
-<li><a href="#org7a5f771">7. Mechanics</a>
+<li><a href="#orga45117e">7. Mechanics</a>
 <ul>
-<li><a href="#org15e0afd">7.1. Kepler's laws of planetary motion.</a>
+<li><a href="#org08fe196">7.1. Kepler's laws of planetary motion.</a>
 <ul>
-<li><a href="#orgeeed9a6">7.1.1. The Force is radial and the Angular momentum is constant.</a></li>
-<li><a href="#org5c20b58">7.1.2. All the movement happens on a plane</a></li>
-<li><a href="#orgf88a4c3">7.1.3. The radial vector sweeps out equal areas in equal times</a></li>
+<li><a href="#orgf784ab0">7.1.1. The Force is radial and the Angular momentum is constant.</a></li>
+<li><a href="#org48b2579">7.1.2. All the movement happens on a plane</a></li>
+<li><a href="#orgcbbf0ae">7.1.3. The radial vector sweeps out equal areas in equal times</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#org0d1fdab">8. Surfaces in \(\mathbb{R}^3\)</a></li>
+<li><a href="#orga802648">9. The Inverse Function Theorem.</a></li>
+<li><a href="#org6e7964a">10. The Implicit function theorem</a></li>
+<li><a href="#org6468f94">11. Multiple Integration: surface areas, volumes.</a></li>
+<li><a href="#orgcfc6321">12. Gradient, Divergence and Curl. Stokes’ Theorem, the Flux of a Vector Field</a></li>
+<li><a href="#org8cfd0cb">13. Tensors and their properties. Differential forms.</a>
+<ul>
+<li><a href="#org93eadce">13.1. Multilinear maps</a></li>
+<li><a href="#org1eb9995">13.2. Differentiable Forms</a></li>
 </ul>
 </li>
 </ul>
@@ -381,8 +392,8 @@ for the JavaScript code in this tag.
 
 
 
-<div id="outline-container-org73600a8" class="outline-2">
-<h2 id="org73600a8"><span class="section-number-2">1</span> Some subsets of the Euclidean Space</h2>
+<div id="outline-container-orgc753672" class="outline-2">
+<h2 id="orgc753672"><span class="section-number-2">1</span> Some subsets of the Euclidean Space</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 We have defined for \(r>0\) the open ball centred at \(x_0\in \mathbb{R}^n\) as
@@ -416,8 +427,8 @@ Now we can also define certain basic sets in \(\mathbb{R}^n\):
 </div>
 
 
-<div id="outline-container-org68b91ee" class="outline-2">
-<h2 id="org68b91ee"><span class="section-number-2">2</span> Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</h2>
+<div id="outline-container-org1ad5450" class="outline-2">
+<h2 id="org1ad5450"><span class="section-number-2">2</span> Maps between \(\mathbb{R}^n\) and \(\mathbb{R}^m\).</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 In this section we will list definitions and establish some notation and terminology regarding the maps between to Euclidean spaces.
@@ -455,8 +466,8 @@ In this section we will list definitions and establish some notation and termino
 
 
 
-<div id="outline-container-orgea5d6c6" class="outline-2">
-<h2 id="orgea5d6c6"><span class="section-number-2">3</span> Limits and Continuity</h2>
+<div id="outline-container-org7788010" class="outline-2">
+<h2 id="org7788010"><span class="section-number-2">3</span> Limits and Continuity</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 As in the case of real analysis (or any metric space) we define the limit \[ \lim_{x \to a} f(x) = b,\] by requiring that for every \(\epsilon >0\) there is a number \(\delta >0\) such that \(|f(x) - b| < \epsilon\) for every \(x\) in the domain of \(f\) such that \(|x-a| < \delta\).
@@ -482,8 +493,8 @@ Continuity of a map can be determined in terms of open subsets. Here there is a 
 </div>
 
 
-<div id="outline-container-org7be2980" class="outline-2">
-<h2 id="org7be2980"><span class="section-number-2">4</span> Derivatives</h2>
+<div id="outline-container-orgb9044a7" class="outline-2">
+<h2 id="orgb9044a7"><span class="section-number-2">4</span> Derivatives</h2>
 <div class="outline-text-2" id="text-4">
 <div class="mydef">
 <p>
@@ -542,13 +553,13 @@ Example:
 
 
 
-<div id="outline-container-org4d3d877" class="outline-2">
-<h2 id="org4d3d877"><span class="section-number-2">5</span> Differential Geometry of Curves</h2>
+<div id="outline-container-org4fedc98" class="outline-2">
+<h2 id="org4fedc98"><span class="section-number-2">5</span> Differential Geometry of Curves</h2>
 <div class="outline-text-2" id="text-5">
 </div>
 
-<div id="outline-container-orgdd00d86" class="outline-3">
-<h3 id="orgdd00d86"><span class="section-number-3">5.1</span> Curves in \(\mathbb{R}^3\)</h3>
+<div id="outline-container-orge0095b3" class="outline-3">
+<h3 id="orge0095b3"><span class="section-number-3">5.1</span> Curves in \(\mathbb{R}^3\)</h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="mydef">
 <p>
@@ -737,8 +748,8 @@ Given a curve \(\alpha\) parameterised by arc-length \(s\in (a,b)\), the curve \
 </div>
 
 
-<div id="outline-container-org986e269" class="outline-3">
-<h3 id="org986e269"><span class="section-number-3">5.2</span> Examples.</h3>
+<div id="outline-container-orgb63fc36" class="outline-3">
+<h3 id="orgb63fc36"><span class="section-number-3">5.2</span> Examples.</h3>
 <div class="outline-text-3" id="text-5-2">
 <ol class="org-ol">
 <li>Find the trace and the tangent vectors of the following curves
@@ -786,8 +797,8 @@ dev.off()
 
 
 
-<div id="outline-container-org0f6d86f" class="outline-3">
-<h3 id="org0f6d86f"><span class="section-number-3">5.3</span> The Local theory of Curves</h3>
+<div id="outline-container-org9540da7" class="outline-3">
+<h3 id="org9540da7"><span class="section-number-3">5.3</span> The Local theory of Curves</h3>
 <div class="outline-text-3" id="text-5-3">
 <div class="mydef">
 <p>
@@ -1099,8 +1110,8 @@ parameterised by arc-length, and \(T = \alpha'(s)\), is the tangent vector, then
 </div>
 
 
-<div id="outline-container-org621027c" class="outline-3">
-<h3 id="org621027c"><span class="section-number-3">5.4</span> Global Theory of Curves</h3>
+<div id="outline-container-org2c6ccd1" class="outline-3">
+<h3 id="org2c6ccd1"><span class="section-number-3">5.4</span> Global Theory of Curves</h3>
 <div class="outline-text-3" id="text-5-4">
 <p>
 Now we will study some global properties of Curves. Two classic results are: <b>the isoperimetric inequality</b> and the <b>Four Vertex Problem</b>.
@@ -1113,8 +1124,8 @@ In this course we will only focus on the former one. We will state the problem w
 </div>
 
 
-<div id="outline-container-org51830eb" class="outline-3">
-<h3 id="org51830eb"><span class="section-number-3">5.5</span> The Isoperimetric Inequality</h3>
+<div id="outline-container-org83a10f5" class="outline-3">
+<h3 id="org83a10f5"><span class="section-number-3">5.5</span> The Isoperimetric Inequality</h3>
 <div class="outline-text-3" id="text-5-5">
 <p>
 The isoperimetric inequality is still a thriving topic in modern mathematics. 
@@ -1162,7 +1173,7 @@ order to obtain the maximum area?
 </blockquote>
 
 
-<div id="orge7c41ef" class="figure">
+<div id="org3b4f269" class="figure">
 <p><img src="./dido_pic01.png" alt="dido_pic01.png" width="70%" />
 </p>
 <p><span class="figure-number">Figure 2: </span>Dido's problem along the shore</p>
@@ -1181,7 +1192,7 @@ with the same sides.
 </div>
 
 
-<div id="org34fafc2" class="figure">
+<div id="orga37e242" class="figure">
 <p><img src="./dido_pic02.png" alt="dido_pic02.png" width="70%" />
 </p>
 <p><span class="figure-number">Figure 3: </span>Steiner's Method</p>
@@ -1198,8 +1209,8 @@ Another nice resource was posted in moodle, where a solution using Fourier serie
 </div>
 </div>
 
-<div id="outline-container-orgb5e426b" class="outline-2">
-<h2 id="orgb5e426b"><span class="section-number-2">6</span> The Isoperimetric Inequality in \(\mathbb{R}^n\).</h2>
+<div id="outline-container-org794188c" class="outline-2">
+<h2 id="org794188c"><span class="section-number-2">6</span> The Isoperimetric Inequality in \(\mathbb{R}^n\).</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 The proof that we will give is due to X. Cabré which involves the solution of a particular Partial Differential Equation, and the Moving Plane technique developed by Alexandrov, to obtain the result.
@@ -1227,8 +1238,8 @@ where the Gamma function is given by
 </p>
 </div>
 
-<div id="outline-container-orgd6edb43" class="outline-3">
-<h3 id="orgd6edb43"><span class="section-number-3">6.1</span> Moving planes</h3>
+<div id="outline-container-orgae3350e" class="outline-3">
+<h3 id="orgae3350e"><span class="section-number-3">6.1</span> Moving planes</h3>
 <div class="outline-text-3" id="text-6-1">
 <div class="mydef">
 <p>
@@ -1285,8 +1296,8 @@ If the function is twice differentiable and \(x_0\in S\), then \(D^2u(x_0)\) is 
 </div>
 
 
-<div id="outline-container-org997b9b3" class="outline-3">
-<h3 id="org997b9b3"><span class="section-number-3">6.2</span> Partial Differential Equations: a Neumann Problem</h3>
+<div id="outline-container-org02ce067" class="outline-3">
+<h3 id="org02ce067"><span class="section-number-3">6.2</span> Partial Differential Equations: a Neumann Problem</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 In order to understand ponts in \(S\) that are in the boundary of our domain \(\Omega\), we introduce the following Partial Differential Equation:
@@ -1331,8 +1342,8 @@ Let \(B_1(0)\) be the unit ball in \(\mathbb{R}^n\) with centre at the origin an
 </div>
 </div>
 
-<div id="outline-container-org957c513" class="outline-3">
-<h3 id="org957c513"><span class="section-number-3">6.3</span> Proof of the Isoperimetric Inequality</h3>
+<div id="outline-container-org56fc8f8" class="outline-3">
+<h3 id="org56fc8f8"><span class="section-number-3">6.3</span> Proof of the Isoperimetric Inequality</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 Using the last theorem, the proof of the isoperimetric inequality follows from
@@ -1361,8 +1372,8 @@ Task.
 </div>
 
 
-<div id="outline-container-org4ab6b21" class="outline-3">
-<h3 id="org4ab6b21"><span class="section-number-3">6.4</span> Proof of the equality case</h3>
+<div id="outline-container-org17ab92c" class="outline-3">
+<h3 id="org17ab92c"><span class="section-number-3">6.4</span> Proof of the equality case</h3>
 <div class="outline-text-3" id="text-6-4">
 <p>
 If the equality holds:
@@ -1381,8 +1392,8 @@ If the equality holds:
 </div>
 
 
-<div id="outline-container-orgcf9c7fd" class="outline-3">
-<h3 id="orgcf9c7fd"><span class="section-number-3">6.5</span> Conclusion.</h3>
+<div id="outline-container-orgc530c11" class="outline-3">
+<h3 id="orgc530c11"><span class="section-number-3">6.5</span> Conclusion.</h3>
 <div class="outline-text-3" id="text-6-5">
 <p>
 The Isoperimetric Inequality and related problems are advanced topics. 
@@ -1403,8 +1414,8 @@ On the geometric side, Alexandrov’s idea of moving planes has helped to solve 
 
 
 
-<div id="outline-container-org7a5f771" class="outline-2">
-<h2 id="org7a5f771"><span class="section-number-2">7</span> Mechanics</h2>
+<div id="outline-container-orga45117e" class="outline-2">
+<h2 id="orga45117e"><span class="section-number-2">7</span> Mechanics</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 We are coming back to the theory of curves in the space, and we will use calculus along curves toggether with Newton's law to determine the Laws that Kepler establised to determine the planetary motinon around the Sun.
@@ -1485,8 +1496,8 @@ If an object moves under a central force and has constant angular momentum
 </div>
 </div>
 
-<div id="outline-container-org15e0afd" class="outline-3">
-<h3 id="org15e0afd"><span class="section-number-3">7.1</span> Kepler's laws of planetary motion.</h3>
+<div id="outline-container-org08fe196" class="outline-3">
+<h3 id="org08fe196"><span class="section-number-3">7.1</span> Kepler's laws of planetary motion.</h3>
 <div class="outline-text-3" id="text-7-1">
 <ul class="org-ul">
 <li>Each planet moves in a plane, not in a circle, but in an elliptical orbit with the sun at one focus.</li>
@@ -1507,8 +1518,8 @@ In this section, we will use Newton's gravity law to obtain Kepler's law about p
 </div>
 
 
-<div id="outline-container-orgeeed9a6" class="outline-4">
-<h4 id="orgeeed9a6"><span class="section-number-4">7.1.1</span> The Force is radial and the Angular momentum is constant.</h4>
+<div id="outline-container-orgf784ab0" class="outline-4">
+<h4 id="orgf784ab0"><span class="section-number-4">7.1.1</span> The Force is radial and the Angular momentum is constant.</h4>
 <div class="outline-text-4" id="text-7-1-1">
 <p>
 Place the origing of the poisition vector of the planet at the Sun. Since we will described the movement of the planet with respect to the sun, we will be only considering 
@@ -1533,8 +1544,8 @@ All this implies that the <i>Angular Mumentum</i> \(\mathbf{L}(t) = \mathbf{L} \
 </div>
 </div>
 
-<div id="outline-container-org5c20b58" class="outline-4">
-<h4 id="org5c20b58"><span class="section-number-4">7.1.2</span> All the movement happens on a plane</h4>
+<div id="outline-container-org48b2579" class="outline-4">
+<h4 id="org48b2579"><span class="section-number-4">7.1.2</span> All the movement happens on a plane</h4>
 <div class="outline-text-4" id="text-7-1-2">
 <p>
 Since all the position vectors \(\mathbf{r}(t)\) are perpendicular to a constant vector \(\mathbf{L}\), then  \(\mathbf{L}\cdot \left(\mathbf{r}(t) - \mathbf{r}(t_0)\right) = 0\). Then all the movement is restricted to a plane.
@@ -1543,8 +1554,8 @@ Since all the position vectors \(\mathbf{r}(t)\) are perpendicular to a constant
 </div>
 
 
-<div id="outline-container-orgf88a4c3" class="outline-4">
-<h4 id="orgf88a4c3"><span class="section-number-4">7.1.3</span> The radial vector sweeps out equal areas in equal times</h4>
+<div id="outline-container-orgcbbf0ae" class="outline-4">
+<h4 id="orgcbbf0ae"><span class="section-number-4">7.1.3</span> The radial vector sweeps out equal areas in equal times</h4>
 <div class="outline-text-4" id="text-7-1-3">
 <p>
 We can assume all the movement is restricted to the \(xy\) - plane. We can write the position vector \(\mathbf{r}(t)\) in polar coordinates \((r(t), \theta(t)) = (r(t)\cos\theta(t), r(t)\sin\theta(t), 0)\). We define the Area function \(A(t)\) as the circular sector area
@@ -1554,11 +1565,172 @@ We can assume all the movement is restricted to the \(xy\) - plane. We can write
 </div>
 </div>
 </div>
+
+<div id="outline-container-org0d1fdab" class="outline-2">
+<h2 id="org0d1fdab"><span class="section-number-2">8</span> Surfaces in \(\mathbb{R}^3\)</h2>
+</div>
+
+<div id="outline-container-orga802648" class="outline-2">
+<h2 id="orga802648"><span class="section-number-2">9</span> The Inverse Function Theorem.</h2>
+<div class="outline-text-2" id="text-9">
+<div class="thm">
+<p>
+Suppose that $f:\mathbb{R}<sup>n</sup> &rarr; \mathbb{R}<sup>n</sup> is a continuously differentiable in an open set \(U\subset \mathbb{R}^n\) containing a point \(a\in U\), and suppose \(\det(Df_a) \neq 0\). Then there are open sets \(V,W\subset\mathbb{R}^n\), 
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6e7964a" class="outline-2">
+<h2 id="org6e7964a"><span class="section-number-2">10</span> The Implicit function theorem</h2>
+</div>
+
+
+<div id="outline-container-org6468f94" class="outline-2">
+<h2 id="org6468f94"><span class="section-number-2">11</span> Multiple Integration: surface areas, volumes.</h2>
+</div>
+
+<div id="outline-container-orgcfc6321" class="outline-2">
+<h2 id="orgcfc6321"><span class="section-number-2">12</span> Gradient, Divergence and Curl. Stokes’ Theorem, the Flux of a Vector Field</h2>
+</div>
+<div id="outline-container-org8cfd0cb" class="outline-2">
+<h2 id="org8cfd0cb"><span class="section-number-2">13</span> Tensors and their properties. Differential forms.</h2>
+<div class="outline-text-2" id="text-13">
+</div>
+<div id="outline-container-org93eadce" class="outline-3">
+<h3 id="org93eadce"><span class="section-number-3">13.1</span> Multilinear maps</h3>
+<div class="outline-text-3" id="text-13-1">
+<ul class="org-ul">
+<li>A function \(T:V^k = V\times\cdots\times V \to \mathbb{R}\) that is <b>multilinear</b> at each entry is called <b>k-tensor</b> on \(V\), denoted by \(\mathcal{T}^k(V)\).</li>
+<li>The set \(\mathcal{T}^k(V)\) is a vector space over \(\mathbb{R}\).</li>
+<li>The tensor product \(\otimes\) takes any pair \(S\in \mathcal{T}^k(V)\) and \(T\in \mathcal{T}^l(V)\) to the tensor \(\left(S \otimes T\right)\in \mathcal{T}^{k+l}(V)\). In general \(S\otimes T \neq T\otimes S\). Some properties of \(\otimes\): exercise.
+<ul class="org-ul">
+<li>\((S + T) \otimes U  = S \otimes U + T \otimes U\)</li>
+<li>\((S \otimes ( T + U)  = S \otimes T + S \otimes U\)</li>
+<li>\((\alpha S) \otimes T = S\otimes (\alpha T) = \alpha (S \otimes T)\).</li>
+</ul></li>
+<li>Note that \(V^* = \mathcal{T}^1(V)\).</li>
+<li>Let \(\{ x_1, \ldots, x_n \}\) be a basis for \(V\). Then the corresponding dual basis \(\{ \varphi_1, \ldots, \varphi_n\}\) is a basis for \(\mathcal{T}^1(V)\).</li>
+<li>The set of all k-tensor products \(\{ \varphi_{i_1} \otimes \cdots \otimes \varphi_{i_k} \}\) with \(1\leq i_1, i_2,\ldots,i_k \leq n\) is a basis for \(\mathcal{T}^k(V)\) (consisting on \(n^k\) elements).</li>
+<li>If \(f:V\to W\) is linear, then \(f^*: \mathcal{T}^k(W) \to \mathcal{T}^k(V)\) defined by \(f^*T(v_1, \ldots, v_k) = T(f(v_1),\ldots,f(v_k))\). It holds \(f^*S \otimes f^*T\).</li>
+<li>About the inner product as a symmetric tensor. If \(A = a^i\partial_i\) and \(B= b^j\partial_j\) two tangent vectors to a surface \(S\) at a point \(p\), i.e., \(A,B\in T_pS\). Then the metric tensor \(g = g_{ij}dx^i\otimes dx^j\) is such that \[ g(A,B) = a^ib^jg_{ij} .\]</li>
+<li>Let \(\alpha: [a,b] \to S\) a regular curve on a surface \(S\). Then the tangent vectors \(\dot{\alpha}(t) \in T_{\alpha(t)}S\), and the metric \(g\) is used to define the length of a curve, note that we can write \(\dot{\alpha}(t) = \dot{\alpha}^i\partial_i\) as \[ L(\alpha) = \int_{a}^{b} \sqrt{g_{\alpha(t)}(\dot{\alpha}(t),\dot{\alpha}(t))} dt = \int_{a}^{b} \sqrt{g_{ij}\dot{\alpha}^i\dot{\alpha}^j} dt. \]</li>
+<li>We denote the inverse of the metric \(g_{ij}\) by \(g^{ij}\), and we then have \(g^{ik}g_{kj} = \delta_{ij}\).</li>
+<li>If \(f:S\to \mathbb{R}\) is a differentiable function in a surface \(S\), the gradient is given by \(\nabla f = g^{ij}\partial_if \, \partial_j\).</li>
+<li>On the other hand, if \(f:S\to \mathbb{R}\) is a differentiable function in a surface \(S\) then \(df = \partial_i f dx^{i}\).
+<ul class="org-ul">
+<li>Show that if \(A = a^i\partial_i\) then \(df(A) = g( \nabla f, A)\).</li>
+<li>\(df\) is a one tensor, but it is also a one form. Forms will be define below.</li>
+</ul></li>
+<li>Any finite dimensional vector space with inner product have an isometry \(f:V\to \mathbb{R}^n\) with the Euclidean space with usual inner product. (Inner product (finite dimensional) spaces are isometric)</li>
+<li>About the determinant as an anti-symmetric tensor. Do you remember any definition of the determinant? Do you remember some of its properties?</li>
+<li>Subspace of alternating k-tensor \(\Lambda^k(V) \subset \mathcal{T}^k(V)\).</li>
+<li>Definition of the sign of a permutation. Permutations are bijections from a set \(S\) onto itself. All permutations of a set with \(n\) elements form a symmetric group, denoted \(S_n\), where the group operation is function composition. Thus for any permutations in the group \(S_{n}\), the four group axioms hold:
+<ul class="org-ul">
+<li>Closure</li>
+<li>Associativity</li>
+<li>Identity</li>
+<li>Invertibility</li>
+<li>In general, composition of two permutations is not commutative.</li>
+<li>Every permutation of a finite set can be expressed as the product of transpositions.[38] Although many such expressions for a given permutation may exist, either they all contain an even or an odd number of transpositions. Thus all permutations can be classified as even or odd depending on this number.</li>
+</ul></li>
+<li>Definition of \(\mbox{Alt}:\mathcal{T}^k(V) \to \Lambda^k(V)\).  The number \(k!\) is the number of ways we can rearrange \(k\) things into a new order. \[ \mbox{Alt}(T)(v_1,\ldots,v_k)  = \frac{1}{k!}\sum_{\sigma\in S_k} \mbox{sgn} \sigma \, T(v_{\sigma(1)},\ldots, v_{\sigma(1)}) \]</li>
+<li>Note \(\left.\mbox{Alt}\right|_{\Lambda^k(V)} = \mbox{Id}\), and \(\mbox{Alt}^2 = Id\).</li>
+<li>Definition of the wedge product. Some properties of \(\wedge\): exercise. Associativity is a bit harder to prove.
+<ul class="org-ul">
+<li>If \(\omega\in \Lambda^k(V)\) and \(\eta\in \Lambda^l(V)\) then \(\omega \wedge \eta \in \Lambda^{k+l}(V)\) given by \[ \omega \wedge \eta = \frac{(k+l)!}{k! l!} \mbox{Alt} (\omega \otimes \eta). \]</li>
+<li>\((\omega_1 + \omega_2) \wedge \eta = (\omega_1 \wedge \eta) + (\omega_2 \wedge \eta)\).</li>
+<li>\(\omega \wedge (\eta_1 + \eta_2)  = (\omega \wedge \eta_1) + (\omega \wedge \eta_2)\).</li>
+<li>\(\alpha\omega \wedge \eta = \omega \wedge \alpha\eta = \alpha(\omega \wedge \eta)\).</li>
+<li>\(\omega \wedge \eta = (-1)^{kl}\eta \wedge \omega\).</li>
+<li>\(f^*(\omega\wedge \eta) = f^*(\omega) \wedge f^*(\eta)\).</li>
+</ul></li>
+<li>Theorem:
+<ul class="org-ul">
+<li>If \(S\in \mathcal{T}^k(V)\), \(T\in \mathcal{T}^l(V)\) with \(\mbox{Alt}(S) = 0\) then \(\mbox{Alt}(S\otimes T) = \mbox{Alt}(T\otimes S) = 0\).</li>
+<li>\(\mbox{Alt}(\mbox{Alt}(\omega\otimes \eta) \otimes \gamma) = \mbox{Alt}(\omega \otimes \eta \otimes \gamma) = \mbox{Alt}(\omega\otimes \mbox{Alt}(\eta \otimes \gamma))\).</li>
+<li>\((\omega \wedge \eta) \wedge \gamma = \omega \wedge (\eta \wedge \gamma)\).</li>
+</ul></li>
+<li>Dimension of \(\Lambda^k(V)\) equals \({n\choose k}\).</li>
+<li>Theorem. Let \(v_1,\ldots, v_n\in V\) a basis for \(V\) and let \(\omega \in \Lambda^n(V)\). If \(w_i = \sum_{j}a_{ij}v_j\) are \(n\) vectors in \(V\), then \[ \omega(w_1, \ldots, w_n) = \det(a_{ij}) \, \omega(v_1,\ldots,v_n).\]</li>
+<li>Orientation.</li>
+<li>The Volume element. Suppose that an inner product \(g\) in \(V\) is given. If \(\{v_i\}\) and \(\{w_i\}\) are two bases which are orthonormal with respect to T, and the matrix \(A = (a_{ij})\) is the change of basis matrix then \[ \delta_{ij} = g(w_i,w_j) = a_{ik}a_{jl}g(v_k,v_l) = a_{ik}a_{jl}\delta_{kl} = a_{ik}a_{jk}, \] which shows that \(A\,A^T = I\). hence \(\det(A) = \pm 1\), which implies that if \(\omega(v_1,\ldots,v_n) = \pm 1\), then \(\omega(w_1,\ldots,w_n) = \pm 1\). The unique form \(w\) such that \(\omega(v_1,\ldots,v_n) = 1\), is called the <b>volume element</b> or <b>volume form</b> of \(V\), determined by the inner product \(g\) and an onrientation.</li>
+<li>The Pullback. If we consider now a differentiable function \(f: \mathbb{R}^n\to\mathbb{R}^m\) we have a linear transformation \(Df_p: \mathbb{R}^n \to \mathbb{R}^m\). This induces a linear transformation \(f^*:\Lambda^k(\mathbb{R}^m) \to \Lambda^k(\mathbb{R}^{n})\) by taking the form \(\omega\) at the point \(f(p)\in \mathbb{R}^m\) to  the form \((f^*\omega)\) at \(p\in\mathbb{R}^n\). If \(v_1, \ldots, v_k \in \mathbb{R}^n\) note that \(Df_p(v_1), \ldots, Df_p(v_k) \in \mathbb{R}^m\) and hence \[ (f^*\omega)(v_1,\ldots,v_k) = \omega(Df_p(v_1),\ldots,Df_p(v_k)).\]</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1eb9995" class="outline-3">
+<h3 id="org1eb9995"><span class="section-number-3">13.2</span> Differentiable Forms</h3>
+<div class="outline-text-3" id="text-13-2">
+<ul class="org-ul">
+<li>Recall the notion (definition) of a vector field.</li>
+<li>The map \(\omega : \mathbb{R}^n \to \Lambda^k(\mathbb{R}^n)\).</li>
+<li>\(0-\) forms.</li>
+<li>\(1-\) forms.</li>
+<li>Exterior derivative \(d\). If \(\omega \in \Lambda^{k}(V)\)</li>
+<li>Closed forms</li>
+<li>Exact forms</li>
+<li>Characterisation of closed 1-forms in \(\mathbb{R}^2\).</li>
+<li>Poincaré Lemma.</li>
+</ul>
+
+<p>
+<b>Poincaré Lemma</b>. Let \(A\subset\mathbb{R}^n\) be open starshaped with respect to the origin. Then every closed form on \(A\) is exact.
+</p>
+<div class="proof">
+<p>
+Let \(\omega\) a closed \(l\) form:
+</p>
+\begin{equation}
+\omega = \sum_{i_i < \cdots < i_l} \omega_{i_i,\ldots,i_l} dx^{i_1} \wedge \cdots \wedge dx^{i_l}.
+\end{equation}
+
+<p>
+Its exterior derivative is the \(l\) form given by
+</p>
+\begin{equation}
+d\,\omega = \sum_{i_i < \cdots < i_l} \sum_{j=i}^n D_j (\omega_{i_i,\ldots,i_l}) dx^{j}\wedge dx^{i_1} \wedge \cdots \wedge dx^{i_l}.
+\end{equation}
+
+
+<p>
+Define \(I\omega\) as the \((l-1)\) -form 
+</p>
+\begin{equation}
+I\omega = \sum_{i_i < \cdots < i_l} \sum_{r=1}^l (-1)^{r-1}\int_{0}^1 t^{l-1}\omega_{i_i,\ldots,i_l}(tx)dt\,\, x^{i_{r}}\, dx^{i_1}  \wedge \cdots\wedge \hat{dx^{i_r}} \wedge \cdots\wedge dx^{i_l}.
+\end{equation}
+
+<p>
+Note that in last expression \(x^{i_r}\) stands for the projection function.
+</p>
+
+<p>
+Apply the exterior derivative \(d\) to \(I(\omega)\), we have
+</p>
+\begin{equation}
+d( I\,\omega) = l \, \sum_{i_1 < \cdots i_l} \int_{0}^{1}t^{l-1} \omega_{i_1,\ldots,i_l}(tx) dt \, dx^{i_1} \wedge \cdots \wedge dx^{i_l} +  \sum_{i_1 < \cdots < i_l}\sum_{r=1}^l \sum_{j=1}^n (-1)^{r-1} \int_{0}^{1}t^{l} D_j\omega_{i_1,\ldots,i_l}(tx) dt \,x^{i_r}\, dx^{j}\wedge dx^{i_1} \wedge \cdots \hat{dx^{i_r}}\wedge \cdots dx^{i_l} 
+\end{equation}
+
+
+<p>
+Apply \(I\) to \(d\,\omega\) to get an \(l\) -form
+</p>
+\begin{equation}
+I( d\,\omega) = \sum_{i_i < \cdots < i_l} \sum_{j=1}^n  \int_{0}^{1} t^l\,D_j(\omega_{i_i,\ldots,i_l})(tx) dt\, x^{j}\, dx^{i_1} \wedge \cdots \wedge dx^{i_l}
+- \sum_{i_i < \cdots < i_l}\sum_{j=1}^n\sum_{r=1}^l (-1)^{r-1}\int_{0}^1 t^{l}D_{j}\omega_{i_i,\ldots,i_l}(tx)dt\,\, x^{i_{r}} dx^j\wedge dx^{i_1}  \wedge \cdots\wedge \hat{dx^{i_r}} \wedge \cdots\wedge dx^{i_l}.
+\end{equation}
+
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2021-03-12 Fri 00:00</p>
 <p class="author">Author: Daniel Ballesteros Chávez</p>
-<p class="date">Created: 2021-05-05 Wed 14:32</p>
+<p class="date">Created: 2021-05-26 Wed 11:41</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
