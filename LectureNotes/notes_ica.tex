@@ -1,4 +1,4 @@
-% Created 2021-05-20 Thu 13:44
+% Created 2021-05-27 Thu 10:49
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -66,7 +66,7 @@
 
 
 \section{Sequences and limits}
-\label{sec:org2840540}
+\label{sec:orgb00c1e9}
 
 \begin{mydef}
 A sequence in \(\mathbb{C}\) is a function \(\varphi: \mathbb{N}\to \mathbb{C}\). We use the notation
@@ -215,7 +215,7 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 
 
 \section{Continuity}
-\label{sec:org0d9db75}
+\label{sec:orgaa5d3e9}
 \begin{mydef}
 The function \(f(z)\) is said to have the limit \(w_0\in \mathbb{C}\) as \(z\) tends to \(a\in\mathbb{C}\),  if for every \(\epsilon >0\) there exists a number \(\delta = \delta(\epsilon) >0\) with the property that if \(|z - a| < \delta\) then it holds \(|f(z) - w_0| <\epsilon\), and in that case we write \[ \lim_{z\to a} f(z) = w_0 . \]
 \end{mydef}
@@ -287,7 +287,7 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 \[ |f(z) - f(w) | = |n^2 - \left(n + \frac{\delta}{2}\right)^2| =  n\delta + \frac{\delta^2}{4} > n\delta > 1 = \epsilon. \]
 
 \section{Basic topology of \(\mathbb{C}\)}
-\label{sec:orgb1bf06f}
+\label{sec:org83d6852}
 
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
 
@@ -552,7 +552,7 @@ which its a contradiction itself. Consequently \(f\) is uniformly continuous in 
 \end{proof}
 
 \section{Derivatives}
-\label{sec:orgd685856}
+\label{sec:org3d9bbb9}
 
 The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
 relates with that of the derivative of maps from \(\mathbb{R}^2\) to \(\mathbb{R}^2\). The properties of complex differentiation have been extensively used and applied in other areas of mathematics, leading to astonishing consequences and results.
@@ -683,7 +683,7 @@ a_{2} &  a_{1}\\
 
 
 \section{Cauchy-Riemann Equations}
-\label{sec:org981a2c3}
+\label{sec:orgaf6a5fa}
 
 \begin{thm}
 Let \(\Omega\subseteq \mathbb{C}\) an open set \(f:\mathbb{C} \to \mathbb{C}\), and \(z_0= x_0 + iy_0 \in \Omega\). Write \(f(z) = u(x,y) + i v(x,y)\), where \(u,v:\Omega\subset \mathbb{R}^2 \to \mathbb{R}\).
@@ -790,7 +790,7 @@ What is happening here?
 \[f(z) = \frac{ x^5  - 10 x^3 y^2 + 5 x y^4}{(x^2 + y^2) ^2} + i \frac{5 x^4 y -  10 x^2 y^3  +  y^5}{(x^2 + y^2)^2} \]
 
 \section{Some consequences of the Cauchy-Riemann Equations}
-\label{sec:orgf921370}
+\label{sec:org681fae6}
 
 Note that if \(f(z)  = u(x,y) + i v(x, y)\) is a complex differentiable function at \(z_0\), when taking the limit of the quitient of differences, it does not matter how \(z \to z_0\) approaches,
 then 
@@ -837,7 +837,7 @@ It follows from the real case and the mean value theorem (since \(\Omega\) is co
 \end{proof}
 
 \section{Harmonic Functions}
-\label{sec:org10b7999}
+\label{sec:orge9d73d5}
 
 We already saw in one of the previous exercises that if a function is holomorphic, then the real and imaginari parts satisfy the Laplace equation. Here the statement:
 
@@ -883,7 +883,7 @@ Then the analytic (Holomorphic function) is given by
 
 
 \section{Conformal Mappings}
-\label{sec:orge0b4fdd}
+\label{sec:orge8ea904}
 
 In this section we will study curves in the complex plane, and when two curves intersect we will define the notion of angle between the to curves at the intersection point. Mappings from the complex plane into itself that preserve angles will then be considered. Among the basic examples of these kind of mappings are the so called Möbius transformations. Some geometric applicaitons will also be analysed.
 
@@ -1003,7 +1003,7 @@ Some examples of conformal mappings:
 \item The exponential function \(f(z) = e^{z}\) is conformal at each point \(z\in\mathbb{C}\) and its image is the set \(\mathbb{C}\setminus\{0\}\).
 \end{itemize}
 \section{Cauchy's Theorem and Cauchy's Integral Formula}
-\label{sec:orgf55fc75}
+\label{sec:org4376463}
 
 \textbf{The Main assumptions for this section}. We will prove the Cauchy theorem assuming that if \(f\) is holomorphic in \(\Omega\), then one of the two situations occur
 \begin{itemize}
@@ -1193,18 +1193,63 @@ where \(g(z) = |f(z)|\), is the composition of \(f\) with the complex norm. Sinc
 Part III) \textbf{Use connectedness}. \(A = \Omega\). Again by topological arguments, since \(\Omega\) is assumed to be connected, the only subsets that are both open and closed are the empty set and the whole set \(\Omega\). Since \(A \neq \emptyset\) then \(A=\Omega\).
 \end{proof}
 
+
+
+To finish this section, without using the main assumptions, we will prove that if \(f\) is an holomorphic function in a domain \(\Omega\) containing a rectangle \(R = \{ z = z + iy \, | , a\leq x \leq b, c \leq y \leq d \}\), then \(\int_{\partial R} f(z) dz = 0\), where \(\partial R\) is the boundary of the rectangle \(R\).
+This result is called Cauchy-Goursat.
+
+\begin{itemize}
+\item Notation for \(I(R)\), and construction of sequence of rectangles \(R \supset R_1 \supset R_2 \supset \cdots\).
+\item find the limit point \(w_0 = x_0+ i y_0\) and such that \(w_0 \in R_{n}\) for all \(n\).
+\item Show that \(f'(w_0)\) exists.
+\item Find and estimate for \(|I(R_n)|\) depending on the diagonal \(D_n\) and perimeter \(L_n\) of \(R_n\).
+\item Use the estimate to show that the integral over \(R\) is zero.
+\end{itemize}
+
+If \(f\) is analytic in a disc \(B_r(z_0)\), then there is a holomorphic function \(F\) in \(B_r(z_0)\) such that \(F'(z) = f(z)\).
+
+If \(f\) is analytic in a simply connected domain \(\Omega\), then there is a holomorphic function \(F\) in \(\Omega\) such that \(F'(z) = f(z)\).
+
+
+
 \section{Laurent Series and Residue Theorem}
-\label{sec:org94fb194}
+\label{sec:org2bcf4f3}
 
 \begin{thm}
 \textbf{The strong principle of analytic continuation}. Let \(\Omega\) be a domain and \(f\) be holomorphic on \(\Omega\). If there is a complex number \(z_0\in\Omega\) such that
 \[ f^{(k)}(z_0) = 0, \mbox{for }\quad k = 0,1,2,\ldots \]
 then, \(f(z) = 0\) for all \(z\in \Omega\).
 \end{thm}
+\begin{proof}
+Consider the set 
+\[ A = \{ z \in \Omega \, | \, f^{(k)} = 0, k = 0,1,2,\ldots \}. \]
+The show that
+\begin{enumerate}
+\item \(A \neq \emptyset\).
+\item \(A\) is open.
+\item \(A\) is closed.
+\item Used that \(\Omega\) is connected.
+\end{enumerate}
+\end{proof}
+
+\begin{mydef}
+Let \(f:\Omega \to \mathbb{C}\) be a holomorphic, non constant function such that for \(z_0\in \Omega\), we have \(f(z_0)= 0\), then there exists a disc  \(B_r(z_0)\) around \(z_0\), and a natural number \(n\) such that \(f^{(n)}(z_0) \neq 0\). The complex number \(z_0\) is called a \textbf{zero}  of \(f\), and the smallest of such \(n\)'s is called the order of the zero, and more over one can write \[ f(z) = (z-z_0)^n g(z), \] where \(g\) is holomorphic and does not vanish in \(B_r(z_0)\).
+\end{mydef}
+
+\textbf{Example}. If you consider the function \(f(z) = 2z (e^z -1)\), then \(z = 0\) is a zero of \(f\). Note that \[ f'(z) = 2(e^z -1) + 2ze^z, \qquad f'(0) = 0, \] the second derivative is \[ f''(z) = 2e^z + 2e^z + 2ze^z = 4e^z + 2ze^z, \qquad f''(0) = 4 \neq 0, \] then the order of the zero is \(2\).
+If you write the Taylor's series about zero you can see that
+\[ f(z) = 2z^2 \sum_{k=0}^{\infty} \frac{z^k}{(k+1)!}. \]
+
 
 \begin{thm}
 Let \(f\) be a holomorphic function in the domain \(\Omega\). Then, the sets of zeros of \(f\) is isolated: for every \(w\in \Omega\) with \(f(w) = 0\), there exists a small disc \(B_{r}(w)\) such that \(f(z) \neq 0\) for all \(z\in B_r(w)\setminus \{w\}\).
 \end{thm}
+\begin{proof}
+Let \(z_0\in \Omega\) be a zero of \(f\) of  order \(n\),  then there exists a disc \(B_r(z_0)\subset \Omega\) such that for all \(z\in B_r(z_0)\) 
+\[ f(z) = (z-z_0)^n g(z). \]
+Now notice that, since \(g(z) \neq 0\) for any \(z \in B_r(z_0)\). On the other side, note that  if \(z \in B_r(z_0)\setminus \{z_0\}\), we have that  \((z-z_0)\neq 0\). Then \(f(z) \neq 0\) for all \(B_r{z_0}\setminus\{z_0\}\). Hence, \(z_0\) is an isolated zero of \(f\).
+\end{proof}
+
 
 \begin{prop}
 If \(f\) is holomorphic on a domain  \(\Omega\), then the set of zeros \(\{z \in \Omega : f(z) = 0\}\) has no accumulation point in \(\Omega\) .
@@ -1213,6 +1258,21 @@ If \(f\) is holomorphic on a domain  \(\Omega\), then the set of zeros \(\{z \in
 \begin{thm}
 \textbf{Riemann's removable singularity theorem}. Let \(f\) be holomorphic on a punctured disc \(B_r(w) \setminus \{w\}\). If \(f\) is bounded in \(B_r(w)\), then \(f\) can be extended to a holomorphic function \(F\) on \(B_r(w)\).
 \end{thm}
+\begin{proof}
+Consider the function
+\[ G(z) = \left\{ \begin{array}{ccc}
+(z-w)^2 f(z) & \mbox{for} & z \in B_r(w)\setminus\{w\} \\
+0 & \mbox{for} & z = w. \\
+\end{array} \right. \]
+Clearly \(G\) is holomorphic in \(B_r(w)\setminus\{w\}\). But also at \(w\) we have
+\[ \lim_{\ z \to w} \frac{ G(z) - G(w)}{z-w} = \lim_{\ z \to w} \frac{(z-w)^2 f(z)}{z-w} = \lim_{\ z \to w} (z-w)f(z) = 0, \]
+We claim that the last limit is equals \(0\) because, since \(f\) is bounded in \(B_r(w)\), there is \(M>0\) such that \(f(z) \leq M\) for all \(z\in B_r(w)\). 
+Then \(0 \leq |(z-w)f(z)| \leq (z-w)M\) shows our claim.
+
+Then \(G\) is holomorphic in \(B_r(w)\). Then since \(G(w) = 0\) and \(G'(w) = 0\) we have that its power series expansion is of the form \(G(z) = a_2 (z-w)^2 + \cdots = (z-w)^2 F(z)\).
+Then \(F\) is our desired function.
+\end{proof}
+
 
 \begin{thm}
 \textbf{Laurent's theorem}. If \(f\) is holomorphic on the ring \(0 < r < |z - z_0| < R\), then the function can be written as the Laurent's series
@@ -1223,7 +1283,7 @@ with
 
 
 \begin{mydef}
-If \(f\) is holomorphic on \(0<|z - z_0| < R\) has a Laurent's expansion around \(z_0\), then the coefficient \(a_{-1}\) is called \textbf{the resudue} of \(f\).
+If \(f\) is holomorphic on \(0<|z - z_0| < R\) has a Laurent's expansion around \(z_0\), then the coefficient \(a_{-1}\) is called \textbf{the residue} of \(f\).
 \end{mydef}
 
 
