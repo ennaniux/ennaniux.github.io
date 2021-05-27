@@ -1,4 +1,4 @@
-% Created 2021-05-27 Thu 11:08
+% Created 2021-05-27 Thu 11:41
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -66,7 +66,7 @@
 
 
 \section{Sequences and limits}
-\label{sec:org9f004b2}
+\label{sec:org8f2d4a8}
 
 \begin{mydef}
 A sequence in \(\mathbb{C}\) is a function \(\varphi: \mathbb{N}\to \mathbb{C}\). We use the notation
@@ -215,7 +215,7 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 
 
 \section{Continuity}
-\label{sec:org58b20f1}
+\label{sec:org3ad6775}
 \begin{mydef}
 The function \(f(z)\) is said to have the limit \(w_0\in \mathbb{C}\) as \(z\) tends to \(a\in\mathbb{C}\),  if for every \(\epsilon >0\) there exists a number \(\delta = \delta(\epsilon) >0\) with the property that if \(|z - a| < \delta\) then it holds \(|f(z) - w_0| <\epsilon\), and in that case we write \[ \lim_{z\to a} f(z) = w_0 . \]
 \end{mydef}
@@ -287,7 +287,7 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 \[ |f(z) - f(w) | = |n^2 - \left(n + \frac{\delta}{2}\right)^2| =  n\delta + \frac{\delta^2}{4} > n\delta > 1 = \epsilon. \]
 
 \section{Basic topology of \(\mathbb{C}\)}
-\label{sec:org35d1a8b}
+\label{sec:org075d37a}
 
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
 
@@ -552,7 +552,7 @@ which its a contradiction itself. Consequently \(f\) is uniformly continuous in 
 \end{proof}
 
 \section{Derivatives}
-\label{sec:orgb045e56}
+\label{sec:org94e30da}
 
 The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
 relates with that of the derivative of maps from \(\mathbb{R}^2\) to \(\mathbb{R}^2\). The properties of complex differentiation have been extensively used and applied in other areas of mathematics, leading to astonishing consequences and results.
@@ -683,7 +683,7 @@ a_{2} &  a_{1}\\
 
 
 \section{Cauchy-Riemann Equations}
-\label{sec:org760fe57}
+\label{sec:org40d0d2e}
 
 \begin{thm}
 Let \(\Omega\subseteq \mathbb{C}\) an open set \(f:\mathbb{C} \to \mathbb{C}\), and \(z_0= x_0 + iy_0 \in \Omega\). Write \(f(z) = u(x,y) + i v(x,y)\), where \(u,v:\Omega\subset \mathbb{R}^2 \to \mathbb{R}\).
@@ -790,7 +790,7 @@ What is happening here?
 \[f(z) = \frac{ x^5  - 10 x^3 y^2 + 5 x y^4}{(x^2 + y^2) ^2} + i \frac{5 x^4 y -  10 x^2 y^3  +  y^5}{(x^2 + y^2)^2} \]
 
 \section{Some consequences of the Cauchy-Riemann Equations}
-\label{sec:org07fb823}
+\label{sec:org55066e7}
 
 Note that if \(f(z)  = u(x,y) + i v(x, y)\) is a complex differentiable function at \(z_0\), when taking the limit of the quitient of differences, it does not matter how \(z \to z_0\) approaches,
 then 
@@ -837,7 +837,7 @@ It follows from the real case and the mean value theorem (since \(\Omega\) is co
 \end{proof}
 
 \section{Harmonic Functions}
-\label{sec:orgd3bd0b9}
+\label{sec:org03d6f27}
 
 We already saw in one of the previous exercises that if a function is holomorphic, then the real and imaginari parts satisfy the Laplace equation. Here the statement:
 
@@ -883,7 +883,7 @@ Then the analytic (Holomorphic function) is given by
 
 
 \section{Conformal Mappings}
-\label{sec:org870c087}
+\label{sec:org5ce6283}
 
 In this section we will study curves in the complex plane, and when two curves intersect we will define the notion of angle between the to curves at the intersection point. Mappings from the complex plane into itself that preserve angles will then be considered. Among the basic examples of these kind of mappings are the so called Möbius transformations. Some geometric applicaitons will also be analysed.
 
@@ -1003,7 +1003,7 @@ Some examples of conformal mappings:
 \item The exponential function \(f(z) = e^{z}\) is conformal at each point \(z\in\mathbb{C}\) and its image is the set \(\mathbb{C}\setminus\{0\}\).
 \end{itemize}
 \section{Cauchy's Theorem and Cauchy's Integral Formula}
-\label{sec:orgfd3c137}
+\label{sec:orgdf277ab}
 
 \textbf{The Main assumptions for this section}. We will prove the Cauchy theorem assuming that if \(f\) is holomorphic in \(\Omega\), then one of the two situations occur
 \begin{itemize}
@@ -1195,13 +1195,16 @@ Part III) \textbf{Use connectedness}. \(A = \Omega\). Again by topological argum
 
 
 
-To finish this section, without using the main assumptions, we will prove that if \(f\) is an holomorphic function in a domain \(\Omega\) containing a rectangle \(R = \{ z = z + iy \, | , a\leq x \leq b, c \leq y \leq d \}\), then \(\int_{\partial R} f(z) dz = 0\), where \(\partial R\) is the boundary of the rectangle \(R\).
-This result is called Cauchy-Goursat.
+To finish this section, without using the main assumptions, we will prove that 
+
+\begin{thm}
+\textbf{Cauchy-Goursat}. If \(f\) is an holomorphic function in a domain \(\Omega\) containing a rectangle \(R = \{ z = z + iy \, | , a\leq x \leq b, c \leq y \leq d \}\), then \(\int_{\partial R} f(z) dz = 0\), where \(\partial R\) is the boundary of the rectangle \(R\).
+\end{thm}
 
 \begin{itemize}
 \item Notation for \(I(R)\), and construction of sequence of rectangles \(R \supset R_1 \supset R_2 \supset \cdots\).
 \item Find the limit point \(z_0 = x_0+ i y_0\) and such that \(z_0 \in R_{n}\) for all \(n\).
-\item Show that \(f'(z_0)\) exists.
+\item Use the assumption that \(f'(z_0)\) exists.
 \item Find and estimate for \(|I(R_n)|\) depending on the diagonal \(D_n\) and perimeter \(L_n\) of \(R_n\).
 \item Use the estimate to show that the integral over \(R\) is zero.
 \end{itemize}
@@ -1213,7 +1216,7 @@ If \(f\) is analytic in a simply connected domain \(\Omega\), then there is a ho
 
 
 \section{Laurent Series and Residue Theorem}
-\label{sec:org6c7bbc2}
+\label{sec:org5c138fa}
 
 \begin{thm}
 \textbf{The strong principle of analytic continuation}. Let \(\Omega\) be a domain and \(f\) be holomorphic on \(\Omega\). If there is a complex number \(z_0\in\Omega\) such that
