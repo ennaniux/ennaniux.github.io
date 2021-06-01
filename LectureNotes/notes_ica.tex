@@ -1,4 +1,4 @@
-% Created 2021-05-27 Thu 11:41
+% Created 2021-06-01 Tue 18:26
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -66,7 +66,7 @@
 
 
 \section{Sequences and limits}
-\label{sec:org8f2d4a8}
+\label{sec:org9293987}
 
 \begin{mydef}
 A sequence in \(\mathbb{C}\) is a function \(\varphi: \mathbb{N}\to \mathbb{C}\). We use the notation
@@ -215,7 +215,7 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 
 
 \section{Continuity}
-\label{sec:org3ad6775}
+\label{sec:orgb33286c}
 \begin{mydef}
 The function \(f(z)\) is said to have the limit \(w_0\in \mathbb{C}\) as \(z\) tends to \(a\in\mathbb{C}\),  if for every \(\epsilon >0\) there exists a number \(\delta = \delta(\epsilon) >0\) with the property that if \(|z - a| < \delta\) then it holds \(|f(z) - w_0| <\epsilon\), and in that case we write \[ \lim_{z\to a} f(z) = w_0 . \]
 \end{mydef}
@@ -287,7 +287,7 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 \[ |f(z) - f(w) | = |n^2 - \left(n + \frac{\delta}{2}\right)^2| =  n\delta + \frac{\delta^2}{4} > n\delta > 1 = \epsilon. \]
 
 \section{Basic topology of \(\mathbb{C}\)}
-\label{sec:org075d37a}
+\label{sec:orgeef5cc0}
 
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
 
@@ -552,7 +552,7 @@ which its a contradiction itself. Consequently \(f\) is uniformly continuous in 
 \end{proof}
 
 \section{Derivatives}
-\label{sec:org94e30da}
+\label{sec:orga7a1f03}
 
 The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
 relates with that of the derivative of maps from \(\mathbb{R}^2\) to \(\mathbb{R}^2\). The properties of complex differentiation have been extensively used and applied in other areas of mathematics, leading to astonishing consequences and results.
@@ -683,7 +683,7 @@ a_{2} &  a_{1}\\
 
 
 \section{Cauchy-Riemann Equations}
-\label{sec:org40d0d2e}
+\label{sec:orgc731b4d}
 
 \begin{thm}
 Let \(\Omega\subseteq \mathbb{C}\) an open set \(f:\mathbb{C} \to \mathbb{C}\), and \(z_0= x_0 + iy_0 \in \Omega\). Write \(f(z) = u(x,y) + i v(x,y)\), where \(u,v:\Omega\subset \mathbb{R}^2 \to \mathbb{R}\).
@@ -790,7 +790,7 @@ What is happening here?
 \[f(z) = \frac{ x^5  - 10 x^3 y^2 + 5 x y^4}{(x^2 + y^2) ^2} + i \frac{5 x^4 y -  10 x^2 y^3  +  y^5}{(x^2 + y^2)^2} \]
 
 \section{Some consequences of the Cauchy-Riemann Equations}
-\label{sec:org55066e7}
+\label{sec:orge735e70}
 
 Note that if \(f(z)  = u(x,y) + i v(x, y)\) is a complex differentiable function at \(z_0\), when taking the limit of the quitient of differences, it does not matter how \(z \to z_0\) approaches,
 then 
@@ -837,7 +837,7 @@ It follows from the real case and the mean value theorem (since \(\Omega\) is co
 \end{proof}
 
 \section{Harmonic Functions}
-\label{sec:org03d6f27}
+\label{sec:org2c17f88}
 
 We already saw in one of the previous exercises that if a function is holomorphic, then the real and imaginari parts satisfy the Laplace equation. Here the statement:
 
@@ -883,7 +883,7 @@ Then the analytic (Holomorphic function) is given by
 
 
 \section{Conformal Mappings}
-\label{sec:org5ce6283}
+\label{sec:orga67b9b8}
 
 In this section we will study curves in the complex plane, and when two curves intersect we will define the notion of angle between the to curves at the intersection point. Mappings from the complex plane into itself that preserve angles will then be considered. Among the basic examples of these kind of mappings are the so called Möbius transformations. Some geometric applicaitons will also be analysed.
 
@@ -1003,7 +1003,7 @@ Some examples of conformal mappings:
 \item The exponential function \(f(z) = e^{z}\) is conformal at each point \(z\in\mathbb{C}\) and its image is the set \(\mathbb{C}\setminus\{0\}\).
 \end{itemize}
 \section{Cauchy's Theorem and Cauchy's Integral Formula}
-\label{sec:orgdf277ab}
+\label{sec:orgb9998b6}
 
 \textbf{The Main assumptions for this section}. We will prove the Cauchy theorem assuming that if \(f\) is holomorphic in \(\Omega\), then one of the two situations occur
 \begin{itemize}
@@ -1216,7 +1216,7 @@ If \(f\) is analytic in a simply connected domain \(\Omega\), then there is a ho
 
 
 \section{Laurent Series and Residue Theorem}
-\label{sec:org5c138fa}
+\label{sec:orge27655f}
 
 \begin{thm}
 \textbf{The strong principle of analytic continuation}. Let \(\Omega\) be a domain and \(f\) be holomorphic on \(\Omega\). If there is a complex number \(z_0\in\Omega\) such that
@@ -1226,7 +1226,7 @@ then, \(f(z) = 0\) for all \(z\in \Omega\).
 \begin{proof}
 Consider the set 
 \[ A = \{ z \in \Omega \, | \, f^{(k)} = 0, k = 0,1,2,\ldots \}. \]
-The show that
+Then show that
 \begin{enumerate}
 \item \(A \neq \emptyset\).
 \item \(A\) is open.
@@ -1250,13 +1250,48 @@ Let \(f\) be a holomorphic function in the domain \(\Omega\). Then, the sets of 
 \begin{proof}
 Let \(z_0\in \Omega\) be a zero of \(f\) of  order \(n\),  then there exists a disc \(B_r(z_0)\subset \Omega\) such that for all \(z\in B_r(z_0)\) 
 \[ f(z) = (z-z_0)^n g(z). \]
-Now notice that, since \(g(z) \neq 0\) for any \(z \in B_r(z_0)\). On the other side, note that  if \(z \in B_r(z_0)\setminus \{z_0\}\), we have that  \((z-z_0)\neq 0\). Then \(f(z) \neq 0\) for all \(B_r{z_0}\setminus\{z_0\}\). Hence, \(z_0\) is an isolated zero of \(f\).
+Now notice that  \(g(z) \neq 0\) for any \(z \in B_r(z_0)\). On the other side, note that  if \(z \in B_r(z_0)\setminus \{z_0\}\), we have that  \((z-z_0)\neq 0\). Then \(f(z) \neq 0\) for all \(B_r(z_0)\setminus\{z_0\}\). Hence, \(z_0\) is an isolated zero of \(f\).
 \end{proof}
 
 
 \begin{prop}
 If \(f\) is holomorphic on a domain  \(\Omega\), then the set of zeros \(\{z \in \Omega : f(z) = 0\}\) has no accumulation point in \(\Omega\) .
 \end{prop}
+
+\begin{cor}
+(Identity Principle) Let \(f\)  and \(g\)  be analytic on a domain \(\Omega\) and consider \(A\subset \Omega\).  If for all \(z\in \Omega\) we have \(f(z)=g(z)\) and if \(A\) contains a limit point \(z_0\in A\) , then \(f(z) = g(z)\) for all \(z\in \Omega\).
+\end{cor}
+
+\begin{mydef}
+Let \(\Omega_2\seubset\Omega_1\) be two domains. Suppose that \(f\) is analytic on \(\Omega_2\). We say that \(F\) is an analytic continuation of \(f\) to \(\Omega_1\), if \(F\) is analytic on \(\Omega_1\) and for all \(z\in \Omega_2\) it holds \(F(z) = f(z)\).
+\end{mydef}
+
+The main property of analytic continuation is that, when they exist, then they are unique.
+
+\begin{thm}
+Let \(\Omega_2\subset\Omega_1\) be two domains and suppose that \(f\) is analytic on \(\Omega_2\). If \(f\) has an analytic continuation to \(\Omega_1\) then it is unique.
+\end{thm}
+
+\begin{proof}
+Let \(F:\Omega_1 \to \mathbb{C}\) and \(G:\Omega_1\to \mathbb{C}\) be two analytic continuations to \(\Omega_1\) of \(f\).
+
+Since \(\Omega_2 \subset \Omega_1\) is open, we can find \(z_0\in \Omega_1\) such that \(z_0\) is a limit point of \(\Omega_2\).
+
+Then \(F\) and \(G\) satisfy the hypothesis of the Identity Principle, hence \(F=G\) on \(\Omega_1\).
+\end{proof}
+
+\textbf{Example} The Riemann zeta function. Consider the function 
+\[ \zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s} .\]
+\begin{enumerate}
+\item Show that for \(\alpha \in \mathbb{R}\), the series \(\frac{1}{n^{\alpha}}\) converges when \(\alpha >1\).
+\item Look at the M-test at the end of our written notes \textbf{\href{https://platforma2.polsl.pl/rms/pluginfile.php/180132/mod\_resource/content/1/Lecture\_power\_series.pdf}{Here}}.
+\item Apply the M-test and show that \(\zeta(s)\) converges absolutely and unifromly on \(\Omega = \{ s\in \mathbb{C}\,|\, \mbox{Re}(s) >1 \}\).
+\end{enumerate}
+
+Difficult question: Is there any analytic continuation to any other larger domain?
+
+Take al look at this video, \textbf{\href{https://youtu.be/sD0NjbwqlYw}{Visualizing the Riemann zeta function and analytic continuation}}.
+
 
 \begin{thm}
 \textbf{Riemann's removable singularity theorem}. Let \(f\) be holomorphic on a punctured disc \(B_r(w) \setminus \{w\}\). If \(f\) is bounded in \(B_r(w)\), then \(f\) can be extended to a holomorphic function \(F\) on \(B_r(w)\).
