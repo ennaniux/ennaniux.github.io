@@ -1,4 +1,4 @@
-% Created 2021-06-01 Tue 18:26
+% Created 2021-06-05 Sat 19:28
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -66,7 +66,7 @@
 
 
 \section{Sequences and limits}
-\label{sec:org9293987}
+\label{sec:orge363ea0}
 
 \begin{mydef}
 A sequence in \(\mathbb{C}\) is a function \(\varphi: \mathbb{N}\to \mathbb{C}\). We use the notation
@@ -215,7 +215,7 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 
 
 \section{Continuity}
-\label{sec:orgb33286c}
+\label{sec:org2c3032e}
 \begin{mydef}
 The function \(f(z)\) is said to have the limit \(w_0\in \mathbb{C}\) as \(z\) tends to \(a\in\mathbb{C}\),  if for every \(\epsilon >0\) there exists a number \(\delta = \delta(\epsilon) >0\) with the property that if \(|z - a| < \delta\) then it holds \(|f(z) - w_0| <\epsilon\), and in that case we write \[ \lim_{z\to a} f(z) = w_0 . \]
 \end{mydef}
@@ -287,7 +287,7 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 \[ |f(z) - f(w) | = |n^2 - \left(n + \frac{\delta}{2}\right)^2| =  n\delta + \frac{\delta^2}{4} > n\delta > 1 = \epsilon. \]
 
 \section{Basic topology of \(\mathbb{C}\)}
-\label{sec:orgeef5cc0}
+\label{sec:org7fa6dd6}
 
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
 
@@ -552,7 +552,7 @@ which its a contradiction itself. Consequently \(f\) is uniformly continuous in 
 \end{proof}
 
 \section{Derivatives}
-\label{sec:orga7a1f03}
+\label{sec:org555f6aa}
 
 The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
 relates with that of the derivative of maps from \(\mathbb{R}^2\) to \(\mathbb{R}^2\). The properties of complex differentiation have been extensively used and applied in other areas of mathematics, leading to astonishing consequences and results.
@@ -683,7 +683,7 @@ a_{2} &  a_{1}\\
 
 
 \section{Cauchy-Riemann Equations}
-\label{sec:orgc731b4d}
+\label{sec:orge9fcc2e}
 
 \begin{thm}
 Let \(\Omega\subseteq \mathbb{C}\) an open set \(f:\mathbb{C} \to \mathbb{C}\), and \(z_0= x_0 + iy_0 \in \Omega\). Write \(f(z) = u(x,y) + i v(x,y)\), where \(u,v:\Omega\subset \mathbb{R}^2 \to \mathbb{R}\).
@@ -790,7 +790,7 @@ What is happening here?
 \[f(z) = \frac{ x^5  - 10 x^3 y^2 + 5 x y^4}{(x^2 + y^2) ^2} + i \frac{5 x^4 y -  10 x^2 y^3  +  y^5}{(x^2 + y^2)^2} \]
 
 \section{Some consequences of the Cauchy-Riemann Equations}
-\label{sec:orge735e70}
+\label{sec:org6325989}
 
 Note that if \(f(z)  = u(x,y) + i v(x, y)\) is a complex differentiable function at \(z_0\), when taking the limit of the quitient of differences, it does not matter how \(z \to z_0\) approaches,
 then 
@@ -837,7 +837,7 @@ It follows from the real case and the mean value theorem (since \(\Omega\) is co
 \end{proof}
 
 \section{Harmonic Functions}
-\label{sec:org2c17f88}
+\label{sec:org185c767}
 
 We already saw in one of the previous exercises that if a function is holomorphic, then the real and imaginari parts satisfy the Laplace equation. Here the statement:
 
@@ -883,7 +883,7 @@ Then the analytic (Holomorphic function) is given by
 
 
 \section{Conformal Mappings}
-\label{sec:orga67b9b8}
+\label{sec:org4de72a7}
 
 In this section we will study curves in the complex plane, and when two curves intersect we will define the notion of angle between the to curves at the intersection point. Mappings from the complex plane into itself that preserve angles will then be considered. Among the basic examples of these kind of mappings are the so called Möbius transformations. Some geometric applicaitons will also be analysed.
 
@@ -1003,7 +1003,7 @@ Some examples of conformal mappings:
 \item The exponential function \(f(z) = e^{z}\) is conformal at each point \(z\in\mathbb{C}\) and its image is the set \(\mathbb{C}\setminus\{0\}\).
 \end{itemize}
 \section{Cauchy's Theorem and Cauchy's Integral Formula}
-\label{sec:orgb9998b6}
+\label{sec:org75e397a}
 
 \textbf{The Main assumptions for this section}. We will prove the Cauchy theorem assuming that if \(f\) is holomorphic in \(\Omega\), then one of the two situations occur
 \begin{itemize}
@@ -1216,7 +1216,7 @@ If \(f\) is analytic in a simply connected domain \(\Omega\), then there is a ho
 
 
 \section{Laurent Series and Residue Theorem}
-\label{sec:orge27655f}
+\label{sec:orgb6a48d6}
 
 \begin{thm}
 \textbf{The strong principle of analytic continuation}. Let \(\Omega\) be a domain and \(f\) be holomorphic on \(\Omega\). If there is a complex number \(z_0\in\Omega\) such that
@@ -1245,7 +1245,7 @@ If you write the Taylor's series about zero you can see that
 
 
 \begin{thm}
-Let \(f\) be a holomorphic function in the domain \(\Omega\). Then, the sets of zeros of \(f\) is isolated: for every \(w\in \Omega\) with \(f(w) = 0\), there exists a small disc \(B_{r}(w)\) such that \(f(z) \neq 0\) for all \(z\in B_r(w)\setminus \{w\}\).
+Let \(f\) be a holomorphic function in the domain \(\Omega\). Then, the set of zeros of \(f\) is isolated: for every \(w\in \Omega\) with \(f(w) = 0\), there exists a small disc \(B_{r}(w)\) such that \(f(z) \neq 0\) for all \(z\in B_r(w)\setminus \{w\}\).
 \end{thm}
 \begin{proof}
 Let \(z_0\in \Omega\) be a zero of \(f\) of  order \(n\),  then there exists a disc \(B_r(z_0)\subset \Omega\) such that for all \(z\in B_r(z_0)\) 
@@ -1259,11 +1259,33 @@ If \(f\) is holomorphic on a domain  \(\Omega\), then the set of zeros \(\{z \in
 \end{prop}
 
 \begin{cor}
-(Identity Principle) Let \(f\)  and \(g\)  be analytic on a domain \(\Omega\) and consider \(A\subset \Omega\).  If for all \(z\in \Omega\) we have \(f(z)=g(z)\) and if \(A\) contains a limit point \(z_0\in A\) , then \(f(z) = g(z)\) for all \(z\in \Omega\).
+(Identity Principle) Let \(f\)  and \(g\)  be analytic on a domain \(\Omega\) and consider \(A\subset \Omega\).  If for all \(z\in A\) we have \(f(z)=g(z)\) and if \(A\) contains a limit point \(z_0\in A\) , then \(f(z) = g(z)\) for all \(z\in \Omega\).
 \end{cor}
 
+\textbf{Example} Show that there does not exist any analytic function \(f\) such that \(f\left(\frac{1}{n}\right) = \frac{1}{2^n}\).
+
+We may try to find a candidate to be such a function. Consider the following function:
+\[ g(z) = \frac{1}{2^{\frac{1}{z}}}. \]
+
+In the set 
+\[ A = \left\{ 1, \frac{1}{2}, \frac{1}{3}, \ldots \right\}, \]
+the two functions, \(f\) and \(g\) agree.
+
+Since \(z_0 = 0\) is an accumulation point of \(A\), by continuity we have on one hand
+\[ f(0) = \lim_{n\to \infty} f\left(\frac{1}{n}\right) = 0, \]
+
+and this should agree for \(g\). Notice that if \(z_n = \frac{1}{n}\) we have
+\[\lim_{n\to \infty}g(z_n) = 0.\]
+
+If \(w_n = \frac{i}{n}\) then, 
+
+\[ g(w_n) = \frac{1}{2^{n/i}} = \frac{1}{e^{\ln{2^{n/i}}}} = \frac{1}{e^{\frac{n}{i}\ln{2}}}= \frac{1}{e^{-ni\ln{2}}} = e^{ni\ln{2}},\]
+
+since \(|g(w_n)| = 1\) then it is impossible to have \(\lim_{n\to w_n} g(w_n) \neq 0\).
+
+
 \begin{mydef}
-Let \(\Omega_2\seubset\Omega_1\) be two domains. Suppose that \(f\) is analytic on \(\Omega_2\). We say that \(F\) is an analytic continuation of \(f\) to \(\Omega_1\), if \(F\) is analytic on \(\Omega_1\) and for all \(z\in \Omega_2\) it holds \(F(z) = f(z)\).
+Let \(\Omega_2\subset\Omega_1\) be two domains. Suppose that \(f\) is analytic on \(\Omega_2\). We say that \(F\) is an analytic continuation of \(f\) to \(\Omega_1\), if \(F\) is analytic on \(\Omega_1\) and for all \(z\in \Omega_2\) it holds \(F(z) = f(z)\).
 \end{mydef}
 
 The main property of analytic continuation is that, when they exist, then they are unique.
@@ -1290,7 +1312,7 @@ Then \(F\) and \(G\) satisfy the hypothesis of the Identity Principle, hence \(F
 
 Difficult question: Is there any analytic continuation to any other larger domain?
 
-Take al look at this video, \textbf{\href{https://youtu.be/sD0NjbwqlYw}{Visualizing the Riemann zeta function and analytic continuation}}.
+Take a look at this video, \textbf{\href{https://youtu.be/sD0NjbwqlYw}{Visualizing the Riemann zeta function and analytic continuation}}.
 
 
 \begin{thm}
@@ -1312,13 +1334,92 @@ Then \(F\) is our desired function.
 \end{proof}
 
 
+\begin{mydef}
+A \textbf{singularity}  is a point \(z_0\in \mathbb{C}\) at which the function \(f\) fails to be analytic.
+An \textbf{isolated singularity} is a singularity \(z_0\in \mathbb{C}\) of \(f\), for which there exists a deleted neighbourhood \(B_r(z_0)\setminus\{0\}\) in which \(f\) is analytic.
+\end{mydef}
+
+\begin{center}
+\includesvg[width=70t]{./drawing_ring}
+\end{center}
+
+
+
 \begin{thm}
 \textbf{Laurent's theorem}. If \(f\) is holomorphic on the ring \(0 < r < |z - z_0| < R\), then the function can be written as the Laurent's series
 \[ f(z) = \sum_{n = -\infty}^{\infty} a_n (z - z_0) ^n ,\]
 with
 \[ a_n = \frac{1}{2\pi i} \int_{|w - z_0| = \rho}\frac{f(w)}{(w - z_0)^{n+1}} dw, \qquad, n = 0, \pm 1, \pm 2, \ldots, \quad r < \rho < R. \]
 \end{thm}
+\begin{proof}
+Take \(\epsilon >0\) small enough such that \(0 < \epsilon < \frac{R - r}{2}\), and consider the circles \(\alpha_1\) given by \(|z-z_0| = r + \epsilon\) and  \(\alpha_2\) given by \(|z-z_0| = R - \epsilon\).
+Then for any \(w\) such that \(r + \epsilon < |w - z_0 | < R-\epsilon\) we can apply the Cauchy's Inegral Formula
+\[ f(z) = \frac{1}{2\pi i} \int_{\alpha_2} \frac{f(\xi)}{\xi - w} d\xi - \frac{1}{2\pi i} \int_{\alpha_1} \frac{f(\xi)}{\xi - w} d\xi .\]
 
+For the first integral, proceed as in the proof of the power extension of holomorphic functions, then
+\[ \frac{1}{2\pi i} \int_{\alpha_2} \frac{f(\xi)}{\xi - w} d\xi = \sum_{k=0}^{\infty} a_k (w - z_0)^k, \]
+with 
+\[ a_k = \frac{1}{2\pi i } \int_{\alpha_2}\frac{f(\xi)}{(\xi - z_0)^{k+1}}, \quad k = 0,1,2,\ldots \]
+
+For the second integral we use the geometric series, since along \(\alpha_1\) we have \(|\xi - z_0| < |w - z_0|\), then
+
+\[ - \frac{1}{\xi - w} = - \frac{1}{\xi - z_0 + z_0 - w} =   \frac{1}{(w - z_0) - ( \xi - z_0 )} = \frac{1}{w - z_0} \sum_{k=0}^{\infty}\left( \frac{\xi - z_0}{w-z_0}\right)^k,\]
+
+Since the series is uniformly convergent then one can integrate term by term. 
+
+\[ - \frac{1}{2\pi i } \int_{\alpha_1}\frac{f(\xi)}{\xi - w}d\xi = \sum_{k=0}^{\infty} (w-z_0)^{-(k+1)} \frac{1}{2\pi i} \int_{\alpha_1} f(\xi) (\xi - z_0)^{k} d\xi = sum_{k = -\infty}^{-1} a_k (w - z_0)^{k}, \]
+with the obvius definition of \(a_{k}\) for this case, namely
+\[ a_{k} = \frac{1}{2\pi i } \int_{\alpha_1}\frac{f(\xi)}{(\xi - z_0)^{-(k-1)}}d\xi . \]
+\end{proof}
+
+In many problems, finding the Laurent series is a matter of applying an algebraic trick. Take in to consideration that if \(|a| < 1\) we have the identities:
+
+\[ \sum_{k = 0}^{\infty} a^k = \frac{1}{1-a}, \]
+and
+\[ \sum_{k = 0}^{\infty} (-1)^ka^k = \frac{1}{1+a}. \]
+
+\textbf{Example 1}
+
+Find the Laurent Series for \[ f(z) = \frac{z+1}{z^3(z^2 + 1)}, \] on the region \(0 < |z| < 1\).
+
+\begin{enumerate}
+\item Note that the function has (isolated) singlarities only around \(z = 0, i, -i\). Hence it is analytic in the domain \(0 < |z| < 1\).
+\item Then the series expansion around \(z = 0\) is
+\end{enumerate}
+\[ \frac{z+1}{z^3(z^2 + 1)} = (z+1)\frac{1}{z^3} \frac{1}{1 + z^2} = (z+1)\frac{1}{z^3} \sum_{k=0}^{\infty}(-1)^kz^{2k} =  \sum_{k=0}^{\infty}(-1)^k\left(z^{2k-3} + z^{2(k-1)}\right) = \sum_{k=0}^{\infty}(-1)^k\left(z^{2(k-1) -1} + z^{2(k-1)}\right) \]
+
+Re-arranging indices 
+
+\[ f(z) = \sum_{k=-1}^{\infty}(-1)^k\left(z^{2k -1} + z^{2k}\right) \]
+
+Or explicitly
+\[f(z) =  z^{-3} + z^{-2} - z^{-1} - 1 + z^{1} + z^{2} - \cdots = \frac{1}{z^3} + \frac{1}{z^2} - \frac{1}{z} - 1 + z + z^2 - z^3 - \cdots \]
+
+
+\textbf{Example 2}
+
+Consider the function \(f(z) = (z^2 - 3z + 2)^{-1}\). Find the Laurent series in the domains:
+\begin{enumerate}
+\item \(1 <|z| < 2\).
+\item \(|z| > 2\)
+\item \(0 < | z-1 | < 1\).
+\end{enumerate}
+
+First by factorisation we have
+\[ f(z) = \frac{1}{z^2 - 3z + 2} = \frac{1}{(z-2)(z-1)}, \] 
+hence \(z = 1,2\) are isolated singularities.
+
+Solution of (1). Note that for \(1 < |z| <2\) implies that \(|\frac{1}{z}| <1\) and \(|\frac{z}{2}| <1\). Then the Laurent series is
+\[ f(z) = -\frac{1}{2}\sum_{k= -\infty}^{-1} z^{k}   - \frac{1}{2}\sum_{k=0}^{\infty}\left(\frac{z}{2}\right)^k.\]
+
+Solution of (2). For \(|z|> 2\) the Laurent series is
+\[ f(z) = \sum_{k=-\infty}^{-1} \left( \frac{1}{2^{k+1}} -1 \right)z^{k}. \]
+
+Solution of  (3). Using partial fractions we put
+\[ \frac{1}{(z-2)(z-1)} = \frac{A}{z-2} + \frac{B}{z-1} =  \frac{1}{z-2} - \frac{1}{z-1} = -  \frac{1}{2 - z} - \frac{1}{z-1} = -  \frac{1}{1 - (z - 1)} - \frac{1}{z-1} ,\]
+
+and since we want to restrict to the domain \(0 < |z - 1| < 1\) then we have
+\[ f(z) = - \frac{1}{z-1} - \sum_{k=0}^{\infty} (z-1)^k = - \sum_{k=-1}^{\infty} (z-1)^k \]
 
 \begin{mydef}
 If \(f\) is holomorphic on \(0<|z - z_0| < R\) has a Laurent's expansion around \(z_0\), then the coefficient \(a_{-1}\) is called \textbf{the residue} of \(f\).
