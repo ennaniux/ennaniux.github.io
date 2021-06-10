@@ -1,4 +1,4 @@
-% Created 2021-06-05 Sat 19:28
+% Created 2021-06-10 Thu 11:31
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -46,6 +46,7 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
+\usetheme{default}
 \author{Daniel Ballesteros Chávez}
 \date{\textit{<2021-03-12 Fri>}}
 \title{Notes for Introduction to Complex Analysis}
@@ -59,14 +60,16 @@
 \begin{document}
 
 \maketitle
+\begin{frame}{Outline}
 \tableofcontents
+\end{frame}
 
 
 
 
 
 \section{Sequences and limits}
-\label{sec:orge363ea0}
+\label{sec:org1d66734}
 
 \begin{mydef}
 A sequence in \(\mathbb{C}\) is a function \(\varphi: \mathbb{N}\to \mathbb{C}\). We use the notation
@@ -114,7 +117,7 @@ Let \(\epsilon = 1\). By convergence, there exists \(n_0\in \mathbb{N}\) such th
 Now consider \(M = \max\{ |z_1| + 1, |z_2| + 1, \ldots, |z_{k-1}| + 1, |z_0| + 1\}\). Then it is clear that \[ |z_n| \leq M, \mbox{ for all } n \in \mathbb{N}. \]
 \end{proof}
 
-\textbf{Remark} The converse of last proposition is false. Discuss an example.
+\alert{Remark} The converse of last proposition is false. Discuss an example.
 
 \begin{thm}
 (Bolzano-Weierstrass) Every bounded sequence in \(\mathbb{C}\) has a convergent sub-sequence.
@@ -215,7 +218,7 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 
 
 \section{Continuity}
-\label{sec:org2c3032e}
+\label{sec:org01a1087}
 \begin{mydef}
 The function \(f(z)\) is said to have the limit \(w_0\in \mathbb{C}\) as \(z\) tends to \(a\in\mathbb{C}\),  if for every \(\epsilon >0\) there exists a number \(\delta = \delta(\epsilon) >0\) with the property that if \(|z - a| < \delta\) then it holds \(|f(z) - w_0| <\epsilon\), and in that case we write \[ \lim_{z\to a} f(z) = w_0 . \]
 \end{mydef}
@@ -225,7 +228,7 @@ The function \(f(z)\) is said to have the limit \(w_0\in \mathbb{C}\) as \(z\) t
 The function \(f(z)\) is said to be continuous at \(z_0\) if for if for every \(\epsilon >0\) there exists a number \(\delta = \delta(\epsilon) >0\) with the property that if \(|z - a| < \delta\) then it holds \(|f(z) - f(a)| <\epsilon\), and in that case we write \[ \lim_{z\to a} f(z) = f(a) . \]
 \end{mydef}
 
-\textbf{Examples}
+\alert{Examples}
 \begin{itemize}
 \item Let \(f:\mathbb{C}\setminus\{1\} \to \mathbb{C}\) the function given by \[f(z) =\dfrac{z^2 - 4}{z - 2}, \] then \(\lim_{z\to 2} f(z) = 4\).
 
@@ -270,7 +273,7 @@ Consider any sequence \(\{z_n\}_{n=1}^{\infty}\subseteq U_1\) such that \(\lim_{
 Let \(U\subseteq \mathbb{C}\) and consider a function \(f:U\to\mathbb{C}\). \(f\) is called uniformly continuous if for every \(\epsilon >0\) there exists \(\delta >0\) such that for any \(z,w\in U\) such that \(|z-w| < \delta\) then we have \(|f(z) - f(w) | < \epsilon\).
 \end{mydef}
 
-\textbf{Example}. Consider \(f: A\to \mathbb{C}\) , \(f(z) = z^2\) in the following cases:
+\alert{Example}. Consider \(f: A\to \mathbb{C}\) , \(f(z) = z^2\) in the following cases:
 \begin{itemize}
 \item \(A = \{z\in \mathbb{C} \, |\, |z| \leq 1\}\).
 \end{itemize}
@@ -287,7 +290,7 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 \[ |f(z) - f(w) | = |n^2 - \left(n + \frac{\delta}{2}\right)^2| =  n\delta + \frac{\delta^2}{4} > n\delta > 1 = \epsilon. \]
 
 \section{Basic topology of \(\mathbb{C}\)}
-\label{sec:org7fa6dd6}
+\label{sec:orgafc8be1}
 
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
 
@@ -395,14 +398,14 @@ for all \(n \in \mathbb{N}\), which implies \(\lim_{n\to\infty}z_n = z_0\).
 
 \begin{mydef}
 \begin{enumerate}
-\item The set \(A\subset \mathbb{C}\) is called \textbf{disconnected}, if there are two open sets \(U,V\) in \(\mathbb{C}\) such that
+\item The set \(A\subset \mathbb{C}\) is called \alert{disconnected}, if there are two open sets \(U,V\) in \(\mathbb{C}\) such that
 \begin{enumerate}
 \item \((A\cap U) \neq \emptyset\) and \((A\cap V) \neq \emptyset\).
 \item \(U\) and \(V\) are disjoint in \(A\): \((A\cap U) \cap( A\cap  V) = \emptyset\)
 \item \(A\subseteq U\cup V\).
 \end{enumerate}
 
-\item The set \(A\) is called \textbf{connected} if it is not disconnected.
+\item The set \(A\) is called \alert{connected} if it is not disconnected.
 \end{enumerate}
 \end{mydef}
 
@@ -426,7 +429,7 @@ Then \(A\setminus B_1 = B_2\), which implies that \(B_2\) is also closed. Moreov
 \end{proof}
 
 \begin{mydef}
-Let \(A\subset \mathbb{C}\). By a curve \(\gamma\) in \(A\) we mean a continuous map \(\gamma:[0,1]\to A\). We say that \(A\) is called \textbf{arc-connected} or \textbf{path-connected} if for any
+Let \(A\subset \mathbb{C}\). By a curve \(\gamma\) in \(A\) we mean a continuous map \(\gamma:[0,1]\to A\). We say that \(A\) is called \alert{arc-connected} or \alert{path-connected} if for any
 two points \(z_1, z_2 \in \mathbb{C}\) there exists a curve \(\gamma\) in \(A\) such that \(\gamma(0) = z_1\) and \(\gamma(1) = z_2\).
 \end{mydef}
 
@@ -441,7 +444,7 @@ Let \(A\subset \mathbb{C}\).
 
 Here is an example of a connected set which fails to be arc-connected \href{https://en.wikipedia.org/wiki/Topologist\%27s\_sine\_curve}{Example}.
 
-A \textbf{domain} \(\Omega \subseteq \mathbb{C}\) is an open connected set.
+A \alert{domain} \(\Omega \subseteq \mathbb{C}\) is an open connected set.
 
 
 \begin{mydef}
@@ -451,11 +454,11 @@ A finite subcover is a collection \(\{ U_{\alpha_1},\ldots, U_{\alpha_k}\}\) suc
 \end{mydef}
 
 \begin{mydef}
-The set \(K\subset \mathbb{C}\) is called \textbf{compact} if any open cover of \(K\), has a finite subcover.
+The set \(K\subset \mathbb{C}\) is called \alert{compact} if any open cover of \(K\), has a finite subcover.
 \end{mydef}
 
 \begin{thm}
-(\textbf{Heine-Borel}). The set \(K\subset \mathbb{C}\) is compact if and only \(K\) is closed and bounded.
+(\alert{Heine-Borel}). The set \(K\subset \mathbb{C}\) is compact if and only \(K\) is closed and bounded.
 \end{thm}
 \begin{proof}
 
@@ -552,21 +555,21 @@ which its a contradiction itself. Consequently \(f\) is uniformly continuous in 
 \end{proof}
 
 \section{Derivatives}
-\label{sec:org555f6aa}
+\label{sec:orgf752f47}
 
 The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
 relates with that of the derivative of maps from \(\mathbb{R}^2\) to \(\mathbb{R}^2\). The properties of complex differentiation have been extensively used and applied in other areas of mathematics, leading to astonishing consequences and results.
 
 We will give the concept of derivative for functions defined on open subsets of the complex plane, although it can be generalised to subsets which are not necessarily open by writing the definitions using the induced topology. In order to keep the exposition and notation simple, we will be dealing only with functions defined on  open subsets of the complex plane.
-Recall that a \textbf{domain} \(\Omega \subseteq \mathbb{C}\) is an open connected set.
+Recall that a \alert{domain} \(\Omega \subseteq \mathbb{C}\) is an open connected set.
 
 \begin{mydef}
 Let \(\Omega\subset \mathbb{C}\) be an open set, and  \(f:\Omega \to \mathbb{C}\). We say that \(f\) is (complex) differentiable at \(z_0\in \Omega\) if the following limit exists
 \[ \lim_{z\to z_0}\frac{f(z)- f(z_0)}{z - z_0}. \]
 The limit is called the derivative of \(f\) at \(z_0\) and will be denoted by \(f'(z_0)\), or \(\frac{df}{dz}(z_0)\).\\
-If \(f\) is differentiable at every point of a domain \(\Omega\), then we call \(f\) \textbf{holomorphic} in \(\Omega\).\\
-We use the term \textbf{analytic} with the same meaning as holomorphic.
-If \(f\) is holomorphic on the whole complex plane \(\mathbb{C}\), then we call \(f\) \textbf{entire}.
+If \(f\) is differentiable at every point of a domain \(\Omega\), then we call \(f\) \alert{holomorphic} in \(\Omega\).\\
+We use the term \alert{analytic} with the same meaning as holomorphic.
+If \(f\) is holomorphic on the whole complex plane \(\mathbb{C}\), then we call \(f\) \alert{entire}.
 \end{mydef}
 
 
@@ -651,7 +654,7 @@ If \(f:\mathbb{R}^n \to \mathbb{R}^m\) is differentiable at a point \(a\in \math
 \end{array} \right). \]
 \end{thm}
 
-\textbf{Remark} Note that \((Df_a)\)  is a matrix with \(m\) rows and \(n\) columns.
+\alert{Remark} Note that \((Df_a)\)  is a matrix with \(m\) rows and \(n\) columns.
 
 The converse is not true unless we add a stronger hypothesis 
 
@@ -671,7 +674,7 @@ partial derivatives at \((0,0)\) exist, but it is not differentiable at \((0,0)\
 \[{\displaystyle f(x,\,y)={\begin{cases}{\frac {xy\left(x^{2}-y^{2}\right)}{x^{2}+y^{2}}}&{\mbox{ for }}(x,\,y)\neq (0,\,0),\\0&{\mbox{ for }}(x,\,y)=(0,\,0).\end{cases}}}\]
 
 
-\textbf{Remark}. If \(f:\mathbb{C}\to \mathbb{C}\) is complex differentiable at \(z_0\), then its derivative is a complex number, \(f'(z_0) = a_1 + i a_2\) for some \(a_1,a_2\in \mathbb{R}\).
+\alert{Remark}. If \(f:\mathbb{C}\to \mathbb{C}\) is complex differentiable at \(z_0\), then its derivative is a complex number, \(f'(z_0) = a_1 + i a_2\) for some \(a_1,a_2\in \mathbb{R}\).
 The corresponding linear transformation representing \(f'(z_0)\) by complex multiplication is \(T:\mathbb{R}^2 \to \mathbb{R}^2\)  acting on to the basic elements \((1,0),(0,1)\) as
 \(T(1,0) = (a_1 , a_2)\), and \(T(0,1) = (-a_2 , a_1)\). Then the matrix representation of \(T\) is
 \[ T = \left( \begin{array}{cc}
@@ -683,7 +686,7 @@ a_{2} &  a_{1}\\
 
 
 \section{Cauchy-Riemann Equations}
-\label{sec:orge9fcc2e}
+\label{sec:org1d13145}
 
 \begin{thm}
 Let \(\Omega\subseteq \mathbb{C}\) an open set \(f:\mathbb{C} \to \mathbb{C}\), and \(z_0= x_0 + iy_0 \in \Omega\). Write \(f(z) = u(x,y) + i v(x,y)\), where \(u,v:\Omega\subset \mathbb{R}^2 \to \mathbb{R}\).
@@ -758,14 +761,14 @@ We can conclude that
 
 
 \begin{cor}
-If \(u,v:\Omega\subset \mathbb{R}^2 \to \mathbb{R}\) have \textbf{continuous first-order partial derivatives} at \((x_0,y_0)\) that satisfy the \textbf{Cauchy-Riemann equations}, then \(f(z) = u(x,y) + i v(x, y)\) is \textbf{complex differentiable} at \(z_0 = x_0 + i y_0\).
+If \(u,v:\Omega\subset \mathbb{R}^2 \to \mathbb{R}\) have \alert{continuous first-order partial derivatives} at \((x_0,y_0)\) that satisfy the \alert{Cauchy-Riemann equations}, then \(f(z) = u(x,y) + i v(x, y)\) is \alert{complex differentiable} at \(z_0 = x_0 + i y_0\).
 \end{cor}
 
 
-\textbf{Remark}. A usual notation is for the Cauchy-Riemann equations is \(u_x = v_y\) and \(u_y = -v_x\).\\
+\alert{Remark}. A usual notation is for the Cauchy-Riemann equations is \(u_x = v_y\) and \(u_y = -v_x\).\\
 Holomorphy is the property of a complex function of being differentiable at every point of a domain. Consequently, we can say that a complex function \(f\), whose real and imaginary parts \(u\) and \(v\) are real-differentiable functions, is holomorphic if and only if, the Cauchy-Riemann equaitons are satisfied at every point of the domain.
 
-\textbf{Example}. The following example will clarify the hypothesis of the previous theorem, that the Cauchy-Riemann equations are not sufficient to establish the complex differentiability of a function.
+\alert{Example}. The following example will clarify the hypothesis of the previous theorem, that the Cauchy-Riemann equations are not sufficient to establish the complex differentiability of a function.
 Let \(f:\mathbb{C}\to \mathbb{C}\) be defined as
 \[ f(z) = \left\{ \begin{array}{ccc}
 \frac{z^5}{|z|^4}, & \mbox{for} & z\neq 0, \\
@@ -790,7 +793,7 @@ What is happening here?
 \[f(z) = \frac{ x^5  - 10 x^3 y^2 + 5 x y^4}{(x^2 + y^2) ^2} + i \frac{5 x^4 y -  10 x^2 y^3  +  y^5}{(x^2 + y^2)^2} \]
 
 \section{Some consequences of the Cauchy-Riemann Equations}
-\label{sec:org6325989}
+\label{sec:org3c7db93}
 
 Note that if \(f(z)  = u(x,y) + i v(x, y)\) is a complex differentiable function at \(z_0\), when taking the limit of the quitient of differences, it does not matter how \(z \to z_0\) approaches,
 then 
@@ -837,7 +840,7 @@ It follows from the real case and the mean value theorem (since \(\Omega\) is co
 \end{proof}
 
 \section{Harmonic Functions}
-\label{sec:org185c767}
+\label{sec:orgc5ce939}
 
 We already saw in one of the previous exercises that if a function is holomorphic, then the real and imaginari parts satisfy the Laplace equation. Here the statement:
 
@@ -863,7 +866,7 @@ harmonic conjugate \(v\) is unique, up to adding a constant.
 \end{thm}
 
 
-\textbf{Example}. Show that \(u(x,y) = xy\) is harmonic and find an harmonic conjugate.
+\alert{Example}. Show that \(u(x,y) = xy\) is harmonic and find an harmonic conjugate.
 
 It is easy to show that \(u\) is harmonic. To find the harmonic conjugate function \(v\) we use the Cauchy-Riemann equations
 \[ u_x = y = v_y,\]
@@ -883,7 +886,7 @@ Then the analytic (Holomorphic function) is given by
 
 
 \section{Conformal Mappings}
-\label{sec:org4de72a7}
+\label{sec:org2846479}
 
 In this section we will study curves in the complex plane, and when two curves intersect we will define the notion of angle between the to curves at the intersection point. Mappings from the complex plane into itself that preserve angles will then be considered. Among the basic examples of these kind of mappings are the so called Möbius transformations. Some geometric applicaitons will also be analysed.
 
@@ -1003,15 +1006,15 @@ Some examples of conformal mappings:
 \item The exponential function \(f(z) = e^{z}\) is conformal at each point \(z\in\mathbb{C}\) and its image is the set \(\mathbb{C}\setminus\{0\}\).
 \end{itemize}
 \section{Cauchy's Theorem and Cauchy's Integral Formula}
-\label{sec:org75e397a}
+\label{sec:org7bc77a4}
 
-\textbf{The Main assumptions for this section}. We will prove the Cauchy theorem assuming that if \(f\) is holomorphic in \(\Omega\), then one of the two situations occur
+\alert{The Main assumptions for this section}. We will prove the Cauchy theorem assuming that if \(f\) is holomorphic in \(\Omega\), then one of the two situations occur
 \begin{itemize}
 \item \(f\) has a continuous primitive \(F\) in \(\Omega\), i.e., \(F'(z) = f(z)\) for all \(z\in \Omega\).
 \item \(f\) is \(C^{1}(\Omega)\). This means that \(f\) has all partial derivatives and they are all continuous.
 \end{itemize}
 
-These are true for any \(f\) holomorphic, and the prove of the first point uses the so called \textbf{Cauchy-Goursat} theorem (at least for rectangles). 
+These are true for any \(f\) holomorphic, and the prove of the first point uses the so called \alert{Cauchy-Goursat} theorem (at least for rectangles). 
 
 
 \begin{mydef}
@@ -1023,22 +1026,22 @@ sense at the endpoints) and  such that \(\alpha'\) is continuous on \([a, b]\).
 We will also use the symbol \(\alpha\) to denote also its trace, that is the set
 of points \(\{\alpha(t) \, | \,  t \in [a, b]\}\).
 
-A curve is called \textbf{piecewise continuously differentiable} if it can be written as a finite union of continuously differentiable curves. 
+A curve is called \alert{piecewise continuously differentiable} if it can be written as a finite union of continuously differentiable curves. 
 
-The curve \(\alpha\) is called \textbf{closed} if \(\alpha (a) = \alpha (b)\).
+The curve \(\alpha\) is called \alert{closed} if \(\alpha (a) = \alpha (b)\).
 
-It is called \textbf{simple closed} if it is closed and it does not intersecting itself, i.e., \(\alpha(s) = \alpha (t)\) and \(s\neq t\) is only possible when either that \(s = a\) and \(t = b\) or \(s = b\) and \(t = a\).
+It is called \alert{simple closed} if it is closed and it does not intersecting itself, i.e., \(\alpha(s) = \alpha (t)\) and \(s\neq t\) is only possible when either that \(s = a\) and \(t = b\) or \(s = b\) and \(t = a\).
 
-A simple closed curve \(\alpha\) is said to be \textbf{positively oriented} if the region interior to the curve is to the left of the curve while it is being traversed from \(t = a\) to \(t = b\). In other case the curve is called \textbf{negatively oriented}.
+A simple closed curve \(\alpha\) is said to be \alert{positively oriented} if the region interior to the curve is to the left of the curve while it is being traversed from \(t = a\) to \(t = b\). In other case the curve is called \alert{negatively oriented}.
 \end{mydef}
 
-\textbf{Example} The curve \(\alpha_1: [0,2\pi] \to \mathbb{C}\) given by \(\alpha(t) = e^{it}\) is \(C^1\) and positively oriented, while \(\alpha_2: [0,2\pi] \to \mathbb{C}\) given by \(\alpha_2(t) = e^{-it}\) is negatively oriented.
+\alert{Example} The curve \(\alpha_1: [0,2\pi] \to \mathbb{C}\) given by \(\alpha(t) = e^{it}\) is \(C^1\) and positively oriented, while \(\alpha_2: [0,2\pi] \to \mathbb{C}\) given by \(\alpha_2(t) = e^{-it}\) is negatively oriented.
 
 \begin{mydef}
-Let \(f:\Omega \to \mathbb{C}\) a continuous function, and \(\alpha : [a,b] \to \Omega\) a \(C^1\) curve. Then the \textbf{complex line integral} over the curve \(\alpha\) is defined as
+Let \(f:\Omega \to \mathbb{C}\) a continuous function, and \(\alpha : [a,b] \to \Omega\) a \(C^1\) curve. Then the \alert{complex line integral} over the curve \(\alpha\) is defined as
 \[\int_{\alpha}f(z) dz = \int_{a}^{b} f(\alpha(t)) \, \alpha'(t) dt.\]
 
-In case \(\alpha\) is \textbf{piecewise continuously differentiable}, then integral is defined as the sum of the integrals along all the \(C^1\) pieces.
+In case \(\alpha\) is \alert{piecewise continuously differentiable}, then integral is defined as the sum of the integrals along all the \(C^1\) pieces.
 \end{mydef}
 
 \begin{prop}
@@ -1053,7 +1056,7 @@ Recall the following properteis of line integrals:
 
 
 \begin{thm}
-\textbf{Cauchy theorem}. Let \(f:\Omega \to \mathbb{C}\) holomorphic in \(\Omega\). Assume that \(\alpha: [a,b] \to \Omega\) is a piecewise continuously differentiable closed curve which is topologically trivial (this means that the image of the curve can be continuously deformed to a points within \(\Omega\)). Then
+\alert{Cauchy theorem}. Let \(f:\Omega \to \mathbb{C}\) holomorphic in \(\Omega\). Assume that \(\alpha: [a,b] \to \Omega\) is a piecewise continuously differentiable closed curve which is topologically trivial (this means that the image of the curve can be continuously deformed to a points within \(\Omega\)). Then
 \[ \int_{\alpha} f(z) dz = 0. \]
 \end{thm}
 
@@ -1084,7 +1087,7 @@ Then in our case:
 \end{proof}
 
 \begin{thm}
-\textbf{Cauchy's integral formula}. Let \(f:\Omega \to \mathbb{C}\) holomorphic in \(\Omega\). Fix a point \(z_0\in \Omega\) and assume that \(\alpha: [a,b] \to \Omega\) is a piecewise continuously differentiable simple closed curve which is topologically trivial and positively oriented, with \(z_0\) in its interior. Then
+\alert{Cauchy's integral formula}. Let \(f:\Omega \to \mathbb{C}\) holomorphic in \(\Omega\). Fix a point \(z_0\in \Omega\) and assume that \(\alpha: [a,b] \to \Omega\) is a piecewise continuously differentiable simple closed curve which is topologically trivial and positively oriented, with \(z_0\) in its interior. Then
 \[ f(z_0) = \frac{1}{2\pi i} \int_{\alpha}\frac{f(z)}{z-z_0}dz. \]
 \end{thm}
 
@@ -1135,7 +1138,7 @@ Let \(f\) be holomorphic in a domain \(\Omega\), and let \(z_0\in \Omega\) fixed
 
 
 \begin{thm}
-\textbf{Morera's Theorem}. Let \(f:\Omega \to \mathbb{C}\) be continuous, \(\Omega\) a simply connected domain, and such that
+\alert{Morera's Theorem}. Let \(f:\Omega \to \mathbb{C}\) be continuous, \(\Omega\) a simply connected domain, and such that
 \[ \int_{\alpha} f(z) dz = 0, \]
 for all piecewise continuously differentiable closed curves in \(\Omega\). Then \(f\) is holomorphic.
 \end{thm}
@@ -1155,18 +1158,18 @@ Then \(F'(z) = f(z)\). This implies \(f\) is analytic and hence holomorphic in \
 \end{proof}
 
 \begin{prop}
-Let \(f\) be an holomorphic function on a domain \(\Omega\) that contains the closed disc \(B = \bar{B}_r(z_0)\). Let \(M = \sup_{B} \{ |f(z)| \, | \, z \in B\}\). Then the derivatives satisfy the estimates
+Let \(f\) be an holomorphic function on a domain \(\Omega\) that contains the closed disc \(B = \bar{B}_R(z_0)\). Let \(M = \sup_{B} \{ |f(z)| \, | \, z \in B\}\). Then the derivatives satisfy the estimates
 \[ \left| f^{(k)}(z_0)\right| \leq \frac{k! M}{R^k} .\]
 \end{prop}
 
 
 \begin{thm}
-\textbf{Liouville's Theorem}. Let \(f\) be a holomorphic function in the complex plane (that is, an entire function). If \(f\) is bounded, then \(f\) must be a constant.
+\alert{Liouville's Theorem}. Let \(f\) be a holomorphic function in the complex plane (that is, an entire function). If \(f\) is bounded, then \(f\) must be a constant.
 \end{thm}
 
 
 \begin{thm}
-\textbf{Maximum Modulus Principle}. Let \(f\) be a holomorphic function in a domain \(\Omega\). If \(z_0\in \Omega\) is such that \(|f(z_0)| \geq |f(z)|\) for all \(z\in \Omega\), then  \(f\) is constant.
+\alert{Maximum Modulus Principle}. Let \(f\) be a holomorphic function in a domain \(\Omega\). If \(z_0\in \Omega\) is such that \(|f(z_0)| \geq |f(z)|\) for all \(z\in \Omega\), then  \(f\) is constant.
 \end{thm}
 \begin{proof}
 
@@ -1180,17 +1183,17 @@ f(z_0) &= \frac{1}{2\pi i} \int_{\alpha} \frac{ f(z)}{z - z_0} dz \\
 
 We will prove that if \(z_0\in \Omega\) has maximum modulus, then \(f\) is constant, i.e.,  suppose \(z_0 \in \Omega\) such that \(|f(z) | \leq |f(z_0)|\) for all \(z\in \Omega\). Now consider \(A = \{ z\in \Omega \, | \, f(z) = f(z_0) \}\), note that this set is nonempty since \(z_0 \in A\).
 
-Part I) \textbf{Prove that the set \(A\)  is open}. Let \(w \in A\) and suppose \(B_R(w) \subset \Omega\). Then for any \(0 < r < R\) by the mean value property we have
+Part I) \alert{Prove that the set \(A\)  is open}. Let \(w \in A\) and suppose \(B_R(w) \subset \Omega\). Then for any \(0 < r < R\) by the mean value property we have
 \[ |f(z_0)| = |f(w)| = \left|\frac{1}{2\pi\,i}\int_{0}^{2\pi} f(w + re^{it})dt \right| \leq  \frac{1}{2\pi } \int_{0}^{2\pi} \left|f(w + re^{it})\right| dt \leq |f(z_0)| \]
 Then all the inequalities can be replaced by equalities and in particular we have
 \[ |f(w + re^{it})| = |f(z_0)|,\]
 for all \(0 < r < R\). this means that \(B_r(w) \subset A\), and hence, \(A\) is open.
 
-Part II) \textbf{Prove that \(A\) is closed}. Recall that by topological arguments, that if \(f:\Omega \to \mathbb{C}\) is continuous, then the inverse image of a closed set in \(\mathbb{C}\) is a closed set in \(\Omega\), and similar for real valued functions. Just note that if \(r_0 = |f(z_0)|\) then
+Part II) \alert{Prove that \(A\) is closed}. Recall that by topological arguments, that if \(f:\Omega \to \mathbb{C}\) is continuous, then the inverse image of a closed set in \(\mathbb{C}\) is a closed set in \(\Omega\), and similar for real valued functions. Just note that if \(r_0 = |f(z_0)|\) then
 \[ A = g^{-1}(\{r_0\}), \]
 where \(g(z) = |f(z)|\), is the composition of \(f\) with the complex norm. Since both are continuous, their composition is continuous and since \(\{r_0\}\subset\mathbb{R}\) is closed then \(A\) is closed.
 
-Part III) \textbf{Use connectedness}. \(A = \Omega\). Again by topological arguments, since \(\Omega\) is assumed to be connected, the only subsets that are both open and closed are the empty set and the whole set \(\Omega\). Since \(A \neq \emptyset\) then \(A=\Omega\).
+Part III) \alert{Use connectedness}. \(A = \Omega\). Again by topological arguments, since \(\Omega\) is assumed to be connected, the only subsets that are both open and closed are the empty set and the whole set \(\Omega\). Since \(A \neq \emptyset\) then \(A=\Omega\).
 \end{proof}
 
 
@@ -1198,7 +1201,7 @@ Part III) \textbf{Use connectedness}. \(A = \Omega\). Again by topological argum
 To finish this section, without using the main assumptions, we will prove that 
 
 \begin{thm}
-\textbf{Cauchy-Goursat}. If \(f\) is an holomorphic function in a domain \(\Omega\) containing a rectangle \(R = \{ z = z + iy \, | , a\leq x \leq b, c \leq y \leq d \}\), then \(\int_{\partial R} f(z) dz = 0\), where \(\partial R\) is the boundary of the rectangle \(R\).
+\alert{Cauchy-Goursat}. If \(f\) is an holomorphic function in a domain \(\Omega\) containing a rectangle \(R = \{ z = z + iy \, | , a\leq x \leq b, c \leq y \leq d \}\), then \(\int_{\partial R} f(z) dz = 0\), where \(\partial R\) is the boundary of the rectangle \(R\).
 \end{thm}
 
 \begin{itemize}
@@ -1216,10 +1219,10 @@ If \(f\) is analytic in a simply connected domain \(\Omega\), then there is a ho
 
 
 \section{Laurent Series and Residue Theorem}
-\label{sec:orgb6a48d6}
+\label{sec:org7815b72}
 
 \begin{thm}
-\textbf{The strong principle of analytic continuation}. Let \(\Omega\) be a domain and \(f\) be holomorphic on \(\Omega\). If there is a complex number \(z_0\in\Omega\) such that
+\alert{The strong principle of analytic continuation}. Let \(\Omega\) be a domain and \(f\) be holomorphic on \(\Omega\). If there is a complex number \(z_0\in\Omega\) such that
 \[ f^{(k)}(z_0) = 0, \mbox{for }\quad k = 0,1,2,\ldots \]
 then, \(f(z) = 0\) for all \(z\in \Omega\).
 \end{thm}
@@ -1231,15 +1234,15 @@ Then show that
 \item \(A \neq \emptyset\).
 \item \(A\) is open.
 \item \(A\) is closed.
-\item Used that \(\Omega\) is connected.
+\item Use that \(\Omega\) is connected.
 \end{enumerate}
 \end{proof}
 
 \begin{mydef}
-Let \(f:\Omega \to \mathbb{C}\) be a holomorphic, non constant function such that for \(z_0\in \Omega\), we have \(f(z_0)= 0\), then there exists a disc  \(B_r(z_0)\) around \(z_0\), and a natural number \(n\) such that \(f^{(n)}(z_0) \neq 0\). The complex number \(z_0\) is called a \textbf{zero}  of \(f\), and the smallest of such \(n\)'s is called the order of the zero, and more over one can write \[ f(z) = (z-z_0)^n g(z), \] where \(g\) is holomorphic and does not vanish in \(B_r(z_0)\).
+Let \(f:\Omega \to \mathbb{C}\) be a holomorphic, non-constant function, such that for \(z_0\in \Omega\), we have \(f(z_0)= 0\), then there exists a disc  \(B_r(z_0)\) around \(z_0\), and a natural number \(n\) such that \(f^{(n)}(z_0) \neq 0\). The complex number \(z_0\) is called a \alert{zero}  of \(f\), and the smallest of such \(n\)'s is called the order of the zero, and moreover one can write \[ f(z) = (z-z_0)^n g(z), \] where \(g\) is holomorphic and does not vanish in \(B_r(z_0)\).
 \end{mydef}
 
-\textbf{Example}. If you consider the function \(f(z) = 2z (e^z -1)\), then \(z = 0\) is a zero of \(f\). Note that \[ f'(z) = 2(e^z -1) + 2ze^z, \qquad f'(0) = 0, \] the second derivative is \[ f''(z) = 2e^z + 2e^z + 2ze^z = 4e^z + 2ze^z, \qquad f''(0) = 4 \neq 0, \] then the order of the zero is \(2\).
+\alert{Example}. If you consider the function \(f(z) = 2z (e^z -1)\), then \(z = 0\) is a zero of \(f\). Note that \[ f'(z) = 2(e^z -1) + 2ze^z, \qquad f'(0) = 0, \] the second derivative is \[ f''(z) = 2e^z + 2e^z + 2ze^z = 4e^z + 2ze^z, \qquad f''(0) = 4 \neq 0, \] then the order of the zero is \(2\).
 If you write the Taylor's series about zero you can see that
 \[ f(z) = 2z^2 \sum_{k=0}^{\infty} \frac{z^k}{(k+1)!}. \]
 
@@ -1262,7 +1265,7 @@ If \(f\) is holomorphic on a domain  \(\Omega\), then the set of zeros \(\{z \in
 (Identity Principle) Let \(f\)  and \(g\)  be analytic on a domain \(\Omega\) and consider \(A\subset \Omega\).  If for all \(z\in A\) we have \(f(z)=g(z)\) and if \(A\) contains a limit point \(z_0\in A\) , then \(f(z) = g(z)\) for all \(z\in \Omega\).
 \end{cor}
 
-\textbf{Example} Show that there does not exist any analytic function \(f\) such that \(f\left(\frac{1}{n}\right) = \frac{1}{2^n}\).
+\alert{Example} Show that there does not exist any analytic function \(f\) such that \(f\left(\frac{1}{n}\right) = \frac{1}{2^n}\).
 
 We may try to find a candidate to be such a function. Consider the following function:
 \[ g(z) = \frac{1}{2^{\frac{1}{z}}}. \]
@@ -1302,21 +1305,27 @@ Since \(\Omega_2 \subset \Omega_1\) is open, we can find \(z_0\in \Omega_1\) suc
 Then \(F\) and \(G\) satisfy the hypothesis of the Identity Principle, hence \(F=G\) on \(\Omega_1\).
 \end{proof}
 
-\textbf{Example} The Riemann zeta function. Consider the function 
+\alert{Example} The Riemann zeta function. Consider the function 
 \[ \zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s} .\]
 \begin{enumerate}
 \item Show that for \(\alpha \in \mathbb{R}\), the series \(\frac{1}{n^{\alpha}}\) converges when \(\alpha >1\).
-\item Look at the M-test at the end of our written notes \textbf{\href{https://platforma2.polsl.pl/rms/pluginfile.php/180132/mod\_resource/content/1/Lecture\_power\_series.pdf}{Here}}.
-\item Apply the M-test and show that \(\zeta(s)\) converges absolutely and unifromly on \(\Omega = \{ s\in \mathbb{C}\,|\, \mbox{Re}(s) >1 \}\).
+\item Look at the M-test at the end of our written notes \alert{\href{https://platforma2.polsl.pl/rms/pluginfile.php/180132/mod\_resource/content/1/Lecture\_power\_series.pdf}{Here}}.
+\item Apply the M-test and show that \(\zeta(s)\) converges absolutely and uniformly on \(\Omega = \{ s\in \mathbb{C}\,|\, \mbox{Re}(s) >1 \}\).
 \end{enumerate}
 
 Difficult question: Is there any analytic continuation to any other larger domain?
 
-Take a look at this video, \textbf{\href{https://youtu.be/sD0NjbwqlYw}{Visualizing the Riemann zeta function and analytic continuation}}.
+Take a look at this video, \alert{\href{https://youtu.be/sD0NjbwqlYw}{Visualizing the Riemann zeta function and analytic continuation}}.
+
+
+\begin{mydef}
+A \alert{singularity}  is a point \(z_0\in \mathbb{C}\) at which the function \(f\) fails to be analytic.
+An \alert{isolated singularity} is a singularity \(z_0\in \mathbb{C}\) of \(f\), for which there exists a punctured disk \(B_r(z_0)\setminus\{z_0\}\) in which \(f\) is analytic.
+\end{mydef}
 
 
 \begin{thm}
-\textbf{Riemann's removable singularity theorem}. Let \(f\) be holomorphic on a punctured disc \(B_r(w) \setminus \{w\}\). If \(f\) is bounded in \(B_r(w)\), then \(f\) can be extended to a holomorphic function \(F\) on \(B_r(w)\).
+\alert{Riemann's removable singularity theorem}. Let \(f\) be holomorphic on a punctured disc \(B_r(w) \setminus \{w\}\). If \(f\) is bounded in \(B_r(w)\), then \(f\) can be extended to a holomorphic function \(F\) on \(B_r(w)\).
 \end{thm}
 \begin{proof}
 Consider the function
@@ -1334,32 +1343,53 @@ Then \(F\) is our desired function.
 \end{proof}
 
 
-\begin{mydef}
-A \textbf{singularity}  is a point \(z_0\in \mathbb{C}\) at which the function \(f\) fails to be analytic.
-An \textbf{isolated singularity} is a singularity \(z_0\in \mathbb{C}\) of \(f\), for which there exists a deleted neighbourhood \(B_r(z_0)\setminus\{0\}\) in which \(f\) is analytic.
-\end{mydef}
+\alert{Remark} On the Cauchy's Theorem for Multiple Connected sets.
+
+
+Suppose that \(f(z)\) is analytic on the two circles and the region in between the two circles,
 
 \begin{center}
 \includesvg[width=70t]{./drawing_ring}
 \end{center}
 
+If \(\alpha_0\) is the outer circle and \(\alpha_1\) is the inner circle (positively oriented) then
+\[ \int_{\alpha_0 - \alpha_1}f(z) = 0,\]
+or equivalently
+\[ \int_{\alpha_0}f(z) = \int_{\alpha_1}f(z) .\]
 
+One can generalise this result for domains like
+\begin{center}
+\includesvg[width=70t]{./drawing_ring3}
+\end{center}
+
+where \(\alpha_0\) is the outer boundary and \(\alpha_1, \alpha_2\) and \(\alpha_3\) the inner boundaries then
+\[ \int_{\alpha_0 - \alpha_1 - \alpha_2 - \alpha_3}f(z) = 0,\]
+
+And in the case of \(m\) -th different inner components, the identity
+\[ \int_{\alpha_0}f(z)dz = \sum_{k=1}^{m} \int_{\alpha_k}f(z)dz.\]
+
+The idea now is to deal with functions that are analytic in a ring, that may have a singularity inside the inner hole.
 
 \begin{thm}
-\textbf{Laurent's theorem}. If \(f\) is holomorphic on the ring \(0 < r < |z - z_0| < R\), then the function can be written as the Laurent's series
+\alert{Laurent's theorem}. If \(f\) is holomorphic on the ring \(0 \leq r < |z - z_0| < R\), then the function can be written as the Laurent's series
 \[ f(z) = \sum_{n = -\infty}^{\infty} a_n (z - z_0) ^n ,\]
 with
 \[ a_n = \frac{1}{2\pi i} \int_{|w - z_0| = \rho}\frac{f(w)}{(w - z_0)^{n+1}} dw, \qquad, n = 0, \pm 1, \pm 2, \ldots, \quad r < \rho < R. \]
 \end{thm}
 \begin{proof}
-Take \(\epsilon >0\) small enough such that \(0 < \epsilon < \frac{R - r}{2}\), and consider the circles \(\alpha_1\) given by \(|z-z_0| = r + \epsilon\) and  \(\alpha_2\) given by \(|z-z_0| = R - \epsilon\).
-Then for any \(w\) such that \(r + \epsilon < |w - z_0 | < R-\epsilon\) we can apply the Cauchy's Inegral Formula
-\[ f(z) = \frac{1}{2\pi i} \int_{\alpha_2} \frac{f(\xi)}{\xi - w} d\xi - \frac{1}{2\pi i} \int_{\alpha_1} \frac{f(\xi)}{\xi - w} d\xi .\]
+Take \(\epsilon >0\) small enough such that \(0 < \epsilon < \frac{R - r}{2}\), and consider the circles \(\alpha_0\) given by \(|z-z_0| = R + \epsilon\) and  \(\alpha_1\) given by \(|z-z_0| = r - \epsilon\).
+Then for any \(w\) such that \(r + \epsilon < |w - z_0 | < R-\epsilon\), we can find a small positive number \(\delta >0\) such that \(B_\delta(w)\) is completely contained between \(\alpha_0\) and \(\alpha_1\). The function 
+\[ g_w(\xi) = \frac{f(\xi)}{\xi - w}, \]
+is holomorphic in the region between \(\alpha_0\) and \(\alpha_1\) and outside \(B_\delta(w)\). Then by the observation about the Cauchy's theorem and the non-simply connected domains
+ we can apply the Cauchy's theorem
+\[ 0 = \int_{\alpha_0  - \alpha_1- B_{\delta}(w)} g_w(\xi)d\xi = \int_{\alpha_0  - \alpha_1} \frac{f(\xi)}{\xi - w} d\xi - \int_{B_{\delta}(w)} g_w(\xi)d\xi = \int_{\alpha_0  - \alpha_1} \frac{f(\xi)}{\xi - w} d\xi - f(w) \] 
+
+\[ f(w) = \frac{1}{2\pi i} \int_{\alpha_0} \frac{f(\xi)}{\xi - w} d\xi - \frac{1}{2\pi i} \int_{\alpha_1} \frac{f(\xi)}{\xi - w} d\xi .\]
 
 For the first integral, proceed as in the proof of the power extension of holomorphic functions, then
-\[ \frac{1}{2\pi i} \int_{\alpha_2} \frac{f(\xi)}{\xi - w} d\xi = \sum_{k=0}^{\infty} a_k (w - z_0)^k, \]
+\[ \frac{1}{2\pi i} \int_{\alpha_0} \frac{f(\xi)}{\xi - w} d\xi = \sum_{k=0}^{\infty} a_k (w - z_0)^k, \]
 with 
-\[ a_k = \frac{1}{2\pi i } \int_{\alpha_2}\frac{f(\xi)}{(\xi - z_0)^{k+1}}, \quad k = 0,1,2,\ldots \]
+\[ a_k = \frac{1}{2\pi i } \int_{\alpha_0}\frac{f(\xi)}{(\xi - z_0)^{k+1}}, \quad k = 0,1,2,\ldots \]
 
 For the second integral we use the geometric series, since along \(\alpha_1\) we have \(|\xi - z_0| < |w - z_0|\), then
 
@@ -1367,7 +1397,7 @@ For the second integral we use the geometric series, since along \(\alpha_1\) we
 
 Since the series is uniformly convergent then one can integrate term by term. 
 
-\[ - \frac{1}{2\pi i } \int_{\alpha_1}\frac{f(\xi)}{\xi - w}d\xi = \sum_{k=0}^{\infty} (w-z_0)^{-(k+1)} \frac{1}{2\pi i} \int_{\alpha_1} f(\xi) (\xi - z_0)^{k} d\xi = sum_{k = -\infty}^{-1} a_k (w - z_0)^{k}, \]
+\[ - \frac{1}{2\pi i } \int_{\alpha_1}\frac{f(\xi)}{\xi - w}d\xi = \sum_{k=0}^{\infty} (w-z_0)^{-(k+1)} \frac{1}{2\pi i} \int_{\alpha_1} f(\xi) (\xi - z_0)^{k} d\xi = \sum_{k = -\infty}^{-1} a_k (w - z_0)^{k}, \]
 with the obvius definition of \(a_{k}\) for this case, namely
 \[ a_{k} = \frac{1}{2\pi i } \int_{\alpha_1}\frac{f(\xi)}{(\xi - z_0)^{-(k-1)}}d\xi . \]
 \end{proof}
@@ -1378,12 +1408,12 @@ In many problems, finding the Laurent series is a matter of applying an algebrai
 and
 \[ \sum_{k = 0}^{\infty} (-1)^ka^k = \frac{1}{1+a}. \]
 
-\textbf{Example 1}
+\alert{Example 1}
 
 Find the Laurent Series for \[ f(z) = \frac{z+1}{z^3(z^2 + 1)}, \] on the region \(0 < |z| < 1\).
 
 \begin{enumerate}
-\item Note that the function has (isolated) singlarities only around \(z = 0, i, -i\). Hence it is analytic in the domain \(0 < |z| < 1\).
+\item Note that the function has (isolated) singularities only around \(z = 0, i, -i\). Hence it is analytic in the domain \(0 < |z| < 1\).
 \item Then the series expansion around \(z = 0\) is
 \end{enumerate}
 \[ \frac{z+1}{z^3(z^2 + 1)} = (z+1)\frac{1}{z^3} \frac{1}{1 + z^2} = (z+1)\frac{1}{z^3} \sum_{k=0}^{\infty}(-1)^kz^{2k} =  \sum_{k=0}^{\infty}(-1)^k\left(z^{2k-3} + z^{2(k-1)}\right) = \sum_{k=0}^{\infty}(-1)^k\left(z^{2(k-1) -1} + z^{2(k-1)}\right) \]
@@ -1396,7 +1426,7 @@ Or explicitly
 \[f(z) =  z^{-3} + z^{-2} - z^{-1} - 1 + z^{1} + z^{2} - \cdots = \frac{1}{z^3} + \frac{1}{z^2} - \frac{1}{z} - 1 + z + z^2 - z^3 - \cdots \]
 
 
-\textbf{Example 2}
+\alert{Example 2}
 
 Consider the function \(f(z) = (z^2 - 3z + 2)^{-1}\). Find the Laurent series in the domains:
 \begin{enumerate}
@@ -1422,12 +1452,12 @@ and since we want to restrict to the domain \(0 < |z - 1| < 1\) then we have
 \[ f(z) = - \frac{1}{z-1} - \sum_{k=0}^{\infty} (z-1)^k = - \sum_{k=-1}^{\infty} (z-1)^k \]
 
 \begin{mydef}
-If \(f\) is holomorphic on \(0<|z - z_0| < R\) has a Laurent's expansion around \(z_0\), then the coefficient \(a_{-1}\) is called \textbf{the residue} of \(f\).
+If \(f\) is holomorphic on \(0<|z - z_0| < R\) has a Laurent's expansion around \(z_0\), then the coefficient \(a_{-1}\) is called \alert{the residue} of \(f\).
 \end{mydef}
 
 
 \begin{thm}
-\textbf{Residue theorem}. Sea \(f\) holomorphic on \(\Omega\). Let \(\alpha\) be a piecewise continuously differentiable closed curve with a finite number of singularities of \(f\), \(z_1, z_2 \ldots, z_k\)
+\alert{Residue theorem}. Sea \(f\) holomorphic on \(\Omega\). Let \(\alpha\) be a piecewise continuously differentiable closed curve with a finite number of singularities of \(f\), \(z_1, z_2 \ldots, z_k\)
 on the interior of \(\alpha\), and no other singularity on \(\alpha\). Then
 \[ \int_{\alpha}f(z) dz = 2\pi i \sum_{n=1}^k \mbox{Res}_{z_n}f(z). \]
 \end{thm}
