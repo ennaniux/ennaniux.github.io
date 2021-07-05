@@ -1,4 +1,4 @@
-% Created 2021-06-17 Thu 11:19
+% Created 2021-06-27 Sun 16:58
 % Intended LaTeX compiler: pdflatex
 \documentclass{amsart}
 \usepackage{enumerate}
@@ -66,7 +66,7 @@
 
 
 \section{Sequences and limits}
-\label{sec:org046f2f4}
+\label{sec:org478f141}
 
 \begin{mydef}
 A sequence in \(\mathbb{C}\) is a function \(\varphi: \mathbb{N}\to \mathbb{C}\). We use the notation
@@ -215,7 +215,7 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 
 
 \section{Continuity}
-\label{sec:org7dd7859}
+\label{sec:org83461f9}
 \begin{mydef}
 The function \(f(z)\) is said to have the limit \(w_0\in \mathbb{C}\) as \(z\) tends to \(a\in\mathbb{C}\),  if for every \(\epsilon >0\) there exists a number \(\delta = \delta(\epsilon) >0\) with the property that if \(|z - a| < \delta\) then it holds \(|f(z) - w_0| <\epsilon\), and in that case we write \[ \lim_{z\to a} f(z) = w_0 . \]
 \end{mydef}
@@ -287,7 +287,7 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 \[ |f(z) - f(w) | = |n^2 - \left(n + \frac{\delta}{2}\right)^2| =  n\delta + \frac{\delta^2}{4} > n\delta > 1 = \epsilon. \]
 
 \section{Basic topology of \(\mathbb{C}\)}
-\label{sec:org33a75dd}
+\label{sec:org1c94455}
 
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
 
@@ -552,7 +552,7 @@ which its a contradiction itself. Consequently \(f\) is uniformly continuous in 
 \end{proof}
 
 \section{Derivatives}
-\label{sec:org563119a}
+\label{sec:org7151009}
 
 The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
 relates with that of the derivative of maps from \(\mathbb{R}^2\) to \(\mathbb{R}^2\). The properties of complex differentiation have been extensively used and applied in other areas of mathematics, leading to astonishing consequences and results.
@@ -683,7 +683,7 @@ a_{2} &  a_{1}\\
 
 
 \section{Cauchy-Riemann Equations}
-\label{sec:org21b81f4}
+\label{sec:org93f5e13}
 
 \begin{thm}
 Let \(\Omega\subseteq \mathbb{C}\) an open set \(f:\mathbb{C} \to \mathbb{C}\), and \(z_0= x_0 + iy_0 \in \Omega\). Write \(f(z) = u(x,y) + i v(x,y)\), where \(u,v:\Omega\subset \mathbb{R}^2 \to \mathbb{R}\).
@@ -790,7 +790,7 @@ What is happening here?
 \[f(z) = \frac{ x^5  - 10 x^3 y^2 + 5 x y^4}{(x^2 + y^2) ^2} + i \frac{5 x^4 y -  10 x^2 y^3  +  y^5}{(x^2 + y^2)^2} \]
 
 \section{Some consequences of the Cauchy-Riemann Equations}
-\label{sec:org29011e2}
+\label{sec:org27bf6b3}
 
 Note that if \(f(z)  = u(x,y) + i v(x, y)\) is a complex differentiable function at \(z_0\), when taking the limit of the quitient of differences, it does not matter how \(z \to z_0\) approaches,
 then 
@@ -837,7 +837,7 @@ It follows from the real case and the mean value theorem (since \(\Omega\) is co
 \end{proof}
 
 \section{Harmonic Functions}
-\label{sec:org09752d0}
+\label{sec:orgce338eb}
 
 We already saw in one of the previous exercises that if a function is holomorphic, then the real and imaginari parts satisfy the Laplace equation. Here the statement:
 
@@ -883,7 +883,7 @@ Then the analytic (Holomorphic function) is given by
 
 
 \section{Conformal Mappings}
-\label{sec:orgaf52796}
+\label{sec:org3df878f}
 
 In this section we will study curves in the complex plane, and when two curves intersect we will define the notion of angle between the to curves at the intersection point. Mappings from the complex plane into itself that preserve angles will then be considered. Among the basic examples of these kind of mappings are the so called Möbius transformations. Some geometric applicaitons will also be analysed.
 
@@ -1003,7 +1003,7 @@ Some examples of conformal mappings:
 \item The exponential function \(f(z) = e^{z}\) is conformal at each point \(z\in\mathbb{C}\) and its image is the set \(\mathbb{C}\setminus\{0\}\).
 \end{itemize}
 \section{Cauchy's Theorem and Cauchy's Integral Formula}
-\label{sec:org271ae83}
+\label{sec:org74814d8}
 
 \textbf{The Main assumptions for this section}. We will prove the Cauchy theorem assuming that if \(f\) is holomorphic in \(\Omega\), then one of the two situations occur
 \begin{itemize}
@@ -1216,7 +1216,7 @@ If \(f\) is analytic in a simply connected domain \(\Omega\), then there is a ho
 
 
 \section{Laurent Series and Residue Theorem}
-\label{sec:org1472552}
+\label{sec:org985bfc2}
 
 \begin{thm}
 \textbf{The strong principle of analytic continuation}. Let \(\Omega\) be a domain and \(f\) be holomorphic on \(\Omega\). If there is a complex number \(z_0\in\Omega\) such that
@@ -1374,7 +1374,7 @@ with
 \[ a_n = \frac{1}{2\pi i} \int_{|w - z_0| = \rho}\frac{f(w)}{(w - z_0)^{n+1}} dw, \qquad n = 0, \pm 1, \pm 2, \ldots, \quad r < \rho < R. \]
 \end{thm}
 \begin{proof}
-Take \(\epsilon >0\) small enough such that \(0 < \epsilon < \frac{R - r}{2}\), and consider the circles \(\alpha_0\) given by \(|z-z_0| = R + \epsilon\) and  \(\alpha_1\) given by \(|z-z_0| = r - \epsilon\).
+Take \(\epsilon >0\) small enough such that \(0 < \epsilon < \frac{R - r}{2}\), and consider the circles \(\alpha_0\) given by \(|z-z_0| = R - \epsilon\) and  \(\alpha_1\) given by \(|z-z_0| = r + \epsilon\).
 Then for any \(w\) such that \(r + \epsilon < |w - z_0 | < R-\epsilon\), we can find a small positive number \(\delta >0\) such that \(B_\delta(w)\) is completely contained between \(\alpha_0\) and \(\alpha_1\). The function 
 \[ g_w(\xi) = \frac{f(\xi)}{\xi - w}, \]
 is holomorphic in the region between \(\alpha_0\) and \(\alpha_1\) and outside \(B_\delta(w)\). Then by the observation about the Cauchy's theorem and the non-simply connected domains
@@ -1454,7 +1454,7 @@ If \(f\) is holomorphic on \(0<|z - z_0| < R\) has a Laurent's expansion around 
 
 
 \begin{thm}
-\textbf{Residue theorem}. Sea \(f\) holomorphic on \(\Omega\). Let \(\alpha\) be a piecewise continuously differentiable closed curve with a finite number of singularities of \(f\), \(z_1, z_2 \ldots, z_k\)
+\textbf{Residue theorem}. Sea \(f\) holomorphic on \(\Omega\) except in a finite number of singularities. Let \(\alpha\) be a piecewise continuously differentiable closed curve with a finite number of singularities of \(f\), \(z_1, z_2 \ldots, z_k\)
 on the interior of \(\alpha\), and no other singularity on \(\alpha\). Then
 \[ \int_{\alpha}f(z) dz = 2\pi i \sum_{n=1}^k \mbox{Res}_{z_n}f(z). \]
 \end{thm}
