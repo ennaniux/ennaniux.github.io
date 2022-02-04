@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-02-04 Fri 18:24 -->
+<!-- 2022-02-05 Sat 00:47 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>A catalogue of Models in R</title>
@@ -366,13 +366,13 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orga553e6f">1. Simple Linear Model</a></li>
-<li><a href="#orgdf0f2f7">2. Multi-Linear Model</a></li>
-<li><a href="#org3ccbef7">3. Polynomial Model</a></li>
-<li><a href="#orgd1fdcac">4. Exponential Model</a></li>
-<li><a href="#org604b652">5. Logistic Regression Model</a></li>
-<li><a href="#org3371984">6. K-nearest neighbourhood</a></li>
-<li><a href="#orgede8153">7. Bootstrap</a></li>
+<li><a href="#org411fc76">1. Simple Linear Model</a></li>
+<li><a href="#orge442d4f">2. Multi-Linear Model</a></li>
+<li><a href="#orgd172b4e">3. Polynomial Model</a></li>
+<li><a href="#org2e1bfb9">4. Exponential Model</a></li>
+<li><a href="#org363eb5d">5. Logistic Regression Model</a></li>
+<li><a href="#org8aefbd8">6. K-nearest neighbourhood</a></li>
+<li><a href="#org2132f7c">7. Bootstrap</a></li>
 </ul>
 </div>
 </div>
@@ -382,8 +382,8 @@ for the JavaScript code in this tag.
 <a href=../teaching.html> <b style="color: #8d99ae;">Back</b> </a> 
 </div>
 
-<div id="outline-container-orga553e6f" class="outline-2">
-<h2 id="orga553e6f"><span class="section-number-2">1</span> Simple Linear Model</h2>
+<div id="outline-container-org411fc76" class="outline-2">
+<h2 id="org411fc76"><span class="section-number-2">1</span> Simple Linear Model</h2>
 <div class="outline-text-2" id="text-1">
 \begin{equation}
 Y = \beta_0 + \beta_1 X.
@@ -421,8 +421,8 @@ F-statistic: 91.38 on 1 and 30 DF,  p-value: 1.294e-10
 </div>
 </div>
 
-<div id="outline-container-orgdf0f2f7" class="outline-2">
-<h2 id="orgdf0f2f7"><span class="section-number-2">2</span> Multi-Linear Model</h2>
+<div id="outline-container-orge442d4f" class="outline-2">
+<h2 id="orge442d4f"><span class="section-number-2">2</span> Multi-Linear Model</h2>
 <div class="outline-text-2" id="text-2">
 \begin{equation}
 Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \ldots + \beta_n X_n.
@@ -465,8 +465,8 @@ F-statistic: 69.21 on 2 and 29 DF,  p-value: 9.109e-12
 
 
 
-<div id="outline-container-org3ccbef7" class="outline-2">
-<h2 id="org3ccbef7"><span class="section-number-2">3</span> Polynomial Model</h2>
+<div id="outline-container-orgd172b4e" class="outline-2">
+<h2 id="orgd172b4e"><span class="section-number-2">3</span> Polynomial Model</h2>
 <div class="outline-text-2" id="text-3">
 \begin{equation}
 Y = \beta_0 + \beta_1 X + \beta_2 X^2.
@@ -490,12 +490,35 @@ my.qmodel <span style="color: #259ea2;">&lt;-</span> lm(YY ~ XX + I(XX^2), data=
 summary(my.qmodel)
 </pre>
 </div>
+
+<pre class="example">
+
+Call:
+lm(formula = YY ~ XX + I(XX^2), data = df)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-7.6322 -0.5881 -0.2455  1.3227  6.0064 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  71.8863     4.2283  17.001 3.03e-09 ***
+XX           -1.7604     1.7851  -0.986 0.345255    
+I(XX^2)      -0.8404     0.1577  -5.329 0.000241 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 3.305 on 11 degrees of freedom
+Multiple R-squared:  0.9911,	Adjusted R-squared:  0.9895 
+F-statistic: 611.4 on 2 and 11 DF,  p-value: 5.318e-12
+
+</pre>
 </div>
 </div>
 
 
-<div id="outline-container-orgd1fdcac" class="outline-2">
-<h2 id="orgd1fdcac"><span class="section-number-2">4</span> Exponential Model</h2>
+<div id="outline-container-org2e1bfb9" class="outline-2">
+<h2 id="org2e1bfb9"><span class="section-number-2">4</span> Exponential Model</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 In order to fit the model
@@ -558,8 +581,8 @@ F-statistic: 141.4 on 1 and 29 DF,  p-value: 1.126e-12
 </div>
 
 
-<div id="outline-container-org604b652" class="outline-2">
-<h2 id="org604b652"><span class="section-number-2">5</span> Logistic Regression Model</h2>
+<div id="outline-container-org363eb5d" class="outline-2">
+<h2 id="org363eb5d"><span class="section-number-2">5</span> Logistic Regression Model</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 We would like a model that predicts the relationship between \(Pr(Y=1|X)\) and \(X\).
@@ -702,8 +725,8 @@ sum(diag(CC)) / sum(CC)
 </div>
 </div>
 
-<div id="outline-container-org3371984" class="outline-2">
-<h2 id="org3371984"><span class="section-number-2">6</span> K-nearest neighbourhood</h2>
+<div id="outline-container-org8aefbd8" class="outline-2">
+<h2 id="org8aefbd8"><span class="section-number-2">6</span> K-nearest neighbourhood</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 <b>The Normalisation function</b> Since
@@ -773,8 +796,8 @@ sum(diag(CC))/sum(CC) * 100
 
 
 
-<div id="outline-container-orgede8153" class="outline-2">
-<h2 id="orgede8153"><span class="section-number-2">7</span> Bootstrap</h2>
+<div id="outline-container-org2132f7c" class="outline-2">
+<h2 id="org2132f7c"><span class="section-number-2">7</span> Bootstrap</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 In this example in particular we will use the Bootstrap method in order to estimate the variance (standard deviation)
@@ -831,7 +854,7 @@ Of course, the function can be anything else but the implementation is similar.
 <div id="postamble" class="status">
 <p class="date">Date: 2022-01-26 Wed 00:00</p>
 <p class="author">Author: daniel b</p>
-<p class="date">Created: 2022-02-04 Fri 18:24</p>
+<p class="date">Created: 2022-02-05 Sat 00:47</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
