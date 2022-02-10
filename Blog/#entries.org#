@@ -1,0 +1,508 @@
+#+TITLE: Entries
+#+DATE: <2019-04-30 Tue>
+#+AUTHOR: daniel b
+#+EMAIL: daniel@linuxdeb.home
+#+PROPERTY: Geometry and PDE Blog
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
+#+OPTIONS: e:t email:nil f:t inline:t num:t p:nil pri:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:t todo:t |:t
+#+CREATOR: Emacs 24.5.1 (Org mode 8.2.10)
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+OPTIONS: num:nil toc:1
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./css/dark.css"/> 
+#+HTML_HEAD:<div id="preamble" class="status"><a href=./index.html>About </a><a href=./entries.html>Entries </a></div>
+
+
+:styles:
+#+HTML_HEAD: <style>
+#+HTML_HEAD: .mydef  {
+#+HTML_HEAD:     	color:  #404040;
+#+HTML_HEAD:     border: 1px solid #404040;
+#+HTML_HEAD:     background-color: #FFD580;
+#+HTML_HEAD:     /* box-shadow: 3px 3px 3px orange; */
+#+HTML_HEAD:     padding: 8pt;
+#+HTML_HEAD:     overflow: auto;
+#+HTML_HEAD:     margin: 1.2em;
+#+HTML_HEAD:     position: relative;
+#+HTML_HEAD:     overflow: auto;
+#+HTML_HEAD:     padding-top: 1.2em;
+#+HTML_HEAD: 	   }
+#+HTML_HEAD: 
+#+HTML_HEAD:   .mydef:before {
+#+HTML_HEAD:     display: inline;
+#+HTML_HEAD:     position: absolute;
+#+HTML_HEAD:     /* background-color: white; */
+#+HTML_HEAD:     background-color: orange;
+#+HTML_HEAD:     top: -5px;
+#+HTML_HEAD:     left: 10px;
+#+HTML_HEAD:     padding: 3px;
+#+HTML_HEAD:     border: 1px solid black;
+#+HTML_HEAD:     content: 'Definition';
+#+HTML_HEAD:   }
+#+HTML_HEAD: 
+#+HTML_HEAD: .prop  {
+#+HTML_HEAD:     	color:  #404040;
+#+HTML_HEAD:     border: 1px solid ;
+#+HTML_HEAD:     background-color: #F1FFC2;
+#+HTML_HEAD:     /* box-shadow: 3px 3px 3px green; */
+#+HTML_HEAD:     padding: 8pt;
+#+HTML_HEAD:     overflow: auto;
+#+HTML_HEAD:     margin: 1.2em;
+#+HTML_HEAD:     position: relative;
+#+HTML_HEAD:     overflow: auto;
+#+HTML_HEAD:     padding-top: 1.2em;
+#+HTML_HEAD: 	   }
+#+HTML_HEAD: 
+#+HTML_HEAD:   .prop:before {
+#+HTML_HEAD:     	color:  white;
+#+HTML_HEAD:     display: inline;
+#+HTML_HEAD:     position: absolute;
+#+HTML_HEAD:     background-color: green;
+#+HTML_HEAD:     top: -5px;
+#+HTML_HEAD:     left: 10px;
+#+HTML_HEAD:     padding: 3px;
+#+HTML_HEAD:     border: 1px solid black;
+#+HTML_HEAD:     content: 'Proposition';
+#+HTML_HEAD:   }
+#+HTML_HEAD: 
+#+HTML_HEAD: .thm  {
+#+HTML_HEAD:     	color:  #404040;
+#+HTML_HEAD:     border: 1px solid ;
+#+HTML_HEAD:     background-color: lightcyan;
+#+HTML_HEAD:     /* box-shadow: 3px 3px 3px brown; */
+#+HTML_HEAD:     padding: 8pt;
+#+HTML_HEAD:     overflow: auto;
+#+HTML_HEAD:     margin: 1.2em;
+#+HTML_HEAD:     position: relative;
+#+HTML_HEAD:     overflow: auto;
+#+HTML_HEAD:     padding-top: 1.2em;
+#+HTML_HEAD: 	   }
+#+HTML_HEAD: 
+#+HTML_HEAD:   .thm:before {
+#+HTML_HEAD:     	color:  white;
+#+HTML_HEAD:     display: inline;
+#+HTML_HEAD:     position: absolute;
+#+HTML_HEAD:     background-color: darkblue;
+#+HTML_HEAD:     top: -5px;
+#+HTML_HEAD:     left: 10px;
+#+HTML_HEAD:     padding: 3px;
+#+HTML_HEAD:     border: 1px solid black;
+#+HTML_HEAD:     content: 'Theorem';
+#+HTML_HEAD:   }
+#+HTML_HEAD: 
+#+HTML_HEAD:   .cor  {
+#+HTML_HEAD:     	color:  #404040;
+#+HTML_HEAD:     border: 1px solid blue;
+#+HTML_HEAD:     box-shadow: 3px 3px 3px blue;
+#+HTML_HEAD:     padding: 8pt;
+#+HTML_HEAD:     overflow: auto;
+#+HTML_HEAD:     margin: 1.2em;
+#+HTML_HEAD:     position: relative;
+#+HTML_HEAD:     overflow: auto;
+#+HTML_HEAD:     padding-top: 1.2em;
+#+HTML_HEAD: 	   }
+#+HTML_HEAD: 
+#+HTML_HEAD:   .cor:before {
+#+HTML_HEAD:     display: inline;
+#+HTML_HEAD:     position: absolute;
+#+HTML_HEAD:     background-color: white;
+#+HTML_HEAD:     top: -5px;
+#+HTML_HEAD:     left: 10px;
+#+HTML_HEAD:     padding: 3px;
+#+HTML_HEAD:     border: 1px solid black;
+#+HTML_HEAD:     content: 'Corollary';
+#+HTML_HEAD:   }
+#+HTML_HEAD: </style>
+:end:
+
+# * The important Theorems in Complex Analysis
+
+#+begin_export html
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2022-02-10 Mon]</time> </div>
+</div>
+#+end_export
+
+
+
+# In this entry I will discuss some of the classic and fundamental theorems 
+# when studying complex analysis and try to understand the following
+
+# #+begin_thm
+# *Cauchy integral theorem.* Let $f:U\to \mathbb{C}$ holomorphic in a domain $U\subset \mathbb{C}$.
+# Suppose $\gamma: [a,b]\to U$ is a topological trivial, piecewise  continuously differentiable, closed
+# curve. Then
+# \begin{equation}
+# \int_{\gamma}f(z) dz = 0.
+# \end{equation}
+# #+end_thm
+
+# One of the first consequences of the Cauchy integral theorem is that if a function $f$
+# is holomorphic in a domain $U$, then for any $p\in U$ and every closed disc $\overline{D}$ centered
+# at $p$ and  contained in $U$, the function $f$ can be written as a convergent power series, and the
+# convergence is absolute and uniform.
+
+# #+begin_thm
+# *Cauchy integral formula.* Let $f:U\to \mathbb{C}$ holomorphic in a domain $U\subset \mathbb{C}$.
+# Suppose $\gamma: [a,b]\to U$ is a topological trivial, piecewise  continuously differentiable, closed curve. 
+# Then
+# \begin{equation}
+# f(z) = \frac{k!}{2\pi i}\int_{\gamma}\frac{f(\xi)}{(\xi - z)^{k+1}} d\xi.
+# \end{equation}
+# #+end_thm
+
+# #+begin_prop
+# *Holomorphic extension*. Let $f:D\setminus\{p\}\to \mathbb{C}$ holomorphic on a punctered disk.
+# If $f$ is bounded, then $f$ can be extended to a holomorphic function $F: D\to \mathbb{C}$.
+# \end{equation}
+# #+end_prop
+
+
+
+
+* The Geometry of the support function
+
+#+begin_export html
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2020-08-31 Mon]</time> </div>
+</div>
+#+end_export
+
+
+One of the most useful tools I have learnt when dealing with convex geometry is that of the support function.
+It has been used to prove the uniformly ellipticity of a given geometric fully nonlinear elliptic equation, or
+to get estimates on the principal curvatures of a strictly convex hypersurface.
+
+Consider the Euclidean space $R^n$ with its inner product $\cdot$. 
+Then, any hyperplane can be defined by a point in this plane $x_0$ and a unit normal vector $\nu \in R^n$ 
+as all $x\in R^n$ satisfying the equation
+\begin{equation}
+ \nu \cdot (x_0 - x) = 0.
+\end{equation}
+
+One can also think of $\nu = \nu(x)$ as the constant unit vector field along the hyperplane,
+and then the last equation says that the function $\varphi(x) = \nu(x)\cdot x$ has a constant
+value, namely, *the distance from the origin to the hyperplane*.
+
+If $\Sigma \subset R^{n+1}$ is a strictly convex hypersurface in the Euclidean space,
+then the Gauss map $n:\Sigma\to S^n$ is a diffeomorphism with the unit sphere $S^n$.
+At every $x\in\Sigma$, corresponds one unit vector $n(x)$ which is perpendicular to the
+tangent hyperplane to $\Sigma$ at $x$. Then one can define the *support function* of $\Sigma$,
+$u:S^n \to R$ as
+\begin{equation}
+u(\xi) = \xi \cdot n^{-1}(\xi), \quad \xi \in S^n \subset R^{n+1}.
+\end{equation}
+
+Note that the tangent hyperplane to $\Sigma$ at  $n^{-1}(\xi)$ has a unit normal vector $\xi$ then
+the support function is clearly the distance from the origin of $R^{n+1}$ to this hyperplane.
+
+#+CAPTION: Support function and maximal inscribed sphere
+#+NAME:   fig:support_function
+[[./img/support_function.jpg]]
+
+
+* Brownian Motion and Harmonic Functions
+#+begin_export html
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2019-10-23 Wed]</time> </div>
+</div>
+#+end_export
+
+
+This is one of the relations that I always forget, so I will keep it
+here for the future. When I hear someone speaking about Brownian
+motion immediately comes to my head a voice saying /... you know, the
+probabilistic representation of harmonic functions.../ but never manage
+to remember how this link is done. 
+
+Here are the ingredients I need to build the bridge:
+- A domain in $\Omega \subset \mathbb{R}^n$.
+- A Brownian motion starting at $x\in \Omega$, i.e. $X^*_t = x + X_t$.
+- A pay off function $\varphi:\partial\Omega \to \mathbb{R}$, so the
+  first time the Brownian motion hits the boundary at
+  $z\in\partial\Omega$ we get a payoff $\varphi(z)$.
+
+If $T$ is the first hitting time of $X^*_T$, define
+\begin{equation}
+u(x) = \mathbb{E}[\varphi(X^*_T)].
+\end{equation}
+
+Now consider the ball $B_r(x)$ contained in $\Omega$. The key
+observation is that from the properties of Brownian motion $X^*_t$ its
+possible to conclude that the process will hit any point in the
+boundary with the same probability.
+
+This observation implies that $u$ satisfies the mean value property, 
+and consequently is a solution of the following Dirichlet problem:
+
+\begin{equation}
+\left\{ \begin{array}{cccc}
+\Delta u &=& 0& \mbox{in}\quad \Omega\\
+ u &=& \varphi & \mbox{on}\quad \partial\Omega\\
+\end{array}\right.
+\end{equation}
+
+
+
+* Alexandrov's Moving Planes
+
+#+begin_export html
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2019-10-22 Tue]</time> </div>
+</div>
+#+end_export
+
+
+This method was developed by the Russian mathematician A. D. Alexandrov (Aleksandrov),
+to prove that any connected, closed surface in $\mathbb{R}^3$ with Constant Mean Curvature (CMC) 
+is actually the round sphere.
+
+It is also known that J. Serring used this method
+
+* Existence of Geodesics With a Heat Flow.
+
+#+begin_export html
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2019-05-14 Tue]</time> </div>
+</div>
+#+end_export
+
+
+If we want to obtain a closed geodesic in a compact Riemannian manifold
+all we have to do is get one loop and wait. Yes just wait long enough and, surprisingly,
+our loop will transform into a geodesic one. Moreover,
+take a smooth close loop in a compact Riemannian manifold,
+of course this belongs to a homotopy class. Suppose now
+that we are able to measure the energy of our loop with some sort of
+thermometer, and that changes of this energy may produce some elongation or contraction 
+of the loop, measured by its length. Then we wait for a reasonable long
+period of time for our
+loop to cool down and.. we end up with a geodesic of the same homotopy class!
+
+Well, unfortunately not quite. The problem of passing
+from $t_n$ to $t$ (see below) in the convergence is something that
+needs to be treated carefully.
+
+The curve $\gamma : (a,b) \subset \mathbb{R} \to M$ is geodesic if and
+only if in local coordinates it satisfies
+\begin{equation}
+\ddot{\gamma}^k(t) + \dot{\gamma}^i(t)\dot{\gamma}^j)(t)\Gamma_{ij}^{k}(\gamma(t)) = 0.
+\end{equation}
+
+Before we continue just a word of /warning/: note that for any compact
+Riemannian manifold, and two points in it, there are always more than
+one geodesic joining them, a quick example of this is the sphere with
+the North and South pole. The uniqueness of the shortest geodesic is
+guaranteed when the two points are sufficiently close. The method we
+will describe, produces a geodesic but It may not necessarily be the
+shortest one.
+
+*Theorem* /Let $M$ be a compact Riemannian manifold. Then every
+homotopy class of closed curves in $M$ contains a geodesic./
+
+To apply the heat flow approach, we consider the following 
+family of curves:
+\begin{equation}
+u : S^1 \times [0,\infty) \to M,
+\end{equation}
+where $S^1$ is the unite circle, and the parabolic equation
+\begin{equation}
+\begin{split}
+u_{t} &= u^k_{ss} + u^i_{s}u^j_{s}\Gamma_{ij}^k & \,\,s\in S^1, t\geq 0,\\
+u(s,0)& = \gamma(s) & \,\, s\in S^1.
+\end{split}
+\end{equation}
+
+** The Heat Flow Method
+
+Now we write  the method to obtain the geodesic as outlined by 
+J. Jost in his  /Riemannian Geometry and Geometric Analysis/.
+
+1) *Short time existence*. There exist $T_0>0$ such that the initial
+   value problem above has a solution $u^k_{t} = u^k_{ss} +
+   u^i_{s}u^j_{s}\Gamma_{ij}^k$ in $S^1\times [0,T_0)$ and
+   $u(s,0)=\gamma(s)$. Then the maximal (time) interval of existence
+   of a solution is nonempty and open.
+2) *A priori estimates of spacial derivatives*. Let $u(s,t)$ be a
+   solution. Get an a priori estimate of the spacial derivative $|u_s|
+   \leq C$, where $C$ independently of $t$. Then we can think of the
+   equation $u_t - u_{ss} =f$, where $f$ is a bounded function. Then
+   regularity theory for linear parabolic equations is used to
+   control higher order derivatives which are time independent.
+3) *Convergence as $t$ goes to $\infty$*. This a priori estimate
+   implies the following: If a solution exists in $[0,T_{0})$, and for
+   $t\to T_{0}$ the solution $u(s,t)$ will converge to a smooth curve
+   $u(s,T_{0})$. Then this curve can be taken as the new initial value
+   and continue the solution for times bigger than $T_{0}$. Then the
+   maximal interval of existence of a solution is also a closed
+   set. This at the end implies that a solution exists for all times
+   $t>0$.
+4) *The Energy functional is decreasing*. Note that the energy
+   $E(u(s,t))$ is decreasing in $t$ and since $0 \leq E(u(s,t))$ for
+   all $t$, it is possible to find a sequence $\{t_n\}$ such that
+   $u(s,t) \to \tilde{\gamma}(s)$, $t\to \infty$, and $\tilde{\gamma}$
+   is such that $\tilde{\gamma}^k_{ss} +
+   \tilde{\gamma}^i_{s}\tilde{\gamma}^j_{s}\Gamma_{ij}^k = 0$.
+5) *Convexity*. If convexity is not fulfilled, then things that may
+   look like wiggles may happen to have less energy than the
+   geodesic. We also have to be careful with the curvature of our
+   manifold. When (non-negative) curvature condition is fulfilled and
+   convexity is checked, then the convergence to the geodesic can be
+   taken from $t\to\infty$, and is not restricted to the sequence
+   $t_n$.
+
+
+One of the things I learnt from this exercise is to be careful when
+using normal coordinates and integrating by parts. We will
+go through the computations of $E$, $E_t$ and $E_{tt}$.
+
+The Energy functional of a curve $\alpha$ is given by
+$E(u):= \frac{1}{2}\int_{S^1} \|\dot{\alpha}(t)\|^2dt$,
+equivalently in coordinates with $\alpha(s,t)$ and $\alpha_s$
+to denote $\partial_s \alpha(s,t) = \dot{\alpha}(s,t)$ we write
+\begin{equation}
+ E(u(\cdot,t)) = \frac{1}{2}\int_{S^1} g_{ij}\alpha^i_s\alpha^j_s ds,
+\end{equation}
+then
+\begin{equation}
+\partial_t E = \frac{1}{2}\int_{S^1} \partial_t(g_{ij}) + 2g_{ij}\alpha^i_{st}\alpha^j_s ds,
+\end{equation}
+
+* Geometry of hypersurfaces.
+
+#+begin_export html
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2019-05-16 Thu]</time> </div>
+</div>
+#+end_export
+
+
+When we are trying to understand the geometry of a space, we usually
+wonder what are the properties whithin the space. Gauss's Theorema
+Egregium, for example, shows how for surfaces in the three dimensional
+space the Gaussian curvature is an intrinsic invariant. On the other
+hand, we have also properties that change depending on how one
+represents the geometric objects.
+
+
+Let $(M^{n+1},g)$ be a Riemannian manifold and $\Sigma^n\subset M^{n+1}$
+any immersed submanifold of codimension $1$ with the induced metric. $\Sigma$
+will be called hypersurface if $M$.
+
+Then the tangen bundle $TM$ can be decomposed in the following sum
+\begin{equation}
+  \label{eq:sum_TBundle}
+  TM = \left(T\Sigma\right)^{\top} \oplus \left(T\Sigma\right)^{\bot}.
+\end{equation}
+
+Let $D$ the Levi-Civita connection for the ambient manifold $M$,
+then it is a exercise to prove that, for any $X,Y\in T\Sigma$ 
+the projection $\left(D_{X}Y\right)^{\top}$ is the Levi-Civita connection
+of on $\Sigma$, denoted by $\nabla$.
+
+Let $\xi$ a normal vector to $\Sigma$. The *second fundamental form* $h$ is
+ the normal projection of $D$ for every $X,Y\in T\Sigma$
+ \begin{equation}
+   h(X,Y) = g(D_XY,\xi).
+ \end{equation}
+
+The *Gauss formula* for $X,Y\in T\Sigma$ reads
+\begin{equation}
+  \label{eq:Gauss_Formula}
+  D_{X}Y = \nabla_{X}Y + h(X,Y)\xi.
+\end{equation}
+
+ Note that from
+$g(Y,\xi)=0$ and the compatibility with the metric we have
+\begin{equation}
+  g(D_{X}Y,\xi) = g(Y, -D_{X}\xi).
+\end{equation}
+
+For a normal vector $\xi$ we define the *shape operator*
+$A_{\xi}:T\Sigma\to T\Sigma$ as
+\begin{equation}
+  \label{eq:Shape_Operator}
+  A_{\xi}(X) = \left(-D_{X}\xi\right)^{\top}.
+\end{equation}
+
+Let $\{E_1,...,E_n,\xi\}$ be a basis for $TM$ such
+that $\{E_i\}$ span $T\Sigma$ and $\xi$ is unit normal to $\Sigma$.
+Then the shape operator in basis elements can be written as
+\begin{equation}
+  A_{\xi}(E_j) = A_j^i E_i,\qquad i,j=1,2,...,n.
+\end{equation}
+
+Since there is only one normal direction 
+the second fundamental $h(X,Y)=g(h(X,Y),\xi)\xi$ can be identify with a real 
+number $g(h(X,Y),\xi)$, and from the definition of the shape operator
+we can write in coordinates
+\begin{equation}
+  h_{kj} =g(h(E_k,E_j),\xi) = g(E_k,A_{\xi}(E_j)) = g(E_k,A_j^iE_i) = g_{ki}A^i_j,
+\end{equation}
+
+equivalently
+
+\begin{equation}
+  A^i_j = g^{ik}h_{kj}.
+\end{equation}
+
+The *principal curvatures* of the hypersurface $\Sigma$ are the
+eigenvalues of the matrix $(A^i_j)$.
+
+** Example: Hypersurfaces as graphs in Euclidean space.
+Consider that $\Sigma\subset\mathbb{R}^{n+1}$ is parametrised as the
+graph of a smooth function $f:\mathbb{R}^n\to\mathbb{R}$. Then at any point $p\in\Sigma$
+there is a neighbourhood $U\in\mathbb{R}^n$ such that every $y\in\Sigma\cap f(U)$ can
+be written as $y = (x,f(x))$ for some $x=(x^1,...,x^n)\in U$.
+
+In this coordinates, the basis for the tangent space $T_p\Sigma$ is given by
+\begin{equation}
+y_i = \frac{\partial y}{\partial x^i} = (e_i,f_i),
+\end{equation}
+
+where $\{e_i\}$ is the standard basis of $\mathbb{R}^n$. Let $Df = (f_1,...,f_n)$ the
+usual gradient vector of $f$. Then a unit normal vector field in $\Sigma$ is given
+by
+\begin{equation}
+  \hat{n} = \frac{(-D f,1)}{\sqrt{1+|D f|^2}}.
+\end{equation}
+
+To compute the second fundamental form $h_{ij}=g(D_jy_i,n)$ we observe that
+\begin{equation}
+  D_jy_i = \frac{\partial^2 y}{\partial x^j\partial x^i} = (0,f_{ij}),
+\end{equation}
+then its  normal projection is
+\begin{equation}
+  h_{ij} = \langle D_j y_i,\hat{n}\rangle = \frac{ f_{ij}}{\sqrt{1 + |D f|^2}}.
+\end{equation}
+
+Since we are using the standar metric of the Euclidean space, then the induce metric
+on $\Sigma$ is given by
+\begin{equation}
+  g_{ij} = \langle y_i , y_j \rangle = \delta_{ij} + f_if_j
+\end{equation}
+
+The inverse of the metric is then
+
+\begin{equation}
+  g^{ij} = \delta_{ij} - \frac{f_if_j}{1+|D f|^2},
+\end{equation}
+then the shape operator is given by
+
+\begin{equation}
+\label{eq:Shape_Of_Graph}
+  A^i_j = g^{ik}h_{kj} = \sum_k{\left(\delta_{ik} - \frac{f_if_k}{1+|D f|^2}\right)
+\left(\frac{f_{kj}}{\sqrt{1 + |D f|^2}}\right)}
+= \frac{\partial}{\partial x^j}\left(\frac{ f_i}{\sqrt{1+|D f|^2}}\right).
+\end{equation}

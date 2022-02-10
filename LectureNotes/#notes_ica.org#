@@ -1,0 +1,1539 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:t
+#+options: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: Notes for Introduction to Complex Analysis
+#+date: <2021-03-12 Fri>
+#+author: Daniel Ballesteros Chávez
+#+email: daniel@linuxdeb.home
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 26.1 (Org mode 9.3.6)
+#+latex_class: mylatexclass
+#+latex_class_options:
+#+latex_header:
+#+latex_header_extra:
+#+description:
+#+keywords:
+#+subtitle:
+#+latex_compiler: pdflatex
+#+date: 
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./style_plain.css"/> 
+#+infojs_opt: view:info buttons:1 mouse:#cccccc
+
+
+:styles:
+#+HTML_HEAD: <style>
+#+HTML_HEAD: .mydef  {
+#+HTML_HEAD:     	color:  #404040;
+#+HTML_HEAD:     border: 1px solid #404040;
+#+HTML_HEAD:     background-color: #FFD580;
+#+HTML_HEAD:     /* box-shadow: 3px 3px 3px orange; */
+#+HTML_HEAD:     padding: 8pt;
+#+HTML_HEAD:     overflow: auto;
+#+HTML_HEAD:     margin: 1.2em;
+#+HTML_HEAD:     position: relative;
+#+HTML_HEAD:     overflow: auto;
+#+HTML_HEAD:     padding-top: 1.2em;
+#+HTML_HEAD: 	   }
+#+HTML_HEAD: 
+#+HTML_HEAD:   .mydef:before {
+#+HTML_HEAD:     display: inline;
+#+HTML_HEAD:     position: absolute;
+#+HTML_HEAD:     /* background-color: white; */
+#+HTML_HEAD:     background-color: orange;
+#+HTML_HEAD:     top: -5px;
+#+HTML_HEAD:     left: 10px;
+#+HTML_HEAD:     padding: 3px;
+#+HTML_HEAD:     border: 1px solid black;
+#+HTML_HEAD:     content: 'Definition';
+#+HTML_HEAD:   }
+#+HTML_HEAD: 
+#+HTML_HEAD: .prop  {
+#+HTML_HEAD:     	color:  #404040;
+#+HTML_HEAD:     border: 1px solid ;
+#+HTML_HEAD:     background-color: #F1FFC2;
+#+HTML_HEAD:     /* box-shadow: 3px 3px 3px green; */
+#+HTML_HEAD:     padding: 8pt;
+#+HTML_HEAD:     overflow: auto;
+#+HTML_HEAD:     margin: 1.2em;
+#+HTML_HEAD:     position: relative;
+#+HTML_HEAD:     overflow: auto;
+#+HTML_HEAD:     padding-top: 1.2em;
+#+HTML_HEAD: 	   }
+#+HTML_HEAD: 
+#+HTML_HEAD:   .prop:before {
+#+HTML_HEAD:     	color:  white;
+#+HTML_HEAD:     display: inline;
+#+HTML_HEAD:     position: absolute;
+#+HTML_HEAD:     background-color: green;
+#+HTML_HEAD:     top: -5px;
+#+HTML_HEAD:     left: 10px;
+#+HTML_HEAD:     padding: 3px;
+#+HTML_HEAD:     border: 1px solid black;
+#+HTML_HEAD:     content: 'Proposition';
+#+HTML_HEAD:   }
+#+HTML_HEAD: 
+#+HTML_HEAD: .thm  {
+#+HTML_HEAD:     	color:  #404040;
+#+HTML_HEAD:     border: 1px solid ;
+#+HTML_HEAD:     background-color: lightcyan;
+#+HTML_HEAD:     /* box-shadow: 3px 3px 3px brown; */
+#+HTML_HEAD:     padding: 8pt;
+#+HTML_HEAD:     overflow: auto;
+#+HTML_HEAD:     margin: 1.2em;
+#+HTML_HEAD:     position: relative;
+#+HTML_HEAD:     overflow: auto;
+#+HTML_HEAD:     padding-top: 1.2em;
+#+HTML_HEAD: 	   }
+#+HTML_HEAD: 
+#+HTML_HEAD:   .thm:before {
+#+HTML_HEAD:     	color:  white;
+#+HTML_HEAD:     display: inline;
+#+HTML_HEAD:     position: absolute;
+#+HTML_HEAD:     background-color: darkblue;
+#+HTML_HEAD:     top: -5px;
+#+HTML_HEAD:     left: 10px;
+#+HTML_HEAD:     padding: 3px;
+#+HTML_HEAD:     border: 1px solid black;
+#+HTML_HEAD:     content: 'Theorem';
+#+HTML_HEAD:   }
+#+HTML_HEAD: 
+#+HTML_HEAD:   .cor  {
+#+HTML_HEAD:     	color:  #404040;
+#+HTML_HEAD:     border: 1px solid blue;
+#+HTML_HEAD:     box-shadow: 3px 3px 3px blue;
+#+HTML_HEAD:     padding: 8pt;
+#+HTML_HEAD:     overflow: auto;
+#+HTML_HEAD:     margin: 1.2em;
+#+HTML_HEAD:     position: relative;
+#+HTML_HEAD:     overflow: auto;
+#+HTML_HEAD:     padding-top: 1.2em;
+#+HTML_HEAD: 	   }
+#+HTML_HEAD: 
+#+HTML_HEAD:   .cor:before {
+#+HTML_HEAD:     display: inline;
+#+HTML_HEAD:     position: absolute;
+#+HTML_HEAD:     background-color: white;
+#+HTML_HEAD:     top: -5px;
+#+HTML_HEAD:     left: 10px;
+#+HTML_HEAD:     padding: 3px;
+#+HTML_HEAD:     border: 1px solid black;
+#+HTML_HEAD:     content: 'Corollary';
+#+HTML_HEAD:   }
+#+HTML_HEAD: </style>
+:end:
+
+
+* Sequences and limits
+
+#+begin_mydef
+A sequence in $\mathbb{C}$ is a function $\varphi: \mathbb{N}\to \mathbb{C}$. We use the notation
+$z_n = \varphi(n)$ and $\{z_n\}_{n=1}^{\infty}$ for the image $\varphi(\mathbb{N})$.
+#+end_mydef
+
+
+#+begin_mydef
+Let $\{z_n\}_{n=1}^{\infty}$ be a sequence in $\mathbb{C}$. We say that the sequence converges to $z_0\in \mathbb{C}$
+if for every $\epsilon >0$ there exists $n_0\in \mathbb{N}$, such that for every $n\geq n_0$ it holds that $|z_n - z_0| < \epsilon$. In this case
+$z_0$ is called the limit of the sequence $\{z_n\}_{n=1}^{\infty}$ and we write
+\[ \lim_{n\to\infty} z_n = z_0. \]
+#+end_mydef
+
+#+begin_prop
+If a sequence converges to a limit, this is unique.
+#+end_prop
+#+begin_proof
+Supose that the sequence $\{z_n\}_{n=1}^{\infty}\subset \mathbb{C}$ has two limits $z_0$ and $w_0$. Then for any $\epsilon >0$ choose $n\in \mathbb{C}$ such that for any $n\geq n_0$, 
+we have simultaneously \[ |z_n  - z_0| < \frac{\epsilon}{2}, \mbox{ and } |z_n - w_0 | < \frac{\epsilon}{2}. \] 
+Then
+\[ | z_0 - w_0 | = |z_0 - z_n + z_n - w_0 | \leq | z_n - z_0 | + | z_n - w_0| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon. \]
+Since $\epsilon >0$ is arbitrary, this happens only if |z_0 - w_0|  = 0. Then $z_0 = w_0$.
+#+end_proof
+
+
+#+begin_prop
+Let $\{z_n\}_{n=1}^{\infty}$ be a sequence in $\mathbb{C}$, with $z_n = x_n + i y_n$, and $z_0 = x_0 + iy_0$. Then 
+the sequence converges to $z_0$ if and only if the sequences of real numbers $\{x_n\}_{n=1}^{\infty}$ and $\{y_n\}_{n=1}^{\infty}$ converge respectively to $x_0$ and $y_0$. Equivalently
+\[ \lim_{n\to\infty}z_n = z_0 \iff \lim_{n\to\infty}x_n = x_0 \mbox{ and } \lim_{n\to\infty}y_n = y_0. \]
+#+end_prop
+#+begin_proof
+Let $\epsilon >0$. Then there exists $n_0 \in \mathbb{N}$, such that for any $n\geq n_0$ the following holds:
+\[ |x_n - x_0 | = | \mbox{Re}(z_n - z_0) | \leq |z_n - z_0 | < \epsilon. \]
+This shows that $\lim_{n\to \infty} x_n = x_0$. The second part follows from a similar argument on the imaginary part of the sequence.
+#+end_proof
+
+#+begin_prop
+Every convergent sequence $\{z_n\}_{n=1}^{\infty} \subset \mathbb{C}$ is bounded, i.e., there exists
+a positive real number $M>0$, such that $|z_n| \leq M$ for all $n\in\mathbb{N}$.
+#+end_prop
+#+begin_proof
+Let $\epsilon = 1$. By convergence, there exists $n_0\in \mathbb{N}$ such that whenever $k\geq n_0$ it holds that 
+\[ |z_k - z_0 | < 1. \]
+Now consider $M = \max\{ |z_1| + 1, |z_2| + 1, \ldots, |z_{k-1}| + 1, |z_0| + 1\}$. Then it is clear that \[ |z_n| \leq M, \mbox{ for all } n \in \mathbb{N}. \]
+#+end_proof
+
+*Remark* The converse of last proposition is false. Discuss an example.
+
+#+begin_thm
+(Bolzano-Weierstrass) Every bounded sequence in $\mathbb{C}$ has a convergent sub-sequence.
+#+end_thm
+#+begin_proof
+The proof relies on the same result known for sequences of Real numbers.
+
+Let $\{z_n\}_{n=1}^{\infty}$ a bounded sequence where $z_n = x_n + iy_n$. Since the sequence is bounded we note  that 
+\[ |x_n | \leq |z_n| \leq M, \quad n\in\mathbb{N}. \]
+Then the sequence of real numbers $\{x_n\}_{n=1}^{\infty}$ is bounded. There exists a convergent subsequence $\left\{x_{n_k}\right\}_{k=1}^{\infty}$ with limit $x_0\in \mathbb{R}$.
+Now consider the corresponding subsequence of complex numbers $\left\{z_{n_k}\right\}_{k=1}^{\infty}$, where $z_{n_k} = x_{n_k} + i y_{n_k}$. Since the sequence of complex numbers is bounded,
+we conclude that $\left\{y_{n_k}\right\}_{k=1}^{\infty}$ is also a bounded sequence of Real numbers. Then there exists a convergent subsequence $\left\{y_{n_{k_j}}\right\}_{j=1}^{\infty}$ wiht limit $y_0$.
+Recall that any subsequence of a convergent sequence is also convergent to the same limit, and conclude that $\left\{x_{n_{k_j}}\right\}_{j=1}^{\infty}$ has limit $x_0$. Then 
+\[ \lim_{j\to \infty} z_{n_{k_j}} = \lim_{j\to \infty} \left(x_{n_{k_j}} + i y_{n_{k_j}}\right)  = x_0 + iy \]
+is a convergent subsequence of  $\{z_n\}_{n=1}^{\infty}$.
+#+end_proof
+
+#+begin_mydef
+A sequence $\{z_n\}_{n=1}^{\infty}$ is called Cauchy sequence if for every $\epsilon >0$
+there exists $n_0\in\mathbb{N}$ such that, if $n,m \geq n_0$ then $|z_n - z_m| <\epsilon$.
+#+end_mydef
+
+
+#+begin_thm
+A sequence $\{z_n\}_{n=1}^{\infty}$ converges if and only if $\{z_n\}_{n=1}^{\infty}$ is a Cauchy sequence.
+#+end_thm
+#+begin_proof
+By writing $z_n = x_n + i y_n$ and from the inequalities
+\[ |x_n - x_m | \leq |z_n - z_m|, \]
+and
+\[ |y_n - y_m | \leq |z_n - z_m|, \]
+it follows that The sequence  $\{z_n\}_{n=1}^{\infty}$ of complex numbers is Cauchy if and only if  $\{x_n\}_{n=1}^{\infty}$ and $\{y_n\}_{n=1}^{\infty}$ are Cauchy sequences of Real numbers if and only if  the sequences of real numbers $\{x_n\}_{n=1}^{\infty}$ and $\{y_n\}_{n=1}^{\infty}$ are convergent if and only if $\{z_n\}_{n=1}^{\infty}$ is a convergent sequence.
+#+end_proof
+
+
+#+begin_prop
+Let $\{z_n\}_{n=1}^{\infty}$ and $\{w_n\}_{n=1}^{\infty}$ two convergent sequences, with $\lim_{n\to\infty}z_n = z_0$ and $\lim_{n\to\infty}w_n = w_0$. Then the following identities hold:
+
+1) $\displaystyle\lim_{n\to\infty}(z_n + w_n) = z_0 + w_0$,
+2) $\displaystyle\lim_{n\to\infty}(z_n \, w_n) = z_0 \, w_0$,
+3) $\displaystyle\lim_{n\to\infty}|z_n| = |z_0|$,
+4) If $w_n \neq 0$ for all $n\in \mathbb{N}$, then $\displaystyle\lim_{n\to\infty}\left(\dfrac{z_n}{w_n}\right) = \dfrac{z_0}{w_0}$.
+#+end_prop
+#+begin_proof
+Proof of 1. It follows from the triangle inequality and the definition. Let $\epsilon > 0$, then there exists $n_0 \in \mathbb{N}$ such that for any $n\geq n_0$ it simultaneously holds $|z_n - z_0| < \frac{\epsilon}{2}$ and $|w_n - w_0| < \frac{\epsilon}{2}$, then 
+\[ |(z_n + w_n) - (z_0 + w_0) | = |(z_n - z_0) + (w_n - w_0) | < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon. \]
+That is $\displaystyle\lim_{n\to\infty}(z_n + w_n) = z_0 + w_0$.
+
+Proof of 2. It follows also from the definition, the triangle inequality and the fact that every convergent sequence is bounded. Since $\{z_n\}_{n=1}^{\infty}$ is convergent, there is $M_1>0$ such that $|z_n| < M_1$ for all $n\in\mathbb{N}$ and the same for $\{w_n\}_{n=1}^{\infty}$, there is $M_2 >0$ such that $|w_n| < M_1$ for all $n\in\mathbb{N}$. Take $M = \max\{M_1,M_2\}$, and then $M>0$ is a bound for both sequences.  Let $\epsilon > 0$, then there exists $n_0 \in \mathbb{N}$ such that for any $n\geq n_0$ it simultaneously holds $|z_n - z_0| < \frac{\epsilon}{2M}$ and $|w_n - w_0| <  \frac{\epsilon}{2M}$. Then 
+\begin{equation*} \begin{split} |z_n w_n - z_0 w_0 | &= | z_n w_n - z_n w_0 + z_n w_0 - z_0 w_0 | \\ & \leq | z_n w_n - z_n w_0 | + |z_n w_0 - z_0 w_0 | \\ &  = |z_n| | w_n - w_0| + |w_0| |z_n - z_0|  \\ & \leq M | w_n - w_0| + M |z_n - z_0| \\ & < \frac{\epsilon}{2} +  \frac{\epsilon}{2} = \epsilon. \end{split} \end{equation*}
+That is $\displaystyle\lim_{n\to\infty}(z_n \, w_n) = z_0 \, w_0$.
+
+Proof of 3. It follows from a version of the triangle inequality. Let $\epsilon > 0$, then there exists $n_0 \in \mathbb{N}$ such that for any $n\geq n_0$ it holds $|z_n - z_0| < \epsilon$. Note then that
+\[ |\, |z_n| - |z_0| \, | \leq |z_n - z_0| < \epsilon. \]
+That is $\displaystyle\lim_{n\to\infty}|z_n| = |z_0|$.
+
+Proof of 4. Let $\epsilon_1 = \frac{|w_0|}{2}$, then there exists $n_0 \in \mathbb{N}$ such that for any $n\geq n_0$ it holds $|w_n - w_0| < \frac{|w_0|}{2}$. First note that
+\[ \left| \frac{1}{w_n} - \frac{1}{w_0} \right| = |\frac{ w_0 - w_n}{w_n w_0} | = \frac{ |w_0 - w_n|}{|w_n |\, |w_0|}. \]
+
+On the other hand by the triangle inequality
+\[ |w_0| - |w_n| \leq \left|\, |w_0| - |w_n|\, \right| \leq |w_0 - w_n | < \frac{|w_0|}{2}, \]
+this implies
+\[ \frac{|w_0|}{2} \leq |w_n|, \]
+or equivalently
+\[ \frac{1}{|w_n|} \leq \frac{2}{|w_0|}. \]
+Then we get
+\[ \left| \frac{1}{w_n} - \frac{1}{w_0} \right| \leq \frac{ |w_0 - w_n|}{|w_n |\, |w_0|} \leq \frac{2 |w_0 - w_n|}{ |w_0|^2}. \]
+
+For any $\epsilon >0$ define $\epsilon_2 = \frac{|w_0|^2\epsilon}{2}$, then there exists $m_0 \in \mathbb{N}$ such that for any $n\geq m_0$ it holds $|w_n - w_0| < \frac{|w_0|^2\epsilon}{2}$.
+Take $N_0 = \max\{n_0, m_0\}$. Then we can improve our last inequality, for any $n \geq N_0$ it holds
+\[ \left| \frac{1}{w_n} - \frac{1}{w_0} \right| \leq \frac{ |w_0 - w_n|}{|w_n |\, |w_0|} \leq \frac{2 |w_0 - w_n|}{ |w_0|^2} < \epsilon. \]
+This shows that  $\displaystyle\lim_{n\to\infty}\frac{1}{w_n} = \frac{1}{w_0}$.
+Finally applying (2) of this proposition we have
+\[ \displaystyle\lim_{n\to\infty}\frac{z_0}{w_n} = \lim_{n\to\infty} z_n\frac{1}{w_n} = \lim_{n\to\infty} z_n \lim_{n\to\infty}\frac{1}{w_n} = \frac{z_0}{w_0} \]
+#+end_proof
+
+Recall from real analysis, that every monotone and bounded sequence of real numbers is convergent.
++ If the sequence $\{a_n\}_{n=1}^{\infty}$ is increasing then $\lim_{n\to\infty} a_n = \sup\{a_n| n\in \mathbb{N}\}$.
++ If the sequence $\{a_n\}_{n=1}^{\infty}$ is decreasing then $\lim_{n\to\infty} a_n = \inf\{a_n| n\in \mathbb{N}\}$.
+
+
+#+begin_mydef
+We say that $\lim_{n\to\infty} z_n = \infty$ if $\lim_{n\to \infty}|z_n| = \infty$. In other words,
+if for every $M>0$ there exists $n_0\in\mathbb{N}$ such that for all $n\geq n_0$ then $|z_n| > M$.
+#+end_mydef
+
+
+#+begin_mydef
+Let $\{z_n\}_{n=1}^{\infty} \subset \mathbb{C}$ be a sequence. A complex number $w_0\in\mathbb{C}$ is 
+called a limit point of the sequence $\{z_n\}_{n=1}^{\infty}$ if there exists a subsequence
+$\{z_{n_k}\}_{k=1}^{\infty}$ of $\{z_n\}_{n=1}^{\infty}$ such that
+\[ \lim_{k\to\infty}z_{n_k} = w_0. \]
+#+end_mydef
+
+
+* Continuity
+#+begin_mydef
+The function $f(z)$ is said to have the limit $w_0\in \mathbb{C}$ as $z$ tends to $a\in\mathbb{C}$,  if for every $\epsilon >0$ there exists a number $\delta = \delta(\epsilon) >0$ with the property that if $|z - a| < \delta$ then it holds $|f(z) - w_0| <\epsilon$, and in that case we write \[ \lim_{z\to a} f(z) = w_0 . \]
+#+end_mydef
+
+
+#+begin_mydef
+The function $f(z)$ is said to be continuous at $z_0$ if for if for every $\epsilon >0$ there exists a number $\delta = \delta(\epsilon) >0$ with the property that if $|z - a| < \delta$ then it holds $|f(z) - f(a)| <\epsilon$, and in that case we write \[ \lim_{z\to a} f(z) = f(a) . \]
+#+end_mydef
+
+*Examples*
++ Let $f:\mathbb{C}\setminus\{1\} \to \mathbb{C}$ the function given by \[f(z) =\dfrac{z^2 - 4}{z - 2}, \] then $\lim_{z\to 2} f(z) = 4$.
+
++ Let $f:\mathbb{C} \to \mathbb{C}$ be the conjugate function $f(z) = \bar{z}$. Then $f(z)$ is continuous at every $z_0\in \mathbb{C}$. To show this, first note that $|z| = |\bar{z}|$. Let $\epsilon >0$ and choose $0< \delta = \epsilon$. Then, for any $z\in \mathbb{C}$ such that $|z-z_0|$ we can estimate \[ |f(z) - f(z_0)| = |\bar{z} - \bar{z_0}|=|\overline{z - z_0}| = |z- z_0| < \delta = \epsilon.\].
+
+#+begin_prop
+Let $U \subset \mathbb{C}$, $f: U \to \mathbb{C}$ and $a\in U$. Then the following three statements are equivalent:
+1. $f$ is continuous at $a$.
+2. For every $\epsilon >0$ there exists a number  $\delta >0$ such that $f\left( B_{\delta}(a) \cap U\right) \subseteq B_{\epsilon}(f(a))$.
+3. For every sequence $\{z_n\}_{n=1}^{\infty}\subseteq U$ such that $\displaystyle\lim_{n\to \infty} z_n = a$, we have \[\displaystyle\lim_{n\to \infty} f(z_n) = f(a).\]
+#+end_prop
+#+begin_proof
+(1 \Rightarrow 2) Let $\epsilon >0$, then there is a number $\delta >0$  such that for every $z\in U$ with $|z-a| < \delta$ then $|f(z) - f(a)| < \epsilon$. This implies that if $z\in B_{\delta}(a) \cap U$  then $f(B_{\delta}(a) \cap U)\subseteq B_{\epsilon}(f(a))$.
+
+(2 \Rightarrow 1) Let $\epsilon >0$, then there is a number $\delta >0$  such that  $f(B_{\delta}(a) \cap U)\subseteq B_{\epsilon}(f(a))$. This means that for every  $z\in B_{\delta}(a) \cap U$ we have $f(z)\in B_{\epsilon} (f(a))$. This means that for every  $z\in U$ with  $|z-a| < \delta$ it holds $|f(z) - f(a)| < \epsilon$. 
+
+(1 \Rightarrow 3) Let $f(z)$ be continuous at $a\in U$ and $\{z_n\}_{n=1}^{\infty}\subseteq U$ with limit $a$. For any $\epsilon >0$ there exists a number $\delta >0$ such that for every $z\in U$ with $|z-a|<\delta$ it holds $|f(z)-f(a)|  < \epsilon$. For that $\delta >0$ there is a $n_0\in \mathbb{N}$ such that for any $n\geq n_0$ we have $|z_n - a| \leq \delta$. Then by continuity this implies that $|f(z_n) - f(a) | < \epsilon$. This shows that $\lim_{n\to \infty} f(z_n) = f(a)$.
+
+(3 \Rightarrow 1) Let $a\in U$ and assume that for any $\{z_n\}_{n=1}^{\infty}\subseteq U$ with limit $a$ we have $\lim_{n\to \infty} f(z_n) = f(a)$. Suppose on the contrary, that $f$ is not continuous at $a$. Then there exists a positive $\epsilon >0$ such that for every $\delta >0$ there is a point $z\in U$ with $|z -a| < \delta$ but $|f(z) - f(a)| \geq \epsilon$. Note that this implies that for any $n\in\mathbb{N}$ we can choose $\delta = \frac{1}{n}$ and  $z_n\in U$ such that $|z_n - a| < \frac{1}{n}$, but  $|f(z_n) - f(a)| \geq \epsilon$. In this way we have constructed a sequence $\{z_n\}_{n=1}^{\infty}$ such that $\lim_{n\to\infty}z_n = a$ but $\lim_{n\to\infty}f(z_n) \neq f(a)$ which is a contradiction to our initial assumptions.
+
+(1 \Rightarrow 3) Let $f(z)$ be continuous at $a$. Consider any sequence $\{z_n\}_{n=1}^{\infty}\subseteq U$ such that $\lim_{n\to \infty} z_n = a$. Then for $\epsilon >0$ there is a number $\delta >0$ such that for all $z\in U$ with $|z-a|<\delta$ we have $|f(z) - f(a)| < \epsilon$. Also for such $\delta >0$, there exists $n_0\in \mathbb{N}$ such that for all $n\geq n_0$ we have $|z_n - a| < \delta$, which then implies $|f(z_n) - f(a)| < \epsilon$.
+#+end_proof
+
+
+#+begin_thm
+Let $U\subseteq\mathbb{C}$ and $f,g:U\to \mathbb{C}$ be two continuous functions  at $a\in U$. Then $f\pm g$, $f\cdot g$ are continuous in $a$. If $g(a) \neq 0$ then $\dfrac{f}{g}$ is also continuous at $a$.
+#+end_thm
+
+
+#+begin_thm
+Let $U_1, U_2 \subseteq \mathbb{C}$, and $f:U_1\to \mathbb{C}$, $g:U_2\to \mathbb{C}$, such that $f(U_1)\subseteq U_2$. If $f$ is continuous at $z_0\in U_1$ and g is continuous at $w_0 = f(z_0)\in U_2$, then the composition $g\circ f$ is continuous at $z_0$.
+#+end_thm
+#+begin_proof
+Consider any sequence $\{z_n\}_{n=1}^{\infty}\subseteq U_1$ such that $\lim_{n\to \infty}z_n = z_0$. Then define $w_n = f(z_n) \in U_2$. Since $f$ is continuous at $z_0$, then $\lim_{n\to\infty}f(z_n) = \lim_{n\to\infty}w_n = w_0 = f(z_0)$. Since $g$ is continuous at $w_0$ then $\lim_{n\to \infty}g(w_n) = g(w_0)$. Note that on the left hand side $g(w_n) = g(f(z_n)) = (g\circ f)(z_n)$, and on the right hand side $g(w_0) = g(f(z_0)) = (g\circ f)(z_0)$. This shows that $\lim_{n\to\infty}(g\circ f)(z_n) = (g\circ f)(z_0)$.
+#+end_proof
+
+
+#+begin_mydef
+Let $U\subseteq \mathbb{C}$ and consider a function $f:U\to\mathbb{C}$. $f$ is called uniformly continuous if for every $\epsilon >0$ there exists $\delta >0$ such that for any $z,w\in U$ such that $|z-w| < \delta$ then we have $|f(z) - f(w) | < \epsilon$.
+#+end_mydef
+
+*Example*. Consider $f: A\to \mathbb{C}$ , $f(z) = z^2$ in the following cases:
++ $A = \{z\in \mathbb{C} \, |\, |z| \leq 1\}$. 
+
+In this case $f$ is uniformly continuous in $A$. Let $\epsilon>0$ and take $\delta = \epsilon/2$. Then, for any $z,w\in A$ such that $|z-w| < \delta$ we have
+\[ |f(z) - f(w) | = |z^2 - w^2| = |z-w||z+w| \leq |z-w| (|z|+|w|) \leq 2 |z-w| < \epsilon. \]
+
++ $A = \mathbb{C}$.
+
+In this case $f$ is not uniformly continuous. Take $\epsilon = 1$. For every $\delta >0$ there exists $n\in \mathbb{N}$ such that $n\delta > 1$. Now consider $z= n$ and $w = n + \delta/2$. Note that we have
+$|z - w| = \delta/2 < \delta$, but
+\[ |f(z) - f(w) | = |n^2 - \left(n + \frac{\delta}{2}\right)^2| =  n\delta + \frac{\delta^2}{4} > n\delta > 1 = \epsilon. \]
+
+* Basic topology of $\mathbb{C}$
+
+The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
+
+\[ B_r(z_0) = \{ z\in \mathbb{C} \, | \, |z-z_0| < r\}. \]
+\[ \bar{B}_r(z_0) = \{ z\in \mathbb{C} \, | \, |z-z_0| \leq r\}. \]
+
+#+begin_mydef
+A set $A\subseteq \mathbb{C}$ is called open if $\forall z\in A$ there exists a real number $r_z >0$ such that $B_{r_z}(z)\subseteq A$.
+#+end_mydef
+
+
+#+begin_thm
+The following sentences are true
+1) The sets $\mathbb{C}$, $\emptyset$, $B_r(z)$ ( for any $r>0$ ) and any $z\in \mathbb{C}$, are open sets.
+2) If $U_1, \ldots, U_n$ is a finite collection of open sets, then $\cap_{k=1}^n U_{k}$ is an open set.
+3) If $\{U_{\alpha}\}_{\alpha\in I}$ is a family of open sets, then $\cup_{\alpha\in I}U_{\alpha}$ is an open set.
+#+end_thm
+#+begin_proof
+$\mathbb{C}$ is open. For any $z\in \mathbb{C}$, take $r=1$ and evidently $B_{1}(z)\subset \mathbb{C}$.
+
+$\emptyset$ is open. If this wasn't true, there would exists $z\in \emptyset$ such that for any $r>0$, $B_{r}(z)\nsubseteq \emptyset$. Then the statement is vacuously true.
+
+$B_{r}(z)$ is open. Let $w\in B_{r}(z)$. Take $\delta = r - |w-z|$, and note that $\delta >0$. To show that $B_{\delta}(w) \subset B_{r}(z)$ we need to show that any $\xi \in B_{\delta}(w)$ is also in $B_{r}(z)$. If $\xi \in B_{\delta}(w)$ then $|\xi - w| < \delta$. Since $|\xi - z| = |\xi - w + w - z| \leq |\xi - w| + | w - z| < \delta + |w-z| = r - |w-z| + |w-z| = r$. Then $\xi \in B_{r}(z)$.
+
+$\cap_{k=1}^n U_k$ is open if each $U_i$ is open. Let $z\in\cap_{k=1}^n U_k$. Then for each $1\leq k \leq n$ there exists $r_{k}>0$ such that $B_{r_k}(z) \subseteq U_k$. Take $r = \min\{r_1,\ldots,r_k\}$, and hence $B_{r}(z)\subset U_k$ for every $1\leq k \leq n$. Hence $B_{r}(z)\subset \cap_{k=1}^n U_k$.
+
+$\cup_{\alpha \in I} U_{\alpha}$ is open if each $U_{\alpha}$ is open. Let $z\in\cup_{\alpha \in I} U_{\alpha}$. Then there exists $\beta \in I$ such that $z \in U_{\beta}$. Since $U_{\beta}$ is open, there is $r >0$ such that $B_{r}(z)\subset U_{\beta} \subset \cup_{\alpha \in I} U_{\alpha}$.
+#+end_proof
+
+
+#+begin_mydef
+A set $G\subseteq \mathbb{C}$ is called closed if its complement $\mathbb{C}\setminus G$, is an open set.
+#+end_mydef
+
+#+begin_prop
+The following sentences are true
+1) The sets $\mathbb{C}$, $\emptyset$, are closed sets.
+2) If $G_1, \ldots, G_n$ is a finite collection of closed sets, then $\cup_{k=1}^n G_{k}$ is a closed set.
+3) If $\{G_{\alpha}\}_{\alpha\in I}$ is a family of closed sets, then $\cap_{\alpha\in I}G_{\alpha}$ is a closed set.
+#+end_prop
+
+
+#+begin_mydef
+Let $A\subset \mathbb{C}$. Then we define the following sets
++ The interior of $A$: $\quad\mbox{Int}(A) = \cup \{ U \,|\, U\subset A, \mbox{ and } U \mbox{ is an open set} \}$.
++ The closure of $A$: $\quad\mbox{Cl}(A) = \cap \{ G \,|\, A \subset G, \mbox{ and } G \mbox{ is a closed set} \}$.
++ The boundary of $A$: $\quad\partial A = \mbox{Cl}(A) \cap \mbox{Cl}\left( \mathbb{C} \setminus A\right)$.
+#+end_mydef
+
+
+#+begin_prop
+Let $A,B\subseteq \mathbb{C}$. Then following statements are true
++ $\mbox{Int}(A)\subset A$.
++ $A \subset \mbox{Cl}(A)$.
++ $\partial A \subseteq \mbox{Cl}(A)$.
++ $A$ is open if and only if $A = \mbox{Int}(A)$.
++ $A$ is closed if and only if $A = \mbox{Cl}(A)$.
++ $\mbox{Cl}(A\cup B) = \mbox{Cl}(A) \cup \mbox{Cl}(B)$.
++ $\mbox{Cl}(A\cap B) \subseteq \mbox{Cl}(A) \cap \mbox{Cl}(B)$, but in general they are not equal.
++ $\mbox{Int}(A\cap B) = \mbox{Int}(A) \cap \mbox{Int}(B)$.
++ $\mbox{Int}(A\cup B) \supseteq \mbox{Int}(A) \cup \mbox{Int}(B)$, but in general they are not equal.
++ $z_0\in \mbox{Int}(A) \Leftrightarrow \exists r>0, \mbox{ such that } B_{r}(z_0)\subseteq A$.
++ $z_0\in \mbox{Cl}(A) \Leftrightarrow \forall r>0, \mbox{ it holds } B_{r}(z_0)\cap A \neq \emptyset$.
++ $z_0\in \partial(A) \Leftrightarrow \forall r>0, \mbox{ it holds } B_{r}(z_0)\cap A \neq \emptyset \mbox{ and } B_{r}(z_0)\cap \left(\mathbb{C} \setminus A\right)  \neq \emptyset$.
+#+end_prop
+
+The topological structure of $\mathbb{C}$ induces in a natural way a topological structure in any subset $A\subset \mathbb{C}$.
+
+#+begin_mydef
+Let $A\subset \mathbb{C}$. The set $B\subseteq A$ is called open (closed) in $A$, if there is an open (closed) set $U$ of $\mathbb{C}$ such that $B = A \cap U$.
+#+end_mydef
+
+#+begin_prop
+Let $A\subseteq \mathbb{C}$. Then the following sentences are true
+1) The sets $A$, $\emptyset$, are open sets and closed sets in $A$.
+2) If the set $B\subseteq A$ is open in $A$, then $A\setminus B$ is closed in $A$.
+2) If the set $B\subseteq A$ is closed in $A$, then $A\setminus B$ is open in $A$.
+2) If $U_1, \ldots, U_n$ is a finite collection of open sets in $A$, then $\cap_{k=1}^n U_{k}$ is an open set in $A$.
+3) If $\{U_{\alpha}\}_{\alpha\in I}$ is a family of open sets in $A$, then $\cup_{\alpha\in I}U_{\alpha}$ is an open set $A$.
+3) If $G_1, \ldots, G_n$ is a finite collection of closed sets in $A$, then $\cup_{k=1}^n G_{k}$ is a closed set in $A$.
+4) If $\{G_{\alpha}\}_{\alpha\in I}$ is a family of closed sets in $A$, then $\cap_{\alpha\in I}G_{\alpha}$ is a closed set in $A$.
+#+end_prop
+
+#+begin_prop
+Let $A\subset \mathbb{C}$. $z_0\in \mbox{Cl}(A)$ if and only if there exists a sequence $\{z_n\}_{n}^{\infty}\subset A$ such that $\lim_{n\to\infty}z_n = z_0$.
+#+end_prop
+#+begin_proof
+By the previous proposition, since $z_0\in \mbox{Cl}(A)$, we have that for every $n\in \mathbb{N}$ we can take $r_n = \frac{1}{n} >0$, and it holds
+\[ B_{r_n}(z_0)\cap A \neq \emptyset .\]
+Then for each $n$ we can choose $z_n \in B_{r_n}(z_0)\cap A$.  Clearly we have
+\[ |z_n - z_0 | < \frac{1}{n}, \]
+for all $n \in \mathbb{N}$, which implies $\lim_{n\to\infty}z_n = z_0$.
+#+end_proof
+
+
+#+begin_mydef
+1) The set $A\subset \mathbb{C}$ is called *disconnected*, if there are two open sets $U,V$ in $\mathbb{C}$ such that
+   1) $(A\cap U) \neq \emptyset$ and $(A\cap V) \neq \emptyset$.
+   2) $U$ and $V$ are disjoint in $A$: $(A\cap U) \cap( A\cap  V) = \emptyset$
+   3) $A\subseteq U\cup V$.
+
+2) The set $A$ is called *connected* if it is not disconnected.
+#+end_mydef
+
+#+begin_prop
+The set $A$ is connected if and only if only the sets $A$ and $\emptyset$ are the only sets that are both, open and closed in $A$.
+#+end_prop
+#+begin_proof
+($\Rightarrow$) Let $A$ be connected and suppose on the contrary that there is a set $B\subset A$, that is both, open and closed, and different from $A$ and $\emptyset$.
+Then $B$ and $A\setminus B$ are open sets in $A$. Then, there are open sets $U,V\subseteq\mathbb{C}$ such that $B = A\cap U$ and $A\setminus B = A \cap V$.
+then we have:
+1) $(A\cap U) \neq \emptyset$ and $(A\cap V) \neq \emptyset$.
+2) $(A\cap U) \cap( A\cap  V) = B \cap (A\setminus B) = \emptyset$.
+3) $A = B\cup (A\setminus B) = (A\cap U) \cup( A\cap  V) = A \cap \left( U \cup V \right)$ which implies that $A \subseteq U\cup V$.
+These three points are a contradiction since $A$ is assumed connected.
+
+($\Leftarrow$) Let $A$ and $\emptyset$ the only sets that are both, open and closed in $A$. Suppose on the contrary that $A$ is disconnected. Then there are two open sets in $U,V\subset \mathbb{C}$ 
+satisfying the definition above. Put $B_1  = A\cap U$ and $B_2 = A \cap V$. Then $B_1$ and $B_2$ are non-empty open sets in $A$. Since $B_1 \cap B_2 = \emptyset$, and $A = B_1\cup B_2$.
+Then $A\setminus B_1 = B_2$, which implies that $B_2$ is also closed. Moreover, since $B_1\neq \emptyset$, $B_2 \neq A$, which is a contradiction. Then $A$ is connected.
+#+end_proof
+
+#+begin_mydef
+Let $A\subset \mathbb{C}$. By a curve $\gamma$ in $A$ we mean a continuous map $\gamma:[0,1]\to A$. We say that $A$ is called *arc-connected* or *path-connected* if for any
+two points $z_1, z_2 \in \mathbb{C}$ there exists a curve $\gamma$ in $A$ such that $\gamma(0) = z_1$ and $\gamma(1) = z_2$.
+#+end_mydef
+
+
+#+begin_thm
+Let $A\subset \mathbb{C}$.
+1) If $A$ is arc-connected then $A$ is connected.
+2) If $A$ is open and connected then $A$ is arc-connected.
+#+end_thm
+
+Here is an example of a connected set which fails to be arc-connected [[https://en.wikipedia.org/wiki/Topologist%27s_sine_curve][Example]].
+
+A *domain* $\Omega \subseteq \mathbb{C}$ is an open connected set.
+
+
+#+begin_mydef
+Let $A\subseteq \mathbb{C}$. An open cover of $A$ is a family  $\{U_{\alpha}\}_{\alpha \in I}$ of open subsets of $\mathbb{C}$, such that $A\subset \cup_{\alpha\in I} U_{\alpha}$. 
+
+A finite subcover is a collection $\{ U_{\alpha_1},\ldots, U_{\alpha_k}\}$ such that $A \subseteq \cup_{j=1}^k U_{\alpha_j}$.
+#+end_mydef
+
+#+begin_mydef
+The set $K\subset \mathbb{C}$ is called *compact* if any open cover of $K$, has a finite subcover.
+#+end_mydef
+
+#+begin_thm
+(*Heine-Borel*). The set $K\subset \mathbb{C}$ is compact if and only $K$ is closed and bounded.
+#+end_thm
+#+begin_proof
+
+($\Rightarrow$).
+
+If $K$ is compact then $K$ is closed. Supose there is $z_0\in \mbox{cl}(K)$ such that $z_0\notin K$, and consider the following sets: All balls $B_r(z_0)$ and for each $z\in K$ choose a ball $U_z:=B_{r_z}(z)$ such that $r_z>0$ is small enough to not intersect one of the $B_r(z_0)$. Note now that the collection $\{U_z \}_{z\in K}$ is an open cover of $K$ but clearly any finite choice of $U_z$'s fails to cover $K$.
+
+If $K$ is compact then $K$ is bounded. For each $z \in $K$ consider the set $U_{z} = B_{1}(z)$. Clearly $\{U_z \}_{z\in K}$ is an open cover of $K$, and then there is a finite open subcover $U_{z_1}, \ldots, U_{z_n}$. Take $M = \max\{|z_1| + 1, \ldots, |z_k| +1 \}$. Then $K \subset \cup_{k=1}^{n} U_{z_k} \subseteq B_M$, i.e. $K$ is bounded.
+
+($\Leftarrow$). Exercise.
+/Hint/. Show first that any closed subset of a compact set is also compact. Use the bounded property to show that $K$ must be contained in a square of the form $G= [-r,r]\times [-r,r]$ and show that show that $G$ is compact.
+#+end_proof
+
+#+begin_thm
+$K\subset \mathbb{C}$ is compact if and only if for every sequence $\{z_n\}_{n=1}^{\infty}\subset K$ has a convergent subsequence, i.e., $\{z_{n_k}\}_{k=1}^{\infty}$ such that $\lim_{k\to\infty} z_{n_k} = z_0$ for some $z_0\in K$.
+#+end_thm
+#+begin_proof
+($\Rightarrow$) Let $K\subset\mathbb{C}$ compact. If $\{z_n\}_{n=1}^{\infty}\subset K$ is a bounded sequence since $K$ is bounded. By Bolzano-Weierstrass' Theorem, the sequence has a convergent subsequece, say to a limit point $z_0\in \mbox{Cl}(K)$. Since $K$ is closed then $z_0\in K$.
+
+
+($\Leftarrow$) Suppose that any  $\{z_n\}_{n=1}^{\infty}\subset K$  has a convergent subsequece. IF $K$ is not bounded, then we can construct a sequence $\{z_n\}_{n=1}^{\infty}$ such that $|z_n| > n$ for all $n\in \mathbb{N}$. But this sequence has no convergent subsequence, which is a contradiction. Then $K$ should be bounded.
+
+Now take any $z_0\in \mbox{Cl}(K)$. By a previous proposition, we can construct a sequence  $\{z_{n}\}_{n=1}^{\infty}$ such that $\lim_{n\to\infty} z_n = z_0$. By our hypothesis, the sequence $\{z_{n_k}\}_{k=1}^{\infty}$ such that $\lim_{k\to\infty} z_{n_k} = w_0$, for some $w_0\in K$. By the uniqueness of the limit, $z_0 \in K$. We he have shown $\mbox{Cl}(K) \subseteq K$, which implies $\mbox{Cl}(K) = K$, i.e., $K$ is closed.
+#+end_proof
+
+#+begin_prop
+Let $f:A\to\mathbb{C}$ be a function. Then the following sentences are equivalent
+1) $f$ is continuous in $A$.
+2) For every open set $V \subset \mathbb{C}$, the set $f^{-1}(V)$ is open in $A$.
+3) For every closed set $G \subset \mathbb{C}$, the set $f^{-1}(G)$ is closed in $A$.
+#+end_prop
+#+begin_proof
+(1 $\Rightarrow$ 2) Assume $f$ is continuous in $A$. Let $V\subset \mathbb{C}$ any open such that $f(A)\cap V \neq \emptyset$. We want to show that $f^{-1}(V)$ is an open subset of $A$. Let $z_0\in f^{-1}(V)$, then $f(z_0)\in V$, and since $V$ is open there exists an open ball $B_r(f(z_0)) \subset V$. Since $f$ is assume to be continuous, if we let $\epsilon = r$, then there exists $\delta >0$ such that for any $z\in A$ such that $|z - z_0| <\delta$ we have $|f(z) - f(z_0)| < \epsilon$. This is the same as saying that there is a $\delta >0$ such that $B_{\delta}(z_0)\cap A \subseteq f^{-1}\left(B_{r}(f(z_0))\right) \subset f^{-1}(V)$. Then $U_{\delta} =  which implies $z_0$ is an interior point. Since $z_0$ is arbitary, $f^{-1}(V)$ is an open subset of $A$.
+
+(2 $\Rightarrow$ 1) Assume now that for any $V\subset \mathbb{C}$ we have that $f^{-1}(V)$ is an open set in $A$. Let $z_0 \in A$, then for $f(z_0) \in \mathbb{C}$, and for any $\epsilon >0$ consider the open set $V = B_{\epsilon}\left(f(z_0)\right)$. Then by our hypothesis, $f^{-1}(V)$ is an open set in $A$, which means that there is an open set $U\subset\mathbb{C}$ such that $U\cap A$ is completely contained in $f^{-1}(V)\cap A$. More over, since $z_0 \in U$ there exists $\delta>0$ such that $B_{\delta}(z_0)$ is contained in $U$ and also $f(B_{\delta}(z_0)\cap A) \subset B_{\epsilon}(f(z_0))$. The by one of our previous propositions, $f$ is continuous at every point of $A$.
+
+(2 $\Leftrightarrow$ 3) $f^{-1}(V)$ is open in $A$ for any $V\in\mathbb{C}$ open $\Leftrightarrow$  $A \setminus f^{-1}(V) = f^{-1}(\mathbb{C}\setminus V)$ is closed in $A$ for any closed set  $\left(\mathbb{C}\setminus V\right)\in\mathbb{C}$ $\Leftrightarrow$ f^{-1}(G) is closed for any $G\subset \mathbb{C}$ closed.
+#+end_proof
+
+#+begin_prop
+Let $K\subset\mathbb{C}$ be compact and $f: K \to \mathbb{C}$ continuous. Then $f(K)$ is also compact.
+#+end_prop
+#+begin_proof
+Let $\{V_{\alpha}\}_{\alpha \in I}$ be an open cover of $f(K)$, i.e., $f(K) \subseteq \cup_{\alpha \in I}V_{\alpha}$. By the properties of the inverse image we have $K \subseteq f^{-1}\left(f(K) \right) \subseteq f^{-1}\left(\cup_{\alpha \in I}V_{\alpha}\right) = \cup_{\alpha \in I}f^{-1}(V_{\alpha})$. Since $f$ is continuous then $f^{-1}(V_{\alpha})$ is open for every $\alpha \in I$. This means that $\{f^{-1}(V_{\alpha})\}_{\alpha\in I}$ is an open cover of the compact set $K$. Then there exists a finite upen subcover $\{f^{-1}(V_{\alpha_i})\}_{i=1}^{k}$ such that $K\subset \cup_{i=1}^{k} f^{-1}(V_{\alpha_i})$. Now by properties of the direct image $f(K) \subset f^{-1}\left(\cup_{i=1}^{k} f^{-1}(V_{\alpha_i}) \right) = \cup_{i=1}^{k} f\left(f^{-1}(V_{\alpha_i})\right) \subseteq \cup_{i=1}^{k} V_{\alpha_i}$. This implies that $\{V_{\alpha_i}\}_{i=1}^{k}$ is an open subcover for $f(K)$ and we can conclude that $f(K)$ is compact.
+#+end_proof
+
+#+begin_prop
+Let $A\subset\mathbb{C}$ be connected and $f: A \to \mathbb{C}$ continuous. Then $f(A)$ is also connected.
+#+end_prop
+#+begin_proof
+The proof goes by contradiction. Let $A$ be connected and assume that $f(A)$ is not connected. Then, there are two open sets $U,V \subset \mathbb{C}$ such that:
+   1) $(f(A)\cap U) \neq \emptyset$ and $(f(A)\cap V) \neq \emptyset$.
+   2) $U$ and $V$ are disjoint in $\mathbb{C}$: $(f(A)\cap U) \cap( f(A)\cap  V) = \emptyset$
+   3) $f(A)\subseteq U\cup V$.
+By the continuity of $f$ we have that $f^{-1}(U)$ and $f^{-1}(V)$ are open sets in $A$.\\
+1) By properties of the inverse image and using the point (1) we have $A \cap f^{-1}(U) \neq \emptyset$ and $A \cap f^{-1}(V) \neq \emptyset$.\\
+2) Again by properties of the inverse image and point (2) we have $\left(A\cap f^{-1}(U)\right) \cap \left( A \cap f^{-1}(V)\right) = \emptyset$.\\
+3) By properties of the inverse image and point (3) we also have $A\subseteq f^{-1}(U)\cup f^{-1}(V)$.
+the last three points are in contradiction with $A$ being connected. Hence $f(A)$ should also be connected.
+#+end_proof
+
+#+begin_prop
+Let $K\subset \mathbb{C}$ be a compact set, $f:K\to\mathbb{C}$ continuous. Then $f$ is uniformly continuous.
+#+end_prop
+#+begin_proof
+For this proof, we use the characterisation of compact sets by sequences, and by contradiction.
+
+Suppose then that $f$ is continuous on the compact set $K$ but $f$ not uniformly continuous. Then there exists $\epsilon >0$ such that for every $\delta >0$ 
+there exist $z_0,w_0\in K$ such that on one side $|z_0 - w_0 | < \delta$ and on the other $|f(z_0) - f(w_0)| > \epsilon$.
+Since this holds for any $\delta >0$, take $\delta_n = \frac{1}{n}$. The for each $n\in \mathbb{N}$ there are $z_n, w_n\in K$ such that
+$|z_n - w_n | < \frac{1}{n}$ and $|f(z_n) - f(w_n)| >0 \epsilon$.
+
+Now consider the sequence $\{z_n\}_{n=1}^{\infty}\subseteq K$ just constructed. By compactness we know that there exists a convergent subsequence, namely
+$\{z_{n_j}\}_{j=1}^{\infty}$, such that $\lim_{j\to \infty} z_{n_j} = a_0$.
+
+The inequality $| z_{n_j} - w_{n_j} | < \frac{1}{n_j}$ implies that the subsequence $\{w_{n_j}\}_{j=1}^{\infty}$ converges also to the same limit, $\lim_{j\to \infty} w_{n_j} = a_0$.
+
+By the continuity of $f$ it holds
+\[ \lim_{j\to \infty} f(z_{n_j}) = f(w_{n_j}) = f(a_0). \]
+
+Then, there exits $j_0>0$ such that for any $j > j_0$ it holds simultaneously 
+\[ | f(z_{n_j}) - f(a_0) | < \frac{ \epsilon}{2}, \quad \mbox{and}\quad | f(w_{n_j}) - f(a_0) | < \frac{ \epsilon}{2}. \]
+
+The then we have the following sequence of inequalities
+\[ \epsilon < |f(z_{n_j}) - f(w_{n_j})| \leq | f(z_{n_j}) - f(a_0) | +  | f(w_{n_j}) - f(a_0) | < \frac{ \epsilon}{2} + \frac{\epsilon}{2} = \epsilon, \]
+which its a contradiction itself. Consequently $f$ is uniformly continuous in $K$.
+#+end_proof
+
+* Derivatives
+
+The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
+relates with that of the derivative of maps from $\mathbb{R}^2$ to $\mathbb{R}^2$. The properties of complex differentiation have been extensively used and applied in other areas of mathematics, leading to astonishing consequences and results.
+
+We will give the concept of derivative for functions defined on open subsets of the complex plane, although it can be generalised to subsets which are not necessarily open by writing the definitions using the induced topology. In order to keep the exposition and notation simple, we will be dealing only with functions defined on  open subsets of the complex plane.
+Recall that a *domain* $\Omega \subseteq \mathbb{C}$ is an open connected set.
+
+#+begin_mydef
+Let $\Omega\subset \mathbb{C}$ be an open set, and  $f:\Omega \to \mathbb{C}$. We say that $f$ is (complex) differentiable at $z_0\in \Omega$ if the following limit exists
+\[ \lim_{z\to z_0}\frac{f(z)- f(z_0)}{z - z_0}. \]
+The limit is called the derivative of $f$ at $z_0$ and will be denoted by $f'(z_0)$, or $\frac{df}{dz}(z_0)$.\\
+If $f$ is differentiable at every point of a domain $\Omega$, then we call $f$ *holomorphic* in $\Omega$.\\
+We use the term *analytic* with the same meaning as holomorphic.
+If $f$ is holomorphic on the whole complex plane $\mathbb{C}$, then we call $f$ *entire*.
+#+end_mydef
+
+
+Examples of holomorphic functions are:
++ $f(z) = c$, (the constant function). With $f'(z) = 0$, for all $z\in \mathbb{C}$.
++ $f(z) = z$, (the identity function). With $f'(z) = 1$, for all $z\in \mathbb{C}$.
++ $f(z) = z^n$. With $f'(z) = nz^{n-1}$, for all $z\in \mathbb{C}$.
+
+The function $f(z) = \bar{z}$ is not complex differentiable anywhere in $\mathbb{C}$. Take $z_0\in \mathbb{C}$ and consider the following two sequences converging to the same complex number $z_0 = x_0 + iy_0$, $w_n = x_n + iy_0$ and $\xi_n = x_0 + i y_n$. Notice now that
+\[ \lim_{w_n\to z_0} \frac{f(w_n) - f(z_0)}{w_n - z_0} = \frac{\bar{w_n} - \bar{z_0}}{(x_n + iy_0) - (x_0 + iy_0)} = \frac{x_n - iy_0 - (x_0 - iy_0)}{x_n - x_0} = \frac{x_n - w_0}{x_n - x_0} = 1, \]
+and a similar computation gives
+\[ \lim_{\xi_n\to z_0} \frac{f(\xi_n) - f(z_0)}{\xi_n - z_0} = \frac{x_n - iy_0 - (x_0 - iy_0)}{i(y_n - y_0)} = \frac{- i(y_n - y_0)}{i(y_n - y_0)} = -1, \]
+
+#+begin_prop
+If $f:\Omega \to \mathbb{C}$ is complex differentiable at $z_0$ then it is continuous at $z_0$
+#+end_prop
+#+begin_proof
+Note that since $f'(z_0) = \lim_{z\to z_0}\frac{f(z)- f(z_0)}{z - z_0}$ exists and $\lim_{z\to z_0} z - z_0 = 0$, then the limit of o the product exists and it is the product of the limits
+\[ \lim_{z\to z_0}f(z)- f(z_0) = \lim_{z\to z_0}\frac{f(z)- f(z_0)}{z - z_0} \cdot (z - z_0) = f'(z_0) \lim_{z\to z_0} (z - z_0) = f'(z_0) \cdot 0 = 0, \]
+equivalently
+\[ \lim_{z\to z_0}f(z) = f(z_0),\]
+then, $f$ is continuous at $z_0$.
+#+end_proof
+
+The rules for differentiating complex functions and their proof are similar that the ones one encounter when dealing with real analysis:
+#+begin_prop
+Let $f,g:\Omega \to \mathbb{C}$ two complex differentiable functions at a point $z_0\in \mathbb{C}$. Then
+1) $(c\,f)$ is differentiable at $z_0\in \mathbb{C}$ and $(c\,f)'(z_0) = c\,f'(z_0)$.
+2) $(f\pm g)$ is differentiable at $z_0\in \mathbb{C}$ and $(f\pm g)'(z_0) = f'(z_0) + g'(z_0)$.
+3) $(f\,g )$ is differentiable at $z_0\in \mathbb{C}$ and $(f\, g)'(z_0) = f'(z_0)\,g(z_0) + f(z_0)\,g'(z_0)$.
+4) $\left(\dfrac{f}{g}\right)$, $g(z_0) \neq 0$, is differentiable at $z_0\in \mathbb{C}$ and $\left(\dfrac{f}{g}\right)'(z_0) = \frac{f'(z_0)\,g(z_0) - f(z_0)\,g'(z_0)}{g(z_0)^2}$.
+#+end_prop
+
+#+begin_prop
+Let $U,V \subseteq \mathbb{C}$ be two open sets and consider the functions  $f:U\to \mathbb{C}$, $g:V \to \mathbb{C}$ where $f(U)\subseteq V$. If $f$ is complex differentiable at $z_0\in U$, and
+$g$ complex differentiable at $f(z_0)\in V$, then the composition $g\circ f : U \to \mathbb{C}$, given by $(g\circ f)(z) = g(f(z))$, is complex differentiable at $z_0\in U$, and
+\[ (g\circ f)'(z_0) = g'(f(z_0))\, f'(z_0). \]
+#+end_prop
+#+begin_proof
+Case 1. Suppose $f'(z_0) \neq 0$. Then $f(z) - f(z_0) \neq 0$ holds for a small neighbourhood around $z_0$. We can write
+\[ \frac{g(f(z)) - g(f(z_0))}{z - z_0} = \frac{g(f(z)) - g(f(z_0))}{f(z) - f(z_0)} \frac{f(z)) - f(z_0)}{z - z_0}.\]
+Since $f$ is complex differentiable at $z_0$,  then it is continuous and it holds
+\[ \lim_{z\to z_0} f(z) = f(z_0). \]
+Then, by taking the limit we obtain
+\[ \lim_{z\to z_0} \frac{g(f(z)) - g(f(z_0))}{f(z) - f(z_0)}  \lim_{z\to z_0}\frac{f(z)) - f(z_0)}{z - z_0} = g'(f(z_0)) \, f(z_0). \]
+
+Case 2. Suppose now that $f'(z_0) = 0$. Then one can show that $g'(f(z_0)) = 0$ and then would finish the proof. Note that since $g'(f(z_0))$ exists, then there is a neighbourhood around
+$f(z_0)$ such that the quotient
+\[ \frac{g(f(z)) - g(f(z_0))}{f(z) - f(z_0)} ,\]
+is bounded, i.e. , there is a positive number $M>0$, and $\delta >0$ such that for every $0 < | f(z) - f(z_0) |< \delta$ we have
+\[ \left| \frac{g(f(z)) - g(f(z_0))}{f(z) - f(z_0)}\right| < M .\]
+Equivalently
+\[  |g(f(z)) - g(f(z_0))| < M | {f(z) - f(z_0)} | .\]
+Then
+\[ \left| \frac{g(f(z)) - g(f(z_0))}{z - z_0}\right| < M \left| \frac{f(z) - f(z_0)}{z - z_0} \right|.\]
+
+This shows that $(g\circ f)'(z_0) = 0 = g'(f(z_0)) f'(z_0) = g'(f(z_0)) \cdot 0$.
+#+end_proof
+
+
+Now, since $f:\mathbb{C}\to \mathbb{C}$ can also be viewed as a map $f: \mathbb{R}^2 \to \mathbb{R}^2$, lets explore the relationship between the two definitions of derivatives.
+First recall
+#+begin_mydef
+A map $f:\mathbb{R}^n \to \mathbb{R}^m$ is differentiable at $a\in \mathbb{R}^n$ if there is a linear transformation $Df_a: \mathbb{R}^n \to \mathbb{R}^m$ such that
+\[ \lim_{h\to 0} \frac{|f(a + h) - f(a) - Df_a(h)|}{|h|} = 0. \]
+#+end_mydef
+
+In order to represent this linear transformation as a matrix, we introduce partial derivatives for a function $f: \mathbb{R}^n \to \mathbb{R}$ at $a \in \mathbb{R}^n$ as the limit
+\[ \frac{\partial f(a)}{\partial x_i} = \lim_{h\to 0} \frac{f(a_1,a_2,\ldots, a_i + h, \ldots, a_n) - f(a_1,\ldots, a_n)}{h}.\]
+
+
+#+begin_thm
+If $f:\mathbb{R}^n \to \mathbb{R}^m$ is differentiable at a point $a\in \mathbb{R}^n$, then all the first order partial differential exist, and the matrix representing the linear transformation $Df_a$ is 
+\[ (Df_a) = \left( \begin{array}{ccc}
+\frac{\partial f_1(a)}{\partial x_1} & \cdots & \frac{\partial f_1(a)}{\partial x_n}\\
+\vdots & \vdots & \vdots  \\
+\frac{\partial f_m(a)}{\partial x_1} & \cdots & \frac{\partial f_m(a)}{\partial x_n}\\
+\end{array} \right). \]
+#+end_thm
+
+*Remark* Note that $(Df_a)$  is a matrix with $m$ rows and $n$ columns.
+
+The converse is not true unless we add a stronger hypothesis 
+
+#+begin_thm
+Let $f:\mathbb{R}^n \to \mathbb{R}^m$, with $f= (f_1,f_2,\ldots,f_m)$. The derivative  $Df_a$ exists if all first order partial derivatives $\frac{\partial f_i}{\partial x_j}$, $1\leq j \leq n$, and $1\leq i \leq m$, exist in an open set containing $a$, and each of these partial derivatives are continuous at $a$.
+#+end_thm
+
+Then last statement says that $Df$ exists if the functions $f_i \in C^{1}$ for $1\leq i \leq m$.
+
+#+begin_quote
+ It is possible for a differentiable function to have discontinuous partial derivatives. That is, continuous partial derivatives imply differentiability but not vice-versa.
+#+end_quote
+
+Example: Be aware that it may happen that a map has all partial derivative, and still not being differentiable at a given point. The following is an example of a map whose all
+partial derivatives at $(0,0)$ exist, but it is not differentiable at $(0,0)$.
+
+\[{\displaystyle f(x,\,y)={\begin{cases}{\frac {xy\left(x^{2}-y^{2}\right)}{x^{2}+y^{2}}}&{\mbox{ for }}(x,\,y)\neq (0,\,0),\\0&{\mbox{ for }}(x,\,y)=(0,\,0).\end{cases}}}\]
+
+
+*Remark*. If $f:\mathbb{C}\to \mathbb{C}$ is complex differentiable at $z_0$, then its derivative is a complex number, $f'(z_0) = a_1 + i a_2$ for some $a_1,a_2\in \mathbb{R}$.
+The corresponding linear transformation representing $f'(z_0)$ by complex multiplication is $T:\mathbb{R}^2 \to \mathbb{R}^2$  acting on to the basic elements $(1,0),(0,1)$ as
+$T(1,0) = (a_1 , a_2)$, and $T(0,1) = (-a_2 , a_1)$. Then the matrix representation of $T$ is
+\[ T = \left( \begin{array}{cc}
+a_{1} & -a_{2}\\
+a_{2} &  a_{1}\\
+\end{array} \right)
+\]
+
+
+
+* Cauchy-Riemann Equations
+
+#+begin_thm
+Let $\Omega\subseteq \mathbb{C}$ an open set $f:\mathbb{C} \to \mathbb{C}$, and $z_0= x_0 + iy_0 \in \Omega$. Write $f(z) = u(x,y) + i v(x,y)$, where $u,v:\Omega\subset \mathbb{R}^2 \to \mathbb{R}$.
+The function $f$ is complex differentiable at $z_0$ $\Leftrightarrow$ $u,v$ are real differentiable at $(x_0,y_0)$ and the following identities hold
+\begin{equation}
+\begin{split}
+\frac{\partial u}{\partial x} (x_0,y_0) & = \frac{\partial v}{\partial y} (x_0,y_0), \\
+\frac{\partial u}{\partial y} (x_0,y_0) & =- \frac{\partial v}{\partial x} (x_0,y_0).
+\end{split}
+\end{equation}
+#+end_thm
+
+#+begin_proof
+($\Rightarrow$) 
+
+Suppose $f$ is complex differentiable at $z_0$. Then by definition
+\[ \lim_{z\to z_0} \left[\frac{f(z) - f(z_0)}{ z- z_0} - f'(z_0)\right] = 0 ,\]
+Then taking module we also have 
+\[ \lim_{z\to z_0} \left|\frac{f(z) - f(z_0)}{ z- z_0} - f'(z_0)\right| = \lim_{z\to z_0} \frac{ \left|f(z) - f(z_0)  - f'(z)(z-z_0)\right|}{ \left|z-z_0\right|} =  0.\]
+
+Now writing the last expression as mapping between $\mathbb{R}^2$, i.e, $z= x + i y = (x, y)$, $z_0= x_0 + i y_0 = (x_0, y_0)$, and using the matrix representation of $f'(z_0) = a_1 + i a_2$, we can rewrite the last equaiton as follows
+\[ \lim_{z\to z_0} \frac{\left| f(x,y) - f(x_0,y_0)  - \left(
+ \begin{array}{cc}
+a_{1} & -a_{2}\\
+a_{2} &  a_{1}\\
+\end{array} \right) 
+\left(
+\begin{array}{c}
+x - x_0\\
+y - y_0\\
+\end{array} \right)
+\right|}{\left| (x-x_0, y-y_0) \right|} = 
+\lim_{(x,y)\to (x_0,y_0)} \frac{\left| f(x,y) - f(x_0,y_0)  - T(x - x_0, y - y_0)\right|}{\left| (x - x_0, y - y_0)\right|} = 0, \]
+which is clearly equivalent to 
+\[ \lim_{h\to 0} \frac{\left| f(x_0 + h_1, y_0 + h_2) - f(x_0,y_0)  - T(h)\right|}{\left| h \right|} = 0, \]
+hence $f:\mathbb{R}^2 \to \mathbb{R}^2$ is real differentiable.
+
+Then we know that if $f(x,y) = u(x,y) + i v(x,y)$ is real differentiable at $z_0 = (x_0,y_0)$. Then the partial derivatives of $u$ and $v$ exist and moreover 
+we showed that $Df_{z_0} = T$. Looking at the matrix representation we have
+\[ 
+Df_{z_0} = \left( \begin{array}{cc}
+\frac{\partial u}{\partial x}  &  \frac{\partial u}{\partial y} \\
+\frac{\partial v}{\partial x}  &  \frac{\partial v}{\partial y} \\
+\end{array} \right)
+=
+\left( \begin{array}{cc}
+a_1 &  -a_2 \\
+a_2 &  a_1 \\
+\end{array} \right) = T \]
+which implies the Cauchy-Riemann equations:
+\[  \frac{\partial u}{\partial x}(x_0,y_0) = a_1 = \frac{\partial v}{\partial y}(x_0,y_0), \quad \mbox{and} \quad \frac{\partial u}{\partial y}(x_0,y_0) = - a_2 = - \frac{\partial v}{\partial x}(x_0,y_0) .\]
+
+
+($\Leftarrow$)
+
+Let $u,v:\mathbb{R}^2 \to \mathbb{R}$, real differentiable functions at $z_0 = (x_0, y_0)$, satisfying the Cauchy-Riemann equations. Define $a_1, a_2$ by
+\[  \frac{\partial u}{\partial x}(x_0,y_0) = a_1 = \frac{\partial v}{\partial y}(x_0,y_0), \quad \mbox{and} \quad \frac{\partial u}{\partial y}(x_0,y_0) = - a_2 = - \frac{\partial v}{\partial x}(x_0,y_0),\]
+and define the following linear transformation (in matrix representation)
+\[ 
+T = \left( \begin{array}{cc}
+a_1 &  -a_2 \\
+a_2 &  a_1 \\
+\end{array} \right). \]
+Now, define the complex number $A = a_1 + i a_2$. It holds
+
+\[ \lim_{z\to z_0} \frac{| f(z) - f(z_0) - A (z-z_0) |}{|z- z_0|} = \lim_{(x,y)\to (x_0, y_0)} \frac{| f(x,y) - f(x_0,y_0) - T ( x-x_0, y-y_0) |}{|(x,y) - (x_0, y_0)|} = 0. \]
+
+We can conclude that
+\[ \lim_{z\to z_0} \frac{f(z) - f(z_0)}{z- z_0} = A, \]
+$f$ is complex diffetentiable at $z_0$.
+#+end_proof
+
+
+#+begin_cor
+If $u,v:\Omega\subset \mathbb{R}^2 \to \mathbb{R}$ have *continuous first-order partial derivatives* at $(x_0,y_0)$ that satisfy the *Cauchy-Riemann equations*, then $f(z) = u(x,y) + i v(x, y)$ is *complex differentiable* at $z_0 = x_0 + i y_0$.
+#+end_cor
+
+
+*Remark*. A usual notation is for the Cauchy-Riemann equations is $u_x = v_y$ and $u_y = -v_x$.\\
+Holomorphy is the property of a complex function of being differentiable at every point of a domain. Consequently, we can say that a complex function $f$, whose real and imaginary parts $u$ and $v$ are real-differentiable functions, is holomorphic if and only if, the Cauchy-Riemann equaitons are satisfied at every point of the domain.
+
+*Example*. The following example will clarify the hypothesis of the previous theorem, that the Cauchy-Riemann equations are not sufficient to establish the complex differentiability of a function.
+Let $f:\mathbb{C}\to \mathbb{C}$ be defined as
+\[ f(z) = \left\{ \begin{array}{ccc}
+\frac{z^5}{|z|^4}, & \mbox{for} & z\neq 0, \\
+0, & \mbox{for} & z= 0. \\
+\end{array} \right. \]
+The function $f$ is not complex differentiable at $z=0$. Let $z = x$, with $x \to 0$. Then
+\[ \lim_{z\to 0} \frac{f(z)  - f(0)}{z - z_0} = \lim_{x\to 0}\frac{\frac{x^5}{|x|^4}}{x} = \lim_{x \to 0}\frac{x^4}{|x|^4}{x} = 1 .\]
+Now take $z = i\,y$, with $y\to 0$ and observe
+\[ \lim_{z\to 0} \frac{f(z)  - f(0)}{z - z_0} = \lim_{y\to 0} \frac{\frac{(iy)^5}{|y|^4}}{y} = \lim_{y\to 0}\frac{-y^5}{|y|^4} = -1 .\]
+Then we conclude that 
+\[ \lim_{z \to 0} \frac{f(z) - f(0)}{z-0} ,\]
+does not exists.
+
+On the other hand 
+\[ u(x,0) = x, \quad u(0,y) = v(x,0) = 0, \quad v(0,y) = y, \]
+Then we have at $(0,0)$:
+\[ u_x = v_y = 1,\quad u_y = -v_x = 0.\]
+
+What is happening here?
+
+
+\[f(z) = \frac{ x^5  - 10 x^3 y^2 + 5 x y^4}{(x^2 + y^2) ^2} + i \frac{5 x^4 y -  10 x^2 y^3  +  y^5}{(x^2 + y^2)^2} \]
+
+* Some consequences of the Cauchy-Riemann Equations
+
+Note that if $f(z)  = u(x,y) + i v(x, y)$ is a complex differentiable function at $z_0$, when taking the limit of the quitient of differences, it does not matter how $z \to z_0$ approaches,
+then 
+\[ f'(z_0) = \lim_{z\to z_0} \frac{f(z) - f(z_0)}{z-z_0} = \lim_{x\to x_0} \frac{f(x + iy_0) - f(z_0)}{x - x_0} = \frac{\partial f}{\partial x}, \]
+and similarily:
+\[ f'(z_0) = \lim_{z\to z_0} \frac{f(z) - f(z_0)}{z-z_0} = \lim_{y\to y_0} \frac{f(x_0 + iy) - f(z_0)}{i(y - y_0)} = -i \frac{\partial f}{\partial y}. \]
+
+The first of these equalities together with the Cauchy-Riemann equations prove the following:
+#+begin_prop
+Let $f:\Omega \to \mathbb{C}$ be complex differentiable at $z_0\in \Omega$. Then
+\begin{equation}
+\begin{split}
+f'(z_0) = \frac{df}{dz} & = \frac{\partial u}{\partial x} + i \frac{\partial v}{\partial x} \\
+& = \frac{\partial u}{\partial x} - i \frac{\partial u}{\partial y} \\
+& = \frac{\partial v}{\partial y} - i \frac{\partial u}{\partial y} \\
+& = \frac{\partial v}{\partial y} + i \frac{\partial v}{\partial x}
+\end{split}
+\end{equation}
+#+end_prop
+
+
+#+begin_mydef
+Let $\Omega\subseteq \mathbb{C}$ an open set, $f:\Omega\to\mathbb{C}$, $f(z)  = u(x,y) + i v(x, y)$ be a complex differentiable function at $z_0$, Then we will write:
+\[\frac{df}{dz} = \frac{1}{2}\left( \frac{\partial f}{\partial x} - i \frac{\partial f}{\partial y} \right)\]
+\[\frac{df}{d\bar{z}} = \frac{1}{2}\left( \frac{\partial f}{\partial x} + i \frac{\partial f}{\partial y} \right)\]
+#+end_mydef
+
+
+#+begin_prop
+Let $\Omega\subseteq \mathbb{C}$ an open set, $f:\Omega\to\mathbb{C}$, $f(z)  = u(x,y) + i v(x, y)$, with $u,v$ real differentiable functions at $z_0= x_0 + iy_0\in \Omega$. The function
+$f$ is complex differentiable at $\Omega$ if and only if $\dfrac{df}{\bar{z}}(z_0) = 0$.
+#+end_prop
+#+begin_proof
+It follows from the Cauchy-Riemann equations and the following identity
+\[\frac{df}{d\bar{z}} = \frac{1}{2}\left( \frac{\partial f}{\partial x} + i \frac{\partial f}{\partial y} \right)
+= \frac{1}{2}\left(\frac{\partial u }{\partial x} - \frac{\partial v}{\partial y}\right) + \frac{i}{2}\left(\frac{\partial u }{\partial y} + \frac{\partial v}{\partial x}\right)\]
+#+end_proof
+
+#+begin_prop
+Let $\Omega\subseteq \mathbb{C}$ be a domain. $f:\Omega \to \mathbb{C}$ holomorphic and such that $f'(z) = 0$ for all $z\in\Omega$. Then $f$ is constant.
+#+end_prop
+#+begin_proof
+It follows from the real case and the mean value theorem (since $\Omega$ is connected)
+#+end_proof
+
+* Harmonic Functions
+
+We already saw in one of the previous exercises that if a function is holomorphic, then the real and imaginari parts satisfy the Laplace equation. Here the statement:
+
+#+begin_thm
+If $f = u + iv$ is holomorphic, and the functions $u$ and $v$ have continuous second-order partial derivatives, then $u$ and $v$ are harmonic.
+#+end_thm
+#+begin_proof
+Since the second-order partial derivatives are continuous, one can interchange the order of differentiation for $u$ and $v$. It follows then from the Cauchy-Riemann equations that
+\[ u_{xx} = v_{yx} = v_{xy} = -u_{yy} \Longrightarrow u_{xx} + u_{yy} = 0.\]
+Then, $u$ is harmonic. The proof for $v$ is similar.
+#+end_proof
+
+If $u$ is harmonic on a domain D, and $v$ is a harmonic function such that
+$u + iv$ is analytic, we say that v is a harmonic conjugate of $u$. The
+harmonic conjugate $v$ is unique, up to adding a constant.
+
+
+#+begin_thm
+Let $\Omega$ be an open disk, or an open rectangle with sides parallel
+to the axes, and let $u(x,y)$ be a harmonic function on \Omega. Then there is
+a harmonic function $v(x,y)$ on $\Omega$ such that $u + iv$ is analytic on $\Omega$. The
+harmonic conjugate $v$ is unique, up to adding a constant.
+#+end_thm
+
+
+*Example*. Show that $u(x,y) = xy$ is harmonic and find an harmonic conjugate.
+
+It is easy to show that $u$ is harmonic. To find the harmonic conjugate function $v$ we use the Cauchy-Riemann equations
+\[ u_x = y = v_y,\]
+and from this we can conclude by integrating with respect to $y$ that
+\[ v = \frac{y^2}{2} + \phi(x). \]
+Using again the Cauchy-Riemann equations, $v_x = - u_y = -x$ we get
+\[ v_x = \phi'(x) = -x,\]
+and by integrating with respect to $x$ we obtain
+\[ \phi(x)  = -\frac{x^2 }{2} + C. \]
+
+Then we can write
+\[ v(x,y) = -\frac{x^2 }{2} + \frac{y^2 }{2} + C. \]
+
+Then the analytic (Holomorphic function) is given by 
+
+\[ f(z) = u(x,y) + i v(x,y) = xy  -i \frac{x^2 }{2} + i\frac{y^2 }{2} + iC = -\frac{i}{2} \left((x^2  - y^2) + 2ixy\right) + i C = -\frac{iz^2}{2} + iC. \]
+
+
+* Conformal Mappings
+
+In this section we will study curves in the complex plane, and when two curves intersect we will define the notion of angle between the to curves at the intersection point. Mappings from the complex plane into itself that preserve angles will then be considered. Among the basic examples of these kind of mappings are the so called Möbius transformations. Some geometric applicaitons will also be analysed.
+
+#+begin_mydef
+A parameterised curve in the complex plane is a differentiable mapping $\gamma:I\to\mathbb{C}$, where $I= [0,1]$ is the real closed unit interval. Note that $\gamma(t) = x(t) + i\, y(t)$. The tangent vector to the curve at $z_0 = \gamma(t_0)$, for $t_0 \in I$, is defined as
+\[ \gamma'(t_0) = \lim{t\to t_0} \frac{\gamma(t) - \gamma(t_0)}{t - t_0} = x'(t_0)  + i\, y'(t_0). \]
+If two curves $\gamma_1$ and $\gamma_2$ are such that $z_0 = \gamma_1(0) = \gamma_2(0)$, then the angle between the two curves at $z_0$ is defined as the angle between the two tangent vectors $\gamma'(0)$ and $\gamma_2(0)$.
+#+end_mydef
+
+
+#+begin_prop
+Let $\gamma:I \to \mathbb{C}$ a parameterised curve, $z_0 = \gamma(0)$, and $f:\mathbb{C}\to \mathbb{C}$ an analytic (holomorphic) function. Then
+\[ \left( f\circ \gamma)'(0)\right) = f'(z_0) \gamma'(0). \]
+#+end_prop
+#+begin_proof
+The proof is an application of the chain rule.
+#+end_proof
+
+#+begin_mydef
+A function $f:\Omega \to \mathbb{C}$ is called conformal at the point  $z_0\in \Omega$
+if $f$ is real differentiable at $z_0$ and $f$ preserves the angle between
+any two curves $\gamma_1$ and $\gamma_2$ at the intersecting point $z_0=\gamma_1(0)=\gamma_2(0)$, i.e., 
+if $\theta$ is the angle between $\gamma_1'(0)$ and $\gamma_2'(0)$, then 
+the angle between $(f\circ \gamma_1)'(0)$ and$(f\circ \gamma_2)'(0)$ is also equal to $\theta$.
+#+end_mydef
+
+Before proving the following theorem we will need the following result. The function $f:\Omega \to \mathbb{C}$ is complex differentiable $z_0\in \Omega$  if and only if there there exists a continuous function at $z_0\in \Omega$,  $\varphi:\Omega \to \mathbb{C}$ such that for all $z\in \Omega$ we have \[ f(z) = f(z_0) + (z-z_0)\varphi(z).\]
+The proof on one direction this uses the continuity of $\varphi$ at $z_0$, and for the existence part, define 
+\[ \varphi(z) = \left\{ \begin{array}{cc}
+\frac{f(z) - f(z_0)}{z-z_0}  & z\neq z_0\\
+f'(z_0)  & z = z_0\\
+\end{array} \right. \]
+#+begin_thm
+If $f:\Omega \to \mathbb{C}$ is holomorphic in the domain $\Omega$ and for $z_0\in \Omega$ we have $f'(z_0) \neq 0$ then $f$ is conformal.
+#+end_thm
+#+begin_proof
+Let $\gamma_1$ and $\gamma_2$ two curves intersecting at $z_0$. Then the angle between the curves is the angle between the tangent vectors $\gamma_1'(0)$ and $\gamma_2(0)$, to compute this angle we use
+\[ \theta = \mbox{arg}(\gamma_1'(z)) - \mbox{arg}(\gamma_2'(z)) = \mbox{arg}\left(\frac{\gamma_1'(0)}{\gamma_2'(0)}\right). \] 
+
+The corresponding angle at $f(z_0)$ is obtained by comparing the angles between $f(\gamma_1 (0))' = (f\circ \gamma_1)'(0)$ and  $(f\circ \gamma_2)'(0)$
+We have
+\[ \left( f\circ \gamma_1\right)'(0) = f'(z_0) \gamma_1'(0), \]
+and
+\[ \left( f\circ \gamma_2\right)'(0) = f'(z_0) \gamma_1'(0), \]
+then
+\[ \mbox{arg}\left( \frac{\left(f\circ \gamma_1 \right)'(0)}{\left(f\circ \gamma_2\right)'(0)}\right) = \mbox{arg}\left(\frac{f'(z_0) \gamma_1'(0)}{f'(z_0) \gamma_2'(0)}\right) = \mbox{arg}\left(\frac{\gamma_1'(0)}{\gamma_2'(0)}\right) = \theta. \]
+#+end_proof
+
+The converse statement is also true.
+
+#+begin_thm
+Suppose that $f$ is conformal in a domain $\Omega$, and suppose also that $f$ is real differentiable in $\Omega$ and such that $Df_z \neq 0$. Then $f$ is holomorphic in $\Omega$ and $f'(z) \neq 0$.
+#+end_thm
+
+#+begin_proof
+For any $z_0\in\Omega$, if $z_0 \neq 0$ then we will consider $g(z) = f(z - z_0)$ so $g(z) = f(0)$. Then its enough to prove the assertion when $z_0 = 0$.
+Consider the following lines $L_1 = \{z \in \Omega \, | \, \mbox{Im}(z) = 0, \mbox{Re}(z) \geq 0 \}$ and for some fixed $m\in \mathbb{R}$, $L_2 = \{ z\in \Omega \, | \, z = x + i mx, x\geq 0 \}$, where $m=\tan \alpha$ is the angle measured from the real line and counterclockwise.
+Because we are assuming $f$ is conformal at $z=0$ the angle at $f(0)$ between the corresponding curves $f(L_1)$ and $f(L_2)$ should remain unchanged. 
+
+Write $f(z) = u(x,y) + v(x,y)$. If the angle $\beta$ of the tangent vector at $f(0)$ of the curve $L_2$ is given by $\beta$, and then angle the angle $\beta$ of the tangent vector at $f(0)$ of the curve $L_1$ is given by $\theta$, then another way to measure the angle $\alpha$ is by noticing $\beta - \theta = \alpha$, or equivalently $\theta = \beta - \alpha$. Let $c = \tan (\beta - \alpha) = \tan (\theta)$. Also notice
+\[ \tan(\beta)=\lim_{x\to 0} \frac{v(x,mx) - v(0,0)}{u(x,mx)- u(0,0)} = \lim_{x\to 0} \frac{\frac{v(x,mx) - v(0,0)}{x}}{\frac{u(x,mx) - u(0,0)}{x}}= \frac{v_x(0,0) + m v_y(0,0)}{u_x(0,0)+ m u_y(0,0)}, \]
+where we have use the assumption that $f$ is real differentiable and the chain rule (or directional derivative). Also since we assume that $Df_0$ is not the zero matrix, last limit is not zero and then we also know $\cot(\beta)$.
+
+Then
+
+\[ c = \tan(\theta) = \tan(\beta - \alpha) = \frac{\tan(\beta) - \tan(\alpha)}{1 + \tan(\alpha)\tan(\beta)} = \frac{ \frac{v_x + m v_y}{u_x + m u_y} - m}{ 1 + m\, \frac{v_x + m v_y}{u_x + m u_y}} \]
+
+Not then that this can be written as
+
+\[ v_x + mv_y - m(u_x + m u_y)  = c( u_x + m u_y + m v_x + m^2 v_y) \]
+expanding the brackets:
+\[ - m^2 u_y + m(v_y - u_x) + v_x = cm^2 v_y + cm( u_y + v_x)  + cu_x, \]
+
+These are polynomials in $m$ , then the coefficients they must be identical
+\begin{eqnarray}
+-u_y = cv_y \\
+v_y - u_x = c(u_y + v_x) \\
+v_x = cu_x \\
+\end{eqnarray}
+
+Then by substitution we get
+\begin{equation}
+v_y - u_x = c(u_y + v_x) = c( - cv_y + cu_x) = -c^2 (v_y - u_x)
+\end{equation}
+
+It follows
+\[ (1 + c^2) (v_y - u_x) = 0,\]
+
+this implies $u_x = v_y$. Then $-u_y = c u_x = v_x$. 
+
+Since $f$ is real differentiable at $z=0$ and satisfies the Cauchy-Riemann equations then $f$ is complex differentiable at $z=0$.
+#+end_proof
+
+
+Now suppose that that $f\Omega\to\mathbb{C}$ is conformal, and consider $z_0\in \Omega$. Then the angles between two rays intersecting at $z_0$ remain unchanged, but not necessarily their lengths. Since
+\[ |f'(z_0) | = \lim_{z\to z_0} = \frac{|f(z) - f(z_0)|}{|z-z_0|}, \] 
+one can say that the linear change of scale at $z_0$, caused by the transformation $f$, is independent of the direction. "Small circles around $z_0$ are mapped into small circles around $f(z_0)$, at a scale $|f'(z_0)|$.
+
+#+caption: Image taken form Derricks's Introduction to Complex Analyisis.
+[[./conf_scale.png]]
+
+
+#+begin_mydef
+A conformal mapping of one domain $\Omega$ onto another $V$ is a continuously
+differentiate function that is conformal at each point of $\Omega$ and that maps $\Omega$
+one-to-one onto $V$.
+#+end_mydef
+
+Some examples of conformal mappings:
++ The translation $f(z) = z + c$.
++ Multiplication by a constant = $f(z) = c\,z$.
++ Let $\Omega = \{ z \in \mathbb{C} \, | \, \mbox{Re}(z) > 0\}$ and $V = \mathbb{C}\setminus [-\infty, 0]$. Then the function $f: D \to V$ is a conformal mapping.
++ The exponential function $f(z) = e^{z}$ is conformal at each point $z\in\mathbb{C}$ and its image is the set $\mathbb{C}\setminus\{0\}$.
+* Cauchy's Theorem and Cauchy's Integral Formula
+
+*The Main assumptions for this section*. We will prove the Cauchy theorem assuming that if $f$ is holomorphic in $\Omega$, then one of the two situations occur
++ $f$ has a continuous primitive $F$ in $\Omega$, i.e., $F'(z) = f(z)$ for all $z\in \Omega$.
++ $f$ is $C^{1}(\Omega)$. This means that $f$ has all partial derivatives and they are all continuous.
+
+These are true for any $f$ holomorphic, and the prove of the first point uses the so called *Cauchy-Goursat* theorem (at least for rectangles). 
+
+
+ #+begin_mydef
+A continuously differentiable (or $C^1$) curve in a domain $\Omega \subset \mathbb{C}$ is a map $\alpha : [a,b] \to \Omega$, where $[a,b]$ is an interval in the real, and 
+such that 
+\[ \alpha'(t) =  \lim_{h\to 0} \frac{ \alpha(t + h) - \alpha(t)}{h},\]
+ exists at each point $t\in [a, b]$ (in the one-sided
+sense at the endpoints) and  such that $\alpha'$ is continuous on $[a, b]$. 
+We will also use the symbol $\alpha$ to denote also its trace, that is the set
+of points $\{\alpha(t) \, | \,  t \in [a, b]\}$.
+
+A curve is called *piecewise continuously differentiable* if it can be written as a finite union of continuously differentiable curves. 
+
+The curve $\alpha$ is called *closed* if $\alpha (a) = \alpha (b)$.
+
+It is called *simple closed* if it is closed and it does not intersecting itself, i.e., $\alpha(s) = \alpha (t)$ and $s\neq t$ is only possible when either that $s = a$ and $t = b$ or $s = b$ and $t = a$.
+
+A simple closed curve $\alpha$ is said to be *positively oriented* if the region interior to the curve is to the left of the curve while it is being traversed from $t = a$ to $t = b$. In other case the curve is called *negatively oriented*.
+ #+end_mydef
+
+*Example* The curve $\alpha_1: [0,2\pi] \to \mathbb{C}$ given by $\alpha(t) = e^{it}$ is $C^1$ and positively oriented, while $\alpha_2: [0,2\pi] \to \mathbb{C}$ given by $\alpha_2(t) = e^{-it}$ is negatively oriented.
+
+#+begin_mydef
+Let $f:\Omega \to \mathbb{C}$ a continuous function, and $\alpha : [a,b] \to \Omega$ a $C^1$ curve. Then the *complex line integral* over the curve $\alpha$ is defined as
+\[\int_{\alpha}f(z) dz = \int_{a}^{b} f(\alpha(t)) \, \alpha'(t) dt.\]
+
+In case $\alpha$ is *piecewise continuously differentiable*, then integral is defined as the sum of the integrals along all the $C^1$ pieces.
+#+end_mydef
+
+#+begin_prop
+Recall the following properteis of line integrals:
+1. $\int_{\alpha} [ af(z) + bg(z)]dz =  a \int_{\alpha} f(z) dz + b \int_{\alpha} g(z) dz$
+2. $\int_{\alpha_1 + \alpha_2} f(z) dz = \int_{\alpha_1} f(z)dz + \int_{\alpha_2} f(z)dz$, where $\alpha_1 + \alpha_2$ is the joint curve $\alpha_1$ followed by $\alpha_2$.
+3. $\int{-\alpha} f(z) dz = - \int_{\alpha} f(z)dz$, where $-\alpha$ is the curve traversed in the oposite direction.
+4. $|\int_{\alpha} f(z)dz | \leq \int_{\alpha} |f(z)| |dz|$, where $|dz|$ is the arch length differential: $|dz| = \sqrt{dx^2 + dy^2}$.
+#+end_prop
+
+
+#+begin_thm
+*Cauchy theorem*. Let $f:\Omega \to \mathbb{C}$ holomorphic in $\Omega$. Assume that $\alpha: [a,b] \to \Omega$ is a piecewise continuously differentiable closed curve which is topologically trivial (this means that the image of the curve can be continuously deformed to a points within $\Omega$). Then
+\[ \int_{\alpha} f(z) dz = 0. \]
+#+end_thm
+
+
+#+begin_proof
+Relying on our main assumptions:
+
+1) If $f$ has a continuous primitive $F$, then by the fundamental theorem of calculus we have
+\[ \int_{\alpha}f(z) dz = \int_{\alpha} F'(z) dz = \int_{a}^{b} F'(\alpha(t)) \alpha'(t) dt = \int_{a}^{b} \frac{d}{dt} F(\alpha(t)) = F(\alpha(b)) - F(\alpha(a)) = 0.\]
+
+2) If $f$ is $C^1(\Omega)$, or equivalently that $f'$ is continuous,  then we apply Green's theorem and the Cauchy-Riemann's equations. We call $R$ the open region of the complex plane bounded by the curve $\alpha$. 
+
+Recall the Green's Theorem:
+\[ \int_{\alpha} (Pdx + Qdy) = \int\int_{R} (Q_x - P_y) dx\, dy.\]
+
+Then in our case:
+
+\begin{align*}
+ \int_{\alpha} f(z)dz & = \int_{\alpha} (u + i v) (dx + idy) \\ 
+ &=\int_{\alpha} (u \, dx - v\, dy) + i \int_{\alpha} (v \, dx +  u\, dy) \\
+ &= - \int\int_{R} (u_y +  v_x ) dx \, dy + i \int\int_{R} (u_x -  v_y) dx \, dy) \\
+ &= 0.
+\end{align*}
+
+#+end_proof
+
+#+begin_thm
+*Cauchy's integral formula*. Let $f:\Omega \to \mathbb{C}$ holomorphic in $\Omega$. Fix a point $z_0\in \Omega$ and assume that $\alpha: [a,b] \to \Omega$ is a piecewise continuously differentiable simple closed curve which is topologically trivial and positively oriented, with $z_0$ in its interior. Then
+\[ f(z_0) = \frac{1}{2\pi i} \int_{\alpha}\frac{f(z)}{z-z_0}dz. \]
+#+end_thm
+
+#+begin_proof
+Let $z_0 \in \Omega$ and define the function
+\[ G(z) = \left\{ \begin{array}{ccc}
+\frac{f(z) - f(z_0)}{z - z_0} & \mbox{for} & z \neq z_0\\
+f'(z_0) & \mbox{for} & z = z_0\\
+\end{array} \right. \]
+
+Applying the Cauchy theorem for $G$ the curve $\alpha(t) = z_0 + e^{it}$, $0\leq t \leq 2\pi$  it follows:
+
+\begin{align*}
+0 & =  \int_{\alpha} G(z) dz \\ 
+& = \int_{\alpha} \frac{f(z) - f(z_0)}{z-z_0} \\ 
+&= \int_{\alpha}\frac{f(z)dz}{z-z_0} - \int_{\alpha}\frac{f(z_0) dz}{z - z_0} \\
+&= \int_{\alpha}\frac{f(z)dz}{z-z_0} - f(z_0) \int_{\alpha}\frac{dz}{z - z_0}\\
+&= \int_{\alpha}\frac{f(z)dz}{z-z_0} - f(z_0) \int_{0}^{2\pi}\frac{\alpha'(t)dt}{\alpha(t) - z_0}\\
+&= \int_{\alpha}\frac{f(z)dz}{z-z_0} - f(z_0) \int_{0}^{2\pi}\frac{i e^{it}dt}{e^{it}}\\
+&= \int_{\alpha}\frac{f(z)dz}{z-z_0} - i\, f(z_0) \int_{0}^{2\pi}dt\\
+&= \int_{\alpha}\frac{f(z)dz}{z-z_0} - 2\pi\,i\, f(z_0).
+\end{align*}
+#+end_proof
+
+
+#+begin_thm
+Let $f$ be holomorphic in a domain $\Omega$, and let $z_0\in \Omega$ fixed. Assume that the following closed disc is contained in $\Omega$:
+\[ \bar{B}_r(z_0) = \{ z \, | \, |z-z_0| \leq r \} \subseteq \Omega. \]
+Then $f$ can be written in $\bar{B}_r(z_0)$ as a convergent power series 
+\[ f(z) = \sum_{k=0}^\infty a_k (z - z_0)^n.\]
+The convergence is absolutely and uniformly in $B_r(z_0)$ (the interior).
+#+end_thm
+
+#+begin_proof
+Take any point in $w\in B_r(z_0)$ and consider the curve $\alpha(t) = z_0 + r e^{it}$, $t\in [0,2\pi]$. Note then that $|w-z_0| < r = |\alpha(t) - z_0|$. Then for any $\xi$ such that $|\xi - z_0| = r$ we have
+\[ \frac{1}{\xi - w} = \frac{1}{\xi - z_0 + z_0 - w} = \frac{1}{(\xi - z_0)\left( 1 + \frac{z_0 - w }{ \xi - z_0}\right) }= \frac{1}{\xi - z_0}\frac{1}{\left( 1 - \frac{w - z_0 }{ \xi - z_0}\right) }, \]
+note now that $|w-z_0|/(\xi-z_0) < 1$, and then we can express the last term as  a power series:
+
+\[ \frac{1}{\xi - w}  = \frac{1}{\xi-z_0}\sum_{k=0}^{\infty}\left( \frac{w - z_0 }{ \xi - z_0}\right)^k, \]
+using the fact that  the series is absolutely and uniformly convergent, and the Cauchy integral formula we have:
+\[ f(w) = \frac{1}{2\pi i} \int_{\alpha} \frac{f(\xi)}{\xi - w}d\xi = \sum_{k = 0}^{\infty}\frac{1}{2\pi i} \int_{\alpha} \frac{f(\xi)d\xi}{(\xi - z_0)^{k+1}} (w - z_0)^k \]
+#+end_proof
+
+#+begin_cor
+Let $f$ be holomorphic in a domain $\Omega$, and let $z_0\in \Omega$ fixed. Then $f$ is infinitely differentiable and the $k$ -th order derivative of $f$ satisfies
+\[ f^{(k)}(z_0) = \frac{k!}{2\pi i} \int_{\alpha}\frac{f(z)}{(z-z_0)^{k+1}}dz. \]
+#+end_cor
+
+
+#+begin_thm
+*Morera's Theorem*. Let $f:\Omega \to \mathbb{C}$ be continuous, $\Omega$ a simply connected domain, and such that
+\[ \int_{\alpha} f(z) dz = 0, \]
+for all piecewise continuously differentiable closed curves in $\Omega$. Then $f$ is holomorphic.
+#+end_thm
+#+begin_proof
+Let $z_0\in \Omega$. By the Cauchy theorem, the function 
+\[ F(z) = \int_{z_0}^{z} f(\xi) d\xi,\]
+is well defined and independent of the path connecting $z$ with $z_0$.
+
+By continuity of $f$ for any $z \in \Omega$ and $\epsilon >0$, there exists $\delta >0$ such that if $|\xi - z| < \delta$ then $|f(\xi) - f(z) | < \epsilon. Let $|h| < \delta$, then we have
+\[ \frac{F(z + h) - F(z)}{h} = \frac{1}{h} \left\{ \int_{z_0}^{z + h} f(\xi)d\xi  - \int_{z_0}^{z} f(\xi)d\xi \right\} = \frac{1}{h}\int_{z}^{z + h} f(\xi)d\xi. \]
+On the other side note that 
+\[ f(z) = \frac{f(z)}{h} h = \frac{f(z)}{h} \int_{z}^{z+h} d\xi = \frac{1}{h} \int_{z}^{z+h} f(z) d\xi, \]
+then we can estimate
+\[ \left| \frac{F(z + h) - F(z)}{h} - f(z) \right| = \left| \frac{1}{h} \int_{z}^{z+h} (f(\xi) - f(z)) d\xi \right| \leq \frac{1}{|h|} \int_{z}^{z+h} \left|f(\xi) - f(z)\right| \left| d\xi \right| \leq \epsilon,\]
+where the last inequality follows when taking the straight line segment joining $z$ with $z + h$ (with length |h|).
+Then $F'(z) = f(z)$. This implies $f$ is analytic and hence holomorphic in $\Omega$.
+#+end_proof
+
+#+begin_prop
+Let $f$ be an holomorphic function on a domain $\Omega$ that contains the closed disc $B = \bar{B}_R(z_0)$. Let $M = \sup_{B} \{ |f(z)| \, | \, z \in B\}$. Then the derivatives satisfy the estimates
+\[ \left| f^{(k)}(z_0)\right| \leq \frac{k! M}{R^k} .\]
+#+end_prop
+
+
+#+begin_thm
+*Liouville's Theorem*. Let $f$ be a holomorphic function in the complex plane (that is, an entire function). If $f$ is bounded, then $f$ must be a constant.
+#+end_thm
+
+
+#+begin_thm
+*Maximum Modulus Principle*. Let $f$ be a holomorphic function in a domain $\Omega$. If $z_0\in \Omega$ is such that $|f(z_0)| \geq |f(z)|$ for all $z\in \Omega$, then  $f$ is constant.
+#+end_thm
+#+begin_proof
+
+Let $\alpha(t) = z_0 + re^{it}$ the circle around $z_0$ and completely contained in $\Omega$. Then by the Cauchy integral formula we have the following mean value property
+\begin{align*}
+f(z_0) &= \frac{1}{2\pi i} \int_{\alpha} \frac{ f(z)}{z - z_0} dz \\
+& = \frac{1}{2\pi i} \int_{0}^{2\pi} \frac{ f(z_0 + re^{it})}{re^{it}} ire^{it}dt \\
+& = \frac{1}{2\pi } \int_{0}^{2\pi} f(z_0 + re^{it})dt.
+\end{align*}
+
+We will prove that if $z_0\in \Omega$ has maximum modulus, then $f$ is constant, i.e.,  suppose $z_0 \in \Omega$ such that $|f(z) | \leq |f(z_0)|$ for all $z\in \Omega$. Now consider $A = \{ z\in \Omega \, | \, f(z) = f(z_0) \}$, note that this set is nonempty since $z_0 \in A$.
+
+Part I) *Prove that the set $A$  is open*. Let $w \in A$ and suppose $B_R(w) \subset \Omega$. Then for any $0 < r < R$ by the mean value property we have
+\[ |f(z_0)| = |f(w)| = \left|\frac{1}{2\pi\,i}\int_{0}^{2\pi} f(w + re^{it})dt \right| \leq  \frac{1}{2\pi } \int_{0}^{2\pi} \left|f(w + re^{it})\right| dt \leq |f(z_0)| \]
+Then all the inequalities can be replaced by equalities and in particular we have
+\[ |f(w + re^{it})| = |f(z_0)|,\]
+for all $0 < r < R$. this means that $B_r(w) \subset A$, and hence, $A$ is open.
+
+Part II) *Prove that $A$ is closed*. Recall that by topological arguments, that if $f:\Omega \to \mathbb{C}$ is continuous, then the inverse image of a closed set in $\mathbb{C}$ is a closed set in $\Omega$, and similar for real valued functions. Just note that if $r_0 = |f(z_0)|$ then
+\[ A = g^{-1}(\{r_0\}), \]
+where $g(z) = |f(z)|$, is the composition of $f$ with the complex norm. Since both are continuous, their composition is continuous and since $\{r_0\}\subset\mathbb{R}$ is closed then $A$ is closed.
+
+Part III) *Use connectedness*. $A = \Omega$. Again by topological arguments, since $\Omega$ is assumed to be connected, the only subsets that are both open and closed are the empty set and the whole set $\Omega$. Since $A \neq \emptyset$ then $A=\Omega$.
+#+end_proof
+
+
+
+To finish this section, without using the main assumptions, we will prove that 
+
+#+begin_thm
+*Cauchy-Goursat*. If $f$ is an holomorphic function in a domain $\Omega$ containing a rectangle $R = \{ z = z + iy \, | , a\leq x \leq b, c \leq y \leq d \}$, then $\int_{\partial R} f(z) dz = 0$, where $\partial R$ is the boundary of the rectangle $R$.
+#+end_thm
+
++ Notation for $I(R)$, and construction of sequence of rectangles $R \supset R_1 \supset R_2 \supset \cdots$.
++ Find the limit point $z_0 = x_0+ i y_0$ and such that $z_0 \in R_{n}$ for all $n$.
++ Use the assumption that $f'(z_0)$ exists.
++ Find and estimate for $|I(R_n)|$ depending on the diagonal $D_n$ and perimeter $L_n$ of $R_n$.
++ Use the estimate to show that the integral over $R$ is zero.
+
+If $f$ is analytic in a disc $B_r(z_0)$, then there is a holomorphic function $F$ in $B_r(z_0)$ such that $F'(z) = f(z)$.
+
+If $f$ is analytic in a simply connected domain $\Omega$, then there is a holomorphic function $F$ in $\Omega$ such that $F'(z) = f(z)$.
+
+
+
+* Laurent Series and Residue Theorem
+
+#+begin_thm
+*The strong principle of analytic continuation*. Let $\Omega$ be a domain and $f$ be holomorphic on $\Omega$. If there is a complex number $z_0\in\Omega$ such that
+\[ f^{(k)}(z_0) = 0, \mbox{for }\quad k = 0,1,2,\ldots \]
+then, $f(z) = 0$ for all $z\in \Omega$.
+#+end_thm
+#+begin_proof
+Consider the set 
+\[ A = \{ z \in \Omega \, | \, f^{(k)}(z) = 0, k = 0,1,2,\ldots \}. \]
+Then show that
+1) $A \neq \emptyset$.
+2) $A$ is open.
+3) $A$ is closed.
+4) Use that $\Omega$ is connected.
+#+end_proof
+
+#+begin_mydef
+Let $f:\Omega \to \mathbb{C}$ be a holomorphic, non-constant function, such that for $z_0\in \Omega$, we have $f(z_0)= 0$, then there exists a disc  $B_r(z_0)$ around $z_0$, and a natural number $n$ such that $f^{(n)}(z_0) \neq 0$. The complex number $z_0$ is called a *zero*  of $f$, and the smallest of such $n$'s is called the order of the zero, and moreover one can write \[ f(z) = (z-z_0)^n g(z), \] where $g$ is holomorphic and does not vanish in $B_r(z_0)$.
+#+end_mydef
+
+*Example*. If you consider the function $f(z) = 2z (e^z -1)$, then $z = 0$ is a zero of $f$. Note that \[ f'(z) = 2(e^z -1) + 2ze^z, \qquad f'(0) = 0, \] the second derivative is \[ f''(z) = 2e^z + 2e^z + 2ze^z = 4e^z + 2ze^z, \qquad f''(0) = 4 \neq 0, \] then the order of the zero is $2$.
+If you write the Taylor's series about zero you can see that
+\[ f(z) = 2z^2 \sum_{k=0}^{\infty} \frac{z^k}{(k+1)!}. \]
+
+
+#+begin_thm
+Let $f$ be a holomorphic function in the domain $\Omega$. Then, the set of zeros of $f$ is isolated: for every $w\in \Omega$ with $f(w) = 0$, there exists a small disc $B_{r}(w)$ such that $f(z) \neq 0$ for all $z\in B_r(w)\setminus \{w\}$.
+#+end_thm
+#+begin_proof
+Let $z_0\in \Omega$ be a zero of $f$ of  order $n$,  then there exists a disc $B_r(z_0)\subset \Omega$ such that for all $z\in B_r(z_0)$ 
+\[ f(z) = (z-z_0)^n g(z). \]
+Now notice that  $g(z) \neq 0$ for any $z \in B_r(z_0)$. On the other side, note that  if $z \in B_r(z_0)\setminus \{z_0\}$, we have that  $(z-z_0)\neq 0$. Then $f(z) \neq 0$ for all $B_r(z_0)\setminus\{z_0\}$. Hence, $z_0$ is an isolated zero of $f$.
+#+end_proof
+
+
+#+begin_prop
+If $f$ is holomorphic on a domain  $\Omega$, then the set of zeros $\{z \in \Omega : f(z) = 0\}$ has no accumulation point in $\Omega$ .
+#+end_prop
+
+#+begin_cor
+(Identity Principle) Let $f$  and $g$  be analytic on a domain $\Omega$ and consider $A\subset \Omega$.  If for all $z\in A$ we have $f(z)=g(z)$ and if $A$ contains a limit point $z_0\in A$ , then $f(z) = g(z)$ for all $z\in \Omega$.
+#+end_cor
+
+*Example* Show that there does not exist any analytic function $f$ such that $f\left(\frac{1}{n}\right) = \frac{1}{2^n}$.
+
+We may try to find a candidate to be such a function. Consider the following function:
+\[ g(z) = \frac{1}{2^{\frac{1}{z}}}. \]
+
+In the set 
+\[ A = \left\{ 1, \frac{1}{2}, \frac{1}{3}, \ldots \right\}, \]
+the two functions, $f$ and $g$ agree.
+
+Since $z_0 = 0$ is an accumulation point of $A$, by continuity we have on one hand
+\[ f(0) = \lim_{n\to \infty} f\left(\frac{1}{n}\right) = 0, \]
+
+and this should agree for $g$. Notice that if $z_n = \frac{1}{n}$ we have
+\[\lim_{n\to \infty}g(z_n) = 0.\]
+
+If $w_n = \frac{i}{n}$ then, 
+
+\[ g(w_n) = \frac{1}{2^{n/i}} = \frac{1}{e^{\ln{2^{n/i}}}} = \frac{1}{e^{\frac{n}{i}\ln{2}}}= \frac{1}{e^{-ni\ln{2}}} = e^{ni\ln{2}},\]
+
+since $|g(w_n)| = 1$ then it is impossible to have $\lim_{n\to w_n} g(w_n) \neq 0$.
+
+
+#+begin_mydef
+Let $\Omega_2\subset\Omega_1$ be two domains. Suppose that $f$ is analytic on $\Omega_2$. We say that $F$ is an analytic continuation of $f$ to $\Omega_1$, if $F$ is analytic on $\Omega_1$ and for all $z\in \Omega_2$ it holds $F(z) = f(z)$.
+#+end_mydef
+
+The main property of analytic continuation is that, when they exist, then they are unique.
+
+#+begin_thm
+Let $\Omega_2\subset\Omega_1$ be two domains and suppose that $f$ is analytic on $\Omega_2$. If $f$ has an analytic continuation to $\Omega_1$ then it is unique.
+#+end_thm
+
+#+begin_proof
+Let $F:\Omega_1 \to \mathbb{C}$ and $G:\Omega_1\to \mathbb{C}$ be two analytic continuations to $\Omega_1$ of $f$.
+
+Since $\Omega_2 \subset \Omega_1$ is open, we can find $z_0\in \Omega_1$ such that $z_0$ is a limit point of $\Omega_2$.
+
+Then $F$ and $G$ satisfy the hypothesis of the Identity Principle, hence $F=G$ on $\Omega_1$.
+#+end_proof
+
+*Example* The Riemann zeta function. Consider the function 
+\[ \zeta(s) = \sum_{n=1}^{\infty} \frac{1}{n^s} .\]
+1) Show that for $\alpha \in \mathbb{R}$, the series $\frac{1}{n^{\alpha}}$ converges when $\alpha >1$.
+2) Look at the M-test at the end of our written notes *[[https://platforma2.polsl.pl/rms/pluginfile.php/180132/mod_resource/content/1/Lecture_power_series.pdf][Here]]*.
+3) Apply the M-test and show that $\zeta(s)$ converges absolutely and uniformly on $\Omega = \{ s\in \mathbb{C}\,|\, \mbox{Re}(s) >1 \}$.
+
+Difficult question: Is there any analytic continuation to any other larger domain?
+
+Take a look at this video, *[[https://youtu.be/sD0NjbwqlYw][Visualizing the Riemann zeta function and analytic continuation]]*.
+
+
+#+begin_mydef
+A *singularity*  is a point $z_0\in \mathbb{C}$ at which the function $f$ fails to be analytic.
+An *isolated singularity* is a singularity $z_0\in \mathbb{C}$ of $f$, for which there exists a punctured disk $B_r(z_0)\setminus\{z_0\}$ in which $f$ is analytic.
+#+end_mydef
+
+
+#+begin_thm
+*Riemann's removable singularity theorem*. Let $f$ be holomorphic on a punctured disc $B_r(w) \setminus \{w\}$. If $f$ is bounded in $B_r(w)$, then $f$ can be extended to a holomorphic function $F$ on $B_r(w)$.
+#+end_thm
+#+begin_proof
+Consider the function
+\[ G(z) = \left\{ \begin{array}{ccc}
+(z-w)^2 f(z) & \mbox{for} & z \in B_r(w)\setminus\{w\} \\
+0 & \mbox{for} & z = w. \\
+\end{array} \right. \]
+Clearly $G$ is holomorphic in $B_r(w)\setminus\{w\}$. But also at $w$ we have
+\[ \lim_{\ z \to w} \frac{ G(z) - G(w)}{z-w} = \lim_{\ z \to w} \frac{(z-w)^2 f(z)}{z-w} = \lim_{\ z \to w} (z-w)f(z) = 0, \]
+We claim that the last limit is equals $0$ because, since $f$ is bounded in $B_r(w)$, there is $M>0$ such that $f(z) \leq M$ for all $z\in B_r(w)$. 
+Then $0 \leq |(z-w)f(z)| \leq (z-w)M$ shows our claim.
+
+Then $G$ is holomorphic in $B_r(w)$. Then since $G(w) = 0$ and $G'(w) = 0$ we have that its power series expansion is of the form $G(z) = a_2 (z-w)^2 + \cdots = (z-w)^2 F(z)$.
+Then $F$ is our desired function.
+#+end_proof
+
+
+*Remark* On the Cauchy's Theorem for Multiple Connected sets.
+
+
+Suppose that $f(z)$ is analytic on the two circles and the region in between the two circles,
+
+#+attr_html: :class svgfig :width 30%
+#+attr_latex: :width 70t
+[[./drawing_ring.svg]]
+
+If $\alpha_0$ is the outer circle and $\alpha_1$ is the inner circle (positively oriented) then
+\[ \int_{\alpha_0 - \alpha_1}f(z) = 0,\]
+or equivalently
+\[ \int_{\alpha_0}f(z) = \int_{\alpha_1}f(z) .\]
+
+One can generalise this result for domains like
+#+attr_html: :class svgfig :width 30%
+#+attr_latex: :width 70t
+[[./drawing_ring3.svg]]
+
+where $\alpha_0$ is the outer boundary and $\alpha_1, \alpha_2$ and $\alpha_3$ the inner boundaries then
+\[ \int_{\alpha_0 - \alpha_1 - \alpha_2 - \alpha_3}f(z) = 0,\]
+
+And in the case of $m$ -th different inner components, the identity
+\[ \int_{\alpha_0}f(z)dz = \sum_{k=1}^{m} \int_{\alpha_k}f(z)dz.\]
+
+The idea now is to deal with functions that are analytic in a ring, that may have a singularity inside the inner hole.
+
+#+begin_thm
+*Laurent's theorem*. If $f$ is holomorphic on the ring $0 \leq r < |z - z_0| < R$, then the function can be written as the Laurent's series
+\[ f(z) = \sum_{n = -\infty}^{\infty} a_n (z - z_0) ^n ,\]
+with
+\[ a_n = \frac{1}{2\pi i} \int_{|w - z_0| = \rho}\frac{f(w)}{(w - z_0)^{n+1}} dw, \qquad n = 0, \pm 1, \pm 2, \ldots, \quad r < \rho < R. \]
+#+end_thm
+#+begin_proof
+Take $\epsilon >0$ small enough such that $0 < \epsilon < \frac{R - r}{2}$, and consider the circles $\alpha_0$ given by $|z-z_0| = R - \epsilon$ and  $\alpha_1$ given by $|z-z_0| = r + \epsilon$.
+Then for any $w$ such that $r + \epsilon < |w - z_0 | < R-\epsilon$, we can find a small positive number $\delta >0$ such that $B_\delta(w)$ is completely contained between $\alpha_0$ and $\alpha_1$. The function 
+\[ g_w(\xi) = \frac{f(\xi)}{\xi - w}, \]
+is holomorphic in the region between $\alpha_0$ and $\alpha_1$ and outside $B_\delta(w)$. Then by the observation about the Cauchy's theorem and the non-simply connected domains
+ we can apply the Cauchy's theorem
+\[ 0 = \int_{\alpha_0  - \alpha_1- B_{\delta}(w)} g_w(\xi)d\xi = \int_{\alpha_0  - \alpha_1} \frac{f(\xi)}{\xi - w} d\xi - \int_{B_{\delta}(w)} g_w(\xi)d\xi = \int_{\alpha_0  - \alpha_1} \frac{f(\xi)}{\xi - w} d\xi - 2\pi i\,f(w) \] 
+
+\[ f(w) = \frac{1}{2\pi i} \int_{\alpha_0} \frac{f(\xi)}{\xi - w} d\xi - \frac{1}{2\pi i} \int_{\alpha_1} \frac{f(\xi)}{\xi - w} d\xi .\]
+
+For the first integral, proceed as in the proof of the power extension of holomorphic functions, then
+\[ \frac{1}{2\pi i} \int_{\alpha_0} \frac{f(\xi)}{\xi - w} d\xi = \sum_{k=0}^{\infty} a_k (w - z_0)^k, \]
+with 
+\[ a_k = \frac{1}{2\pi i } \int_{\alpha_0}\frac{f(\xi)}{(\xi - z_0)^{k+1}}, \quad k = 0,1,2,\ldots \]
+
+For the second integral we use the geometric series, since along $\alpha_1$ we have $|\xi - z_0| < |w - z_0|$, then
+
+\[ - \frac{1}{\xi - w} = - \frac{1}{\xi - z_0 + z_0 - w} =   \frac{1}{(w - z_0) - ( \xi - z_0 )} = \frac{1}{w - z_0} \sum_{k=0}^{\infty}\left( \frac{\xi - z_0}{w-z_0}\right)^k,\]
+
+Since the series is uniformly convergent then one can integrate term by term. 
+
+\[ - \frac{1}{2\pi i } \int_{\alpha_1}\frac{f(\xi)}{\xi - w}d\xi = \sum_{k=0}^{\infty} (w-z_0)^{-(k+1)} \frac{1}{2\pi i} \int_{\alpha_1} f(\xi) (\xi - z_0)^{k} d\xi = \sum_{k = -\infty}^{-1} a_k (w - z_0)^{k}, \]
+with the obvius definition of $a_{k}$ for this case, namely
+\[ a_{k} = \frac{1}{2\pi i } \int_{\alpha_1}\frac{f(\xi)}{(\xi - z_0)^{-(k-1)}}d\xi . \]
+#+end_proof
+
+In many problems, finding the Laurent series is a matter of applying an algebraic trick. Take in to consideration that if $|a| < 1$ we have the identities:
+
+\[ \sum_{k = 0}^{\infty} a^k = \frac{1}{1-a}, \]
+and
+\[ \sum_{k = 0}^{\infty} (-1)^ka^k = \frac{1}{1+a}. \]
+
+*Example 1*
+
+Find the Laurent Series for \[ f(z) = \frac{z+1}{z^3(z^2 + 1)}, \] on the region $0 < |z| < 1$.
+
+1) Note that the function has (isolated) singularities only around $z = 0, i, -i$. Hence it is analytic in the domain $0 < |z| < 1$.
+2) Then the series expansion around $z = 0$ is 
+\[ \frac{z+1}{z^3(z^2 + 1)} = (z+1)\frac{1}{z^3} \frac{1}{1 + z^2} = (z+1)\frac{1}{z^3} \sum_{k=0}^{\infty}(-1)^kz^{2k} =  \sum_{k=0}^{\infty}(-1)^k\left(z^{2k-3} + z^{2(k-1)}\right) = \sum_{k=0}^{\infty}(-1)^k\left(z^{2(k-1) -1} + z^{2(k-1)}\right) \]
+
+Re-arranging indices 
+
+\[ f(z) = \sum_{k=-1}^{\infty}(-1)^k\left(z^{2k -1} + z^{2k}\right) \]
+
+Or explicitly
+\[f(z) =  z^{-3} + z^{-2} - z^{-1} - 1 + z^{1} + z^{2} - \cdots = \frac{1}{z^3} + \frac{1}{z^2} - \frac{1}{z} - 1 + z + z^2 - z^3 - \cdots \]
+
+
+*Example 2*
+
+Consider the function $f(z) = (z^2 - 3z + 2)^{-1}$. Find the Laurent series in the domains:
+1. $1 <|z| < 2$.
+2. $|z| > 2$
+3. $0 < | z-1 | < 1$.
+
+First by factorisation we have
+\[ f(z) = \frac{1}{z^2 - 3z + 2} = \frac{1}{(z-2)(z-1)}, \] 
+hence $z = 1,2$ are isolated singularities.
+
+Solution of (1). Note that for $1 < |z| <2$ implies that $|\frac{1}{z}| <1$ and $|\frac{z}{2}| <1$. Then the Laurent series is
+\[ f(z) = -\frac{1}{2}\sum_{k= -\infty}^{-1} z^{k}   - \frac{1}{2}\sum_{k=0}^{\infty}\left(\frac{z}{2}\right)^k.\]
+
+Solution of (2). For $|z|> 2$ the Laurent series is
+\[ f(z) = \sum_{k=-\infty}^{-1} \left( \frac{1}{2^{k+1}} -1 \right)z^{k}. \]
+
+Solution of  (3). Using partial fractions we put
+\[ \frac{1}{(z-2)(z-1)} = \frac{A}{z-2} + \frac{B}{z-1} =  \frac{1}{z-2} - \frac{1}{z-1} = -  \frac{1}{2 - z} - \frac{1}{z-1} = -  \frac{1}{1 - (z - 1)} - \frac{1}{z-1} ,\]
+
+and since we want to restrict to the domain $0 < |z - 1| < 1$ then we have
+\[ f(z) = - \frac{1}{z-1} - \sum_{k=0}^{\infty} (z-1)^k = - \sum_{k=-1}^{\infty} (z-1)^k \]
+
+#+begin_mydef
+If $f$ is holomorphic on $0<|z - z_0| < R$ has a Laurent's expansion around $z_0$, then the coefficient $a_{-1}$ is called *the residue* of $f$.
+#+end_mydef
+
+
+#+begin_thm
+*Residue theorem*. Sea $f$ holomorphic on $\Omega$ except in a finite number of singularities. Let $\alpha$ be a piecewise continuously differentiable closed curve with a finite number of singularities of $f$, $z_1, z_2 \ldots, z_k$
+on the interior of $\alpha$, and no other singularity on $\alpha$. Then
+\[ \int_{\alpha}f(z) dz = 2\pi i \sum_{n=1}^k \mbox{Res}_{z_n}f(z). \]
+#+end_thm
+
+
+Isolated singularities can be classified as follows
+
+1) *Removable*
+2) *Poles*
+3) *Essential*
+
+
+Observation:
+
+The residue is zero for removable singularities. 
+
+If $z_0$ is a pole of order $k$, then
+\[ (z - z_0)^kf(z) = \sum_{j=-k}^{\infty} a_j (z - z_0)^{j+k}, \]
+
+then 
+\[ \lim_{z\to z} \frac{d^{k-1}}{dz^{k-1}} \left[ (z-z_0)^kf(z) \right] = (k-1)! \, a_{-1}. \]
+
+*Examples*
+
+Some important series are
+
+\[ e^z = \sum_{k=0}^{\infty} \frac{z^k}{k!}. \]
+
+\[ \sin(z) = \sum_{k=1}^{\infty} (-1)^{k-1}\frac{z^{2k-1}}{(2k-1)!} = z - \frac{z^3}{3!} + \frac{z^5}{5!} - \ldots .\]
+
+\[ \cos(z) = \sum_{k=0}^{\infty} (-1)^{k}\frac{z^{2k}}{(2k)!} = 1 - \frac{z^2}{2!} + \frac{z^4}{4!} - \ldots.\]
+
+Notice for $0 < |z| < \infty$ we have
+
+\[ \frac{\cos(z)}{z^2} = \sum_{k=0}^{\infty} (-1)^{k}\frac{z^{2k-2}}{(2k)!} =  \sum_{k=-1}^{\infty} (-1)^{k+1}\frac{z^{2k}}{(2k+2)!}\]
+
+And similarly for $0 < |z|$,
+\[ e^{1/z^2} = \sum_{k=0}^{\infty} \frac{z^{-2k}}{k!} =  \sum_{k=-\infty}^{0} \frac{z^{2k}}{(-k)!}\]
+
+Note that 
+\[ \frac{\sin(z)}{z} = 1 - \frac{z^2}{3!} + \frac{z^4}{5!} - \ldots ,\]
+which shows that $z = 0$ is a removable singularity.
+
+
+
+Find the residue of 
+\[ f(z) = z^2 \sin\left(\frac{1}{z}\right). \]
+
+Note
+\begin{align*}
+f(z) & = z^2 \sin\left(\frac{1}{z}\right) \\
+& = z^2 \left( z^{-1} - \frac{z^{-3}}{3!} + \frac{z^{-5}}{5!} - \ldots \right)
+& =  z - \frac{z^{-1}}{3!} + \frac{z^{-3  }}{5!} - \ldots,
+\end{align*}
+then
+\[ \mbox{Res}_{0}f(z) = \frac{1}{3!} = \frac{1}{6}.\]
+
+
+Find the residue of 
+
+\[ f(z) = \frac{e^z}{z^3 - z^2}, \]
+
+Since $z^3 - z^2 = z^2 (z - 1)$, then $f$ has a pole of order 2 at $z=0$ and a simple pole at $z = 1$,
+Then
+
+\[ \mbox{Res}_1 f(z) = \lim_{z\to 1} (z-1)f(z) = e,\]
+and 
+\[ \mbox{Res}_2 f(z) = \lim_{z\to 0} \frac{d}{dz} [z^2 f(z)] = \lim_{z\to 0} \frac{e^{z}(z-1) - e^z}{(z-1)^2} = -2.\]
+
+#+begin_thm
+Let $F:\mathbb{R}^2 \to \mathbb{R}$ be a continuous rational function, i.e., $F$ is a function which can be written as the ratio of two polynomial functions, where the polynomial in the denominator is not equal to zero. Then the integral
+\[
+\int_{0}^{2\pi} F(\cos(\theta), \sin(\theta)) d\theta = \int_{|z| = 1} F\left[ \frac{1}{2}\left( z +  \frac{1}{z}\right) , \frac{1}{2i} \left( z - \frac{1}{z}\right) \right] \frac{dz}{iz}
+\]
+#+end_thm
+#+begin_proof
+For $0\leq \theta \leq 2\pi$ consider the change of variable $z = e^{i\theta}$.
+#+end_proof
+
+
+*Example*
+
+Show that
+\[ 
+\int_{0}^{\pi} \frac{d\theta}{a + b\cos(\theta)} = \frac{\pi}{\sqrt{a^2 - b^2}}, \quad a > b > 0.
+\]
+
+
+Show that
+\[ 
+\int_{0}^{\pi} \frac{d\theta}{(a + b\cos(\theta))^2} = \frac{a\pi}{\sqrt{(a^2 - b^2)^3}}, \quad a > b > 0.
+\]
+
+
