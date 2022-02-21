@@ -95,8 +95,10 @@ p {
 
 .thm  {
     	color:  #404040;
-    border: 1px solid brown;
-    box-shadow: 3px 3px 3px brown;
+    /* border: 1px solid brown; */
+    /* box-shadow: 3px 3px 3px brown; */
+    border: 1px solid darkblue;
+    box-shadow: 3px 3px 3px darkblue;
     padding: 8pt;
     overflow: auto;
     margin: 1.2em;
