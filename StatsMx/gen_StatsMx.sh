@@ -8,10 +8,10 @@
 
 
 
-FILE1=$"xo_ENSU_TS.csv"
-FILE2=$"xo_HOM_TS.csv"
+# FILE1=$"xo_ENSU_TS.csv"
+# FILE2=$"xo_HOM_TS.csv"
 
-FILENAME=$"xochitl.html"
+# FILENAME=$"xochitl.html"
 
 #rm "${FILENAME}"
 
@@ -27,19 +27,18 @@ FILENAME=$"xochitl.html"
 # TITLE="${TITLE:=Título: $TITLE2}"
 
 
-export FILE1
-export FILE2
+# export FILE1
+# export FILE2
 
 # ## ------ R code for Plot01: bar plot
 
 Rscript -e '
-
 df  <- read.csv("xo_ENSU_TS.csv")
 head(df)
 
 df[, c( "Inseguro", "Inseguro_H", "Inseguro_M")] <- round(df[, c( "Inseguro", "Inseguro_H", "Inseguro_M")],2)
 
-#library(tidyquant)
+# library(tidyquant)
 library(plotly)
 
 # tickers = c("Nacional", "Hombres", "Mujeres")
@@ -77,10 +76,8 @@ fig <- fig %>%
 
                       zerolinewidth = 2,
 
-                      gridcolor = "ffff"),
-
-         plot_bgcolor="#e5ecf6")
-
+                      gridcolor = "ffff"), plot_bgcolor="#E5E5E5"
+) 
 
 
 fig
@@ -112,7 +109,7 @@ fig <- plot_ly(
 
   fill = list(color = "rgb(218, 218, 218)"),
 
-  font = list(family = "Arial", size = 14, color = "grey20")  ),
+  font = list(family = "Mono", size = 14, color = "grey20")  ),
 
   cells = list(
 
@@ -124,7 +121,7 @@ fig <- plot_ly(
 
     fill = list(color = c("#BFD5E3", "#E5E5E5")),
 
-    font = list(family = "Arial", size = 12, color = c("#404040"))
+    font = list(family = "Mono", size = 12, color = c("#404040"))
 
   ))
 
@@ -175,9 +172,7 @@ fig <- fig %>%
 
                       zerolinewidth = 2,
 
-                      gridcolor = "ffff"),
-
-         plot_bgcolor="#e5ecf6")
+                      gridcolor = "ffff"), plot_bgcolor = "#E5E5E5")
 
 
 
@@ -209,7 +204,7 @@ fig <- plot_ly(
 
   fill = list(color = "rgb(218, 218, 218)"),
 
-  font = list(family = "Arial", size = 14, color = "grey20")
+  font = list(family = "Mono", size = 14, color = "grey20")
 
   ),
 
@@ -223,7 +218,7 @@ fig <- plot_ly(
 
     fill = list(color = c("#BFD5E3", "#E5E5E5")),
 
-    font = list(family = "Arial", size = 12, color = c("#404040"))
+    font = list(family = "Mono", size = 12, color = c("#404040"))
 
   ))
 
