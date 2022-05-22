@@ -247,7 +247,7 @@ div.outline-text-2 p {
 /*defaults*/
 
 
-.title  { text-align: left; } /* I change this from centre to left */
+.title  { text-align: left; } /* I changed this from centre to left */
 .todo   { font-family: monospace; color: red; }
 .done   { color: green; }
 .tag    { background-color: #eee; font-family: monospace;
