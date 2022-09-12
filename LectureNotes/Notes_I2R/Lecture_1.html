@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-12 Mon 13:15 -->
+<!-- 2022-09-12 Mon 13:25 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lecture 1</title>
@@ -193,6 +193,7 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
+<style type="text/css"> tr:nth-child(odd) {background-color: #e2e2e2;}  tr:first-child {font-weight: bold}  tr:hover {background-color: #d0c6e5;}</style>
 <style>
 /* Daniel Ballesteros-Chavez */
 /* DBCh CSS for blog project */
@@ -527,20 +528,20 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgdea0188">1. Introduction to R</a></li>
-<li><a href="#org0420753">2. The Working Directory</a></li>
-<li><a href="#org58476a1">3. Installing packages</a></li>
-<li><a href="#orge28fa15">4. Simple manipulations; numbers and vectors</a></li>
-<li><a href="#org207cc84">5. Pre-loaded data</a></li>
-<li><a href="#org1fd9543">6. Writing a data frame</a></li>
-<li><a href="#orgc576ccc">7. Reading a data frame</a></li>
-<li><a href="#org3caa8ce">8. Operations with data frames</a></li>
+<li><a href="#org9286a80">1. Introduction to R</a></li>
+<li><a href="#org8381ac9">2. The Working Directory</a></li>
+<li><a href="#orge9b9c1e">3. Installing packages</a></li>
+<li><a href="#orgf604326">4. Simple manipulations; numbers and vectors</a></li>
+<li><a href="#orgeebf3e1">5. Pre-loaded data</a></li>
+<li><a href="#org0bb6108">6. Writing a data frame</a></li>
+<li><a href="#org06e8664">7. Reading a data frame</a></li>
+<li><a href="#org40eba22">8. Operations with data frames</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgdea0188" class="outline-2">
-<h2 id="orgdea0188"><span class="section-number-2">1</span> Introduction to R</h2>
+<div id="outline-container-org9286a80" class="outline-2">
+<h2 id="org9286a80"><span class="section-number-2">1</span> Introduction to R</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>What is R?</li>
@@ -607,8 +608,8 @@ advice: use whatever you find more comfortable.
 </div>
 
 
-<div id="outline-container-org0420753" class="outline-2">
-<h2 id="org0420753"><span class="section-number-2">2</span> The Working Directory</h2>
+<div id="outline-container-org8381ac9" class="outline-2">
+<h2 id="org8381ac9"><span class="section-number-2">2</span> The Working Directory</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Get my Working Directory (a.k.a. where am I?)
@@ -642,8 +643,8 @@ setwd("C:\\home\\ennaniux\\Documents\\R_Modelling")
 </div>
 
 
-<div id="outline-container-org58476a1" class="outline-2">
-<h2 id="org58476a1"><span class="section-number-2">3</span> Installing packages</h2>
+<div id="outline-container-orge9b9c1e" class="outline-2">
+<h2 id="orge9b9c1e"><span class="section-number-2">3</span> Installing packages</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The Packages are sets of tools that can be downloaded from different
@@ -680,8 +681,8 @@ can select one close to your location.
 
 
 
-<div id="outline-container-orge28fa15" class="outline-2">
-<h2 id="orge28fa15"><span class="section-number-2">4</span> Simple manipulations; numbers and vectors</h2>
+<div id="outline-container-orgf604326" class="outline-2">
+<h2 id="orgf604326"><span class="section-number-2">4</span> Simple manipulations; numbers and vectors</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 The simplest data structure R operates on is the <b>numeric vector</b>, which
@@ -1046,8 +1047,8 @@ is.na(x)
 
 
 
-<div id="outline-container-org207cc84" class="outline-2">
-<h2 id="org207cc84"><span class="section-number-2">5</span> Pre-loaded data</h2>
+<div id="outline-container-orgeebf3e1" class="outline-2">
+<h2 id="orgeebf3e1"><span class="section-number-2">5</span> Pre-loaded data</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 In R there are several pre-loaded data
@@ -1222,8 +1223,8 @@ We can also obtain a summary of the data set
 
 
 
-<div id="outline-container-org1fd9543" class="outline-2">
-<h2 id="org1fd9543"><span class="section-number-2">6</span> Writing a data frame</h2>
+<div id="outline-container-org0bb6108" class="outline-2">
+<h2 id="org0bb6108"><span class="section-number-2">6</span> Writing a data frame</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Write a data frame by specifying the columns:
@@ -1303,8 +1304,8 @@ What are the variable names of the data frame?
 
 
 
-<div id="outline-container-orgc576ccc" class="outline-2">
-<h2 id="orgc576ccc"><span class="section-number-2">7</span> Reading a data frame</h2>
+<div id="outline-container-org06e8664" class="outline-2">
+<h2 id="org06e8664"><span class="section-number-2">7</span> Reading a data frame</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 From a .csv file
@@ -1341,8 +1342,8 @@ df2 &lt;- read.table(file = "clipboard", sep = "\t", header=TRUE)
 </div>
 
 
-<div id="outline-container-org3caa8ce" class="outline-2">
-<h2 id="org3caa8ce"><span class="section-number-2">8</span> Operations with data frames</h2>
+<div id="outline-container-org40eba22" class="outline-2">
+<h2 id="org40eba22"><span class="section-number-2">8</span> Operations with data frames</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 Select a column/field/variable from a data frame
@@ -1437,7 +1438,7 @@ table(df$Species)
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Daniel Ballesteros-Chávez</p>
-<p class="date">Created: 2022-09-12 Mon 13:15</p>
+<p class="date">Created: 2022-09-12 Mon 13:25</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
