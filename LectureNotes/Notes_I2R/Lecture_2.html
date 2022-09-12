@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-12 Mon 12:36 -->
+<!-- 2022-09-12 Mon 13:33 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lecture 2</title>
@@ -193,6 +193,287 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
+<style type="text/css"> tr:nth-child(odd) {background-color: #e2e2e2;}  tr:first-child {font-weight: bold}  tr:hover {background-color: #d0c6e5;}</style>
+<style>
+/* Daniel Ballesteros-Chavez */
+/* DBCh CSS for blog project */
+/* color schemes: #333745; #E63462 ; #C7EFCF ; #EEF5DB ; #909396; #262626;*/
+/* Modified version with responsive TOC
+/* usage: #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./style01.css"/> */
+body {
+font-size: 18px;
+color: #404040;
+/* background-color: #333745; */
+font-family: Helvetica;
+line-height: 1.3;
+}
+#content {
+max-width: 50em;
+margin-left: auto;
+margin-right: auto;
+}
+p {
+text-align: justify;
+}
+/* this part is about the table of contents TOC */
+#table-of-contents a:link,
+#table-of-contents a:visited {
+color: #404040;
+background: transparent;
+}
+#table-of-contents a:hover {
+background-color: #ccc;
+color: #404040;
+}
+#table-of-contents {
+line-height: 1.2;
+}
+#table-of-contents h2 {
+background-color:  #ccc ;
+padding-left: 0.3em;
+color: #404040;
+border-bottom: 0;
+}
+#table-of-contents ul {
+list-style: none;
+padding-left: 0.3em;
+font-weight: normal;
+}
+#table-of-contents div>ul>li {
+margin-top: 1em;
+font-weight: bold;
+}
+#table-of-contents .tag {
+display: none;
+}
+#table-of-contents .todo,
+#table-of-contents .done {
+font-size: 80%;
+}
+#table-of-contents ol>li {
+margin-top: 1em;
+}
+@media screen {
+#table-of-contents {
+position: fixed;
+top: 0;
+left: 0;
+padding: 1em 0 1em 1em;
+width: 290px;
+height: 100vh;
+overlow-x: hidden;
+overlow-y: auto;
+overflow: auto;
+}
+#table-of-contents h2 {
+margin-top: 0;
+font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+#table-of-contents code {
+font-size: 12px;
+}
+}
+@media screen and (max-width: 95em) {
+#table-of-contents {
+display: none;
+}
+h1.title {
+margin-left: 0%;
+}
+div#content {
+margin-left: 5%;
+max-width: 90%;
+}
+}
+/*Html Boxes around THMs and Propositions */
+.abstract  {
+color:  #404040;
+border: 1px solid #404040;
+box-shadow: 3px 3px 3px ;
+padding: 8pt;
+overflow: auto;
+margin: 1.2em;
+position: relative;
+overflow: auto;
+padding-top: 1.2em;
+}
+.abstract:before {
+display: inline;
+position: absolute;
+background-color: white;
+top: -5px;
+left: 10px;
+padding: 3px;
+border: 1px solid black;
+content: 'Abstract';
+}
+.mydef  {
+color:  #404040;
+border: 1px solid #404040;
+background-color: #FFD580;
+/* box-shadow: 3px 3px 3px orange; */
+padding: 8pt;
+overflow: auto;
+margin: 1.2em;
+position: relative;
+overflow: auto;
+padding-top: 1.2em;
+}
+.mydef:before {
+display: inline;
+position: absolute;
+/* background-color: white; */
+background-color: orange;
+top: -5px;
+left: 10px;
+padding: 3px;
+border: 1px solid black;
+content: 'Definition';
+}
+.prop  {
+color:  #404040;
+border: 1px solid ;
+background-color: #F1FFC2;
+/* box-shadow: 3px 3px 3px green; */
+padding: 8pt;
+overflow: auto;
+margin: 1.2em;
+position: relative;
+overflow: auto;
+padding-top: 1.2em;
+}
+.prop:before {
+color:  white;
+display: inline;
+position: absolute;
+background-color: green;
+top: -5px;
+left: 10px;
+padding: 3px;
+border: 1px solid black;
+content: 'Proposition';
+}
+.thm  {
+color:  #404040;
+border: 1px solid ;
+background-color: lightcyan;
+/* box-shadow: 3px 3px 3px brown; */
+padding: 8pt;
+overflow: auto;
+margin: 1.2em;
+position: relative;
+overflow: auto;
+padding-top: 1.2em;
+}
+.thm:before {
+color:  white;
+display: inline;
+position: absolute;
+background-color: darkblue;
+top: -5px;
+left: 10px;
+padding: 3px;
+border: 1px solid black;
+content: 'Theorem';
+}
+.cor  {
+color:  #404040;
+border: 1px solid blue;
+box-shadow: 3px 3px 3px blue;
+padding: 8pt;
+overflow: auto;
+margin: 1.2em;
+position: relative;
+overflow: auto;
+padding-top: 1.2em;
+}
+.cor:before {
+display: inline;
+position: absolute;
+background-color: white;
+top: -5px;
+left: 10px;
+padding: 3px;
+border: 1px solid black;
+content: 'Corollary';
+}
+/*defaults form org-mode export */
+.title  { text-align: center; }
+.todo   { font-family: monospace; color: red; }
+.done   { color: green; }
+.tag    { background-color: #eee; font-family: monospace;
+padding: 2px; font-size: 80%; font-weight: normal; }
+.timestamp { color: #bebebe; }
+.timestamp-kwd { color: #5f9ea0; }
+.right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+.left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+.center { margin-left: auto; margin-right: auto; text-align: center; }
+.underline { text-decoration: underline; }
+#postamble p, #preamble p { font-size: 90%; margin: .2em; text-align: center;}
+p.verse { margin-left: 3%; }
+pre {
+border: 1px solid #ccc;
+box-shadow: 3px 3px 3px #eee;
+padding: 8pt;
+font-family: monospace;
+overflow: auto;
+margin: 1.2em;
+}
+pre.src {
+position: relative;
+overflow: auto;
+padding-top: 1.2em;
+}
+pre.src:before {
+display: none;
+position: absolute;
+background-color: white;
+top: -10px;
+right: 10px;
+padding: 3px;
+border: 1px solid black;
+}
+pre.src:hover:before { display: inline;}
+pre.src-sh:before    { content: 'sh'; }
+pre.src-bash:before  { content: 'sh'; }
+pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+pre.src-R:before     { content: 'R'; }
+pre.src-perl:before  { content: 'Perl'; }
+pre.src-java:before  { content: 'Java'; }
+pre.src-sql:before   { content: 'SQL'; }
+table { border-collapse:collapse; }
+caption.t-above { caption-side: top; }
+caption.t-bottom { caption-side: bottom; }
+td, th { vertical-align:top;  }
+th.right  { text-align: center;  }
+th.left   { text-align: center;   }
+th.center { text-align: center; }
+td.right  { text-align: right;  }
+td.left   { text-align: left;   }
+td.center { text-align: center; }
+dt { font-weight: bold; }
+.footpara:nth-child(2) { display: inline; }
+.footpara { display: block; }
+.footdef  { margin-bottom: 1em; }
+.figure { padding: 1em; }
+.figure p { text-align: center; }
+.inlinetask {
+padding: 10px;
+border: 2px solid gray;
+margin: 10px;
+background: #ffffcc;
+}
+#org-div-home-and-up
+{ text-align: right; font-size: 70%; white-space: nowrap; }
+textarea { overflow-x: auto; }
+.linenr { font-size: smaller }
+.code-highlighted { background-color: #ffff00; }
+.org-info-js_info-navigation { border-style: none; }
+#org-info-js_console-label
+{ font-size: 10px; font-weight: bold; white-space: nowrap; }
+.org-info-js_search-highlight
+{ background-color: #ffff00; color: #000000; font-weight: bold; }
+</style>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -269,36 +550,37 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org97d504f">1. Introduction.</a></li>
-<li><a href="#org67dbc25">2. Arithmetic Mean (AM)</a></li>
-<li><a href="#org6fcc842">3. Geometric Mean (GM)</a></li>
-<li><a href="#org349d97a">4. Harmonic mean (HM)</a></li>
-<li><a href="#org6fe69a0">5. Weighted mean (WM)</a>
+<li><a href="#orgecb416a">1. Introduction.</a></li>
+<li><a href="#orge60acfe">2. Arithmetic Mean (AM)</a></li>
+<li><a href="#orge5f9d39">3. Geometric Mean (GM)</a></li>
+<li><a href="#orged4b8d5">4. Harmonic mean (HM)</a></li>
+<li><a href="#org2db0e74">5. Weighted mean (WM)</a>
 <ul>
-<li><a href="#org3fbaa9d">5.1. Geometric Interpretation</a></li>
+<li><a href="#orgd25223f">5.1. Geometric Interpretation</a></li>
 </ul>
 </li>
-<li><a href="#org370ee3b">6. Mode</a></li>
-<li><a href="#orgc7da745">7. Median</a></li>
-<li><a href="#orgdcd8cd4">8. Minimum and maximum</a></li>
-<li><a href="#org072c40f">9. Quartiles</a></li>
-<li><a href="#orgd2499a3">10. Variance</a></li>
-<li><a href="#orgd0f4595">11. Probability space</a></li>
-<li><a href="#org85157d8">12. Random Variables</a></li>
-<li><a href="#org3cf9b98">13. Cumulative distribution function</a></li>
-<li><a href="#orgd3dfe7f">14. Probability density function</a></li>
-<li><a href="#orgdb8c194">15. Probabilities</a></li>
-<li><a href="#orga06ced7">16. Mean and variance revisited.</a></li>
-<li><a href="#orgb18dd4d">17. The normal distribution</a></li>
-<li><a href="#orgf4fc962">18. The Bernoulli distribution</a></li>
-<li><a href="#org6603aaa">19. The binomial distribution</a></li>
+<li><a href="#orgea77535">6. Mode</a></li>
+<li><a href="#orgdacff5f">7. Median</a></li>
+<li><a href="#org8d4b064">8. Minimum and maximum</a></li>
+<li><a href="#orgd221171">9. Quartiles</a></li>
+<li><a href="#org8d08c8c">10. Variance</a></li>
+<li><a href="#orgcce9ddd">11. Probability space</a></li>
+<li><a href="#org9416509">12. Random Variables</a></li>
+<li><a href="#orgdff4015">13. Cumulative distribution function</a></li>
+<li><a href="#orgc19a3ef">14. Probability density function</a></li>
+<li><a href="#org73bf492">15. Probabilities</a></li>
+<li><a href="#org8c4f5c2">16. Mean and variance revisited.</a></li>
+<li><a href="#org9bb257d">17. The normal distribution</a></li>
+<li><a href="#org7192e27">18. The Bernoulli distribution</a></li>
+<li><a href="#org150d5e1">19. The binomial distribution</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-org97d504f" class="outline-2">
-<h2 id="org97d504f"><span class="section-number-2">1</span> Introduction.</h2>
+
+<div id="outline-container-orgecb416a" class="outline-2">
+<h2 id="orgecb416a"><span class="section-number-2">1</span> Introduction.</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 In this lecture we will recall some basic concepts from probability and statistics. These can be grouped as
@@ -312,8 +594,8 @@ In this lecture we will recall some basic concepts from probability and statisti
 </div>
 
 
-<div id="outline-container-org67dbc25" class="outline-2">
-<h2 id="org67dbc25"><span class="section-number-2">2</span> Arithmetic Mean (AM)</h2>
+<div id="outline-container-orge60acfe" class="outline-2">
+<h2 id="orge60acfe"><span class="section-number-2">2</span> Arithmetic Mean (AM)</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 It is also known as (a.k.a) average, or mean.
@@ -329,8 +611,8 @@ Given a set of real values, usually representing a set of observations,  (x<sub>
 </div>
 </div>
 
-<div id="outline-container-org6fcc842" class="outline-2">
-<h2 id="org6fcc842"><span class="section-number-2">3</span> Geometric Mean (GM)</h2>
+<div id="outline-container-orge5f9d39" class="outline-2">
+<h2 id="orge5f9d39"><span class="section-number-2">3</span> Geometric Mean (GM)</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Given a set of real values, usually representing a set of observations,  (x<sub>1</sub>, x<sub>2</sub>, &#x2026; ,x<sub>n</sub>) , the <i>geometric mean</i> is defined as
@@ -343,8 +625,8 @@ Given a set of real values, usually representing a set of observations,  (x<sub>
 </div>
 
 
-<div id="outline-container-org349d97a" class="outline-2">
-<h2 id="org349d97a"><span class="section-number-2">4</span> Harmonic mean (HM)</h2>
+<div id="outline-container-orged4b8d5" class="outline-2">
+<h2 id="orged4b8d5"><span class="section-number-2">4</span> Harmonic mean (HM)</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Given a set of real values, usually representing a set of observations,  (x<sub>1</sub>, x<sub>2</sub>, &#x2026; ,x<sub>n</sub>) , the <i>harmonic mean</i> is defined as
@@ -357,8 +639,8 @@ Given a set of real values, usually representing a set of observations,  (x<sub>
 </div>
 
 
-<div id="outline-container-org6fe69a0" class="outline-2">
-<h2 id="org6fe69a0"><span class="section-number-2">5</span> Weighted mean (WM)</h2>
+<div id="outline-container-org2db0e74" class="outline-2">
+<h2 id="org2db0e74"><span class="section-number-2">5</span> Weighted mean (WM)</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Given a set of real values, usually representing a set of observations,  (x<sub>1</sub>, x<sub>2</sub>, &#x2026; ,x<sub>n</sub>) with assosiated weigths (w<sub>1</sub>, w<sub>2</sub>, &#x2026; ,w<sub>n</sub>), the <i>weighted mean</i> is defined as
@@ -370,8 +652,8 @@ Given a set of real values, usually representing a set of observations,  (x<sub>
 </div>
 
 
-<div id="outline-container-org3fbaa9d" class="outline-3">
-<h3 id="org3fbaa9d"><span class="section-number-3">5.1</span> Geometric Interpretation</h3>
+<div id="outline-container-orgd25223f" class="outline-3">
+<h3 id="orgd25223f"><span class="section-number-3">5.1</span> Geometric Interpretation</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 A well known inequality concerning arithmetic, geometric, and harmonic means for any set of positive numbers is
@@ -391,8 +673,8 @@ Geometric proof without words that max (a,b) &gt; root mean square (RMS) or qu
 
 
 
-<div id="outline-container-org370ee3b" class="outline-2">
-<h2 id="org370ee3b"><span class="section-number-2">6</span> Mode</h2>
+<div id="outline-container-orgea77535" class="outline-2">
+<h2 id="orgea77535"><span class="section-number-2">6</span> Mode</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 The mode is the most frequently occurring value a in data set.
@@ -405,8 +687,8 @@ It is possible to have more than one modal value.
 </div>
 
 
-<div id="outline-container-orgc7da745" class="outline-2">
-<h2 id="orgc7da745"><span class="section-number-2">7</span> Median</h2>
+<div id="outline-container-orgdacff5f" class="outline-2">
+<h2 id="orgdacff5f"><span class="section-number-2">7</span> Median</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Middle value separating the greater and lesser halves of a data set 
@@ -432,8 +714,8 @@ On the other hand if the data set is: 5, 11, 1, 3, 15, 20, then
 </div>
 </div>
 
-<div id="outline-container-orgdcd8cd4" class="outline-2">
-<h2 id="orgdcd8cd4"><span class="section-number-2">8</span> Minimum and maximum</h2>
+<div id="outline-container-org8d4b064" class="outline-2">
+<h2 id="org8d4b064"><span class="section-number-2">8</span> Minimum and maximum</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 The minumum and maximum value in a set of observed values and its comparison, is a first approach for the analysis of the dispersion of the data.
@@ -447,8 +729,8 @@ Range = max - min.
 </div>
 
 
-<div id="outline-container-org072c40f" class="outline-2">
-<h2 id="org072c40f"><span class="section-number-2">9</span> Quartiles</h2>
+<div id="outline-container-orgd221171" class="outline-2">
+<h2 id="orgd221171"><span class="section-number-2">9</span> Quartiles</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 The quartiles are cut points which divides the number of data points into four parts, or quarters, of more-or-less equal size.
@@ -485,8 +767,8 @@ Fourth: In each half compute the median and we will have: Q1 = 68 and Q3=83
 </div>
 </div>
 
-<div id="outline-container-orgd2499a3" class="outline-2">
-<h2 id="orgd2499a3"><span class="section-number-2">10</span> Variance</h2>
+<div id="outline-container-org8d08c8c" class="outline-2">
+<h2 id="org8d08c8c"><span class="section-number-2">10</span> Variance</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 Given a set of real values (x<sub>1</sub>, x<sub>2</sub>, &#x2026; ,x<sub>n</sub>), the "population" <i>variance</i> is defined as 
@@ -508,8 +790,8 @@ s_X^{2}={\frac{1}{n-1}}\sum_{i=1}^{n}\left(x_{i}-{\overline{x}}\right)^{2}.
 </div>
 
 
-<div id="outline-container-orgd0f4595" class="outline-2">
-<h2 id="orgd0f4595"><span class="section-number-2">11</span> Probability space</h2>
+<div id="outline-container-orgcce9ddd" class="outline-2">
+<h2 id="orgcce9ddd"><span class="section-number-2">11</span> Probability space</h2>
 <div class="outline-text-2" id="text-11">
 <p>
 A probability space is a special case of a measurable space. This concepts are beyond the scope of this course, but it is worth trying to understand the definition.
@@ -536,8 +818,8 @@ Then probability space is a triple \((\Omega, F, P)\) consisting of:
 </div>
 </div>
 
-<div id="outline-container-org85157d8" class="outline-2">
-<h2 id="org85157d8"><span class="section-number-2">12</span> Random Variables</h2>
+<div id="outline-container-org9416509" class="outline-2">
+<h2 id="org9416509"><span class="section-number-2">12</span> Random Variables</h2>
 <div class="outline-text-2" id="text-12">
 <p>
 A random variable \(X\) is a variable whose value is a numerical outcome of a random event.
@@ -581,8 +863,8 @@ Continuous random variables:
 </div>
 </div>
 
-<div id="outline-container-org3cf9b98" class="outline-2">
-<h2 id="org3cf9b98"><span class="section-number-2">13</span> Cumulative distribution function</h2>
+<div id="outline-container-orgdff4015" class="outline-2">
+<h2 id="orgdff4015"><span class="section-number-2">13</span> Cumulative distribution function</h2>
 <div class="outline-text-2" id="text-13">
 <p>
 For any random variable \(X\), the cumulative distribution function \(F (x)\) is given by
@@ -609,8 +891,8 @@ Properties:
 </div>
 
 
-<div id="outline-container-orgd3dfe7f" class="outline-2">
-<h2 id="orgd3dfe7f"><span class="section-number-2">14</span> Probability density function</h2>
+<div id="outline-container-orgc19a3ef" class="outline-2">
+<h2 id="orgc19a3ef"><span class="section-number-2">14</span> Probability density function</h2>
 <div class="outline-text-2" id="text-14">
 <p>
 For a continuous random variable \(X\), the probability density function \(f(x)\) is the derivative of the cumulative distribution function
@@ -640,8 +922,8 @@ If \(f\) is a probability density function then
 </div>
 </div>
 
-<div id="outline-container-orgdb8c194" class="outline-2">
-<h2 id="orgdb8c194"><span class="section-number-2">15</span> Probabilities</h2>
+<div id="outline-container-org73bf492" class="outline-2">
+<h2 id="org73bf492"><span class="section-number-2">15</span> Probabilities</h2>
 <div class="outline-text-2" id="text-15">
 <p>
 For any pair of real numbers such that \(a \leq b\), the probability that the random variable \(X\) lies between \(a\) and \(b\) is 
@@ -653,8 +935,8 @@ P(a \leq X \leq b) = P(X \leq b) - P( X \leq a) = F(b) - F(a) =  \int_{a}^{b} f(
 </div>
 </div>
 
-<div id="outline-container-orga06ced7" class="outline-2">
-<h2 id="orga06ced7"><span class="section-number-2">16</span> Mean and variance revisited.</h2>
+<div id="outline-container-org8c4f5c2" class="outline-2">
+<h2 id="org8c4f5c2"><span class="section-number-2">16</span> Mean and variance revisited.</h2>
 <div class="outline-text-2" id="text-16">
 <p>
 Population mean or expectation of a continuous random variable X is defined as
@@ -704,8 +986,8 @@ Proposition: Let \(a, b, c\) be constant real numbers, and \(X\), \(Y\) be rando
 
 
 
-<div id="outline-container-orgb18dd4d" class="outline-2">
-<h2 id="orgb18dd4d"><span class="section-number-2">17</span> The normal distribution</h2>
+<div id="outline-container-org9bb257d" class="outline-2">
+<h2 id="org9bb257d"><span class="section-number-2">17</span> The normal distribution</h2>
 <div class="outline-text-2" id="text-17">
 <p>
 For real values \(-\infty \leq x \leq \infty\), \(-\infty \leq \mu \leq \infty\) and  \(0 \leq \sigma \leq \infty\), the normal distribution has probability density function:
@@ -842,8 +1124,8 @@ So the answer to our first question (the shaded area, top left) is just over 10%
 </div>
 
 
-<div id="outline-container-orgf4fc962" class="outline-2">
-<h2 id="orgf4fc962"><span class="section-number-2">18</span> The Bernoulli distribution</h2>
+<div id="outline-container-org7192e27" class="outline-2">
+<h2 id="org7192e27"><span class="section-number-2">18</span> The Bernoulli distribution</h2>
 <div class="outline-text-2" id="text-18">
 <p>
 This is the probability distribution  a binary random variable \(X\). The response takes one of only two
@@ -867,8 +1149,8 @@ Verify that
 </div>
 
 
-<div id="outline-container-org6603aaa" class="outline-2">
-<h2 id="org6603aaa"><span class="section-number-2">19</span> The binomial distribution</h2>
+<div id="outline-container-org150d5e1" class="outline-2">
+<h2 id="org150d5e1"><span class="section-number-2">19</span> The binomial distribution</h2>
 <div class="outline-text-2" id="text-19">
 <p>
 The general form of the density of the  binomial distribution is given by
@@ -915,7 +1197,7 @@ Suppose a biased coin comes up heads with probability 0.3 when tossed. The proba
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Daniel Ballesteros-Chávez</p>
-<p class="date">Created: 2022-09-12 Mon 12:36</p>
+<p class="date">Created: 2022-09-12 Mon 13:33</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
