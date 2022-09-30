@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-02-23 Wed 13:25 -->
+<!-- 2022-09-26 Mon 19:19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Entries</title>
@@ -265,6 +265,29 @@ padding: 3px;
 border: 1px solid black;
 content: 'Theorem';
 }
+.lem  {
+color:  #404040;
+border: 1px solid ;
+background-color: #7aeb7a;
+/* box-shadow: 3px 3px 3px brown; */
+padding: 8pt;
+overflow: auto;
+margin: 1.2em;
+position: relative;
+overflow: auto;
+padding-top: 1.2em;
+}
+.lem:before {
+color:  white;
+display: inline;
+position: absolute;
+background-color: darkblue;
+top: -5px;
+left: 10px;
+padding: 3px;
+border: 1px solid black;
+content: 'Lemma';
+}
 .cor  {
 color:  #404040;
 border: 1px solid blue;
@@ -363,19 +386,115 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7b2e5bf">Example of a non-integrable plane field in \(\mathbb{R}^3\).</a></li>
-<li><a href="#orgbe51182">The Geometry of the support function</a></li>
-<li><a href="#org713a23e">Brownian Motion and Harmonic Functions</a></li>
-<li><a href="#org915b143">Alexandrov's Moving Planes</a></li>
-<li><a href="#org9109de5">Existence of Geodesics With a Heat Flow.</a></li>
-<li><a href="#orga459615">Geometry of hypersurfaces.</a></li>
+<li><a href="#org31c1428">Existence if Isothermal Coordinates.</a></li>
+<li><a href="#org71cbd8b">Example of a non-integrable plane field in \(\mathbb{R}^3\).</a></li>
+<li><a href="#org5c3926f">The Geometry of the support function</a></li>
+<li><a href="#org7eee42d">Brownian Motion and Harmonic Functions</a></li>
+<li><a href="#org7f52653">Alexandrov's Moving Planes</a></li>
+<li><a href="#org32175f3">Existence of Geodesics With a Heat Flow.</a></li>
+<li><a href="#org633d9c0">Geometry of hypersurfaces.</a></li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org7b2e5bf" class="outline-2">
-<h2 id="org7b2e5bf">Example of a non-integrable plane field in \(\mathbb{R}^3\).</h2>
-<div class="outline-text-2" id="text-org7b2e5bf">
+
+<div id="outline-container-org31c1428" class="outline-2">
+<h2 id="org31c1428">Existence if Isothermal Coordinates.</h2>
+<div class="outline-text-2" id="text-org31c1428">
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2022-09-26 Mon]</time> </div>
+</div>
+
+
+<p>
+In Riemannian geometry, the isothermal coordinates are local coordinates on \((M,g)\) in which the expression of the metric
+is conformal to the Euclidean one, that is, the Riemannian metric \(g\) can be expressed locally as
+</p>
+\begin{equation}
+g = f(x) \left( dx_1^2  + \cdots + dx_2^2\right),
+\end{equation}
+<p>
+where \(f:M\to \mathbb{R}\) is a smooth positive function.
+</p>
+
+<p>
+In the two dimensional case, <a href="https://doi.org/10.24033/asens.1405">Dennis M. Deturck and  Jerry L. Kazdan</a> describe the method of 
+obtaining these isothermal coordinates. Starting with one harmonic function 
+\(u\) such that \(\nabla u (p) \neq\) at some \(p\in M\), then 
+the second coordinate function  \(v\) is given by the harmonic conjugate of \(u\), and 
+this can be obtained by solving
+</p>
+\begin{equation}
+dv = \star du.
+\end{equation}
+
+<p>
+Note that if \(u\) is harmonic, since
+the one form \(\star du\) is a closed form, the existence of \(v\) follows. Here the Hodge star
+\(\star\) maps one-forms to one-forms.
+</p>
+
+<p>
+The function \(v\) is harmonic because of the identities
+</p>
+\begin{equation}
+\label{eq:dsd}
+\Delta v = \star d \star d v = - \star dd u = 0.
+\end{equation}
+
+<p>
+What happens in higher dimensions? In any dimension it is possible to find harmonic coordinates, such that
+\(g_{ij}(p) = \delta_{ij}\) in composition with a linear transformation, nevertheless, there is no satisfactory 
+generalisation of harmonic conjugate. 
+</p>
+
+<p>
+We want to unveil the equation \eqref{eq:dsd} and the existence theory form PDE's that is used here.
+</p>
+
+<p>
+In the following updates, I will be discussing among other the following results and how they will help to
+prove the existence of isothmeral coordinates.
+</p>
+
+<div class="lem">
+<p>
+If the differential 1-form \(\star du\) is closed, then the function \(u\) is harmonic.
+</p>
+
+</div>
+
+<div class="lem">
+<p>
+Poincaré's lemma: On a contractible manifold, all closed forms are exact. 
+</p>
+
+</div>
+
+<div class="thm">
+<p>
+Assume that \(F:M \to N\) is \(C^{\infty}\) that \(m\in M\), and that
+\(dF_m: T_{m}M \to T_{F(m)}N\) is an isomorphism. Then there is a neighborhood \(U\) of \(m\)
+such that \(F: U \to  F(U)\) is a diffeomorphism onto the open set \(F(U)\) in N.
+</p>
+
+</div>
+
+<div class="mydef">
+<p>
+A set of smooth functions \(y_1, y_2, \ldots, y_k\) defined on some neighbourhood of \(m\in M\) 
+it is called an independent set at the point \(m\) if the differentials
+\(dy_1, dy_2, \ldots, dy_k\) form an independnt set in \(T_{m}M^*\).
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org71cbd8b" class="outline-2">
+<h2 id="org71cbd8b">Example of a non-integrable plane field in \(\mathbb{R}^3\).</h2>
+<div class="outline-text-2" id="text-org71cbd8b">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2022-02-23 Wed]</time> </div>
@@ -431,8 +550,8 @@ spaces at each point is a proper subspace of the given hypersurfaces.
 </p>
 
 
-<div id="orgfd3bec1" class="figure">
-<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAe8AAAFqCAYAAAAz9NKmAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA
+<div id="org65c92e8" class="figure">
+<p><img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAe8AAAFqCAYAAAAz9NKmAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA
 GXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAIABJREFUeJzs3Xd8FHX+P/D3lJ3t
 u9nNhhQIIAmQQAhFilTppwgIgnLYBQXLFX935919r3n3vft+z69XLOcVCzawASpNKaLSDCC9BpAS
 pKVs353efn8EBBQFkt2dneT9fDx4UDY782bLvGY+bQAQujLjjC4AIYQQQlfuGgA4YHQRCCGEELpy
@@ -867,9 +986,9 @@ FKL93IQQQghJUj8B8Aaiy6ASQgghJMn9D2wYsqtwICI4AAAAAElFTkSuQmCC"drawing-1.png />
 
 
 
-<div id="outline-container-orgbe51182" class="outline-2">
-<h2 id="orgbe51182">The Geometry of the support function</h2>
-<div class="outline-text-2" id="text-orgbe51182">
+<div id="outline-container-org5c3926f" class="outline-2">
+<h2 id="org5c3926f">The Geometry of the support function</h2>
+<div class="outline-text-2" id="text-org5c3926f">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2020-08-31 Mon]</time> </div>
@@ -914,8 +1033,8 @@ the support function is clearly the distance from the origin of \(R^{n+1}\) to t
 </p>
 
 
-<div id="org1e61c70" class="figure">
-<p><img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAWgBaAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
+<div id="orgc78cea3" class="figure">
+<p><img  src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAWgBaAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
 CwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU
 FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wgARCAHGAfQDAREA
 AhEBAxEB/8QAHQABAQADAQEBAQEAAAAAAAAAAAYFBwgEAwIBCf/EABwBAQACAwEBAQAAAAAAAAAA
@@ -1497,9 +1616,9 @@ g1mEkLJExLjyAggxBCMTf2OS9evCUs8F49xyWbNFIhMwPwbFBJ4EljCMqIxOqhJFsle5X1T5r6p8
 </div>
 
 
-<div id="outline-container-org713a23e" class="outline-2">
-<h2 id="org713a23e">Brownian Motion and Harmonic Functions</h2>
-<div class="outline-text-2" id="text-org713a23e">
+<div id="outline-container-org7eee42d" class="outline-2">
+<h2 id="org7eee42d">Brownian Motion and Harmonic Functions</h2>
+<div class="outline-text-2" id="text-org7eee42d">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2019-10-23 Wed]</time> </div>
@@ -1555,9 +1674,9 @@ and consequently is a solution of the following Dirichlet problem:
 
 
 
-<div id="outline-container-org915b143" class="outline-2">
-<h2 id="org915b143">Alexandrov's Moving Planes</h2>
-<div class="outline-text-2" id="text-org915b143">
+<div id="outline-container-org7f52653" class="outline-2">
+<h2 id="org7f52653">Alexandrov's Moving Planes</h2>
+<div class="outline-text-2" id="text-org7f52653">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2019-10-22 Tue]</time> </div>
@@ -1576,9 +1695,9 @@ It is also known that J. Serring used this method
 </div>
 </div>
 
-<div id="outline-container-org9109de5" class="outline-2">
-<h2 id="org9109de5">Existence of Geodesics With a Heat Flow.</h2>
-<div class="outline-text-2" id="text-org9109de5">
+<div id="outline-container-org32175f3" class="outline-2">
+<h2 id="org32175f3">Existence of Geodesics With a Heat Flow.</h2>
+<div class="outline-text-2" id="text-org32175f3">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2019-05-14 Tue]</time> </div>
@@ -1645,9 +1764,9 @@ u(s,0)& = \gamma(s) & \,\, s\in S^1.
 \end{equation}
 </div>
 
-<div id="outline-container-orgfcbbce8" class="outline-3">
-<h3 id="orgfcbbce8">The Heat Flow Method</h3>
-<div class="outline-text-3" id="text-orgfcbbce8">
+<div id="outline-container-org8c963b3" class="outline-3">
+<h3 id="org8c963b3">The Heat Flow Method</h3>
+<div class="outline-text-3" id="text-org8c963b3">
 <p>
 Now we write  the method to obtain the geodesic as outlined by 
 J. Jost in his  <i>Riemannian Geometry and Geometric Analysis</i>.
@@ -1714,9 +1833,9 @@ then
 </div>
 </div>
 
-<div id="outline-container-orga459615" class="outline-2">
-<h2 id="orga459615">Geometry of hypersurfaces.</h2>
-<div class="outline-text-2" id="text-orga459615">
+<div id="outline-container-org633d9c0" class="outline-2">
+<h2 id="org633d9c0">Geometry of hypersurfaces.</h2>
+<div class="outline-text-2" id="text-org633d9c0">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2019-05-16 Thu]</time> </div>
@@ -1820,9 +1939,9 @@ eigenvalues of the matrix \((A^i_j)\).
 </p>
 </div>
 
-<div id="outline-container-org15b78a7" class="outline-3">
-<h3 id="org15b78a7">Example: Hypersurfaces as graphs in Euclidean space.</h3>
-<div class="outline-text-3" id="text-org15b78a7">
+<div id="outline-container-orgd1e25fa" class="outline-3">
+<h3 id="orgd1e25fa">Example: Hypersurfaces as graphs in Euclidean space.</h3>
+<div class="outline-text-3" id="text-orgd1e25fa">
 <p>
 Consider that \(\Sigma\subset\mathbb{R}^{n+1}\) is parametrised as the
 graph of a smooth function \(f:\mathbb{R}^n\to\mathbb{R}\). Then at any point \(p\in\Sigma\)
@@ -1891,7 +2010,7 @@ then the shape operator is given by
 <div id="postamble" class="status">
 <p class="date">Date: 2019-04-30 Tue 00:00</p>
 <p class="author">Author: daniel b</p>
-<p class="date">Created: 2022-02-23 Wed 13:25</p>
+<p class="date">Created: 2022-09-26 Mon 19:19</p>
 <p class="creator">Emacs 24.5.1 (Org mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
