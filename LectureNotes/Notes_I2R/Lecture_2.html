@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-30 Fri 17:07 -->
+<!-- 2022-10-04 Tue 11:48 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lecture 2</title>
@@ -552,52 +552,62 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org72cd0dc">1. Introduction.</a></li>
-<li><a href="#org095cd93">2. Arithmetic Mean (AM)</a></li>
-<li><a href="#org1f83645">3. Geometric Mean (GM)</a></li>
-<li><a href="#org24f8820">4. Harmonic mean (HM)</a></li>
-<li><a href="#org13d19fa">5. Weighted mean (WM)</a>
+<li><a href="#orgb036916">1. Introduction.</a></li>
+<li><a href="#org66fef42">2. Arithmetic Mean (AM)</a></li>
+<li><a href="#org0db6d8d">3. Geometric Mean (GM)</a></li>
+<li><a href="#orgde95d93">4. Harmonic mean (HM)</a></li>
+<li><a href="#orge38bbb5">5. Weighted mean (WM)</a>
 <ul>
-<li><a href="#orga38fea1">5.1. Geometric Interpretation</a></li>
+<li><a href="#org9a9ccfc">5.1. Geometric Interpretation</a></li>
 </ul>
 </li>
-<li><a href="#orgb995287">6. Mode</a></li>
-<li><a href="#orgb4a919e">7. Median</a></li>
-<li><a href="#orgbe8349e">8. Minimum and maximum</a></li>
-<li><a href="#orgc80ac7c">9. Quartiles</a></li>
-<li><a href="#org6c276f9">10. Variance</a></li>
-<li><a href="#org6e7b7f7">11. Probability space</a></li>
-<li><a href="#orgf809cfe">12. Random Variables</a></li>
-<li><a href="#org2a4eb37">13. Cumulative distribution function</a></li>
-<li><a href="#org9b939ef">14. Probability density function</a></li>
-<li><a href="#org4654fae">15. Probabilities</a></li>
-<li><a href="#org345905e">16. Mean and variance revisited.</a></li>
-<li><a href="#org52752f2">17. The normal distribution</a></li>
-<li><a href="#orgedcd838">18. The Bernoulli distribution</a></li>
-<li><a href="#orgb1b3089">19. The binomial distribution</a></li>
+<li><a href="#orge3a8457">6. Mode</a></li>
+<li><a href="#orgf396e74">7. Median</a></li>
+<li><a href="#orgb7f32c8">8. Minimum and maximum</a></li>
+<li><a href="#org2b70718">9. Quartiles</a></li>
+<li><a href="#org094d7ee">10. Variance</a></li>
+<li><a href="#orgeb88a72">11. Probability space</a></li>
+<li><a href="#org567e341">12. Random Variables</a></li>
+<li><a href="#org374ba7c">13. Cumulative distribution function</a></li>
+<li><a href="#orgb3c9b28">14. Probability density function</a></li>
+<li><a href="#org83e6966">15. Probabilities</a></li>
+<li><a href="#org74b45bf">16. Mean and variance revisited.</a></li>
+<li><a href="#org04859f0">17. The normal distribution</a></li>
+<li><a href="#orga83fa05">18. The Bernoulli distribution</a></li>
+<li><a href="#org828c7c9">19. The binomial distribution</a></li>
 </ul>
 </div>
 </div>
 
 
 
-<div id="outline-container-org72cd0dc" class="outline-2">
-<h2 id="org72cd0dc"><span class="section-number-2">1</span> Introduction.</h2>
+<div id="outline-container-orgb036916" class="outline-2">
+<h2 id="orgb036916"><span class="section-number-2">1</span> Introduction.</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 In this lecture we will recall some basic concepts from probability and statistics. These can be grouped as
 </p>
 
-<ul class="org-ul">
-<li>Measures of central tendency.</li>
-<li>Measures of dispersion.</li>
-</ul>
+
+<dl class="org-dl">
+<dt>Measures of central tendency</dt><dd>This is a real value that measures a
+"typical value" for a set of observations (more accurately for a
+probability distribution, see below). The most common measures of
+central tendency are the arithmetic mean, the median, and the mode.</dd>
+
+<dt>Measures of dispersion</dt><dd>Dispersion (also called variability,
+scatter, or spread) gives the deviation of the distribution of data
+around a central point or value. It shows the distance of values in
+a distribution from the central value. Common examples of measures
+of statistical dispersion are the variance, standard deviation, and
+interquartile range.</dd>
+</dl>
 </div>
 </div>
 
 
-<div id="outline-container-org095cd93" class="outline-2">
-<h2 id="org095cd93"><span class="section-number-2">2</span> Arithmetic Mean (AM)</h2>
+<div id="outline-container-org66fef42" class="outline-2">
+<h2 id="org66fef42"><span class="section-number-2">2</span> Arithmetic Mean (AM)</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 It is also known as (a.k.a) average, or mean.
@@ -610,12 +620,43 @@ Given a set of real values, usually representing a set of observations,  \(\left
 \begin{equation}
 \frac{1}{n}\sum_{i=1}^n \, x_i
 \end{equation}
+
+<div class="org-src-container">
+<pre class="src src-R">X <span style="color: #6b8e23;">&lt;-</span> c(1,5,1,2,3,10,20)
+mymean <span style="color: #6b8e23;">&lt;-</span> sum(X) / length(X)
+mymean
+</pre>
+</div>
+
+<pre class="example">
+6
+</pre>
+
+
+<p>
+Note that <code>mean</code> is a built-in function so one can as well just write
+</p>
+
+<div class="org-src-container">
+<pre class="src src-R">X <span style="color: #6b8e23;">&lt;-</span> c(1,5,1,2,3,10,20)
+mean(X)
+</pre>
+</div>
+
+<pre class="example">
+6
+</pre>
 </div>
 </div>
 
-<div id="outline-container-org1f83645" class="outline-2">
-<h2 id="org1f83645"><span class="section-number-2">3</span> Geometric Mean (GM)</h2>
+
+<div id="outline-container-org0db6d8d" class="outline-2">
+<h2 id="org0db6d8d"><span class="section-number-2">3</span> Geometric Mean (GM)</h2>
 <div class="outline-text-2" id="text-3">
+<p>
+For processes that change multiplicatively rather than additively, the appropriate measure is the geometric mean.
+</p>
+
 <p>
 Given a set of real values, usually representing a set of observations,  (x<sub>1</sub>, x<sub>2</sub>, &#x2026; ,x<sub>n</sub>) , the <i>geometric mean</i> is defined as
 </p>
@@ -627,8 +668,8 @@ Given a set of real values, usually representing a set of observations,  (x<sub>
 </div>
 
 
-<div id="outline-container-org24f8820" class="outline-2">
-<h2 id="org24f8820"><span class="section-number-2">4</span> Harmonic mean (HM)</h2>
+<div id="outline-container-orgde95d93" class="outline-2">
+<h2 id="orgde95d93"><span class="section-number-2">4</span> Harmonic mean (HM)</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Given a set of real values, usually representing a set of observations,  (x<sub>1</sub>, x<sub>2</sub>, &#x2026; ,x<sub>n</sub>) , the <i>harmonic mean</i> is defined as
@@ -641,8 +682,8 @@ Given a set of real values, usually representing a set of observations,  (x<sub>
 </div>
 
 
-<div id="outline-container-org13d19fa" class="outline-2">
-<h2 id="org13d19fa"><span class="section-number-2">5</span> Weighted mean (WM)</h2>
+<div id="outline-container-orge38bbb5" class="outline-2">
+<h2 id="orge38bbb5"><span class="section-number-2">5</span> Weighted mean (WM)</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Given a set of real values, usually representing a set of observations,  (x<sub>1</sub>, x<sub>2</sub>, &#x2026; ,x<sub>n</sub>) with assosiated weigths (w<sub>1</sub>, w<sub>2</sub>, &#x2026; ,w<sub>n</sub>), the <i>weighted mean</i> is defined as
@@ -654,8 +695,8 @@ Given a set of real values, usually representing a set of observations,  (x<sub>
 </div>
 
 
-<div id="outline-container-orga38fea1" class="outline-3">
-<h3 id="orga38fea1"><span class="section-number-3">5.1</span> Geometric Interpretation</h3>
+<div id="outline-container-org9a9ccfc" class="outline-3">
+<h3 id="org9a9ccfc"><span class="section-number-3">5.1</span> Geometric Interpretation</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 A well known inequality concerning arithmetic, geometric, and harmonic means for any set of positive numbers is
@@ -675,8 +716,8 @@ Geometric proof without words that max (a,b) &gt; root mean square (RMS) or qu
 
 
 
-<div id="outline-container-orgb995287" class="outline-2">
-<h2 id="orgb995287"><span class="section-number-2">6</span> Mode</h2>
+<div id="outline-container-orge3a8457" class="outline-2">
+<h2 id="orge3a8457"><span class="section-number-2">6</span> Mode</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 The mode is the most frequently occurring value a in data set.
@@ -689,8 +730,8 @@ It is possible to have more than one modal value.
 </div>
 
 
-<div id="outline-container-orgb4a919e" class="outline-2">
-<h2 id="orgb4a919e"><span class="section-number-2">7</span> Median</h2>
+<div id="outline-container-orgf396e74" class="outline-2">
+<h2 id="orgf396e74"><span class="section-number-2">7</span> Median</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Middle value separating the greater and lesser halves of a data set 
@@ -716,8 +757,8 @@ On the other hand if the data set is: 5, 11, 1, 3, 15, 20, then
 </div>
 </div>
 
-<div id="outline-container-orgbe8349e" class="outline-2">
-<h2 id="orgbe8349e"><span class="section-number-2">8</span> Minimum and maximum</h2>
+<div id="outline-container-orgb7f32c8" class="outline-2">
+<h2 id="orgb7f32c8"><span class="section-number-2">8</span> Minimum and maximum</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 The minumum and maximum value in a set of observed values and its comparison, is a first approach for the analysis of the dispersion of the data.
@@ -731,8 +772,8 @@ Range = max - min.
 </div>
 
 
-<div id="outline-container-orgc80ac7c" class="outline-2">
-<h2 id="orgc80ac7c"><span class="section-number-2">9</span> Quartiles</h2>
+<div id="outline-container-org2b70718" class="outline-2">
+<h2 id="org2b70718"><span class="section-number-2">9</span> Quartiles</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 The quartiles are cut points which divides the number of data points into four parts, or quarters, of more-or-less equal size.
@@ -766,13 +807,16 @@ Example: Find the quarttiles for
 </ul>
 
 <p>
-<i>Note</i>. There are other methods (algorithms) to compute the quartiles, although when the data sets are big, the difference between the outcomes is small. How does R computes the quartiles when using the function <code>summary</code>? 
+<i>Note</i>. There are other methods (algorithms) to compute the quartiles,
+although when the data sets are big, the difference between the
+outcomes is small. How does R computes the quartiles when using the
+function <code>summary</code>?
 </p>
 </div>
 </div>
 
-<div id="outline-container-org6c276f9" class="outline-2">
-<h2 id="org6c276f9"><span class="section-number-2">10</span> Variance</h2>
+<div id="outline-container-org094d7ee" class="outline-2">
+<h2 id="org094d7ee"><span class="section-number-2">10</span> Variance</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 Given a set of real values (x<sub>1</sub>, x<sub>2</sub>, &#x2026; ,x<sub>n</sub>), the "population" <i>variance</i> is defined as 
@@ -794,56 +838,104 @@ s_X^{2}={\frac{1}{n-1}}\sum_{i=1}^{n}\left(x_{i}-{\overline{x}}\right)^{2}.
 </div>
 
 
-<div id="outline-container-org6e7b7f7" class="outline-2">
-<h2 id="org6e7b7f7"><span class="section-number-2">11</span> Probability space</h2>
+<div id="outline-container-orgeb88a72" class="outline-2">
+<h2 id="orgeb88a72"><span class="section-number-2">11</span> Probability space</h2>
 <div class="outline-text-2" id="text-11">
 <p>
 A probability space is a special case of a measurable space. This concepts are beyond the scope of this course, but it is worth trying to understand the definition.
 </p>
 
 <p>
-Then probability space is a triple \((\Omega, F, P)\) consisting of:
+Then probability space is a triplet \((\Omega, \mathcal{B}, P)\) consisting of:
 </p>
 
 <ul class="org-ul">
-<li>The sample space \(\Omega\) — an arbitrary non-empty set,</li>
-<li>The σ-algebra \(F \subset 2^{\Omega}\) (also called σ-field), that is, \(F\) is a set of subsets of &Omega; , called events, with the following properties:
+<li>The sample space \(\Omega\) — an arbitrary non-empty set. Set of <i>outcomes</i> or <i>observations</i> of an experiment.</li>
+<li>Any subset of \(\Omega\) is called an <i>event</i>.</li>
+<li>The σ-algebra \(\mathcal{B} \subset 2^{\Omega}\) (also called σ-field), that is, \(\mathcal{B}\) is a collection of subsets of \(\Omega\), with the following properties:
 <ul class="org-ul">
-<li>\(F\)  contains the sample space: \(\Omega \in F\).</li>
-<li>\(F\)  is closed under complements: if \(A \in F\), then also \(( \Omega \setminus A ) \in F\).</li>
-<li>\(F\)  is closed under countable unions: if \(A_i \in F\), for \(i = 1 , 2 ,\ldots\), then also \(( \cup^{\infty}_{i = 1} A_{i} ) \in F\).</li>
+<li>\(\mathcal{B}\)  contains the sample space: \(\Omega \in \mathcal{B}\).</li>
+<li>\(\mathcal{B}\)  is closed under complements: if \(A \in \mathcal{B}\), then also \(( \Omega \setminus A ) \in \mathcal{B}\).</li>
+<li>\(\mathcal{B}\)  is closed under countable unions: if \(A_i \in \mathcal{B}\), for \(i = 1 , 2 ,\ldots\), then also \(( \cup^{\infty}_{i = 1} A_{i} ) \in \mathcal{B}\).</li>
 </ul></li>
-<li>The probability measure \(P : F \to [ 0 , 1 ]\),  a function on F such that with the following properties:
+<li>The probability measure \(P : \mathcal{B} \to [ 0 , 1 ]\), is a function with the following properties:
 <ul class="org-ul">
 <li>\(P\) is countably additive (also called σ-additive): if \(A_{i} \cap A_{j} = \emptyset\), for \(i \neq j\), then \(P(\cup^{\infty}_{i = 1} A_{i}) = \Sigma^{\infty}_{i = 1} P(A_{i})\).</li>
 <li>The measure of entire sample space is equal to one: \(P ( \Omega ) = 1\).</li>
 </ul></li>
 </ul>
+
+<p>
+Example: Tossing a Coin
+</p>
+
+<p>
+Let \(\Omega\) the experiment of <b>tossing a coin three times</b>. Then
+</p>
+\begin{equation}
+\Omega := \{ HHH, HHT, HTH, THH, HTT, THT, TTH, TTT\}.
+\end{equation}
+
+<p>
+The &sigma;-algebra \(\mathcal{B}\) consist of a collection of \(2^8\) subsets of \(\Omega\):
+</p>
+\begin{equation}
+\mathcal{B} := \{ \emptyset, \Omega, \{HHH\}, \{ HHT\},\ldots, \{ HTH, HHH\}, \ldots \}
+\end{equation}
+
+<p>
+The event, <i>getting (exactly) two tails</i> when tossing a coin three times, is the subset \(A\subset \Omega\) consisting of
+</p>
+\begin{equation}
+A := \{  HTT, THT, TTH\}.
+\end{equation}
+
+<p>
+Define \(P: \mathcal{B} \to [0,1]\) as follows:
+</p>
+<ol class="org-ol">
+<li>\(P(\emptyset) = 0\).</li>
+<li>For any \(a \in \Omega\), note that \(\{a\} \in \mathcal{B}\). We define \(P(\{a\}) = \frac{1}{2^3}\).</li>
+<li>For any \(A \in \mathcal{B}\), \(A \neq \emptyset\), then we have \(A = \{a_1, a_2, \ldots, a_k\}\). Define \(P(A) = \sum_{j=1}^{k} P(\{a_j\})\).</li>
+</ol>
+<p>
+The function \(P\) is then a probability measure.
+</p>
+
+<p>
+Example: Lebesgue measure
+</p>
+
+<p>
+Let \(X = [0,1]\). Take \(\mathcal{B}\) to be the <b>Borel</b> &sigma;-algebra, which can be define as the <i>minimal</i> &sigma;-algebra generated by the events of the form \(\{[0,b) \,|\, 0\leq b \leq 1\}\).
+It is possible to define the <i>Lebesgue measure</i> of a set \(A\in \mathcal{B}\), denoted by \(\mu(A)\),  as the sum of the length of intervals contained in \(A\).
+This triplet \((X, \mathcal{B}, \mu)\) is an example of a probability space on subsets of the real line.
+</p>
 </div>
 </div>
 
-<div id="outline-container-orgf809cfe" class="outline-2">
-<h2 id="orgf809cfe"><span class="section-number-2">12</span> Random Variables</h2>
+<div id="outline-container-org567e341" class="outline-2">
+<h2 id="org567e341"><span class="section-number-2">12</span> Random Variables</h2>
 <div class="outline-text-2" id="text-12">
 <p>
-A random variable \(X\) is a variable whose value is a numerical outcome of a random event.
+A random variable \(X\) is a function whose value is a numerical outcome of a random event.
 There are two types of random variables:
 </p>
 <ul class="org-ul">
-<li>Discrete: The possible values of \(X\) are separated and individually distinct, e.g. \(X \in \{0, 1, 2, . . .\}\).</li>
-<li>Continuous: Possible values of \(X\) from some continuous set, e.g. \(X \in (0, \infty), X \in (-\infty, \infty)\), etc.</li>
+<li>Discrete: The sample space is discrete, e.g. \(\Omega = \{0, 1, 2, . . .\}\). In this case the range \(X(\Omega)\) is also a discrete set.</li>
+<li>Continuous: The sample space is not discrete, usually a subset of
+the real line. In this case it can happen that the range \(X(\Omega)\) is a discrete set or a non-discrete subset of the real line.</li>
 </ul>
 
 <p>
 Formally, a random variable \(X\) is a measurable function \(X : \Omega
-    \to E\), from a set of possible outcomes \(\Omega\) to a measurable
-    space \(E\), which is usually the Real numbers or a subset of
-    it. Then, the probability that \(X\) takes on a value in a measurable
-    set \(S \subseteq E\) is written as 
+    \to \mathbb{R}\), from a set of possible outcomes \(\Omega\) to the real numbers or a subset of
+    it. Then, <b>the probability that \(X\) takes on a value in a measurable set \(S \subseteq \mathbb{R}\)</b> is written as 
 </p>
 
 \begin{equation}
-P ⁡ ( X ∈ S ) = P ⁡ ( \{ ω ∈ Ω ∣ X ( ω ) ∈ S    \} )
+\label{eq:PS}
+P ⁡ ( X \in S ) = P ⁡ ( \{ \omega ∈ \Omega ∣ X ( \omega ) \in S    \} )
 \end{equation}
 
 <p>
@@ -854,9 +946,9 @@ Examples:
 Discrete random variables: 
 </p>
 <ul class="org-ul">
-<li>Outcome of a roll of a 6-sided die, that is \(X \in \{1, 2, 3, 4, 5, 6\}\).</li>
-<li>Number of tails in 3 flips of a coin, that is \(X \in \{0, 1, 2, 3\}\).</li>
+<li>Let \(X\) be the number of tails when tossing a coin three times.</li>
 </ul>
+
 
 <p>
 Continuous random variables: 
@@ -864,14 +956,23 @@ Continuous random variables:
 <ul class="org-ul">
 <li>The lifetime \(X\) of a light bulb component with \(X \in [0, \infty)\).</li>
 </ul>
+
+<p>
+Note that we can also write the expression \eqref{eq:PS} as
+</p>
+
+\begin{equation}
+P ⁡ ( X \in S ) = P ⁡ (X^{-1}(S))
+\end{equation}
 </div>
 </div>
 
-<div id="outline-container-org2a4eb37" class="outline-2">
-<h2 id="org2a4eb37"><span class="section-number-2">13</span> Cumulative distribution function</h2>
+
+<div id="outline-container-org374ba7c" class="outline-2">
+<h2 id="org374ba7c"><span class="section-number-2">13</span> Cumulative distribution function</h2>
 <div class="outline-text-2" id="text-13">
 <p>
-For any random variable \(X\), the cumulative distribution function \(F (x)\) is given by
+For any random variable \(X\), the <b>cumulative distribution</b> function \(F (x)\) is given by
 </p>
 \begin{equation}
 F (x) = P(X \leq x).
@@ -888,18 +989,25 @@ Properties:
 <ol class="org-ol">
 <li>\(0 \leq F(x) \leq 1\) for all \(x\).</li>
 <li>\(F(x)\) is non-decreasing.</li>
-<li>\(\lim_{x\to - \infty} F(x) = 0\).</li>
-<li>\(\lim_{x\to + \infty} F(x) = 1\).</li>
+<li>\(\displaystyle \lim_{x\to - \infty} F(x) = 0\).</li>
+<li>\(\displaystyle \lim_{x\to + \infty} F(x) = 1\).</li>
+<li>\(F\) is right continuous: \(\displaystyle \lim_{x\to a^{+}} F(x) = F(a)\).</li>
 </ol>
 </div>
 </div>
 
 
-<div id="outline-container-org9b939ef" class="outline-2">
-<h2 id="org9b939ef"><span class="section-number-2">14</span> Probability density function</h2>
+<div id="outline-container-orgb3c9b28" class="outline-2">
+<h2 id="orgb3c9b28"><span class="section-number-2">14</span> Probability density function</h2>
 <div class="outline-text-2" id="text-14">
 <p>
-For a continuous random variable \(X\), the probability density function \(f(x)\) is the derivative of the cumulative distribution function
+In the next sections we will consider \(\Omega = \mathbb{R}\), \(\mathcal{B}\) the Borel &sigma;-algebra, and \(P\) a probability measure.
+The following concepts can be adapted to the case when \(\Omega\) is discrete by defining the appropriate <i>sums</i> instead of the <i>integral</i>
+signs.
+</p>
+
+<p>
+The <b>probability density function</b> \(f(x)\) is the derivative of the cumulative distribution function
 </p>
 \begin{equation}
  f(x) = \frac{dF}{dx}.
@@ -926,8 +1034,8 @@ If \(f\) is a probability density function then
 </div>
 </div>
 
-<div id="outline-container-org4654fae" class="outline-2">
-<h2 id="org4654fae"><span class="section-number-2">15</span> Probabilities</h2>
+<div id="outline-container-org83e6966" class="outline-2">
+<h2 id="org83e6966"><span class="section-number-2">15</span> Probabilities</h2>
 <div class="outline-text-2" id="text-15">
 <p>
 For any pair of real numbers such that \(a \leq b\), the probability that the random variable \(X\) lies between \(a\) and \(b\) is 
@@ -939,8 +1047,8 @@ P(a \leq X \leq b) = P(X \leq b) - P( X \leq a) = F(b) - F(a) =  \int_{a}^{b} f(
 </div>
 </div>
 
-<div id="outline-container-org345905e" class="outline-2">
-<h2 id="org345905e"><span class="section-number-2">16</span> Mean and variance revisited.</h2>
+<div id="outline-container-org74b45bf" class="outline-2">
+<h2 id="org74b45bf"><span class="section-number-2">16</span> Mean and variance revisited.</h2>
 <div class="outline-text-2" id="text-16">
 <p>
 Population mean or expectation of a continuous random variable X is defined as
@@ -990,8 +1098,8 @@ Proposition: Let \(a, b, c\) be constant real numbers, and \(X\), \(Y\) be rando
 
 
 
-<div id="outline-container-org52752f2" class="outline-2">
-<h2 id="org52752f2"><span class="section-number-2">17</span> The normal distribution</h2>
+<div id="outline-container-org04859f0" class="outline-2">
+<h2 id="org04859f0"><span class="section-number-2">17</span> The normal distribution</h2>
 <div class="outline-text-2" id="text-17">
 <p>
 For real values \(-\infty \leq x \leq \infty\), \(-\infty \leq \mu \leq \infty\) and  \(0 \leq \sigma \leq \infty\), the normal distribution has probability density function:
@@ -1115,8 +1223,8 @@ So the answer to our first question (the shaded area, top left) is just over 10%
 </div>
 
 
-<div id="outline-container-orgedcd838" class="outline-2">
-<h2 id="orgedcd838"><span class="section-number-2">18</span> The Bernoulli distribution</h2>
+<div id="outline-container-orga83fa05" class="outline-2">
+<h2 id="orga83fa05"><span class="section-number-2">18</span> The Bernoulli distribution</h2>
 <div class="outline-text-2" id="text-18">
 <p>
 This is the probability distribution  a binary random variable \(X\). The response takes one of only two
@@ -1134,14 +1242,14 @@ Verify that
 
 <ul class="org-ul">
 <li>\(E[X] = p\).</li>
-<li>\(\mbox{V}ar[X] = pq\).</li>
+<li>\(\mbox{Var}[X] = pq\).</li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-orgb1b3089" class="outline-2">
-<h2 id="orgb1b3089"><span class="section-number-2">19</span> The binomial distribution</h2>
+<div id="outline-container-org828c7c9" class="outline-2">
+<h2 id="org828c7c9"><span class="section-number-2">19</span> The binomial distribution</h2>
 <div class="outline-text-2" id="text-19">
 <p>
 The general form of the density of the  binomial distribution is given by
@@ -1188,7 +1296,7 @@ Suppose a biased coin comes up heads with probability 0.3 when tossed. The proba
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Daniel Ballesteros-Chávez</p>
-<p class="date">Created: 2022-09-30 Fri 17:07</p>
+<p class="date">Created: 2022-10-04 Tue 11:48</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
