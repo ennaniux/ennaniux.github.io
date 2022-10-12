@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-10-11 Tue 15:38 -->
+<!-- 2022-10-12 Wed 20:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Lecture 2</title>
@@ -553,47 +553,47 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7a7f2e9">1. Introduction.</a></li>
-<li><a href="#orgc5eb94c">2. Arithmetic Mean (AM)</a></li>
-<li><a href="#org73a3f69">3. Geometric Mean (GM)</a></li>
-<li><a href="#org1f29fd8">4. Harmonic mean (HM)</a>
+<li><a href="#org699fadb">1. Introduction.</a></li>
+<li><a href="#orgce7c48b">2. Arithmetic Mean (AM)</a></li>
+<li><a href="#orga3fe04e">3. Geometric Mean (GM)</a></li>
+<li><a href="#org631d8da">4. Harmonic mean (HM)</a>
 <ul>
-<li><a href="#orge917f55">4.1. Implementing the harmonic mean in R</a></li>
-<li><a href="#org3231f04">4.2. <span class="todo TODO">TODO</span> : create the file <code>my_functions.R</code> and with the definition of the harmonic.mean function. You can keep this file to add the new functions you will be creating.</a></li>
+<li><a href="#org1dfe150">4.1. Implementing the harmonic mean in R</a></li>
+<li><a href="#org1dd1680">4.2. <span class="todo TODO">TODO</span> : create the file <code>my_functions.R</code> and with the definition of the harmonic.mean function. You can keep this file to add the new functions you will be creating.</a></li>
 </ul>
 </li>
-<li><a href="#org7b81b4c">5. Weighted mean (WM)</a>
+<li><a href="#org71925b3">5. Weighted mean (WM)</a>
 <ul>
-<li><a href="#org27e9df5">5.1. Geometric Interpretation</a></li>
+<li><a href="#org87b35a5">5.1. Geometric Interpretation</a></li>
 </ul>
 </li>
-<li><a href="#org1f3330e">6. Mode</a></li>
-<li><a href="#org5404a36">7. Median</a></li>
-<li><a href="#org9fc618c">8. Minimum and maximum</a></li>
-<li><a href="#org77e7040">9. Quartiles</a>
+<li><a href="#org1b634bc">6. Mode</a></li>
+<li><a href="#orga5a599e">7. Median</a></li>
+<li><a href="#org2fb7432">8. Minimum and maximum</a></li>
+<li><a href="#org6305678">9. Quartiles</a>
 <ul>
-<li><a href="#org537c304">9.1. Interquartile range</a></li>
-<li><a href="#orgbf3d773">9.2. Outliers</a></li>
+<li><a href="#orga7ccd6c">9.1. Interquartile range</a></li>
+<li><a href="#orge44e3bb">9.2. Outliers</a></li>
 </ul>
 </li>
-<li><a href="#org18894c8">10. Variance</a></li>
-<li><a href="#orgad4b1cd">11. Probability space</a></li>
-<li><a href="#orgee1c46e">12. Random Variables</a></li>
-<li><a href="#org4cb694b">13. Cumulative distribution function</a></li>
-<li><a href="#org8d4727c">14. Probability density function</a></li>
-<li><a href="#org2432d48">15. Probabilities</a></li>
-<li><a href="#org8f50ee5">16. Mean and variance revisited.</a></li>
-<li><a href="#org044b3b6">17. The normal distribution</a></li>
-<li><a href="#org4122a95">18. The Bernoulli distribution</a></li>
-<li><a href="#org9bd8e08">19. The binomial distribution</a></li>
+<li><a href="#org13fd910">10. Variance</a></li>
+<li><a href="#orgc6cc456">11. Probability space</a></li>
+<li><a href="#orgf6f7ab1">12. Random Variables</a></li>
+<li><a href="#org6a9c169">13. Cumulative distribution function</a></li>
+<li><a href="#orga46d5d5">14. Probability density function</a></li>
+<li><a href="#orge71b876">15. Probabilities</a></li>
+<li><a href="#orgc7cc0ae">16. Mean and variance revisited.</a></li>
+<li><a href="#org63c87e1">17. The normal distribution</a></li>
+<li><a href="#orgf4bc394">18. The Bernoulli distribution</a></li>
+<li><a href="#org4d29bc9">19. The binomial distribution</a></li>
 </ul>
 </div>
 </div>
 
 
 
-<div id="outline-container-org7a7f2e9" class="outline-2">
-<h2 id="org7a7f2e9"><span class="section-number-2">1</span> Introduction.</h2>
+<div id="outline-container-org699fadb" class="outline-2">
+<h2 id="org699fadb"><span class="section-number-2">1</span> Introduction.</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 In this lecture we will recall some basic concepts from probability and statistics. These can be grouped as
@@ -617,8 +617,8 @@ interquartile range.</dd>
 </div>
 
 
-<div id="outline-container-orgc5eb94c" class="outline-2">
-<h2 id="orgc5eb94c"><span class="section-number-2">2</span> Arithmetic Mean (AM)</h2>
+<div id="outline-container-orgce7c48b" class="outline-2">
+<h2 id="orgce7c48b"><span class="section-number-2">2</span> Arithmetic Mean (AM)</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 It is also known as (a.k.a) average, or mean.
@@ -661,8 +661,8 @@ mean(X)
 </div>
 
 
-<div id="outline-container-org73a3f69" class="outline-2">
-<h2 id="org73a3f69"><span class="section-number-2">3</span> Geometric Mean (GM)</h2>
+<div id="outline-container-orga3fe04e" class="outline-2">
+<h2 id="orga3fe04e"><span class="section-number-2">3</span> Geometric Mean (GM)</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 For processes that change multiplicatively rather than additively, the appropriate measure is the geometric mean.
@@ -687,8 +687,8 @@ One can easily show the following identity:
 </div>
 
 
-<div id="outline-container-org1f29fd8" class="outline-2">
-<h2 id="org1f29fd8"><span class="section-number-2">4</span> Harmonic mean (HM)</h2>
+<div id="outline-container-org631d8da" class="outline-2">
+<h2 id="org631d8da"><span class="section-number-2">4</span> Harmonic mean (HM)</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Given a set of real values, usually representing a set of observations,  (x<sub>1</sub>, x<sub>2</sub>, &#x2026; ,x<sub>n</sub>) , the <i>harmonic mean</i> is defined as
@@ -699,8 +699,8 @@ Given a set of real values, usually representing a set of observations,  (x<sub>
 \end{equation}
 </div>
 
-<div id="outline-container-orge917f55" class="outline-3">
-<h3 id="orge917f55"><span class="section-number-3">4.1</span> Implementing the harmonic mean in R</h3>
+<div id="outline-container-org1dfe150" class="outline-3">
+<h3 id="org1dfe150"><span class="section-number-3">4.1</span> Implementing the harmonic mean in R</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 This is a example of how to define new functions in <code>R</code>, in this case, we will define the function <code>harmonic.mean</code> as follows:
@@ -720,13 +720,13 @@ vector variable.
 </div>
 </div>
 
-<div id="outline-container-org3231f04" class="outline-3">
-<h3 id="org3231f04"><span class="section-number-3">4.2</span> <span class="todo TODO">TODO</span> : create the file <code>my_functions.R</code> and with the definition of the harmonic.mean function. You can keep this file to add the new functions you will be creating.</h3>
+<div id="outline-container-org1dd1680" class="outline-3">
+<h3 id="org1dd1680"><span class="section-number-3">4.2</span> <span class="todo TODO">TODO</span> : create the file <code>my_functions.R</code> and with the definition of the harmonic.mean function. You can keep this file to add the new functions you will be creating.</h3>
 </div>
 </div>
 
-<div id="outline-container-org7b81b4c" class="outline-2">
-<h2 id="org7b81b4c"><span class="section-number-2">5</span> Weighted mean (WM)</h2>
+<div id="outline-container-org71925b3" class="outline-2">
+<h2 id="org71925b3"><span class="section-number-2">5</span> Weighted mean (WM)</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Given a set of real values, usually representing a set of observations,  (x<sub>1</sub>, x<sub>2</sub>, &#x2026; ,x<sub>n</sub>) with assosiated weigths (w<sub>1</sub>, w<sub>2</sub>, &#x2026; ,w<sub>n</sub>), the <i>weighted mean</i> is defined as
@@ -738,8 +738,8 @@ Given a set of real values, usually representing a set of observations,  (x<sub>
 </div>
 
 
-<div id="outline-container-org27e9df5" class="outline-3">
-<h3 id="org27e9df5"><span class="section-number-3">5.1</span> Geometric Interpretation</h3>
+<div id="outline-container-org87b35a5" class="outline-3">
+<h3 id="org87b35a5"><span class="section-number-3">5.1</span> Geometric Interpretation</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 A well known inequality concerning arithmetic, geometric, and harmonic means for any set of positive numbers is
@@ -758,8 +758,8 @@ Geometric proof without words can be found here <a href="https://en.wikipedia.or
 
 
 
-<div id="outline-container-org1f3330e" class="outline-2">
-<h2 id="org1f3330e"><span class="section-number-2">6</span> Mode</h2>
+<div id="outline-container-org1b634bc" class="outline-2">
+<h2 id="org1b634bc"><span class="section-number-2">6</span> Mode</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 The mode is the most frequently occurring value a in data set.
@@ -772,8 +772,8 @@ It is possible to have more than one modal value.
 </div>
 
 
-<div id="outline-container-org5404a36" class="outline-2">
-<h2 id="org5404a36"><span class="section-number-2">7</span> Median</h2>
+<div id="outline-container-orga5a599e" class="outline-2">
+<h2 id="orga5a599e"><span class="section-number-2">7</span> Median</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Middle value separating the greater and lesser halves of a data set 
@@ -799,8 +799,8 @@ On the other hand if the data set is: 5, 11, 1, 3, 15, 20, then
 </div>
 </div>
 
-<div id="outline-container-org9fc618c" class="outline-2">
-<h2 id="org9fc618c"><span class="section-number-2">8</span> Minimum and maximum</h2>
+<div id="outline-container-org2fb7432" class="outline-2">
+<h2 id="org2fb7432"><span class="section-number-2">8</span> Minimum and maximum</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 The minumum and maximum value in a set of observed values and its comparison, is a first approach for the analysis of the dispersion of the data.
@@ -814,8 +814,8 @@ Range = max - min.
 </div>
 
 
-<div id="outline-container-org77e7040" class="outline-2">
-<h2 id="org77e7040"><span class="section-number-2">9</span> Quartiles</h2>
+<div id="outline-container-org6305678" class="outline-2">
+<h2 id="org6305678"><span class="section-number-2">9</span> Quartiles</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 The quartiles are cut points which divides the number of data points into four parts, or quarters, of more-or-less equal size.
@@ -856,8 +856,8 @@ function <code>summary</code>?
 </p>
 </div>
 
-<div id="outline-container-org537c304" class="outline-3">
-<h3 id="org537c304"><span class="section-number-3">9.1</span> Interquartile range</h3>
+<div id="outline-container-orga7ccd6c" class="outline-3">
+<h3 id="orga7ccd6c"><span class="section-number-3">9.1</span> Interquartile range</h3>
 <div class="outline-text-3" id="text-9-1">
 <p>
 The interquartile range is the difference between the third and the first quartile
@@ -872,8 +872,8 @@ The corresponding function in R is: <code>IQR</code>.
 </div>
 </div>
 
-<div id="outline-container-orgbf3d773" class="outline-3">
-<h3 id="orgbf3d773"><span class="section-number-3">9.2</span> Outliers</h3>
+<div id="outline-container-orge44e3bb" class="outline-3">
+<h3 id="orge44e3bb"><span class="section-number-3">9.2</span> Outliers</h3>
 <div class="outline-text-3" id="text-9-2">
 <p>
 It is common to define an outlier to be any observation outside the real interval 
@@ -885,8 +885,8 @@ It is common to define an outlier to be any observation outside the real interva
 </div>
 </div>
 
-<div id="outline-container-org18894c8" class="outline-2">
-<h2 id="org18894c8"><span class="section-number-2">10</span> Variance</h2>
+<div id="outline-container-org13fd910" class="outline-2">
+<h2 id="org13fd910"><span class="section-number-2">10</span> Variance</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 Given a set of real values (x<sub>1</sub>, x<sub>2</sub>, &#x2026; ,x<sub>n</sub>), the "population" <i>variance</i> is defined as 
@@ -908,8 +908,8 @@ s_X^{2}={\frac{1}{n-1}}\sum_{i=1}^{n}\left(x_{i}-{\overline{x}}\right)^{2}.
 </div>
 
 
-<div id="outline-container-orgad4b1cd" class="outline-2">
-<h2 id="orgad4b1cd"><span class="section-number-2">11</span> Probability space</h2>
+<div id="outline-container-orgc6cc456" class="outline-2">
+<h2 id="orgc6cc456"><span class="section-number-2">11</span> Probability space</h2>
 <div class="outline-text-2" id="text-11">
 <p>
 A probability space is a special case of a measurable space. This concepts are beyond the scope of this course, but it is worth trying to understand the definition.
@@ -984,8 +984,8 @@ This triplet \((X, \mathcal{B}, \mu)\) is an example of a probability space on s
 </div>
 </div>
 
-<div id="outline-container-orgee1c46e" class="outline-2">
-<h2 id="orgee1c46e"><span class="section-number-2">12</span> Random Variables</h2>
+<div id="outline-container-orgf6f7ab1" class="outline-2">
+<h2 id="orgf6f7ab1"><span class="section-number-2">12</span> Random Variables</h2>
 <div class="outline-text-2" id="text-12">
 <p>
 A random variable \(X\) is a function whose value is a numerical outcome of a random event.
@@ -1038,8 +1038,8 @@ P ⁡ ( X \in S ) = P ⁡ (X^{-1}(S))
 </div>
 
 
-<div id="outline-container-org4cb694b" class="outline-2">
-<h2 id="org4cb694b"><span class="section-number-2">13</span> Cumulative distribution function</h2>
+<div id="outline-container-org6a9c169" class="outline-2">
+<h2 id="org6a9c169"><span class="section-number-2">13</span> Cumulative distribution function</h2>
 <div class="outline-text-2" id="text-13">
 <p>
 For any random variable \(X\), the <b>cumulative distribution</b> function \(F (x)\) is given by
@@ -1067,8 +1067,8 @@ Properties:
 </div>
 
 
-<div id="outline-container-org8d4727c" class="outline-2">
-<h2 id="org8d4727c"><span class="section-number-2">14</span> Probability density function</h2>
+<div id="outline-container-orga46d5d5" class="outline-2">
+<h2 id="orga46d5d5"><span class="section-number-2">14</span> Probability density function</h2>
 <div class="outline-text-2" id="text-14">
 <p>
 In the next sections we will consider \(\Omega = \mathbb{R}\), \(\mathcal{B}\) the Borel &sigma;-algebra, and \(P\) a probability measure.
@@ -1104,8 +1104,8 @@ If \(f\) is a probability density function then
 </div>
 </div>
 
-<div id="outline-container-org2432d48" class="outline-2">
-<h2 id="org2432d48"><span class="section-number-2">15</span> Probabilities</h2>
+<div id="outline-container-orge71b876" class="outline-2">
+<h2 id="orge71b876"><span class="section-number-2">15</span> Probabilities</h2>
 <div class="outline-text-2" id="text-15">
 <p>
 For any pair of real numbers such that \(a \leq b\), the probability that the random variable \(X\) lies between \(a\) and \(b\) is 
@@ -1117,8 +1117,8 @@ P(a \leq X \leq b) = P(X \leq b) - P( X \leq a) = F(b) - F(a) =  \int_{a}^{b} f(
 </div>
 </div>
 
-<div id="outline-container-org8f50ee5" class="outline-2">
-<h2 id="org8f50ee5"><span class="section-number-2">16</span> Mean and variance revisited.</h2>
+<div id="outline-container-orgc7cc0ae" class="outline-2">
+<h2 id="orgc7cc0ae"><span class="section-number-2">16</span> Mean and variance revisited.</h2>
 <div class="outline-text-2" id="text-16">
 <p>
 Population mean or expectation of a continuous random variable X is defined as
@@ -1168,8 +1168,8 @@ Proposition: Let \(a, b, c\) be constant real numbers, and \(X\), \(Y\) be rando
 
 
 
-<div id="outline-container-org044b3b6" class="outline-2">
-<h2 id="org044b3b6"><span class="section-number-2">17</span> The normal distribution</h2>
+<div id="outline-container-org63c87e1" class="outline-2">
+<h2 id="org63c87e1"><span class="section-number-2">17</span> The normal distribution</h2>
 <div class="outline-text-2" id="text-17">
 <p>
 For real values \(-\infty \leq x \leq \infty\), \(-\infty \leq \mu \leq \infty\) and  \(0 \leq \sigma \leq \infty\), the normal distribution has probability density function:
@@ -1293,8 +1293,8 @@ So the answer to our first question (the shaded area, top left) is just over 10%
 </div>
 
 
-<div id="outline-container-org4122a95" class="outline-2">
-<h2 id="org4122a95"><span class="section-number-2">18</span> The Bernoulli distribution</h2>
+<div id="outline-container-orgf4bc394" class="outline-2">
+<h2 id="orgf4bc394"><span class="section-number-2">18</span> The Bernoulli distribution</h2>
 <div class="outline-text-2" id="text-18">
 <p>
 This is the probability distribution  a binary random variable \(X\). The response takes one of only two
@@ -1318,15 +1318,15 @@ Verify that
 </div>
 
 
-<div id="outline-container-org9bd8e08" class="outline-2">
-<h2 id="org9bd8e08"><span class="section-number-2">19</span> The binomial distribution</h2>
+<div id="outline-container-org4d29bc9" class="outline-2">
+<h2 id="org4d29bc9"><span class="section-number-2">19</span> The binomial distribution</h2>
 <div class="outline-text-2" id="text-19">
 <p>
 The general form of the density of the  binomial distribution is given by
 </p>
 
 \begin{equation}
-f(k) =  \binom{n}{k} p^{k} (1 - p  )^k.
+f(k) =  \binom{n}{k} p^{k} (1 - p  )^{n-k}.
 \end{equation}
 
 
@@ -1366,7 +1366,7 @@ Suppose a biased coin comes up heads with probability 0.3 when tossed. The proba
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Daniel Ballesteros-Chávez</p>
-<p class="date">Created: 2022-10-11 Tue 15:38</p>
+<p class="date">Created: 2022-10-12 Wed 20:04</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
