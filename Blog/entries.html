@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-09-26 Mon 19:19 -->
+<!-- 2022-11-23 Wed 21:23 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Entries</title>
@@ -196,6 +196,10 @@
 <link rel="stylesheet" type="text/css" href="./css/dark.css"/>
 <div id="preamble" class="status"><a href=./index.html>About </a><a href=./entries.html>Entries </a></div>
 <style>
+.xmpl {background-color: #404040; padding: 10px 20px 10px 20px; }
+.xmpl:before { font-weight: bold}
+</style>
+<style>
 .mydef  {
 color:  #404040;
 border: 1px solid #404040;
@@ -386,21 +390,106 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org31c1428">Existence if Isothermal Coordinates.</a></li>
-<li><a href="#org71cbd8b">Example of a non-integrable plane field in \(\mathbb{R}^3\).</a></li>
-<li><a href="#org5c3926f">The Geometry of the support function</a></li>
-<li><a href="#org7eee42d">Brownian Motion and Harmonic Functions</a></li>
-<li><a href="#org7f52653">Alexandrov's Moving Planes</a></li>
-<li><a href="#org32175f3">Existence of Geodesics With a Heat Flow.</a></li>
-<li><a href="#org633d9c0">Geometry of hypersurfaces.</a></li>
+<li><a href="#org993dc1c">Example of Bootstrap and Schauder estimates</a></li>
+<li><a href="#org3654326">Existence if Isothermal Coordinates.</a></li>
+<li><a href="#org093925e">Example of a non-integrable plane field in \(\mathbb{R}^3\).</a></li>
+<li><a href="#org0480340">The Geometry of the support function</a></li>
+<li><a href="#orga6ecf01">Brownian Motion and Harmonic Functions</a></li>
+<li><a href="#orgfdf0c2b">Alexandrov's Moving Planes</a></li>
+<li><a href="#org8c791c0">Existence of Geodesics With a Heat Flow.</a></li>
+<li><a href="#org98aebc3">Geometry of hypersurfaces.</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-org31c1428" class="outline-2">
-<h2 id="org31c1428">Existence if Isothermal Coordinates.</h2>
-<div class="outline-text-2" id="text-org31c1428">
+<div id="outline-container-org993dc1c" class="outline-2">
+<h2 id="org993dc1c">Example of Bootstrap and Schauder estimates</h2>
+<div class="outline-text-2" id="text-org993dc1c">
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2022-11-23 Wed]</time> </div>
+</div>
+
+<p>
+In the variational approach, harmonic functions can be understood as local minimisers
+of the Dirichlet energy functional. Then \(u\) is harmonic in a domain \(\Omega\) if
+it is a minimiser of the functional
+</p>
+\begin{equation}
+E(v) = \int_{\Omega} |\nabla v|^2 dx.
+\end{equation}
+
+<p>
+In a more general case we may want to understand minimiser \(u\) of the integral
+</p>
+\begin{equation}
+E(u) = \int_{\Omega} \mathcal{F}(\nabla u) dx,
+\end{equation}
+<p>
+where \(\mathcal{F}:\mathbb{R}^n \to \mathbb{R}\). Then, the Euler-Lagrange equation for the minimiser takes the form
+</p>
+\begin{equation}
+D_{i} F^{i}(\nabla u) = 0.
+\end{equation}
+<p>
+Here one should read
+</p>
+\begin{equation}
+D_{i} = \frac{\partial}{\partial x_{i}},
+\end{equation}
+<p>
+and for \(p = (p_1, \ldots, p_{n})\in \mathbb{R}^n\),
+</p>
+\begin{equation}
+F^{i}(\nabla u) = \left.\frac{\partial \mathcal{F}}{\partial p_{i}}\right|_{p = \nabla u}.
+\end{equation}
+
+<p>
+Then we can write
+</p>
+\begin{equation}
+D_{i} F^{i}(\nabla u)  = F^{i,j}(\nabla u) D_{ij}u = b^{ij}D_{ij}u = 0.
+\end{equation}
+
+<p>
+ \(\mathcal{F}\) may be assumed to be smooth and, in order to put this into the frame of linear elliptic equations, 
+ strictly convex, i.e. \(F^{i,j}\) (and hence \(b^{ij}\)) to be positive definite. In principle it is possible to 
+assume that \(\nabla u \in L^2\).
+</p>
+
+<p>
+If we could show that \(\nabla u\) is Hölder continuous (or equivalently that \(u\) is \(C^{1,\alpha}\)) then 
+<i>the elliptic regularity</i> and the <i>Schauder estimates</i> for linear equations would imply that \(u\) is \(C^{\infty}\).
+</p>
+
+<div class="xmpl">
+<p>
+<b>The bootstrap argument</b>: If \(\nabla u \in C^{\alpha}\), then the coefficients of the equation
+</p>
+\begin{equation}
+b^{ij}D_{ij}u = 0
+\end{equation}
+<p>
+are in \(C^{\alpha}\). In the standard theory of linear elliptic equations the Schauder estimates imply that the solution \(u\) is in \(C^{2,\alpha}\).
+But then, this improves the regularity of the gradients, i.e., \(\nabla u \in C^{1,\alpha}\). It is possible to 
+differentiate the equation and see that any directional derivative  \(D_{v}u\) satisfy another linear equation
+with \(C^{\alpha}\) coefficients, which in turns shows that \(\nabla u \in C^{2,\alpha}\), this is \(u\in C^{3,\alpha}\). Then by
+differentiating the equation&#x2026;. \(u\) is smooth.
+</p>
+
+</div>
+
+<p>
+The passage from \(\nabla u \in L^2\) to \(\nabla u \in C^{\alpha}\) is due to the outstanding development of the
+now call <b>De Georgi-Nash-Moser theorem</b> for equations in divergence form.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3654326" class="outline-2">
+<h2 id="org3654326">Existence if Isothermal Coordinates.</h2>
+<div class="outline-text-2" id="text-org3654326">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2022-09-26 Mon]</time> </div>
@@ -492,9 +581,9 @@ it is called an independent set at the point \(m\) if the differentials
 </div>
 </div>
 
-<div id="outline-container-org71cbd8b" class="outline-2">
-<h2 id="org71cbd8b">Example of a non-integrable plane field in \(\mathbb{R}^3\).</h2>
-<div class="outline-text-2" id="text-org71cbd8b">
+<div id="outline-container-org093925e" class="outline-2">
+<h2 id="org093925e">Example of a non-integrable plane field in \(\mathbb{R}^3\).</h2>
+<div class="outline-text-2" id="text-org093925e">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2022-02-23 Wed]</time> </div>
@@ -550,7 +639,7 @@ spaces at each point is a proper subspace of the given hypersurfaces.
 </p>
 
 
-<div id="org65c92e8" class="figure">
+<div id="orgb1380cd" class="figure">
 <p><img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAe8AAAFqCAYAAAAz9NKmAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA
 GXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAIABJREFUeJzs3Xd8FHX+P/D3lJ3t
 u9nNhhQIIAmQQAhFilTppwgIgnLYBQXLFX935919r3n3vft+z69XLOcVCzawASpNKaLSDCC9BpAS
@@ -986,9 +1075,9 @@ FKL93IQQQghJUj8B8Aaiy6ASQgghJMn9D2wYsqtwICI4AAAAAElFTkSuQmCC"drawing-1.png />
 
 
 
-<div id="outline-container-org5c3926f" class="outline-2">
-<h2 id="org5c3926f">The Geometry of the support function</h2>
-<div class="outline-text-2" id="text-org5c3926f">
+<div id="outline-container-org0480340" class="outline-2">
+<h2 id="org0480340">The Geometry of the support function</h2>
+<div class="outline-text-2" id="text-org0480340">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2020-08-31 Mon]</time> </div>
@@ -1033,7 +1122,7 @@ the support function is clearly the distance from the origin of \(R^{n+1}\) to t
 </p>
 
 
-<div id="orgc78cea3" class="figure">
+<div id="org5efcd2d" class="figure">
 <p><img  src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAWgBaAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
 CwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU
 FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wgARCAHGAfQDAREA
@@ -1616,9 +1705,9 @@ g1mEkLJExLjyAggxBCMTf2OS9evCUs8F49xyWbNFIhMwPwbFBJ4EljCMqIxOqhJFsle5X1T5r6p8
 </div>
 
 
-<div id="outline-container-org7eee42d" class="outline-2">
-<h2 id="org7eee42d">Brownian Motion and Harmonic Functions</h2>
-<div class="outline-text-2" id="text-org7eee42d">
+<div id="outline-container-orga6ecf01" class="outline-2">
+<h2 id="orga6ecf01">Brownian Motion and Harmonic Functions</h2>
+<div class="outline-text-2" id="text-orga6ecf01">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2019-10-23 Wed]</time> </div>
@@ -1674,9 +1763,9 @@ and consequently is a solution of the following Dirichlet problem:
 
 
 
-<div id="outline-container-org7f52653" class="outline-2">
-<h2 id="org7f52653">Alexandrov's Moving Planes</h2>
-<div class="outline-text-2" id="text-org7f52653">
+<div id="outline-container-orgfdf0c2b" class="outline-2">
+<h2 id="orgfdf0c2b">Alexandrov's Moving Planes</h2>
+<div class="outline-text-2" id="text-orgfdf0c2b">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2019-10-22 Tue]</time> </div>
@@ -1695,9 +1784,9 @@ It is also known that J. Serring used this method
 </div>
 </div>
 
-<div id="outline-container-org32175f3" class="outline-2">
-<h2 id="org32175f3">Existence of Geodesics With a Heat Flow.</h2>
-<div class="outline-text-2" id="text-org32175f3">
+<div id="outline-container-org8c791c0" class="outline-2">
+<h2 id="org8c791c0">Existence of Geodesics With a Heat Flow.</h2>
+<div class="outline-text-2" id="text-org8c791c0">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2019-05-14 Tue]</time> </div>
@@ -1764,9 +1853,9 @@ u(s,0)& = \gamma(s) & \,\, s\in S^1.
 \end{equation}
 </div>
 
-<div id="outline-container-org8c963b3" class="outline-3">
-<h3 id="org8c963b3">The Heat Flow Method</h3>
-<div class="outline-text-3" id="text-org8c963b3">
+<div id="outline-container-org563a79d" class="outline-3">
+<h3 id="org563a79d">The Heat Flow Method</h3>
+<div class="outline-text-3" id="text-org563a79d">
 <p>
 Now we write  the method to obtain the geodesic as outlined by 
 J. Jost in his  <i>Riemannian Geometry and Geometric Analysis</i>.
@@ -1833,9 +1922,9 @@ then
 </div>
 </div>
 
-<div id="outline-container-org633d9c0" class="outline-2">
-<h2 id="org633d9c0">Geometry of hypersurfaces.</h2>
-<div class="outline-text-2" id="text-org633d9c0">
+<div id="outline-container-org98aebc3" class="outline-2">
+<h2 id="org98aebc3">Geometry of hypersurfaces.</h2>
+<div class="outline-text-2" id="text-org98aebc3">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2019-05-16 Thu]</time> </div>
@@ -1939,9 +2028,9 @@ eigenvalues of the matrix \((A^i_j)\).
 </p>
 </div>
 
-<div id="outline-container-orgd1e25fa" class="outline-3">
-<h3 id="orgd1e25fa">Example: Hypersurfaces as graphs in Euclidean space.</h3>
-<div class="outline-text-3" id="text-orgd1e25fa">
+<div id="outline-container-orgfa7c0a5" class="outline-3">
+<h3 id="orgfa7c0a5">Example: Hypersurfaces as graphs in Euclidean space.</h3>
+<div class="outline-text-3" id="text-orgfa7c0a5">
 <p>
 Consider that \(\Sigma\subset\mathbb{R}^{n+1}\) is parametrised as the
 graph of a smooth function \(f:\mathbb{R}^n\to\mathbb{R}\). Then at any point \(p\in\Sigma\)
@@ -2010,7 +2099,7 @@ then the shape operator is given by
 <div id="postamble" class="status">
 <p class="date">Date: 2019-04-30 Tue 00:00</p>
 <p class="author">Author: daniel b</p>
-<p class="date">Created: 2022-09-26 Mon 19:19</p>
+<p class="date">Created: 2022-11-23 Wed 21:23</p>
 <p class="creator">Emacs 24.5.1 (Org mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
