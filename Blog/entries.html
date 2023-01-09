@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-11-29 Tue 13:31 -->
+<!-- 2022-12-17 Sat 12:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Entries</title>
@@ -390,23 +390,87 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org528e429">What spherical harmonics are not</a></li>
-<li><a href="#orgc0524a3">Example of Bootstrap and Schauder estimates</a></li>
-<li><a href="#orgf3e0a89">Existence if Isothermal Coordinates.</a></li>
-<li><a href="#org7c7556b">Example of a non-integrable plane field in \(\mathbb{R}^3\).</a></li>
-<li><a href="#org491f87c">The Geometry of the support function</a></li>
-<li><a href="#org7e944bc">Brownian Motion and Harmonic Functions</a></li>
-<li><a href="#orgef185be">Alexandrov's Moving Planes</a></li>
-<li><a href="#org498b0c2">Existence of Geodesics With a Heat Flow.</a></li>
-<li><a href="#orgf382e10">Geometry of hypersurfaces.</a></li>
+<li><a href="#orgc2edef2"></a></li>
+<li><a href="#org87b46f3">What spherical harmonics are not</a></li>
+<li><a href="#org475d260">Example of Bootstrap and Schauder estimates</a></li>
+<li><a href="#org3100b65">Existence if Isothermal Coordinates.</a></li>
+<li><a href="#org48ba483">Example of a non-integrable plane field in \(\mathbb{R}^3\).</a></li>
+<li><a href="#org76ec547">The Geometry of the support function</a></li>
+<li><a href="#org6a2a30a">Brownian Motion and Harmonic Functions</a></li>
+<li><a href="#orgda1a744">Alexandrov's Moving Planes</a></li>
+<li><a href="#org865913a">Existence of Geodesics With a Heat Flow.</a></li>
+<li><a href="#org4b64eb5">Geometry of hypersurfaces.</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-org528e429" class="outline-2">
-<h2 id="org528e429">What spherical harmonics are not</h2>
-<div class="outline-text-2" id="text-org528e429">
+<div id="outline-container-orgc2edef2" class="outline-2">
+<h2 id="orgc2edef2"></h2>
+<div class="outline-text-2" id="text-orgc2edef2">
+<div class="post-details">
+<div class="post-author">Posted by:  Daniel B.</div>
+<div class="post-date"><time>[2022-11-29 Tue]</time> </div>
+</div>
+
+<p>
+Killing vector fields on a Riemannian manifold \((M,g)\) are defined in terms of the Levi-Civita connection as
+</p>
+\begin{equation}
+g\left(\nabla_{Y}X, Z \right) + g\left(Y, \nabla_{Z}X \right)=0,
+\end{equation}
+<p>
+for all vectors \(Y\) and \(Z\).
+</p>
+
+<p>
+In local coordinates we can write
+</p>
+\begin{equation}
+X = a^i\partial_i,
+\end{equation}
+\begin{equation}
+Y = b^j\partial_j.
+\end{equation}
+\begin{equation}
+Z = c^k\partial_k.
+\end{equation}
+
+<p>
+Then 
+</p>
+\begin{equation}
+\nabla_{Y}X = b^j\nabla_{j}(a^i\partial_{i}) = b^j\frac{\partial a^i}{\partial x_{j}} \partial_{i} + a^ib^j \Gamma_{ij}^r\partial_{r}
+= b^j\frac{\partial a^r}{\partial x_{j}} \partial_{r} + a^ib^j \Gamma_{ij}^r\partial_{r}
+= \left(b^j\frac{\partial a^r}{\partial x_{j}}  + a^ib^j \Gamma_{ij}^r \right)\partial_{r}
+= \left(Y(a^r)  + a^ib^j \Gamma_{ij}^r \right)\partial_{r}
+\end{equation}
+<p>
+hence
+</p>
+\begin{equation}
+g\left(\nabla_{Y}X, Z \right) = c^{k}\left(b^j\frac{\partial a^r}{\partial x_{j}}  + a^ib^j \Gamma_{ij}^r \right)g_{rk}
+\end{equation}
+<p>
+and
+</p>
+\begin{equation}
+g\left(\nabla_{Z}X, Y \right) = b^{j}\left(c^k\frac{\partial a^r}{\partial x_{k}}  + a^ic^k \Gamma_{ik}^r \right)g_{rj}
+\end{equation}
+
+<p>
+What are the killing vector fields in a flat manifold?
+</p>
+\begin{equation}
+0= c^{k}b^j\frac{\partial a^r}{\partial x_{j}}g_{rk} +  b^{j}c^k\frac{\partial a^r}{\partial x_{k}}g_{rj}
+\end{equation}
+</div>
+</div>
+
+
+<div id="outline-container-org87b46f3" class="outline-2">
+<h2 id="org87b46f3">What spherical harmonics are not</h2>
+<div class="outline-text-2" id="text-org87b46f3">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2022-11-29 Tue]</time> </div>
@@ -431,9 +495,9 @@ Laplace-Beltrami operator"
 </p>
 </div>
 </div>
-<div id="outline-container-orgc0524a3" class="outline-2">
-<h2 id="orgc0524a3">Example of Bootstrap and Schauder estimates</h2>
-<div class="outline-text-2" id="text-orgc0524a3">
+<div id="outline-container-org475d260" class="outline-2">
+<h2 id="org475d260">Example of Bootstrap and Schauder estimates</h2>
+<div class="outline-text-2" id="text-org475d260">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2022-11-23 Wed]</time> </div>
@@ -515,9 +579,9 @@ now call <b>De Georgi-Nash-Moser theorem</b> for equations in divergence form.
 </div>
 </div>
 
-<div id="outline-container-orgf3e0a89" class="outline-2">
-<h2 id="orgf3e0a89">Existence if Isothermal Coordinates.</h2>
-<div class="outline-text-2" id="text-orgf3e0a89">
+<div id="outline-container-org3100b65" class="outline-2">
+<h2 id="org3100b65">Existence if Isothermal Coordinates.</h2>
+<div class="outline-text-2" id="text-org3100b65">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2022-09-26 Mon]</time> </div>
@@ -609,9 +673,9 @@ it is called an independent set at the point \(m\) if the differentials
 </div>
 </div>
 
-<div id="outline-container-org7c7556b" class="outline-2">
-<h2 id="org7c7556b">Example of a non-integrable plane field in \(\mathbb{R}^3\).</h2>
-<div class="outline-text-2" id="text-org7c7556b">
+<div id="outline-container-org48ba483" class="outline-2">
+<h2 id="org48ba483">Example of a non-integrable plane field in \(\mathbb{R}^3\).</h2>
+<div class="outline-text-2" id="text-org48ba483">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2022-02-23 Wed]</time> </div>
@@ -667,7 +731,7 @@ spaces at each point is a proper subspace of the given hypersurfaces.
 </p>
 
 
-<div id="org980b93b" class="figure">
+<div id="org9ed8aa2" class="figure">
 <p><img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAe8AAAFqCAYAAAAz9NKmAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAA
 GXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAIABJREFUeJzs3Xd8FHX+P/D3lJ3t
 u9nNhhQIIAmQQAhFilTppwgIgnLYBQXLFX935919r3n3vft+z69XLOcVCzawASpNKaLSDCC9BpAS
@@ -1103,9 +1167,9 @@ FKL93IQQQghJUj8B8Aaiy6ASQgghJMn9D2wYsqtwICI4AAAAAElFTkSuQmCC"drawing-1.png />
 
 
 
-<div id="outline-container-org491f87c" class="outline-2">
-<h2 id="org491f87c">The Geometry of the support function</h2>
-<div class="outline-text-2" id="text-org491f87c">
+<div id="outline-container-org76ec547" class="outline-2">
+<h2 id="org76ec547">The Geometry of the support function</h2>
+<div class="outline-text-2" id="text-org76ec547">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2020-08-31 Mon]</time> </div>
@@ -1150,7 +1214,7 @@ the support function is clearly the distance from the origin of \(R^{n+1}\) to t
 </p>
 
 
-<div id="org2daff65" class="figure">
+<div id="orgd7dc8a6" class="figure">
 <p><img  src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQEAWgBaAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsK
 CwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQU
 FBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wgARCAHGAfQDAREA
@@ -1733,9 +1797,9 @@ g1mEkLJExLjyAggxBCMTf2OS9evCUs8F49xyWbNFIhMwPwbFBJ4EljCMqIxOqhJFsle5X1T5r6p8
 </div>
 
 
-<div id="outline-container-org7e944bc" class="outline-2">
-<h2 id="org7e944bc">Brownian Motion and Harmonic Functions</h2>
-<div class="outline-text-2" id="text-org7e944bc">
+<div id="outline-container-org6a2a30a" class="outline-2">
+<h2 id="org6a2a30a">Brownian Motion and Harmonic Functions</h2>
+<div class="outline-text-2" id="text-org6a2a30a">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2019-10-23 Wed]</time> </div>
@@ -1791,9 +1855,9 @@ and consequently is a solution of the following Dirichlet problem:
 
 
 
-<div id="outline-container-orgef185be" class="outline-2">
-<h2 id="orgef185be">Alexandrov's Moving Planes</h2>
-<div class="outline-text-2" id="text-orgef185be">
+<div id="outline-container-orgda1a744" class="outline-2">
+<h2 id="orgda1a744">Alexandrov's Moving Planes</h2>
+<div class="outline-text-2" id="text-orgda1a744">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2019-10-22 Tue]</time> </div>
@@ -1812,9 +1876,9 @@ It is also known that J. Serring used this method
 </div>
 </div>
 
-<div id="outline-container-org498b0c2" class="outline-2">
-<h2 id="org498b0c2">Existence of Geodesics With a Heat Flow.</h2>
-<div class="outline-text-2" id="text-org498b0c2">
+<div id="outline-container-org865913a" class="outline-2">
+<h2 id="org865913a">Existence of Geodesics With a Heat Flow.</h2>
+<div class="outline-text-2" id="text-org865913a">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2019-05-14 Tue]</time> </div>
@@ -1881,9 +1945,9 @@ u(s,0)& = \gamma(s) & \,\, s\in S^1.
 \end{equation}
 </div>
 
-<div id="outline-container-orgf87a245" class="outline-3">
-<h3 id="orgf87a245">The Heat Flow Method</h3>
-<div class="outline-text-3" id="text-orgf87a245">
+<div id="outline-container-org52bd729" class="outline-3">
+<h3 id="org52bd729">The Heat Flow Method</h3>
+<div class="outline-text-3" id="text-org52bd729">
 <p>
 Now we write  the method to obtain the geodesic as outlined by 
 J. Jost in his  <i>Riemannian Geometry and Geometric Analysis</i>.
@@ -1950,9 +2014,9 @@ then
 </div>
 </div>
 
-<div id="outline-container-orgf382e10" class="outline-2">
-<h2 id="orgf382e10">Geometry of hypersurfaces.</h2>
-<div class="outline-text-2" id="text-orgf382e10">
+<div id="outline-container-org4b64eb5" class="outline-2">
+<h2 id="org4b64eb5">Geometry of hypersurfaces.</h2>
+<div class="outline-text-2" id="text-org4b64eb5">
 <div class="post-details">
 <div class="post-author">Posted by:  Daniel B.</div>
 <div class="post-date"><time>[2019-05-16 Thu]</time> </div>
@@ -2056,9 +2120,9 @@ eigenvalues of the matrix \((A^i_j)\).
 </p>
 </div>
 
-<div id="outline-container-orga8f5f06" class="outline-3">
-<h3 id="orga8f5f06">Example: Hypersurfaces as graphs in Euclidean space.</h3>
-<div class="outline-text-3" id="text-orga8f5f06">
+<div id="outline-container-org13576ba" class="outline-3">
+<h3 id="org13576ba">Example: Hypersurfaces as graphs in Euclidean space.</h3>
+<div class="outline-text-3" id="text-org13576ba">
 <p>
 Consider that \(\Sigma\subset\mathbb{R}^{n+1}\) is parametrised as the
 graph of a smooth function \(f:\mathbb{R}^n\to\mathbb{R}\). Then at any point \(p\in\Sigma\)
@@ -2127,7 +2191,7 @@ then the shape operator is given by
 <div id="postamble" class="status">
 <p class="date">Date: 2019-04-30 Tue 00:00</p>
 <p class="author">Author: daniel b</p>
-<p class="date">Created: 2022-11-29 Tue 13:31</p>
+<p class="date">Created: 2022-12-17 Sat 12:27</p>
 <p class="creator">Emacs 24.5.1 (Org mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
