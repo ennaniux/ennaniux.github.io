@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2022-06-20 Mon 08:16 -->
+<!-- 2023-03-27 Mon 15:59 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Notes for Introduction to Complex Analysis</title>
@@ -365,18 +365,18 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7f64ef6">1. Sequences and limits</a></li>
-<li><a href="#org513bb2b">2. Continuity</a></li>
-<li><a href="#orgb1a1bcd">3. Basic topology of \(\mathbb{C}\)</a></li>
-<li><a href="#org477210a">4. Derivatives</a></li>
-<li><a href="#orgc26cb3e">5. Cauchy-Riemann Equations</a></li>
-<li><a href="#org9c0611d">6. Some consequences of the Cauchy-Riemann Equations</a></li>
-<li><a href="#orgc7153fc">7. Harmonic Functions</a></li>
-<li><a href="#org9702a5b">8. Conformal Mappings</a></li>
-<li><a href="#org2953f63">9. Cauchy's Theorem and Cauchy's Integral Formula</a></li>
-<li><a href="#orgdb8555f">10. Laurent Series and Residue Theorem</a>
+<li><a href="#org35eff55">1. Sequences and limits</a></li>
+<li><a href="#orgdbfb260">2. Continuity</a></li>
+<li><a href="#orgd50ec4d">3. Basic topology of \(\mathbb{C}\)</a></li>
+<li><a href="#org31f3c75">4. Derivatives</a></li>
+<li><a href="#org67a9148">5. Cauchy-Riemann Equations</a></li>
+<li><a href="#orgc18974a">6. Some consequences of the Cauchy-Riemann Equations</a></li>
+<li><a href="#org46f7638">7. Harmonic Functions</a></li>
+<li><a href="#org1f85a99">8. Conformal Mappings</a></li>
+<li><a href="#org21964df">9. Cauchy's Theorem and Cauchy's Integral Formula</a></li>
+<li><a href="#org8f2c3ed">10. Laurent Series and Residue Theorem</a>
 <ul>
-<li><a href="#org10b915e">10.1. <span class="todo TODO">TODO</span> improve this definition</a></li>
+<li><a href="#org9b80663">10.1. <span class="todo TODO">TODO</span> improve this definition</a></li>
 </ul>
 </li>
 </ul>
@@ -384,8 +384,8 @@ for the JavaScript code in this tag.
 </div>
 
 
-<div id="outline-container-org7f64ef6" class="outline-2">
-<h2 id="org7f64ef6"><span class="section-number-2">1</span> Sequences and limits</h2>
+<div id="outline-container-org35eff55" class="outline-2">
+<h2 id="org35eff55"><span class="section-number-2">1</span> Sequences and limits</h2>
 <div class="outline-text-2" id="text-1">
 <div class="mydef">
 <p>
@@ -604,8 +604,8 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 </div>
 
 
-<div id="outline-container-org513bb2b" class="outline-2">
-<h2 id="org513bb2b"><span class="section-number-2">2</span> Continuity</h2>
+<div id="outline-container-orgdbfb260" class="outline-2">
+<h2 id="orgdbfb260"><span class="section-number-2">2</span> Continuity</h2>
 <div class="outline-text-2" id="text-2">
 <div class="mydef">
 <p>
@@ -719,8 +719,8 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 </div>
 </div>
 
-<div id="outline-container-orgb1a1bcd" class="outline-2">
-<h2 id="orgb1a1bcd"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
+<div id="outline-container-orgd50ec4d" class="outline-2">
+<h2 id="orgd50ec4d"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
@@ -1130,8 +1130,8 @@ which its a contradiction itself. Consequently \(f\) is uniformly continuous in 
 </div>
 </div>
 
-<div id="outline-container-org477210a" class="outline-2">
-<h2 id="org477210a"><span class="section-number-2">4</span> Derivatives</h2>
+<div id="outline-container-org31f3c75" class="outline-2">
+<h2 id="org31f3c75"><span class="section-number-2">4</span> Derivatives</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
@@ -1322,8 +1322,8 @@ a_{2} &  a_{1}\\
 
 
 
-<div id="outline-container-orgc26cb3e" class="outline-2">
-<h2 id="orgc26cb3e"><span class="section-number-2">5</span> Cauchy-Riemann Equations</h2>
+<div id="outline-container-org67a9148" class="outline-2">
+<h2 id="org67a9148"><span class="section-number-2">5</span> Cauchy-Riemann Equations</h2>
 <div class="outline-text-2" id="text-5">
 <div class="thm">
 <p>
@@ -1439,8 +1439,8 @@ Let \(f:\mathbb{C}\to \mathbb{C}\) be defined as
 \end{array} \right. \]
 The function \(f\) is not complex differentiable at \(z=0\). Let \(z = x\), with \(x \to 0\). Then
 \[ \lim_{z\to 0} \frac{f(z)  - f(0)}{z - z_0} = \lim_{x\to 0}\frac{\frac{x^5}{|x|^4}}{x} = \lim_{x \to 0}\frac{x^4}{|x|^4}{x} = 1 .\]
-Now take \(z = i\,y\), with \(y\to 0\) and observe
-\[ \lim_{z\to 0} \frac{f(z)  - f(0)}{z - z_0} = \lim_{y\to 0} \frac{\frac{(iy)^5}{|y|^4}}{y} = \lim_{y\to 0}\frac{-y^5}{|y|^4} = -1 .\]
+Now take \(z = h \left(cos\frac{\pi}{4} + i\ sin\frac{\pi}{4}\right)\), with, \(h\in \mathbb{R}\) and \(h\to 0\). We observe that
+\[ \lim_{z\to 0} \frac{f(z)  - f(0)}{z - z_0} = \lim_{h\to 0} \frac{\frac{h^5\left(cos\frac{\pi}{4} + i\ sin\frac{\pi}{4}\right)}{h^4}}{h \left(cos\frac{\pi}{4} + i\ sin\frac{\pi}{4}\right)} = \lim_{h\to 0} \left(cos\frac{\pi}{4} + i\ sin\frac{\pi}{4}\right)^4  = -1 .\]
 Then we conclude that 
 \[ \lim_{z \to 0} \frac{f(z) - f(0)}{z-0} ,\]
 does not exists.
@@ -1464,8 +1464,8 @@ What is happening here?
 </div>
 </div>
 
-<div id="outline-container-org9c0611d" class="outline-2">
-<h2 id="org9c0611d"><span class="section-number-2">6</span> Some consequences of the Cauchy-Riemann Equations</h2>
+<div id="outline-container-orgc18974a" class="outline-2">
+<h2 id="orgc18974a"><span class="section-number-2">6</span> Some consequences of the Cauchy-Riemann Equations</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Note that if \(f(z)  = u(x,y) + i v(x, y)\) is a complex differentiable function at \(z_0\), when taking the limit of the quitient of differences, it does not matter how \(z \to z_0\) approaches,
@@ -1535,8 +1535,8 @@ It follows from the real case and the mean value theorem (since \(\Omega\) is co
 </div>
 </div>
 
-<div id="outline-container-orgc7153fc" class="outline-2">
-<h2 id="orgc7153fc"><span class="section-number-2">7</span> Harmonic Functions</h2>
+<div id="outline-container-org46f7638" class="outline-2">
+<h2 id="org46f7638"><span class="section-number-2">7</span> Harmonic Functions</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 We already saw in one of the previous exercises that if a function is holomorphic, then the real and imaginari parts satisfy the Laplace equation. Here the statement:
@@ -1606,8 +1606,8 @@ Then the analytic (Holomorphic function) is given by
 </div>
 
 
-<div id="outline-container-org9702a5b" class="outline-2">
-<h2 id="org9702a5b"><span class="section-number-2">8</span> Conformal Mappings</h2>
+<div id="outline-container-org1f85a99" class="outline-2">
+<h2 id="org1f85a99"><span class="section-number-2">8</span> Conformal Mappings</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 In this section we will study curves in the complex plane, and when two curves intersect we will define the notion of angle between the to curves at the intersection point. Mappings from the complex plane into itself that preserve angles will then be considered. Among the basic examples of these kind of mappings are the so called Möbius transformations. Some geometric applicaitons will also be analysed.
@@ -2547,8 +2547,8 @@ Some examples of conformal mappings:
 </ul>
 </div>
 </div>
-<div id="outline-container-org2953f63" class="outline-2">
-<h2 id="org2953f63"><span class="section-number-2">9</span> Cauchy's Theorem and Cauchy's Integral Formula</h2>
+<div id="outline-container-org21964df" class="outline-2">
+<h2 id="org21964df"><span class="section-number-2">9</span> Cauchy's Theorem and Cauchy's Integral Formula</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 <b>The Main assumptions for this section</b>. We will prove the Cauchy theorem assuming that if \(f\) is holomorphic in \(\Omega\), then one of the two situations occur
@@ -2559,7 +2559,7 @@ Some examples of conformal mappings:
 </ul>
 
 <p>
-These are true for any \(f\) holomorphic, and the prove of the first point uses the so called <b>Cauchy-Goursat</b> theorem (at least for rectangles). 
+These are true for any \(f\) holomorphic, and the proof of the first point uses the so called <b>Cauchy-Goursat</b> theorem (at least for rectangles). 
 </p>
 
 
@@ -2857,8 +2857,8 @@ If \(f\) is analytic in a simply connected domain \(\Omega\), then there is a ho
 
 
 
-<div id="outline-container-orgdb8555f" class="outline-2">
-<h2 id="orgdb8555f"><span class="section-number-2">10</span> Laurent Series and Residue Theorem</h2>
+<div id="outline-container-org8f2c3ed" class="outline-2">
+<h2 id="org8f2c3ed"><span class="section-number-2">10</span> Laurent Series and Residue Theorem</h2>
 <div class="outline-text-2" id="text-10">
 <div class="thm">
 <p>
@@ -2885,8 +2885,8 @@ Then show that
 </div>
 
 
-<div id="outline-container-org10b915e" class="outline-3">
-<h3 id="org10b915e"><span class="section-number-3">10.1</span> <span class="todo TODO">TODO</span> improve this definition</h3>
+<div id="outline-container-org9b80663" class="outline-3">
+<h3 id="org9b80663"><span class="section-number-3">10.1</span> <span class="todo TODO">TODO</span> improve this definition</h3>
 <div class="outline-text-3" id="text-10-1">
 <div class="mydef">
 <p>
@@ -4338,7 +4338,7 @@ Show that
 <div id="postamble" class="status">
 <p class="date">Date: 2021-03-12 Fri 00:00</p>
 <p class="author">Author: Daniel Ballesteros Chávez</p>
-<p class="date">Created: 2022-06-20 Mon 08:16</p>
+<p class="date">Created: 2023-03-27 Mon 15:59</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
