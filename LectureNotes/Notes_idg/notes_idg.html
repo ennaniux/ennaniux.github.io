@@ -3,89 +3,15 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-05-25 Thu 19:16 -->
+<!-- 2023-08-06 Sun 21:21 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Notes for Introduction to Differential Geometry</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Daniel Ballesteros Chávez" />
 <style type="text/css"> tr:nth-child(odd) {background-color: #e2e2e2;}  tr:first-child {font-weight: }  tr:hover {background-color: #d0c6e5;}</style>
-<link rel="stylesheet" type="text/css" href="../../css/style.css"/>
-<style> /* Daniel Ballesteros-Chavez */
-/* DBCh CSS for blog project */
-/* color schemes: #333745; #E63462 ; #C7EFCF ; #EEF5DB ; #909396; #262626;*/
-/* Modified version with responsive TOC
-/* usage: #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./style01.css"/> */
-/* this part is about the table of contents TOC */
-#table-of-contents a:link,
-#table-of-contents a:visited {
-color: #404040;
-background: transparent;
-}
-#table-of-contents a:hover {
-background-color: #ccc;
-color: #404040;
-}
-#table-of-contents {
-line-height: 1.2;
-}
-#table-of-contents h2 {
-background-color:  #ccc ;
-padding-left: 0.3em;
-color: #404040;
-border-bottom: 0;
-}
-#table-of-contents ul {
-list-style: none;
-padding-left: 0.3em;
-font-weight: normal;
-}
-#table-of-contents div>ul>li {
-margin-top: 1em;
-font-weight: bold;
-}
-#table-of-contents .tag {
-display: none;
-}
-#table-of-contents .todo,
-#table-of-contents .done {
-font-size: 80%;
-}
-#table-of-contents ol>li {
-margin-top: 1em;
-}
-@media screen {
-#table-of-contents {
-position: fixed;
-top: 0;
-left: 0;
-padding: 1em 0 1em 1em;
-width: 290px;
-height: 100vh;
-overlow-x: hidden;
-overlow-y: auto;
-overflow: auto;
-}
-#table-of-contents h2 {
-margin-top: 0;
-font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
-}
-#table-of-contents code {
-font-size: 12px;
-}
-}
-@media screen and (max-width: 95em) {
-#table-of-contents {
-display: none;
-}
-h1.title {
-margin-left: 0%;
-}
-div#content {
-margin-left: 5%;
-max-width: 90%;
-}
-}
+<style>  body { background:#EFFFFD; max-width: 768px; margin: 20px auto; color: } </style>
+<style>
 /*Html Boxes around THMs and Propositions */
 .abstract  {
 color:  #404040;
@@ -293,168 +219,168 @@ for the JavaScript code in this tag.
 <div id="content">
 <h1 class="title">Notes for Introduction to Differential Geometry
 <br />
-<span class="subtitle"><a href="../../notes.html">Back to DBCh's notes</a></span>
+<span class="subtitle"><a href="../../index.html">Back to DBCh's home</a></span>
 </h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org218e309">1. Vectors in Euclidean spaces.</a></li>
-<li><a href="#orgcffc029">2. Basic operations with vectors</a></li>
-<li><a href="#org06125d6">3. Algebraic Properties</a></li>
-<li><a href="#orgf8480ef">4. Basis</a></li>
-<li><a href="#org491ab06">5. Geometric Representation of a vector</a></li>
-<li><a href="#org2148bef">6. Inner product</a></li>
-<li><a href="#orgcfdb3b4">7. Geometric properties of the Inner product</a></li>
-<li><a href="#orgb0718e4">8. The norm of a vector</a></li>
-<li><a href="#org73d35c9">9. The cross product</a></li>
-<li><a href="#orgb5d006d">10. The Cross product in physics notation</a></li>
-<li><a href="#orga2e9692">11. Geometric properties of the cross product</a></li>
-<li><a href="#orgc6268bc">12. Geometric interpretation of the triple vector product</a></li>
-<li><a href="#org536df30">13. Binet-Cauchy's Identity</a></li>
-<li><a href="#orgb61aeb5">14. Distance</a></li>
-<li><a href="#orgce2bca7">15. Parameterised Curves</a></li>
-<li><a href="#org4e5802e">16. Curves in \(\mathbb{R}^3\)</a></li>
-<li><a href="#org90ad8f7">17. Velocity vector</a></li>
-<li><a href="#org4b6b1bd">18. Tangent Vectors and Dot and cross product</a></li>
-<li><a href="#org5311656">19. Regular curves</a></li>
-<li><a href="#orga7dfc41">20. Arc-length of a curve</a></li>
-<li><a href="#orgba48673">21. Arc-length function is differentiable</a></li>
-<li><a href="#orge5b0f1e">22. Fundamental Theorem of calculus</a></li>
-<li><a href="#orgb19b751">23. Unit speed curves</a></li>
-<li><a href="#orge64ebac">24. Reparameterisations</a></li>
-<li><a href="#orgf95bbae">25. Arch-length reparameterisations</a></li>
-<li><a href="#orgac12cd2">26. Examples.</a></li>
-<li><a href="#org4644f6a">27. The Local theory of Curves</a>
+<li><a href="#org48d3fa4">1. Vectors in Euclidean spaces.</a></li>
+<li><a href="#org9661b6b">2. Basic operations with vectors</a></li>
+<li><a href="#org8d48f9b">3. Algebraic Properties</a></li>
+<li><a href="#org94e0497">4. Basis</a></li>
+<li><a href="#org1bab0b3">5. Geometric Representation of a vector</a></li>
+<li><a href="#org7f66906">6. Inner product</a></li>
+<li><a href="#org766b888">7. Geometric properties of the Inner product</a></li>
+<li><a href="#org794cfa0">8. The norm of a vector</a></li>
+<li><a href="#org6ea8808">9. The cross product</a></li>
+<li><a href="#org54156a8">10. The Cross product in physics notation</a></li>
+<li><a href="#orga345333">11. Geometric properties of the cross product</a></li>
+<li><a href="#orgcc3fa63">12. Geometric interpretation of the triple vector product</a></li>
+<li><a href="#org8046dac">13. Binet-Cauchy's Identity</a></li>
+<li><a href="#orgee27ba8">14. Distance</a></li>
+<li><a href="#orgdf166cc">15. Parameterised Curves</a></li>
+<li><a href="#orga2be353">16. Curves in \(\mathbb{R}^3\)</a></li>
+<li><a href="#org9b6faa7">17. Velocity vector</a></li>
+<li><a href="#orgbc7b1b9">18. Tangent Vectors and Dot and cross product</a></li>
+<li><a href="#orgfdba8bc">19. Regular curves</a></li>
+<li><a href="#orgdb08e83">20. Arc-length of a curve</a></li>
+<li><a href="#org5771eeb">21. Arc-length function is differentiable</a></li>
+<li><a href="#org27ba486">22. Fundamental Theorem of calculus</a></li>
+<li><a href="#org014b7fa">23. Unit speed curves</a></li>
+<li><a href="#orgd9e84cb">24. Reparameterisations</a></li>
+<li><a href="#orge0ed29b">25. Arch-length reparameterisations</a></li>
+<li><a href="#orga0ceb39">26. Examples.</a></li>
+<li><a href="#orgb208537">27. The Local theory of Curves</a>
 <ul>
-<li><a href="#org5e987eb">27.1. Global Theory of Curves</a></li>
-<li><a href="#orgb51a82a">27.2. The Isoperimetric Inequality</a></li>
+<li><a href="#orgadd8f96">27.1. Global Theory of Curves</a></li>
+<li><a href="#org3b93bd1">27.2. The Isoperimetric Inequality</a></li>
 </ul>
 </li>
-<li><a href="#org29c749e">28. The Isoperimetric Inequality in \(\mathbb{R}^n\).</a></li>
-<li><a href="#org7df0865">29. Topology of \(\mathbb{R}^n\)</a></li>
-<li><a href="#org1b9801b">30. Regular Surfaces in \(\mathbb{R}^3\)</a>
+<li><a href="#orgea2ed4d">28. The Isoperimetric Inequality in \(\mathbb{R}^n\).</a></li>
+<li><a href="#org499f2ae">29. Topology of \(\mathbb{R}^n\)</a></li>
+<li><a href="#orgc834270">30. Regular Surfaces in \(\mathbb{R}^3\)</a>
 <ul>
-<li><a href="#orgfb821fa">30.1. The Inverse Function Theorem (IFT)</a></li>
-<li><a href="#orgb42ddeb">30.2. The Implicit Function Theorem</a></li>
-<li><a href="#org50cedb3">30.3. Change of parameters (charts)</a></li>
+<li><a href="#org2ca2772">30.1. The Inverse Function Theorem (IFT)</a></li>
+<li><a href="#org630f642">30.2. The Implicit Function Theorem</a></li>
+<li><a href="#org2a087a2">30.3. Change of parameters (charts)</a></li>
 </ul>
 </li>
-<li><a href="#org69914f9">31. What is a differentiable Manifold?</a>
+<li><a href="#org1f0b4fa">31. What is a differentiable Manifold?</a>
 <ul>
-<li><a href="#org07002f8">31.1. Tangent Vectors and Tangent Plane</a></li>
+<li><a href="#orge377e09">31.1. Tangent Vectors and Tangent Plane</a></li>
 </ul>
 </li>
-<li><a href="#org2033666">32. Toolkit for Surfaces in \(\mathbb{R}^3\)</a>
+<li><a href="#org5696f72">32. Toolkit for Surfaces in \(\mathbb{R}^3\)</a>
 <ul>
-<li><a href="#org20d51b0">32.1. The Tangent space</a></li>
-<li><a href="#org09900a8">32.2. The unit normal vector</a></li>
-<li><a href="#orgb2fbc52">32.3. The First fundamental Form</a></li>
-<li><a href="#org39866ff">32.4. Second Fundamental Form</a></li>
-<li><a href="#org39a591b">32.5. Mean curvature</a></li>
-<li><a href="#org0bec752">32.6. Gauss curvature</a></li>
-<li><a href="#org800a95d">32.7. The Gauss map</a></li>
-<li><a href="#org1ff5f97">32.8. The Shape operator</a></li>
-<li><a href="#org6d55484">32.9. The Christoffel symbols.</a></li>
-<li><a href="#org17d42aa">32.10. The curvature endomorphism and the curvature tensor</a></li>
-<li><a href="#org7e7a784">32.11. Ricci curvature tensor</a></li>
-<li><a href="#org20b8554">32.12. The Scalar curvature</a></li>
-<li><a href="#org5051784">32.13. Gauss equation</a></li>
+<li><a href="#org9d2ba5f">32.1. The Tangent space</a></li>
+<li><a href="#org3083ed7">32.2. The unit normal vector</a></li>
+<li><a href="#org6209651">32.3. The First fundamental Form</a></li>
+<li><a href="#orgca8f12e">32.4. Second Fundamental Form</a></li>
+<li><a href="#org9e10dbb">32.5. Mean curvature</a></li>
+<li><a href="#orged83262">32.6. Gauss curvature</a></li>
+<li><a href="#org91dd346">32.7. The Gauss map</a></li>
+<li><a href="#orge73ac40">32.8. The Shape operator</a></li>
+<li><a href="#org42876c3">32.9. The Christoffel symbols.</a></li>
+<li><a href="#org45bcc67">32.10. The curvature endomorphism and the curvature tensor</a></li>
+<li><a href="#org4895109">32.11. Ricci curvature tensor</a></li>
+<li><a href="#orgee39611">32.12. The Scalar curvature</a></li>
+<li><a href="#org6018841">32.13. Gauss equation</a></li>
 </ul>
 </li>
-<li><a href="#org42801c2">33. Intrinsic Geometry vs Extrinsic Geometry</a>
+<li><a href="#org470e002">33. Intrinsic Geometry vs Extrinsic Geometry</a>
 <ul>
-<li><a href="#org9bc0754">33.1. Gauss's Theorema Egregium</a></li>
-<li><a href="#org0dc0d17">33.2. The hyperbolic upper half-plane example</a></li>
-<li><a href="#org2ded083">33.3. The Hilbert's theorem</a></li>
-<li><a href="#org50fc0b1">33.4. Nash embedding theorem</a></li>
-<li><a href="#orgb3577e3">33.5. Tangent vectors in Differentiable manifolds</a></li>
-<li><a href="#org9bfdeb9">33.6. Tangent bundle</a></li>
-<li><a href="#org4b5bab2">33.7. Vector fields</a></li>
-<li><a href="#orgd97ed91">33.8. 2-tensor fields</a></li>
+<li><a href="#orga920c76">33.1. Gauss's Theorema Egregium</a></li>
+<li><a href="#org4efb8e9">33.2. The hyperbolic upper half-plane example</a></li>
+<li><a href="#org3f58d68">33.3. The Hilbert's theorem</a></li>
+<li><a href="#org8ac35a9">33.4. Nash embedding theorem</a></li>
+<li><a href="#orgc291c46">33.5. Tangent vectors in Differentiable manifolds</a></li>
+<li><a href="#org1604af3">33.6. Tangent bundle</a></li>
+<li><a href="#orgbb3fd71">33.7. Vector fields</a></li>
+<li><a href="#org68cfcef">33.8. 2-tensor fields</a></li>
 </ul>
 </li>
-<li><a href="#org43cc55e">34. Vector and tensor fields</a>
+<li><a href="#orgf9019de">34. Vector and tensor fields</a>
 <ul>
-<li><a href="#org378b977">34.1. Tensor products</a>
+<li><a href="#org937cba7">34.1. Tensor products</a>
 <ul>
-<li><a href="#org5c0f0cd">34.1.1. 1 - tensor (a.k.a. 1 - forms)</a></li>
-<li><a href="#org2753bbe">34.1.2. 1 forms in \(\mathbb{R}^3\)</a></li>
-<li><a href="#orgd3ad856">34.1.3. 1 forms in a surface</a></li>
+<li><a href="#org2ba8c60">34.1.1. 1 - tensor (a.k.a. 1 - forms)</a></li>
+<li><a href="#org48c5e1c">34.1.2. 1 forms in \(\mathbb{R}^3\)</a></li>
+<li><a href="#orgadef1fe">34.1.3. 1 forms in a surface</a></li>
 </ul>
 </li>
-<li><a href="#org816a50e">34.2. 2-Forms in \(\mathbb{R}^3\).</a></li>
-<li><a href="#org391f247">34.3. 2-Forms in a surface</a></li>
-<li><a href="#org4395062">34.4. Examples</a>
+<li><a href="#orgb3512ef">34.2. 2-Forms in \(\mathbb{R}^3\).</a></li>
+<li><a href="#orgb849a6b">34.3. 2-Forms in a surface</a></li>
+<li><a href="#org36726ad">34.4. Examples</a>
 <ul>
-<li><a href="#orgd27f262">34.4.1. Example 2  in \(\mathbb{R}^2\)</a></li>
-<li><a href="#org2978d06">34.4.2. Example 3  in \(\mathbb{R}^3\)</a></li>
-<li><a href="#org5321a0d">34.4.3. Vector field on a surface</a></li>
-<li><a href="#org9c588ef">34.4.4. Example of a Vector field in a Surface</a></li>
-<li><a href="#org905663e">34.4.5. Example of a 1 form in \(\mathbb{R}^3\)</a></li>
-<li><a href="#orgc4a9f1f">34.4.6. Example of a 1 form in a surface</a></li>
-<li><a href="#org760fc02">34.4.7. Example of a 2-tensor in \(\mathbb{R}^3\)</a></li>
-<li><a href="#orgac41eab">34.4.8. Example of a 2-tensor in a Surface</a></li>
-<li><a href="#org4a17f5b">34.4.9. Example of a 2-from in \(\mathbb{R}^3\)</a></li>
-<li><a href="#org8b137b1">34.4.10. Example of a 2-form in a Surface</a></li>
+<li><a href="#org5caa933">34.4.1. Example 2  in \(\mathbb{R}^2\)</a></li>
+<li><a href="#org79c38e4">34.4.2. Example 3  in \(\mathbb{R}^3\)</a></li>
+<li><a href="#org7cecdff">34.4.3. Vector field on a surface</a></li>
+<li><a href="#org4129ce9">34.4.4. Example of a Vector field in a Surface</a></li>
+<li><a href="#org6a7a065">34.4.5. Example of a 1 form in \(\mathbb{R}^3\)</a></li>
+<li><a href="#org48f776d">34.4.6. Example of a 1 form in a surface</a></li>
+<li><a href="#org721a3c4">34.4.7. Example of a 2-tensor in \(\mathbb{R}^3\)</a></li>
+<li><a href="#orga735de4">34.4.8. Example of a 2-tensor in a Surface</a></li>
+<li><a href="#org9c41437">34.4.9. Example of a 2-from in \(\mathbb{R}^3\)</a></li>
+<li><a href="#org3fff7f3">34.4.10. Example of a 2-form in a Surface</a></li>
 </ul>
 </li>
-<li><a href="#orgefa066b">34.5. Riemannian metric</a></li>
-<li><a href="#orgfb9e139">34.6. Riemannian manifold</a></li>
+<li><a href="#org0e0c093">34.5. Riemannian metric</a></li>
+<li><a href="#orge2a1871">34.6. Riemannian manifold</a></li>
 </ul>
 </li>
-<li><a href="#orgf9ace81">35. Curves on surfaces (manifolds)</a></li>
-<li><a href="#org19ec666">36. A note before continuing</a>
+<li><a href="#org47d4e2f">35. Curves on surfaces (manifolds)</a></li>
+<li><a href="#org65cb6dd">36. A note before continuing</a>
 <ul>
-<li><a href="#org4a84b49">36.1. Example: The sphere</a>
+<li><a href="#org409afde">36.1. Example: The sphere</a>
 <ul>
-<li><a href="#orgd9cc950">36.1.1. Polar coordinates</a></li>
-<li><a href="#orga5627e2">36.1.2. Sphere as a graph</a></li>
-<li><a href="#org6f5a553">36.1.3. Sphere in steregraphic projection</a></li>
-<li><a href="#orgc0f8263">36.1.4. Non-constant curvature on the sphere</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org3e367a7">37. Isometries and Conformal maps</a>
-<ul>
-<li><a href="#orgfbb649a">37.1. Local isometries</a></li>
-<li><a href="#org162af3e">37.2. Notion of Isometry</a></li>
-<li><a href="#org5332270">37.3. Example of Isometry</a></li>
-<li><a href="#org20f3f83">37.4. Conformal map</a></li>
-<li><a href="#orgb20a3e4">37.5. Conformal maps preserve angles</a></li>
-<li><a href="#orge26f9a6">37.6. Natural questions</a></li>
-<li><a href="#org13d5d69">37.7. Euler Characteristic</a>
-<ul>
-<li><a href="#org744821b">37.7.1. Spoiler</a></li>
+<li><a href="#org04d4426">36.1.1. Polar coordinates</a></li>
+<li><a href="#org31b2173">36.1.2. Sphere as a graph</a></li>
+<li><a href="#orge07996b">36.1.3. Sphere in steregraphic projection</a></li>
+<li><a href="#orgf10525f">36.1.4. Non-constant curvature on the sphere</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgd233ae2">38. Orientation</a></li>
-<li><a href="#org7da2c74">39. Parallel Transport and Geodesics</a>
+<li><a href="#orge7d3b93">37. Isometries and Conformal maps</a>
 <ul>
-<li><a href="#orgdbf7849">39.1. Covariant derivative</a></li>
-<li><a href="#org6397807">39.2. Vector field along a curve</a></li>
-<li><a href="#org5716eb3">39.3. Covariant derivative (along a curve)</a></li>
-<li><a href="#org5398fc1">39.4. Parallel Vector Field</a></li>
-<li><a href="#orgd5b76fe">39.5. The existence of parallel transport</a></li>
-<li><a href="#org0a8bac8">39.6. Properties of parallel transport</a></li>
-<li><a href="#org5a19a0c">39.7. Geodesics</a></li>
-<li><a href="#org7ddef78">39.8. Geodesic curvature</a></li>
-<li><a href="#orgb7ae52f">39.9. Local existence of geodesics</a></li>
+<li><a href="#org289b851">37.1. Local isometries</a></li>
+<li><a href="#org6aac108">37.2. Notion of Isometry</a></li>
+<li><a href="#orgb0d0d65">37.3. Example of Isometry</a></li>
+<li><a href="#orgf65de2a">37.4. Conformal map</a></li>
+<li><a href="#org4f85d5e">37.5. Conformal maps preserve angles</a></li>
+<li><a href="#orgfde1b3e">37.6. Natural questions</a></li>
+<li><a href="#org38f7f7f">37.7. Euler Characteristic</a>
+<ul>
+<li><a href="#orge55798f">37.7.1. Spoiler</a></li>
 </ul>
 </li>
-<li><a href="#org3fed03e">40. The Gauss Bonnet Theorem</a>
+</ul>
+</li>
+<li><a href="#org159d0bf">38. Orientation</a></li>
+<li><a href="#orgbed4b4e">39. Parallel Transport and Geodesics</a>
 <ul>
-<li><a href="#org7f0de34">40.1. External angle at a vertex</a></li>
-<li><a href="#org515768c">40.2. Theorem of turning tangents</a></li>
-<li><a href="#org329d257">40.3. Simple regions</a></li>
-<li><a href="#orgfb501b2">40.4. Positively oriented curves</a></li>
-<li><a href="#orgde04f71">40.5. Parameterisation compatible with the orientation</a></li>
-<li><a href="#orga13e242">40.6. Gauss Bonnet Theorem (local)</a></li>
-<li><a href="#org7299f95">40.7. Gauss curvature and Parallel transport.</a></li>
-<li><a href="#org88079b1">40.8. Generalisations of Gauss-Bonnet theorem</a></li>
+<li><a href="#org93e0d98">39.1. Covariant derivative</a></li>
+<li><a href="#org3658e3d">39.2. Vector field along a curve</a></li>
+<li><a href="#orgda2f9d4">39.3. Covariant derivative (along a curve)</a></li>
+<li><a href="#org171978f">39.4. Parallel Vector Field</a></li>
+<li><a href="#orge62dfe6">39.5. The existence of parallel transport</a></li>
+<li><a href="#org1ea1e05">39.6. Properties of parallel transport</a></li>
+<li><a href="#org18dde77">39.7. Geodesics</a></li>
+<li><a href="#org382bd6b">39.8. Geodesic curvature</a></li>
+<li><a href="#org2f88c1c">39.9. Local existence of geodesics</a></li>
+</ul>
+</li>
+<li><a href="#orga1d341e">40. The Gauss Bonnet Theorem</a>
+<ul>
+<li><a href="#org0b62a5c">40.1. External angle at a vertex</a></li>
+<li><a href="#org9c8a77f">40.2. Theorem of turning tangents</a></li>
+<li><a href="#org5df3141">40.3. Simple regions</a></li>
+<li><a href="#org2fcb29e">40.4. Positively oriented curves</a></li>
+<li><a href="#org186ea30">40.5. Parameterisation compatible with the orientation</a></li>
+<li><a href="#org2c66e42">40.6. Gauss Bonnet Theorem (local)</a></li>
+<li><a href="#orgc2b7fd3">40.7. Gauss curvature and Parallel transport.</a></li>
+<li><a href="#org8ff9a7e">40.8. Generalisations of Gauss-Bonnet theorem</a></li>
 </ul>
 </li>
 </ul>
@@ -467,8 +393,8 @@ for the JavaScript code in this tag.
 
 
 
-<div id="outline-container-org218e309" class="outline-2">
-<h2 id="org218e309"><span class="section-number-2">1</span> Vectors in Euclidean spaces.</h2>
+<div id="outline-container-org48d3fa4" class="outline-2">
+<h2 id="org48d3fa4"><span class="section-number-2">1</span> Vectors in Euclidean spaces.</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 A vector \(\vec{x}\) in \(\mathbb{R}^n\) is defined as an \(n\) - tuple of real numbers
@@ -485,8 +411,8 @@ A vector \(\vec{x}\) in \(\mathbb{R}^n\) is defined as an \(n\) - tuple of real 
 </div>
 
 
-<div id="outline-container-orgcffc029" class="outline-2">
-<h2 id="orgcffc029"><span class="section-number-2">2</span> Basic operations with vectors</h2>
+<div id="outline-container-org9661b6b" class="outline-2">
+<h2 id="org9661b6b"><span class="section-number-2">2</span> Basic operations with vectors</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Let \(\vec{x} = (x_1, x_2, ..., x_n)\), \(\vec{y} = (y_1, y_2, ..., y_n)\) and \(\alpha\in \mathbb{R}\).
@@ -509,8 +435,8 @@ Let \(\vec{x} = (x_1, x_2, ..., x_n)\), \(\vec{y} = (y_1, y_2, ..., y_n)\) and \
 </div>
 
 
-<div id="outline-container-org06125d6" class="outline-2">
-<h2 id="org06125d6"><span class="section-number-2">3</span> Algebraic Properties</h2>
+<div id="outline-container-org8d48f9b" class="outline-2">
+<h2 id="org8d48f9b"><span class="section-number-2">3</span> Algebraic Properties</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Let \(\vec{x}, \vec{y}\) and \(\vec{z}\) vectors and \(\alpha,\beta\in \mathbb{R}\). The the following identities hold
@@ -528,8 +454,8 @@ Let \(\vec{x}, \vec{y}\) and \(\vec{z}\) vectors and \(\alpha,\beta\in \mathbb{R
 </div>
 </div>
 
-<div id="outline-container-orgf8480ef" class="outline-2">
-<h2 id="orgf8480ef"><span class="section-number-2">4</span> Basis</h2>
+<div id="outline-container-org94e0497" class="outline-2">
+<h2 id="org94e0497"><span class="section-number-2">4</span> Basis</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Getting familiar with the vector operations, one realises that any vector  can be written as:
@@ -552,13 +478,13 @@ usually referred as <b>standard basis</b>.
 </div>
 
 
-<div id="outline-container-org491ab06" class="outline-2">
-<h2 id="org491ab06"><span class="section-number-2">5</span> Geometric Representation of a vector</h2>
+<div id="outline-container-org1bab0b3" class="outline-2">
+<h2 id="org1bab0b3"><span class="section-number-2">5</span> Geometric Representation of a vector</h2>
 </div>
 
 
-<div id="outline-container-org2148bef" class="outline-2">
-<h2 id="org2148bef"><span class="section-number-2">6</span> Inner product</h2>
+<div id="outline-container-org7f66906" class="outline-2">
+<h2 id="org7f66906"><span class="section-number-2">6</span> Inner product</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Let \(\vec{x} = (x_1, x_2, ..., x_n)\), \(\vec{y} = (y_1, y_2, ..., y_n)\) any two vectors. 
@@ -579,8 +505,8 @@ Let \(\vec{x} = (x_1, x_2, ..., x_n)\), \(\vec{y} = (y_1, y_2, ..., y_n)\) any t
 </div>
 
 
-<div id="outline-container-orgcfdb3b4" class="outline-2">
-<h2 id="orgcfdb3b4"><span class="section-number-2">7</span> Geometric properties of the Inner product</h2>
+<div id="outline-container-org766b888" class="outline-2">
+<h2 id="org766b888"><span class="section-number-2">7</span> Geometric properties of the Inner product</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Note that for any  \(\vec{a}= (a_1, a_2, \ldots, a_n)\in\mathbb{R}^n\) we have
@@ -608,8 +534,8 @@ where $&theta; is the smallest angle between \(\vec{x}, \vec{y}\) lying on the p
 </div>
 
 
-<div id="outline-container-orgb0718e4" class="outline-2">
-<h2 id="orgb0718e4"><span class="section-number-2">8</span> The norm of a vector</h2>
+<div id="outline-container-org794cfa0" class="outline-2">
+<h2 id="org794cfa0"><span class="section-number-2">8</span> The norm of a vector</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 Given \(\vec{x} \in \mathbb{R}^n\) the length or norm of the vector is denoted by
@@ -621,8 +547,8 @@ Given \(\vec{x} \in \mathbb{R}^n\) the length or norm of the vector is denoted b
 </div>
 </div>
 
-<div id="outline-container-org73d35c9" class="outline-2">
-<h2 id="org73d35c9"><span class="section-number-2">9</span> The cross product</h2>
+<div id="outline-container-org6ea8808" class="outline-2">
+<h2 id="org6ea8808"><span class="section-number-2">9</span> The cross product</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 Let \(\vec{x} = (x_1, x_2, x_3)\), \(\vec{y} = (y_1, y_2, y_{3})\) any two vectors in \(\mathbb{R}^{3}\).
@@ -655,8 +581,8 @@ definition and properties of determinants it is easy to see that
 </div>
 </div>
 
-<div id="outline-container-orgb5d006d" class="outline-2">
-<h2 id="orgb5d006d"><span class="section-number-2">10</span> The Cross product in physics notation</h2>
+<div id="outline-container-org54156a8" class="outline-2">
+<h2 id="org54156a8"><span class="section-number-2">10</span> The Cross product in physics notation</h2>
 <div class="outline-text-2" id="text-10">
 \begin{equation}
 \vec{x} \times \vec{y} = \left|
@@ -681,8 +607,8 @@ y_{1} & y_{2}\\
 </div>
 </div>
 
-<div id="outline-container-orga2e9692" class="outline-2">
-<h2 id="orga2e9692"><span class="section-number-2">11</span> Geometric properties of the cross product</h2>
+<div id="outline-container-orga345333" class="outline-2">
+<h2 id="orga345333"><span class="section-number-2">11</span> Geometric properties of the cross product</h2>
 <div class="outline-text-2" id="text-11">
 <p>
 The norm of the cross product is the area of the parallelogram spanned by the vectors.
@@ -698,8 +624,8 @@ The cross product is orthogonal (perpendicular) to the plane spanned by the vect
 </div>
 </div>
 
-<div id="outline-container-orgc6268bc" class="outline-2">
-<h2 id="orgc6268bc"><span class="section-number-2">12</span> Geometric interpretation of the triple vector product</h2>
+<div id="outline-container-orgcc3fa63" class="outline-2">
+<h2 id="orgcc3fa63"><span class="section-number-2">12</span> Geometric interpretation of the triple vector product</h2>
 <div class="outline-text-2" id="text-12">
 <p>
 The triple vector product in \(\mathbb{R}^3\)
@@ -715,8 +641,8 @@ is the volume of the parallelepiped spanned by the three vectors
 </div>
 </div>
 
-<div id="outline-container-org536df30" class="outline-2">
-<h2 id="org536df30"><span class="section-number-2">13</span> Binet-Cauchy's Identity</h2>
+<div id="outline-container-org8046dac" class="outline-2">
+<h2 id="org8046dac"><span class="section-number-2">13</span> Binet-Cauchy's Identity</h2>
 <div class="outline-text-2" id="text-13">
 <p>
 A very useful identity is the following
@@ -743,8 +669,8 @@ As an application, we see that the norm of the vector \(\vec{\nu} = \vec{x}_1 \t
 </div>
 </div>
 
-<div id="outline-container-orgb61aeb5" class="outline-2">
-<h2 id="orgb61aeb5"><span class="section-number-2">14</span> Distance</h2>
+<div id="outline-container-orgee27ba8" class="outline-2">
+<h2 id="orgee27ba8"><span class="section-number-2">14</span> Distance</h2>
 <div class="outline-text-2" id="text-14">
 <p>
 The inner product allows us to define a norm (length) of vectors. We compute the distance between two vectors \(\vec{x},\vec{y}\in\mathbb{R}^n\) as
@@ -756,8 +682,8 @@ d(\vec{x}, \vec{y}) = | \vec{x} - \vec{y} |  = \sqrt{ (x_1 - y_1)^2 + \cdots + (
 </div>
 </div>
 
-<div id="outline-container-orgce2bca7" class="outline-2">
-<h2 id="orgce2bca7"><span class="section-number-2">15</span> Parameterised Curves</h2>
+<div id="outline-container-orgdf166cc" class="outline-2">
+<h2 id="orgdf166cc"><span class="section-number-2">15</span> Parameterised Curves</h2>
 <div class="outline-text-2" id="text-15">
 <p>
 Parametrization, also spelled parameterization, parametrisation or parameterisation, is the process of defining or choosing parameters.
@@ -784,8 +710,8 @@ also continuous.
 </div>
 
 
-<div id="outline-container-org4e5802e" class="outline-2">
-<h2 id="org4e5802e"><span class="section-number-2">16</span> Curves in \(\mathbb{R}^3\)</h2>
+<div id="outline-container-orga2be353" class="outline-2">
+<h2 id="orga2be353"><span class="section-number-2">16</span> Curves in \(\mathbb{R}^3\)</h2>
 <div class="outline-text-2" id="text-16">
 <p>
 In the case \(n = 3\), any curve \(\alpha\) is defined by three real functions:
@@ -803,8 +729,8 @@ The trace of the curve is the image \(\alpha(I) \subset \mathbb{R}^3\).
 </div>
 </div>
 
-<div id="outline-container-org90ad8f7" class="outline-2">
-<h2 id="org90ad8f7"><span class="section-number-2">17</span> Velocity vector</h2>
+<div id="outline-container-org9b6faa7" class="outline-2">
+<h2 id="org9b6faa7"><span class="section-number-2">17</span> Velocity vector</h2>
 <div class="outline-text-2" id="text-17">
 <p>
 To denote the derivative of the map \(\alpha\) with respect to the parameter \(t\) at any \(t_0\in I\),
@@ -832,8 +758,8 @@ This is called the <b>velocity vector</b> or the <b>tangent vector</b> of the cu
 </div>
 </div>
 
-<div id="outline-container-org4b6b1bd" class="outline-2">
-<h2 id="org4b6b1bd"><span class="section-number-2">18</span> Tangent Vectors and Dot and cross product</h2>
+<div id="outline-container-orgbc7b1b9" class="outline-2">
+<h2 id="orgbc7b1b9"><span class="section-number-2">18</span> Tangent Vectors and Dot and cross product</h2>
 <div class="outline-text-2" id="text-18">
 <div class="prop">
 <p>
@@ -853,8 +779,8 @@ If \(\alpha,\beta:I\to \mathbb{R}^3\) are two differentiable curves, then \(\alp
 </div>
 </div>
 
-<div id="outline-container-org5311656" class="outline-2">
-<h2 id="org5311656"><span class="section-number-2">19</span> Regular curves</h2>
+<div id="outline-container-orgfdba8bc" class="outline-2">
+<h2 id="orgfdba8bc"><span class="section-number-2">19</span> Regular curves</h2>
 <div class="outline-text-2" id="text-19">
 <div class="mydef">
 <p>
@@ -883,8 +809,8 @@ It follows easily from last proposition and
 </div>
 </div>
 
-<div id="outline-container-orga7dfc41" class="outline-2">
-<h2 id="orga7dfc41"><span class="section-number-2">20</span> Arc-length of a curve</h2>
+<div id="outline-container-orgdb08e83" class="outline-2">
+<h2 id="orgdb08e83"><span class="section-number-2">20</span> Arc-length of a curve</h2>
 <div class="outline-text-2" id="text-20">
 <div class="mydef">
 <p>
@@ -903,8 +829,8 @@ we say that \(\alpha\) is parameterised by arc length and in this case we usuall
 </div>
 </div>
 
-<div id="outline-container-orgba48673" class="outline-2">
-<h2 id="orgba48673"><span class="section-number-2">21</span> Arc-length function is differentiable</h2>
+<div id="outline-container-org5771eeb" class="outline-2">
+<h2 id="org5771eeb"><span class="section-number-2">21</span> Arc-length function is differentiable</h2>
 <div class="outline-text-2" id="text-21">
 <div class="prop">
 <p>
@@ -915,8 +841,8 @@ The arc-length \(s(t)\) is a differentiable function. If in addition the curve \
 </div>
 </div>
 
-<div id="outline-container-orge5b0f1e" class="outline-2">
-<h2 id="orge5b0f1e"><span class="section-number-2">22</span> Fundamental Theorem of calculus</h2>
+<div id="outline-container-org27ba486" class="outline-2">
+<h2 id="org27ba486"><span class="section-number-2">22</span> Fundamental Theorem of calculus</h2>
 <div class="outline-text-2" id="text-22">
 <div class="proof">
 <p>
@@ -938,8 +864,8 @@ Finally recall that any a continuous (differentiable) strictly monotone function
 </div>
 </div>
 
-<div id="outline-container-orgb19b751" class="outline-2">
-<h2 id="orgb19b751"><span class="section-number-2">23</span> Unit speed curves</h2>
+<div id="outline-container-org014b7fa" class="outline-2">
+<h2 id="org014b7fa"><span class="section-number-2">23</span> Unit speed curves</h2>
 <div class="outline-text-2" id="text-23">
 <div class="prop">
 <p>
@@ -960,8 +886,8 @@ then \(t\) is the arc-length of \(\alpha\) measured from some point.
 </div>
 </div>
 
-<div id="outline-container-orge64ebac" class="outline-2">
-<h2 id="orge64ebac"><span class="section-number-2">24</span> Reparameterisations</h2>
+<div id="outline-container-orgd9e84cb" class="outline-2">
+<h2 id="orgd9e84cb"><span class="section-number-2">24</span> Reparameterisations</h2>
 <div class="outline-text-2" id="text-24">
 <div class="mydef">
 <p>
@@ -974,8 +900,8 @@ a differentiable bijective function \(u: J\to I\) with inverse \(u^{-1}:I\to J\)
 </div>
 </div>
 
-<div id="outline-container-orgf95bbae" class="outline-2">
-<h2 id="orgf95bbae"><span class="section-number-2">25</span> Arch-length reparameterisations</h2>
+<div id="outline-container-orge0ed29b" class="outline-2">
+<h2 id="orge0ed29b"><span class="section-number-2">25</span> Arch-length reparameterisations</h2>
 <div class="outline-text-2" id="text-25">
 <div class="prop">
 <p>
@@ -1015,8 +941,8 @@ Given a curve \(\alpha\) parameterised by arc-length \(s\in (a,b)\), the curve \
 </div>
 
 
-<div id="outline-container-orgac12cd2" class="outline-2">
-<h2 id="orgac12cd2"><span class="section-number-2">26</span> Examples.</h2>
+<div id="outline-container-orga0ceb39" class="outline-2">
+<h2 id="orga0ceb39"><span class="section-number-2">26</span> Examples.</h2>
 <div class="outline-text-2" id="text-26">
 <ol class="org-ol">
 <li>Find the trace and the tangent vectors of the following curves
@@ -1042,8 +968,8 @@ Given a curve \(\alpha\) parameterised by arc-length \(s\in (a,b)\), the curve \
 
 
 
-<div id="outline-container-org4644f6a" class="outline-2">
-<h2 id="org4644f6a"><span class="section-number-2">27</span> The Local theory of Curves</h2>
+<div id="outline-container-orgb208537" class="outline-2">
+<h2 id="orgb208537"><span class="section-number-2">27</span> The Local theory of Curves</h2>
 <div class="outline-text-2" id="text-27">
 <div class="mydef">
 <p>
@@ -1354,8 +1280,8 @@ parameterised by arc-length, and \(T = \alpha'(s)\), is the tangent vector, then
 </div>
 
 
-<div id="outline-container-org5e987eb" class="outline-3">
-<h3 id="org5e987eb"><span class="section-number-3">27.1</span> Global Theory of Curves</h3>
+<div id="outline-container-orgadd8f96" class="outline-3">
+<h3 id="orgadd8f96"><span class="section-number-3">27.1</span> Global Theory of Curves</h3>
 <div class="outline-text-3" id="text-27-1">
 <p>
 Now we will study some global properties of Curves. Two classic results are: <b>the isoperimetric inequality</b> and the <b>Four Vertex Problem</b>.
@@ -1368,8 +1294,8 @@ In this course we will only focus on the former one. We will state the problem w
 </div>
 
 
-<div id="outline-container-orgb51a82a" class="outline-3">
-<h3 id="orgb51a82a"><span class="section-number-3">27.2</span> The Isoperimetric Inequality</h3>
+<div id="outline-container-org3b93bd1" class="outline-3">
+<h3 id="org3b93bd1"><span class="section-number-3">27.2</span> The Isoperimetric Inequality</h3>
 <div class="outline-text-3" id="text-27-2">
 <div class="thm">
 <p>
@@ -1384,8 +1310,8 @@ and the equaltiy holds if and only if \(C\) is a circle.
 </div>
 
 
-<div id="outline-container-org29c749e" class="outline-2">
-<h2 id="org29c749e"><span class="section-number-2">28</span> The Isoperimetric Inequality in \(\mathbb{R}^n\).</h2>
+<div id="outline-container-orgea2ed4d" class="outline-2">
+<h2 id="orgea2ed4d"><span class="section-number-2">28</span> The Isoperimetric Inequality in \(\mathbb{R}^n\).</h2>
 <div class="outline-text-2" id="text-28">
 <p>
 The proof that we will give is due to X. Cabré which involves the solution of a particular Partial Differential Equation to obtain the result.
@@ -1394,8 +1320,8 @@ The proof that we will give is due to X. Cabré which involves the solution of a
 </div>
 
 
-<div id="outline-container-org7df0865" class="outline-2">
-<h2 id="org7df0865"><span class="section-number-2">29</span> Topology of \(\mathbb{R}^n\)</h2>
+<div id="outline-container-org499f2ae" class="outline-2">
+<h2 id="org499f2ae"><span class="section-number-2">29</span> Topology of \(\mathbb{R}^n\)</h2>
 <div class="outline-text-2" id="text-29">
 <p>
 <b>An open ball of radius</b> \(r>0\), centered at \(\vec{p}\in \mathbb{R}^n\) is the set
@@ -1439,8 +1365,8 @@ It is easy to show the following properties:
 </div>
 
 
-<div id="outline-container-org1b9801b" class="outline-2">
-<h2 id="org1b9801b"><span class="section-number-2">30</span> Regular Surfaces in \(\mathbb{R}^3\)</h2>
+<div id="outline-container-orgc834270" class="outline-2">
+<h2 id="orgc834270"><span class="section-number-2">30</span> Regular Surfaces in \(\mathbb{R}^3\)</h2>
 <div class="outline-text-2" id="text-30">
 <p>
 In this section we well discuss the definition of a surface in \(\mathbb{R}^3\) and three ways to represent them:
@@ -1485,8 +1411,8 @@ is a regular surface (in the sense of the definition above).
 </div>
 
 
-<div id="outline-container-orgfb821fa" class="outline-3">
-<h3 id="orgfb821fa"><span class="section-number-3">30.1</span> The Inverse Function Theorem (IFT)</h3>
+<div id="outline-container-org2ca2772" class="outline-3">
+<h3 id="org2ca2772"><span class="section-number-3">30.1</span> The Inverse Function Theorem (IFT)</h3>
 <div class="outline-text-3" id="text-30-1">
 <p>
 The following result is known as the  Inverse Function Theorem (IFT). It states the existence of a local diffeomorphism between two sets by requiring that the
@@ -1681,8 +1607,8 @@ M\lim_{y_1 \to y} \frac{ |\varphi(F^{-1}(\vec{y}_1) - F^{-1}(\vec{y}))|}{|F^{-1}
 </div>
 
 
-<div id="outline-container-orgb42ddeb" class="outline-3">
-<h3 id="orgb42ddeb"><span class="section-number-3">30.2</span> The Implicit Function Theorem</h3>
+<div id="outline-container-org630f642" class="outline-3">
+<h3 id="org630f642"><span class="section-number-3">30.2</span> The Implicit Function Theorem</h3>
 <div class="outline-text-3" id="text-30-2">
 <div class="thm">
 <p>
@@ -1867,8 +1793,8 @@ X(u,v) = \left( \frac{2u}{ u^2 + v^2 + 1}, \frac{2v}{u^2 + v^2 +1}, \frac{u^2 + 
 </div>
 </div>
 
-<div id="outline-container-org50cedb3" class="outline-3">
-<h3 id="org50cedb3"><span class="section-number-3">30.3</span> Change of parameters (charts)</h3>
+<div id="outline-container-org2a087a2" class="outline-3">
+<h3 id="org2a087a2"><span class="section-number-3">30.3</span> Change of parameters (charts)</h3>
 <div class="outline-text-3" id="text-30-3">
 <div class="prop">
 <p>
@@ -2857,8 +2783,8 @@ JNX/A9L50P1r56sjAAAAAElFTkSuQmCC"drawing-2.png />
 </div>
 </div>
 
-<div id="outline-container-org69914f9" class="outline-2">
-<h2 id="org69914f9"><span class="section-number-2">31</span> What is a differentiable Manifold?</h2>
+<div id="outline-container-org1f0b4fa" class="outline-2">
+<h2 id="org1f0b4fa"><span class="section-number-2">31</span> What is a differentiable Manifold?</h2>
 <div class="outline-text-2" id="text-31">
 <p>
 Regular smooth surfaces in \(\mathbb{R}^3\) are an important sources of examples when studying more general objects, namely, differentiable manifolds.
@@ -2928,8 +2854,8 @@ class \(C^{k}\).
 </ul>
 </div>
 
-<div id="outline-container-org07002f8" class="outline-3">
-<h3 id="org07002f8"><span class="section-number-3">31.1</span> Tangent Vectors and Tangent Plane</h3>
+<div id="outline-container-orge377e09" class="outline-3">
+<h3 id="orge377e09"><span class="section-number-3">31.1</span> Tangent Vectors and Tangent Plane</h3>
 <div class="outline-text-3" id="text-31-1">
 <div class="mydef">
 <p>
@@ -3014,16 +2940,16 @@ is linear.
 
 
 
-<div id="outline-container-org2033666" class="outline-2">
-<h2 id="org2033666"><span class="section-number-2">32</span> Toolkit for Surfaces in \(\mathbb{R}^3\)</h2>
+<div id="outline-container-org5696f72" class="outline-2">
+<h2 id="org5696f72"><span class="section-number-2">32</span> Toolkit for Surfaces in \(\mathbb{R}^3\)</h2>
 <div class="outline-text-2" id="text-32">
 <p>
 Let \(\varphi : U\subset \mathbb{R}^2 \to \mathbb{R}^3\) a local parameterisation of a regular surface \(S\) in \(\mathbb{R}^3\).
 </p>
 </div>
 
-<div id="outline-container-org20d51b0" class="outline-3">
-<h3 id="org20d51b0"><span class="section-number-3">32.1</span> The Tangent space</h3>
+<div id="outline-container-org9d2ba5f" class="outline-3">
+<h3 id="org9d2ba5f"><span class="section-number-3">32.1</span> The Tangent space</h3>
 <div class="outline-text-3" id="text-32-1">
 <div class="mydef">
 <p>
@@ -3038,8 +2964,8 @@ The tangent space (plane) to the surface \(S\) at the point \(\vec{p} = \varphi(
 </div>
 
 
-<div id="outline-container-org09900a8" class="outline-3">
-<h3 id="org09900a8"><span class="section-number-3">32.2</span> The unit normal vector</h3>
+<div id="outline-container-org3083ed7" class="outline-3">
+<h3 id="org3083ed7"><span class="section-number-3">32.2</span> The unit normal vector</h3>
 <div class="outline-text-3" id="text-32-2">
 <div class="mydef">
 <p>
@@ -3054,8 +2980,8 @@ The unit normal vector to the surface \(S\) at the point \(\vec{p} = \varphi(u,v
 </div>
 
 
-<div id="outline-container-orgb2fbc52" class="outline-3">
-<h3 id="orgb2fbc52"><span class="section-number-3">32.3</span> The First fundamental Form</h3>
+<div id="outline-container-org6209651" class="outline-3">
+<h3 id="org6209651"><span class="section-number-3">32.3</span> The First fundamental Form</h3>
 <div class="outline-text-3" id="text-32-3">
 <div class="mydef">
 <p>
@@ -3080,8 +3006,8 @@ where \(\langle \cdot, \cdot \rangle\) is the usual inner product in \(\mathbb{R
 </div>
 
 
-<div id="outline-container-org39866ff" class="outline-3">
-<h3 id="org39866ff"><span class="section-number-3">32.4</span> Second Fundamental Form</h3>
+<div id="outline-container-orgca8f12e" class="outline-3">
+<h3 id="orgca8f12e"><span class="section-number-3">32.4</span> Second Fundamental Form</h3>
 <div class="outline-text-3" id="text-32-4">
 <div class="mydef">
 <p>
@@ -3106,8 +3032,8 @@ where \(\langle \cdot, \cdot \rangle\) is the usual inner product in \(\mathbb{R
 </div>
 
 
-<div id="outline-container-org39a591b" class="outline-3">
-<h3 id="org39a591b"><span class="section-number-3">32.5</span> Mean curvature</h3>
+<div id="outline-container-org9e10dbb" class="outline-3">
+<h3 id="org9e10dbb"><span class="section-number-3">32.5</span> Mean curvature</h3>
 <div class="outline-text-3" id="text-32-5">
 <div class="mydef">
 <p>
@@ -3125,8 +3051,8 @@ H(p) = \mbox{trace}\left( g^{-1} A \right).
 </div>
 
 
-<div id="outline-container-org0bec752" class="outline-3">
-<h3 id="org0bec752"><span class="section-number-3">32.6</span> Gauss curvature</h3>
+<div id="outline-container-orged83262" class="outline-3">
+<h3 id="orged83262"><span class="section-number-3">32.6</span> Gauss curvature</h3>
 <div class="outline-text-3" id="text-32-6">
 <div class="mydef">
 <p>
@@ -3144,8 +3070,8 @@ K(p) = \mbox{det}\left( g^{-1} A \right).
 </div>
 
 
-<div id="outline-container-org800a95d" class="outline-3">
-<h3 id="org800a95d"><span class="section-number-3">32.7</span> The Gauss map</h3>
+<div id="outline-container-org91dd346" class="outline-3">
+<h3 id="org91dd346"><span class="section-number-3">32.7</span> The Gauss map</h3>
 <div class="outline-text-3" id="text-32-7">
 <p>
 From our previous formulae, if \(S\) is a regular surface then 
@@ -3230,8 +3156,8 @@ identity
 </div>
 
 
-<div id="outline-container-org1ff5f97" class="outline-3">
-<h3 id="org1ff5f97"><span class="section-number-3">32.8</span> The Shape operator</h3>
+<div id="outline-container-orge73ac40" class="outline-3">
+<h3 id="orge73ac40"><span class="section-number-3">32.8</span> The Shape operator</h3>
 <div class="outline-text-3" id="text-32-8">
 <div class="mydef">
 <p>
@@ -3308,11 +3234,11 @@ shape operator.
 
 
 
-<div id="outline-container-org6d55484" class="outline-3">
-<h3 id="org6d55484"><span class="section-number-3">32.9</span> The Christoffel symbols.</h3>
+<div id="outline-container-org42876c3" class="outline-3">
+<h3 id="org42876c3"><span class="section-number-3">32.9</span> The Christoffel symbols.</h3>
 <div class="outline-text-3" id="text-32-9">
 <p>
-Look back at our definition of the second fundamental form <a href="#org39866ff">32.4</a>. There, we were measuring the projection of the second derivatives of the parameterisation
+Look back at our definition of the second fundamental form <a href="#orgca8f12e">32.4</a>. There, we were measuring the projection of the second derivatives of the parameterisation
 around \(\vec{p}\in S\), to the normal direction \(\nu\). What about the projection to the tangent space \(T_pS\)? Using again the Einstein's notation we can write that system of equations
 as
 </p>
@@ -3363,8 +3289,8 @@ The Gauss Formula  of the surface \(S\) at the point \(\vec{p} = \varphi(u,v)\) 
 </div>
 
 
-<div id="outline-container-org17d42aa" class="outline-3">
-<h3 id="org17d42aa"><span class="section-number-3">32.10</span> The curvature endomorphism and the curvature tensor</h3>
+<div id="outline-container-org45bcc67" class="outline-3">
+<h3 id="org45bcc67"><span class="section-number-3">32.10</span> The curvature endomorphism and the curvature tensor</h3>
 <div class="outline-text-3" id="text-32-10">
 <p>
 We have seen that the expressions of the derivatives of \(\partial_1, \partial_2\) and \(\nu\) can be expressed in the basis
@@ -3413,8 +3339,8 @@ R_{ijkl} = R^{r}_{ijk}g_{rl}.
 
 
 
-<div id="outline-container-org7e7a784" class="outline-3">
-<h3 id="org7e7a784"><span class="section-number-3">32.11</span> Ricci curvature tensor</h3>
+<div id="outline-container-org4895109" class="outline-3">
+<h3 id="org4895109"><span class="section-number-3">32.11</span> Ricci curvature tensor</h3>
 <div class="outline-text-3" id="text-32-11">
 <div class="mydef">
 <p>
@@ -3430,8 +3356,8 @@ R_{ik} = g^{jl}R_{ijkl}.
 </div>
 
 
-<div id="outline-container-org20b8554" class="outline-3">
-<h3 id="org20b8554"><span class="section-number-3">32.12</span> The Scalar curvature</h3>
+<div id="outline-container-orgee39611" class="outline-3">
+<h3 id="orgee39611"><span class="section-number-3">32.12</span> The Scalar curvature</h3>
 <div class="outline-text-3" id="text-32-12">
 <div class="mydef">
 <p>
@@ -3449,8 +3375,8 @@ R = g^{ik}R_{ik}.
 
 
 
-<div id="outline-container-org5051784" class="outline-3">
-<h3 id="org5051784"><span class="section-number-3">32.13</span> Gauss equation</h3>
+<div id="outline-container-org6018841" class="outline-3">
+<h3 id="org6018841"><span class="section-number-3">32.13</span> Gauss equation</h3>
 <div class="outline-text-3" id="text-32-13">
 <div class="prop">
 <p>
@@ -3465,8 +3391,8 @@ R_{ijkl} = A_{ik}A_{jl} - A_{il}A_{jk}.
 </div>
 </div>
 </div>
-<div id="outline-container-org42801c2" class="outline-2">
-<h2 id="org42801c2"><span class="section-number-2">33</span> Intrinsic Geometry vs Extrinsic Geometry</h2>
+<div id="outline-container-org470e002" class="outline-2">
+<h2 id="org470e002"><span class="section-number-2">33</span> Intrinsic Geometry vs Extrinsic Geometry</h2>
 <div class="outline-text-2" id="text-33">
 <p>
 Here we discuss properties of regular surfaces that can be written in terms
@@ -3475,8 +3401,8 @@ into \(\mathbb{R}^3\).
 </p>
 </div>
 
-<div id="outline-container-org9bc0754" class="outline-3">
-<h3 id="org9bc0754"><span class="section-number-3">33.1</span> Gauss's Theorema Egregium</h3>
+<div id="outline-container-orga920c76" class="outline-3">
+<h3 id="orga920c76"><span class="section-number-3">33.1</span> Gauss's Theorema Egregium</h3>
 <div class="outline-text-3" id="text-33-1">
 <div class="thm">
 <p>
@@ -3567,8 +3493,8 @@ and all the Christoffel symbols are given by
 
 
 
-<div id="outline-container-org0dc0d17" class="outline-3">
-<h3 id="org0dc0d17"><span class="section-number-3">33.2</span> The hyperbolic upper half-plane example</h3>
+<div id="outline-container-org4efb8e9" class="outline-3">
+<h3 id="org4efb8e9"><span class="section-number-3">33.2</span> The hyperbolic upper half-plane example</h3>
 <div class="outline-text-3" id="text-33-2">
 <p>
 Consider the upper half plane 
@@ -3589,8 +3515,8 @@ Show that the Gauss curvature \(K\) is constant and has a negative value.
 </div>
 </div>
 
-<div id="outline-container-org2ded083" class="outline-3">
-<h3 id="org2ded083"><span class="section-number-3">33.3</span> The Hilbert's theorem</h3>
+<div id="outline-container-org3f58d68" class="outline-3">
+<h3 id="org3f58d68"><span class="section-number-3">33.3</span> The Hilbert's theorem</h3>
 <div class="outline-text-3" id="text-33-3">
 <div class="thm">
 <p>
@@ -3603,8 +3529,8 @@ constant negative gaussian curvature \(K\) immersed in
 </div>
 </div>
 
-<div id="outline-container-org50fc0b1" class="outline-3">
-<h3 id="org50fc0b1"><span class="section-number-3">33.4</span> Nash embedding theorem</h3>
+<div id="outline-container-org8ac35a9" class="outline-3">
+<h3 id="org8ac35a9"><span class="section-number-3">33.4</span> Nash embedding theorem</h3>
 <div class="outline-text-3" id="text-33-4">
 <div class="thm">
 <p>
@@ -3616,8 +3542,8 @@ Every Riemannian manifold can be isometrically embedded into some Euclidean spac
 </div>
 
 
-<div id="outline-container-orgb3577e3" class="outline-3">
-<h3 id="orgb3577e3"><span class="section-number-3">33.5</span> Tangent vectors in Differentiable manifolds</h3>
+<div id="outline-container-orgc291c46" class="outline-3">
+<h3 id="orgc291c46"><span class="section-number-3">33.5</span> Tangent vectors in Differentiable manifolds</h3>
 <div class="outline-text-3" id="text-33-5">
 <p>
 A vector \(\vec{v}\) with components \(v_1, v_2, v_n\) at a point \(p\) in Euclidean
@@ -3661,8 +3587,8 @@ takes a function \(f:U\subset M\to \mathbb{R}\), given by
 </div>
 </div>
 
-<div id="outline-container-org9bfdeb9" class="outline-3">
-<h3 id="org9bfdeb9"><span class="section-number-3">33.6</span> Tangent bundle</h3>
+<div id="outline-container-org1604af3" class="outline-3">
+<h3 id="org1604af3"><span class="section-number-3">33.6</span> Tangent bundle</h3>
 <div class="outline-text-3" id="text-33-6">
 <div class="mydef">
 <p>
@@ -3688,8 +3614,8 @@ TM = \bigsqcup_{p\in M} T_{p}M
 </div>
 </div>
 
-<div id="outline-container-org4b5bab2" class="outline-3">
-<h3 id="org4b5bab2"><span class="section-number-3">33.7</span> Vector fields</h3>
+<div id="outline-container-orgbb3fd71" class="outline-3">
+<h3 id="orgbb3fd71"><span class="section-number-3">33.7</span> Vector fields</h3>
 <div class="outline-text-3" id="text-33-7">
 <div class="mydef">
 <p>
@@ -3703,8 +3629,8 @@ A vector field on a smooth manifold is a map \(V: M \to TM\) such that
 </div>
 </div>
 
-<div id="outline-container-orgd97ed91" class="outline-3">
-<h3 id="orgd97ed91"><span class="section-number-3">33.8</span> 2-tensor fields</h3>
+<div id="outline-container-org68cfcef" class="outline-3">
+<h3 id="org68cfcef"><span class="section-number-3">33.8</span> 2-tensor fields</h3>
 <div class="outline-text-3" id="text-33-8">
 <p>
 Let \(T_{p}M^*\otimes T_{p}M^*\) denote the set of bilinear maps on \(T_{p}M\). And consider the disjoint union
@@ -3749,12 +3675,12 @@ Then \(g_p: T_{p}S \times T_{p}S \to \mathbb{R}\) is  bilinear, symmetric and po
 
 
 
-<div id="outline-container-org43cc55e" class="outline-2">
-<h2 id="org43cc55e"><span class="section-number-2">34</span> Vector and tensor fields</h2>
+<div id="outline-container-orgf9019de" class="outline-2">
+<h2 id="orgf9019de"><span class="section-number-2">34</span> Vector and tensor fields</h2>
 <div class="outline-text-2" id="text-34">
 </div>
-<div id="outline-container-org378b977" class="outline-3">
-<h3 id="org378b977"><span class="section-number-3">34.1</span> Tensor products</h3>
+<div id="outline-container-org937cba7" class="outline-3">
+<h3 id="org937cba7"><span class="section-number-3">34.1</span> Tensor products</h3>
 <div class="outline-text-3" id="text-34-1">
 <p>
 To produce higher degree tensors, we define the tensor product \(\otimes\). Then if we have two 1 forms \(v,w\), their tensor product is the mapping \(v\otimes w: \mathbb{R}^n \to (\mathbb{R}^n)^*\times (\mathbb{R}^n)^*\), i.e., for every
@@ -3772,8 +3698,8 @@ If a 2-tensor \(\eta\) is such that \(\eta(A,A) \geq 0\) for all \(A\in \mathbb{
 </div>
 
 
-<div id="outline-container-org5c0f0cd" class="outline-4">
-<h4 id="org5c0f0cd"><span class="section-number-4">34.1.1</span> 1 - tensor (a.k.a. 1 - forms)</h4>
+<div id="outline-container-org2ba8c60" class="outline-4">
+<h4 id="org2ba8c60"><span class="section-number-4">34.1.1</span> 1 - tensor (a.k.a. 1 - forms)</h4>
 <div class="outline-text-4" id="text-34-1-1">
 <div class="definition">
 <p>
@@ -3799,8 +3725,8 @@ And in a similar are defined \(dy|_p(a_1,a_2,a_3) = a_2\) and \(dz|_p(a_1,a_2,a_
 </div>
 
 
-<div id="outline-container-org2753bbe" class="outline-4">
-<h4 id="org2753bbe"><span class="section-number-4">34.1.2</span> 1 forms in \(\mathbb{R}^3\)</h4>
+<div id="outline-container-org48c5e1c" class="outline-4">
+<h4 id="org48c5e1c"><span class="section-number-4">34.1.2</span> 1 forms in \(\mathbb{R}^3\)</h4>
 <div class="outline-text-4" id="text-34-1-2">
 <p>
 Every 1-form in \(\mathbb{R}^3\) can be written then as 
@@ -3813,8 +3739,8 @@ Then if \(W = (w_1, w_2, w_3)\) we have:
 </div>
 </div>
 
-<div id="outline-container-orgd3ad856" class="outline-4">
-<h4 id="orgd3ad856"><span class="section-number-4">34.1.3</span> 1 forms in a surface</h4>
+<div id="outline-container-orgadef1fe" class="outline-4">
+<h4 id="orgadef1fe"><span class="section-number-4">34.1.3</span> 1 forms in a surface</h4>
 <div class="outline-text-4" id="text-34-1-3">
 <p>
 Recall that in a surface we have at each point \(p\in S\), the tangent vectors \(\partial_1|_p\) and \(\partial_2|_p\). In this case we write \(dx_1\) and \(dx_2\) for the one forms defined as
@@ -3826,8 +3752,8 @@ Recall that in a surface we have at each point \(p\in S\), the tangent vectors \
 
 
 
-<div id="outline-container-org816a50e" class="outline-3">
-<h3 id="org816a50e"><span class="section-number-3">34.2</span> 2-Forms in \(\mathbb{R}^3\).</h3>
+<div id="outline-container-orgb3512ef" class="outline-3">
+<h3 id="orgb3512ef"><span class="section-number-3">34.2</span> 2-Forms in \(\mathbb{R}^3\).</h3>
 <div class="outline-text-3" id="text-34-2">
 <p>
 A special kind of 2-tensors are those that are anti-symmetric or alternating:
@@ -3848,8 +3774,8 @@ is an alternating bilinear form.
 </div>
 </div>
 
-<div id="outline-container-org391f247" class="outline-3">
-<h3 id="org391f247"><span class="section-number-3">34.3</span> 2-Forms in a surface</h3>
+<div id="outline-container-orgb849a6b" class="outline-3">
+<h3 id="orgb849a6b"><span class="section-number-3">34.3</span> 2-Forms in a surface</h3>
 <div class="outline-text-3" id="text-34-3">
 <p>
 Since the wedge product is an algebraic definitions on each tangent space we have
@@ -3865,12 +3791,12 @@ where
 </div>
 </div>
 
-<div id="outline-container-org4395062" class="outline-3">
-<h3 id="org4395062"><span class="section-number-3">34.4</span> Examples</h3>
+<div id="outline-container-org36726ad" class="outline-3">
+<h3 id="org36726ad"><span class="section-number-3">34.4</span> Examples</h3>
 <div class="outline-text-3" id="text-34-4">
 </div>
-<div id="outline-container-orgd27f262" class="outline-4">
-<h4 id="orgd27f262"><span class="section-number-4">34.4.1</span> Example 2  in \(\mathbb{R}^2\)</h4>
+<div id="outline-container-org5caa933" class="outline-4">
+<h4 id="org5caa933"><span class="section-number-4">34.4.1</span> Example 2  in \(\mathbb{R}^2\)</h4>
 <div class="outline-text-4" id="text-34-4-1">
 <ul class="org-ul">
 <li>In \(\mathbb{R}^2\), the vector field \(V_p = \left( y, -x\right)\), for each \(p = (x, y)\in \mathbb{R}^2\).</li>
@@ -4223,8 +4149,8 @@ UUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAf/Z"exVF2.j
 </div>
 
 
-<div id="outline-container-org2978d06" class="outline-4">
-<h4 id="org2978d06"><span class="section-number-4">34.4.2</span> Example 3  in \(\mathbb{R}^3\)</h4>
+<div id="outline-container-org79c38e4" class="outline-4">
+<h4 id="org79c38e4"><span class="section-number-4">34.4.2</span> Example 3  in \(\mathbb{R}^3\)</h4>
 <div class="outline-text-4" id="text-34-4-2">
 <ul class="org-ul">
 <li>In \(\mathbb{R}^3\setminus\{0\}\), the vector field \(V_p = \left(\frac{x}{\sqrt{x^2 + y^2 + z^2}},\frac{y}{\sqrt{x^2 + y^2 + z^2}},\frac{z}{\sqrt{x^2 + y^2 + z^2}}\right)\), for each \(p = (x, y,z)\in \mathbb{R}^3\), with \(p\neq 0\).</li>
@@ -4235,8 +4161,8 @@ Can you imagine the picture?
 </div>
 </div>
 
-<div id="outline-container-org5321a0d" class="outline-4">
-<h4 id="org5321a0d"><span class="section-number-4">34.4.3</span> Vector field on a surface</h4>
+<div id="outline-container-org7cecdff" class="outline-4">
+<h4 id="org7cecdff"><span class="section-number-4">34.4.3</span> Vector field on a surface</h4>
 <div class="outline-text-4" id="text-34-4-3">
 <div class="definition">
 <p>
@@ -4256,8 +4182,8 @@ Recall that around any point \(p\in S\) there is a local parametrisation \(\varp
 </div>
 </div>
 
-<div id="outline-container-org9c588ef" class="outline-4">
-<h4 id="org9c588ef"><span class="section-number-4">34.4.4</span> Example of a Vector field in a Surface</h4>
+<div id="outline-container-org4129ce9" class="outline-4">
+<h4 id="org4129ce9"><span class="section-number-4">34.4.4</span> Example of a Vector field in a Surface</h4>
 <div class="outline-text-4" id="text-34-4-4">
 <p>
 Consider a surface parameterised by \(\varphi(x,y) =  (x,y,x^2 - y^2)\). Then the tangent vectors vary depending on the pont \(p\) of the surface, since
@@ -4271,8 +4197,8 @@ Then we have
 </div>
 </div>
 
-<div id="outline-container-org905663e" class="outline-4">
-<h4 id="org905663e"><span class="section-number-4">34.4.5</span> Example of a 1 form in \(\mathbb{R}^3\)</h4>
+<div id="outline-container-org6a7a065" class="outline-4">
+<h4 id="org6a7a065"><span class="section-number-4">34.4.5</span> Example of a 1 form in \(\mathbb{R}^3\)</h4>
 <div class="outline-text-4" id="text-34-4-5">
 <p>
 Consider the one form
@@ -4302,8 +4228,8 @@ Now, note that this this is similar as:
 </div>
 </div>
 
-<div id="outline-container-orgc4a9f1f" class="outline-4">
-<h4 id="orgc4a9f1f"><span class="section-number-4">34.4.6</span> Example of a 1 form in a surface</h4>
+<div id="outline-container-org48f776d" class="outline-4">
+<h4 id="org48f776d"><span class="section-number-4">34.4.6</span> Example of a 1 form in a surface</h4>
 <div class="outline-text-4" id="text-34-4-6">
 <p>
 Consider the parameterised surface \(\varphi(x,y) = (x,y,x^2 + y^2)\).
@@ -4338,8 +4264,8 @@ we obtain
 </div>
 
 
-<div id="outline-container-org760fc02" class="outline-4">
-<h4 id="org760fc02"><span class="section-number-4">34.4.7</span> Example of a 2-tensor in \(\mathbb{R}^3\)</h4>
+<div id="outline-container-org721a3c4" class="outline-4">
+<h4 id="org721a3c4"><span class="section-number-4">34.4.7</span> Example of a 2-tensor in \(\mathbb{R}^3\)</h4>
 <div class="outline-text-4" id="text-34-4-7">
 <p>
 In \(\mathbb{R}^3\) the following is a 2-tensor:
@@ -4363,8 +4289,8 @@ Note that this is not symmetric since
 </div>
 </div>
 
-<div id="outline-container-orgac41eab" class="outline-4">
-<h4 id="orgac41eab"><span class="section-number-4">34.4.8</span> Example of a 2-tensor in a Surface</h4>
+<div id="outline-container-orga735de4" class="outline-4">
+<h4 id="orga735de4"><span class="section-number-4">34.4.8</span> Example of a 2-tensor in a Surface</h4>
 <div class="outline-text-4" id="text-34-4-8">
 <p>
 Consider the surface \(S\) parameterised by \(\varphi(x,y,z) = (x,y,x^2 + y^2)\), and the following 2-tensor:
@@ -4386,8 +4312,8 @@ and using the convention that repeated indices are summed (the Einstein notation
 </div>
 
 
-<div id="outline-container-org4a17f5b" class="outline-4">
-<h4 id="org4a17f5b"><span class="section-number-4">34.4.9</span> Example of a 2-from in \(\mathbb{R}^3\)</h4>
+<div id="outline-container-org9c41437" class="outline-4">
+<h4 id="org9c41437"><span class="section-number-4">34.4.9</span> Example of a 2-from in \(\mathbb{R}^3\)</h4>
 <div class="outline-text-4" id="text-34-4-9">
 <p>
 Consider at any \(p\in \mathbb{R}^3\), consider the vectors \(V_1 = (1,2,3)\) and \(V_2 = (-1,4,5)\).
@@ -4403,8 +4329,8 @@ with the coordinates of the cross product
 </p>
 </div>
 </div>
-<div id="outline-container-org8b137b1" class="outline-4">
-<h4 id="org8b137b1"><span class="section-number-4">34.4.10</span> Example of a 2-form in a Surface</h4>
+<div id="outline-container-org3fff7f3" class="outline-4">
+<h4 id="org3fff7f3"><span class="section-number-4">34.4.10</span> Example of a 2-form in a Surface</h4>
 <div class="outline-text-4" id="text-34-4-10">
 <p>
 In a Surface with local parametersiation \(\varphi\), and basic tangent vectors \(\partial_1\) and \(\partial_2\), the area (volume) element \(dS\) is 
@@ -4417,8 +4343,8 @@ the two form given by
 </div>
 </div>
 
-<div id="outline-container-orgefa066b" class="outline-3">
-<h3 id="orgefa066b"><span class="section-number-3">34.5</span> Riemannian metric</h3>
+<div id="outline-container-org0e0c093" class="outline-3">
+<h3 id="org0e0c093"><span class="section-number-3">34.5</span> Riemannian metric</h3>
 <div class="outline-text-3" id="text-34-5">
 <p>
 A Riemannian metric on a smooth manifold \(M\) is a 2-tensor ﬁeld 
@@ -4445,8 +4371,8 @@ This inner product induces a norm on each tangent space \(T_p M\) and which will
 </div>
 </div>
 
-<div id="outline-container-orgfb9e139" class="outline-3">
-<h3 id="orgfb9e139"><span class="section-number-3">34.6</span> Riemannian manifold</h3>
+<div id="outline-container-orge2a1871" class="outline-3">
+<h3 id="orge2a1871"><span class="section-number-3">34.6</span> Riemannian manifold</h3>
 <div class="outline-text-3" id="text-34-6">
 <div class="mydef">
 <p>
@@ -4461,8 +4387,8 @@ The pair \((M, g)\) is called a Riemannian manifold.
 
 
 
-<div id="outline-container-orgf9ace81" class="outline-2">
-<h2 id="orgf9ace81"><span class="section-number-2">35</span> Curves on surfaces (manifolds)</h2>
+<div id="outline-container-org47d4e2f" class="outline-2">
+<h2 id="org47d4e2f"><span class="section-number-2">35</span> Curves on surfaces (manifolds)</h2>
 <div class="outline-text-2" id="text-35">
 <p>
 A curve on a surface \(S\), is a mapping \(\alpha: I \to S\), form a real interval \(I = (a,b)\), \(-\infty \leq a < b \leq \infty\).
@@ -4489,8 +4415,8 @@ One should conclude that the length of a curve is an intrinsic quantity.
 </div>
 </div>
 
-<div id="outline-container-org19ec666" class="outline-2">
-<h2 id="org19ec666"><span class="section-number-2">36</span> A note before continuing</h2>
+<div id="outline-container-org65cb6dd" class="outline-2">
+<h2 id="org65cb6dd"><span class="section-number-2">36</span> A note before continuing</h2>
 <div class="outline-text-2" id="text-36">
 <ul class="org-ul">
 <li>We have been mainly gathering examples and studying regular surfaces in \(\mathbb{R}^3\).</li>
@@ -4499,12 +4425,12 @@ One should conclude that the length of a curve is an intrinsic quantity.
 </ul>
 </div>
 
-<div id="outline-container-org4a84b49" class="outline-3">
-<h3 id="org4a84b49"><span class="section-number-3">36.1</span> Example: The sphere</h3>
+<div id="outline-container-org409afde" class="outline-3">
+<h3 id="org409afde"><span class="section-number-3">36.1</span> Example: The sphere</h3>
 <div class="outline-text-3" id="text-36-1">
 </div>
-<div id="outline-container-orgd9cc950" class="outline-4">
-<h4 id="orgd9cc950"><span class="section-number-4">36.1.1</span> Polar coordinates</h4>
+<div id="outline-container-org04d4426" class="outline-4">
+<h4 id="org04d4426"><span class="section-number-4">36.1.1</span> Polar coordinates</h4>
 <div class="outline-text-4" id="text-36-1-1">
 <ul class="org-ul">
 <li>The atlas and the parameterisations</li>
@@ -4605,8 +4531,8 @@ g^{-1}A =
 </div>
 
 
-<div id="outline-container-orga5627e2" class="outline-4">
-<h4 id="orga5627e2"><span class="section-number-4">36.1.2</span> Sphere as a graph</h4>
+<div id="outline-container-org31b2173" class="outline-4">
+<h4 id="org31b2173"><span class="section-number-4">36.1.2</span> Sphere as a graph</h4>
 <div class="outline-text-4" id="text-36-1-2">
 <ul class="org-ul">
 <li>The atlas and the parameterisations</li>
@@ -4707,8 +4633,8 @@ xy  & 1-x^2
 
 
 
-<div id="outline-container-org6f5a553" class="outline-4">
-<h4 id="org6f5a553"><span class="section-number-4">36.1.3</span> Sphere in steregraphic projection</h4>
+<div id="outline-container-orge07996b" class="outline-4">
+<h4 id="orge07996b"><span class="section-number-4">36.1.3</span> Sphere in steregraphic projection</h4>
 <div class="outline-text-4" id="text-36-1-3">
 <p>
 Exercise.
@@ -4716,8 +4642,8 @@ Exercise.
 </div>
 </div>
 
-<div id="outline-container-orgc0f8263" class="outline-4">
-<h4 id="orgc0f8263"><span class="section-number-4">36.1.4</span> Non-constant curvature on the sphere</h4>
+<div id="outline-container-orgf10525f" class="outline-4">
+<h4 id="orgf10525f"><span class="section-number-4">36.1.4</span> Non-constant curvature on the sphere</h4>
 <div class="outline-text-4" id="text-36-1-4">
 <p>
 Consider now the Riemannian manifold 
@@ -4742,8 +4668,8 @@ g_{11} & = \sin^2\theta\left( b^2 \sin^2\varphi + c^2\cos^2\varphi \right)\\
 </div>
 </div>
 
-<div id="outline-container-org3e367a7" class="outline-2">
-<h2 id="org3e367a7"><span class="section-number-2">37</span> Isometries and Conformal maps</h2>
+<div id="outline-container-orge7d3b93" class="outline-2">
+<h2 id="orge7d3b93"><span class="section-number-2">37</span> Isometries and Conformal maps</h2>
 <div class="outline-text-2" id="text-37">
 <div class="mydef">
 <p>
@@ -4766,8 +4692,8 @@ In other words, a diffeomorphism is an isometry if its differential preserves th
 </p>
 </div>
 
-<div id="outline-container-orgfbb649a" class="outline-3">
-<h3 id="orgfbb649a"><span class="section-number-3">37.1</span> Local isometries</h3>
+<div id="outline-container-org289b851" class="outline-3">
+<h3 id="org289b851"><span class="section-number-3">37.1</span> Local isometries</h3>
 <div class="outline-text-3" id="text-37-1">
 <div class="mydef">
 <p>
@@ -4788,8 +4714,8 @@ necessarily happens that they are globally isometric. The standard example is th
 </div>
 </div>
 
-<div id="outline-container-org162af3e" class="outline-3">
-<h3 id="org162af3e"><span class="section-number-3">37.2</span> Notion of Isometry</h3>
+<div id="outline-container-org6aac108" class="outline-3">
+<h3 id="org6aac108"><span class="section-number-3">37.2</span> Notion of Isometry</h3>
 <div class="outline-text-3" id="text-37-2">
 <p>
 The notion of isometry is the natural concept of equivalence for metric properties of regular surfaces, or more general, Riemannian manifolds.
@@ -4807,8 +4733,8 @@ establishes an equivalence between to geometric objects from the metric viewpoin
 </div>
 
 
-<div id="outline-container-org5332270" class="outline-3">
-<h3 id="org5332270"><span class="section-number-3">37.3</span> Example of Isometry</h3>
+<div id="outline-container-orgb0d0d65" class="outline-3">
+<h3 id="orgb0d0d65"><span class="section-number-3">37.3</span> Example of Isometry</h3>
 <div class="outline-text-3" id="text-37-3">
 <ol class="org-ol">
 <li>The Identity map is an Isometry.</li>
@@ -4817,8 +4743,8 @@ establishes an equivalence between to geometric objects from the metric viewpoin
 </div>
 </div>
 
-<div id="outline-container-org20f3f83" class="outline-3">
-<h3 id="org20f3f83"><span class="section-number-3">37.4</span> Conformal map</h3>
+<div id="outline-container-orgf65de2a" class="outline-3">
+<h3 id="orgf65de2a"><span class="section-number-3">37.4</span> Conformal map</h3>
 <div class="outline-text-3" id="text-37-4">
 <div class="mydef">
 <p>
@@ -4843,8 +4769,8 @@ there exists a diffeomorphism \(f: V_1 \to V_2\) which is a <i>conformal map</i>
 </div>
 </div>
 
-<div id="outline-container-orgb20a3e4" class="outline-3">
-<h3 id="orgb20a3e4"><span class="section-number-3">37.5</span> Conformal maps preserve angles</h3>
+<div id="outline-container-org4f85d5e" class="outline-3">
+<h3 id="org4f85d5e"><span class="section-number-3">37.5</span> Conformal maps preserve angles</h3>
 <div class="outline-text-3" id="text-37-5">
 <p>
 From the geometric definition of the standard inner product we see
@@ -4858,8 +4784,8 @@ From the geometric definition of the standard inner product we see
 </div>
 
 
-<div id="outline-container-orge26f9a6" class="outline-3">
-<h3 id="orge26f9a6"><span class="section-number-3">37.6</span> Natural questions</h3>
+<div id="outline-container-orgfde1b3e" class="outline-3">
+<h3 id="orgfde1b3e"><span class="section-number-3">37.6</span> Natural questions</h3>
 <div class="outline-text-3" id="text-37-6">
 <ul class="org-ul">
 <li>Which metrics \(g\) can be defined in \(\mathbb{S}^2\)?</li>
@@ -8063,8 +7989,8 @@ df6/mP8H1i1MhV/vBLAAAAAASUVORK5CYII="Image_3.png />
 </div>
 
 
-<div id="outline-container-org13d5d69" class="outline-3">
-<h3 id="org13d5d69"><span class="section-number-3">37.7</span> Euler Characteristic</h3>
+<div id="outline-container-org38f7f7f" class="outline-3">
+<h3 id="org38f7f7f"><span class="section-number-3">37.7</span> Euler Characteristic</h3>
 <div class="outline-text-3" id="text-37-7">
 <p>
 The Euler characteristic is a <b>topological invariant</b> and denoted by \(\chi\). It was originally defined for polyhedra
@@ -8208,8 +8134,8 @@ associating a polygon and using the above definitions.
 </div>
 
 
-<div id="outline-container-org744821b" class="outline-4">
-<h4 id="org744821b"><span class="section-number-4">37.7.1</span> Spoiler</h4>
+<div id="outline-container-orge55798f" class="outline-4">
+<h4 id="orge55798f"><span class="section-number-4">37.7.1</span> Spoiler</h4>
 <div class="outline-text-4" id="text-37-7-1">
 <ul class="org-ul">
 <li>Smooth surfaces equipped with Riemannian metrics are the main objects in differential geometry.</li>
@@ -8234,8 +8160,8 @@ This result shows the deep relationship between the geometry and topology.
 </div>
 </div>
 
-<div id="outline-container-orgd233ae2" class="outline-2">
-<h2 id="orgd233ae2"><span class="section-number-2">38</span> Orientation</h2>
+<div id="outline-container-org159d0bf" class="outline-2">
+<h2 id="org159d0bf"><span class="section-number-2">38</span> Orientation</h2>
 <div class="outline-text-2" id="text-38">
 <div class="mydef">
 <p>
@@ -8265,8 +8191,8 @@ If this is not possible, the surface/manifold is said to be <b>non-orientable</b
 </div>
 
 
-<div id="outline-container-org7da2c74" class="outline-2">
-<h2 id="org7da2c74"><span class="section-number-2">39</span> Parallel Transport and Geodesics</h2>
+<div id="outline-container-orgbed4b4e" class="outline-2">
+<h2 id="orgbed4b4e"><span class="section-number-2">39</span> Parallel Transport and Geodesics</h2>
 <div class="outline-text-2" id="text-39">
 <p>
 The main objective in this section is to learn how to take derivatives of vector fields in an intrinsic way. Define 
@@ -8275,8 +8201,8 @@ curves wit zero curvature.
 </p>
 </div>
 
-<div id="outline-container-orgdbf7849" class="outline-3">
-<h3 id="orgdbf7849"><span class="section-number-3">39.1</span> Covariant derivative</h3>
+<div id="outline-container-org93e0d98" class="outline-3">
+<h3 id="org93e0d98"><span class="section-number-3">39.1</span> Covariant derivative</h3>
 <div class="outline-text-3" id="text-39-1">
 <div class="mydef">
 <p>
@@ -8306,8 +8232,8 @@ or simply by
 </div>
 </div>
 
-<div id="outline-container-org6397807" class="outline-3">
-<h3 id="org6397807"><span class="section-number-3">39.2</span> Vector field along a curve</h3>
+<div id="outline-container-org3658e3d" class="outline-3">
+<h3 id="org3658e3d"><span class="section-number-3">39.2</span> Vector field along a curve</h3>
 <div class="outline-text-3" id="text-39-2">
 <div class="mydef">
 <p>
@@ -8329,8 +8255,8 @@ where \(a_i: I \to \mathbb{R}\), \(i=1,2\). If the functions \(a_i\)'s are diffe
 
 
 
-<div id="outline-container-org5716eb3" class="outline-3">
-<h3 id="org5716eb3"><span class="section-number-3">39.3</span> Covariant derivative (along a curve)</h3>
+<div id="outline-container-orgda2f9d4" class="outline-3">
+<h3 id="orgda2f9d4"><span class="section-number-3">39.3</span> Covariant derivative (along a curve)</h3>
 <div class="outline-text-3" id="text-39-3">
 <div class="prop">
 <p>
@@ -8360,8 +8286,8 @@ a local parameterisation \(\varphi(x_1, x_2)\), then  if \(W(t) = a_1(t) \partia
 </div>
 
 
-<div id="outline-container-org5398fc1" class="outline-3">
-<h3 id="org5398fc1"><span class="section-number-3">39.4</span> Parallel Vector Field</h3>
+<div id="outline-container-org171978f" class="outline-3">
+<h3 id="org171978f"><span class="section-number-3">39.4</span> Parallel Vector Field</h3>
 <div class="outline-text-3" id="text-39-4">
 <div class="mydef">
 <p>
@@ -8375,8 +8301,8 @@ A vector field \(\vec{W}\) along a curve \(\alpha: I \to S\) is called <i>parall
 </div>
 </div>
 
-<div id="outline-container-orgd5b76fe" class="outline-3">
-<h3 id="orgd5b76fe"><span class="section-number-3">39.5</span> The existence of parallel transport</h3>
+<div id="outline-container-orge62dfe6" class="outline-3">
+<h3 id="orge62dfe6"><span class="section-number-3">39.5</span> The existence of parallel transport</h3>
 <div class="outline-text-3" id="text-39-5">
 <div class="prop">
 <p>
@@ -8397,8 +8323,8 @@ point \(t_1\in I\).
 </div>
 </div>
 
-<div id="outline-container-org0a8bac8" class="outline-3">
-<h3 id="org0a8bac8"><span class="section-number-3">39.6</span> Properties of parallel transport</h3>
+<div id="outline-container-org1ea1e05" class="outline-3">
+<h3 id="org1ea1e05"><span class="section-number-3">39.6</span> Properties of parallel transport</h3>
 <div class="outline-text-3" id="text-39-6">
 <ol class="org-ol">
 <li>If \(\alpha:I \to S\) and \(\beta:J \to S\)  are two regular parameterisation of \(\alpha(I)\) then \(w(t)\), \(t\in I\) is parallel if and only if \(w(\sigma)\), \(\sigma \in J\) is parallel, and in fact it holds \[ \frac{Dw}{d\sigma} = \frac{Dw}{dt}\frac{dt}{d\sigma}, \quad t\in I, \sigma \in J.\]</li>
@@ -8410,8 +8336,8 @@ transport of \(w_0\) relative to the surface \(S\) if and only if \(w(t)\) is th
 </div>
 
 
-<div id="outline-container-org5a19a0c" class="outline-3">
-<h3 id="org5a19a0c"><span class="section-number-3">39.7</span> Geodesics</h3>
+<div id="outline-container-org18dde77" class="outline-3">
+<h3 id="org18dde77"><span class="section-number-3">39.7</span> Geodesics</h3>
 <div class="outline-text-3" id="text-39-7">
 <p>
 From now, on we will be assuming that the surface \(S\subset \mathbb{R}^3\) is orientable.
@@ -8447,8 +8373,8 @@ point \(p\in C\) is parallel to the normal to \(S\) at \(p\).
 </div>
 </div>
 
-<div id="outline-container-org7ddef78" class="outline-3">
-<h3 id="org7ddef78"><span class="section-number-3">39.8</span> Geodesic curvature</h3>
+<div id="outline-container-org382bd6b" class="outline-3">
+<h3 id="org382bd6b"><span class="section-number-3">39.8</span> Geodesic curvature</h3>
 <div class="outline-text-3" id="text-39-8">
 <div class="mydef">
 <p>
@@ -8521,8 +8447,8 @@ Show that if \(\alpha: I \to S\) is a non-constant parameterised geodesic, then
 </div>
 </div>
 
-<div id="outline-container-orgb7ae52f" class="outline-3">
-<h3 id="orgb7ae52f"><span class="section-number-3">39.9</span> Local existence of geodesics</h3>
+<div id="outline-container-org2f88c1c" class="outline-3">
+<h3 id="org2f88c1c"><span class="section-number-3">39.9</span> Local existence of geodesics</h3>
 <div class="outline-text-3" id="text-39-9">
 <div class="prop">
 <p>
@@ -8537,8 +8463,8 @@ and a unique parameterised geodesic \(\alpha: (-\epsilon, \epsilon) \to S\) such
 </div>
 
 
-<div id="outline-container-org3fed03e" class="outline-2">
-<h2 id="org3fed03e"><span class="section-number-2">40</span> The Gauss Bonnet Theorem</h2>
+<div id="outline-container-orga1d341e" class="outline-2">
+<h2 id="orga1d341e"><span class="section-number-2">40</span> The Gauss Bonnet Theorem</h2>
 <div class="outline-text-2" id="text-40">
 <p>
 <b>First version</b>: The excess over \(\pi\) of the sum of the interior angles \(\theta_1,\theta_2\) and \(\theta_3\) of a geodesic triangle \(T\) 
@@ -8575,8 +8501,8 @@ The curve \(\alpha : I \to S\) from \(I = [0, l]\) to a regular surface (or mani
 </div>
 </div>
 
-<div id="outline-container-org7f0de34" class="outline-3">
-<h3 id="org7f0de34"><span class="section-number-3">40.1</span> External angle at a vertex</h3>
+<div id="outline-container-org0b62a5c" class="outline-3">
+<h3 id="org0b62a5c"><span class="section-number-3">40.1</span> External angle at a vertex</h3>
 <div class="outline-text-3" id="text-40-1">
 <p>
 From the regularity of \(\alpha\), at each vertex \(\alpha(t_i)\) the following two limits are defined:
@@ -8605,8 +8531,8 @@ This signed angle \(\theta_i\) is called the <b>external angle</b> at the vertex
 </div>
 </div>
 
-<div id="outline-container-org515768c" class="outline-3">
-<h3 id="org515768c"><span class="section-number-3">40.2</span> Theorem of turning tangents</h3>
+<div id="outline-container-org9c8a77f" class="outline-3">
+<h3 id="org9c8a77f"><span class="section-number-3">40.2</span> Theorem of turning tangents</h3>
 <div class="outline-text-3" id="text-40-2">
 <p>
 This is a topological result.
@@ -8633,8 +8559,8 @@ plus the differences at the vertices equals \(2\pi\). That is, the following ide
 </div>
 
 
-<div id="outline-container-org329d257" class="outline-3">
-<h3 id="org329d257"><span class="section-number-3">40.3</span> Simple regions</h3>
+<div id="outline-container-org5df3141" class="outline-3">
+<h3 id="org5df3141"><span class="section-number-3">40.3</span> Simple regions</h3>
 <div class="outline-text-3" id="text-40-3">
 <p>
    Let \(S \subset \mathbb{R}^3\) be an oriented regular surface. The subset \(R \subset S\) is called <b>region</b> if it is the
@@ -8645,8 +8571,8 @@ and the boundary \(\partial R\) is the trace of a simple, closed, piecewise regu
 </div>
 
 
-<div id="outline-container-orgfb501b2" class="outline-3">
-<h3 id="orgfb501b2"><span class="section-number-3">40.4</span> Positively oriented curves</h3>
+<div id="outline-container-org2fcb29e" class="outline-3">
+<h3 id="org2fcb29e"><span class="section-number-3">40.4</span> Positively oriented curves</h3>
 <div class="outline-text-3" id="text-40-4">
 <p>
 Let \(\alpha: I \to S\) be a simple, closed, piecewise regular parameterised curve. The tangent vector \(\alpha'(t)\) is a vector
@@ -8661,8 +8587,8 @@ in the 2-dimensional vector space \(T_{\alpha(t)} S\). Hence there is a unique v
 </div>
 </div>
 
-<div id="outline-container-orgde04f71" class="outline-3">
-<h3 id="orgde04f71"><span class="section-number-3">40.5</span> Parameterisation compatible with the orientation</h3>
+<div id="outline-container-org186ea30" class="outline-3">
+<h3 id="org186ea30"><span class="section-number-3">40.5</span> Parameterisation compatible with the orientation</h3>
 <div class="outline-text-3" id="text-40-5">
 <p>
 Let \(\varphi: U\subset \mathbb{R}^3 \to S\) be a parameterisation
@@ -8678,8 +8604,8 @@ as follows
 </div>
 
 
-<div id="outline-container-orga13e242" class="outline-3">
-<h3 id="orga13e242"><span class="section-number-3">40.6</span> Gauss Bonnet Theorem (local)</h3>
+<div id="outline-container-org2c66e42" class="outline-3">
+<h3 id="org2c66e42"><span class="section-number-3">40.6</span> Gauss Bonnet Theorem (local)</h3>
 <div class="outline-text-3" id="text-40-6">
 <div class="lemm">
 <p>
@@ -8868,8 +8794,8 @@ It follows finally that
 </div>
 </div>
 
-<div id="outline-container-org7299f95" class="outline-3">
-<h3 id="org7299f95"><span class="section-number-3">40.7</span> Gauss curvature and Parallel transport.</h3>
+<div id="outline-container-orgc2b7fd3" class="outline-3">
+<h3 id="orgc2b7fd3"><span class="section-number-3">40.7</span> Gauss curvature and Parallel transport.</h3>
 <div class="outline-text-3" id="text-40-7">
 <p>
 As before, consider
@@ -8906,8 +8832,8 @@ hence
 </div>
 </div>
 
-<div id="outline-container-org88079b1" class="outline-3">
-<h3 id="org88079b1"><span class="section-number-3">40.8</span> Generalisations of Gauss-Bonnet theorem</h3>
+<div id="outline-container-org8ff9a7e" class="outline-3">
+<h3 id="org8ff9a7e"><span class="section-number-3">40.8</span> Generalisations of Gauss-Bonnet theorem</h3>
 <div class="outline-text-3" id="text-40-8">
 <div class="thm">
 <p>
@@ -8977,7 +8903,7 @@ external angles of \(T\) and let \(\gamma_j = \pi - \theta_j\), \(j = 1,2,3\).
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Daniel Ballesteros Chávez</p>
-<p class="date">Created: 2023-05-25 Thu 19:16</p>
+<p class="date">Created: 2023-08-06 Sun 21:21</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
