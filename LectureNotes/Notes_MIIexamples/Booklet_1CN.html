@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-03-25 Mon 22:45 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="daniel b" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2020 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgc6fe366">1. Complex numbers</a>
+<ul>
+<li><a href="#org4d52799">1.1. Addition of complex numbers</a></li>
+<li><a href="#orga1e0fbd">1.2. Subtraction of complex numbers</a></li>
+<li><a href="#orgfa4b73b">1.3. Multiplication of two complex numbers:</a></li>
+<li><a href="#org47681dd">1.4. Conjugate of a complex number</a></li>
+<li><a href="#org25cd41b">1.5. Modulus of a complex number</a></li>
+<li><a href="#orgb73af34">1.6. Quotient of two complex numbers:</a></li>
+<li><a href="#orgab158f7">1.7. Modulus, argument Euler's formula and polar form.</a></li>
+<li><a href="#orgdde9261">1.8. Compute n-th roots of a complex number</a></li>
+<li><a href="#orga6a3cee">1.9. Compute n-th power of a complex number (Moivre's Formula)</a></li>
+<li><a href="#org1e77c04">1.10. Geometry in the complex plane:</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc6fe366" class="outline-2">
+<h2 id="orgc6fe366"><span class="section-number-2">1</span> Complex numbers</h2>
+<div class="outline-text-2" id="text-1">
+<div class="mydef">
+<p>
+The set of complex numbers 
+</p>
+\begin{equation*}
+\mathbb{C}= \{ x + iy  : x,y\in \mathbb{R}, i^2 = -1\}
+\end{equation*}
+
+</div>
+
+<p>
+The set of complex numbers is denoted by \(\mathbb{C}\). 
+Every element \(z\in \mathbb{C}\) can be written as
+</p>
+\begin{equation*}
+z = x + i y,
+\end{equation*}
+<p>
+where \(x,y\in \mathbb{R}\) and \(i\) is a special complex number with the property that \(i^2 = -1\).
+</p>
+
+<p>
+On this set, the operations of addition, substraction, multiplication and division are defined.
+</p>
+</div>
+
+
+<div id="outline-container-org4d52799" class="outline-3">
+<h3 id="org4d52799"><span class="section-number-3">1.1</span> Addition of complex numbers</h3>
+<div class="outline-text-3" id="text-1-1">
+<div class="mydef">
+<p>
+If \(z = x_1 + i y_1\) and \(w = x_2 + i y_2\) are two complex numbers, then the sum is
+</p>
+\begin{equation*}
+z + w = (x_1 + x_2) + i(y_1 + y_2).
+\end{equation*}
+
+</div>
+
+<dl class="org-dl">
+<dt>Example</dt><dd></dd>
+</dl>
+<p>
+Let \(z = 4 + \frac{i}{4}\) and \(w = 3 - 5i\). Then, the sum is
+</p>
+\begin{equation*}
+\begin{split}
+z + w & = \left( 4 + \frac{i}{4} \right) + (3 - 5i) \\
+      & = \left( 4 + 3 \right) + \left(\frac{i}{4} - 5i\right) \\
+      & =  7  + i \left(\frac{1}{4} - 5\right) \\
+      & =  7  - \frac{19}{4} i\\
+\end{split}
+\end{equation*}
+</div>
+</div>
+
+<div id="outline-container-orga1e0fbd" class="outline-3">
+<h3 id="orga1e0fbd"><span class="section-number-3">1.2</span> Subtraction of complex numbers</h3>
+<div class="outline-text-3" id="text-1-2">
+<div class="mydef">
+<p>
+If \(z = x_1 + i y_1\) and \(w = x_2 + i y_2\) are two complex numbers, then the difference is
+</p>
+\begin{equation*}
+z - w = (x_1 - x_2) + i(y_1 - y_2).
+\end{equation*}
+
+</div>
+
+<dl class="org-dl">
+<dt>Example</dt><dd></dd>
+</dl>
+<p>
+Let \(z = 7 - \frac{3i}{2}\) and \(w = 1 - i\). Then
+</p>
+\begin{equation*}
+\begin{split}
+z - w & = \left( 7 - \frac{3i}{2} \right) - \left(1 - i \right) \\
+      & =  7 - \frac{3i}{2}  - 1 + i \\
+      & =  6 - \frac{i}{2}
+\end{split}
+\end{equation*}
+</div>
+</div>
+
+<div id="outline-container-orgfa4b73b" class="outline-3">
+<h3 id="orgfa4b73b"><span class="section-number-3">1.3</span> Multiplication of two complex numbers:</h3>
+<div class="outline-text-3" id="text-1-3">
+<div class="mydef">
+<p>
+If \(z = x_1 + i y_1\) and \(w = x_2 + i y_2\) are two complex numbers, then the multiplication or product is
+</p>
+\begin{equation*}
+z  w = (x_1x_2 - y_1y_2) + i(x_1y_2 + x_2y_1).
+\end{equation*}
+
+</div>
+
+<dl class="org-dl">
+<dt>Example</dt><dd></dd>
+</dl>
+<p>
+Let \(z = 7 - \frac{3i}{2}\) and \(w = 1 - i\). Then
+</p>
+\begin{equation*}
+\begin{split}
+z  w & = \left( 7 - \frac{3i}{2} \right)  \left(1 - i \right) \\
+      & =  7 - 7i - \frac{3i}{2} + \frac{3}{2} i^2 \\
+      & =  7 - 7i - \frac{3i}{2} - \frac{3}{2} \\
+      & =  \frac{11}{2} - \frac{17i}{2}.
+\end{split}
+\end{equation*}
+</div>
+</div>
+
+<div id="outline-container-org47681dd" class="outline-3">
+<h3 id="org47681dd"><span class="section-number-3">1.4</span> Conjugate of a complex number</h3>
+<div class="outline-text-3" id="text-1-4">
+<div class="mydef">
+<p>
+if \(z = x + iy\), then the conjugate is 
+</p>
+\begin{equation*}
+\overline{z} = x - iy.
+\end{equation*}
+
+</div>
+
+<dl class="org-dl">
+<dt>Examples</dt><dd><ul class="org-ul">
+<li>The conjugate of \(z = 3 - 7i\) is \(\overline{z} = 3 + 7i\).</li>
+<li>The conjugate of \(z = 1 + 3i\) is \(\overline{z} = 1 - 3i\).</li>
+<li>The conjugate of \(z = 3i\) is \(\overline{z} = -3i\).</li>
+<li>The conjugate of \(z = 5\) is \(\overline{z} = 5\).</li>
+</ul></dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org25cd41b" class="outline-3">
+<h3 id="org25cd41b"><span class="section-number-3">1.5</span> Modulus of a complex number</h3>
+<div class="outline-text-3" id="text-1-5">
+<div class="mydef">
+<p>
+If \(z = x + iy\), then modulus of \(z\)  is the positive real number 
+</p>
+\begin{equation*}
+\, |z| =\sqrt{ x^2 + y^2}.
+\end{equation*}
+
+</div>
+
+<dl class="org-dl">
+<dt>Example</dt><dd><ul class="org-ul">
+<li>The modulus of \(z = 3 - 7i\) is the real number \(|z| = \sqrt{58}\).</li>
+<li>Compute the  modulus of \(z = \frac{1}{2} + \sqrt{2} i\).</li>
+</ul>
+\begin{equation*}
+\, |z| = \sqrt{\frac{1}{4} + 2} = \sqrt{\frac{9}{4}} = \frac{\sqrt{9}}{\sqrt{4}} = \frac{3}{2}
+\end{equation*}</dd>
+
+<dt>Example</dt><dd>Notice that for any \(z = x + iy\), the product of a complex number with its conjugate equals the modulus squared:</dd>
+</dl>
+\begin{equation*}
+z\overline{z} = |z|^2 = x^2 + y^2.
+\end{equation*} 
+</div>
+</div>
+
+<div id="outline-container-orgb73af34" class="outline-3">
+<h3 id="orgb73af34"><span class="section-number-3">1.6</span> Quotient of two complex numbers:</h3>
+<div class="outline-text-3" id="text-1-6">
+<div class="mydef">
+<p>
+If \(z = x_1 + i y_1\) and \(w = x_2 + i y_2\)  are two complex numbers with \(w \neq 0\), then the quotient is
+</p>
+\begin{equation*}
+\frac{z}{w} = \frac{z}{w} \frac{\overline{w}}{\overline{w}} = \frac{(x_1 + i y_1)(x_2 - iy_2)}{x_2^2 + y_2^2}.
+\end{equation*}
+
+</div>
+
+<dl class="org-dl">
+<dt>Example</dt><dd>Write the following quotient of complex number in the form \(x + i y\).</dd>
+</dl>
+\begin{equation*}
+\begin{split}
+\frac{1 + 2i}{3 + 4i} &  = \frac{1 + 2i}{3 + 4i} \cdot \frac{3 -4i}{3 - 4i}  \\
+ 	  	       &  = \frac{(1 + 2i)(3 - 4i)}{9 + 16} \\
+ 	  	       &  = \frac{3 - 4i  + 6i - 8i^2}{25} \\
+ 	  	       &  = \frac{11 + 2i }{25} \\
+\end{split}
+\end{equation*}
+</div>
+</div>
+
+<div id="outline-container-orgab158f7" class="outline-3">
+<h3 id="orgab158f7"><span class="section-number-3">1.7</span> Modulus, argument Euler's formula and polar form.</h3>
+<div class="outline-text-3" id="text-1-7">
+<div class="mydef">
+<p>
+Every complex number can be written in polar form
+</p>
+\begin{equation*}
+z = r e^{i\theta},
+\end{equation*}
+<p>
+where 
+</p>
+<ul class="org-ul">
+<li>\(r = |z|\) is the modulus of the complex number.</li>
+<li>\(\theta\) is the argument of the complex number (angle).</li>
+<li>\(e^{i\theta} = \cos(\theta) + i \sin(\theta)\) is the beautiful <b>Euler's formula</b>.</li>
+</ul>
+
+</div>
+
+
+<dl class="org-dl">
+<dt>Example</dt><dd>Write in <i>polar form</i> the complex number \(z = -1 -\sqrt{3}i\).</dd>
+</dl>
+<p>
+A direct computation shows that the modulus is 
+</p>
+\begin{equation*}
+r = |z| = \sqrt{(-1)^2 + (-\sqrt{3})^2} = \sqrt{4} =2.
+\end{equation*} 
+
+<p>
+After you draw the complex number on the plane, you can choose verify that 
+</p>
+
+\begin{equation*}
+\theta = \pi + \frac{\pi}{3} = \frac{4\pi}{3}.
+\end{equation*}
+
+
+<p>
+Then we can write:
+</p>
+
+\begin{equation*}
+z = 2  e^{\frac{4\pi}{3} i},
+\end{equation*}
+<p>
+or equivalently 
+</p>
+\begin{equation*}
+z = 2  \left( \cos\left(\frac{4\pi}{3}\right) + i\sin\left(\frac{4\pi}{3}\right)\right).
+\end{equation*}
+</div>
+</div>
+
+
+<div id="outline-container-orgdde9261" class="outline-3">
+<h3 id="orgdde9261"><span class="section-number-3">1.8</span> Compute n-th roots of a complex number</h3>
+<div class="outline-text-3" id="text-1-8">
+<div class="mydef">
+<p>
+If \(z = r e^{i\theta}\), then the nth-root is given by the formula
+</p>
+\begin{equation*}
+\sqrt[n]{z} = \sqrt[n]{r}\left( \cos\left(\frac{\theta + 2k\pi}{n}\right) + i\sin\left(\frac{\theta + 2k\pi}{n}\right)\right),
+\end{equation*}
+<p>
+and there are n-different values corresponding to \(k = 0, 1, 2, ..., (n-1)\).
+</p>
+
+</div>
+
+<dl class="org-dl">
+<dt>Example</dt><dd>Compute \(\sqrt[3]{-2+2i}\).</dd>
+</dl>
+
+<p>
+The modulus of \(-2 + 2i\) is \(r = \sqrt{8}\), and the argument is \(\theta =\frac{3\pi}{4}\).
+</p>
+
+<p>
+Notice that \(\sqrt[3]{r} = \sqrt[3]{\sqrt{8}} = (8)^{1/6} = (2^3)^{1/6} = 2^{1/2} = \sqrt{2}\).
+</p>
+
+<p>
+Then using the identity from the definition
+</p>
+\begin{equation*}
+\sqrt[3]{-2+2i} = \sqrt{2} \left( \cos\left(\frac{\frac{3\pi}{4} + 2k\pi}{3}\right) + i\sin\left(\frac{\frac{3\pi}{4} + 2k\pi}{3}\right)\right),
+\end{equation*}
+
+<p>
+The root for \(k=0\) is
+</p>
+\begin{equation*}
+\begin{split}
+z_0 & = \sqrt{2} \left( \cos\left(\frac{3\pi}{12}\right) + i\sin\left(\frac{3\pi}{12}\right)\right)\\
+& = \sqrt{2} \left( \cos\left(\frac{\pi}{4}\right) + i\sin\left(\frac{\pi}{4}\right)\right)\\
+& = \sqrt{2} \left( \frac{1}{\sqrt{2}} + i \frac{1}{\sqrt{2}}\right)\\
+& = 1 + i.
+\end{split}
+\end{equation*}
+
+
+<p>
+The root for \(k=1\) is
+</p>
+\begin{equation*}
+\begin{split}
+z_1 &= \sqrt{2} \left( \cos\left(\frac{11\pi}{12}\right) + i\sin\left(\frac{11\pi}{12}\right)\right),
+\end{split}
+\end{equation*}
+
+
+<p>
+The root for \(k=2\) is
+</p>
+\begin{equation*}
+\begin{split}
+z_2 &= \sqrt{2} \left( \cos\left(\frac{19\pi}{12}\right) + i\sin\left(\frac{19\pi}{12}\right)\right),
+\end{split}
+\end{equation*}
+</div>
+</div>
+
+
+<div id="outline-container-orga6a3cee" class="outline-3">
+<h3 id="orga6a3cee"><span class="section-number-3">1.9</span> Compute n-th power of a complex number (Moivre's Formula)</h3>
+<div class="outline-text-3" id="text-1-9">
+<div class="mydef">
+<p>
+If \(z = re^{i\theta}\) then 
+</p>
+\begin{equation*}
+z^n = r^ne^{in\theta}.
+\end{equation*}
+<p>
+Equivalently we can write the so called Moivre's formula:
+</p>
+\begin{equation*}
+z^n = r^n\left( \cos\left(n\theta\right) + i\sin\left(n\theta\right)\right).
+\end{equation*}
+
+</div>
+
+<dl class="org-dl">
+<dt>Example</dt><dd>Compute \((-2+2i)^4\).</dd>
+</dl>
+
+<p>
+The modulus of \(-2 + 2i\) is \(r = \sqrt{8}\), and the argument is \(\theta =\frac{3\pi}{4}\), then 
+</p>
+
+\begin{equation*}
+(-2 + 2i)^4 = 8^2\left( \cos\left(3\pi\right) + i\sin\left(3\pi\right)\right) = -64.
+\end{equation*}
+</div>
+</div>
+
+
+<div id="outline-container-org1e77c04" class="outline-3">
+<h3 id="org1e77c04"><span class="section-number-3">1.10</span> Geometry in the complex plane:</h3>
+<div class="outline-text-3" id="text-1-10">
+<p>
+We should understand the modulus of a complex number as a length:
+</p>
+
+<dl class="org-dl">
+<dt>Length of line segment</dt><dd>\(|z_1 - z_0|\) measures the length of the line segment joining the two complex numbers \(z_1\) and \(z_2\).</dd>
+<dt>Circle</dt><dd>For a given \(z_0\), the set of complex numbers satisfying \(|z- z_0| = R\) describes the circle with centre at \(z_0\) and radius \(R\).</dd>
+<dt>Ellipse</dt><dd><p>
+An ellipse is a plane curve surrounding two focal points, such that <b>for all points on the curve</b>, <b>the sum of the two distances</b> to the focal points is a <b>constant</b>. 
+</p>
+\begin{equation*}
+\,  |z - a_1| + |z - a_2| = c, \quad \mbox{as long as  } c > |a_1 - a_2|.
+\end{equation*}</dd>
+<dt>Hyperbola</dt><dd>(Exercise)</dd>
+<dt>Perpendicular bisector</dt><dd><p>
+Perpendicular bisector of the line segment joining two complex numbers \(z_1\) and \(z_2\)
+</p>
+\begin{equation*}
+\,|z - z_1| = |z - z_2|
+\end{equation*}</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: daniel b</p>
+<p class="date">Created: 2024-03-25 Mon 22:45</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
