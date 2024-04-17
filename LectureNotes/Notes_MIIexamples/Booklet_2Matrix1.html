@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-04-07 Sun 17:48 -->
+<!-- 2024-04-17 Wed 09:53 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -268,62 +268,62 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org191a4b0">1. Matrix arithmetic</a>
+<li><a href="#org3ae6e3e">1. Matrix arithmetic</a>
 <ul>
-<li><a href="#orgf6d22e4">1.1. Matrix with real coefficients</a></li>
-<li><a href="#orgca5af79">1.2. Multiplication by a scalar</a></li>
-<li><a href="#org507e6d1">1.3. Sum and difference of matrices</a></li>
-<li><a href="#orgcb06bc0">1.4. Transpose of a matrix</a></li>
-<li><a href="#orgc224de4">1.5. Multiplication of two matrices</a></li>
+<li><a href="#orgfb785cc">1.1. Matrix with real coefficients</a></li>
+<li><a href="#org35805a6">1.2. Multiplication by a scalar</a></li>
+<li><a href="#org36c1a9e">1.3. Sum and difference of matrices</a></li>
+<li><a href="#org67a736f">1.4. Transpose of a matrix</a></li>
+<li><a href="#orgab9c70d">1.5. Multiplication of two matrices</a></li>
 </ul>
 </li>
-<li><a href="#org409d534">2. The identity matrix</a></li>
-<li><a href="#org428347f">3. Determinants</a>
+<li><a href="#orgddd992b">2. The identity matrix</a></li>
+<li><a href="#orgaf14385">3. Determinants</a>
 <ul>
-<li><a href="#orgf3cdd3c">3.1. Determinant of a \(1\times 1\) matrix</a></li>
-<li><a href="#orgfe4db22">3.2. Determinant of a \(2\times 2\) matrix</a></li>
-<li><a href="#org88837cc">3.3. Determinant of a \(3\times 3\) matrix</a></li>
-<li><a href="#org9bd52a2">3.4. Determinant of a \(4\times 4\) matrix</a></li>
+<li><a href="#org95b881d">3.1. Determinant of a \(1\times 1\) matrix</a></li>
+<li><a href="#orgc016f80">3.2. Determinant of a \(2\times 2\) matrix</a></li>
+<li><a href="#org9d699c1">3.3. Determinant of a \(3\times 3\) matrix</a></li>
+<li><a href="#org6051629">3.4. Determinant of a \(4\times 4\) matrix</a></li>
 </ul>
 </li>
-<li><a href="#org6bc421e">4. Inverse of a square matrix</a>
+<li><a href="#org249fb2d">4. Inverse of a square matrix</a>
 <ul>
-<li><a href="#org706c464">4.1. Formula for the inverse of a \(2\times 2\) matrix.</a></li>
-<li><a href="#org419aa0c">4.2. Minors, cofactor and adjoint.</a></li>
-<li><a href="#org5343ecd">4.3. Formula for the inverse of a square matrix (of any size)</a></li>
+<li><a href="#org6e83564">4.1. Formula for the inverse of a \(2\times 2\) matrix.</a></li>
+<li><a href="#org8649744">4.2. Minors, cofactor and adjoint.</a></li>
+<li><a href="#org3f2cdc6">4.3. Formula for the inverse of a square matrix (of any size)</a></li>
 </ul>
 </li>
-<li><a href="#orgffc49c1">5. System of linear equations</a>
+<li><a href="#orgbb9d3ec">5. System of linear equations</a>
 <ul>
-<li><a href="#orgff3873a">5.1. Augmented matrix</a></li>
-<li><a href="#org90dc24c">5.2. Solving a system of equations using the formula for the inverse</a></li>
-<li><a href="#orgcc7c76c">5.3. Elementary row operations</a></li>
-<li><a href="#orga272c8b">5.4. Row Echelon Form (REF) and Reduce Row Echelon Form (RREF)</a></li>
-<li><a href="#orgc0705b6">5.5. Solving a system of equations using Gauss-Jordan elimination</a></li>
-<li><a href="#orgae331d7">5.6. Solution of a system of equations with free variables</a></li>
+<li><a href="#org6660542">5.1. Augmented matrix</a></li>
+<li><a href="#orgae5f6c5">5.2. Solving a system of equations using the formula for the inverse</a></li>
+<li><a href="#orge7a290b">5.3. Elementary row operations</a></li>
+<li><a href="#orgaadeb8f">5.4. Row Echelon Form (REF) and Reduce Row Echelon Form (RREF)</a></li>
+<li><a href="#orgeed62da">5.5. Solving a system of equations using Gauss-Jordan elimination</a></li>
+<li><a href="#orgc6deb8a">5.6. Solution of a system of equations with free variables</a></li>
 </ul>
 </li>
-<li><a href="#org80782a9">6. Linear transformations between vector spaces</a>
+<li><a href="#org4b6744f">6. Linear transformations between vector spaces</a>
 <ul>
-<li><a href="#orgc9d3698">6.1. The matrix representing a linear transformation</a></li>
-<li><a href="#orgd86f38f">6.2. Matrix of \(T\) in the canonical basis</a></li>
-<li><a href="#orge78533a">6.3. Matrix of \(T\) for general basis.</a></li>
+<li><a href="#org36cc50c">6.1. The matrix representing a linear transformation</a></li>
+<li><a href="#org14b637d">6.2. Matrix of \(T\) in the canonical basis</a></li>
+<li><a href="#org3b5d1c1">6.3. Matrix of \(T\) for general basis.</a></li>
 </ul>
 </li>
-<li><a href="#org750ac91">7. The kernel, Image, rank and nullity</a>
+<li><a href="#org0c33fff">7. The kernel, Image, rank and nullity</a>
 <ul>
-<li><a href="#org6635012">7.1. How to find the kernel</a></li>
-<li><a href="#org08e21f0">7.2. How to find the Rank.</a></li>
+<li><a href="#orgcec8b67">7.1. How to find the kernel</a></li>
+<li><a href="#org3ddf584">7.2. How to find the Rank.</a></li>
 </ul>
 </li>
-<li><a href="#org468b695">8. The dimension theorem</a></li>
-<li><a href="#org58bb889">9. Eigenvalues and eigenspaces</a></li>
-<li><a href="#org426c3a7">10. Diagonalizable matrix</a></li>
+<li><a href="#orgf73ad88">8. The dimension theorem</a></li>
+<li><a href="#orgbdb87c5">9. Eigenvalues and eigenspaces</a></li>
+<li><a href="#org6e83d45">10. Diagonalizable matrix</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org191a4b0" class="outline-2">
-<h2 id="org191a4b0"><span class="section-number-2">1</span> Matrix arithmetic</h2>
+<div id="outline-container-org3ae6e3e" class="outline-2">
+<h2 id="org3ae6e3e"><span class="section-number-2">1</span> Matrix arithmetic</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 In this section we will review the basic arithmetic of matrices with real coefficients.
@@ -332,8 +332,8 @@ the student to write examples in this field.
 </p>
 </div>
 
-<div id="outline-container-orgf6d22e4" class="outline-3">
-<h3 id="orgf6d22e4"><span class="section-number-3">1.1</span> Matrix with real coefficients</h3>
+<div id="outline-container-orgfb785cc" class="outline-3">
+<h3 id="orgfb785cc"><span class="section-number-3">1.1</span> Matrix with real coefficients</h3>
 <div class="outline-text-3" id="text-1-1">
 <div class="mydef">
 <p>
@@ -390,8 +390,8 @@ The entry \(b_{23}  = -6\), and the entry \(b_{12} = 2\).
 </div>
 </div>
 
-<div id="outline-container-orgca5af79" class="outline-3">
-<h3 id="orgca5af79"><span class="section-number-3">1.2</span> Multiplication by a scalar</h3>
+<div id="outline-container-org35805a6" class="outline-3">
+<h3 id="org35805a6"><span class="section-number-3">1.2</span> Multiplication by a scalar</h3>
 <div class="outline-text-3" id="text-1-2">
 <div class="mydef">
 <p>
@@ -436,8 +436,8 @@ A = \left( \begin{array}{rrr}
 </div>
 </div>
 
-<div id="outline-container-org507e6d1" class="outline-3">
-<h3 id="org507e6d1"><span class="section-number-3">1.3</span> Sum and difference of matrices</h3>
+<div id="outline-container-org36c1a9e" class="outline-3">
+<h3 id="org36c1a9e"><span class="section-number-3">1.3</span> Sum and difference of matrices</h3>
 <div class="outline-text-3" id="text-1-3">
 <div class="mydef">
 <p>
@@ -530,8 +530,8 @@ Then
 </div>
 </div>
 
-<div id="outline-container-orgcb06bc0" class="outline-3">
-<h3 id="orgcb06bc0"><span class="section-number-3">1.4</span> Transpose of a matrix</h3>
+<div id="outline-container-org67a736f" class="outline-3">
+<h3 id="org67a736f"><span class="section-number-3">1.4</span> Transpose of a matrix</h3>
 <div class="outline-text-3" id="text-1-4">
 <div class="mydef">
 <p>
@@ -599,8 +599,8 @@ Let \(A\) be a square matrix. If \(A^{T} = A\), then we will say that  \(A\) is 
 </div>
 </div>
 
-<div id="outline-container-orgc224de4" class="outline-3">
-<h3 id="orgc224de4"><span class="section-number-3">1.5</span> Multiplication of two matrices</h3>
+<div id="outline-container-orgab9c70d" class="outline-3">
+<h3 id="orgab9c70d"><span class="section-number-3">1.5</span> Multiplication of two matrices</h3>
 <div class="outline-text-3" id="text-1-5">
 <div class="mydef">
 <p>
@@ -683,8 +683,8 @@ AB = \left( \begin{array}{rrr}
 </div>
 </div>
 
-<div id="outline-container-org409d534" class="outline-2">
-<h2 id="org409d534"><span class="section-number-2">2</span> The identity matrix</h2>
+<div id="outline-container-orgddd992b" class="outline-2">
+<h2 id="orgddd992b"><span class="section-number-2">2</span> The identity matrix</h2>
 <div class="outline-text-2" id="text-2">
 <div class="mydef">
 <p>
@@ -711,8 +711,8 @@ If we do not specify the size of the matrix \(I\), it should be clear from the c
 </p>
 </div>
 </div>
-<div id="outline-container-org428347f" class="outline-2">
-<h2 id="org428347f"><span class="section-number-2">3</span> Determinants</h2>
+<div id="outline-container-orgaf14385" class="outline-2">
+<h2 id="orgaf14385"><span class="section-number-2">3</span> Determinants</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The determinant is a function that assigns to a square matrix \(A\) of size \(n\), a real number \(\mbox{det}(A)\).
@@ -725,8 +725,8 @@ In this section we will show by working some examples, how to compute the determ
 </p>
 </div>
 
-<div id="outline-container-orgf3cdd3c" class="outline-3">
-<h3 id="orgf3cdd3c"><span class="section-number-3">3.1</span> Determinant of a \(1\times 1\) matrix</h3>
+<div id="outline-container-org95b881d" class="outline-3">
+<h3 id="org95b881d"><span class="section-number-3">3.1</span> Determinant of a \(1\times 1\) matrix</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 A real number \(a\in \mathbb{R}\) can be consider as a \(1\times 1\) matrix, and in this case we define \(\mbox{det}(a) = a\).
@@ -734,8 +734,8 @@ A real number \(a\in \mathbb{R}\) can be consider as a \(1\times 1\) matrix, and
 </div>
 </div>
 
-<div id="outline-container-orgfe4db22" class="outline-3">
-<h3 id="orgfe4db22"><span class="section-number-3">3.2</span> Determinant of a \(2\times 2\) matrix</h3>
+<div id="outline-container-orgc016f80" class="outline-3">
+<h3 id="orgc016f80"><span class="section-number-3">3.2</span> Determinant of a \(2\times 2\) matrix</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Let \(A\) be a \(2\times 2\) matrix
@@ -776,8 +776,8 @@ A direct computation shows
 </div>
 </div>
 
-<div id="outline-container-org88837cc" class="outline-3">
-<h3 id="org88837cc"><span class="section-number-3">3.3</span> Determinant of a \(3\times 3\) matrix</h3>
+<div id="outline-container-org9d699c1" class="outline-3">
+<h3 id="org9d699c1"><span class="section-number-3">3.3</span> Determinant of a \(3\times 3\) matrix</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Let \(A\) be a \(3\times 3\) matrix
@@ -856,8 +856,8 @@ Following the formula, we get
 </div>
 </div>
 
-<div id="outline-container-org9bd52a2" class="outline-3">
-<h3 id="org9bd52a2"><span class="section-number-3">3.4</span> Determinant of a \(4\times 4\) matrix</h3>
+<div id="outline-container-org6051629" class="outline-3">
+<h3 id="org6051629"><span class="section-number-3">3.4</span> Determinant of a \(4\times 4\) matrix</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 After discussing the previous example (especially the alternating sign convention)
@@ -867,8 +867,8 @@ we leave as an exercise to obtain a formula for the determinant of a
 </div>
 </div>
 </div>
-<div id="outline-container-org6bc421e" class="outline-2">
-<h2 id="org6bc421e"><span class="section-number-2">4</span> Inverse of a square matrix</h2>
+<div id="outline-container-org249fb2d" class="outline-2">
+<h2 id="org249fb2d"><span class="section-number-2">4</span> Inverse of a square matrix</h2>
 <div class="outline-text-2" id="text-4">
 <div class="mydef">
 <p>
@@ -898,8 +898,8 @@ invertible with inverse \(A^{-1}\).
 </div>
 </div>
 
-<div id="outline-container-org706c464" class="outline-3">
-<h3 id="org706c464"><span class="section-number-3">4.1</span> Formula for the inverse of a \(2\times 2\) matrix.</h3>
+<div id="outline-container-org6e83564" class="outline-3">
+<h3 id="org6e83564"><span class="section-number-3">4.1</span> Formula for the inverse of a \(2\times 2\) matrix.</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Consider the following \(2\times 2\) matrix
@@ -946,8 +946,8 @@ A^{-1} =  \frac{1}{14}\left( \begin{array}{ll}
 </div>
 </div>
 
-<div id="outline-container-org419aa0c" class="outline-3">
-<h3 id="org419aa0c"><span class="section-number-3">4.2</span> Minors, cofactor and adjoint.</h3>
+<div id="outline-container-org8649744" class="outline-3">
+<h3 id="org8649744"><span class="section-number-3">4.2</span> Minors, cofactor and adjoint.</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 In these definitions, we are assuming that the matrices have real coefficients.
@@ -1159,8 +1159,8 @@ C = \left( \begin{array}{rrrr}
 </div>
 </div>
 
-<div id="outline-container-org5343ecd" class="outline-3">
-<h3 id="org5343ecd"><span class="section-number-3">4.3</span> Formula for the inverse of a square matrix (of any size)</h3>
+<div id="outline-container-org3f2cdc6" class="outline-3">
+<h3 id="org3f2cdc6"><span class="section-number-3">4.3</span> Formula for the inverse of a square matrix (of any size)</h3>
 <div class="outline-text-3" id="text-4-3">
 <div class="prop">
 <p>
@@ -1309,8 +1309,8 @@ A^{-1} & = \frac{1}{\mbox{det}(A)}{\mbox{Adj}}(A) \\
 </div>
 </div>
 
-<div id="outline-container-orgffc49c1" class="outline-2">
-<h2 id="orgffc49c1"><span class="section-number-2">5</span> System of linear equations</h2>
+<div id="outline-container-orgbb9d3ec" class="outline-2">
+<h2 id="orgbb9d3ec"><span class="section-number-2">5</span> System of linear equations</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 In this section we are considering a system of \(n\) linear equations with \(m\) number of unknowns or variables, which can be written as
@@ -1419,8 +1419,8 @@ z
 \end{equation*}
 </div>
 
-<div id="outline-container-orgff3873a" class="outline-3">
-<h3 id="orgff3873a"><span class="section-number-3">5.1</span> Augmented matrix</h3>
+<div id="outline-container-org6660542" class="outline-3">
+<h3 id="org6660542"><span class="section-number-3">5.1</span> Augmented matrix</h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="mydef">
 <p>
@@ -1446,8 +1446,8 @@ In the case \(\vec{b} = \vec{0}\), then we use \(A\) also instead of \([A | 0]\)
 </div>
 </div>
 
-<div id="outline-container-org90dc24c" class="outline-3">
-<h3 id="org90dc24c"><span class="section-number-3">5.2</span> Solving a system of equations using the formula for the inverse</h3>
+<div id="outline-container-orgae5f6c5" class="outline-3">
+<h3 id="orgae5f6c5"><span class="section-number-3">5.2</span> Solving a system of equations using the formula for the inverse</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 This method works only when the number of equations equals the number of unknowns.
@@ -1588,8 +1588,8 @@ x = -\frac{11}{14}, \quad y = -\frac{15}{14}, \quad z = \frac{6}{7}.
 </div>
 </div>
 
-<div id="outline-container-orgcc7c76c" class="outline-3">
-<h3 id="orgcc7c76c"><span class="section-number-3">5.3</span> Elementary row operations</h3>
+<div id="outline-container-orge7a290b" class="outline-3">
+<h3 id="orge7a290b"><span class="section-number-3">5.3</span> Elementary row operations</h3>
 <div class="outline-text-3" id="text-5-3">
 <div class="mydef">
 <p>
@@ -1645,8 +1645,8 @@ For a matrix \(A\) or for an augmented matrix \([A|b]\), the following operation
 </div>
 </div>
 
-<div id="outline-container-orga272c8b" class="outline-3">
-<h3 id="orga272c8b"><span class="section-number-3">5.4</span> Row Echelon Form (REF) and Reduce Row Echelon Form (RREF)</h3>
+<div id="outline-container-orgaadeb8f" class="outline-3">
+<h3 id="orgaadeb8f"><span class="section-number-3">5.4</span> Row Echelon Form (REF) and Reduce Row Echelon Form (RREF)</h3>
 <div class="outline-text-3" id="text-5-4">
 <div class="mydef">
 <p>
@@ -1674,7 +1674,7 @@ A matrix is in reduced row echelon form (also called row canonical form) if it s
 
 
 <dl class="org-dl">
-<dt>Example</dt><dd>The following matrix is in Row Echelon Form, but is is NOT in Row Reduced Echelon Form:</dd>
+<dt>Example</dt><dd>The following matrix is in Row Echelon Form, but it is NOT in Row Reduced Echelon Form:</dd>
 </dl>
 \begin{equation*}
 \left( \begin{array}{rrr}
@@ -1693,7 +1693,7 @@ A matrix is in reduced row echelon form (also called row canonical form) if it s
 1 & 0 & \frac{1}{2}\\
 0 &  1 & 0\\
 0 & 0 &  0\\
-\end{array} \right)
+\end{array} \right).
 \end{equation*}
 
 <div class="thm">
@@ -1799,7 +1799,7 @@ Gauss-Jordan algorithm.
 \end{array} \right) 
 \end{equation*}
 <p>
-Then, the Gauss elimination leads to the Row Echelon Form:
+Then, the <b>Gauss</b> elimination leads to the matrix in Row Echelon Form (<b>REF</b>):
 </p>
 \begin{equation*}
 \left( \begin{array}{rrrr}
@@ -1866,11 +1866,7 @@ Then, the Gauss elimination leads to the Row Echelon Form:
 
 <p>
 Notice that the difference between this and are the previous example are the last two row operations.
-Then we conclude that the Gauss-Jordan elimination algorithm leads to the matrix
-</p>
-
-<p>
-We obtained
+Then we conclude that the <b>Gauss-Jordan</b> elimination algorithm leads to the matrix in Reduce Row Echelon Form (<b>RREF</b>) 
 </p>
 \begin{equation*}
 \left( \begin{array}{ccc}
@@ -1882,8 +1878,8 @@ We obtained
 </div>
 </div>
 
-<div id="outline-container-orgc0705b6" class="outline-3">
-<h3 id="orgc0705b6"><span class="section-number-3">5.5</span> Solving a system of equations using Gauss-Jordan elimination</h3>
+<div id="outline-container-orgeed62da" class="outline-3">
+<h3 id="orgeed62da"><span class="section-number-3">5.5</span> Solving a system of equations using Gauss-Jordan elimination</h3>
 <div class="outline-text-3" id="text-5-5">
 <dl class="org-dl">
 <dt>Example</dt><dd>Solve using the Gauss-Jordan elimination the following system of equations</dd>
@@ -1944,8 +1940,8 @@ x = -\frac{11}{14}, \quad y = -\frac{15}{14}, \quad z = \frac{6}{7}.
 \end{equation*}
 </div>
 </div>
-<div id="outline-container-orgae331d7" class="outline-3">
-<h3 id="orgae331d7"><span class="section-number-3">5.6</span> Solution of a system of equations with free variables</h3>
+<div id="outline-container-orgc6deb8a" class="outline-3">
+<h3 id="orgc6deb8a"><span class="section-number-3">5.6</span> Solution of a system of equations with free variables</h3>
 <div class="outline-text-3" id="text-5-6">
 <p>
 In this section we will use the Gaus-Jordan elimination to find multiple solutions
@@ -2029,8 +2025,8 @@ a vector that solves our system of equations.
 </div>
 </div>
 
-<div id="outline-container-org80782a9" class="outline-2">
-<h2 id="org80782a9"><span class="section-number-2">6</span> Linear transformations between vector spaces</h2>
+<div id="outline-container-org4b6744f" class="outline-2">
+<h2 id="org4b6744f"><span class="section-number-2">6</span> Linear transformations between vector spaces</h2>
 <div class="outline-text-2" id="text-6">
 <div class="mydef">
 <p>
@@ -2085,8 +2081,8 @@ This shows that \(T\) is additive. The points (1) and (2) show that \(T\) is a l
 </p>
 </div>
 
-<div id="outline-container-orgc9d3698" class="outline-3">
-<h3 id="orgc9d3698"><span class="section-number-3">6.1</span> The matrix representing a linear transformation</h3>
+<div id="outline-container-org36cc50c" class="outline-3">
+<h3 id="org36cc50c"><span class="section-number-3">6.1</span> The matrix representing a linear transformation</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 In this section we
@@ -2104,8 +2100,8 @@ T(x_1,x_2,x_3) = (2x_1, x_2 + x_3).
 </div>
 </div>
 
-<div id="outline-container-orgd86f38f" class="outline-3">
-<h3 id="orgd86f38f"><span class="section-number-3">6.2</span> Matrix of \(T\) in the canonical basis</h3>
+<div id="outline-container-org14b637d" class="outline-3">
+<h3 id="org14b637d"><span class="section-number-3">6.2</span> Matrix of \(T\) in the canonical basis</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 The canonical basis for \(\mathbb{R}^3\) (the domain of \(T\)) is
@@ -2137,8 +2133,8 @@ A = \left( \begin{array}{ccc}
 </div>
 </div>
 
-<div id="outline-container-orge78533a" class="outline-3">
-<h3 id="orge78533a"><span class="section-number-3">6.3</span> Matrix of \(T\) for general basis.</h3>
+<div id="outline-container-org3b5d1c1" class="outline-3">
+<h3 id="org3b5d1c1"><span class="section-number-3">6.3</span> Matrix of \(T\) for general basis.</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 Since the basis is not the canonical basis, first we take the basis of your domain, in this case
@@ -2184,8 +2180,8 @@ a linear transformation \(T:\mathbb{R}^m\to \mathbb{R}^n\) is a matrix of size \
 </div>
 </div>
 
-<div id="outline-container-org750ac91" class="outline-2">
-<h2 id="org750ac91"><span class="section-number-2">7</span> The kernel, Image, rank and nullity</h2>
+<div id="outline-container-org0c33fff" class="outline-2">
+<h2 id="org0c33fff"><span class="section-number-2">7</span> The kernel, Image, rank and nullity</h2>
 <div class="outline-text-2" id="text-7">
 <div class="mydef">
 <p>
@@ -2230,8 +2226,8 @@ A = \left( \begin{array}{ccc}
 \end{equation*}
 </div>
 
-<div id="outline-container-org6635012" class="outline-3">
-<h3 id="org6635012"><span class="section-number-3">7.1</span> How to find the kernel</h3>
+<div id="outline-container-orgcec8b67" class="outline-3">
+<h3 id="orgcec8b67"><span class="section-number-3">7.1</span> How to find the kernel</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
 To find the kernel of a matrix, is to find all the solutions to the equation
@@ -2341,8 +2337,8 @@ Finally we say that the Kernel of \(A\) is the span of these two vectors:
 </div>
 </div>
 
-<div id="outline-container-org08e21f0" class="outline-3">
-<h3 id="org08e21f0"><span class="section-number-3">7.2</span> How to find the Rank.</h3>
+<div id="outline-container-org3ddf584" class="outline-3">
+<h3 id="org3ddf584"><span class="section-number-3">7.2</span> How to find the Rank.</h3>
 <div class="outline-text-3" id="text-7-2">
 <ol class="org-ol">
 <li>Simplify \(A\) into a Reduce Row Echelon Form (I will call it \(B\)),</li>
@@ -2383,8 +2379,8 @@ There are three non-zero rows and hence, the Rank of \(A\) is \(3\).
 </div>
 </div>
 
-<div id="outline-container-org468b695" class="outline-2">
-<h2 id="org468b695"><span class="section-number-2">8</span> The dimension theorem</h2>
+<div id="outline-container-orgf73ad88" class="outline-2">
+<h2 id="orgf73ad88"><span class="section-number-2">8</span> The dimension theorem</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 This is one of the most important results in Linear Algebra
@@ -2436,8 +2432,8 @@ In our case this is simply:  \(5 = 2 + 3\).
 </div>
 </div>
 
-<div id="outline-container-org58bb889" class="outline-2">
-<h2 id="org58bb889"><span class="section-number-2">9</span> Eigenvalues and eigenspaces</h2>
+<div id="outline-container-orgbdb87c5" class="outline-2">
+<h2 id="orgbdb87c5"><span class="section-number-2">9</span> Eigenvalues and eigenspaces</h2>
 <div class="outline-text-2" id="text-9">
 <div class="mydef">
 <p>
@@ -2673,8 +2669,8 @@ As we can see in this case, the eigenvalues are complex numbers.
 </div>
 </div>
 
-<div id="outline-container-org426c3a7" class="outline-2">
-<h2 id="org426c3a7"><span class="section-number-2">10</span> Diagonalizable matrix</h2>
+<div id="outline-container-org6e83d45" class="outline-2">
+<h2 id="org6e83d45"><span class="section-number-2">10</span> Diagonalizable matrix</h2>
 <div class="outline-text-2" id="text-10">
 <div class="mydef">
 <p>
@@ -2858,7 +2854,7 @@ We are also left with the general question of when is a matrix diagonalizable.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: daniel b</p>
-<p class="date">Created: 2024-04-07 Sun 17:48</p>
+<p class="date">Created: 2024-04-17 Wed 09:53</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
