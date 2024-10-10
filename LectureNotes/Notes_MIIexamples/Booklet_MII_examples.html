@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-09 Wed 11:03 -->
+<!-- 2024-10-10 Thu 14:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Worked examples on complex numbers and linear algebra</title>
@@ -353,76 +353,76 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org27332c2">Introduction.</a>
+<li><a href="#org9496635">Introduction.</a>
 <ul>
-<li><a href="#org97ef0c9">Complex numbers</a>
+<li><a href="#orgeb98161">Complex numbers</a>
 <ul>
-<li><a href="#org4cb53aa">Addition of complex numbers</a></li>
-<li><a href="#orgff825f9">Subtraction of complex numbers</a></li>
-<li><a href="#orgc47ac44">Multiplication of two complex numbers:</a></li>
-<li><a href="#org3420cf2">Conjugate of a complex number</a></li>
-<li><a href="#org559ae3e">Modulus of a complex number</a></li>
-<li><a href="#orgf47fd6d">Quotient of two complex numbers:</a></li>
-<li><a href="#orgeefcd49">Modulus, argument Euler's formula and polar form.</a></li>
-<li><a href="#org7b3e847">Compute n-th roots of a complex number</a></li>
-<li><a href="#orgfb07f04">Compute n-th power of a complex number (Moivre's Formula)</a></li>
-<li><a href="#org9a8fb34">Geometry in the complex plane:</a></li>
+<li><a href="#org25f0551">Addition of complex numbers</a></li>
+<li><a href="#orgd564309">Subtraction of complex numbers</a></li>
+<li><a href="#org83312ea">Multiplication of two complex numbers:</a></li>
+<li><a href="#org3e3a715">Conjugate of a complex number</a></li>
+<li><a href="#org5ae37c0">Modulus of a complex number</a></li>
+<li><a href="#org6254be5">Quotient of two complex numbers:</a></li>
+<li><a href="#org7908c9e">Modulus, argument Euler's formula and polar form.</a></li>
+<li><a href="#org6c4fd2c">Compute n-th roots of a complex number</a></li>
+<li><a href="#orgff6c92d">Compute n-th power of a complex number (Moivre's Formula)</a></li>
+<li><a href="#orgb192a58">Geometry in the complex plane:</a></li>
 </ul>
 </li>
-<li><a href="#orgfe641c6">Matrix arithmetic</a>
+<li><a href="#orgf3b54fa">Matrix arithmetic</a>
 <ul>
-<li><a href="#orgae0a84e">Matrix with real coefficients</a></li>
-<li><a href="#orgb8429e5">Multiplication by a scalar</a></li>
-<li><a href="#orgb78d52a">Sum and difference of matrices</a></li>
-<li><a href="#org361b0c4">Transpose of a matrix</a></li>
-<li><a href="#orgfc017e0">Multiplication of two matrices</a></li>
+<li><a href="#orgdb5cd9d">Matrix with real coefficients</a></li>
+<li><a href="#org78ee374">Multiplication by a scalar</a></li>
+<li><a href="#org27b4b0a">Sum and difference of matrices</a></li>
+<li><a href="#orgef501fc">Transpose of a matrix</a></li>
+<li><a href="#org20fbe39">Multiplication of two matrices</a></li>
 </ul>
 </li>
-<li><a href="#org05f1ad6">The identity matrix</a></li>
-<li><a href="#org2fab607">Determinants</a>
+<li><a href="#org3e570a7">The identity matrix</a></li>
+<li><a href="#org154c382">Determinants</a>
 <ul>
-<li><a href="#org9a0e285">Determinant of a \(1\times 1\) matrix</a></li>
-<li><a href="#org2cde142">Determinant of a \(2\times 2\) matrix</a></li>
-<li><a href="#orga4cfe5d">Determinant of a \(3\times 3\) matrix</a></li>
-<li><a href="#orga85d681">Determinant of a \(4\times 4\) matrix</a></li>
+<li><a href="#org63b82be">Determinant of a \(1\times 1\) matrix</a></li>
+<li><a href="#org33af89a">Determinant of a \(2\times 2\) matrix</a></li>
+<li><a href="#org8e79bb0">Determinant of a \(3\times 3\) matrix</a></li>
+<li><a href="#org20e8a8f">Determinant of a \(4\times 4\) matrix</a></li>
 </ul>
 </li>
-<li><a href="#orgd6fd5bf">Inverse of a square matrix</a>
+<li><a href="#org9033c97">Inverse of a square matrix</a>
 <ul>
-<li><a href="#org3687000">Formula for the inverse of a \(2\times 2\) matrix.</a></li>
-<li><a href="#orgcca543b">Minors, cofactor and adjoint.</a></li>
-<li><a href="#org5514b82">Formula for the inverse of a square matrix (of any size)</a></li>
+<li><a href="#org7535eaf">Formula for the inverse of a \(2\times 2\) matrix.</a></li>
+<li><a href="#orga5e9886">Minors, cofactor and adjoint.</a></li>
+<li><a href="#org0823c9e">Formula for the inverse of a square matrix (of any size)</a></li>
 </ul>
 </li>
-<li><a href="#org03e2b28">System of linear equations</a>
+<li><a href="#orgb210056">System of linear equations</a>
 <ul>
-<li><a href="#orgc2c0de9">Augmented matrix</a></li>
-<li><a href="#orgaa16903">Solving a system of equations using the formula for the inverse</a></li>
-<li><a href="#org53b2a1f">Elementary row operations</a></li>
-<li><a href="#orgf4e8cad">Row Echelon Form (REF) and Reduce Row Echelon Form (RREF)</a></li>
-<li><a href="#org8f93735">Solving a system of equations using Gauss-Jordan elimination</a></li>
-<li><a href="#orga9113a4">Solution of a system of equations with free variables</a></li>
+<li><a href="#orgbdab1a3">Augmented matrix</a></li>
+<li><a href="#org209d6f7">Solving a system of equations using the formula for the inverse</a></li>
+<li><a href="#orgdace1c8">Elementary row operations</a></li>
+<li><a href="#orgf9f8956">Row Echelon Form (REF) and Reduce Row Echelon Form (RREF)</a></li>
+<li><a href="#org7947f0e">Solving a system of equations using Gauss-Jordan elimination</a></li>
+<li><a href="#orgecc05e6">Solution of a system of equations with free variables</a></li>
 </ul>
 </li>
-<li><a href="#org2252cab">Linear transformations between vector spaces</a>
+<li><a href="#org0601b2b">Linear transformations between vector spaces</a>
 <ul>
-<li><a href="#org44b831d">The matrix representing a linear transformation</a></li>
-<li><a href="#orgd395f90">Matrix of \(T\) in the canonical basis</a></li>
-<li><a href="#orgd5e8e1d">Matrix of \(T\) for general basis.</a></li>
+<li><a href="#orgccdf111">The matrix representing a linear transformation</a></li>
+<li><a href="#org6553635">Matrix of \(T\) in the canonical basis</a></li>
+<li><a href="#orgdfb74fa">Matrix of \(T\) for general basis.</a></li>
 </ul>
 </li>
-<li><a href="#orge65655e">The kernel, Image, rank and nullity</a>
+<li><a href="#org9783d0c">The kernel, Image, rank and nullity</a>
 <ul>
-<li><a href="#orgfb64177">How to find the kernel</a></li>
-<li><a href="#orge0243d6">How to find the Rank.</a></li>
+<li><a href="#org89250c5">How to find the kernel</a></li>
+<li><a href="#orge9d0c05">How to find the Rank.</a></li>
 </ul>
 </li>
-<li><a href="#org5ed5606">The dimension theorem</a></li>
-<li><a href="#orgd81f8c6">Eigenvalues and eigenspaces</a></li>
-<li><a href="#orgd00a332">Diagonalizable matrix</a></li>
+<li><a href="#org3ca8c24">The dimension theorem</a></li>
+<li><a href="#orgc699e25">Eigenvalues and eigenspaces</a></li>
+<li><a href="#orga1f939c">Diagonalizable matrix</a></li>
 </ul>
 </li>
-<li><a href="#orgc97b051">References</a></li>
+<li><a href="#orgb9ee6ef">References</a></li>
 </ul>
 </div>
 </div>
@@ -433,9 +433,9 @@ for the JavaScript code in this tag.
 <p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p> 
 
 
-<div id="outline-container-org27332c2" class="outline-2">
-<h2 id="org27332c2">Introduction.</h2>
-<div class="outline-text-2" id="text-org27332c2">
+<div id="outline-container-org9496635" class="outline-2">
+<h2 id="org9496635">Introduction.</h2>
+<div class="outline-text-2" id="text-org9496635">
 <p>
 These notes contain a series of worked examples and exercises for 
 students of engineering who are taking a first course in Linear Algebra at
@@ -469,9 +469,9 @@ I take responsibility for any mistake/typo that may appear in the notes and any 
 </div>
 
 
-<div id="outline-container-org97ef0c9" class="outline-3">
-<h3 id="org97ef0c9">Complex numbers</h3>
-<div class="outline-text-3" id="text-org97ef0c9">
+<div id="outline-container-orgeb98161" class="outline-3">
+<h3 id="orgeb98161">Complex numbers</h3>
+<div class="outline-text-3" id="text-orgeb98161">
 <div class="mydef">
 <p>
 The set of complex numbers 
@@ -499,9 +499,9 @@ On this set, the operations of addition, subtraction, multiplication and divisio
 </div>
 
 
-<div id="outline-container-org4cb53aa" class="outline-4">
-<h4 id="org4cb53aa">Addition of complex numbers</h4>
-<div class="outline-text-4" id="text-org4cb53aa">
+<div id="outline-container-org25f0551" class="outline-4">
+<h4 id="org25f0551">Addition of complex numbers</h4>
+<div class="outline-text-4" id="text-org25f0551">
 <div class="mydef">
 <p>
 If \(z = x_1 + i y_1\) and \(w = x_2 + i y_2\) are two complex numbers, then the sum is
@@ -529,9 +529,9 @@ z + w & = \left( 4 + \frac{i}{4} \right) + (3 - 5i) \\
 </div>
 </div>
 
-<div id="outline-container-orgff825f9" class="outline-4">
-<h4 id="orgff825f9">Subtraction of complex numbers</h4>
-<div class="outline-text-4" id="text-orgff825f9">
+<div id="outline-container-orgd564309" class="outline-4">
+<h4 id="orgd564309">Subtraction of complex numbers</h4>
+<div class="outline-text-4" id="text-orgd564309">
 <div class="mydef">
 <p>
 If \(z = x_1 + i y_1\) and \(w = x_2 + i y_2\) are two complex numbers, then the difference is
@@ -558,9 +558,9 @@ z - w & = \left( 7 - \frac{3i}{2} \right) - \left(1 - i \right) \\
 </div>
 </div>
 
-<div id="outline-container-orgc47ac44" class="outline-4">
-<h4 id="orgc47ac44">Multiplication of two complex numbers:</h4>
-<div class="outline-text-4" id="text-orgc47ac44">
+<div id="outline-container-org83312ea" class="outline-4">
+<h4 id="org83312ea">Multiplication of two complex numbers:</h4>
+<div class="outline-text-4" id="text-org83312ea">
 <div class="mydef">
 <p>
 If \(z = x_1 + i y_1\) and \(w = x_2 + i y_2\) are two complex numbers, then the multiplication or product is
@@ -588,9 +588,9 @@ z  w & = \left( 7 - \frac{3i}{2} \right)  \left(1 - i \right) \\
 </div>
 </div>
 
-<div id="outline-container-org3420cf2" class="outline-4">
-<h4 id="org3420cf2">Conjugate of a complex number</h4>
-<div class="outline-text-4" id="text-org3420cf2">
+<div id="outline-container-org3e3a715" class="outline-4">
+<h4 id="org3e3a715">Conjugate of a complex number</h4>
+<div class="outline-text-4" id="text-org3e3a715">
 <div class="mydef">
 <p>
 If \(z = x + iy\), then the conjugate is 
@@ -612,9 +612,9 @@ If \(z = x + iy\), then the conjugate is
 </div>
 </div>
 
-<div id="outline-container-org559ae3e" class="outline-4">
-<h4 id="org559ae3e">Modulus of a complex number</h4>
-<div class="outline-text-4" id="text-org559ae3e">
+<div id="outline-container-org5ae37c0" class="outline-4">
+<h4 id="org5ae37c0">Modulus of a complex number</h4>
+<div class="outline-text-4" id="text-org5ae37c0">
 <div class="mydef">
 <p>
 If \(z = x + iy\), then modulus of \(z\)  is the positive real number 
@@ -642,9 +642,9 @@ z\overline{z} = |z|^2 = x^2 + y^2.
 </div>
 </div>
 
-<div id="outline-container-orgf47fd6d" class="outline-4">
-<h4 id="orgf47fd6d">Quotient of two complex numbers:</h4>
-<div class="outline-text-4" id="text-orgf47fd6d">
+<div id="outline-container-org6254be5" class="outline-4">
+<h4 id="org6254be5">Quotient of two complex numbers:</h4>
+<div class="outline-text-4" id="text-org6254be5">
 <div class="mydef">
 <p>
 If \(z = x_1 + i y_1\) and \(w = x_2 + i y_2\)  are two complex numbers with \(w \neq 0\), then the quotient is
@@ -669,9 +669,9 @@ If \(z = x_1 + i y_1\) and \(w = x_2 + i y_2\)  are two complex numbers with \(w
 </div>
 </div>
 
-<div id="outline-container-orgeefcd49" class="outline-4">
-<h4 id="orgeefcd49">Modulus, argument Euler's formula and polar form.</h4>
-<div class="outline-text-4" id="text-orgeefcd49">
+<div id="outline-container-org7908c9e" class="outline-4">
+<h4 id="org7908c9e">Modulus, argument Euler's formula and polar form.</h4>
+<div class="outline-text-4" id="text-org7908c9e">
 <div class="mydef">
 <p>
 Every complex number can be written in polar form
@@ -727,9 +727,9 @@ z = 2  \left( \cos\left(\frac{4\pi}{3}\right) + i\sin\left(\frac{4\pi}{3}\right)
 </div>
 
 
-<div id="outline-container-org7b3e847" class="outline-4">
-<h4 id="org7b3e847">Compute n-th roots of a complex number</h4>
-<div class="outline-text-4" id="text-org7b3e847">
+<div id="outline-container-org6c4fd2c" class="outline-4">
+<h4 id="org6c4fd2c">Compute n-th roots of a complex number</h4>
+<div class="outline-text-4" id="text-org6c4fd2c">
 <div class="mydef">
 <p>
 If \(z = r e^{i\theta}\), then the nth-root is given by the formula
@@ -797,9 +797,9 @@ z_2 &= \sqrt{2} \left( \cos\left(\frac{19\pi}{12}\right) + i\sin\left(\frac{19\p
 </div>
 
 
-<div id="outline-container-orgfb07f04" class="outline-4">
-<h4 id="orgfb07f04">Compute n-th power of a complex number (Moivre's Formula)</h4>
-<div class="outline-text-4" id="text-orgfb07f04">
+<div id="outline-container-orgff6c92d" class="outline-4">
+<h4 id="orgff6c92d">Compute n-th power of a complex number (Moivre's Formula)</h4>
+<div class="outline-text-4" id="text-orgff6c92d">
 <div class="mydef">
 <p>
 If \(z = re^{i\theta}\) then 
@@ -831,9 +831,9 @@ The modulus of \(-2 + 2i\) is \(r = \sqrt{8}\), and the argument is \(\theta =\f
 </div>
 
 
-<div id="outline-container-org9a8fb34" class="outline-4">
-<h4 id="org9a8fb34">Geometry in the complex plane:</h4>
-<div class="outline-text-4" id="text-org9a8fb34">
+<div id="outline-container-orgb192a58" class="outline-4">
+<h4 id="orgb192a58">Geometry in the complex plane:</h4>
+<div class="outline-text-4" id="text-orgb192a58">
 <p>
 We should understand the modulus of a complex number as a length:
 </p>
@@ -858,9 +858,9 @@ Perpendicular bisector of the line segment joining two complex numbers \(z_1\) a
 </div>
 </div>
 </div>
-<div id="outline-container-orgfe641c6" class="outline-3">
-<h3 id="orgfe641c6">Matrix arithmetic</h3>
-<div class="outline-text-3" id="text-orgfe641c6">
+<div id="outline-container-orgf3b54fa" class="outline-3">
+<h3 id="orgf3b54fa">Matrix arithmetic</h3>
+<div class="outline-text-3" id="text-orgf3b54fa">
 <p>
 In this section we will review the basic arithmetic of matrices with real coefficients.
 One can easily generalise these properties for matrices with complex coefficients, and we encourage
@@ -868,9 +868,9 @@ the student to write examples in this field.
 </p>
 </div>
 
-<div id="outline-container-orgae0a84e" class="outline-4">
-<h4 id="orgae0a84e">Matrix with real coefficients</h4>
-<div class="outline-text-4" id="text-orgae0a84e">
+<div id="outline-container-orgdb5cd9d" class="outline-4">
+<h4 id="orgdb5cd9d">Matrix with real coefficients</h4>
+<div class="outline-text-4" id="text-orgdb5cd9d">
 <div class="mydef">
 <p>
 A matrix  \(A\) of size \(n\times m\) with real coefficients, is a rectangular arrangement of real numbers
@@ -926,9 +926,9 @@ The entry \(b_{23}  = -6\), and the entry \(b_{12} = 2\).
 </div>
 </div>
 
-<div id="outline-container-orgb8429e5" class="outline-4">
-<h4 id="orgb8429e5">Multiplication by a scalar</h4>
-<div class="outline-text-4" id="text-orgb8429e5">
+<div id="outline-container-org78ee374" class="outline-4">
+<h4 id="org78ee374">Multiplication by a scalar</h4>
+<div class="outline-text-4" id="text-org78ee374">
 <div class="mydef">
 <p>
 Let \(r\in \mathbb{R}\) be any real number and  \(A\) be a matrix of size \(n\times m\) with real coefficients, with entries \(a_{ij}\).
@@ -966,15 +966,15 @@ A = \left( \begin{array}{rrr}
 -7A = \left( \begin{array}{rrr}
 -7 & -14 & -21\\
 28 & 35 & 42 \\
-49 & 56 & 63\\
+-49 & -56 & -63\\
 \end{array} \right),
 \end{equation*}
 </div>
 </div>
 
-<div id="outline-container-orgb78d52a" class="outline-4">
-<h4 id="orgb78d52a">Sum and difference of matrices</h4>
-<div class="outline-text-4" id="text-orgb78d52a">
+<div id="outline-container-org27b4b0a" class="outline-4">
+<h4 id="org27b4b0a">Sum and difference of matrices</h4>
+<div class="outline-text-4" id="text-org27b4b0a">
 <div class="mydef">
 <p>
 Let  \(A\) and \(B\) any two matrices of the same size \(n\times m\) with real coefficients with entries
@@ -1066,9 +1066,9 @@ Then
 </div>
 </div>
 
-<div id="outline-container-org361b0c4" class="outline-4">
-<h4 id="org361b0c4">Transpose of a matrix</h4>
-<div class="outline-text-4" id="text-org361b0c4">
+<div id="outline-container-orgef501fc" class="outline-4">
+<h4 id="orgef501fc">Transpose of a matrix</h4>
+<div class="outline-text-4" id="text-orgef501fc">
 <div class="mydef">
 <p>
 Let  \(A\) a matrix of size \(n\times m\) with real coefficients with entries \(a_{ij}\). We define the 
@@ -1135,9 +1135,9 @@ Let \(A\) be a square matrix. If \(A^{T} = A\), then we will say that  \(A\) is 
 </div>
 </div>
 
-<div id="outline-container-orgfc017e0" class="outline-4">
-<h4 id="orgfc017e0">Multiplication of two matrices</h4>
-<div class="outline-text-4" id="text-orgfc017e0">
+<div id="outline-container-org20fbe39" class="outline-4">
+<h4 id="org20fbe39">Multiplication of two matrices</h4>
+<div class="outline-text-4" id="text-org20fbe39">
 <div class="mydef">
 <p>
 
@@ -1219,9 +1219,9 @@ AB = \left( \begin{array}{rrr}
 </div>
 </div>
 
-<div id="outline-container-org05f1ad6" class="outline-3">
-<h3 id="org05f1ad6">The identity matrix</h3>
-<div class="outline-text-3" id="text-org05f1ad6">
+<div id="outline-container-org3e570a7" class="outline-3">
+<h3 id="org3e570a7">The identity matrix</h3>
+<div class="outline-text-3" id="text-org3e570a7">
 <div class="mydef">
 <p>
 The square matrix \(I\) of size \(n\) is the matrix consisting of 1's in its diagonal and 0's elsewhere:
@@ -1247,9 +1247,9 @@ If we do not specify the size of the matrix \(I\), it should be clear from the c
 </p>
 </div>
 </div>
-<div id="outline-container-org2fab607" class="outline-3">
-<h3 id="org2fab607">Determinants</h3>
-<div class="outline-text-3" id="text-org2fab607">
+<div id="outline-container-org154c382" class="outline-3">
+<h3 id="org154c382">Determinants</h3>
+<div class="outline-text-3" id="text-org154c382">
 <p>
 The determinant is a function that assigns to a square matrix \(A\) of size \(n\), a real number \(\mbox{det}(A)\).
 It is a fundamental function in matrix analysis and it can be properly defined as an alternating
@@ -1261,18 +1261,18 @@ In this section we will show by working some examples, how to compute the determ
 </p>
 </div>
 
-<div id="outline-container-org9a0e285" class="outline-4">
-<h4 id="org9a0e285">Determinant of a \(1\times 1\) matrix</h4>
-<div class="outline-text-4" id="text-org9a0e285">
+<div id="outline-container-org63b82be" class="outline-4">
+<h4 id="org63b82be">Determinant of a \(1\times 1\) matrix</h4>
+<div class="outline-text-4" id="text-org63b82be">
 <p>
 A real number \(a\in \mathbb{R}\) can be consider as a \(1\times 1\) matrix, and in this case we define \(\mbox{det}(a) = a\).
 </p>
 </div>
 </div>
 
-<div id="outline-container-org2cde142" class="outline-4">
-<h4 id="org2cde142">Determinant of a \(2\times 2\) matrix</h4>
-<div class="outline-text-4" id="text-org2cde142">
+<div id="outline-container-org33af89a" class="outline-4">
+<h4 id="org33af89a">Determinant of a \(2\times 2\) matrix</h4>
+<div class="outline-text-4" id="text-org33af89a">
 <p>
 Let \(A\) be a \(2\times 2\) matrix
 </p>
@@ -1312,9 +1312,9 @@ A direct computation shows
 </div>
 </div>
 
-<div id="outline-container-orga4cfe5d" class="outline-4">
-<h4 id="orga4cfe5d">Determinant of a \(3\times 3\) matrix</h4>
-<div class="outline-text-4" id="text-orga4cfe5d">
+<div id="outline-container-org8e79bb0" class="outline-4">
+<h4 id="org8e79bb0">Determinant of a \(3\times 3\) matrix</h4>
+<div class="outline-text-4" id="text-org8e79bb0">
 <p>
 Let \(A\) be a \(3\times 3\) matrix
 </p>
@@ -1392,9 +1392,9 @@ Following the formula, we get
 </div>
 </div>
 
-<div id="outline-container-orga85d681" class="outline-4">
-<h4 id="orga85d681">Determinant of a \(4\times 4\) matrix</h4>
-<div class="outline-text-4" id="text-orga85d681">
+<div id="outline-container-org20e8a8f" class="outline-4">
+<h4 id="org20e8a8f">Determinant of a \(4\times 4\) matrix</h4>
+<div class="outline-text-4" id="text-org20e8a8f">
 <p>
 After discussing the previous example (especially the alternating sign convention)
 we leave as an exercise to obtain a formula for the determinant of a 
@@ -1403,9 +1403,9 @@ we leave as an exercise to obtain a formula for the determinant of a
 </div>
 </div>
 </div>
-<div id="outline-container-orgd6fd5bf" class="outline-3">
-<h3 id="orgd6fd5bf">Inverse of a square matrix</h3>
-<div class="outline-text-3" id="text-orgd6fd5bf">
+<div id="outline-container-org9033c97" class="outline-3">
+<h3 id="org9033c97">Inverse of a square matrix</h3>
+<div class="outline-text-3" id="text-org9033c97">
 <div class="mydef">
 <p>
 Let \(A\) be a square matrix of size \(n\). We say that \(A\) is <b>invertible</b> if there exists a square matrix
@@ -1434,9 +1434,9 @@ invertible with inverse \(A^{-1}\).
 </div>
 </div>
 
-<div id="outline-container-org3687000" class="outline-4">
-<h4 id="org3687000">Formula for the inverse of a \(2\times 2\) matrix.</h4>
-<div class="outline-text-4" id="text-org3687000">
+<div id="outline-container-org7535eaf" class="outline-4">
+<h4 id="org7535eaf">Formula for the inverse of a \(2\times 2\) matrix.</h4>
+<div class="outline-text-4" id="text-org7535eaf">
 <p>
 Consider the following \(2\times 2\) matrix
 </p>
@@ -1482,9 +1482,9 @@ A^{-1} =  \frac{1}{14}\left( \begin{array}{ll}
 </div>
 </div>
 
-<div id="outline-container-orgcca543b" class="outline-4">
-<h4 id="orgcca543b">Minors, cofactor and adjoint.</h4>
-<div class="outline-text-4" id="text-orgcca543b">
+<div id="outline-container-orga5e9886" class="outline-4">
+<h4 id="orga5e9886">Minors, cofactor and adjoint.</h4>
+<div class="outline-text-4" id="text-orga5e9886">
 <p>
 In these definitions, we are assuming that the matrices have real coefficients.
 </p>
@@ -1695,9 +1695,9 @@ C = \left( \begin{array}{rrrr}
 </div>
 </div>
 
-<div id="outline-container-org5514b82" class="outline-4">
-<h4 id="org5514b82">Formula for the inverse of a square matrix (of any size)</h4>
-<div class="outline-text-4" id="text-org5514b82">
+<div id="outline-container-org0823c9e" class="outline-4">
+<h4 id="org0823c9e">Formula for the inverse of a square matrix (of any size)</h4>
+<div class="outline-text-4" id="text-org0823c9e">
 <div class="prop">
 <p>
 Let \(A\) be any square matrix with \(\mbox{det}(A)\neq 0\).
@@ -1845,9 +1845,9 @@ A^{-1} & = \frac{1}{\mbox{det}(A)}{\mbox{Adj}}(A) \\
 </div>
 </div>
 
-<div id="outline-container-org03e2b28" class="outline-3">
-<h3 id="org03e2b28">System of linear equations</h3>
-<div class="outline-text-3" id="text-org03e2b28">
+<div id="outline-container-orgb210056" class="outline-3">
+<h3 id="orgb210056">System of linear equations</h3>
+<div class="outline-text-3" id="text-orgb210056">
 <p>
 In this section we are considering a system of \(n\) linear equations with \(m\) number of unknowns or variables, which can be written as
 </p>
@@ -1955,9 +1955,9 @@ z
 \end{equation*}
 </div>
 
-<div id="outline-container-orgc2c0de9" class="outline-4">
-<h4 id="orgc2c0de9">Augmented matrix</h4>
-<div class="outline-text-4" id="text-orgc2c0de9">
+<div id="outline-container-orgbdab1a3" class="outline-4">
+<h4 id="orgbdab1a3">Augmented matrix</h4>
+<div class="outline-text-4" id="text-orgbdab1a3">
 <div class="mydef">
 <p>
 Let \(A\vec{x} = \vec{b}\) is a system of \(n\)  linear equations with \(m\) unknowns. The augmented matrix representing this system is 
@@ -1982,9 +1982,9 @@ In the case \(\vec{b} = \vec{0}\), then we use \(A\) also instead of \([A | 0]\)
 </div>
 </div>
 
-<div id="outline-container-orgaa16903" class="outline-4">
-<h4 id="orgaa16903">Solving a system of equations using the formula for the inverse</h4>
-<div class="outline-text-4" id="text-orgaa16903">
+<div id="outline-container-org209d6f7" class="outline-4">
+<h4 id="org209d6f7">Solving a system of equations using the formula for the inverse</h4>
+<div class="outline-text-4" id="text-org209d6f7">
 <p>
 This method works only when the number of equations equals the number of unknowns.
 </p>
@@ -2124,9 +2124,9 @@ x = -\frac{11}{14}, \quad y = -\frac{15}{14}, \quad z = \frac{6}{7}.
 </div>
 </div>
 
-<div id="outline-container-org53b2a1f" class="outline-4">
-<h4 id="org53b2a1f">Elementary row operations</h4>
-<div class="outline-text-4" id="text-org53b2a1f">
+<div id="outline-container-orgdace1c8" class="outline-4">
+<h4 id="orgdace1c8">Elementary row operations</h4>
+<div class="outline-text-4" id="text-orgdace1c8">
 <div class="mydef">
 <p>
 For a matrix \(A\) or for an augmented matrix \([A|b]\), the following operations are called
@@ -2181,9 +2181,9 @@ For a matrix \(A\) or for an augmented matrix \([A|b]\), the following operation
 </div>
 </div>
 
-<div id="outline-container-orgf4e8cad" class="outline-4">
-<h4 id="orgf4e8cad">Row Echelon Form (REF) and Reduce Row Echelon Form (RREF)</h4>
-<div class="outline-text-4" id="text-orgf4e8cad">
+<div id="outline-container-orgf9f8956" class="outline-4">
+<h4 id="orgf9f8956">Row Echelon Form (REF) and Reduce Row Echelon Form (RREF)</h4>
+<div class="outline-text-4" id="text-orgf9f8956">
 <div class="mydef">
 <p>
 A matrix is in row echelon form (REF) if
@@ -2420,9 +2420,9 @@ Then we conclude that the <b>Gauss-Jordan</b> elimination algorithm leads to the
 </div>
 </div>
 
-<div id="outline-container-org8f93735" class="outline-4">
-<h4 id="org8f93735">Solving a system of equations using Gauss-Jordan elimination</h4>
-<div class="outline-text-4" id="text-org8f93735">
+<div id="outline-container-org7947f0e" class="outline-4">
+<h4 id="org7947f0e">Solving a system of equations using Gauss-Jordan elimination</h4>
+<div class="outline-text-4" id="text-org7947f0e">
 <dl class="org-dl">
 <dt>Example</dt><dd>Solve using the Gauss-Jordan elimination the following system of equations</dd>
 </dl>
@@ -2482,9 +2482,9 @@ x = -\frac{11}{14}, \quad y = -\frac{15}{14}, \quad z = \frac{6}{7}.
 \end{equation*}
 </div>
 </div>
-<div id="outline-container-orga9113a4" class="outline-4">
-<h4 id="orga9113a4">Solution of a system of equations with free variables</h4>
-<div class="outline-text-4" id="text-orga9113a4">
+<div id="outline-container-orgecc05e6" class="outline-4">
+<h4 id="orgecc05e6">Solution of a system of equations with free variables</h4>
+<div class="outline-text-4" id="text-orgecc05e6">
 <p>
 In this section we will use the Gaus-Jordan elimination to find multiple solutions
 to a system of linear equaitons. Here the matrix representing the system of equations
@@ -2567,9 +2567,9 @@ a vector that solves our system of equations.
 </div>
 </div>
 
-<div id="outline-container-org2252cab" class="outline-3">
-<h3 id="org2252cab">Linear transformations between vector spaces</h3>
-<div class="outline-text-3" id="text-org2252cab">
+<div id="outline-container-org0601b2b" class="outline-3">
+<h3 id="org0601b2b">Linear transformations between vector spaces</h3>
+<div class="outline-text-3" id="text-org0601b2b">
 <div class="mydef">
 <p>
 Let \(V\) and \(W\) be two vector spaces over a field \(F\). A map \(T : V \to W\) is called
@@ -2623,9 +2623,9 @@ This shows that \(T\) is additive. The points (1) and (2) show that \(T\) is a l
 </p>
 </div>
 
-<div id="outline-container-org44b831d" class="outline-4">
-<h4 id="org44b831d">The matrix representing a linear transformation</h4>
-<div class="outline-text-4" id="text-org44b831d">
+<div id="outline-container-orgccdf111" class="outline-4">
+<h4 id="orgccdf111">The matrix representing a linear transformation</h4>
+<div class="outline-text-4" id="text-orgccdf111">
 <p>
 In this section we
 consider the linear transformation \(T :\mathbb{R}^3 \to \mathbb{R}^2\)
@@ -2642,9 +2642,9 @@ T(x_1,x_2,x_3) = (2x_1, x_2 + x_3).
 </div>
 </div>
 
-<div id="outline-container-orgd395f90" class="outline-4">
-<h4 id="orgd395f90">Matrix of \(T\) in the canonical basis</h4>
-<div class="outline-text-4" id="text-orgd395f90">
+<div id="outline-container-org6553635" class="outline-4">
+<h4 id="org6553635">Matrix of \(T\) in the canonical basis</h4>
+<div class="outline-text-4" id="text-org6553635">
 <p>
 The canonical basis for \(\mathbb{R}^3\) (the domain of \(T\)) is
 </p>
@@ -2675,9 +2675,9 @@ A = \left( \begin{array}{ccc}
 </div>
 </div>
 
-<div id="outline-container-orgd5e8e1d" class="outline-4">
-<h4 id="orgd5e8e1d">Matrix of \(T\) for general basis.</h4>
-<div class="outline-text-4" id="text-orgd5e8e1d">
+<div id="outline-container-orgdfb74fa" class="outline-4">
+<h4 id="orgdfb74fa">Matrix of \(T\) for general basis.</h4>
+<div class="outline-text-4" id="text-orgdfb74fa">
 <p>
 Since the basis is not the canonical basis, first we take the basis of your domain, in this case
 the vectors in \(\mathcal{B}_1\) and use the expression \(T(x_1,x_2,x_3) = (2x_1, x_2 + x_3)\) to compute the following
@@ -2722,9 +2722,9 @@ a linear transformation \(T:\mathbb{R}^m\to \mathbb{R}^n\) is a matrix of size \
 </div>
 </div>
 
-<div id="outline-container-orge65655e" class="outline-3">
-<h3 id="orge65655e">The kernel, Image, rank and nullity</h3>
-<div class="outline-text-3" id="text-orge65655e">
+<div id="outline-container-org9783d0c" class="outline-3">
+<h3 id="org9783d0c">The kernel, Image, rank and nullity</h3>
+<div class="outline-text-3" id="text-org9783d0c">
 <div class="mydef">
 <p>
 Let \(A\) be any \(n \times m\) matrix. The <b>kernel</b> of \(A\) is defined as the set
@@ -2768,9 +2768,9 @@ A = \left( \begin{array}{ccc}
 \end{equation*}
 </div>
 
-<div id="outline-container-orgfb64177" class="outline-4">
-<h4 id="orgfb64177">How to find the kernel</h4>
-<div class="outline-text-4" id="text-orgfb64177">
+<div id="outline-container-org89250c5" class="outline-4">
+<h4 id="org89250c5">How to find the kernel</h4>
+<div class="outline-text-4" id="text-org89250c5">
 <p>
 To find the kernel of a matrix, is to find all the solutions to the equation
 </p>
@@ -2879,9 +2879,9 @@ Finally we say that the Kernel of \(A\) is the span of these two vectors:
 </div>
 </div>
 
-<div id="outline-container-orge0243d6" class="outline-4">
-<h4 id="orge0243d6">How to find the Rank.</h4>
-<div class="outline-text-4" id="text-orge0243d6">
+<div id="outline-container-orge9d0c05" class="outline-4">
+<h4 id="orge9d0c05">How to find the Rank.</h4>
+<div class="outline-text-4" id="text-orge9d0c05">
 <ol class="org-ol">
 <li>Simplify \(A\) into a Reduce Row Echelon Form (I will call it \(B\)),</li>
 <li>The rank is the number of non-all-zero rows.</li>
@@ -2921,9 +2921,9 @@ There are three non-zero rows and hence, the Rank of \(A\) is \(3\).
 </div>
 </div>
 
-<div id="outline-container-org5ed5606" class="outline-3">
-<h3 id="org5ed5606">The dimension theorem</h3>
-<div class="outline-text-3" id="text-org5ed5606">
+<div id="outline-container-org3ca8c24" class="outline-3">
+<h3 id="org3ca8c24">The dimension theorem</h3>
+<div class="outline-text-3" id="text-org3ca8c24">
 <p>
 This is one of the most important results in Linear Algebra
 </p>
@@ -2974,9 +2974,9 @@ In our case this is simply:  \(5 = 2 + 3\).
 </div>
 </div>
 
-<div id="outline-container-orgd81f8c6" class="outline-3">
-<h3 id="orgd81f8c6">Eigenvalues and eigenspaces</h3>
-<div class="outline-text-3" id="text-orgd81f8c6">
+<div id="outline-container-orgc699e25" class="outline-3">
+<h3 id="orgc699e25">Eigenvalues and eigenspaces</h3>
+<div class="outline-text-3" id="text-orgc699e25">
 <div class="mydef">
 <p>
 Let \(T: V\to V\) be a linear operator where \(V\) is a vector space over a field \(F\). 
@@ -3211,9 +3211,9 @@ As we can see in this case, the eigenvalues are complex numbers.
 </div>
 </div>
 
-<div id="outline-container-orgd00a332" class="outline-3">
-<h3 id="orgd00a332">Diagonalizable matrix</h3>
-<div class="outline-text-3" id="text-orgd00a332">
+<div id="outline-container-orga1f939c" class="outline-3">
+<h3 id="orga1f939c">Diagonalizable matrix</h3>
+<div class="outline-text-3" id="text-orga1f939c">
 <div class="mydef">
 <p>
 A square matrix \(A\) is called <b>diagonalizable</b> if there exists an invertible matrix \(P\) such that
@@ -3398,9 +3398,9 @@ We are also left with the general question of when is a matrix diagonalizable.
 
 
 
-<div id="outline-container-orgc97b051" class="outline-2">
-<h2 id="orgc97b051">References</h2>
-<div class="outline-text-2" id="text-orgc97b051">
+<div id="outline-container-orgb9ee6ef" class="outline-2">
+<h2 id="orgb9ee6ef">References</h2>
+<div class="outline-text-2" id="text-orgb9ee6ef">
 <p>
 [1] H. Anton, and C. Rorres.  <i>Elementary Linear Algebra: Applications Version</i>. Wiley, Eleventh edition, 2014.
 </p>
