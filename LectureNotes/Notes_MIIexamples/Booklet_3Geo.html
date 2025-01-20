@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-01-20 Mon 12:02 -->
+<!-- 2025-01-20 Mon 12:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -268,15 +268,27 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org92a2843">1. Multiplication by scalar and addition of vector in \(\mathbb{R}^n\).</a></li>
-<li><a href="#org23c92ef">2. Geometric interpretation of the two operations were discussed.</a></li>
-<li><a href="#org76bb972">3. Inner product of two vectors in \(\mathbb{R}^n\)</a></li>
-<li><a href="#orgb3100c6">4. The length of a vector:</a></li>
+<li><a href="#org697d896">1. Multiplication by scalar and addition of vector in \(\mathbb{R}^n\).</a></li>
+<li><a href="#org4fa75f9">2. Geometric interpretation of the two operations were discussed.</a></li>
+<li><a href="#org63ef1ed">3. Inner product of two vectors in \(\mathbb{R}^n\)</a></li>
+<li><a href="#org5208f2c">4. The length of a vector:</a></li>
+<li><a href="#org08ec691">5. Inner product: Bilinear, symmetric, non-degenerate and positive definite.</a></li>
+<li><a href="#orgea90658">6. Geometric interpretation of the inner product (Angle between two vectors)</a></li>
+<li><a href="#org7eede61">7. Equation of a hyperplane in \(\mathbb{R}^n\)</a>
+<ul>
+<li><a href="#org1f5effc">7.1. Straight lines in \(\mathbb{R}^2\).</a></li>
+</ul>
+</li>
+<li><a href="#orgfe9bc5a">8. The cross product in \(\mathbb{R}^3\)</a>
+<ul>
+<li><a href="#org080b129">8.1. Definition of the cross (vector) product in \(\mathbb{R}^3\) using physicist notation</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org92a2843" class="outline-2">
-<h2 id="org92a2843"><span class="section-number-2">1</span> Multiplication by scalar and addition of vector in \(\mathbb{R}^n\).</h2>
+<div id="outline-container-org697d896" class="outline-2">
+<h2 id="org697d896"><span class="section-number-2">1</span> Multiplication by scalar and addition of vector in \(\mathbb{R}^n\).</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 The set of vectors \(\vec{x}\) in \(\mathbb{R}^n\) with the operations:
@@ -284,18 +296,21 @@ The set of vectors \(\vec{x}\) in \(\mathbb{R}^n\) with the operations:
 
 <ul class="org-ul">
 <li>Multiplication by a scalar \(r\vec{x}\), and</li>
-<li>addition of vectors \(\vec{x}+\vec{y}\), forms a Vector Space over \(\mathbb{R}\).</li>
+<li>addition of vectors \(\vec{x}+\vec{y}\),</li>
 </ul>
+<p>
+makes it  a Vector Space over \(\mathbb{R}\).
+</p>
 </div>
 </div>
 
 
-<div id="outline-container-org23c92ef" class="outline-2">
-<h2 id="org23c92ef"><span class="section-number-2">2</span> Geometric interpretation of the two operations were discussed.</h2>
+<div id="outline-container-org4fa75f9" class="outline-2">
+<h2 id="org4fa75f9"><span class="section-number-2">2</span> Geometric interpretation of the two operations were discussed.</h2>
 </div>
 
-<div id="outline-container-org76bb972" class="outline-2">
-<h2 id="org76bb972"><span class="section-number-2">3</span> Inner product of two vectors in \(\mathbb{R}^n\)</h2>
+<div id="outline-container-org63ef1ed" class="outline-2">
+<h2 id="org63ef1ed"><span class="section-number-2">3</span> Inner product of two vectors in \(\mathbb{R}^n\)</h2>
 <div class="outline-text-2" id="text-3">
 <div class="mydef">
 <p>
@@ -315,14 +330,14 @@ Example. Compute the inner product of the vectors in \(\mathbb{R}^3\):
 Solution: Using the definition we have
 </p>
 \begin{equation}
-\langle \vec{v_1}, \vec{v_1} \rangle = (3)(-1) + (2)(2) + (-1)(-5) = -3 + 4 + 5 = 6.
+\langle \vec{v}_{1}, \vec{v}_{2} \rangle = (3)(-1) + (2)(2) + (-1)(-5) = -3 + 4 + 5 = 6.
 \end{equation}
 </div>
 </div>
 
 
-<div id="outline-container-orgb3100c6" class="outline-2">
-<h2 id="orgb3100c6"><span class="section-number-2">4</span> The length of a vector:</h2>
+<div id="outline-container-org5208f2c" class="outline-2">
+<h2 id="org5208f2c"><span class="section-number-2">4</span> The length of a vector:</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 \[ |\vec{x}| = \sqrt{x_{1}^2 + x_{2}^2 + \cdots + x_{n}^n}\]
@@ -332,27 +347,41 @@ Solution: Using the definition we have
 <li>Proposition: \(|\vec{x}|^2 = \langle \vec{x}, \vec{x}\rangle\) .</li>
 
 <li>Proposition: \( |\vec{x}| =0\) if and only if \(\vec{x} = \vec{0}\).</li>
-
-<li>Inner product: Bilinear, symmetric, non-degenerate and positive definite.</li>
-
-<li>Geometric interpretation of the inner product (Angle between two vectors)</li>
 </ul>
+</div>
+</div>
 
+<div id="outline-container-org08ec691" class="outline-2">
+<h2 id="org08ec691"><span class="section-number-2">5</span> Inner product: Bilinear, symmetric, non-degenerate and positive definite.</h2>
+</div>
+
+<div id="outline-container-orgea90658" class="outline-2">
+<h2 id="orgea90658"><span class="section-number-2">6</span> Geometric interpretation of the inner product (Angle between two vectors)</h2>
+<div class="outline-text-2" id="text-6">
 <p>
 \[ \langle \vec{x} , \vec{y}\rangle  = |\vec{x}| |\vec{y}| \cos\theta\]
 </p>
+</div>
+</div>
 
-<ul class="org-ul">
-<li>We were exploring: The equation of an hyperplane in \(\mathbb{R}^n\) passing through the point \(P_{0}\) with orthogonal (normal) direction \(\vec{n}\) as the set of points \(P\) satisfying the identity</li>
-</ul>
+<div id="outline-container-org7eede61" class="outline-2">
+<h2 id="org7eede61"><span class="section-number-2">7</span> Equation of a hyperplane in \(\mathbb{R}^n\)</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+The equation of an hyperplane in \(\mathbb{R}^n\) passing through the point \(P_{0}\) with orthogonal (normal) direction \(\vec{n}\) as the set of points \(P\) satisfying the identity
+</p>
 
 <p>
 \[\langle \vec{n}, (P - P_0) \rangle =0.\]
 </p>
+</div>
 
-<ul class="org-ul">
-<li>In the case of \( n = 2\) we gave a geometric interpretation of the equation of a line \(Ax + By = C\), where</li>
-</ul>
+<div id="outline-container-org1f5effc" class="outline-3">
+<h3 id="org1f5effc"><span class="section-number-3">7.1</span> Straight lines in \(\mathbb{R}^2\).</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+In the case of \( n = 2\) we gave a geometric interpretation of the equation of a line \(Ax + By = C\), where
+</p>
 
 <p>
 \[ \vec{n} = \frac{1}{\sqrt{A^2 + B^2}} (A, B),\]
@@ -372,82 +401,54 @@ from the origin.
 
 <ul class="org-ul">
 <li>Definition of Linearly dependent and Linearly independent set of vectors was also given.</li>
-
-<li>Cross product in \(\mathbb{R}^3\), for \( \vec{x}= (x_{1},x_{2},x_{3}), \vec{y} = (y_{1},y_{2},y_{3})\) we define</li>
 </ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfe9bc5a" class="outline-2">
+<h2 id="orgfe9bc5a"><span class="section-number-2">8</span> The cross product in \(\mathbb{R}^3\)</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Cross product in \(\mathbb{R}^3\), for \( \vec{x}= (x_{1},x_{2},x_{3}), \vec{y} = (y_{1},y_{2},y_{3})\) we define
+</p>
 
 <p>
 $$
-</p>
-
-<p>
 \vec{x} &times; \vec{y} =
-</p>
-
-<p>
 \left(
-</p>
-
-<p>
 \left|
 </p>
-
 \begin{array}{cc}
-
 x_2 & x_3 \\
-
 y_2 & y_3 \\
-
 \end{array}
-
 <p>
 \right|,
-</p>
-
-<p>
 -\left|
 </p>
-
 \begin{array}{cc}
-
 x_1 & x_3 \\
-
 y_1 & y_3 \\
-
 \end{array}
-
 <p>
 \right|,
-</p>
-
-<p>
 \left|
 </p>
-
 \begin{array}{cc}
-
 x_1 & x_2 \\
-
 y_1 & y_2 \\
-
 \end{array}
-
 <p>
 \right|,
-</p>
-
-<p>
 \right)
-</p>
-
-<p>
 $$
 </p>
+</div>
 
-<ul class="org-ul">
-<li>Definition of the cross (vector) product in \(\mathbb{R}^3\) as follows (using physicist notation):</li>
-</ul>
-
+<div id="outline-container-org080b129" class="outline-3">
+<h3 id="org080b129"><span class="section-number-3">8.1</span> Definition of the cross (vector) product in \(\mathbb{R}^3\) using physicist notation</h3>
+<div class="outline-text-3" id="text-8-1">
 <p>
 \[
 \vec{x} \times \vec{y} = \left| \begin{array}{ccc}
@@ -460,9 +461,10 @@ y_1 & y_2 & y_3\\
 </div>
 </div>
 </div>
+</div>
 <div id="postamble" class="status">
 <p class="author">Author: daniel b</p>
-<p class="date">Created: 2025-01-20 Mon 12:02</p>
+<p class="date">Created: 2025-01-20 Mon 12:13</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
