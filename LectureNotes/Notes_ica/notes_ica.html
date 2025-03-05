@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-12-31 Tue 11:56 -->
+<!-- 2025-03-04 Tue 20:22 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Notes for Introduction to Complex Analysis</title>
@@ -365,23 +365,23 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgca38b07">1. Sequences and limits</a></li>
-<li><a href="#org66aa588">2. Continuity</a></li>
-<li><a href="#org8c3fdf5">3. Basic topology of \(\mathbb{C}\)</a></li>
-<li><a href="#org4771c9e">4. Derivatives</a></li>
-<li><a href="#org9b476a8">5. Cauchy-Riemann Equations</a></li>
-<li><a href="#org8755d6f">6. Some consequences of the Cauchy-Riemann Equations</a></li>
-<li><a href="#org5f426d1">7. Harmonic Functions</a></li>
-<li><a href="#org6a1f16a">8. Conformal Mappings</a></li>
-<li><a href="#org1614a94">9. Cauchy's Theorem and Cauchy's Integral Formula</a></li>
-<li><a href="#orge856e3a">10. Laurent Series and Residue Theorem</a></li>
+<li><a href="#orgc75b1c9">1. Sequences and limits</a></li>
+<li><a href="#org64a670e">2. Continuity</a></li>
+<li><a href="#org07db954">3. Basic topology of \(\mathbb{C}\)</a></li>
+<li><a href="#org28789a0">4. Derivatives</a></li>
+<li><a href="#org8495ef2">5. Cauchy-Riemann Equations</a></li>
+<li><a href="#org57c9691">6. Some consequences of the Cauchy-Riemann Equations</a></li>
+<li><a href="#org445634a">7. Harmonic Functions</a></li>
+<li><a href="#orga0d03bf">8. Conformal Mappings</a></li>
+<li><a href="#org76375ab">9. Cauchy's Theorem and Cauchy's Integral Formula</a></li>
+<li><a href="#orgdf1938b">10. Laurent Series and Residue Theorem</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-orgca38b07" class="outline-2">
-<h2 id="orgca38b07"><span class="section-number-2">1</span> Sequences and limits</h2>
+<div id="outline-container-orgc75b1c9" class="outline-2">
+<h2 id="orgc75b1c9"><span class="section-number-2">1</span> Sequences and limits</h2>
 <div class="outline-text-2" id="text-1">
 <div class="mydef">
 <p>
@@ -395,9 +395,10 @@ A sequence in \(\mathbb{C}\) is a function \(\varphi: \mathbb{N}\to \mathbb{C}\)
 <div class="mydef">
 <p>
 Let \(\{z_n\}_{n=1}^{\infty}\) be a sequence in \(\mathbb{C}\). We say that the sequence converges to \(z_0\in \mathbb{C}\)
-if for every \(\epsilon >0\) there exists \(n_0\in \mathbb{N}\), such that for every \(n\geq n_0\) it holds that \(|z_n - z_0| < \epsilon\). In this case
+if for every \(\epsilon > 0\) there exists \(n_0\in \mathbb{N}\), such that for every \(n\geq n_0\) it holds that \(|z_n - z_0| < \epsilon\). In this case
 \(z_0\) is called the limit of the sequence \(\{z_n\}_{n=1}^{\infty}\) and we write
-\[ \lim_{n\to\infty} z_n = z_0. \]
+\[ 
+\lim_{n\to\infty} z_n = z_0. \]
 </p>
 
 </div>
@@ -600,8 +601,8 @@ called a limit point of the sequence \(\{z_n\}_{n=1}^{\infty}\) if there exists 
 </div>
 
 
-<div id="outline-container-org66aa588" class="outline-2">
-<h2 id="org66aa588"><span class="section-number-2">2</span> Continuity</h2>
+<div id="outline-container-org64a670e" class="outline-2">
+<h2 id="org64a670e"><span class="section-number-2">2</span> Continuity</h2>
 <div class="outline-text-2" id="text-2">
 <div class="mydef">
 <p>
@@ -715,8 +716,8 @@ In this case \(f\) is not uniformly continuous. Take \(\epsilon = 1\). For every
 </div>
 </div>
 
-<div id="outline-container-org8c3fdf5" class="outline-2">
-<h2 id="org8c3fdf5"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
+<div id="outline-container-org07db954" class="outline-2">
+<h2 id="org07db954"><span class="section-number-2">3</span> Basic topology of \(\mathbb{C}\)</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The open and closed disks (balls) already defined, are basic subsets that may be used to build a topological structure of the complex plane. A topology allows us to define several notions of continuity.
@@ -1126,8 +1127,8 @@ which its a contradiction itself. Consequently \(f\) is uniformly continuous in 
 </div>
 </div>
 
-<div id="outline-container-org4771c9e" class="outline-2">
-<h2 id="org4771c9e"><span class="section-number-2">4</span> Derivatives</h2>
+<div id="outline-container-org28789a0" class="outline-2">
+<h2 id="org28789a0"><span class="section-number-2">4</span> Derivatives</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 The definition of the derivative of a complex function is very familiar from the one we know for the real valued functions. But also we should explore in this section how this definition
@@ -1318,8 +1319,8 @@ a_{2} &  a_{1}\\
 
 
 
-<div id="outline-container-org9b476a8" class="outline-2">
-<h2 id="org9b476a8"><span class="section-number-2">5</span> Cauchy-Riemann Equations</h2>
+<div id="outline-container-org8495ef2" class="outline-2">
+<h2 id="org8495ef2"><span class="section-number-2">5</span> Cauchy-Riemann Equations</h2>
 <div class="outline-text-2" id="text-5">
 <div class="thm">
 <p>
@@ -1460,8 +1461,8 @@ What is happening here?
 </div>
 </div>
 
-<div id="outline-container-org8755d6f" class="outline-2">
-<h2 id="org8755d6f"><span class="section-number-2">6</span> Some consequences of the Cauchy-Riemann Equations</h2>
+<div id="outline-container-org57c9691" class="outline-2">
+<h2 id="org57c9691"><span class="section-number-2">6</span> Some consequences of the Cauchy-Riemann Equations</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Note that if \(f(z)  = u(x,y) + i v(x, y)\) is a complex differentiable function at \(z_0\), when taking the limit of the quitient of differences, it does not matter how \(z \to z_0\) approaches,
@@ -1531,8 +1532,8 @@ It follows from the real case and the mean value theorem (since \(\Omega\) is co
 </div>
 </div>
 
-<div id="outline-container-org5f426d1" class="outline-2">
-<h2 id="org5f426d1"><span class="section-number-2">7</span> Harmonic Functions</h2>
+<div id="outline-container-org445634a" class="outline-2">
+<h2 id="org445634a"><span class="section-number-2">7</span> Harmonic Functions</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 We already saw in one of the previous exercises that if a function is holomorphic, then the real and imaginari parts satisfy the Laplace equation. Here the statement:
@@ -1602,8 +1603,8 @@ Then the analytic (Holomorphic function) is given by
 </div>
 
 
-<div id="outline-container-org6a1f16a" class="outline-2">
-<h2 id="org6a1f16a"><span class="section-number-2">8</span> Conformal Mappings</h2>
+<div id="outline-container-orga0d03bf" class="outline-2">
+<h2 id="orga0d03bf"><span class="section-number-2">8</span> Conformal Mappings</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 In this section we will study curves in the complex plane, and when two curves intersect we will define the notion of angle between the to curves at the intersection point. Mappings from the complex plane into itself that preserve angles will then be considered. Among the basic examples of these kind of mappings are the so called Möbius transformations. Some geometric applicaitons will also be analysed.
@@ -2543,8 +2544,8 @@ Some examples of conformal mappings:
 </ul>
 </div>
 </div>
-<div id="outline-container-org1614a94" class="outline-2">
-<h2 id="org1614a94"><span class="section-number-2">9</span> Cauchy's Theorem and Cauchy's Integral Formula</h2>
+<div id="outline-container-org76375ab" class="outline-2">
+<h2 id="org76375ab"><span class="section-number-2">9</span> Cauchy's Theorem and Cauchy's Integral Formula</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 <b>The Main assumptions for this section</b>. We will prove the Cauchy theorem assuming that if \(f\) is holomorphic in \(\Omega\), then one of the two situations occur
@@ -2853,8 +2854,8 @@ If \(f\) is analytic in a simply connected domain \(\Omega\), then there is a ho
 
 
 
-<div id="outline-container-orge856e3a" class="outline-2">
-<h2 id="orge856e3a"><span class="section-number-2">10</span> Laurent Series and Residue Theorem</h2>
+<div id="outline-container-orgdf1938b" class="outline-2">
+<h2 id="orgdf1938b"><span class="section-number-2">10</span> Laurent Series and Residue Theorem</h2>
 <div class="outline-text-2" id="text-10">
 <div class="thm">
 <p>
@@ -4337,7 +4338,7 @@ Show that
 <div id="postamble" class="status">
 <p class="date">Date: 2021-03-12 Fri 00:00</p>
 <p class="author">Author: Daniel Ballesteros Chávez</p>
-<p class="date">Created: 2024-12-31 Tue 11:56</p>
+<p class="date">Created: 2025-03-04 Tue 20:22</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

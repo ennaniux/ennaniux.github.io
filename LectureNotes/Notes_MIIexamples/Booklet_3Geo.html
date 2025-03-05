@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-01-20 Mon 13:59 -->
+<!-- 2025-03-05 Wed 13:03 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -268,46 +268,45 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org7ae947d">1. Multiplication by scalar and addition of vector in \(\mathbb{R}^n\).</a></li>
-<li><a href="#orgc6dc227">2. Definition of Linearly dependent and Linearly independent set of vectors.</a></li>
-<li><a href="#org4c9e265">3. Geometric interpretation of the two operations were discussed.</a></li>
-<li><a href="#org8ca4a80">4. Inner product of two vectors in \(\mathbb{R}^n\)</a></li>
-<li><a href="#orge6a785c">5. The length of a vector:</a></li>
-<li><a href="#org43a2f60">6. Inner product: Bilinear, symmetric, non-degenerate and positive definite.</a></li>
-<li><a href="#org5eb06e2">7. Geometric interpretation of the inner product (Angle between two vectors)</a></li>
-<li><a href="#org60c091c">8. Equation of a hyperplane in \(\mathbb{R}^n\)</a>
+<li><a href="#org84dd01d">1. Multiplication by scalar and addition of vector in \(\mathbb{R}^n\).</a></li>
+<li><a href="#org72844d8">2. Definition of Linearly dependent and Linearly independent set of vectors.</a></li>
+<li><a href="#org7a793d6">3. Inner product of two vectors in \(\mathbb{R}^n\)</a></li>
+<li><a href="#orgad2cec7">4. Geometric interpretation of the inner product (Angle between two vectors)</a></li>
+<li><a href="#org13fd9f9">5. Equation of a hyperplane in \(\mathbb{R}^n\)</a>
 <ul>
-<li><a href="#orgf09f3b8">8.1. Straight lines in \(\mathbb{R}^2\).</a></li>
+<li><a href="#orgfd89cff">5.1. Straight lines in \(\mathbb{R}^2\).</a></li>
 </ul>
 </li>
-<li><a href="#orgfc01482">9. The cross product in \(\mathbb{R}^3\)</a>
+<li><a href="#org2d68552">6. The cross product in \(\mathbb{R}^3\)</a>
 <ul>
-<li><a href="#org3f783fd">9.1. Definition of the cross (vector) product in \(\mathbb{R}^3\) using physicist notation</a></li>
+<li><a href="#orgc2dad69">6.1. Definition of the cross (vector) product in \(\mathbb{R}^3\) using physicist notation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org7ae947d" class="outline-2">
-<h2 id="org7ae947d"><span class="section-number-2">1</span> Multiplication by scalar and addition of vector in \(\mathbb{R}^n\).</h2>
+<div id="outline-container-org84dd01d" class="outline-2">
+<h2 id="org84dd01d"><span class="section-number-2">1</span> Multiplication by scalar and addition of vector in \(\mathbb{R}^n\).</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 The set of vectors \(\vec{x}\) in \(\mathbb{R}^n\) with the operations:
 </p>
-
 <ul class="org-ul">
-<li>Multiplication by a scalar \(r\vec{x}\), and</li>
-<li>addition of vectors \(\vec{x}+\vec{y}\),</li>
+<li>for any \(r\in \mathbb{R}\), the multiplication by a scalar:  \(r\vec{x}\)</li>
+<li>for any \(\vec{x}, \vec{y}\in \mathbb{R}^n\) addition of vectors: \(\vec{x}+\vec{y}\),</li>
 </ul>
 <p>
-makes it  a Vector Space over \(\mathbb{R}\).
+makes it a Vector Space over \(\mathbb{R}\).
 </p>
+
+<ul class="org-ul">
+<li>Discuss the Geometric interpretation of these two operations</li>
+</ul>
 </div>
 </div>
 
-
-<div id="outline-container-orgc6dc227" class="outline-2">
-<h2 id="orgc6dc227"><span class="section-number-2">2</span> Definition of Linearly dependent and Linearly independent set of vectors.</h2>
+<div id="outline-container-org72844d8" class="outline-2">
+<h2 id="org72844d8"><span class="section-number-2">2</span> Definition of Linearly dependent and Linearly independent set of vectors.</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 The following definition can be extended to any vector space.
@@ -330,13 +329,10 @@ a_{1} \vec{v}_1 + \cdots +  a_{k} \vec{v}_k + = \vec{0}.
 </div>
 </div>
 
-<div id="outline-container-org4c9e265" class="outline-2">
-<h2 id="org4c9e265"><span class="section-number-2">3</span> Geometric interpretation of the two operations were discussed.</h2>
-</div>
 
-<div id="outline-container-org8ca4a80" class="outline-2">
-<h2 id="org8ca4a80"><span class="section-number-2">4</span> Inner product of two vectors in \(\mathbb{R}^n\)</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-org7a793d6" class="outline-2">
+<h2 id="org7a793d6"><span class="section-number-2">3</span> Inner product of two vectors in \(\mathbb{R}^n\)</h2>
+<div class="outline-text-2" id="text-3">
 <div class="mydef">
 <p>
 The inner product in \(\mathbb{R}^n\) is given by
@@ -357,53 +353,62 @@ Solution: Using the definition we have
 \begin{equation}
 \langle \vec{v}_{1}, \vec{v}_{2} \rangle = (3)(-1) + (2)(2) + (-1)(-5) = -3 + 4 + 5 = 6.
 \end{equation}
-</div>
-</div>
 
 
-<div id="outline-container-orge6a785c" class="outline-2">
-<h2 id="orge6a785c"><span class="section-number-2">5</span> The length of a vector:</h2>
-<div class="outline-text-2" id="text-5">
+<div class="mydef">
 <p>
-\[ |\vec{x}| = \sqrt{x_{1}^2 + x_{2}^2 + \cdots + x_{n}^n}\]
+The length of a vector \(\vec{x}\in \mathbb{R}^3\) is given by
+\[|\vec{x}| = \sqrt{x_{1}^2 + x_{2}^2 + \cdots + x_{n}^2}.\]
 </p>
 
+</div>
+<p>
+<br />
+</p>
+<div class="prop">
+<p>
+For any \(\vec{x},\vec{y},\vec{z}\in \mathbb{R}^n\) and any \(r\in \mathbb{R}\) the following statements hold true:
+</p>
 <ul class="org-ul">
-<li>Proposition: \(|\vec{x}|^2 = \langle \vec{x}, \vec{x}\rangle\) .</li>
-
-<li>Proposition: \( |\vec{x}| =0\) if and only if \(\vec{x} = \vec{0}\).</li>
+<li>\(\langle \vec{x},\vec{y} + r\vec{z} \rangle = \langle \vec{x},\vec{y} \rangle + r \langle \vec{x},\vec{z}\rangle\).</li>
+<li>\(\langle \vec{x},\vec{y} \rangle = \langle \vec{y},\vec{x} \rangle\).</li>
+<li>\(|\vec{x}|^2 = \langle \vec{x}, \vec{x}\rangle \geq 0\),</li>
+<li>\(|\vec{x}| = 0\) if and only if \(\vec{x} = \vec{0}\).</li>
 </ul>
+
+</div>
+
+<p>
+The last proposition describes the main properties of the inner product: <b>Bilinear</b>, <b>symmetric</b>, <b>non-degenerate</b> and <b>positive definite</b>.
+</p>
 </div>
 </div>
 
-<div id="outline-container-org43a2f60" class="outline-2">
-<h2 id="org43a2f60"><span class="section-number-2">6</span> Inner product: Bilinear, symmetric, non-degenerate and positive definite.</h2>
-</div>
-
-<div id="outline-container-org5eb06e2" class="outline-2">
-<h2 id="org5eb06e2"><span class="section-number-2">7</span> Geometric interpretation of the inner product (Angle between two vectors)</h2>
-<div class="outline-text-2" id="text-7">
+<div id="outline-container-orgad2cec7" class="outline-2">
+<h2 id="orgad2cec7"><span class="section-number-2">4</span> Geometric interpretation of the inner product (Angle between two vectors)</h2>
+<div class="outline-text-2" id="text-4">
 <p>
 \[ \langle \vec{x} , \vec{y}\rangle  = |\vec{x}| |\vec{y}| \cos\theta\]
 </p>
 </div>
 </div>
 
-<div id="outline-container-org60c091c" class="outline-2">
-<h2 id="org60c091c"><span class="section-number-2">8</span> Equation of a hyperplane in \(\mathbb{R}^n\)</h2>
-<div class="outline-text-2" id="text-8">
+<div id="outline-container-org13fd9f9" class="outline-2">
+<h2 id="org13fd9f9"><span class="section-number-2">5</span> Equation of a hyperplane in \(\mathbb{R}^n\)</h2>
+<div class="outline-text-2" id="text-5">
 <p>
-The equation of an hyperplane in \(\mathbb{R}^n\) passing through the point \(P_{0}\) with orthogonal (normal) direction \(\vec{n}\) as the set of points \(P\) satisfying the identity
+The equation of an hyperplane in \(\mathbb{R}^n\) passing through the point \(\vec{P}_{0}\) with orthogonal (normal) direction \(\vec{n}\) as the set of points \(\vec{P}\) satisfying the identity
 </p>
 
 <p>
-\[\langle \vec{n}, (P - P_0) \rangle =0.\]
+\[\langle \vec{n}, (\vec{P} - \vec{P}_0) \rangle =0.\]
 </p>
 </div>
 
-<div id="outline-container-orgf09f3b8" class="outline-3">
-<h3 id="orgf09f3b8"><span class="section-number-3">8.1</span> Straight lines in \(\mathbb{R}^2\).</h3>
-<div class="outline-text-3" id="text-8-1">
+
+<div id="outline-container-orgfd89cff" class="outline-3">
+<h3 id="orgfd89cff"><span class="section-number-3">5.1</span> Straight lines in \(\mathbb{R}^2\).</h3>
+<div class="outline-text-3" id="text-5-1">
 <p>
 In the case of \( n = 2\) we gave a geometric interpretation of the equation of a line \(Ax + By = C\), where
 </p>
@@ -428,9 +433,9 @@ from the origin.
 </div>
 
 
-<div id="outline-container-orgfc01482" class="outline-2">
-<h2 id="orgfc01482"><span class="section-number-2">9</span> The cross product in \(\mathbb{R}^3\)</h2>
-<div class="outline-text-2" id="text-9">
+<div id="outline-container-org2d68552" class="outline-2">
+<h2 id="org2d68552"><span class="section-number-2">6</span> The cross product in \(\mathbb{R}^3\)</h2>
+<div class="outline-text-2" id="text-6">
 <p>
 Cross product in \(\mathbb{R}^3\), for \(\vec{x}= (x_{1},x_{2},x_{3}), \vec{y} = (y_{1},y_{2},y_{3})\) we define
 </p>
@@ -459,9 +464,9 @@ y_1 & y_2 \\
 \end{equation}
 </div>
 
-<div id="outline-container-org3f783fd" class="outline-3">
-<h3 id="org3f783fd"><span class="section-number-3">9.1</span> Definition of the cross (vector) product in \(\mathbb{R}^3\) using physicist notation</h3>
-<div class="outline-text-3" id="text-9-1">
+<div id="outline-container-orgc2dad69" class="outline-3">
+<h3 id="orgc2dad69"><span class="section-number-3">6.1</span> Definition of the cross (vector) product in \(\mathbb{R}^3\) using physicist notation</h3>
+<div class="outline-text-3" id="text-6-1">
 <p>
 \[
 \vec{x} \times \vec{y} = \left| \begin{array}{ccc}
@@ -477,7 +482,7 @@ y_1 & y_2 & y_3\\
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: daniel b</p>
-<p class="date">Created: 2025-01-20 Mon 13:59</p>
+<p class="date">Created: 2025-03-05 Wed 13:03</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
