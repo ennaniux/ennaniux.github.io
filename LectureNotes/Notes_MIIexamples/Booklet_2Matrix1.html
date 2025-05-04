@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-10-21 Mon 11:42 -->
+<!-- 2025-05-04 nie 12:23 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="daniel b" />
+<meta name="generator" content="Org Mode" />
 <style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -190,140 +191,108 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2020 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
 </script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        displayAlign: "center",
-        displayIndent: "0em",
 
-        "HTML-CSS": { scale: 100,
-                        linebreaks: { automatic: "false" },
-                        webFont: "TeX"
-                       },
-        SVG: {scale: 100,
-              linebreaks: { automatic: "false" },
-              font: "TeX"},
-        NativeMML: {scale: 100},
-        TeX: { equationNumbers: {autoNumber: "AMS"},
-               MultLineWidth: "85%",
-               TagSide: "right",
-               TagIndent: ".8em"
-             }
-});
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
-<script type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
-<div id="content">
-<div id="table-of-contents">
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org5735d65">1. Matrix arithmetic</a>
+<li><a href="#org7e37424">1. Matrix arithmetic</a>
 <ul>
-<li><a href="#org60ae37a">1.1. Matrix with real coefficients</a></li>
-<li><a href="#orgf92de84">1.2. Multiplication by a scalar</a></li>
-<li><a href="#orgb77a21c">1.3. Sum and difference of matrices</a></li>
-<li><a href="#org704929b">1.4. Transpose of a matrix</a></li>
-<li><a href="#org561d8f2">1.5. Multiplication of two matrices</a></li>
+<li><a href="#org9fed534">1.1. Matrix with real coefficients</a></li>
+<li><a href="#orga661859">1.2. Multiplication by a scalar</a></li>
+<li><a href="#orgbc68c74">1.3. Sum and difference of matrices</a></li>
+<li><a href="#orgf734d05">1.4. Transpose of a matrix</a></li>
+<li><a href="#org37c6d24">1.5. Multiplication of two matrices</a></li>
 </ul>
 </li>
-<li><a href="#org3032e3d">2. The identity matrix</a></li>
-<li><a href="#org454bfe6">3. Determinants</a>
+<li><a href="#org39b5745">2. The identity matrix</a></li>
+<li><a href="#orgd6c494c">3. Determinants</a>
 <ul>
-<li><a href="#org4033e24">3.1. Determinant of a \(1\times 1\) matrix</a></li>
-<li><a href="#org9e0b4b5">3.2. Determinant of a \(2\times 2\) matrix</a></li>
-<li><a href="#org5bf959a">3.3. Determinant of a \(3\times 3\) matrix</a></li>
-<li><a href="#orgf0656a4">3.4. Determinant of a \(4\times 4\) matrix</a></li>
+<li><a href="#orgdc749c0">3.1. Determinant of a \(1\times 1\) matrix</a></li>
+<li><a href="#org587f6bc">3.2. Determinant of a \(2\times 2\) matrix</a></li>
+<li><a href="#org5cb93e7">3.3. Determinant of a \(3\times 3\) matrix</a></li>
+<li><a href="#org48398a6">3.4. Determinant of a \(4\times 4\) matrix</a></li>
 </ul>
 </li>
-<li><a href="#orgeca86b0">4. Inverse of a square matrix</a>
+<li><a href="#orgb90aab3">4. Inverse of a square matrix</a>
 <ul>
-<li><a href="#org39b1e31">4.1. Formula for the inverse of a \(2\times 2\) matrix.</a></li>
-<li><a href="#orgbd5e57a">4.2. Minors, cofactor and adjoint.</a></li>
-<li><a href="#org669716e">4.3. Formula for the inverse of a square matrix (of any size)</a></li>
+<li><a href="#org5916787">4.1. Formula for the inverse of a \(2\times 2\) matrix.</a></li>
+<li><a href="#org1434e5f">4.2. Minors, cofactor and adjoint.</a></li>
+<li><a href="#org7121acd">4.3. Formula for the inverse of a square matrix (of any size)</a></li>
 </ul>
 </li>
-<li><a href="#org83a8fab">5. System of linear equations</a>
+<li><a href="#org366908a">5. System of linear equations</a>
 <ul>
-<li><a href="#orgb83c970">5.1. Augmented matrix</a></li>
-<li><a href="#orgaf541e7">5.2. Solving a system of equations using the formula for the inverse</a></li>
-<li><a href="#org50f05d1">5.3. Elementary row operations</a></li>
-<li><a href="#orge0f6dda">5.4. Row Echelon Form (REF) and Reduce Row Echelon Form (RREF)</a></li>
-<li><a href="#orgb6d6a76">5.5. Solving a system of equations using Gauss-Jordan elimination</a></li>
-<li><a href="#org1092734">5.6. Solution of a system of equations with free variables</a></li>
+<li><a href="#orgb1fa55e">5.1. Augmented matrix</a></li>
+<li><a href="#org2edaf42">5.2. Solving a system of equations using the formula for the inverse</a></li>
+<li><a href="#org7dde62b">5.3. Elementary row operations</a></li>
+<li><a href="#org7eaebed">5.4. Row Echelon Form (REF) and Reduce Row Echelon Form (RREF)</a></li>
+<li><a href="#org7ef43fc">5.5. Solving a system of equations using Gauss-Jordan elimination</a></li>
+<li><a href="#org028889b">5.6. Solution of a system of equations with free variables</a></li>
 </ul>
 </li>
-<li><a href="#org7ee7f66">6. Linear transformations between vector spaces</a>
+<li><a href="#orgfe7f5f5">6. Linear transformations between vector spaces</a>
 <ul>
-<li><a href="#org2e1b134">6.1. The matrix representing a linear transformation</a></li>
-<li><a href="#orgedcf975">6.2. Matrix of \(T\) in the canonical basis</a></li>
-<li><a href="#orgf72a78e">6.3. Matrix of \(T\) for general basis.</a></li>
+<li><a href="#org6208bdd">6.1. The matrix representing a linear transformation</a></li>
+<li><a href="#orgebcbc30">6.2. Matrix of \(T\) in the canonical basis</a></li>
+<li><a href="#org43be6b5">6.3. Matrix of \(T\) for general basis.</a></li>
 </ul>
 </li>
-<li><a href="#orgc4bebbf">7. The kernel, Image, rank and nullity</a>
+<li><a href="#orgffa8def">7. The kernel, Image, rank and nullity</a>
 <ul>
-<li><a href="#org50a31c8">7.1. How to find the kernel</a></li>
-<li><a href="#org25679d6">7.2. How to find the Rank.</a></li>
+<li><a href="#org2bbb3fd">7.1. How to find the kernel</a></li>
+<li><a href="#org401675b">7.2. How to find the Rank.</a></li>
 </ul>
 </li>
-<li><a href="#orga6bc75e">8. The dimension theorem</a></li>
-<li><a href="#org59e7f48">9. Eigenvalues and eigenspaces</a></li>
-<li><a href="#orgcbbe00d">10. Diagonalizable matrix</a></li>
+<li><a href="#org8ac9192">8. The dimension theorem</a></li>
+<li><a href="#org08868bb">9. Eigenvalues and eigenspaces</a></li>
+<li><a href="#orgae12404">10. Diagonalizable matrix</a>
+<ul>
+<li><a href="#orgaee2472">10.1. Spectral Decomposition of a Symmetric Matrix</a></li>
+</ul>
+</li>
+<li><a href="#orga702176">11. The Gram–Schmidt algorithm</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org5735d65" class="outline-2">
-<h2 id="org5735d65"><span class="section-number-2">1</span> Matrix arithmetic</h2>
+<div id="outline-container-org7e37424" class="outline-2">
+<h2 id="org7e37424"><span class="section-number-2">1.</span> Matrix arithmetic</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 In this section we will review the basic arithmetic of matrices with real coefficients.
@@ -331,11 +300,10 @@ One can easily generalise these properties for matrices with complex coefficient
 the student to write examples in this field.
 </p>
 </div>
-
-<div id="outline-container-org60ae37a" class="outline-3">
-<h3 id="org60ae37a"><span class="section-number-3">1.1</span> Matrix with real coefficients</h3>
+<div id="outline-container-org9fed534" class="outline-3">
+<h3 id="org9fed534"><span class="section-number-3">1.1.</span> Matrix with real coefficients</h3>
 <div class="outline-text-3" id="text-1-1">
-<div class="mydef">
+<div class="mydef" id="org100ba8a">
 <p>
 A matrix  \(A\) of size \(n\times m\) with real coefficients, is a rectangular arrangement of real numbers
 consisting of \(n\) rows and \(m\) columns (in this order).
@@ -389,11 +357,10 @@ The entry \(b_{23}  = -6\), and the entry \(b_{12} = 2\).
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgf92de84" class="outline-3">
-<h3 id="orgf92de84"><span class="section-number-3">1.2</span> Multiplication by a scalar</h3>
+<div id="outline-container-orga661859" class="outline-3">
+<h3 id="orga661859"><span class="section-number-3">1.2.</span> Multiplication by a scalar</h3>
 <div class="outline-text-3" id="text-1-2">
-<div class="mydef">
+<div class="mydef" id="orga7bc170">
 <p>
 Let \(r\in \mathbb{R}\) be any real number and  \(A\) be a matrix of size \(n\times m\) with real coefficients, with entries \(a_{ij}\).
 We define the product of \(A\) by the sacar \(r\) as the matrix \(rA\) whose entries are \(ra_{ij}\).
@@ -435,11 +402,10 @@ A = \left( \begin{array}{rrr}
 \end{equation*}
 </div>
 </div>
-
-<div id="outline-container-orgb77a21c" class="outline-3">
-<h3 id="orgb77a21c"><span class="section-number-3">1.3</span> Sum and difference of matrices</h3>
+<div id="outline-container-orgbc68c74" class="outline-3">
+<h3 id="orgbc68c74"><span class="section-number-3">1.3.</span> Sum and difference of matrices</h3>
 <div class="outline-text-3" id="text-1-3">
-<div class="mydef">
+<div class="mydef" id="org0885227">
 <p>
 Let  \(A\) and \(B\) any two matrices of the same size \(n\times m\) with real coefficients with entries
 \(a_{ij}\) and \(b_{ij}\), respectively. We define the sum of \(A\) and \(B\)  as the matrix  \(A + B\) of the same size \(n \times m\),  whose entries are \(a_{ij} + b_{ij}\).
@@ -529,11 +495,10 @@ Then
 \end{equation*}
 </div>
 </div>
-
-<div id="outline-container-org704929b" class="outline-3">
-<h3 id="org704929b"><span class="section-number-3">1.4</span> Transpose of a matrix</h3>
+<div id="outline-container-orgf734d05" class="outline-3">
+<h3 id="orgf734d05"><span class="section-number-3">1.4.</span> Transpose of a matrix</h3>
 <div class="outline-text-3" id="text-1-4">
-<div class="mydef">
+<div class="mydef" id="orgdae2215">
 <p>
 Let  \(A\) a matrix of size \(n\times m\) with real coefficients with entries \(a_{ij}\). We define the 
 <b>transpose</b> of \(A\)  as the matrix  \(A^T\) of size \(m \times n\),  whose entries are \(a^{T}_{ij} =  a_{ji}\).
@@ -590,7 +555,7 @@ gives the same matrix. In this case we write: \(A^{T}= A\).
 </p>
 
 
-<div class="mydef">
+<div class="mydef" id="org230f6e4">
 <p>
 Let \(A\) be a square matrix. If \(A^{T} = A\), then we will say that  \(A\) is a <b>symmetric matrix</b>.
 </p>
@@ -598,11 +563,10 @@ Let \(A\) be a square matrix. If \(A^{T} = A\), then we will say that  \(A\) is 
 </div>
 </div>
 </div>
-
-<div id="outline-container-org561d8f2" class="outline-3">
-<h3 id="org561d8f2"><span class="section-number-3">1.5</span> Multiplication of two matrices</h3>
+<div id="outline-container-org37c6d24" class="outline-3">
+<h3 id="org37c6d24"><span class="section-number-3">1.5.</span> Multiplication of two matrices</h3>
 <div class="outline-text-3" id="text-1-5">
-<div class="mydef">
+<div class="mydef" id="orgb08363c">
 <p>
 
 </p>
@@ -682,11 +646,10 @@ AB = \left( \begin{array}{rrr}
 </div>
 </div>
 </div>
-
-<div id="outline-container-org3032e3d" class="outline-2">
-<h2 id="org3032e3d"><span class="section-number-2">2</span> The identity matrix</h2>
+<div id="outline-container-org39b5745" class="outline-2">
+<h2 id="org39b5745"><span class="section-number-2">2.</span> The identity matrix</h2>
 <div class="outline-text-2" id="text-2">
-<div class="mydef">
+<div class="mydef" id="org624bd75">
 <p>
 The square matrix \(I\) of size \(n\) is the matrix consisting of 1's in its diagonal and 0's elsewhere:
 </p>
@@ -711,8 +674,8 @@ If we do not specify the size of the matrix \(I\), it should be clear from the c
 </p>
 </div>
 </div>
-<div id="outline-container-org454bfe6" class="outline-2">
-<h2 id="org454bfe6"><span class="section-number-2">3</span> Determinants</h2>
+<div id="outline-container-orgd6c494c" class="outline-2">
+<h2 id="orgd6c494c"><span class="section-number-2">3.</span> Determinants</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 The determinant is a function that assigns to a square matrix \(A\) of size \(n\), a real number \(\mbox{det}(A)\).
@@ -720,7 +683,7 @@ It is a fundamental function in matrix analysis and it can be properly defined a
 multi-linear function, but we will leave this definition for later.
 </p>
 
-<div class="mydef">
+<div class="mydef" id="orgef9221d">
 <p>
 The determinant is a function \(\det : M^{n\times n} \to \mathbb{R}\) that satisfies the following properties:
 </p>
@@ -752,18 +715,16 @@ From the three points of the proposition one can show that
 In this section we will show by working some examples, how to compute the determinant of a matrix in an inductive way.
 </p>
 </div>
-
-<div id="outline-container-org4033e24" class="outline-3">
-<h3 id="org4033e24"><span class="section-number-3">3.1</span> Determinant of a \(1\times 1\) matrix</h3>
+<div id="outline-container-orgdc749c0" class="outline-3">
+<h3 id="orgdc749c0"><span class="section-number-3">3.1.</span> Determinant of a \(1\times 1\) matrix</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 A real number \(a\in \mathbb{R}\) can be consider as a \(1\times 1\) matrix, and in this case we define \(\mbox{det}(a) = a\).
 </p>
 </div>
 </div>
-
-<div id="outline-container-org9e0b4b5" class="outline-3">
-<h3 id="org9e0b4b5"><span class="section-number-3">3.2</span> Determinant of a \(2\times 2\) matrix</h3>
+<div id="outline-container-org587f6bc" class="outline-3">
+<h3 id="org587f6bc"><span class="section-number-3">3.2.</span> Determinant of a \(2\times 2\) matrix</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Let \(A\) be a \(2\times 2\) matrix
@@ -803,9 +764,8 @@ A direct computation shows
 \end{equation*}
 </div>
 </div>
-
-<div id="outline-container-org5bf959a" class="outline-3">
-<h3 id="org5bf959a"><span class="section-number-3">3.3</span> Determinant of a \(3\times 3\) matrix</h3>
+<div id="outline-container-org5cb93e7" class="outline-3">
+<h3 id="org5cb93e7"><span class="section-number-3">3.3.</span> Determinant of a \(3\times 3\) matrix</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Let \(A\) be a \(3\times 3\) matrix
@@ -883,9 +843,8 @@ Following the formula, we get
 \end{equation*}
 </div>
 </div>
-
-<div id="outline-container-orgf0656a4" class="outline-3">
-<h3 id="orgf0656a4"><span class="section-number-3">3.4</span> Determinant of a \(4\times 4\) matrix</h3>
+<div id="outline-container-org48398a6" class="outline-3">
+<h3 id="org48398a6"><span class="section-number-3">3.4.</span> Determinant of a \(4\times 4\) matrix</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 After discussing the previous example (especially the alternating sign convention)
@@ -895,10 +854,10 @@ we leave as an exercise to obtain a formula for the determinant of a
 </div>
 </div>
 </div>
-<div id="outline-container-orgeca86b0" class="outline-2">
-<h2 id="orgeca86b0"><span class="section-number-2">4</span> Inverse of a square matrix</h2>
+<div id="outline-container-orgb90aab3" class="outline-2">
+<h2 id="orgb90aab3"><span class="section-number-2">4.</span> Inverse of a square matrix</h2>
 <div class="outline-text-2" id="text-4">
-<div class="mydef">
+<div class="mydef" id="orgc137618">
 <p>
 Let \(A\) be a square matrix of size \(n\). We say that \(A\) is <b>invertible</b> if there exists a square matrix
 \(A^{-1}\) that satisfies 
@@ -917,7 +876,7 @@ Not every square matrix is invertible, but the following proposition tells us th
 if a matrix has non-zero determinant, then, it is invertible.
 </p>
 
-<div class="prop">
+<div class="prop" id="org0e40d1f">
 <p>
 Let \(A\) be a square matrix of size \(n\). If \(\mbox{det}(A) \neq 0\) then \(A\) is
 invertible with inverse \(A^{-1}\).
@@ -925,9 +884,8 @@ invertible with inverse \(A^{-1}\).
 
 </div>
 </div>
-
-<div id="outline-container-org39b1e31" class="outline-3">
-<h3 id="org39b1e31"><span class="section-number-3">4.1</span> Formula for the inverse of a \(2\times 2\) matrix.</h3>
+<div id="outline-container-org5916787" class="outline-3">
+<h3 id="org5916787"><span class="section-number-3">4.1.</span> Formula for the inverse of a \(2\times 2\) matrix.</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Consider the following \(2\times 2\) matrix
@@ -973,15 +931,14 @@ A^{-1} =  \frac{1}{14}\left( \begin{array}{ll}
 \end{equation*}
 </div>
 </div>
-
-<div id="outline-container-orgbd5e57a" class="outline-3">
-<h3 id="orgbd5e57a"><span class="section-number-3">4.2</span> Minors, cofactor and adjoint.</h3>
+<div id="outline-container-org1434e5f" class="outline-3">
+<h3 id="org1434e5f"><span class="section-number-3">4.2.</span> Minors, cofactor and adjoint.</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 In these definitions, we are assuming that the matrices have real coefficients.
 </p>
 
-<div class="mydef">
+<div class="mydef" id="org782f16c">
 <p>
 Consider a square matrix \(A\) of size \(n\) with entries \(a_{ij}\). 
 </p>
@@ -1186,11 +1143,10 @@ C = \left( \begin{array}{rrrr}
 \end{equation*}
 </div>
 </div>
-
-<div id="outline-container-org669716e" class="outline-3">
-<h3 id="org669716e"><span class="section-number-3">4.3</span> Formula for the inverse of a square matrix (of any size)</h3>
+<div id="outline-container-org7121acd" class="outline-3">
+<h3 id="org7121acd"><span class="section-number-3">4.3.</span> Formula for the inverse of a square matrix (of any size)</h3>
 <div class="outline-text-3" id="text-4-3">
-<div class="prop">
+<div class="prop" id="orga00cdd8">
 <p>
 Let \(A\) be any square matrix with \(\mbox{det}(A)\neq 0\).
 Then the inverse of \(A\) is given by the formula
@@ -1336,9 +1292,8 @@ A^{-1} & = \frac{1}{\mbox{det}(A)}{\mbox{Adj}}(A) \\
 </div>
 </div>
 </div>
-
-<div id="outline-container-org83a8fab" class="outline-2">
-<h2 id="org83a8fab"><span class="section-number-2">5</span> System of linear equations</h2>
+<div id="outline-container-org366908a" class="outline-2">
+<h2 id="org366908a"><span class="section-number-2">5.</span> System of linear equations</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 In this section we are considering a system of \(n\) linear equations with \(m\) number of unknowns or variables, which can be written as
@@ -1446,11 +1401,10 @@ z
 \end{array} \right)
 \end{equation*}
 </div>
-
-<div id="outline-container-orgb83c970" class="outline-3">
-<h3 id="orgb83c970"><span class="section-number-3">5.1</span> Augmented matrix</h3>
+<div id="outline-container-orgb1fa55e" class="outline-3">
+<h3 id="orgb1fa55e"><span class="section-number-3">5.1.</span> Augmented matrix</h3>
 <div class="outline-text-3" id="text-5-1">
-<div class="mydef">
+<div class="mydef" id="org5ef3132">
 <p>
 Let \(A\vec{x} = \vec{b}\) is a system of \(n\)  linear equations with \(m\) unknowns. The augmented matrix representing this system is 
 the defined as
@@ -1473,14 +1427,13 @@ In the case \(\vec{b} = \vec{0}\), then we use \(A\) also instead of \([A | 0]\)
 </div>
 </div>
 </div>
-
-<div id="outline-container-orgaf541e7" class="outline-3">
-<h3 id="orgaf541e7"><span class="section-number-3">5.2</span> Solving a system of equations using the formula for the inverse</h3>
+<div id="outline-container-org2edaf42" class="outline-3">
+<h3 id="org2edaf42"><span class="section-number-3">5.2.</span> Solving a system of equations using the formula for the inverse</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 This method works only when the number of equations equals the number of unknowns.
 </p>
-<div class="prop">
+<div class="prop" id="org7c1d487">
 <p>
 Consider  a system of \(n\) equations with \(n\) unknowns. In other words, 
 the system of equations is represented by a square matrix \(A\) of size \(n\). If \(\mbox{det}(A) \neq 0\)
@@ -1615,11 +1568,10 @@ x = -\frac{11}{14}, \quad y = -\frac{15}{14}, \quad z = \frac{6}{7}.
 \end{equation*}
 </div>
 </div>
-
-<div id="outline-container-org50f05d1" class="outline-3">
-<h3 id="org50f05d1"><span class="section-number-3">5.3</span> Elementary row operations</h3>
+<div id="outline-container-org7dde62b" class="outline-3">
+<h3 id="org7dde62b"><span class="section-number-3">5.3.</span> Elementary row operations</h3>
 <div class="outline-text-3" id="text-5-3">
-<div class="mydef">
+<div class="mydef" id="org9222096">
 <p>
 For a matrix \(A\) or for an augmented matrix \([A|b]\), the following operations are called
 <b>elementary row operations</b> :
@@ -1672,11 +1624,10 @@ For a matrix \(A\) or for an augmented matrix \([A|b]\), the following operation
 \end{equation*}
 </div>
 </div>
-
-<div id="outline-container-orge0f6dda" class="outline-3">
-<h3 id="orge0f6dda"><span class="section-number-3">5.4</span> Row Echelon Form (REF) and Reduce Row Echelon Form (RREF)</h3>
+<div id="outline-container-org7eaebed" class="outline-3">
+<h3 id="org7eaebed"><span class="section-number-3">5.4.</span> Row Echelon Form (REF) and Reduce Row Echelon Form (RREF)</h3>
 <div class="outline-text-3" id="text-5-4">
-<div class="mydef">
+<div class="mydef" id="org54984e8">
 <p>
 A matrix is in row echelon form (REF) if
 </p>
@@ -1689,7 +1640,7 @@ A matrix is in row echelon form (REF) if
 <p>
 <br />
 </p>
-<div class="mydef">
+<div class="mydef" id="org1ed42bb">
 <p>
 A matrix is in reduced row echelon form (RREF) if it satisfies the following conditions:
 </p>
@@ -1725,7 +1676,7 @@ A matrix is in reduced row echelon form (RREF) if it satisfies the following con
 \end{array} \right).
 \end{equation*}
 
-<div class="thm">
+<div class="thm" id="org0d7f87c">
 <p>
 To each elementary row operation \(e\) there corresponds an
 elementary row operation \(e_1\), of the <b>same type</b> as \(e\), such that 
@@ -1747,7 +1698,7 @@ for each \(A\).
 <p>
 <br />
 </p>
-<div class="mydef">
+<div class="mydef" id="org64b4764">
 <p>
 If \(A\) and \(B\) are \(n\times m\) matrices, we say that
 \(B\) is row-equivalent to \(A\) if \(B\) can be obtained from \(A\) by a finite sequence
@@ -1758,7 +1709,7 @@ of elementary row operations.
 <p>
 <br />
 </p>
-<div class="thm">
+<div class="thm" id="orgef589c0">
 <p>
 If \(A\) and \(B\) are row-equivalent \(n\times m\) matrices, the homogeneous 
 systems of linear equations \(A\vec{x} = \vec{0}\) and \(B\vec{x} = \vec{0}\) have exactly the
@@ -1769,7 +1720,7 @@ same solutions.
 <p>
 <br />
 </p>
-<div class="thm">
+<div class="thm" id="orgbc69c10">
 <p>
  Every \(n\times m\) matrix over the field \(F\) is row-equivalent to a row echelon form matrix.
 (This is obtained after applying the Gauss elimination algorithm)
@@ -1779,7 +1730,7 @@ same solutions.
 <p>
 <br />
 </p>
-<div class="thm">
+<div class="thm" id="org5d03b20">
 <p>
 Every \(n \times m\) matrix \(A\) is row-equivalent to one and only one  row reduced echelon form matrix.
 (This is obtained after applying the Gauss-Jordan elimination algorithm)
@@ -1911,9 +1862,8 @@ Then we conclude that the <b>Gauss-Jordan</b> elimination algorithm leads to the
 \end{equation*}
 </div>
 </div>
-
-<div id="outline-container-orgb6d6a76" class="outline-3">
-<h3 id="orgb6d6a76"><span class="section-number-3">5.5</span> Solving a system of equations using Gauss-Jordan elimination</h3>
+<div id="outline-container-org7ef43fc" class="outline-3">
+<h3 id="org7ef43fc"><span class="section-number-3">5.5.</span> Solving a system of equations using Gauss-Jordan elimination</h3>
 <div class="outline-text-3" id="text-5-5">
 <dl class="org-dl">
 <dt>Example</dt><dd>Solve using the Gauss-Jordan elimination the following system of equations</dd>
@@ -1974,8 +1924,8 @@ x = -\frac{11}{14}, \quad y = -\frac{15}{14}, \quad z = \frac{6}{7}.
 \end{equation*}
 </div>
 </div>
-<div id="outline-container-org1092734" class="outline-3">
-<h3 id="org1092734"><span class="section-number-3">5.6</span> Solution of a system of equations with free variables</h3>
+<div id="outline-container-org028889b" class="outline-3">
+<h3 id="org028889b"><span class="section-number-3">5.6.</span> Solution of a system of equations with free variables</h3>
 <div class="outline-text-3" id="text-5-6">
 <p>
 In this section we will use the Gaus-Jordan elimination to find multiple solutions
@@ -2058,11 +2008,10 @@ a vector that solves our system of equations.
 </div>
 </div>
 </div>
-
-<div id="outline-container-org7ee7f66" class="outline-2">
-<h2 id="org7ee7f66"><span class="section-number-2">6</span> Linear transformations between vector spaces</h2>
+<div id="outline-container-orgfe7f5f5" class="outline-2">
+<h2 id="orgfe7f5f5"><span class="section-number-2">6.</span> Linear transformations between vector spaces</h2>
 <div class="outline-text-2" id="text-6">
-<div class="mydef">
+<div class="mydef" id="org2920e53">
 <p>
 Let \(V\) and \(W\) be two vector spaces over a field \(F\). A map \(T : V \to W\) is called
 a <b>linear transformation</b> if it satisfies the following two properties:
@@ -2114,9 +2063,8 @@ T(\vec{x} + \vec{y})& = T( x_1 + y_1,  x_2 + y_2)\\
 This shows that \(T\) is additive. The points (1) and (2) show that \(T\) is a linear transformation.
 </p>
 </div>
-
-<div id="outline-container-org2e1b134" class="outline-3">
-<h3 id="org2e1b134"><span class="section-number-3">6.1</span> The matrix representing a linear transformation</h3>
+<div id="outline-container-org6208bdd" class="outline-3">
+<h3 id="org6208bdd"><span class="section-number-3">6.1.</span> The matrix representing a linear transformation</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 In this section we
@@ -2133,9 +2081,8 @@ T(x_1,x_2,x_3) = (2x_1, x_2 + x_3).
 </ol>
 </div>
 </div>
-
-<div id="outline-container-orgedcf975" class="outline-3">
-<h3 id="orgedcf975"><span class="section-number-3">6.2</span> Matrix of \(T\) in the canonical basis</h3>
+<div id="outline-container-orgebcbc30" class="outline-3">
+<h3 id="orgebcbc30"><span class="section-number-3">6.2.</span> Matrix of \(T\) in the canonical basis</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 The canonical basis for \(\mathbb{R}^3\) (the domain of \(T\)) is
@@ -2166,9 +2113,8 @@ A = \left( \begin{array}{ccc}
 \end{equation*}
 </div>
 </div>
-
-<div id="outline-container-orgf72a78e" class="outline-3">
-<h3 id="orgf72a78e"><span class="section-number-3">6.3</span> Matrix of \(T\) for general basis.</h3>
+<div id="outline-container-org43be6b5" class="outline-3">
+<h3 id="org43be6b5"><span class="section-number-3">6.3.</span> Matrix of \(T\) for general basis.</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 Since the basis is not the canonical basis, first we take the basis of your domain, in this case
@@ -2213,11 +2159,10 @@ a linear transformation \(T:\mathbb{R}^m\to \mathbb{R}^n\) is a matrix of size \
 </div>
 </div>
 </div>
-
-<div id="outline-container-orgc4bebbf" class="outline-2">
-<h2 id="orgc4bebbf"><span class="section-number-2">7</span> The kernel, Image, rank and nullity</h2>
+<div id="outline-container-orgffa8def" class="outline-2">
+<h2 id="orgffa8def"><span class="section-number-2">7.</span> The kernel, Image, rank and nullity</h2>
 <div class="outline-text-2" id="text-7">
-<div class="mydef">
+<div class="mydef" id="orgbef016f">
 <p>
 Let \(A\) be any \(n \times m\) matrix. The <b>kernel</b> of \(A\) is defined as the set
 </p>
@@ -2259,9 +2204,8 @@ A = \left( \begin{array}{ccc}
 \end{array} \right).
 \end{equation*}
 </div>
-
-<div id="outline-container-org50a31c8" class="outline-3">
-<h3 id="org50a31c8"><span class="section-number-3">7.1</span> How to find the kernel</h3>
+<div id="outline-container-org2bbb3fd" class="outline-3">
+<h3 id="org2bbb3fd"><span class="section-number-3">7.1.</span> How to find the kernel</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
 To find the kernel of a matrix, is to find all the solutions to the equation
@@ -2370,9 +2314,8 @@ Finally we say that the Kernel of \(A\) is the span of these two vectors:
 \end{equation*}
 </div>
 </div>
-
-<div id="outline-container-org25679d6" class="outline-3">
-<h3 id="org25679d6"><span class="section-number-3">7.2</span> How to find the Rank.</h3>
+<div id="outline-container-org401675b" class="outline-3">
+<h3 id="org401675b"><span class="section-number-3">7.2.</span> How to find the Rank.</h3>
 <div class="outline-text-3" id="text-7-2">
 <ol class="org-ol">
 <li>Simplify \(A\) into a Reduce Row Echelon Form (I will call it \(B\)),</li>
@@ -2412,15 +2355,14 @@ There are three non-zero rows and hence, the Rank of \(A\) is \(3\).
 </div>
 </div>
 </div>
-
-<div id="outline-container-orga6bc75e" class="outline-2">
-<h2 id="orga6bc75e"><span class="section-number-2">8</span> The dimension theorem</h2>
+<div id="outline-container-org8ac9192" class="outline-2">
+<h2 id="org8ac9192"><span class="section-number-2">8.</span> The dimension theorem</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 This is one of the most important results in Linear Algebra
 </p>
 
-<div class="thm">
+<div class="thm" id="org7d7aa1f">
 <p>
 (Matrix form) Let \(A\) be a \(n\times m\) matrix. Then the number of columns equals the sum of the nullity and the rank of \(A\):
 </p>
@@ -2465,11 +2407,10 @@ In our case this is simply:  \(5 = 2 + 3\).
 </p>
 </div>
 </div>
-
-<div id="outline-container-org59e7f48" class="outline-2">
-<h2 id="org59e7f48"><span class="section-number-2">9</span> Eigenvalues and eigenspaces</h2>
+<div id="outline-container-org08868bb" class="outline-2">
+<h2 id="org08868bb"><span class="section-number-2">9.</span> Eigenvalues and eigenspaces</h2>
 <div class="outline-text-2" id="text-9">
-<div class="mydef">
+<div class="mydef" id="org9c406b2">
 <p>
 Let \(T: V\to V\) be a linear operator where \(V\) is a vector space over a field \(F\). 
 The vector \(\vec{x}\in V\) is called <b>eigenvector</b> if \(\vec{x} \neq \vec{0}\), and there exists
@@ -2493,7 +2434,7 @@ A\vec{x} = \lambda\vec{x}.
 An important concept is that of the characteristic polynomial
 </p>
 
-<div class="mydef">
+<div class="mydef" id="org8df4937">
 <p>
 Let \(A\) be a square matrix of size \(n\). Then we define
 </p>
@@ -2672,17 +2613,17 @@ We compute the characteristic polynomial:
 \begin{equation*}
 \begin{split}
 p(\lambda) = \mbox{det}(A - \lambda) & = 
-\left(\begin{array}{rr}
+\left|\begin{array}{rr}
 \frac{\sqrt{3} - 1}{\sqrt{2}} - \lambda & -\frac{2}{\sqrt{2}} \\
 \frac{1}{\sqrt{2}} &  \frac{\sqrt{3} + 1}{\sqrt{2}} - \lambda
 \end{array} \right| \\
 & =  \frac{1}{2}\left(
 (\sqrt{3}  - \sqrt{2}\lambda - 1) (\sqrt{3}  - \sqrt{2}\lambda + 1) \right)  + 1\\
 & = \frac{1}{2}\left((\sqrt{3}  - \sqrt{2}\lambda)^2  -1\right) + 2  \\
-& = \frac{1}{2}\left(3   - 2\sqrt{3}\sqrt{2}\lambda + 2\lambda^2  -1\right) + 2  \\
-& = \frac{1}{2}\left( 2\lambda^2   - 2\sqrt{3}\sqrt{2}\lambda +   2\right) + 2  \\
-& = \lambda^2   - \sqrt{3}\sqrt{2}\lambda + 3  \\
-& = \lambda^2   - \sqrt{6}\lambda + 3  \\
+& = \frac{1}{2}\left(3   - 2\sqrt{3}\sqrt{2}\lambda + 2\lambda^2  -1\right) + 1  \\
+& = \frac{1}{2}\left( 2\lambda^2   - 2\sqrt{3}\sqrt{2}\lambda +   2\right) + 1  \\
+& = \lambda^2   - \sqrt{3}\sqrt{2}\lambda + 2  \\
+& = \lambda^2   - \sqrt{6}\lambda + 2  \\
 \end{split}
 \end{equation*}
 <p>
@@ -2695,24 +2636,23 @@ p(\lambda) = 0,
 using the general formula, giving us:
 </p>
 \begin{equation*}
-\lambda = \frac{\sqrt{6} \pm \sqrt{6 - 12}}{2} = \frac{\sqrt{6} \pm \sqrt{-6}}{2}= \frac{\sqrt{6} \pm \sqrt{6} i}{2}.
+\lambda = \frac{\sqrt{6} \pm \sqrt{6 - 8}}{2} = \frac{\sqrt{6} \pm \sqrt{-2}}{2}= \frac{\sqrt{6} \pm \sqrt{2} i}{2}.
 \end{equation*}
 <p>
-As we can see in this case, the eigenvalues are complex numbers.
+As we can see in this case, the eigenvalues in this case turn out to be complex numbers.
 </p>
 </div>
 </div>
-
-<div id="outline-container-orgcbbe00d" class="outline-2">
-<h2 id="orgcbbe00d"><span class="section-number-2">10</span> Diagonalizable matrix</h2>
+<div id="outline-container-orgae12404" class="outline-2">
+<h2 id="orgae12404"><span class="section-number-2">10.</span> Diagonalizable matrix</h2>
 <div class="outline-text-2" id="text-10">
-<div class="mydef">
+<div class="mydef" id="org836ce14">
 <p>
 A square matrix \(A\) is called <b>diagonalizable</b> if there exists an invertible matrix \(P\) such that
 the matrix
 </p>
 \begin{equation}
-D = P A P^{-1},
+D = P^{-1} A P,
 \end{equation}
 <p>
 is diagonal.
@@ -2883,13 +2823,305 @@ as roots of the characteristic polynomial, and the dimension of the correspondin
 We can also notice that the matrix \(P\) in general is not unique.
 We are also left with the general question of when is a matrix diagonalizable.
 </p>
+
+<div class="thm" id="org7824928">
+<p>
+Suppose that the square matrix \(A\) of size \(n\) has \(n\) linearly independent eigenvectors. If these eigenvectors are the columns of
+a matrix \(P\), then the matrix
+the matrix
+</p>
+\begin{equation}
+D = P^{-1} A P ,
+\end{equation}
+<p>
+is diagonal. The values in the diagonal correspond to the eigenvalues \(\lambda_1, \ldots, \lambda_n\), which may be repeated depending on their multiplicity.
+</p>
+
+</div>
+
+<p>
+<b>Remark</b>. In terms of linear transfomation we have that
+a linear map \(T : V \to V\)  is diagonalizable if and only if there exists a basis of \(V\)  that consists of eigenvectors of \(T\).
+The matrix representing \(T\) in this basis is in this case a diagonal matrix and the diagonal entries of this matrix are the eigenvalues of \(T\).
+</p>
+
+
+<p>
+An important special case is that of the diagonalizing a symmetric matrix.
+</p>
+</div>
+<div id="outline-container-orgaee2472" class="outline-3">
+<h3 id="orgaee2472"><span class="section-number-3">10.1.</span> Spectral Decomposition of a Symmetric Matrix</h3>
+<div class="outline-text-3" id="text-10-1">
+<div class="thm" id="org01f5b2e">
+<p>
+If \(A\) is a square matrix of size \(n\) with real entries, then the following statements are equivalent.
+</p>
+<ol class="org-ol">
+<li>\(A\) is orthogonally diagonalizable: that is \(D = Q^{T}AQ\) is diagonal for some \(Q\) such that \(QQ^{T} = I\).</li>
+<li>\(A\) has an orthonormal set of n eigenvectors.</li>
+<li>\(A\) is symmetric.</li>
+</ol>
+
+</div>
+
+<p>
+Example. Find the spectral decomposition of the symmetric matrix
+</p>
+
+\begin{equation}
+A = \left( \begin{array}{ccc}
+ 3 & -2  & 2\\
+ -2 & 3  & 4 \\
+ 2 & 4  & 3\\
+\end{array} \right).
+\end{equation}
+
+<p>
+Then characteristic polynomial is
+</p>
+\begin{equation}
+\mbox{det}(\lambda I - A) =
+\lambda^3 - 9\lambda^2 + 3\lambda + 77
+= (\lambda - 7) (\lambda^2 - 2\lambda - 11).
+\end{equation}
+
+<p>
+Then the eigenvalues are
+</p>
+\begin{equation}
+\lambda_1 = 7, \quad \lambda_2 = 1 + 2\sqrt{3}, \quad \lambda_2 = 1 - 2\sqrt{3}.
+\end{equation}
+
+<p>
+The corresponding eigenspace for \(\lambda_1 = 7\) is the kernel of
+</p>
+\begin{equation}
+\left( \begin{array}{ccc}
+ 4 & 2  & -2\\
+ 2 & 4  & -4 \\
+-2 & -4  & 4\\
+\end{array} \right)
+\overrightarrow{\tiny{ R_1 \to \frac{1}{4}R_1 \\ R_3 \to R_3 + R_2}}
+\left( \begin{array}{ccc}
+ 1 & 1/2  & -1/2\\
+ 2 & 4  & -4 \\
+ 0 & 0  & 0\\
+\end{array} \right)
+\overrightarrow{\tiny{ R_2 \to R_2 - 2R_1}}
+\left( \begin{array}{ccc}
+ 1 & 1/2  & -1/2\\
+ 0 & 3  & -3 \\
+ 0 & 0  & 0\\
+\end{array} \right)
+\overrightarrow{\tiny{ R_2 \to \frac{1}{3}R_2}}
+\left( \begin{array}{ccc}
+ 1 & 1/2  & -1/2\\
+ 0 & 1  & -1 \\
+ 0 & 0  & 0\\
+\end{array} \right)
+\overrightarrow{\tiny{ R_1 \to R_{1} - \frac{1}{2}R_2}}
+\left( \begin{array}{ccc}
+ 1 & 0  & 0\\
+ 0 & 1  & -1 \\
+ 0 & 0  & 0\\
+\end{array} \right)
+\end{equation}
+<p>
+The the eigen space is generated by the vector \(\vec{v}_1 = (0,1,1)\).
+</p>
+
+<p>
+The corresponding eigenspace for \(\lambda_2 = 1 + 2\sqrt{3}\) is the kernel of
+</p>
+\begin{equation}
+\left( \begin{array}{ccc}
+- 2 + 2\sqrt{3} & 2  & -2\\
+ 2 & - 2 + 2\sqrt{3} & -4 \\
+-2 & -4  & - 2 + 2\sqrt{3}\\
+\end{array} \right)
+\overrightarrow{\tiny{ R_{3} \to R_{3} + R_{2}}}
+\left( \begin{array}{ccc}
+-2(1 -  \sqrt{3}) & 2  & -2\\
+ 2 & - 2 (1 - \sqrt{3}) & -4 \\
+0 & -2(3 - \sqrt{3})  & - 2(3 - \sqrt{3})\\
+\end{array} \right)
+\overrightarrow{\tiny{ R_{1} \to R_{1} + (1-\sqrt{3})R_{2}}}
+\left( \begin{array}{ccc}
+0 & -2(3-2\sqrt{3})  & -2(3-2\sqrt{3})\\
+ 2 & - 2 (1 - \sqrt{3}) & -4 \\
+0 & -2(3 - \sqrt{3})  & - 2(3 - \sqrt{3})\\
+\end{array} \right)
+\overrightarrow{\tiny{ R_{1} \to -\frac{1}{2(3 - 2\sqrt{3})}R_{1} \\ R_{3} \to -\frac{1}{2(3 - \sqrt{3})}R_{3}  }}
+\left( \begin{array}{ccc}
+0 & 1  & 1\\
+ 2 & - 2 (1 - \sqrt{3}) & -4 \\
+0 &    1  &   1\\
+\end{array} \right)
+\overrightarrow{\tiny{ R_{1} \to R_{1} - R_{3} \\ R_{2} \to R_{2} + 2(1-\sqrt{3})R_{3}  }}
+\left( \begin{array}{ccc}
+ 0 & 0  & 0\\
+ 2 & 0 & -2(1+\sqrt{3}) \\
+0 &    1  &   1\\
+\end{array} \right)
+\overrightarrow{\tiny{}}
+\left( \begin{array}{ccc}
+ 1 & 0 & -(1+\sqrt{3}) \\
+ 0 & 1 &  1            \\
+ 0 & 0 &  0\\
+\end{array} \right)
+\end{equation}
+<p>
+The the eigen space is generated by the vector \(\vec{v}_2 = (1 + \sqrt{3},-1,1)\).
+</p>
+
+<p>
+The corresponding eigenspace for \(\lambda_3 = 1 - 2\sqrt{3}\) is the kernel of
+</p>
+\begin{equation}
+\left( \begin{array}{ccc}
+- 2 - 2\sqrt{3} & 2  & -2\\
+ 2 & - 2 - 2\sqrt{3} & -4 \\
+-2 & -4  & - 2 - 2\sqrt{3}\\
+\end{array} \right)
+\overrightarrow{\tiny{ R_{3} \to R_{3} + R_{2}}}
+\left( \begin{array}{ccc}
+- 2( 1 + \sqrt{3}) & 2  & -2\\
+ 2 & - 2 (1 +  \sqrt{3}) & -4 \\
+ 0  & -2(3 + \sqrt{3})  & - 2( 3+\sqrt{3})\\
+\end{array} \right)
+\overrightarrow{\tiny{ R_{1} \to R_{1} + (1+\sqrt{3})R_{2}}}
+\left( \begin{array}{ccc}
+0  & -2(3+2\sqrt{3}) & -2(3+2\sqrt{3})\\
+ 2 & - 2 (1 +  \sqrt{3}) & -4 \\
+ 0  & -2(3 + \sqrt{3})  & - 2( 3+\sqrt{3})\\
+\end{array} \right)
+\overrightarrow{\tiny{ R_{1} \to -\frac{1}{2(3 + 2\sqrt{3})}R_{1} \\ R_{3} \to -\frac{1}{2(3 + \sqrt{3})}R_{3}  }}
+\left( \begin{array}{ccc}
+0  & 1 & 1\\
+ 2 & - 2 (1 +  \sqrt{3}) & -4 \\
+ 0  & 1 & 1\\
+\end{array} \right)
+\overrightarrow{\tiny{ R_{1} \to R_{1} - R_{3} \\ R_{2} \to R_{2} + 2(1+\sqrt{3})R_{3}  }}
+\left( \begin{array}{ccc}
+0  & 0 & 0\\
+ 2 & 0 & 2(-1+\sqrt{3}) \\
+ 0  & 1 & 1\\
+\end{array} \right)
+\overrightarrow{\tiny{}}
+\left( \begin{array}{ccc}
+ 1 & 0 & -1+\sqrt{3} \\
+ 0  & 1 & 1\\
+0  & 0 & 0\\
+\end{array} \right)
+\end{equation}
+<p>
+The the eigen space is generated by the vector \(\vec{v}_3 = (1 - \sqrt{3},-1,1)\).
+</p>
+
+<p>
+One can easily verify that the vectors \(\vec{v}_{1}, \vec{v}_{2}\) and \(\vec{v}_{3}\) are mutually orthogonal.
+</p>
+
+<p>
+And that the matrix \(Q\) having as columns the normalised vectors
+</p>
+\begin{equation}
+Q =
+\left( \begin{array}{ccc}
+ 0                   & \frac{1 + \sqrt{3}}{(6 + 2\sqrt{3})^{1/2}} & \frac{1 - \sqrt{3}}{(6 - 2\sqrt{3})^{1/2}}\\
+ \frac{1}{\sqrt{2}}  & -\frac{1}{(6 + 2\sqrt{3})^{1/2}} & -\frac{1}{(6 - 2\sqrt{3})^{1/2}}  \\
+ \frac{1}{\sqrt{2}}  &  \frac{1}{(6 + 2\sqrt{3})^{1/2}} & \frac{1}{(6 -  2\sqrt{3})^{1/2}}   \\
+\end{array} \right).
+\end{equation}
+
+
+<p>
+Finally, to obtain the spectral decomposition we need to compute
+</p>
+
+\begin{equation}
+S_1 = \frac{\vec{v}_1 \vec{v}_1^{T}}{|\vec{v}_1|^2 }=
+\frac{1}{2}\left( \begin{array}{ccc}
+ 0 & 0 & 0\\
+ 0 & 1 & 1\\
+ 0 & 1 & 1\\
+\end{array} \right)
+\end{equation}
+
+\begin{equation}
+S_2 = \frac{\vec{v}_2 \vec{v}_2^{T}}{|\vec{v}_2|^2} =
+\frac{1}{2(3+\sqrt{3})}\left( \begin{array}{ccc}
+ 4+2\sqrt{3} & -1-\sqrt{3} & 1+\sqrt{3} \\
+ -1-\sqrt{3} & 1 & -1\\
+1 + \sqrt{3}  & -1 & 1\\
+\end{array} \right)
+\end{equation}
+
+\begin{equation}
+S_3 = \frac{\vec{v}_3 \vec{v}_3^{T}}{|\vec{v}_3|^2} =
+\frac{1}{2(3-\sqrt{3})}\left( \begin{array}{ccc}
+ 4-2\sqrt{3} & -1+\sqrt{3} & 1-\sqrt{3} \\
+ -1+\sqrt{3} & 1 & -1\\
+1 - \sqrt{3}  & -1 & 1\\
+\end{array} \right)
+\end{equation}
+
+<p>
+Now the final exercise is to verify that indeed
+</p>
+\begin{equation}
+A = \lambda_1 S_{1}  + \lambda_{2} S_{2} + \lambda_{3}S_{3}.
+\end{equation}
+</div>
+</div>
+</div>
+<div id="outline-container-orga702176" class="outline-2">
+<h2 id="orga702176"><span class="section-number-2">11.</span> The Gram–Schmidt algorithm</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+If \(\vec{w}\) is any non-zero vector, we define the orthogonal projection of \(\vec{v}\) onto the
+direction of \(\vec{w}\)
+</p>
+\begin{equation}
+\mbox{Proj}_{\vec{w}}(\vec{v}) = \left\langle \vec{v} , \frac{\vec{w}}{|w|}\right\rangle \frac{\vec{w}}{|w|}.
+\end{equation}
+<p>
+In the case \(\vec{u} = \vec{0}\) then the projection is defined to be \(0\).
+</p>
+
+<p>
+Notice that the projection is a linear operator in \(\mathbb{R}^n\), and its matrix
+representation is given by
+</p>
+\begin{equation}
+(\mbox{Proj}_{\vec{w}}) = \frac{w\,w^{T}}{|\vec{w}|^2}.
+\end{equation}
+
+
+<p>
+Let \(\{\vec{v}_{1}, \vec{v}_{2}, \ldots, \vec{v}_k\}\) a set of \(k\)  linearly independent vectors.
+</p>
+<ol class="org-ol">
+<li>Put \(\vec{w}_{1} = \vec{v}_{1}\).</li>
+<li>Define \(\vec{w}_{2} = \vec{v}_{2} - \mbox{Proj}_{\vec{w}_1}(\vec{v}_2)\)</li>
+<li>Continue inductively \(\vec{w}_{l} = \vec{v}_{l} - \sum_{j=1}^{l-1}\mbox{Proj}_{\vec{w}_j}(\vec{v}_l)\).</li>
+</ol>
+<p>
+Then
+</p>
+<ul class="org-ul">
+<li>the vectors \(\{\vec{w}_{1}, \vec{w}_{2}, \ldots, \vec{w}_k\}\)  are perpendicular (orthogonal) to each other.</li>
+<li>If we normalise each one of them, \(\vec{u}_l = \vec{w}_{l}/|\vec{w}_{l}\) for \(l = 1,2,\ldots, k\), the set
+\(\{\vec{u}_{1}, \vec{u}_{2}, \ldots, \vec{u}_k\}\), is a set of orthonormal vectors.</li>
+</ul>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: daniel b</p>
-<p class="date">Created: 2024-10-21 Mon 11:42</p>
-<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+<p class="date">Created: 2025-05-04 nie 12:23</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>
