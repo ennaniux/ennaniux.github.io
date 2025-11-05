@@ -1,0 +1,2414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-11-05 śro 06:23 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Intro to Python</title>
+<meta name="author" content="Daniel Ballesteros Chávez" />
+<meta name="generator" content="Org Mode" />
+<style type="text/css">
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+
+<style>  body { background: ; max-width: 768px; margin: 20px auto; font-family: "Pangolin"; } </style>
+
+<script src="https://orgmode.org/org-info.js">
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+// @license-end
+</script>
+
+<script>
+// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
+org_html_manager.set("TOC_DEPTH", "3");
+org_html_manager.set("LINK_HOME", "");
+org_html_manager.set("LINK_UP", "");
+org_html_manager.set("LOCAL_TOC", "1");
+org_html_manager.set("VIEW_BUTTONS", "0");
+org_html_manager.set("MOUSE_HINT", "underline");
+org_html_manager.set("FIXED_TOC", "0");
+org_html_manager.set("TOC", "0");
+org_html_manager.set("VIEW", "info");
+org_html_manager.setup();  // activate after the parameters are set
+// @license-end
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Intro to Python</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgb396f3f">1. Installing</a></li>
+<li><a href="#org3d66598">2. How to Install Python in Windows?</a></li>
+<li><a href="#org12f18b1">3. Geting packages&#x2026;.</a></li>
+<li><a href="#org7ef7870">4. Package managers and environments</a></li>
+<li><a href="#orge0e5fad">5. How to write code and debugging?</a></li>
+<li><a href="#orgfb81da6">6. You can start using it via</a></li>
+<li><a href="#orgbd7d452">7. Getting started</a></li>
+<li><a href="#org2dc2fb8">8. Syntax</a></li>
+<li><a href="#org17f4d54">9. Data Types</a></li>
+<li><a href="#org5d7dfe3">10. Functions</a>
+<ul>
+<li><a href="#org971f6d4">10.1. Addition of two numbers</a></li>
+<li><a href="#org7fdf117">10.2. Addtion using <code>*args</code></a></li>
+<li><a href="#org56f585a">10.3. Addition using  <code>**kwargs</code></a></li>
+<li><a href="#org09d220a">10.4. Addition using  <code>lambda</code></a></li>
+<li><a href="#org985ce0f">10.5. Another example</a></li>
+</ul>
+</li>
+<li><a href="#orgb2a0d4a">11. Python Conditions and If statements</a></li>
+<li><a href="#orgdf0aab8">12. Python For Loops</a></li>
+<li><a href="#org8b54f85">13. The while Loop</a></li>
+<li><a href="#org7f1a270">14. Lists and Tuples</a>
+<ul>
+<li><a href="#orgca5a232">14.1. List</a></li>
+<li><a href="#org67569cd">14.2. Tuples</a></li>
+<li><a href="#orgc6a1162">14.3. From tuples to list and viceversa</a></li>
+</ul>
+</li>
+<li><a href="#orgd72d58a">15. Some list operations</a></li>
+<li><a href="#org966b81a">16. List Comprehension</a></li>
+<li><a href="#org40f1249">17. Dictionary in Python</a></li>
+<li><a href="#orge45693c">18. Sets</a></li>
+<li><a href="#org871109e">19. Comparison table</a></li>
+<li><a href="#org1e849ca">20. The sentence of  match-case</a></li>
+<li><a href="#org888d611">21. Using if, elif, else</a></li>
+<li><a href="#org5a8e254">22. Using dictionaries</a></li>
+<li><a href="#orgad7dc56">23. Classes in Python</a>
+<ul>
+<li><a href="#org8d3b67d">23.1. Example of a Class</a></li>
+<li><a href="#org3d8c788">23.2. Working with this calss</a></li>
+</ul>
+</li>
+<li><a href="#org2221c4a">24. Modules/Packages/Libraries</a></li>
+<li><a href="#org838d1c6">25. The Math module</a></li>
+<li><a href="#orgf094f10">26. A GUI calculator</a></li>
+<li><a href="#org7cf39a8">27. A simple Python script to count and rank the frequency of words in a text file</a></li>
+<li><a href="#orgbcb9baa">28. Reading Files</a>
+<ul>
+<li><a href="#org53d8e6a">28.1. Using <code>csv.reader()</code></a></li>
+<li><a href="#orgf9b0481">28.2. Using <code>csv.DictReader()</code> class</a></li>
+<li><a href="#orgdf472fe">28.3. Using <code>pandas.read_csv()</code> method</a></li>
+</ul>
+</li>
+<li><a href="#orgb6536e1">29. HTML template</a></li>
+<li><a href="#orgc34c849">30. Plots</a></li>
+<li><a href="#orgb5b21fc">31. What is next?</a></li>
+<li><a href="#orgcf72e7b">32. Video resources:</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb396f3f" class="outline-2">
+<h2 id="orgb396f3f"><span class="section-number-2">1.</span> Installing</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Installing Python is generally easy (they say).
+</p>
+
+<ul class="org-ul">
+<li>Python is already installed in  many Linux and UNIX distributions.</li>
+<li>Even some Windows computers (notably those from HP) now come with Python already installed.</li>
+<li>If you do need to install Python in a Windows machine
+you can find a few notes on the <a href="https://wiki.python.org/moin/BeginnersGuide/Download">BeginnersGuide/Download</a> wiki page.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3d66598" class="outline-2">
+<h2 id="org3d66598"><span class="section-number-2">2.</span> How to Install Python in Windows?</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Visit the official page for Python <a href="https://www.python.org//downloads/">https://www.python.org//downloads/</a> on the Windows operating system. Locate a reliable version of Python 3</li>
+<li>Windows installer (64-bit) or</li>
+<li>Windows installer (32-bit)</li>
+
+<li>Double-click to launch the Python installer-3.11.3-amd64.exe (or the current stable version)</li>
+<li>Choose the option to Install the launcher for all users by checking the corresponding checkbox.</li>
+<li>Enable users to run Python from the command line by checking the Add python.exe to PATH checkbox.</li>
+</ul>
+
+<p>
+<img src="./images/install-python-3.11.3-step1.png" alt="install-python-3.11.3-step1.png" />
+<br />
+<img src="./images/install-python-3.11.3-step2.png" alt="install-python-3.11.3-step2.png" />
+<br />
+<img src="./images/install-python-3.11.3-step3.png" alt="install-python-3.11.3-step3.png" />
+<br />
+<img src="./images/install-python-disable.png" alt="install-python-disable.png" />
+</p>
+
+<ul class="org-ul">
+<li>Verify the installation: python  &#x2013;version</li>
+</ul>
+
+<p>
+More details in
+</p>
+
+<p>
+<a href="https://docs.lime-crm.com/installation/python311">https://docs.lime-crm.com/installation/python311</a>
+</p>
+
+<p>
+<a href="https://docs.python.org/3/using/windows.html">https://docs.python.org/3/using/windows.html</a>
+</p>
+</div>
+</div>
+<div id="outline-container-org12f18b1" class="outline-2">
+<h2 id="org12f18b1"><span class="section-number-2">3.</span> Geting packages&#x2026;.</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Another painful experience&#x2026;&#x2026; 
+</p>
+
+
+<p>
+A Python package is a collection of modules, which, in turn, are
+essentially Python scripts that contain published functionality. There
+are Python packages for data input, data analysis, data visualisation,
+etc. Each package offers a unique tool-set and may have its own unique
+syntax rules.
+</p>
+
+<p>
+Using pip in a terminal:
+</p>
+<pre class="example" id="org9a54099">
+pip install package_name
+</pre>
+
+
+<div id="orgea1fb42" class="figure">
+<p><img src="./images/install-python-package.png" alt="install-python-package.png" width="500px" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7ef7870" class="outline-2">
+<h2 id="org7ef7870"><span class="section-number-2">4.</span> Package managers and environments</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Mamba is an open-source, cross-platform, language-agnostic package
+manager and environment management system that allows you to quickly
+install, run, and update packages within your work environment(s).
+</p>
+<ul class="org-ul">
+<li>Package management software:
+<ul class="org-ul">
+<li>Conda</li>
+<li>Mamba</li>
+</ul></li>
+</ul>
+
+<pre class="example" id="org22b5195">
+mamba env list
+
+mamba enable myenv
+
+mamba install package
+</pre>
+
+<ul class="org-ul">
+<li>It is a good idea to create new environments for different projects
+because since Python is open source, new versions of the tools are
+released very frequently.</li>
+
+<li>Isolated environments help guarantee that your script will use the
+same versions of packages and libraries and should run the same as
+you expect it to.</li>
+
+<li>A good practice to NOT modify your base environment.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge0e5fad" class="outline-2">
+<h2 id="orge0e5fad"><span class="section-number-2">5.</span> How to write code and debugging?</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>emacs,  vim</li>
+<li>Notepad, notepad++</li>
+<li>One can also use an Online IDE</li>
+<li>install an IDE, e.g., pycharm</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfb81da6" class="outline-2">
+<h2 id="orgfb81da6"><span class="section-number-2">6.</span> You can start using it via</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li><a href="https://colab.google/">https://colab.google/</a></li>
+<li><a href="https://jupyter.org/">https://jupyter.org/</a></li>
+<li><a href="https://www.jetbrains.com/pycharm/">https://www.jetbrains.com/pycharm/</a></li>
+</ul>
+
+<p>
+To get some help:
+</p>
+<ul class="org-ul">
+<li><a href="https://docs.python.org/3/">https://docs.python.org/3/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbd7d452" class="outline-2">
+<h2 id="orgbd7d452"><span class="section-number-2">7.</span> Getting started</h2>
+<div class="outline-text-2" id="text-7">
+<div class="org-src-container">
+<pre class="src src-python3">print('Hello, world!')
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2dc2fb8" class="outline-2">
+<h2 id="org2dc2fb8"><span class="section-number-2">8.</span> Syntax</h2>
+<div class="outline-text-2" id="text-8">
+<dl class="org-dl">
+<dt>Logical Operators</dt><dd><code>not</code>, <code>or</code>,  <code>and</code> (these are in correspondence with  <code>!</code>, <code>||</code>  and <code>&amp;&amp;</code> in other languages)</dd>
+<dt>Indentation</dt><dd>Indentation in Python is very important and it indicate a block of code. Indentation in Python is a must, it is not optional.</dd>
+<dt>Multi-Line Statements</dt><dd>In order to indicate that a given instruction will continue in the next line, the backslash character  <code>\</code> is used.</dd>
+<dt>Comments 1</dt><dd>One way to specify commented lines is to use a triple quote to start of the string and at the end of the string <code>'''commented string'''</code>.</dd>
+<dt>Comments 2</dt><dd>Begin with the hashtag  <code>#</code> and a space. The hash character tells the interpreter to ignore the rest of the line of code.</dd>
+<dt>Variables</dt><dd>Variables do not need to be declared with any particular type, and can even change type after they have been set. A variable is created the moment you first assign a value to it. To assign a value we use the equal symbol <code>=</code>.</dd>
+<dt>Reserved names</dt><dd>Python has a set of keywords that are reserved words that cannot be used as variable names, function names, or any other identifiers</dd>
+</dl>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">and</td>
+<td class="org-left">continue</td>
+<td class="org-left">finally</td>
+</tr>
+
+<tr>
+<td class="org-left">as</td>
+<td class="org-left">def</td>
+<td class="org-left">for</td>
+</tr>
+
+<tr>
+<td class="org-left">assert</td>
+<td class="org-left">del</td>
+<td class="org-left">from</td>
+</tr>
+
+<tr>
+<td class="org-left">async</td>
+<td class="org-left">elif</td>
+<td class="org-left">global</td>
+</tr>
+
+<tr>
+<td class="org-left">await</td>
+<td class="org-left">else</td>
+<td class="org-left">if</td>
+</tr>
+
+<tr>
+<td class="org-left">break</td>
+<td class="org-left">except</td>
+<td class="org-left">import</td>
+</tr>
+
+<tr>
+<td class="org-left">class</td>
+<td class="org-left">False</td>
+<td class="org-left">in</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org17f4d54" class="outline-2">
+<h2 id="org17f4d54"><span class="section-number-2">9.</span> Data Types</h2>
+<div class="outline-text-2" id="text-9">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Example</th>
+<th scope="col" class="org-left">Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">x = "Hello World"</td>
+<td class="org-left">str</td>
+</tr>
+
+<tr>
+<td class="org-left">x = 20</td>
+<td class="org-left">int</td>
+</tr>
+
+<tr>
+<td class="org-left">x = 20.5</td>
+<td class="org-left">float</td>
+</tr>
+
+<tr>
+<td class="org-left">x = 1j</td>
+<td class="org-left">complex</td>
+</tr>
+
+<tr>
+<td class="org-left">x = ["apple", "banana", "cherry"]</td>
+<td class="org-left">list</td>
+</tr>
+
+<tr>
+<td class="org-left">x = ("apple", "banana", "cherry")</td>
+<td class="org-left">tuple</td>
+</tr>
+
+<tr>
+<td class="org-left">x = range(6)</td>
+<td class="org-left">range</td>
+</tr>
+
+<tr>
+<td class="org-left">x = {"name" : "John", "age" : 36}</td>
+<td class="org-left">dict</td>
+</tr>
+
+<tr>
+<td class="org-left">x = {"apple", "banana", "cherry"}</td>
+<td class="org-left">set</td>
+</tr>
+
+<tr>
+<td class="org-left">x = frozenset({"apple", "banana", "cherry"})</td>
+<td class="org-left">frozenset</td>
+</tr>
+
+<tr>
+<td class="org-left">x = True</td>
+<td class="org-left">bool</td>
+</tr>
+
+<tr>
+<td class="org-left">x = b"Hello"</td>
+<td class="org-left">bytes</td>
+</tr>
+
+<tr>
+<td class="org-left">x = bytearray(5)</td>
+<td class="org-left">bytearray</td>
+</tr>
+
+<tr>
+<td class="org-left">x = memoryview(bytes(5))</td>
+<td class="org-left">memoryview</td>
+</tr>
+
+<tr>
+<td class="org-left">x = None</td>
+<td class="org-left">NoneType</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+<p>
+Integer
+</p>
+<div class="org-src-container">
+<pre class="src src-python">print(4)
+print(type(4))
+</pre>
+</div>
+
+<p>
+Float
+</p>
+<div class="org-src-container">
+<pre class="src src-python">print(4/7.5)
+print(type(4/7.5))
+</pre>
+</div>
+
+<p>
+Boolean
+</p>
+<div class="org-src-container">
+<pre class="src src-python">print(True)
+print(type(True))
+</pre>
+</div>
+
+<p>
+Complex
+</p>
+<div class="org-src-container">
+<pre class="src src-python">print(4+5j)
+print(type(4+5j))
+</pre>
+</div>
+
+<p>
+String
+</p>
+<div class="org-src-container">
+<pre class="src src-python">print("Hola")
+print(type("Hola"))
+</pre>
+</div>
+
+<p>
+List
+</p>
+<div class="org-src-container">
+<pre class="src src-python">print([1,2,3,4,5])
+print(type([1,2,3,4,5]))
+</pre>
+</div>
+
+<p>
+Dictionary
+</p>
+<div class="org-src-container">
+<pre class="src src-python">print({"a": 1, "b": 2})
+print(type({"a": 1, "b": 2}))
+</pre>
+</div>
+
+<p>
+Tuples
+</p>
+<div class="org-src-container">
+<pre class="src src-python">print(("A",True,7))
+print(type(("A",True,7)))
+</pre>
+</div>
+
+<p>
+Set
+</p>
+<div class="org-src-container">
+<pre class="src src-python">print(set([1,2,3,4,5,4,3,2,1]))
+print(type(set([1,2,3,4,5,4,3,2,1])))
+</pre>
+</div>
+
+
+<p>
+What functions are associated to a given class?
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">print(dir(int))
+print(dir(list))
+</pre>
+</div>
+
+<pre class="example">
+['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'as_integer_ratio', 'bit_count', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']
+['__add__', '__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+</pre>
+</div>
+</div>
+<div id="outline-container-org5d7dfe3" class="outline-2">
+<h2 id="org5d7dfe3"><span class="section-number-2">10.</span> Functions</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li>In python functions are defined using <code>def</code>. Another common notation is using the  <code>lambda</code> syntax.</li>
+<li>The returned value of the function is specified using  <code>return</code>.</li>
+<li>The parameter  <code>*args</code> admits a tuple as arguments for the function.</li>
+<li>The parameter  <code>**kwargs</code> admists a dictionary as arguments for the function.</li>
+</ul>
+
+<p>
+Some Classic examples:
+</p>
+</div>
+<div id="outline-container-org971f6d4" class="outline-3">
+<h3 id="org971f6d4"><span class="section-number-3">10.1.</span> Addition of two numbers</h3>
+<div class="outline-text-3" id="text-10-1">
+<div class="org-src-container">
+<pre class="src src-python">def suma(x, y=5):
+    return x + y  
+print(suma(6)) # Notice that the value of y is taken by default as  5
+print(suma(6,4))
+</pre>
+</div>
+
+<pre class="example">
+11
+10
+</pre>
+</div>
+</div>
+<div id="outline-container-org7fdf117" class="outline-3">
+<h3 id="org7fdf117"><span class="section-number-3">10.2.</span> Addtion using <code>*args</code></h3>
+<div class="outline-text-3" id="text-10-2">
+<div class="org-src-container">
+<pre class="src src-python">def suma(*args):
+    result = 0
+    for num in args:
+        result = (result + num)
+    return result
+
+print(suma(1,2,4,7))
+</pre>
+</div>
+
+<pre class="example">
+14
+</pre>
+</div>
+</div>
+<div id="outline-container-org56f585a" class="outline-3">
+<h3 id="org56f585a"><span class="section-number-3">10.3.</span> Addition using  <code>**kwargs</code></h3>
+<div class="outline-text-3" id="text-10-3">
+<p>
+<code>**kwargs</code> allows us to pass any number of keyword arguments (arguments in the form key=value). These arguments are collected into a dictionary, where:
+</p>
+<ul class="org-ul">
+<li>Keys = argument names</li>
+<li>Values = argument values</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-python">def suma(**kwargs):
+    result = 0
+    for key, value in kwargs.items():
+        result = (result + value)
+    return resultado
+
+print(suma(x=1,y=2,z=4,variable4=7))
+</pre>
+</div>
+
+<pre class="example">
+14
+</pre>
+</div>
+</div>
+<div id="outline-container-org09d220a" class="outline-3">
+<h3 id="org09d220a"><span class="section-number-3">10.4.</span> Addition using  <code>lambda</code></h3>
+<div class="outline-text-3" id="text-10-4">
+<div class="org-src-container">
+<pre class="src src-python">suma = lambda x, y=2: x + y
+
+print(suma(4))
+print(suma(4,6))
+</pre>
+</div>
+
+<pre class="example">
+6
+10
+</pre>
+</div>
+</div>
+<div id="outline-container-org985ce0f" class="outline-3">
+<h3 id="org985ce0f"><span class="section-number-3">10.5.</span> Another example</h3>
+<div class="outline-text-3" id="text-10-5">
+<p>
+We can also combine *args and **kwargs in the same function. This way, the function can accept both positional and keyword arguments at once.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">def student_info(*args, **kwargs):
+    print("Subjects:", args)        # Positional arguments
+    print("Details:", kwargs)       # Keyword arguments
+
+# Passing subjects as *args and details as **kwargs
+student_info("Math", "Science", "English", Name="Alice", Age=20, City="New York")
+</pre>
+</div>
+
+<pre class="example">
+Subjects: ('Math', 'Science', 'English')
+Details: {'Name': 'Alice', 'Age': 20, 'City': 'New York'}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb2a0d4a" class="outline-2">
+<h2 id="orgb2a0d4a"><span class="section-number-2">11.</span> Python Conditions and If statements</h2>
+<div class="outline-text-2" id="text-11">
+<div class="org-src-container">
+<pre class="src src-python">Name = "Peter"
+if Name == "Daniel":
+    print("The user is Daniel")
+else:
+    print("You are not he user I am looking for")
+</pre>
+</div>
+
+<pre class="example">
+You are not he user I am looking for
+</pre>
+
+
+
+<div class="org-src-container">
+<pre class="src src-python">Name = "Manuel"
+if Name == "Juan":
+    print( Name, "is not Daniel nor Manuel")
+elif Name == "Manuel":
+    print(Name, "is not Daniel nor Juan")
+else:
+    print("El usuario es:", Name)
+</pre>
+</div>
+
+<pre class="example">
+Manuel is not Daniel nor Juan
+</pre>
+</div>
+</div>
+<div id="outline-container-orgdf0aab8" class="outline-2">
+<h2 id="orgdf0aab8"><span class="section-number-2">12.</span> Python For Loops</h2>
+<div class="outline-text-2" id="text-12">
+<div class="org-src-container">
+<pre class="src src-python">list = ["A", "B", "a", "b", "c", "d"]
+for i in list:
+    print(i)
+</pre>
+</div>
+
+<pre class="example">
+A
+B
+a
+b
+c
+d
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python">string = "User"
+for i in string:
+    print(i)
+</pre>
+</div>
+
+<pre class="example">
+U
+s
+e
+r
+</pre>
+</div>
+</div>
+<div id="outline-container-org8b54f85" class="outline-2">
+<h2 id="org8b54f85"><span class="section-number-2">13.</span> The while Loop</h2>
+<div class="outline-text-2" id="text-13">
+<div class="org-src-container">
+<pre class="src src-python">i = 0
+while  i &lt; 10:
+    print("Index number", i)
+    i += 1 
+</pre>
+</div>
+
+<pre class="example" id="org30fa0e5">
+Index number 0
+Index number 1
+Index number 2
+Index number 3
+Index number 4
+Index number 5
+Index number 6
+Index number 7
+Index number 8
+Index number 9
+</pre>
+</div>
+</div>
+<div id="outline-container-org7f1a270" class="outline-2">
+<h2 id="org7f1a270"><span class="section-number-2">14.</span> Lists and Tuples</h2>
+<div class="outline-text-2" id="text-14">
+<p>
+Here you will find more information
+</p>
+<ul class="org-ul">
+<li>More on list: <a href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists">https://docs.python.org/3/tutorial/datastructures.html#more-on-lists</a></li>
+<li>More on tuples: <a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences">https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences</a></li>
+</ul>
+</div>
+<div id="outline-container-orgca5a232" class="outline-3">
+<h3 id="orgca5a232"><span class="section-number-3">14.1.</span> List</h3>
+<div class="outline-text-3" id="text-14-1">
+<p>
+List is a collection which is ordered and changeable. Allows duplicate members.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">mylist = ["abc", 522, 3/2]
+print(mylist)
+# Access an element 
+print(mylist[0])
+</pre>
+</div>
+
+<pre class="example">
+['abc', 522, 1.5]
+abc
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># Usage of negative index
+print(mylist[-1])
+</pre>
+</div>
+
+<pre class="example">
+1.5
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># add an element at the end of the list
+mylist.append(True)  
+print(mylist)
+</pre>
+</div>
+
+<pre class="example">
+['abc', 522, 1.5, True]
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># delete an element
+del mylist[3]
+print(mylist)  
+</pre>
+</div>
+
+<pre class="example">
+['abc', 522, 1.5]
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># replace a value in the list
+mylist[0] = "computer"  
+print(mylist)
+</pre>
+</div>
+
+<pre class="example">
+['computer', 522, 1.5]
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># Show elements from 0 to 2 excluding the last one
+print(mylist[0:2] )
+</pre>
+</div>
+
+<pre class="example">
+['computer', 522]
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># nested listsyes
+mylist_list = [mylist, [True, 42]] 
+print(mylist_list)
+</pre>
+</div>
+
+<pre class="example">
+[['computer', 522, 1.5], [True, 42]]
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># Access elements in nested lists
+print(mylist_list[1][0])
+</pre>
+</div>
+
+<pre class="example">
+True
+</pre>
+</div>
+</div>
+<div id="outline-container-org67569cd" class="outline-3">
+<h3 id="org67569cd"><span class="section-number-3">14.2.</span> Tuples</h3>
+<div class="outline-text-3" id="text-14-2">
+<p>
+A tuple is a collection which is ordered and unchangeable. It also allows duplicate members.
+</p>
+<div class="org-src-container">
+<pre class="src src-python">mytuple = ("abc", 522, 3/2)
+# Print the first element of the tuple (index starts with 0)
+print(mytuple[0])
+</pre>
+</div>
+
+<pre class="example">
+abc
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># One can also use negative index
+print(mytuple[-1])
+</pre>
+</div>
+
+<pre class="example">
+1.5
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># It is nos possible to add or delete elements in a tuple (unchangeable)
+del mytuple[0]  
+</pre>
+</div>
+
+<pre class="example">
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+  File "/tmp/babel-ig8N8b/python-VxBVuo", line 2, in &lt;module&gt;
+    del mytuple[0]  
+        ~~~~~^^^
+TypeError: 'tuple' object doesn't support item deletion
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># Is it not possible to modify the content of an entry
+tupla[0] = "computer" 
+</pre>
+</div>
+
+<pre class="example">
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+  File "/tmp/babel-ig8N8b/python-OFomB4", line 2, in &lt;module&gt;
+    mytuple[0] = "computer" 
+    ~~~~~^^^
+TypeError: 'tuple' object does not support item assignment
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># It is possible to have nested tuples
+tuple_nested = (mytuple, (True, 3.1415))  
+print(tuple_nested)
+</pre>
+</div>
+
+<pre class="example">
+(('abc', 522, 1.5), (True, 3.1415))
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># This is also a tuple, although it is recommended to use the round brackets.
+1, 2, 3, "abc"
+</pre>
+</div>
+
+<pre class="example">
+1 2 3 abc
+</pre>
+</div>
+</div>
+<div id="outline-container-orgc6a1162" class="outline-3">
+<h3 id="orgc6a1162"><span class="section-number-3">14.3.</span> From tuples to list and viceversa</h3>
+<div class="outline-text-3" id="text-14-3">
+<p>
+To convert between tuples and lists use the list() and tuple() functions:
+</p>
+<pre class="example" id="org0015c65">
+li = list(tu)
+tu = tuple(li)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd72d58a" class="outline-2">
+<h2 id="orgd72d58a"><span class="section-number-2">15.</span> Some list operations</h2>
+<div class="outline-text-2" id="text-15">
+<pre class="example" id="orge69caa7">
+x = [1,2,3,4,5]
+dir(x)
+x.reverse()
+x.sort()
+x.append(7)
+x.remove(1)
+</pre>
+</div>
+</div>
+<div id="outline-container-org966b81a" class="outline-2">
+<h2 id="org966b81a"><span class="section-number-2">16.</span> List Comprehension</h2>
+<div class="outline-text-2" id="text-16">
+<p>
+List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+</p>
+
+<p>
+Here an example using the function  <code>range()</code>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"># Using range(n), we can create a list with items from 0 up to  (n-1) 
+x= range(5)
+print(x)
+for i in x:
+    print(i)
+</pre>
+</div>
+
+<pre class="example">
+range(0, 5)
+0
+1
+2
+3
+4
+</pre>
+
+
+
+<div class="org-src-container">
+<pre class="src src-python">x = [i*(i+1) for i in range(5)]
+print(x)
+</pre>
+</div>
+
+<pre class="example">
+[0, 2, 6, 12, 20]
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python">lista = [(i, i + 2) for i in range(5)]
+print(lista)
+</pre>
+</div>
+
+<pre class="example">
+[(0, 2), (1, 3), (2, 4), (3, 5), (4, 6)]
+</pre>
+
+
+<p>
+A very instersting example:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = [x for x in fruits if "a" in x]
+print(newlist) 
+</pre>
+</div>
+
+<pre class="example">
+['apple', 'banana', 'mango']
+</pre>
+</div>
+</div>
+<div id="outline-container-org40f1249" class="outline-2">
+<h2 id="org40f1249"><span class="section-number-2">17.</span> Dictionary in Python</h2>
+<div class="outline-text-2" id="text-17">
+<p>
+More information on Dictionaries can be fund here: <a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries">https://docs.python.org/3/tutorial/datastructures.html#dictionaries</a>
+</p>
+
+<ul class="org-ul">
+<li>Dictionaries are used to store data values in <code>key:value</code> pairs.</li>
+
+<li>A dictionary is a collection which is ordered, changeable and do not allow duplicates.</li>
+
+<li>Dictionaries are written with curly brackets <code>{ }</code>, and have keys and values:</li>
+</ul>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># A dictionary may have different values for each key, and these values may as well be lists.
+onedict =	{
+  "brand": "Ford",
+  "model": "Mustang",
+  "year": 1964
+}
+print(onedict)
+print(onedict["brand"])
+</pre>
+</div>
+
+<pre class="example">
+{'brand': 'Ford', 'model': 'Mustang', 'year': 1964}
+Ford
+</pre>
+
+
+
+<p>
+It is also possible to use the dict() constructor to make a dictionary.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">otherdict = dict(name = "John", age = 36, country = "Norway")
+print(otherdict)
+</pre>
+</div>
+
+<pre class="example">
+{'name': 'John', 'age': 36, 'country': 'Norway'}
+</pre>
+
+
+<p>
+It is also possible to know the length of the dictionary
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">print(len(onedict))
+</pre>
+</div>
+
+<pre class="example">
+3
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python">print(dir(onedict))
+</pre>
+</div>
+
+<pre class="example">
+['__class__', '__class_getitem__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__ior__', '__iter__', '__le__', '__len__', '__lt__', '__ne__', '__new__', '__or__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__ror__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop', 'popitem', 'setdefault', 'update', 'values']
+</pre>
+
+
+
+<p>
+Dictionaries are mutable
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"># Insert a new value
+onedict["year"] = 2025
+print(onedict)
+</pre>
+</div>
+
+<pre class="example">
+{'brand': 'Ford', 'model': 'Mustang', 'year': 2025}
+</pre>
+
+
+<p>
+You can also <code>update</code> a dictionary
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">onedict.update({'type': "car"})
+print(onedict)
+</pre>
+</div>
+
+<pre class="example">
+{'brand': 'Ford', 'model': 'Mustang', 'year': 2025, 'type': 'car'}
+</pre>
+
+
+<p>
+A dictionary admits entries where the value is a list (or a tuple)
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">onedict.update({'generation': [1,2,3,4]})
+print(onedict)
+
+</pre>
+</div>
+
+<pre class="example">
+{'brand': 'Ford', 'model': 'Mustang', 'year': 2025, 'type': 'car', 'generation': [1, 2, 3, 4]}
+</pre>
+
+
+<p>
+A dictionary can have as a key an (unmutable) tuple but it cannot have a (mutable) list.
+</p>
+
+
+<div class="org-src-container">
+<pre class="src src-python">onedict.update({("Atuple", 440): 42})
+print(onedict)
+</pre>
+</div>
+
+<pre class="example">
+{'brand': 'Ford', 'model': 'Mustang', 'year': 2025, 'type': 'car', 'generation': [1, 2, 3, 4], ('Atuple', 440): 42}
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python">onedict.update({['Alist', 440]: 'Impossible'})
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge45693c" class="outline-2">
+<h2 id="orge45693c"><span class="section-number-2">18.</span> Sets</h2>
+<div class="outline-text-2" id="text-18">
+<p>
+More information on Dictionaries can be fund here: <a href="https://docs.python.org/3/tutorial/datastructures.html#sets">https://docs.python.org/3/tutorial/datastructures.html#sets</a>
+</p>
+
+<ul class="org-ul">
+<li>Sets are used to store multiple items in a single variable.</li>
+
+<li>Set is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Tuple, and Dictionary, all with different qualities and usage.</li>
+
+<li>A set is a collection which is unordered and unindexed.</li>
+
+<li>Sets are written with curly brackets <code>{}</code> or with the <code>set()</code> constructor.</li>
+</ul>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># First mutable set
+collection1 = set(["a", "b", "a"])  
+  print(collection1)
+</pre>
+</div>
+
+<pre class="example">
+{'a', 'b'}
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># Second mutable set
+collection2 = set(["a", "b", "c", "d"])  
+print(collection2)
+</pre>
+</div>
+
+<pre class="example">
+{'c', 'a', 'b', 'd'}
+</pre>
+
+
+
+<div class="org-src-container">
+<pre class="src src-python"># Intersection
+print(collection1 &amp; collection2 )
+</pre>
+</div>
+
+<pre class="example">
+{'a', 'b'}
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># Union
+print(collection1 | collection2  )
+</pre>
+</div>
+
+<pre class="example">
+{'a', 'b', 'c', 'd'}
+</pre>
+
+
+
+<div class="org-src-container">
+<pre class="src src-python"># Set difference (1)
+print(collection1 - collection2 )
+</pre>
+</div>
+
+<pre class="example">
+set()
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python"># Set difference (2)
+print(collection2 - collection1 )
+</pre>
+</div>
+
+<pre class="example">
+{'c', 'd'}
+</pre>
+
+
+
+<div class="org-src-container">
+<pre class="src src-python"># Symmetric Difference
+print(collection1 ^ collection2  )
+</pre>
+</div>
+
+<pre class="example">
+{'c', 'd'}
+</pre>
+
+
+
+<p>
+One can also define unmutable sets using <code>frozenset()</code>. You can findout more by running
+</p>
+<div class="org-src-container">
+<pre class="src src-python">help(frozenset)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org871109e" class="outline-2">
+<h2 id="org871109e"><span class="section-number-2">19.</span> Comparison table</h2>
+<div class="outline-text-2" id="text-19">
+</span><b><strong>lists</strong></b><span>,
+</span><b><strong>tuples</strong></b><span>,
+</span><b><strong>sets</strong></b><span>, and
+</span><b><strong>dictionaries </strong></b><span>that store and
+organize the data efficiently. In this article, we will learn the
+difference between them and their applications in </span><a
+href="https://www.geeksforgeeks.org/python/python-programming-language-tutorial/"
+rel="noopener"><span>Python</span></a><span>.</span></p><h2
+id="difference-between-list-tuple-set-and-dictionary"
+style="text-align:left"><span>Difference between List, Tuple, Set,
+and Dictionary</span></h2><p dir="ltr"><span>The following table
+shows the difference between various </span><a
+href="https://www.geeksforgeeks.org/python/inbuilt-data-structures-python/"
+target="_blank" rel="noopener"><span>Python built-in data
+structures.</span></a></p><table><thead><tr><th style="text-align:
+center;"><b><strong>List</strong></b></th><th style="text-align:
+center;"><b><strong>Tuple</strong></b></th><th style="text-align:
+center;"><b><strong>Set</strong></b></th><th style="text-align:
+center;"><b><strong>Dictionary</strong></b></th></tr></thead><tbody><tr><td><p
+dir="ltr"><span>A list is a non-homogeneous data structure that
+stores the elements in columns of a single row or multiple
+rows.</span></p></td><td><p dir="ltr"><span>A Tuple is a
+non-homogeneous data structure that stores elements in columns of a
+single row or multiple rows.</span></p></td><td><p
+dir="ltr"><span>The set data structure is non-homogeneous but stores
+the elements in a single row.</span></p></td><td><p dir="ltr"><span>A
+dictionary is also a non-homogeneous data structure that stores
+key-value pairs.</span></p></td></tr><tr><td><p dir="ltr"><span>The
+list can be represented by [ ]</span></p></td><td><p
+dir="ltr"><span>A tuple can be represented by &nbsp;(
+)</span></p></td><td><p dir="ltr"><span>The set can be represented by
+{ }</span></p></td><td><p dir="ltr"><span>The dictionary can be
+represented by { }</span></p></td></tr><tr><td><p dir="ltr"><span>The
+list allows duplicate elements</span></p></td><td><p
+dir="ltr"><span>Tuple allows duplicate elements</span></p></td><td><p
+dir="ltr"><span>The Set will not allow duplicate
+elements</span></p></td><td><p dir="ltr"><span>The dictionary doesn't
+allow duplicate keys.</span></p></td></tr><tr><td><p
+dir="ltr"><span>The list can be nested among
+all</span></p></td><td><p dir="ltr"><span>A tuple can be nested among
+all</span></p></td><td><p dir="ltr"><span>The set can be nested among
+all</span></p></td><td><p dir="ltr"><span>The dictionary can be
+nested among all</span></p></td></tr><tr><td><p
+dir="ltr"><span>Example: [1, 2, 3, 4, 5]</span></p></td><td><p
+dir="ltr"><span>Example: (1, 2, 3, 4, 5)</span></p></td><td><p
+dir="ltr"><span>Example: {1, 2, 3, 4, 5}</span></p></td><td><p
+dir="ltr"><span>Example: {1: "a", 2: "b", 3: "c", 4: "d", 5:
+"e"}</span></p></td></tr><tr><td><p dir="ltr"><span>A list can be
+created using the </span><b><strong>list()
+</strong></b><span>function</span></p></td><td><p
+dir="ltr"><span>Tuple can be created using the
+</span><b><strong>tuple()</strong></b><span>
+function.</span></p></td><td><p dir="ltr"><span>A set can be created
+using the </span><b><strong>set()</strong></b><span>
+function</span></p></td><td><p dir="ltr"><span>A dictionary can be
+created using the </span><b><strong>dict()
+</strong></b><span>function.</span></p></td></tr><tr><td><p
+dir="ltr"><span>A list is mutable i.e we can make any changes in the
+list.</span></p></td><td><p dir="ltr"><span>A tuple&nbsp;is immutable
+i.e we can not make any changes in the tuple.</span></p></td><td><p
+dir="ltr"><span>A set is mutable i.e we can make any changes in the
+set, its elements are not duplicated.</span></p></td><td><p
+dir="ltr"><span>A dictionary is mutable, its Keys are not
+duplicated.</span></p></td></tr><tr><td><p dir="ltr"><span>List is
+ordered</span></p></td><td><p dir="ltr"><span>Tuple is
+ordered</span></p></td><td><p dir="ltr"><span>Set is
+unordered</span></p></td><td><p dir="ltr"><span>Dictionary is ordered
+(Python 3.7 and above)</span></p></td></tr><tr><td><p
+dir="ltr"><span>Creating an empty list </span></p><p
+dir="ltr"><span>l=[]</span></p></td><td><p dir="ltr"><span>Creating
+an empty Tuple</span></p><p
+dir="ltr"><span>t=()</span></p></td><td><p dir="ltr"><span>Creating a
+set</span></p><p
+dir="ltr"><span>a=set()</span><br><span>b=set(a)</span></p></td><td><p
+dir="ltr"><span>Creating an empty dictionary</span></p><p
+dir="ltr"><span>d={}</span></p></td></tr></tbody></table>
+</div>
+</div>
+<div id="outline-container-org1e849ca" class="outline-2">
+<h2 id="org1e849ca"><span class="section-number-2">20.</span> The sentence of  match-case</h2>
+<div class="outline-text-2" id="text-20">
+<div class="org-src-container">
+<pre class="src src-python">x = 10
+y = 30
+
+match (x,y):
+        case (10 ,40):  # los atributos "x" e "y" tienen el valor specificado
+                print("Coordenada 10, 40")
+        case (10 ,30):  # los atributos "x" e "y" tienen el valor specificado
+                print("Coordenada 10, 30")
+        case _:  # ninguna condición cumplida (default)
+                print("La opción no fue encontrada")
+</pre>
+</div>
+
+<pre class="example">
+Coordenada 10, 30
+</pre>
+</div>
+</div>
+<div id="outline-container-org888d611" class="outline-2">
+<h2 id="org888d611"><span class="section-number-2">21.</span> Using if, elif, else</h2>
+<div class="outline-text-2" id="text-21">
+<div class="org-src-container">
+<pre class="src src-python">def calculator(operation, a, b):
+    if operation == 'sum':
+        return a + b
+    elif operation == 'rest':
+        return a - b
+    elif operation == 'mult':
+       return a * b
+    elif operation == 'div':
+       return a / b
+    else:
+        return None
+
+print(calculator('sum',3,7))
+</pre>
+</div>
+
+<pre class="example">
+10
+</pre>
+</div>
+</div>
+<div id="outline-container-org5a8e254" class="outline-2">
+<h2 id="org5a8e254"><span class="section-number-2">22.</span> Using dictionaries</h2>
+<div class="outline-text-2" id="text-22">
+<div class="org-src-container">
+<pre class="src src-python">def calculate(operation, a, b):
+    return {
+        'sum': lambda: a + b,
+        'rest': lambda: a - b,
+        'mult': lambda: a * b,
+        'div': lambda: a/b
+    }.get(operation, lambda: None)()
+
+print(calculate('div',3,4))
+</pre>
+</div>
+
+<pre class="example">
+0.75
+</pre>
+
+
+<p>
+Note about the Syntax:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">dictionary.get(keyname, value)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Parameter</td>
+<td class="org-left">Description</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">keyname</td>
+<td class="org-left">Required. The keyname of the item you want to return the value from</td>
+</tr>
+
+<tr>
+<td class="org-left">value</td>
+<td class="org-left">Optional. A value to return if the specified key does not exist.</td>
+</tr>
+
+<tr>
+<td class="org-left">Default value</td>
+<td class="org-left">None</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orgad7dc56" class="outline-2">
+<h2 id="orgad7dc56"><span class="section-number-2">23.</span> Classes in Python</h2>
+<div class="outline-text-2" id="text-23">
+<p>
+More information in <a href="https://docs.python.org/3/tutorial/classes.html">https://docs.python.org/3/tutorial/classes.html</a>
+</p>
+
+
+<ul class="org-ul">
+<li>Classes provide a means of bundling data and functionality together.</li>
+<li>Python’s class mechanism adds classes with a minimum of new syntax and semantics (if compared with C++ for example).</li>
+<li>Creating a new class creates a new type of object, allowing new instances of that type to be made.</li>
+<li>Each class instance can have attributes attached to it for maintaining its state.</li>
+<li>Class instances can also have methods (defined by its class) for modifying its state.</li>
+</ul>
+</div>
+<div id="outline-container-org8d3b67d" class="outline-3">
+<h3 id="org8d3b67d"><span class="section-number-3">23.1.</span> Example of a Class</h3>
+<div class="outline-text-3" id="text-23-1">
+<div class="org-src-container">
+<pre class="src src-python">class Persona():                # We will create objects called Persona
+    def __init__(self, name, age):
+        self.name = name        # Create an attribute called name
+        self.age = age          # Create an attribute called age
+    def show_age(self):         # This function should have a parameter assigned, generally the parameter self
+        print(self.age)         # The function prints the value of age for the given Persona
+    def modify_age(self, age):  # This is another function called modify_age wit two parameters.
+        if 0 &gt; age &lt; 150:       # A small validation of the information
+            return False
+        else:                   # If age is within the range 0-150, then the value is modified
+            self.age = age      # The new value is assigned
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org3d8c788" class="outline-3">
+<h3 id="org3d8c788"><span class="section-number-3">23.2.</span> Working with this calss</h3>
+<div class="outline-text-3" id="text-23-2">
+<div class="org-src-container">
+<pre class="src src-python">p = Persona('Daniel', 29)
+print(p.name)
+</pre>
+</div>
+
+<pre class="example">
+Daniel
+</pre>
+
+
+<div class="org-src-container">
+<pre class="src src-python">p.name = "Danilo"
+print(p.name)
+</pre>
+</div>
+
+<pre class="example">
+Danilo
+</pre>
+
+
+
+<div class="org-src-container">
+<pre class="src src-python">p.show_age()
+p.modify_age(41)
+p.show_age()
+</pre>
+</div>
+
+<pre class="example">
+29
+41
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2221c4a" class="outline-2">
+<h2 id="org2221c4a"><span class="section-number-2">24.</span> Modules/Packages/Libraries</h2>
+<div class="outline-text-2" id="text-24">
+<p>
+For the purpose of this document, we do not make a distinction between the concepts of
+modules, packages or libraries.
+</p>
+
+<p>
+You can consult <a href="https://docs.python.org/3/glossary.html">https://docs.python.org/3/glossary.html</a> for more details.
+</p>
+
+<p>
+There are many properties that can be added to the language by
+importing modules (also called packages). These are sets of functions
+and classes designed to perform tasks usually specific to Python.
+</p>
+
+<ul class="org-ul">
+<li><code>os</code> : The os module provides functions for interacting with the operating system.</li>
+<li><code>shutil</code> : For file management tasks.</li>
+<li><code>glob</code> : Provides a function for creating lists of files from wildcard searches in folders.</li>
+<li><code>math</code> : Provides access to floating-point math functions.</li>
+<li><code>random</code> : For performing random selections.</li>
+<li><code>statistics</code> : Used for basic statistics, such as mean, median, variance, etc.</li>
+<li><code>datetime</code> : For handling dates and times.</li>
+<li><code>numpy</code> : NumPy, also known as Numerical Python, is ideal for working with arrays instead of lists.</li>
+<li><code>pandas</code> : For analyzing, cleaning and manipulating large tables with data.</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-python">import statistics as stat
+datos = [4.75, 3.55, 1.25, 0.5, 0.35, 1.85, 5.5]
+print(stat.mean(datos))
+print(stat.median(datos))
+print(stat.variance(datos))
+</pre>
+</div>
+
+<pre class="example">
+2.5357142857142856
+1.85
+4.293928571428571
+</pre>
+</div>
+</div>
+<div id="outline-container-org838d1c6" class="outline-2">
+<h2 id="org838d1c6"><span class="section-number-2">25.</span> The Math module</h2>
+<div class="outline-text-2" id="text-25">
+<div class="org-src-container">
+<pre class="src src-python">help('math')
+</pre>
+</div>
+
+<pre class="example" id="org95fdee7">
+Help on built-in module math:
+
+NAME
+    math
+
+DESCRIPTION
+    This module provides access to the mathematical functions
+    defined by the C standard.
+
+FUNCTIONS
+    acos(x, /)
+        Return the arc cosine (measured in radians) of x.
+
+        The result is between 0 and pi.
+
+    acosh(x, /)
+        Return the inverse hyperbolic cosine of x.
+
+    asin(x, /)
+        Return the arc sine (measured in radians) of x.
+
+        The result is between -pi/2 and pi/2.
+
+    asinh(x, /)
+        Return the inverse hyperbolic sine of x.
+
+    atan(x, /)
+        Return the arc tangent (measured in radians) of x.
+
+        The result is between -pi/2 and pi/2.
+
+    atan2(y, x, /)
+        Return the arc tangent (measured in radians) of y/x.
+
+        Unlike atan(y/x), the signs of both x and y are considered.
+
+    atanh(x, /)
+        Return the inverse hyperbolic tangent of x.
+
+    cbrt(x, /)
+        Return the cube root of x.
+
+    ceil(x, /)
+        Return the ceiling of x as an Integral.
+
+        This is the smallest integer &gt;= x.
+
+    comb(n, k, /)
+        Number of ways to choose k items from n items without repetition and without order.
+
+        Evaluates to n! / (k! * (n - k)!) when k &lt;= n and evaluates
+        to zero when k &gt; n.
+
+        Also called the binomial coefficient because it is equivalent
+        to the coefficient of k-th term in polynomial expansion of the
+        expression (1 + x)**n.
+
+        Raises TypeError if either of the arguments are not integers.
+        Raises ValueError if either of the arguments are negative.
+
+    copysign(x, y, /)
+        Return a float with the magnitude (absolute value) of x but the sign of y.
+
+        On platforms that support signed zeros, copysign(1.0, -0.0)
+        returns -1.0.
+
+    cos(x, /)
+        Return the cosine of x (measured in radians).
+
+    cosh(x, /)
+        Return the hyperbolic cosine of x.
+
+    degrees(x, /)
+        Convert angle x from radians to degrees.
+
+    dist(p, q, /)
+        Return the Euclidean distance between two points p and q.
+
+        The points should be specified as sequences (or iterables) of
+        coordinates.  Both inputs must have the same dimension.
+
+        Roughly equivalent to:
+            sqrt(sum((px - qx) ** 2.0 for px, qx in zip(p, q)))
+
+    erf(x, /)
+        Error function at x.
+
+    erfc(x, /)
+        Complementary error function at x.
+
+    exp(x, /)
+        Return e raised to the power of x.
+
+    exp2(x, /)
+        Return 2 raised to the power of x.
+
+    expm1(x, /)
+        Return exp(x)-1.
+
+        This function avoids the loss of precision involved in the direct evaluation of exp(x)-1 for small x.
+
+    fabs(x, /)
+        Return the absolute value of the float x.
+
+    factorial(n, /)
+        Find n!.
+
+    floor(x, /)
+        Return the floor of x as an Integral.
+
+        This is the largest integer &lt;= x.
+
+    fma(x, y, z, /)
+        Fused multiply-add operation.
+
+        Compute (x * y) + z with a single round.
+
+    fmod(x, y, /)
+        Return fmod(x, y), according to platform C.
+
+        x % y may differ.
+
+    frexp(x, /)
+        Return the mantissa and exponent of x, as pair (m, e).
+
+        m is a float and e is an int, such that x = m * 2.**e.
+        If x is 0, m and e are both 0.  Else 0.5 &lt;= abs(m) &lt; 1.0.
+
+    fsum(seq, /)
+        Return an accurate floating-point sum of values in the iterable seq.
+
+        Assumes IEEE-754 floating-point arithmetic.
+
+    gamma(x, /)
+        Gamma function at x.
+
+    gcd(*integers)
+        Greatest Common Divisor.
+
+    hypot(...)
+        hypot(*coordinates) -&gt; value
+
+        Multidimensional Euclidean distance from the origin to a point.
+
+        Roughly equivalent to:
+            sqrt(sum(x**2 for x in coordinates))
+
+        For a two dimensional point (x, y), gives the hypotenuse
+        using the Pythagorean theorem:  sqrt(x*x + y*y).
+
+        For example, the hypotenuse of a 3/4/5 right triangle is:
+
+            &gt;&gt;&gt; hypot(3.0, 4.0)
+            5.0
+
+    isclose(a, b, *, rel_tol=1e-09, abs_tol=0.0)
+        Determine whether two floating-point numbers are close in value.
+
+          rel_tol
+            maximum difference for being considered "close", relative to the
+            magnitude of the input values
+          abs_tol
+            maximum difference for being considered "close", regardless of the
+            magnitude of the input values
+
+        Return True if a is close in value to b, and False otherwise.
+
+        For the values to be considered close, the difference between them
+        must be smaller than at least one of the tolerances.
+
+        -inf, inf and NaN behave similarly to the IEEE 754 Standard.  That
+        is, NaN is not close to anything, even itself.  inf and -inf are
+        only close to themselves.
+
+    isfinite(x, /)
+        Return True if x is neither an infinity nor a NaN, and False otherwise.
+
+    isinf(x, /)
+        Return True if x is a positive or negative infinity, and False otherwise.
+
+    isnan(x, /)
+        Return True if x is a NaN (not a number), and False otherwise.
+
+    isqrt(n, /)
+        Return the integer part of the square root of the input.
+
+    lcm(*integers)
+        Least Common Multiple.
+
+    ldexp(x, i, /)
+        Return x * (2**i).
+
+        This is essentially the inverse of frexp().
+
+    lgamma(x, /)
+        Natural logarithm of absolute value of Gamma function at x.
+
+    log(...)
+        log(x, [base=math.e])
+        Return the logarithm of x to the given base.
+
+        If the base is not specified, returns the natural logarithm (base e) of x.
+
+    log10(x, /)
+        Return the base 10 logarithm of x.
+
+    log1p(x, /)
+        Return the natural logarithm of 1+x (base e).
+
+        The result is computed in a way which is accurate for x near zero.
+
+    log2(x, /)
+        Return the base 2 logarithm of x.
+
+    modf(x, /)
+        Return the fractional and integer parts of x.
+
+        Both results carry the sign of x and are floats.
+
+    nextafter(x, y, /, *, steps=None)
+        Return the floating-point value the given number of steps after x towards y.
+
+        If steps is not specified or is None, it defaults to 1.
+
+        Raises a TypeError, if x or y is not a double, or if steps is not an integer.
+        Raises ValueError if steps is negative.
+
+    perm(n, k=None, /)
+        Number of ways to choose k items from n items without repetition and with order.
+
+        Evaluates to n! / (n - k)! when k &lt;= n and evaluates
+        to zero when k &gt; n.
+
+        If k is not specified or is None, then k defaults to n
+        and the function returns n!.
+
+        Raises TypeError if either of the arguments are not integers.
+        Raises ValueError if either of the arguments are negative.
+
+    pow(x, y, /)
+        Return x**y (x to the power of y).
+
+    prod(iterable, /, *, start=1)
+        Calculate the product of all the elements in the input iterable.
+
+        The default start value for the product is 1.
+
+        When the iterable is empty, return the start value.  This function is
+        intended specifically for use with numeric values and may reject
+        non-numeric types.
+
+    radians(x, /)
+        Convert angle x from degrees to radians.
+
+    remainder(x, y, /)
+        Difference between x and the closest integer multiple of y.
+
+        Return x - n*y where n*y is the closest integer multiple of y.
+        In the case where x is exactly halfway between two multiples of
+        y, the nearest even value of n is used. The result is always exact.
+
+    sin(x, /)
+        Return the sine of x (measured in radians).
+
+    sinh(x, /)
+        Return the hyperbolic sine of x.
+
+    sqrt(x, /)
+        Return the square root of x.
+
+    sumprod(p, q, /)
+        Return the sum of products of values from two iterables p and q.
+
+        Roughly equivalent to:
+
+            sum(itertools.starmap(operator.mul, zip(p, q, strict=True)))
+
+        For float and mixed int/float inputs, the intermediate products
+        and sums are computed with extended precision.
+
+    tan(x, /)
+        Return the tangent of x (measured in radians).
+
+    tanh(x, /)
+        Return the hyperbolic tangent of x.
+
+    trunc(x, /)
+        Truncates the Real x to the nearest Integral toward 0.
+
+        Uses the __trunc__ magic method.
+
+    ulp(x, /)
+        Return the value of the least significant bit of the float x.
+
+DATA
+    e = 2.718281828459045
+    inf = inf
+    nan = nan
+    pi = 3.141592653589793
+    tau = 6.283185307179586
+
+FILE
+    (built-in)
+</pre>
+</div>
+</div>
+<div id="outline-container-orgf094f10" class="outline-2">
+<h2 id="orgf094f10"><span class="section-number-2">26.</span> A GUI calculator</h2>
+<div class="outline-text-2" id="text-26">
+<p>
+As an exercise, we can try to run the following code in our computer.
+</p>
+<ul class="org-ul">
+<li>Create a <code>calculator.py</code> file.</li>
+<li>Open a power shell and run it using <code>python calculator.py</code></li>
+</ul>
+
+<pre class="example" id="orgd78f843">
+import tkinter as tk
+import tkinter.messagebox
+from tkinter.constants import SUNKEN
+
+win = tk.Tk()
+win.title('Calculator')
+
+frame = tk.Frame(win, bg="skyblue", padx=10)
+frame.pack()
+
+entry = tk.Entry(frame, relief=SUNKEN, borderwidth=3, width=30)
+entry.grid(row=0, column=0, columnspan=3, ipady=2, pady=2)
+
+def click(num):
+    entry.insert(tk.END, num)
+
+def equal():
+    try:
+        res = str(eval(entry.get()))
+        entry.delete(0, tk.END)
+        entry.insert(0, res)
+    except:
+        tk.messagebox.showinfo("Error", "Syntax Error")
+
+def clear():
+    entry.delete(0, tk.END)
+
+buttons = [
+    ('1', 1, 0), ('2', 1, 1), ('3', 1, 2),
+    ('4', 2, 0), ('5', 2, 1), ('6', 2, 2),
+    ('7', 3, 0), ('8', 3, 1), ('9', 3, 2),
+    ('0', 4, 1), ('+', 5, 0), ('-', 5, 1),
+    ('*', 5, 2), ('/', 6, 0)
+]
+
+for txt, r, c in buttons:
+    tk.Button(frame, text=txt, padx=15, pady=5, width=3, command=lambda t=txt: click(t)).grid(row=r, column=c, pady=2)
+
+tk.Button(frame, text="Clear", padx=15, pady=5, width=12, command=clear).grid(row=6, column=1, columnspan=2, pady=2)
+tk.Button(frame, text="=", padx=15, pady=5, width=9, command=equal).grid(row=7, column=0, columnspan=3, pady=2)
+
+win.mainloop()
+</pre>
+</div>
+</div>
+<div id="outline-container-org7cf39a8" class="outline-2">
+<h2 id="org7cf39a8"><span class="section-number-2">27.</span> A simple Python script to count and rank the frequency of words in a text file</h2>
+<div class="outline-text-2" id="text-27">
+<ol class="org-ol">
+<li>Download the following novel <a href="https://www.gutenberg.org/files/2701/2701-0.txt">here</a>, and save it as <code>mobi-dick.txt</code>.</li>
+<li>Create the count<sub>words.py</sub> program below.</li>
+<li>Run in your favourite way. e.g. <code>python3 ./count_words.py</code>.</li>
+</ol>
+
+
+<pre class="example" id="org196b47f">
+# Relative path to a .txt file
+fileToRank = "moby-dick.txt"
+
+# Relative path to a .txt file to create, with frequency counts
+rankingFile = fileToRank.replace(".txt", "--words_counted.txt")
+
+# Open the file in read mode
+text = open(fileToRank, "r")
+  
+# Create an empty dictionary
+d = dict()
+  
+# Loop through each line of the file
+for line in text:
+    # Remove the leading spaces and newline character
+    line = line.strip()
+  
+    # Convert the characters in line to
+    # lowercase to avoid case mismatch
+    line = line.lower()
+  
+    # Split the line into words
+    words = line.split(" ")
+                         
+  
+    # Iterate over each word in line
+    for word in words:
+        if word == "":
+            continue
+        # Check if the word is already in dictionary
+        if word in d:
+            # Increment count of word by 1
+            d[word] = d[word] + 1
+        else:
+            # Add the word to dictionary with count 1
+            d[word] = 1
+
+# sort the dictionary by the frequency count values, in descender order
+sortedDict = {k: v for k, v in sorted(d.items(), key=lambda item: item[1], reverse=True)}
+
+# make a new text file, then write results to that
+with open(rankingFile, 'w') as f:
+    for key in list(sortedDict.keys()):
+        f.write(f"{key}: {sortedDict[key]}\n")
+
+</pre>
+
+<p>
+You can find more information here:
+<a href="https://gist.github.com/arrowtype/1cbddcfe2fac1b0b6c8b547e7f561986">https://gist.github.com/arrowtype/1cbddcfe2fac1b0b6c8b547e7f561986</a>
+</p>
+</div>
+</div>
+<div id="outline-container-orgbcb9baa" class="outline-2">
+<h2 id="orgbcb9baa"><span class="section-number-2">28.</span> Reading Files</h2>
+<div class="outline-text-2" id="text-28">
+<p>
+Here we have a copy of the iris data set: <a href="./images/IRIS.csv">data</a>
+</p>
+
+<p>
+Now we present various ways of reading the csv file.
+</p>
+</div>
+<div id="outline-container-org53d8e6a" class="outline-3">
+<h3 id="org53d8e6a"><span class="section-number-3">28.1.</span> Using <code>csv.reader()</code></h3>
+<div class="outline-text-3" id="text-28-1">
+<pre class="example" id="org4533b76">
+import csv
+with open('IRIS.csv', mode ='r')as file:
+  csvFile = csv.reader(file)
+  for lines in csvFile:
+        print(lines)
+</pre>
+</div>
+</div>
+<div id="outline-container-orgf9b0481" class="outline-3">
+<h3 id="orgf9b0481"><span class="section-number-3">28.2.</span> Using <code>csv.DictReader()</code> class</h3>
+<div class="outline-text-3" id="text-28-2">
+<p>
+The DictReader class of csv module works like a regular reader, with the additional feature that
+it maps the information in the CSV file into a dictionary. The very first line (column names) of the file consists of dictionary keys.
+</p>
+
+<pre class="example" id="orge836e32">
+import csv
+with open('IRIS.csv', mode ='r') as file:    
+       csvFile = csv.DictReader(file)
+       for lines in csvFile:
+            print(lines)
+</pre>
+</div>
+</div>
+<div id="outline-container-orgdf472fe" class="outline-3">
+<h3 id="orgdf472fe"><span class="section-number-3">28.3.</span> Using <code>pandas.read_csv()</code> method</h3>
+<div class="outline-text-3" id="text-28-3">
+<pre class="example" id="org81d6fb7">
+import pandas
+csvFile = pandas.read_csv('IRIS.csv')
+print(csvFile)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb6536e1" class="outline-2">
+<h2 id="orgb6536e1"><span class="section-number-2">29.</span> HTML template</h2>
+<div class="outline-text-2" id="text-29">
+<p>
+Write the following html file:
+</p>
+
+<pre class="example" id="org6b3a475">
+&lt;!DOCTYPE html&gt;
+
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;title&gt;My website&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt; Today is INSERT_TIME&lt;/h1&gt;
+        &lt;p&gt;My first name is: INSERT_NAME, and my second name is very long: INSERT_SURNAME.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+
+<p>
+Now you can update the content with the following code
+</p>
+
+<pre class="example" id="orgd19cf1b">
+# import pandas as pd
+import datetime
+
+html = open("mytemplate.html").read()
+
+current_date = datetime.datetime.now().strftime("%B %d, %Y")
+VAR1 = "Daniel"
+VAR2 = "Ballesteros Chávez"
+
+html = html.replace("INSERT_TIME", current_date)
+html = html.replace("INSERT_NAME", VAR1)
+html = html.replace("INSERT_SURNAME", VAR2)
+
+with open("index.html", "w") as fp:
+    fp.write(html)
+
+</pre>
+</div>
+</div>
+<div id="outline-container-orgc34c849" class="outline-2">
+<h2 id="orgc34c849"><span class="section-number-2">30.</span> Plots</h2>
+<div class="outline-text-2" id="text-30">
+<pre class="example" id="orge91fc4e">
+import matplotlib.pyplot as plt
+
+x = [1, 2, 3, 4, 5]
+y = [1, 4, 9, 16, 25]
+
+plt.plot(x, y)
+
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Simple Plot')
+
+plt.show()
+</pre>
+
+
+
+<pre class="example" id="org8635bf1">
+# importing package
+import matplotlib.pyplot as plt
+
+# create data
+x = ['A', 'B', 'C', 'D']
+y1 = [10, 20, 10, 30]
+y2 = [20, 25, 15, 25]
+
+# plot bars in stack manner
+plt.bar(x, y1, color='y')
+plt.bar(x, y2, bottom=y1, color='g')
+
+#Plot titles and labels
+plt.xlabel("x-axis name")
+plt.ylabel("y-axis name")
+plt.legend(["Round 1", "Round 2"])
+plt.title("Title")
+
+plt.show()
+</pre>
+
+
+<pre class="example" id="org57a8cd0">
+import pandas
+import matplotlib.pyplot as plt
+
+df = pandas.read_csv('./images/IRIS.csv')
+
+# Define color mapping for each species
+colors = {'setosa': 'blue', 'versicolor': 'orange', 'virginica': 'green'}
+# Plot sepal length vs petal length for each species with different colors
+for species, group in df.groupby('Species'):
+    plt.scatter(group['Sepal.Length'], group['Petal.Length'], color=colors[species], label=species)
+# Set axis labels
+#plt.xlabel('Sepal.Length')
+#plt.ylabel('Petal.Length')
+# Show legend
+plt.legend()
+
+plt.show()
+</pre>
+</div>
+</div>
+<div id="outline-container-orgb5b21fc" class="outline-2">
+<h2 id="orgb5b21fc"><span class="section-number-2">31.</span> What is next?</h2>
+<div class="outline-text-2" id="text-31">
+<ul class="org-ul">
+<li><a href="https://seaborn.pydata.org/">https://seaborn.pydata.org/</a></li>
+<li><a href="https://pandas.pydata.org/docs/index.html">https://pandas.pydata.org/docs/index.html</a></li>
+<li><a href="https://numpy.org/">https://numpy.org/</a></li>
+<li><a href="https://pypi.org/project/matplotlib/">https://pypi.org/project/matplotlib/</a></li>
+<li><a href="https://scikit-learn.org/stable/">https://scikit-learn.org/stable/</a></li>
+<li><a href="https://scipy.org/">https://scipy.org/</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcf72e7b" class="outline-2">
+<h2 id="orgcf72e7b"><span class="section-number-2">32.</span> Video resources:</h2>
+<div class="outline-text-2" id="text-32">
+<ul class="org-ul">
+<li>Python if <span class="underline"><span class="underline">name</span></span> == '<span class="underline"><span class="underline">main</span></span>': Visually Explained  <a href="https://www.youtube.com/watch?v=KZpYtNtGxSU">https://www.youtube.com/watch?v=KZpYtNtGxSU</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Daniel Ballesteros Chávez</p>
+<p class="date">Created: 2025-11-05 śro 06:23</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
